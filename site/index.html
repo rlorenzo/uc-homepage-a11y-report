@@ -144,7 +144,10 @@
       }
 
       function deltaHTML(current, previous) {
-        if (previous === null || previous === undefined) return '<span class="delta neutral">n/a</span>';
+        if (current === null || current === undefined ||
+            previous === null || previous === undefined) {
+          return '<span class="delta neutral">n/a</span>';
+        }
         const diff = current - previous;
         if (diff === 0) return '<span class="delta neutral">0</span>';
         if (diff < 0) {
@@ -154,7 +157,10 @@
       }
 
       function deltaHTMLPct(current, previous) {
-        if (previous === null || previous === undefined) return '<span class="delta neutral">n/a</span>';
+        if (current === null || current === undefined ||
+            previous === null || previous === undefined) {
+          return '<span class="delta neutral">n/a</span>';
+        }
         const diff = current - previous;
         const rounded = Math.round(diff * 10000) / 10000;
         if (rounded === 0) return '<span class="delta neutral">0</span>';
@@ -177,13 +183,19 @@
       const okRows = currentRows.filter((r) => r.status === 'ok');
       const prevOkRows = prevRows.filter((r) => r.status === 'ok');
 
-      const totalErrors = okRows.reduce((s, r) => s + r.violations_total, 0);
-      const avgErrors = okRows.length ? Math.round(totalErrors / okRows.length) : 0;
+      // When no sites scanned successfully, show "n/a" instead of "0" to
+      // avoid presenting "no data" as "zero errors".
+      const totalErrors = okRows.length
+        ? okRows.reduce((s, r) => s + r.violations_total, 0)
+        : null;
+      const avgErrors = okRows.length ? Math.round(totalErrors / okRows.length) : null;
       const avgDensity = okRows.length
         ? Math.round((okRows.reduce((s, r) => s + r.error_density, 0) / okRows.length) * 10000) / 10000
-        : 0;
+        : null;
 
-      const prevTotalErrors = prevOkRows.reduce((s, r) => s + r.violations_total, 0);
+      const prevTotalErrors = prevOkRows.length
+        ? prevOkRows.reduce((s, r) => s + r.violations_total, 0)
+        : null;
       const prevAvgErrors = prevOkRows.length ? Math.round(prevTotalErrors / prevOkRows.length) : null;
       const prevAvgDensity = prevOkRows.length
         ? Math.round((prevOkRows.reduce((s, r) => s + r.error_density, 0) / prevOkRows.length) * 10000) / 10000
@@ -191,9 +203,9 @@
 
       const cardsEl = document.getElementById('summary-cards');
       cardsEl.innerHTML = [
-        { label: 'Total Errors', value: totalErrors, delta: deltaHTML(totalErrors, prev ? prevTotalErrors : null) },
-        { label: 'Avg Errors / Page', value: avgErrors, delta: deltaHTML(avgErrors, prevAvgErrors) },
-        { label: 'Avg Error Density', value: avgDensity.toFixed(4), delta: deltaHTMLPct(avgDensity, prevAvgDensity) },
+        { label: 'Total Errors', value: totalErrors === null ? 'n/a' : totalErrors, delta: deltaHTML(totalErrors, prev ? prevTotalErrors : null) },
+        { label: 'Avg Errors / Page', value: avgErrors === null ? 'n/a' : avgErrors, delta: deltaHTML(avgErrors, prevAvgErrors) },
+        { label: 'Avg Error Density', value: avgDensity === null ? 'n/a' : avgDensity.toFixed(4), delta: deltaHTMLPct(avgDensity, prevAvgDensity) },
         { label: 'Sites Scanned', value: currentRows.length, delta: '' }
       ]
         .map(
