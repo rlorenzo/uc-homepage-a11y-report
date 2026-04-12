@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-12T17:59:18.552Z",
+  "scanned_at": "2026-04-12T18:08:40.840Z",
   "axe_version": "4.10.3",
   "site": "berkeley",
   "url": "https://www.berkeley.edu",
@@ -2271,38 +2271,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<span class=\"video-control--no-audio\" style=\"opacity: 0.999861;\">No Audio</span>",
-          "target": [
-            ".video-control--no-audio"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<p style=\"text-align: center;\">",
           "target": [
             ".block--text__text > p"
@@ -3315,6 +3283,31 @@
           "html": "<button id=\"main-menu-item-5\" aria-controls=\"main-menu-25-children\" aria-expanded=\"false\" class=\"button--not button--toggler\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCampus Life\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i aria-hidden=\"true\" class=\"icon fas fa-caret-down\"></i>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>",
           "target": [
             "#main-menu-item-5"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#010133",
+                "contrastRatio": 19.93,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.93"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"video-control--no-audio\">No Audio</span>",
+          "target": [
+            ".video-control--no-audio"
           ]
         },
         {
@@ -11526,44 +11519,6 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<span class=\"video-control--no-audio\" style=\"opacity: 0.999861;\">No Audio</span>",
-                  "target": [
-                    ".video-control--no-audio"
-                  ]
-                },
-                {
-                  "html": "<video tabindex=\"-1\" aria-hidden=\"true\" autoplay=\"\" playsinline=\"\" muted=\"\" loop=\"\" disablepictureinpicture=\"\">\n          <source src=\"https://www.berkeley.edu/wp-content/uploads/2025/06/Research-Banner-v3.mp4\">\n        </video>",
-                  "target": [
-                    "video"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"video-control--no-audio\" style=\"opacity: 0.999861;\">No Audio</span>",
-          "target": [
-            ".video-control--no-audio"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
         {
           "any": [
             {

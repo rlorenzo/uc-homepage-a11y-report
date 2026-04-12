@@ -64,8 +64,20 @@ for (const site of sites) {
   try {
     // networkidle waits until there are no more than 0 network connections
     // for at least 500ms. This gives JS-heavy homepages time to finish
-    // rendering before we count elements and run axe.
-    await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30_000 });
+    // rendering before we count elements and run axe. Some sites (e.g. UCSD)
+    // keep persistent connections open (analytics, websockets), so networkidle
+    // never resolves. In that case we fall back to the "load" event, which
+    // fires once the page and its subresources have finished loading.
+    try {
+      await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30_000 });
+    } catch (navError) {
+      if (navError.name === 'TimeoutError') {
+        console.log('  networkidle timed out, retrying with waitUntil: load ...');
+        await page.goto(site.url, { waitUntil: 'load', timeout: 30_000 });
+      } else {
+        throw navError;
+      }
+    }
 
     const elementCount = await page.locator('*').count();
 
