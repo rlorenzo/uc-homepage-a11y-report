@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC Accessibility Report</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- 1. Header -->
+  <header class="report-header">
+    <h1>UC Homepage Accessibility Report</h1>
+    <p class="subtitle" id="subtitle">Loading scan data...</p>
+  </header>
+
+  <main>
+    <!-- 2. Summary cards -->
+    <section id="summary-section" class="section" aria-label="Summary statistics">
+      <h2>Summary</h2>
+      <div class="cards" id="summary-cards"></div>
+    </section>
+
+    <!-- 3. Campus table -->
+    <section id="campus-section" class="section" aria-label="Campus results table">
+      <h2>Results by Campus</h2>
+      <table class="campus-table" id="campus-table">
+        <thead>
+          <tr>
+            <th scope="col">Campus</th>
+            <th scope="col">Errors</th>
+            <th scope="col" class="impact-col">Critical</th>
+            <th scope="col" class="impact-col">Serious</th>
+            <th scope="col" class="impact-col">Moderate</th>
+            <th scope="col" class="impact-col">Minor</th>
+            <th scope="col">Elements</th>
+            <th scope="col">Error Density</th>
+            <th scope="col">Change</th>
+          </tr>
+        </thead>
+        <tbody id="campus-tbody"></tbody>
+      </table>
+    </section>
+
+    <!-- 4. Trend chart -->
+    <section id="trend-section" class="section" aria-label="Trend chart">
+      <h2>Errors Over Time</h2>
+      <div class="chart-wrap">
+        <canvas id="trend-chart"></canvas>
+      </div>
+    </section>
+
+    <!-- 5. Rule breakdown -->
+    <section id="rule-section" class="section" aria-label="Top violating rules">
+      <h2>Top 10 Most Common Rule Violations</h2>
+      <div class="chart-wrap">
+        <canvas id="rule-chart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Methodology footer -->
+  <footer class="methodology">
+    <h2>Methodology</h2>
+    <p>
+      This report is generated automatically on the first of each month using
+      <a href="https://github.com/dequelabs/axe-core">axe-core</a> (via
+      <code>@axe-core/playwright</code>) running against the homepages of all
+      11 University of California campuses and the Office of the President.
+    </p>
+    <p>
+      Automated accessibility testing tools typically detect only 30 to 40
+      percent of potential accessibility issues. This report should be treated
+      as a lower-bound estimate. Manual testing, assistive technology testing,
+      and user testing with people who have disabilities are essential for a
+      complete accessibility evaluation.
+    </p>
+    <p>
+      Tests cover WCAG 2.0 A/AA, WCAG 2.1 A/AA, and WCAG 2.2 AA success
+      criteria. Each page is loaded in headless Chromium, allowed to reach
+      network idle, and then analyzed.
+    </p>
+    <p>
+      Source code:
+      <a href="https://github.com/rlorenzo/uc-homepage-a11y-report">
+        github.com/rlorenzo/uc-homepage-a11y-report
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    (async function () {
+      /* ---------------------------------------------------------- */
+      /*  Load data                                                  */
+      /* ---------------------------------------------------------- */
+      let history;
+      try {
+        const resp = await fetch('data/history.json');
+        history = await resp.json();
+      } catch {
+        document.getElementById('subtitle').textContent =
+          'Could not load data/history.json. Run a scan first.';
+        return;
+      }
+
+      if (!history.length) {
+        document.getElementById('subtitle').textContent =
+          'No scan data found yet. Run a scan to populate the report.';
+        return;
+      }
+
+      /* ---------------------------------------------------------- */
+      /*  Helpers                                                    */
+      /* ---------------------------------------------------------- */
+      const months = [...new Set(history.map((r) => r.month))].sort();
+      const latest = months[months.length - 1];
+      const prev = months.length > 1 ? months[months.length - 2] : null;
+
+      const currentRows = history.filter((r) => r.month === latest);
+      const prevRows = prev ? history.filter((r) => r.month === prev) : [];
+
+      function prevRow(slug) {
+        return prevRows.find((r) => r.site === slug);
+      }
+
+      // Friendly campus names from the data.
+      const CAMPUS_NAMES = {
+        berkeley: 'UC Berkeley',
+        ucdavis: 'UC Davis',
+        uci: 'UC Irvine',
+        ucla: 'UCLA',
+        ucmerced: 'UC Merced',
+        ucop: 'UC Office of the President',
+        ucr: 'UC Riverside',
+        ucsb: 'UC Santa Barbara',
+        ucsc: 'UC Santa Cruz',
+        ucsd: 'UC San Diego',
+        ucsf: 'UC San Francisco'
+      };
+
+      function campusName(slug) {
+        return CAMPUS_NAMES[slug] || slug;
+      }
+
+      function deltaHTML(current, previous) {
+        if (previous === null || previous === undefined) return '<span class="delta neutral">n/a</span>';
+        const diff = current - previous;
+        if (diff === 0) return '<span class="delta neutral">0</span>';
+        if (diff < 0) {
+          return '<span class="delta improved">\u25BC ' + Math.abs(diff) + '</span>';
+        }
+        return '<span class="delta regressed">\u25B2 ' + diff + '</span>';
+      }
+
+      function deltaHTMLPct(current, previous) {
+        if (previous === null || previous === undefined) return '<span class="delta neutral">n/a</span>';
+        const diff = current - previous;
+        const rounded = Math.round(diff * 10000) / 10000;
+        if (rounded === 0) return '<span class="delta neutral">0</span>';
+        if (rounded < 0) {
+          return '<span class="delta improved">\u25BC ' + Math.abs(rounded).toFixed(4) + '</span>';
+        }
+        return '<span class="delta regressed">\u25B2 ' + rounded.toFixed(4) + '</span>';
+      }
+
+      /* ---------------------------------------------------------- */
+      /*  1. Header subtitle                                         */
+      /* ---------------------------------------------------------- */
+      const sampleRow = currentRows[0];
+      document.getElementById('subtitle').textContent =
+        'Scan date: ' + latest + ' | axe-core ' + (sampleRow ? sampleRow.axe_version : 'unknown');
+
+      /* ---------------------------------------------------------- */
+      /*  2. Summary cards                                           */
+      /* ---------------------------------------------------------- */
+      const okRows = currentRows.filter((r) => r.status === 'ok');
+      const prevOkRows = prevRows.filter((r) => r.status === 'ok');
+
+      const totalErrors = okRows.reduce((s, r) => s + r.violations_total, 0);
+      const avgErrors = okRows.length ? Math.round(totalErrors / okRows.length) : 0;
+      const avgDensity = okRows.length
+        ? Math.round((okRows.reduce((s, r) => s + r.error_density, 0) / okRows.length) * 10000) / 10000
+        : 0;
+
+      const prevTotalErrors = prevOkRows.reduce((s, r) => s + r.violations_total, 0);
+      const prevAvgErrors = prevOkRows.length ? Math.round(prevTotalErrors / prevOkRows.length) : null;
+      const prevAvgDensity = prevOkRows.length
+        ? Math.round((prevOkRows.reduce((s, r) => s + r.error_density, 0) / prevOkRows.length) * 10000) / 10000
+        : null;
+
+      const cardsEl = document.getElementById('summary-cards');
+      cardsEl.innerHTML = [
+        { label: 'Total Errors', value: totalErrors, delta: deltaHTML(totalErrors, prev ? prevTotalErrors : null) },
+        { label: 'Avg Errors / Page', value: avgErrors, delta: deltaHTML(avgErrors, prevAvgErrors) },
+        { label: 'Avg Error Density', value: avgDensity.toFixed(4), delta: deltaHTMLPct(avgDensity, prevAvgDensity) },
+        { label: 'Sites Scanned', value: currentRows.length, delta: '' }
+      ]
+        .map(
+          (c) =>
+            '<div class="card">' +
+            '<div class="card-value">' + c.value + '</div>' +
+            '<div class="card-label">' + c.label + '</div>' +
+            (c.delta ? '<div class="card-delta">' + c.delta + '</div>' : '') +
+            '</div>'
+        )
+        .join('');
+
+      /* ---------------------------------------------------------- */
+      /*  3. Campus table                                            */
+      /* ---------------------------------------------------------- */
+      const tbody = document.getElementById('campus-tbody');
+
+      // Sort by violations descending so the worst offenders appear first.
+      const sorted = [...currentRows].sort((a, b) => b.violations_total - a.violations_total);
+
+      for (const row of sorted) {
+        const pr = prevRow(row.site);
+        const tr = document.createElement('tr');
+        tr.classList.add('campus-row');
+        if (row.status === 'error') tr.classList.add('error-row');
+
+        const statusNote = row.status === 'error' ? ' (scan failed)' : '';
+
+        tr.innerHTML =
+          '<td class="campus-name">' + campusName(row.site) + statusNote + '</td>' +
+          '<td>' + row.violations_total + '</td>' +
+          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.critical : 0) + '</td>' +
+          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.serious : 0) + '</td>' +
+          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.moderate : 0) + '</td>' +
+          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.minor : 0) + '</td>' +
+          '<td>' + row.element_count + '</td>' +
+          '<td>' + row.error_density.toFixed(4) + '</td>' +
+          '<td>' + deltaHTML(row.violations_total, pr ? pr.violations_total : null) + '</td>';
+
+        tbody.appendChild(tr);
+
+        // Expandable rule detail row (hidden by default).
+        const detailTr = document.createElement('tr');
+        detailTr.classList.add('detail-row');
+        detailTr.style.display = 'none';
+        const detailTd = document.createElement('td');
+        detailTd.colSpan = 9;
+
+        if (row.violations_by_rule && Object.keys(row.violations_by_rule).length) {
+          const rulesSorted = Object.entries(row.violations_by_rule).sort((a, b) => b[1] - a[1]);
+          detailTd.innerHTML =
+            '<div class="rule-detail"><strong>Top violating rules:</strong><ul>' +
+            rulesSorted
+              .slice(0, 10)
+              .map((e) => '<li><code>' + e[0] + '</code>: ' + e[1] + ' instances</li>')
+              .join('') +
+            '</ul></div>';
+        } else {
+          detailTd.innerHTML = '<div class="rule-detail">No violation details available.</div>';
+        }
+
+        detailTr.appendChild(detailTd);
+        tbody.appendChild(detailTr);
+
+        // Toggle detail on click.
+        tr.style.cursor = 'pointer';
+        tr.addEventListener('click', () => {
+          const visible = detailTr.style.display !== 'none';
+          detailTr.style.display = visible ? 'none' : 'table-row';
+          tr.classList.toggle('expanded', !visible);
+        });
+      }
+
+      /* ---------------------------------------------------------- */
+      /*  4. Trend chart                                             */
+      /* ---------------------------------------------------------- */
+      const slugs = [...new Set(history.map((r) => r.site))].sort();
+
+      const COLORS = [
+        '#003262', '#3B7EA1', '#FDB515', '#D4A017',
+        '#00A598', '#ED4E33', '#6C3461', '#CFDD45',
+        '#859438', '#E58025', '#4B8B9B'
+      ];
+
+      const trendDatasets = slugs.map((slug, i) => ({
+        label: campusName(slug),
+        data: months.map((m) => {
+          const r = history.find((h) => h.month === m && h.site === slug);
+          return r && r.status === 'ok' ? r.violations_total : null;
+        }),
+        borderColor: COLORS[i % COLORS.length],
+        backgroundColor: COLORS[i % COLORS.length] + '33',
+        tension: 0.3,
+        spanGaps: true
+      }));
+
+      new Chart(document.getElementById('trend-chart'), {
+        type: 'line',
+        data: { labels: months, datasets: trendDatasets },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'bottom' }
+          },
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'Errors' } },
+            x: { title: { display: true, text: 'Month' } }
+          }
+        }
+      });
+
+      /* ---------------------------------------------------------- */
+      /*  5. Rule breakdown                                          */
+      /* ---------------------------------------------------------- */
+      // Aggregate rule counts across all sites for the current month.
+      const currentRuleTotals = {};
+      for (const row of okRows) {
+        if (!row.violations_by_rule) continue;
+        for (const [rule, count] of Object.entries(row.violations_by_rule)) {
+          currentRuleTotals[rule] = (currentRuleTotals[rule] || 0) + count;
+        }
+      }
+
+      const prevRuleTotals = {};
+      for (const row of prevOkRows) {
+        if (!row.violations_by_rule) continue;
+        for (const [rule, count] of Object.entries(row.violations_by_rule)) {
+          prevRuleTotals[rule] = (prevRuleTotals[rule] || 0) + count;
+        }
+      }
+
+      const top10Rules = Object.entries(currentRuleTotals)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+
+      const ruleLabels = top10Rules.map((e) => e[0]);
+      const ruleCurrentData = top10Rules.map((e) => e[1]);
+      const rulePrevData = ruleLabels.map((r) => prevRuleTotals[r] || 0);
+
+      const ruleDatasets = [
+        {
+          label: 'Current month (' + latest + ')',
+          data: ruleCurrentData,
+          backgroundColor: '#003262'
+        }
+      ];
+
+      if (prev) {
+        ruleDatasets.unshift({
+          label: 'Previous month (' + prev + ')',
+          data: rulePrevData,
+          backgroundColor: '#003262' + '44'
+        });
+      }
+
+      new Chart(document.getElementById('rule-chart'), {
+        type: 'bar',
+        data: { labels: ruleLabels, datasets: ruleDatasets },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'bottom' }
+          },
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'Total Instances' } }
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
