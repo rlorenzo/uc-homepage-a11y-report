@@ -97,16 +97,20 @@ console.log(`Using user agent: ${USER_AGENT}\n`);
 
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
-  // Only bypass TLS validation when a proxy is configured — this is needed
-  // for TLS-intercepting corporate proxies. In normal environments we want
-  // real cert validation so invalid/self-signed certs still cause failures.
-  const context = await browser.newContext({
-    ignoreHTTPSErrors: Boolean(proxyUrl),
-    userAgent: USER_AGENT
-  });
-  const page = await context.newPage();
-
+  // Context/page creation is inside the try so that failures in
+  // newContext()/newPage() (e.g. bad proxy, browser crash) are handled as
+  // per-site errors rather than aborting the whole run.
+  let context;
   try {
+    // Only bypass TLS validation when a proxy is configured — this is needed
+    // for TLS-intercepting corporate proxies. In normal environments we want
+    // real cert validation so invalid/self-signed certs still cause failures.
+    context = await browser.newContext({
+      ignoreHTTPSErrors: Boolean(proxyUrl),
+      userAgent: USER_AGENT
+    });
+    const page = await context.newPage();
+
     // networkidle waits until there are no more than 0 network connections
     // for at least 500ms. This gives JS-heavy homepages time to finish
     // rendering before we count elements and run axe. Some sites (e.g. UCSD)
@@ -142,15 +146,18 @@ async function scanSite(site) {
       .setLegacyMode(true)
       .analyze();
 
-    // Count violations by impact level.
-    const violationsByImpact = { critical: 0, serious: 0, moderate: 0, minor: 0 };
+    // Count violations by impact level. axe-core may report impact as null
+    // for some rules; bucket those under "unknown" so totals stay consistent
+    // with violationsTotal and the report doesn't silently drop them.
+    const violationsByImpact = { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 };
     const violationsByRule = {};
     let violationsTotal = 0;
 
     for (const v of axeResults.violations) {
       const count = v.nodes.length;
+      const impact = v.impact || 'unknown';
       violationsTotal += count;
-      violationsByImpact[v.impact] = (violationsByImpact[v.impact] || 0) + count;
+      violationsByImpact[impact] = (violationsByImpact[impact] || 0) + count;
       violationsByRule[v.id] = (violationsByRule[v.id] || 0) + count;
     }
 
@@ -216,12 +223,12 @@ async function scanSite(site) {
       ...errorResult,
       element_count: 0,
       violations_total: 0,
-      violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0 },
+      violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
       violations_by_rule: {},
       error_density: 0
     };
   } finally {
-    await context.close();
+    if (context) await context.close();
   }
 }
 
