@@ -77,11 +77,13 @@ async function resolveUserAgent() {
     );
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const list = await resp.json();
-    // Pick the newest macOS Chrome entry for consistency across runs.
-    const picked = list.find(
-      (ua) => ua.includes('Macintosh') && ua.includes('Chrome/') && !ua.includes('Edg/')
-    );
-    if (picked) return picked;
+    // Pick the macOS Chrome entry with the highest major version. The list
+    // is not guaranteed to be sorted, so parse and compare explicitly.
+    const candidates = list
+      .filter((ua) => ua.includes('Macintosh') && ua.includes('Chrome/') && !ua.includes('Edg/'))
+      .map((ua) => ({ ua, version: Number((ua.match(/Chrome\/(\d+)/) || [])[1] || 0) }))
+      .sort((a, b) => b.version - a.version);
+    if (candidates.length) return candidates[0].ua;
   } catch (err) {
     console.log(`Could not fetch latest user agents (${err.message}), using fallback.`);
   } finally {
