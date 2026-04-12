@@ -402,7 +402,10 @@
         }
       ];
 
-      if (prev) {
+      // Only show the previous-month series when the previous month had at
+      // least one successful scan — otherwise the dataset is all zeros and
+      // reads as "0 violations" instead of "no data".
+      if (prev && prevOkRows.length) {
         ruleDatasets.unshift({
           label: 'Previous month (' + prev + ')',
           data: rulePrevData,
