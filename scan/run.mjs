@@ -39,10 +39,11 @@ const launchOptions = { headless: true };
 if (proxyUrl) {
   try {
     const parsed = new URL(proxyUrl);
-    launchOptions.proxy = { server: `${parsed.protocol}//${parsed.hostname}:${parsed.port}` };
+    const server = `${parsed.protocol}//${parsed.hostname}${parsed.port ? `:${parsed.port}` : ''}`;
+    launchOptions.proxy = { server };
     if (parsed.username) launchOptions.proxy.username = decodeURIComponent(parsed.username);
     if (parsed.password) launchOptions.proxy.password = decodeURIComponent(parsed.password);
-    console.log(`Using proxy: ${parsed.hostname}:${parsed.port}\n`);
+    console.log(`Using proxy: ${server}\n`);
   } catch {
     console.log('Could not parse proxy URL, proceeding without proxy.\n');
   }

@@ -14,9 +14,14 @@ const HISTORY_PATH = join(__dirname, '..', 'data', 'history.json');
 export async function updateHistory(newRows) {
   let history = [];
   try {
-    history = JSON.parse(await readFile(HISTORY_PATH, 'utf-8'));
-  } catch {
-    // File missing or empty; start fresh.
+    const raw = await readFile(HISTORY_PATH, 'utf-8');
+    if (raw.trim()) {
+      history = JSON.parse(raw);
+    }
+  } catch (err) {
+    if (err?.code !== 'ENOENT') {
+      throw err;
+    }
   }
 
   // Build a set of (month, site) keys that are being written this run.
