@@ -48,8 +48,8 @@ jobs:
 
       - name: Commit results
         run: |
-          git config user.name "a11y-bot"
-          git config user.email "[email protected]"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           MONTH=$(date -u +"%Y-%m")
           git diff --quiet --cached || git commit -m "Monthly scan ${MONTH}"

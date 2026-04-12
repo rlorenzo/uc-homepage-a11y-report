@@ -69,15 +69,21 @@ async function scanSite(site) {
     // keep persistent connections open (analytics, websockets), so networkidle
     // never resolves. In that case we fall back to the "load" event, which
     // fires once the page and its subresources have finished loading.
+    let response;
     try {
-      await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30_000 });
+      response = await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30_000 });
     } catch (navError) {
       if (navError.name === 'TimeoutError') {
         console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
-        await page.goto(site.url, { waitUntil: 'load', timeout: 30_000 });
+        response = await page.goto(site.url, { waitUntil: 'load', timeout: 30_000 });
       } else {
         throw navError;
       }
+    }
+
+    if (!response || !response.ok()) {
+      const status = response ? response.status() : 'no response';
+      throw new Error(`HTTP ${status} from ${site.url}`);
     }
 
     const elementCount = await page.locator('*').count();
