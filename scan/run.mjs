@@ -65,8 +65,14 @@ const FALLBACK_USER_AGENT =
   '(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36';
 
 async function resolveUserAgent() {
+  // Abort after 5s so a hung CDN can't stall the whole scan.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5000);
   try {
-    const resp = await fetch('https://jnrbsn.github.io/user-agents/user-agents.json');
+    const resp = await fetch(
+      'https://jnrbsn.github.io/user-agents/user-agents.json',
+      { signal: controller.signal }
+    );
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const list = await resp.json();
     // Pick the newest macOS Chrome entry for consistency across runs.
@@ -76,6 +82,8 @@ async function resolveUserAgent() {
     if (picked) return picked;
   } catch (err) {
     console.log(`Could not fetch latest user agents (${err.message}), using fallback.`);
+  } finally {
+    clearTimeout(timer);
   }
   return FALLBACK_USER_AGENT;
 }
@@ -85,10 +93,11 @@ console.log(`Using user agent: ${USER_AGENT}\n`);
 
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
-  // ignoreHTTPSErrors is needed when running behind a TLS-intercepting proxy
-  // (common in CI containers). In normal environments it has no effect.
+  // Only bypass TLS validation when a proxy is configured — this is needed
+  // for TLS-intercepting corporate proxies. In normal environments we want
+  // real cert validation so invalid/self-signed certs still cause failures.
   const context = await browser.newContext({
-    ignoreHTTPSErrors: true,
+    ignoreHTTPSErrors: Boolean(proxyUrl),
     userAgent: USER_AGENT
   });
   const page = await context.newPage();

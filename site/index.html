@@ -223,27 +223,36 @@
       /* ---------------------------------------------------------- */
       const tbody = document.getElementById('campus-tbody');
 
-      // Sort by violations descending so the worst offenders appear first.
-      const sorted = [...currentRows].sort((a, b) => b.violations_total - a.violations_total);
+      // Sort successful scans before failed scans, then by violations descending
+      // so the worst offenders appear first while failed scans sink to the bottom.
+      const sorted = [...currentRows].sort((a, b) => {
+        const aFailed = a.status === 'error' ? 1 : 0;
+        const bFailed = b.status === 'error' ? 1 : 0;
+        if (aFailed !== bFailed) return aFailed - bFailed;
+        return b.violations_total - a.violations_total;
+      });
 
       for (const row of sorted) {
         const pr = prevRow(row.site);
         const tr = document.createElement('tr');
         tr.classList.add('campus-row');
-        if (row.status === 'error') tr.classList.add('error-row');
+        const scanFailed = row.status === 'error';
+        if (scanFailed) tr.classList.add('error-row');
 
-        const statusNote = row.status === 'error' ? ' (scan failed)' : '';
+        const statusNote = scanFailed ? ' (scan failed)' : '';
+        const na = '<span class="na">n/a</span>';
+        const impact = row.violations_by_impact || {};
 
         tr.innerHTML =
           '<td class="campus-name">' + campusName(row.site) + statusNote + '</td>' +
-          '<td>' + row.violations_total + '</td>' +
-          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.critical : 0) + '</td>' +
-          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.serious : 0) + '</td>' +
-          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.moderate : 0) + '</td>' +
-          '<td class="impact-col">' + (row.violations_by_impact ? row.violations_by_impact.minor : 0) + '</td>' +
-          '<td>' + row.element_count + '</td>' +
-          '<td>' + row.error_density.toFixed(4) + '</td>' +
-          '<td>' + deltaHTML(row.violations_total, pr ? pr.violations_total : null) + '</td>';
+          '<td>' + (scanFailed ? na : row.violations_total) + '</td>' +
+          '<td class="impact-col">' + (scanFailed ? na : (impact.critical || 0)) + '</td>' +
+          '<td class="impact-col">' + (scanFailed ? na : (impact.serious || 0)) + '</td>' +
+          '<td class="impact-col">' + (scanFailed ? na : (impact.moderate || 0)) + '</td>' +
+          '<td class="impact-col">' + (scanFailed ? na : (impact.minor || 0)) + '</td>' +
+          '<td>' + (scanFailed ? na : row.element_count) + '</td>' +
+          '<td>' + (scanFailed ? na : row.error_density.toFixed(4)) + '</td>' +
+          '<td>' + (scanFailed ? na : deltaHTML(row.violations_total, pr ? pr.violations_total : null)) + '</td>';
 
         tbody.appendChild(tr);
 
