@@ -263,7 +263,17 @@
         const detailTd = document.createElement('td');
         detailTd.colSpan = 9;
 
-        if (row.violations_by_rule && Object.keys(row.violations_by_rule).length) {
+        if (scanFailed) {
+          // row.error comes from an Error.message string — escape before
+          // inserting as HTML since it may reflect the URL/network content.
+          const errDiv = document.createElement('div');
+          errDiv.className = 'rule-detail';
+          const strong = document.createElement('strong');
+          strong.textContent = 'Scan error: ';
+          errDiv.appendChild(strong);
+          errDiv.appendChild(document.createTextNode(row.error || 'Unknown error'));
+          detailTd.appendChild(errDiv);
+        } else if (row.violations_by_rule && Object.keys(row.violations_by_rule).length) {
           const rulesSorted = Object.entries(row.violations_by_rule).sort((a, b) => b[1] - a[1]);
           detailTd.innerHTML =
             '<div class="rule-detail"><strong>Top violating rules:</strong><ul>' +
@@ -325,20 +335,36 @@
         spanGaps: true
       }));
 
-      new Chart(document.getElementById('trend-chart'), {
-        type: 'line',
-        data: { labels: months, datasets: trendDatasets },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: 'bottom' }
-          },
-          scales: {
-            y: { beginAtZero: true, title: { display: true, text: 'Errors' } },
-            x: { title: { display: true, text: 'Month' } }
+      // Chart.js may fail to load (adblock, captive portal, offline). Show a
+      // textual fallback in the chart's wrapper so the rest of the report
+      // stays functional.
+      function showChartFallback(canvasId, message) {
+        const canvas = document.getElementById(canvasId);
+        const wrap = canvas.parentElement;
+        const p = document.createElement('p');
+        p.className = 'chart-fallback';
+        p.textContent = message;
+        wrap.replaceChild(p, canvas);
+      }
+
+      if (typeof Chart === 'undefined') {
+        showChartFallback('trend-chart', 'Chart could not be rendered (Chart.js failed to load).');
+      } else {
+        new Chart(document.getElementById('trend-chart'), {
+          type: 'line',
+          data: { labels: months, datasets: trendDatasets },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: 'bottom' }
+            },
+            scales: {
+              y: { beginAtZero: true, title: { display: true, text: 'Errors' } },
+              x: { title: { display: true, text: 'Month' } }
+            }
           }
-        }
-      });
+        });
+      }
 
       /* ---------------------------------------------------------- */
       /*  5. Rule breakdown                                          */
@@ -384,19 +410,23 @@
         });
       }
 
-      new Chart(document.getElementById('rule-chart'), {
-        type: 'bar',
-        data: { labels: ruleLabels, datasets: ruleDatasets },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: 'bottom' }
-          },
-          scales: {
-            y: { beginAtZero: true, title: { display: true, text: 'Total Instances' } }
+      if (typeof Chart === 'undefined') {
+        showChartFallback('rule-chart', 'Chart could not be rendered (Chart.js failed to load).');
+      } else {
+        new Chart(document.getElementById('rule-chart'), {
+          type: 'bar',
+          data: { labels: ruleLabels, datasets: ruleDatasets },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: 'bottom' }
+            },
+            scales: {
+              y: { beginAtZero: true, title: { display: true, text: 'Total Instances' } }
+            }
           }
-        }
-      });
+        });
+      }
     })();
   </script>
 </body>

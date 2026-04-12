@@ -9,8 +9,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
 // Determine the current month string (YYYY-MM) and ISO timestamp.
+// Use UTC so runs near a month boundary land in the same folder regardless
+// of the runner's local timezone, and match the workflow's UTC commit message.
 const now = new Date();
-const month = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+const month = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
 const scannedAt = now.toISOString();
 
 const sites = JSON.parse(await readFile(join(__dirname, 'sites.json'), 'utf-8'));
