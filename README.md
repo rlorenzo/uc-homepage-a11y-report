@@ -31,6 +31,8 @@ to GitHub Pages so that month-over-month trends are visible at a glance.
 
 ## Running locally
 
+Requires **Node.js 24 or later**.
+
 ```bash
 npm ci
 npx playwright install chromium
