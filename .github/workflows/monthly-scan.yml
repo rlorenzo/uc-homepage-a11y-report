@@ -57,6 +57,11 @@ jobs:
 
       - name: Prepare Pages artifact
         run: |
+          # site/data is a symlink to ../data in the repo (for local dev),
+          # but GitHub Pages would deploy the entire data/ tree including
+          # large per-run JSONs. Replace it with a clean directory containing
+          # only history.json, which is all the site actually fetches.
+          rm -rf site/data
           mkdir -p site/data
           cp data/history.json site/data/history.json
 

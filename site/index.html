@@ -34,6 +34,7 @@
             <th scope="col" class="impact-col">Serious</th>
             <th scope="col" class="impact-col">Moderate</th>
             <th scope="col" class="impact-col">Minor</th>
+            <th scope="col" class="impact-col">Unknown</th>
             <th scope="col">Elements</th>
             <th scope="col">Error Density</th>
             <th scope="col">Change</th>
@@ -250,6 +251,7 @@
           '<td class="impact-col">' + (scanFailed ? na : (impact.serious || 0)) + '</td>' +
           '<td class="impact-col">' + (scanFailed ? na : (impact.moderate || 0)) + '</td>' +
           '<td class="impact-col">' + (scanFailed ? na : (impact.minor || 0)) + '</td>' +
+          '<td class="impact-col">' + (scanFailed ? na : (impact.unknown || 0)) + '</td>' +
           '<td>' + (scanFailed ? na : row.element_count) + '</td>' +
           '<td>' + (scanFailed ? na : row.error_density.toFixed(4)) + '</td>' +
           '<td>' + (scanFailed ? na : deltaHTML(row.violations_total, pr ? pr.violations_total : null)) + '</td>';
@@ -261,7 +263,7 @@
         detailTr.classList.add('detail-row');
         detailTr.style.display = 'none';
         const detailTd = document.createElement('td');
-        detailTd.colSpan = 9;
+        detailTd.colSpan = 10;
 
         if (scanFailed) {
           // row.error comes from an Error.message string — escape before
