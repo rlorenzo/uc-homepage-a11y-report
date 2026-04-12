@@ -55,11 +55,42 @@ const browser = await chromium.launch(launchOptions);
 
 const CONCURRENCY = 3;
 
+// Some UC sites (e.g. uci.edu via AWS ELB) return 403 to the default
+// Playwright "HeadlessChrome" user agent. Use a realistic desktop Chrome UA
+// to avoid tripping these user-agent-based bot filters. Fetch the latest
+// from jnrbsn/user-agents (updated daily) so it stays fresh as Chrome's
+// major version bumps, and fall back to a pinned string if the fetch fails.
+const FALLBACK_USER_AGENT =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ' +
+  '(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36';
+
+async function resolveUserAgent() {
+  try {
+    const resp = await fetch('https://jnrbsn.github.io/user-agents/user-agents.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const list = await resp.json();
+    // Pick the newest macOS Chrome entry for consistency across runs.
+    const picked = list.find(
+      (ua) => ua.includes('Macintosh') && ua.includes('Chrome/') && !ua.includes('Edg/')
+    );
+    if (picked) return picked;
+  } catch (err) {
+    console.log(`Could not fetch latest user agents (${err.message}), using fallback.`);
+  }
+  return FALLBACK_USER_AGENT;
+}
+
+const USER_AGENT = await resolveUserAgent();
+console.log(`Using user agent: ${USER_AGENT}\n`);
+
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
   // ignoreHTTPSErrors is needed when running behind a TLS-intercepting proxy
   // (common in CI containers). In normal environments it has no effect.
-  const context = await browser.newContext({ ignoreHTTPSErrors: true });
+  const context = await browser.newContext({
+    ignoreHTTPSErrors: true,
+    userAgent: USER_AGENT
+  });
   const page = await context.newPage();
 
   try {
