@@ -53,9 +53,9 @@ if (proxyUrl) {
 // context per site so cookies and storage do not leak between sites.
 const browser = await chromium.launch(launchOptions);
 
-const results = [];
+const CONCURRENCY = 3;
 
-for (const site of sites) {
+async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
   // ignoreHTTPSErrors is needed when running behind a TLS-intercepting proxy
   // (common in CI containers). In normal environments it has no effect.
@@ -73,7 +73,7 @@ for (const site of sites) {
       await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30_000 });
     } catch (navError) {
       if (navError.name === 'TimeoutError') {
-        console.log('  networkidle timed out, retrying with waitUntil: load ...');
+        console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
         await page.goto(site.url, { waitUntil: 'load', timeout: 30_000 });
       } else {
         throw navError;
@@ -127,7 +127,9 @@ for (const site of sites) {
       JSON.stringify(fullResult, null, 2)
     );
 
-    const summary = {
+    console.log(`  [${site.slug}] OK: ${violationsTotal} violations, ${elementCount} elements`);
+
+    return {
       month,
       scanned_at: scannedAt,
       axe_version: axeVersion,
@@ -140,13 +142,10 @@ for (const site of sites) {
       violations_by_rule: violationsByRule,
       error_density: errorDensity
     };
-
-    results.push(summary);
-    console.log(`  OK: ${violationsTotal} violations, ${elementCount} elements\n`);
   } catch (err) {
     // A failure on one site must not abort the entire run. Record the
     // error so the report can display "scan failed" for this site.
-    console.error(`  ERROR: ${err.message}\n`);
+    console.error(`  [${site.slug}] ERROR: ${err.message}`);
 
     const errorResult = {
       month,
@@ -163,24 +162,31 @@ for (const site of sites) {
       JSON.stringify(errorResult, null, 2)
     );
 
-    results.push({
-      month,
-      scanned_at: scannedAt,
-      axe_version: axeVersion,
-      site: site.slug,
-      url: site.url,
-      status: 'error',
+    return {
+      ...errorResult,
       element_count: 0,
       violations_total: 0,
       violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0 },
       violations_by_rule: {},
-      error_density: 0,
-      error: err.message
-    });
+      error_density: 0
+    };
   } finally {
     await context.close();
   }
 }
+
+// Process sites with limited concurrency to avoid overwhelming the runner.
+const results = [];
+const queue = [...sites];
+
+async function worker() {
+  while (queue.length) {
+    const site = queue.shift();
+    results.push(await scanSite(site));
+  }
+}
+
+await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
 await browser.close();
 
