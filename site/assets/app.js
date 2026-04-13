@@ -875,8 +875,12 @@
       cardBtn.type = "button";
       cardBtn.className = "expand-btn";
       cardBtn.setAttribute("aria-expanded", "false");
-      cardBtn.innerHTML =
-        'Show rule details <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const chevronSvg =
+        '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const cardBtnLabel = document.createElement("span");
+      cardBtnLabel.textContent = "Show rule details";
+      cardBtn.appendChild(cardBtnLabel);
+      cardBtn.insertAdjacentHTML("beforeend", ` ${chevronSvg}`);
       const cardDetail = buildRuleDetail(row);
       cardDetail.style.display = "none";
       cardDetail.id = `card-detail-${row.site}`;
@@ -886,6 +890,7 @@
         const open = cardBtn.getAttribute("aria-expanded") === "true";
         cardBtn.setAttribute("aria-expanded", String(!open));
         cardDetail.style.display = open ? "none" : "block";
+        cardBtnLabel.textContent = open ? "Show rule details" : "Hide rule details";
       });
 
       card.appendChild(cardBtn);

@@ -37,14 +37,21 @@ const TAGS = [
 const browser = await chromium.launch({ headless: true });
 
 async function gotoForgiving(page, url) {
+  let response;
   try {
-    await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
+    response = await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
   } catch (e) {
     if (e.name === "TimeoutError") {
-      await page.goto(url, { waitUntil: "load", timeout: 30_000 });
+      response = await page.goto(url, { waitUntil: "load", timeout: 30_000 });
     } else {
       throw e;
     }
+  }
+  // Match scan/run.mjs — a 4xx/5xx response would run axe against an error
+  // page and silently produce misleading drift diffs otherwise.
+  if (!response?.ok()) {
+    const status = response ? response.status() : "no response";
+    throw new Error(`Navigation to ${url} failed with status ${status}`);
   }
 }
 
