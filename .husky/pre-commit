@@ -1,0 +1,8 @@
+# Run Biome checks on every commit. Blocks the commit on failure.
+
+set -e
+
+echo "→ Biome check (lint + format, JS and CSS)"
+npm run --silent check
+
+echo "✓ pre-commit checks passed"
