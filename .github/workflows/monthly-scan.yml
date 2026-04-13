@@ -24,6 +24,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Always check out main at runtime, not the trigger SHA. A
+          # `gh run rerun` against a previous scheduled or dispatched
+          # run would otherwise re-check-out the stale trigger commit
+          # and then fail to push its new "Monthly scan $MONTH" commit
+          # because main had already moved forward during the first
+          # attempt's successful commit step.
+          ref: main
+          # Full history so the commit step can rebase onto origin/main
+          # cleanly if main moves mid-run (the commit step also handles
+          # this with a rebase + retry loop as a belt-and-suspenders
+          # safeguard against concurrent pushes).
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -52,8 +65,34 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           MONTH=$(date -u +"%Y-%m")
-          git diff --quiet --cached || git commit -m "Monthly scan ${MONTH}"
-          git push
+          if git diff --quiet --cached; then
+            echo "No data changes to commit — skipping commit/push."
+            exit 0
+          fi
+          git commit -m "Monthly scan ${MONTH}"
+          # Rebase onto latest origin/main before pushing. Handles the case
+          # where a previous run already pushed a "Monthly scan $MONTH"
+          # commit (e.g. this is a rerun after a downstream deploy step
+          # failed). Scans only touch data/ files so conflicts are not
+          # expected, but if they ever happen the run should fail loudly
+          # rather than force-pushing. Retry the push once in case the
+          # ref moved between fetch and push.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || {
+              echo "Rebase of monthly scan commit failed — aborting."
+              git rebase --abort || true
+              exit 1
+            }
+            if git push; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}, retrying..."
+            sleep 2
+          done
+          echo "Push failed after 3 attempts."
+          exit 1
 
       - name: Prepare Pages artifact
         run: |
