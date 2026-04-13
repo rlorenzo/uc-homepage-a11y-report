@@ -1127,6 +1127,33 @@ main {
   border-radius: var(--radius);
   padding: var(--space-5);
   position: relative;
+  /* Chart.js with maintainAspectRatio: false fills the parent; the
+     parent needs an explicit height or the canvas collapses to its
+     built-in 150px fallback. A bottom-positioned legend with 11
+     campus entries needs ~150px on its own, so the wrapper has to
+     be tall enough for both the plot and the wrapped legend. */
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .chart-wrap {
+    height: 460px;
+  }
+}
+
+/* When Chart.js fails to load, showChartFallback() in app.js replaces
+   the canvas with a short paragraph and adds .chart-wrap--fallback to
+   the wrapper. The fixed wrapper height would otherwise leave that
+   message floating at the top of a 520px/460px empty box, so collapse
+   the wrapper to its natural height here. Don't combine this with a
+   :has(.chart-fallback) selector in the same list — :has() is invalid
+   in older browsers and a non-forgiving selector list would drop the
+   entire rule (including the class hook) on those browsers. */
+.chart-wrap.chart-wrap--fallback {
+  height: auto;
+  display: block;
 }
 
 .chart-guide {
@@ -1148,7 +1175,21 @@ main {
 }
 
 .chart-wrap canvas {
-  max-height: 420px;
+  /* Chart.js with `maintainAspectRatio: false` requires the parent
+     element to have an explicit height — that's what .chart-wrap's
+     fixed height + flex layout provides. The canvas itself gets its
+     pixel width/height set inline by Chart.js on every responsive
+     resize (display size + devicePixelRatio for crisp rendering);
+     we don't want to fight that with our own width rule. `display:
+     block` kills the inline-baseline gap without touching sizing.
+     `flex: 1 1 auto` + `min-height: 0` are layout belts-and-braces
+     in case an HTML legend or other sibling is added inside
+     .chart-wrap later — today the chart legend is painted inside
+     the canvas and isn't a separate DOM node. */
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: 100%;
 }
 
 /* --- 11. Methodology / Footer -------------------------------- */
