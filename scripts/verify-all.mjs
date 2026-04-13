@@ -20,7 +20,19 @@ const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36";
 
-const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
+// Must match the tag set in scan/run.mjs so this drift-check tool
+// compares apples to apples against the production pipeline.
+const TAGS = [
+  "wcag2a",
+  "wcag2aa",
+  "wcag2aaa",
+  "wcag21a",
+  "wcag21aa",
+  "wcag21aaa",
+  "wcag22a",
+  "wcag22aa",
+  "wcag22aaa",
+];
 
 const browser = await chromium.launch({ headless: true });
 
