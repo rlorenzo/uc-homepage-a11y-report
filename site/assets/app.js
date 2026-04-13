@@ -1029,6 +1029,11 @@
     p.className = "chart-fallback";
     p.textContent = message;
     wrap.replaceChild(p, canvas);
+    // Class hook for CSS to collapse the wrapper's fixed height to its
+    // natural size. The style.css `:has(.chart-fallback)` rule does the
+    // same thing in browsers that support :has(); this class is the
+    // portable bridge for environments that don't.
+    wrap.classList.add("chart-wrap--fallback");
   }
 
   // ---------- 10. Trend chart ----------

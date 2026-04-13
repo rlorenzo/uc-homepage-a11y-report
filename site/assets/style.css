@@ -1146,7 +1146,10 @@ main {
 /* When Chart.js fails to load, the canvas is swapped out for a short
    paragraph. The fixed wrapper height would otherwise leave that message
    floating at the top of a 520px/460px empty box. Collapse the wrapper
-   to its natural height and center the message in its own padding. */
+   to its natural height. The .chart-wrap--fallback class is applied by
+   showChartFallback() in app.js; the :has() selector is a belt-and-
+   suspenders bridge for cases where the class hook isn't reached. */
+.chart-wrap.chart-wrap--fallback,
 .chart-wrap:has(.chart-fallback) {
   height: auto;
   display: block;
