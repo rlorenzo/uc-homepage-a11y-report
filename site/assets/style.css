@@ -1127,6 +1127,20 @@ main {
   border-radius: var(--radius);
   padding: var(--space-5);
   position: relative;
+  /* Chart.js with maintainAspectRatio: false fills the parent; the
+     parent needs an explicit height or the canvas collapses to its
+     built-in 150px fallback. A bottom-positioned legend with 11
+     campus entries needs ~150px on its own, so the wrapper has to
+     be tall enough for both the plot and the wrapped legend. */
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .chart-wrap {
+    height: 460px;
+  }
 }
 
 .chart-guide {
@@ -1148,7 +1162,13 @@ main {
 }
 
 .chart-wrap canvas {
-  max-height: 420px;
+  /* Let the canvas fill the wrapper minus padding. Flex on the parent
+     + min-height: 0 is what actually lets Chart.js shrink the canvas
+     when the legend takes more space on narrow viewports. */
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100% !important;
+  max-width: 100%;
 }
 
 /* --- 11. Methodology / Footer -------------------------------- */
