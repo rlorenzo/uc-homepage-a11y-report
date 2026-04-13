@@ -1164,10 +1164,15 @@ main {
 .chart-wrap canvas {
   /* Let the canvas fill the wrapper minus padding. Flex on the parent
      + min-height: 0 is what actually lets Chart.js shrink the canvas
-     when the legend takes more space on narrow viewports. */
+     when the legend takes more space on narrow viewports.
+     No explicit width — Chart.js sets its own inline width/height on
+     the canvas during responsive sizing (tied to devicePixelRatio for
+     crisp rendering). Using !important here would override that and
+     cause blurry/stale sizing on browser resize. `display: block`
+     kills the inline-baseline gap without interfering. */
+  display: block;
   flex: 1 1 auto;
   min-height: 0;
-  width: 100% !important;
   max-width: 100%;
 }
 
