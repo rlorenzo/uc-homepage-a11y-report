@@ -229,13 +229,20 @@
     labelEl.appendChild(document.createTextNode(label));
     card.appendChild(labelEl);
 
+    // Wrap the animated number in its own inner span so countUp's
+    // textContent assignments target only the number, leaving the
+    // sibling unit span intact. Without this wrapper, the first
+    // countUp frame wipes the unit.
     const valueEl = document.createElement("span");
     valueEl.className = `stat-value${small ? " small" : ""}`;
+    const numNode = document.createElement("span");
+    numNode.className = "stat-num";
+    valueEl.appendChild(numNode);
     if (typeof value === "number") {
-      valueEl.textContent = "0";
-      requestAnimationFrame(() => countUp(valueEl, value));
+      numNode.textContent = "0";
+      requestAnimationFrame(() => countUp(numNode, value));
     } else {
-      valueEl.textContent = value;
+      numNode.textContent = value;
     }
     card.appendChild(valueEl);
 
