@@ -22,7 +22,11 @@ import {
 export function renderFilterBar(ctx) {
   const { currentRows } = ctx;
 
-  const campusUniverse = new Set(currentRows.map((r) => r.campus).filter(Boolean));
+  // Fall back to r.site for legacy rows that predate the campus field
+  // — mirrors the fallback applyFilter() uses when matching campus
+  // membership. Without it, pre-expansion homepage rows would fail to
+  // contribute a chip even though the filter would still match them.
+  const campusUniverse = new Set(currentRows.map((r) => r.campus || r.site).filter(Boolean));
   const campusSlugs = orderedCampuses(campusUniverse);
 
   // Dropdown lists discipline categories only — homepage and admissions

@@ -28,7 +28,10 @@ export function subscribe(fn) {
 }
 
 function notify() {
-  for (const fn of subscribers) fn(state);
+  // Hand subscribers a snapshot so a buggy listener can't mutate the
+  // internal state and bypass writeHash() / invariants.
+  const snapshot = getFilterState();
+  for (const fn of subscribers) fn(snapshot);
 }
 
 export function getFilterState() {
