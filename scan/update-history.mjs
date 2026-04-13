@@ -1,9 +1,9 @@
-import { readFile, writeFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const HISTORY_PATH = join(__dirname, '..', 'data', 'history.json');
+const HISTORY_PATH = join(__dirname, "..", "data", "history.json");
 
 /**
  * Append summary rows for the current month to history.json.
@@ -14,12 +14,12 @@ const HISTORY_PATH = join(__dirname, '..', 'data', 'history.json');
 export async function updateHistory(newRows) {
   let history = [];
   try {
-    const raw = await readFile(HISTORY_PATH, 'utf-8');
+    const raw = await readFile(HISTORY_PATH, "utf-8");
     if (raw.trim()) {
       history = JSON.parse(raw);
     }
   } catch (err) {
-    if (err?.code !== 'ENOENT') {
+    if (err?.code !== "ENOENT") {
       throw err;
     }
   }
@@ -35,6 +35,6 @@ export async function updateHistory(newRows) {
   // Sort chronologically, then alphabetically by site within a month.
   merged.sort((a, b) => a.month.localeCompare(b.month) || a.site.localeCompare(b.site));
 
-  await writeFile(HISTORY_PATH, JSON.stringify(merged, null, 2) + '\n');
+  await writeFile(HISTORY_PATH, `${JSON.stringify(merged, null, 2)}\n`);
   console.log(`history.json updated: ${merged.length} total rows (${newRows.length} new/replaced)`);
 }
