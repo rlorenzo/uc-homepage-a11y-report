@@ -34,7 +34,10 @@ const TAGS = [
   "wcag22aaa",
 ];
 
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({
+  headless: true,
+  args: ["--disable-blink-features=AutomationControlled"],
+});
 
 async function gotoForgiving(page, url) {
   let response;
