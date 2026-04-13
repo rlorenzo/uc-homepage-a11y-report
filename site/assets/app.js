@@ -10,19 +10,19 @@ import { renderStats } from "./render/stats.js";
 import { renderTable } from "./render/table.js";
 import { renderTrendChart } from "./render/trend-chart.js";
 
-let ctx;
+let ctx = null;
 try {
   ctx = await fetchHistory();
-} catch {
+} catch (err) {
+  console.error("Failed to load data/history.json:", err);
   document.getElementById("byline-date").textContent =
     "Could not load data/history.json. Run a scan first.";
-  throw new Error("history.json fetch failed");
 }
 
-if (ctx.empty) {
+if (ctx?.empty) {
   document.getElementById("byline-date").textContent =
     "No scan data yet. Run a scan to populate the report.";
-} else {
+} else if (ctx) {
   // Hydrate filter state from the URL hash *before* any renderer paints
   // so deep-linked views land at their target state on first frame.
   readHashIntoState();

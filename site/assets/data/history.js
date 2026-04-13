@@ -1,5 +1,8 @@
 export async function fetchHistory() {
   const resp = await fetch("data/history.json");
+  if (!resp.ok) {
+    throw new Error(`fetch data/history.json: ${resp.status} ${resp.statusText}`);
+  }
   const history = await resp.json();
 
   if (!Array.isArray(history) || history.length === 0) {
