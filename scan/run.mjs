@@ -15,7 +15,37 @@ const now = new Date();
 const month = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, "0")}`;
 const scannedAt = now.toISOString();
 
-const sites = JSON.parse(await readFile(join(__dirname, "sites.json"), "utf-8"));
+let sites = JSON.parse(await readFile(join(__dirname, "sites.json"), "utf-8"));
+
+// Optional filter flags for selective re-scans / local iteration.
+//   --type=homepage,admissions   Only scan sites matching these types.
+//   --campus=berkeley,ucla       Only scan sites on these campuses.
+//   --slug=berkeley-haas         Only scan specific sites by slug.
+// All three accept comma-separated lists and combine with AND.
+const filters = { type: null, campus: null, slug: null };
+for (const arg of process.argv.slice(2)) {
+  const m = arg.match(/^--(type|campus|slug)=(.+)$/);
+  if (m)
+    filters[m[1]] = new Set(
+      m[2]
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean),
+    );
+}
+if (filters.type) sites = sites.filter((s) => filters.type.has(s.type));
+if (filters.campus) sites = sites.filter((s) => filters.campus.has(s.campus));
+if (filters.slug) sites = sites.filter((s) => filters.slug.has(s.slug));
+const appliedFilters = Object.entries(filters)
+  .filter(([, v]) => v)
+  .map(([k, v]) => `--${k}=${[...v].join(",")}`)
+  .join(" ");
+if (appliedFilters) console.log(`Filter applied: ${appliedFilters}`);
+if (sites.length === 0) {
+  console.error("No sites match the provided filters. Exiting.");
+  process.exit(1);
+}
+
 const runsDir = join(ROOT, "data", "runs", month);
 await mkdir(runsDir, { recursive: true });
 
@@ -37,7 +67,14 @@ const proxyUrl =
   process.env.HTTP_PROXY ||
   process.env.http_proxy;
 
-const launchOptions = { headless: true };
+// Hide the headless automation marker so Cloudflare-protected sites
+// (e.g. www.vetmed.ucdavis.edu) don't reflexively serve a 403 challenge
+// page. Real Chrome doesn't expose this flag, so the absence is what
+// the bot detector keys on.
+const launchOptions = {
+  headless: true,
+  args: ["--disable-blink-features=AutomationControlled"],
+};
 if (proxyUrl) {
   try {
     const parsed = new URL(proxyUrl);
@@ -55,7 +92,7 @@ if (proxyUrl) {
 // context per site so cookies and storage do not leak between sites.
 const browser = await chromium.launch(launchOptions);
 
-const CONCURRENCY = 3;
+const CONCURRENCY = 5;
 
 // Some UC sites (e.g. uci.edu via AWS ELB) return 403 to the default
 // Playwright "HeadlessChrome" user agent. Use a realistic desktop Chrome UA
@@ -243,6 +280,10 @@ async function scanSite(site) {
       scanned_at: scannedAt,
       axe_version: axeVersion,
       site: site.slug,
+      name: site.name,
+      campus: site.campus,
+      type: site.type,
+      category: site.category,
       url: site.url,
       element_count: elementCount,
       violations: axeResults.violations,
@@ -262,6 +303,10 @@ async function scanSite(site) {
       scanned_at: scannedAt,
       axe_version: axeVersion,
       site: site.slug,
+      name: site.name,
+      campus: site.campus,
+      type: site.type,
+      category: site.category,
       url: site.url,
       status: "ok",
       element_count: elementCount,
@@ -287,6 +332,10 @@ async function scanSite(site) {
       scanned_at: scannedAt,
       axe_version: axeVersion,
       site: site.slug,
+      name: site.name,
+      campus: site.campus,
+      type: site.type,
+      category: site.category,
       url: site.url,
       status: "error",
       error: err.message,
