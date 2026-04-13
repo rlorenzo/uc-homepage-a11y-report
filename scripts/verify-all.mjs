@@ -14,9 +14,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const sites = JSON.parse(
-  await readFile(join(__dirname, "..", "scan", "sites.json"), "utf-8"),
-);
+const sites = JSON.parse(await readFile(join(__dirname, "..", "scan", "sites.json"), "utf-8"));
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
@@ -52,10 +50,7 @@ async function scrollThrough(page) {
 }
 
 async function runAxe(page) {
-  return new AxeBuilder({ page })
-    .withTags(TAGS)
-    .setLegacyMode(true)
-    .analyze();
+  return new AxeBuilder({ page }).withTags(TAGS).setLegacyMode(true).analyze();
 }
 
 // OLD method: desktop viewport only, no transition.
@@ -96,9 +91,7 @@ async function scanMobileFirst(site) {
 
 function summarise(results) {
   const total = results.violations.reduce((a, v) => a + v.nodes.length, 0);
-  const rules = results.violations
-    .map((v) => `${v.id}×${v.nodes.length}`)
-    .join(" ");
+  const rules = results.violations.map((v) => `${v.id}×${v.nodes.length}`).join(" ");
   return { total, rules };
 }
 

@@ -698,13 +698,31 @@ main {
 }
 
 .campus-table thead th.sortable {
+  padding: 0;
+}
+.campus-table thead th.sortable .sort-btn {
+  /* Real <button> inside the <th>. All sort interactions happen on the
+     button so the <th> retains its native "columnheader" semantics, and
+     assistive tech can announce both "column header" and "sort" state
+     via aria-sort on the <th>. */
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  margin: 0;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
   cursor: pointer;
   user-select: none;
 }
-.campus-table thead th.sortable:hover {
+.campus-table thead th.sortable .sort-btn:hover {
   color: var(--ink);
 }
-.campus-table thead th.sortable::after {
+.campus-table thead th.sortable .sort-btn::after {
   content: "";
   display: inline-block;
   width: 0;
@@ -716,12 +734,12 @@ main {
   border-right: 4px solid transparent;
   border-top: 5px solid currentColor;
 }
-.campus-table thead th.sorted-asc::after {
+.campus-table thead th[aria-sort="ascending"] .sort-btn::after {
   border-top: none;
   border-bottom: 5px solid currentColor;
   opacity: 1;
 }
-.campus-table thead th.sorted-desc::after {
+.campus-table thead th[aria-sort="descending"] .sort-btn::after {
   opacity: 1;
 }
 
@@ -1346,5 +1364,15 @@ main {
   }
   .detail-row {
     display: table-row !important;
+  }
+  /* The 900px breakpoint hides the desktop table and shows the mobile
+     card stack, but print contexts can report any effective width. Force
+     the table view so rows and expand details print in full and the
+     mobile cards (whose expand controls get hidden above) do not. */
+  .campus-table {
+    display: table !important;
+  }
+  .campus-cards {
+    display: none !important;
   }
 }

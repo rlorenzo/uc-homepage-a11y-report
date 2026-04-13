@@ -947,33 +947,45 @@
     wrap.appendChild(ul);
   }
 
-  renderRows();
+  // Sortable headers — wrap the label text in a real <button> inside
+  // the <th> so the cell keeps its native "columnheader" semantics, and
+  // drive aria-sort on the <th> itself so assistive tech announces the
+  // current sort state.
+  function updateSortIndicators() {
+    document.querySelectorAll("#campus-table thead th.sortable").forEach((th) => {
+      const isActive = th.dataset.sort === sortKey;
+      th.setAttribute(
+        "aria-sort",
+        isActive ? (sortDir === "asc" ? "ascending" : "descending") : "none",
+      );
+    });
+  }
 
-  // Sortable headers
   document.querySelectorAll("#campus-table thead th.sortable").forEach((th) => {
-    th.setAttribute("tabindex", "0");
-    th.setAttribute("role", "button");
-    const k = th.dataset.sort;
-    th.addEventListener("click", () => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "sort-btn";
+    while (th.firstChild) {
+      button.appendChild(th.firstChild);
+    }
+    th.appendChild(button);
+    th.setAttribute("aria-sort", "none");
+
+    button.addEventListener("click", () => {
+      const k = th.dataset.sort;
       if (sortKey === k) {
         sortDir = sortDir === "asc" ? "desc" : "asc";
       } else {
         sortKey = k;
         sortDir = k === "name" ? "asc" : "desc";
       }
-      document.querySelectorAll("#campus-table thead th").forEach((h) => {
-        h.classList.remove("sorted-asc", "sorted-desc");
-      });
-      th.classList.add(sortDir === "asc" ? "sorted-asc" : "sorted-desc");
+      updateSortIndicators();
       renderRows();
     });
-    th.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        th.click();
-      }
-    });
   });
+
+  renderRows();
+  updateSortIndicators();
 
   // ---------- 9. Chart.js theming ----------
   const CHART_COLORS = [
@@ -991,7 +1003,7 @@
   ];
 
   if (typeof Chart !== "undefined") {
-    Chart.defaults.font.family = '"Instrument Sans", "Helvetica Neue", Helvetica, sans-serif';
+    Chart.defaults.font.family = '"Source Sans 3", "Helvetica Neue", Arial, sans-serif';
     Chart.defaults.font.size = 13;
     Chart.defaults.color = "#3A4A5C";
     Chart.defaults.borderColor = "#E5DFD2";
@@ -1045,7 +1057,7 @@
             bodyColor: "#FAF7F0",
             padding: 12,
             cornerRadius: 6,
-            titleFont: { family: '"Fraunces", Georgia, serif', size: 14, weight: "500" },
+            titleFont: { family: '"Source Serif 4", Georgia, serif', size: 14, weight: "500" },
           },
         },
         scales: {
@@ -1116,7 +1128,7 @@
             bodyColor: "#FAF7F0",
             padding: 12,
             cornerRadius: 6,
-            titleFont: { family: '"Fraunces", Georgia, serif', size: 14, weight: "500" },
+            titleFont: { family: '"Source Serif 4", Georgia, serif', size: 14, weight: "500" },
             callbacks: {
               afterLabel: (ctx) => ruleFriendly(ctx.label),
             },
