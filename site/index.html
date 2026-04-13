@@ -3,436 +3,202 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC Accessibility Report</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
+  <title>UC Homepage Accessibility Report</title>
+  <meta name="description" content="Monthly automated accessibility report for all 10 University of California campuses and the Office of the President.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&display=swap">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous" defer></script>
+
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
 </head>
 <body>
 
-  <!-- 1. Header -->
-  <header class="report-header">
-    <h1>UC Homepage Accessibility Report</h1>
-    <p class="subtitle" id="subtitle">Loading scan data...</p>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Masthead + Hero -->
+  <header class="report-header" role="banner">
+    <div class="masthead">
+      <div class="masthead-brand">
+        <span class="mark" aria-hidden="true"></span>
+        <span>UC&nbsp;Accessibility&nbsp;Report</span>
+      </div>
+      <div class="masthead-meta">
+        <strong>Monthly edition</strong>
+        <span id="masthead-date">—</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Monthly accessibility checkpoint</p>
+      <h1 id="hero-headline">
+        <span id="hero-number">—</span>
+        <em id="hero-number-word">opportunities</em>
+        <span id="hero-coda">to make UC homepages more accessible this month.</span>
+      </h1>
+      <p class="hero-lede" id="hero-lede">
+        Every month we run <a href="https://github.com/dequelabs/axe-core">axe-core</a>
+        against the homepages of all <span id="hero-site-count">—</span> University of California campuses
+        and the Office of the President. This is a shared checkpoint, not a
+        scoreboard — a way to keep accessibility in view and make the web
+        better for the widest possible audience.
+      </p>
+      <dl class="hero-byline" id="hero-byline">
+        <div>
+          <dt>Scan date</dt>
+          <dd id="byline-date" aria-live="polite">Loading…</dd>
+        </div>
+        <div>
+          <dt>Engine</dt>
+          <dd id="byline-engine">axe-core</dd>
+        </div>
+        <div>
+          <dt>Sites</dt>
+          <dd id="byline-sites">—</dd>
+        </div>
+        <div>
+          <dt>Standards</dt>
+          <dd>WCAG 2.0 / 2.1 A &amp; AA, 2.2 AA</dd>
+        </div>
+      </dl>
+    </div>
   </header>
 
-  <main>
-    <!-- 2. Summary cards -->
-    <section id="summary-section" class="section" aria-label="Summary statistics">
-      <h2>Summary</h2>
-      <div class="cards" id="summary-cards"></div>
+  <main id="main">
+
+    <!-- 1. This month at a glance -->
+    <section class="section" aria-labelledby="stats-heading">
+      <div class="section-head">
+        <h2 id="stats-heading">This month at a glance</h2>
+        <span class="section-num">§ 01</span>
+      </div>
+      <p class="section-lede">
+        Every number below reflects <strong>required</strong> issues only — axe-core rules tagged WCAG 2.0 or 2.1 Level A/AA, the baseline under ADA Title II and Section 508. Reach-goal issues (WCAG 2.1 AAA and WCAG 2.2) are tracked separately in the campus table.
+      </p>
+      <div class="stat-grid" id="stat-grid" role="list"></div>
     </section>
 
-    <!-- 3. Campus table -->
-    <section id="campus-section" class="section" aria-label="Campus results table">
-      <h2 id="campus-table-heading">Results by Campus</h2>
-      <table class="campus-table" id="campus-table" aria-labelledby="campus-table-heading">
-        <thead>
-          <tr>
-            <th scope="col">Campus</th>
-            <th scope="col">Errors</th>
-            <th scope="col" class="impact-col">Critical</th>
-            <th scope="col" class="impact-col">Serious</th>
-            <th scope="col" class="impact-col">Moderate</th>
-            <th scope="col" class="impact-col">Minor</th>
-            <th scope="col" class="impact-col">Unknown</th>
-            <th scope="col">Elements</th>
-            <th scope="col">Error Density</th>
-            <th scope="col">Change</th>
-          </tr>
-        </thead>
-        <tbody id="campus-tbody"></tbody>
-      </table>
+    <!-- 2. Spotlight -->
+    <section class="section" aria-labelledby="spotlight-heading">
+      <div class="section-head">
+        <h2 id="spotlight-heading">Why it matters</h2>
+        <span class="section-num">§ 02</span>
+      </div>
+      <div class="hall" id="hall"></div>
+    </section>
+
+    <!-- 3. Campus results -->
+    <section class="section" aria-labelledby="campus-heading">
+      <div class="section-head">
+        <h2 id="campus-heading">Results by campus</h2>
+        <span class="section-num">§ 03</span>
+      </div>
+      <p class="section-lede">
+        Every UC homepage is listed in alphabetical order. <strong>Required</strong> is the WCAG 2.0/2.1 A/AA baseline. <strong>Reach</strong> covers WCAG 2.1 AAA and all of WCAG 2.2 — aspirational, not yet legally required in the US. Select any row to see the specific rules and what they mean in plain language.
+      </p>
+
+      <div class="campus-wrap">
+        <table class="campus-table" id="campus-table" aria-describedby="campus-heading">
+          <caption class="visually-hidden">
+            Table listing each UC campus with total errors, impact breakdown, element count, error density, and month-over-month change.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="name">Campus</th>
+              <th scope="col" class="sortable" data-sort="violations_total">Required</th>
+              <th scope="col" class="sortable" data-sort="reach_violations_total">Reach</th>
+              <th scope="col">Impact mix</th>
+              <th scope="col" class="sortable" data-sort="element_count">Elements</th>
+              <th scope="col">Change</th>
+              <th scope="col"><span class="visually-hidden">Details</span></th>
+            </tr>
+          </thead>
+          <tbody id="campus-tbody"></tbody>
+        </table>
+
+        <div class="campus-cards" id="campus-cards" aria-hidden="false"></div>
+      </div>
+
+      <div class="impact-legend" aria-label="Impact color key" style="padding: var(--space-4) var(--space-5) 0">
+        <span class="crit">Critical</span>
+        <span class="ser">Serious</span>
+        <span class="mod">Moderate</span>
+        <span class="min">Minor</span>
+        <span class="unk">Unknown</span>
+      </div>
     </section>
 
     <!-- 4. Trend chart -->
-    <section id="trend-section" class="section" aria-label="Trend chart">
-      <h2>Errors Over Time</h2>
+    <section class="section" aria-labelledby="trend-heading">
+      <div class="section-head">
+        <h2 id="trend-heading">Errors over time</h2>
+        <span class="section-num">§ 04</span>
+      </div>
+      <p class="chart-guide">
+        Lower lines are better. A flat line means the campus held steady between months. A drop means someone fixed something.
+      </p>
       <div class="chart-wrap">
         <canvas id="trend-chart" role="img" aria-label="Line chart showing total accessibility errors over time for each UC campus">Errors over time trend chart</canvas>
       </div>
     </section>
 
     <!-- 5. Rule breakdown -->
-    <section id="rule-section" class="section" aria-label="Top violating rules">
-      <h2>Top 10 Most Common Rule Violations</h2>
+    <section class="section" aria-labelledby="rule-heading">
+      <div class="section-head">
+        <h2 id="rule-heading">Most common issues</h2>
+        <span class="section-num">§ 05</span>
+      </div>
+      <p class="chart-guide">
+        The 10 axe-core rules flagged most often this month, totalled across every homepage. Working through the top of this list tends to have the biggest impact for the most people.
+      </p>
       <div class="chart-wrap">
-        <canvas id="rule-chart" role="img" aria-label="Bar chart showing the ten most common accessibility rule violations">Top 10 rule violations chart</canvas>
+        <canvas id="rule-chart" role="img" aria-label="Horizontal bar chart showing the ten most common accessibility rule violations">Top 10 rule violations chart</canvas>
       </div>
     </section>
   </main>
 
-  <!-- 6. Methodology footer -->
-  <footer class="methodology">
-    <h2>Methodology</h2>
-    <p>
-      This report is generated automatically on the first of each month using
-      <a href="https://github.com/dequelabs/axe-core">axe-core</a> (via
-      <code>@axe-core/playwright</code>) running against the homepages of all
-      10 University of California campuses and the Office of the President.
-    </p>
-    <p>
-      Automated accessibility testing tools typically detect only 30 to 40
-      percent of potential accessibility issues. This report should be treated
-      as a lower-bound estimate. Manual testing, assistive technology testing,
-      and user testing with people who have disabilities are essential for a
-      complete accessibility evaluation.
-    </p>
-    <p>
-      Tests cover WCAG 2.0 A/AA, WCAG 2.1 A/AA, and WCAG 2.2 AA success
-      criteria. Each page is loaded in headless Chromium, allowed to reach
-      network idle, and then analyzed.
-    </p>
-    <p>
-      Source code:
-      <a href="https://github.com/rlorenzo/uc-homepage-a11y-report">
-        github.com/rlorenzo/uc-homepage-a11y-report
-      </a>
-    </p>
+  <!-- Methodology -->
+  <footer class="methodology" role="contentinfo">
+    <div class="methodology-grid">
+      <div>
+        <p class="pullquote">
+          Automated tests catch 30 to 40 percent of real accessibility barriers. The rest take human attention.
+        </p>
+      </div>
+      <div>
+        <h2>About this report</h2>
+        <p>
+          On the first of every month a GitHub Actions workflow loads each UC
+          homepage in headless Chromium, runs
+          <a href="https://github.com/dequelabs/axe-core">axe-core</a>
+          (via <code>@axe-core/playwright</code>), and records the results.
+          Each page is given time to reach network idle before analysis.
+          Tests cover WCAG 2.0 and 2.1 Level A and AA, and WCAG 2.2 Level AA
+          success criteria.
+        </p>
+        <p>
+          <strong>Automated testing is a floor, not a ceiling.</strong>
+          axe-core catches roughly 30 to 40 percent of real accessibility
+          barriers. A clean scan is a great starting point — it does not mean
+          a site is fully accessible. Manual review, assistive-technology
+          testing, and — above all — testing with disabled users remain
+          essential.
+        </p>
+        <p>
+          The goal of this report is not compliance for its own sake. It is to
+          keep accessibility visible month over month, so that the University
+          of California's public web presence works for the widest possible
+          audience.
+        </p>
+        <p>
+          Source code and full history:
+          <a href="https://github.com/rlorenzo/uc-homepage-a11y-report">github.com/rlorenzo/uc-homepage-a11y-report</a>.
+        </p>
+      </div>
+    </div>
   </footer>
-
-  <script>
-    (async function () {
-      /* ---------------------------------------------------------- */
-      /*  Load data                                                  */
-      /* ---------------------------------------------------------- */
-      let history;
-      try {
-        const resp = await fetch('data/history.json');
-        history = await resp.json();
-      } catch {
-        document.getElementById('subtitle').textContent =
-          'Could not load data/history.json. Run a scan first.';
-        return;
-      }
-
-      if (!history.length) {
-        document.getElementById('subtitle').textContent =
-          'No scan data found yet. Run a scan to populate the report.';
-        return;
-      }
-
-      /* ---------------------------------------------------------- */
-      /*  Helpers                                                    */
-      /* ---------------------------------------------------------- */
-      const months = [...new Set(history.map((r) => r.month))].sort();
-      const latest = months[months.length - 1];
-      const prev = months.length > 1 ? months[months.length - 2] : null;
-
-      const currentRows = history.filter((r) => r.month === latest);
-      const prevRows = prev ? history.filter((r) => r.month === prev) : [];
-
-      function prevRow(slug) {
-        return prevRows.find((r) => r.site === slug);
-      }
-
-      // Friendly campus names from the data.
-      const CAMPUS_NAMES = {
-        berkeley: 'UC Berkeley',
-        ucdavis: 'UC Davis',
-        uci: 'UC Irvine',
-        ucla: 'UCLA',
-        ucmerced: 'UC Merced',
-        ucop: 'UC Office of the President',
-        ucr: 'UC Riverside',
-        ucsb: 'UC Santa Barbara',
-        ucsc: 'UC Santa Cruz',
-        ucsd: 'UC San Diego',
-        ucsf: 'UC San Francisco'
-      };
-
-      function campusName(slug) {
-        return CAMPUS_NAMES[slug] || slug;
-      }
-
-      function deltaHTML(current, previous) {
-        if (current === null || current === undefined ||
-            previous === null || previous === undefined) {
-          return '<span class="delta neutral">n/a</span>';
-        }
-        const diff = current - previous;
-        if (diff === 0) return '<span class="delta neutral">0</span>';
-        if (diff < 0) {
-          return '<span class="delta improved">\u25BC ' + Math.abs(diff) + '</span>';
-        }
-        return '<span class="delta regressed">\u25B2 ' + diff + '</span>';
-      }
-
-      function deltaHTMLPct(current, previous) {
-        if (current === null || current === undefined ||
-            previous === null || previous === undefined) {
-          return '<span class="delta neutral">n/a</span>';
-        }
-        const diff = current - previous;
-        const rounded = Math.round(diff * 10000) / 10000;
-        if (rounded === 0) return '<span class="delta neutral">0</span>';
-        if (rounded < 0) {
-          return '<span class="delta improved">\u25BC ' + Math.abs(rounded).toFixed(4) + '</span>';
-        }
-        return '<span class="delta regressed">\u25B2 ' + rounded.toFixed(4) + '</span>';
-      }
-
-      /* ---------------------------------------------------------- */
-      /*  1. Header subtitle                                         */
-      /* ---------------------------------------------------------- */
-      const sampleRow = currentRows[0];
-      document.getElementById('subtitle').textContent =
-        'Scan date: ' + latest + ' | axe-core ' + (sampleRow ? sampleRow.axe_version : 'unknown');
-
-      /* ---------------------------------------------------------- */
-      /*  2. Summary cards                                           */
-      /* ---------------------------------------------------------- */
-      const okRows = currentRows.filter((r) => r.status === 'ok');
-      const prevOkRows = prevRows.filter((r) => r.status === 'ok');
-
-      // When no sites scanned successfully, show "n/a" instead of "0" to
-      // avoid presenting "no data" as "zero errors".
-      const totalErrors = okRows.length
-        ? okRows.reduce((s, r) => s + r.violations_total, 0)
-        : null;
-      const avgErrors = okRows.length ? Math.round(totalErrors / okRows.length) : null;
-      const avgDensity = okRows.length
-        ? Math.round((okRows.reduce((s, r) => s + r.error_density, 0) / okRows.length) * 10000) / 10000
-        : null;
-
-      const prevTotalErrors = prevOkRows.length
-        ? prevOkRows.reduce((s, r) => s + r.violations_total, 0)
-        : null;
-      const prevAvgErrors = prevOkRows.length ? Math.round(prevTotalErrors / prevOkRows.length) : null;
-      const prevAvgDensity = prevOkRows.length
-        ? Math.round((prevOkRows.reduce((s, r) => s + r.error_density, 0) / prevOkRows.length) * 10000) / 10000
-        : null;
-
-      const cardsEl = document.getElementById('summary-cards');
-      cardsEl.innerHTML = [
-        { label: 'Total Errors', value: totalErrors === null ? 'n/a' : totalErrors, delta: deltaHTML(totalErrors, prev ? prevTotalErrors : null) },
-        { label: 'Avg Errors / Page', value: avgErrors === null ? 'n/a' : avgErrors, delta: deltaHTML(avgErrors, prevAvgErrors) },
-        { label: 'Avg Error Density', value: avgDensity === null ? 'n/a' : avgDensity.toFixed(4), delta: deltaHTMLPct(avgDensity, prevAvgDensity) },
-        { label: 'Sites Scanned', value: currentRows.length, delta: '' }
-      ]
-        .map(
-          (c) =>
-            '<div class="card">' +
-            '<div class="card-value">' + c.value + '</div>' +
-            '<div class="card-label">' + c.label + '</div>' +
-            (c.delta ? '<div class="card-delta">' + c.delta + '</div>' : '') +
-            '</div>'
-        )
-        .join('');
-
-      /* ---------------------------------------------------------- */
-      /*  3. Campus table                                            */
-      /* ---------------------------------------------------------- */
-      const tbody = document.getElementById('campus-tbody');
-
-      // Sort successful scans before failed scans, then by violations descending
-      // so the worst offenders appear first while failed scans sink to the bottom.
-      const sorted = [...currentRows].sort((a, b) => {
-        const aFailed = a.status === 'error' ? 1 : 0;
-        const bFailed = b.status === 'error' ? 1 : 0;
-        if (aFailed !== bFailed) return aFailed - bFailed;
-        return b.violations_total - a.violations_total;
-      });
-
-      for (const row of sorted) {
-        const pr = prevRow(row.site);
-        const tr = document.createElement('tr');
-        tr.classList.add('campus-row');
-        const scanFailed = row.status === 'error';
-        if (scanFailed) tr.classList.add('error-row');
-
-        const statusNote = scanFailed ? ' (scan failed)' : '';
-        const na = '<span class="na">n/a</span>';
-        const impact = row.violations_by_impact || {};
-
-        tr.innerHTML =
-          '<td class="campus-name">' + campusName(row.site) + statusNote + '</td>' +
-          '<td>' + (scanFailed ? na : row.violations_total) + '</td>' +
-          '<td class="impact-col">' + (scanFailed ? na : (impact.critical || 0)) + '</td>' +
-          '<td class="impact-col">' + (scanFailed ? na : (impact.serious || 0)) + '</td>' +
-          '<td class="impact-col">' + (scanFailed ? na : (impact.moderate || 0)) + '</td>' +
-          '<td class="impact-col">' + (scanFailed ? na : (impact.minor || 0)) + '</td>' +
-          '<td class="impact-col">' + (scanFailed ? na : (impact.unknown || 0)) + '</td>' +
-          '<td>' + (scanFailed ? na : row.element_count) + '</td>' +
-          '<td>' + (scanFailed ? na : row.error_density.toFixed(4)) + '</td>' +
-          '<td>' + (scanFailed ? na : deltaHTML(row.violations_total, pr ? pr.violations_total : null)) + '</td>';
-
-        tbody.appendChild(tr);
-
-        // Expandable rule detail row (hidden by default).
-        const detailTr = document.createElement('tr');
-        detailTr.classList.add('detail-row');
-        detailTr.style.display = 'none';
-        const detailTd = document.createElement('td');
-        detailTd.colSpan = 10;
-
-        if (scanFailed) {
-          // row.error comes from an Error.message string — escape before
-          // inserting as HTML since it may reflect the URL/network content.
-          const errDiv = document.createElement('div');
-          errDiv.className = 'rule-detail';
-          const strong = document.createElement('strong');
-          strong.textContent = 'Scan error: ';
-          errDiv.appendChild(strong);
-          errDiv.appendChild(document.createTextNode(row.error || 'Unknown error'));
-          detailTd.appendChild(errDiv);
-        } else if (row.violations_by_rule && Object.keys(row.violations_by_rule).length) {
-          const rulesSorted = Object.entries(row.violations_by_rule).sort((a, b) => b[1] - a[1]);
-          detailTd.innerHTML =
-            '<div class="rule-detail"><strong>Top violating rules:</strong><ul>' +
-            rulesSorted
-              .slice(0, 10)
-              .map((e) => '<li><code>' + e[0] + '</code>: ' + e[1] + ' instances</li>')
-              .join('') +
-            '</ul></div>';
-        } else {
-          detailTd.innerHTML = '<div class="rule-detail">No violation details available.</div>';
-        }
-
-        detailTr.appendChild(detailTd);
-        tbody.appendChild(detailTr);
-
-        // Toggle detail on click/keyboard.
-        detailTr.id = 'detail-' + row.site;
-        tr.style.cursor = 'pointer';
-        tr.setAttribute('tabindex', '0');
-        tr.setAttribute('aria-expanded', 'false');
-        tr.setAttribute('aria-controls', detailTr.id);
-
-        function toggleDetail() {
-          const visible = detailTr.style.display !== 'none';
-          detailTr.style.display = visible ? 'none' : 'table-row';
-          tr.classList.toggle('expanded', !visible);
-          tr.setAttribute('aria-expanded', String(!visible));
-        }
-
-        tr.addEventListener('click', toggleDetail);
-        tr.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggleDetail();
-          }
-        });
-      }
-
-      /* ---------------------------------------------------------- */
-      /*  4. Trend chart                                             */
-      /* ---------------------------------------------------------- */
-      const slugs = [...new Set(history.map((r) => r.site))].sort();
-
-      const COLORS = [
-        '#003262', '#3B7EA1', '#FDB515', '#D4A017',
-        '#00A598', '#ED4E33', '#6C3461', '#CFDD45',
-        '#859438', '#E58025', '#4B8B9B'
-      ];
-
-      const trendDatasets = slugs.map((slug, i) => ({
-        label: campusName(slug),
-        data: months.map((m) => {
-          const r = history.find((h) => h.month === m && h.site === slug);
-          return r && r.status === 'ok' ? r.violations_total : null;
-        }),
-        borderColor: COLORS[i % COLORS.length],
-        backgroundColor: COLORS[i % COLORS.length] + '33',
-        tension: 0.3,
-        spanGaps: true
-      }));
-
-      // Chart.js may fail to load (adblock, captive portal, offline). Show a
-      // textual fallback in the chart's wrapper so the rest of the report
-      // stays functional.
-      function showChartFallback(canvasId, message) {
-        const canvas = document.getElementById(canvasId);
-        const wrap = canvas.parentElement;
-        const p = document.createElement('p');
-        p.className = 'chart-fallback';
-        p.textContent = message;
-        wrap.replaceChild(p, canvas);
-      }
-
-      if (typeof Chart === 'undefined') {
-        showChartFallback('trend-chart', 'Chart could not be rendered (Chart.js failed to load).');
-      } else {
-        new Chart(document.getElementById('trend-chart'), {
-          type: 'line',
-          data: { labels: months, datasets: trendDatasets },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { position: 'bottom' }
-            },
-            scales: {
-              y: { beginAtZero: true, title: { display: true, text: 'Errors' } },
-              x: { title: { display: true, text: 'Month' } }
-            }
-          }
-        });
-      }
-
-      /* ---------------------------------------------------------- */
-      /*  5. Rule breakdown                                          */
-      /* ---------------------------------------------------------- */
-      // Aggregate rule counts across all sites for the current month.
-      const currentRuleTotals = {};
-      for (const row of okRows) {
-        if (!row.violations_by_rule) continue;
-        for (const [rule, count] of Object.entries(row.violations_by_rule)) {
-          currentRuleTotals[rule] = (currentRuleTotals[rule] || 0) + count;
-        }
-      }
-
-      const prevRuleTotals = {};
-      for (const row of prevOkRows) {
-        if (!row.violations_by_rule) continue;
-        for (const [rule, count] of Object.entries(row.violations_by_rule)) {
-          prevRuleTotals[rule] = (prevRuleTotals[rule] || 0) + count;
-        }
-      }
-
-      const top10Rules = Object.entries(currentRuleTotals)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 10);
-
-      const ruleLabels = top10Rules.map((e) => e[0]);
-      const ruleCurrentData = top10Rules.map((e) => e[1]);
-      const rulePrevData = ruleLabels.map((r) => prevRuleTotals[r] || 0);
-
-      const ruleDatasets = [
-        {
-          label: 'Current month (' + latest + ')',
-          data: ruleCurrentData,
-          backgroundColor: '#003262'
-        }
-      ];
-
-      // Only show the previous-month series when the previous month had at
-      // least one successful scan — otherwise the dataset is all zeros and
-      // reads as "0 violations" instead of "no data".
-      if (prev && prevOkRows.length) {
-        ruleDatasets.unshift({
-          label: 'Previous month (' + prev + ')',
-          data: rulePrevData,
-          backgroundColor: '#003262' + '44'
-        });
-      }
-
-      if (typeof Chart === 'undefined') {
-        showChartFallback('rule-chart', 'Chart could not be rendered (Chart.js failed to load).');
-      } else {
-        new Chart(document.getElementById('rule-chart'), {
-          type: 'bar',
-          data: { labels: ruleLabels, datasets: ruleDatasets },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { position: 'bottom' }
-            },
-            scales: {
-              y: { beginAtZero: true, title: { display: true, text: 'Total Instances' } }
-            }
-          }
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

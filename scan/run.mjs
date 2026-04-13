@@ -102,12 +102,22 @@ async function scanSite(site) {
   // per-site errors rather than aborting the whole run.
   let context;
   try {
-    // Only bypass TLS validation when a proxy is configured — this is needed
-    // for TLS-intercepting corporate proxies. In normal environments we want
-    // real cert validation so invalid/self-signed certs still cause failures.
+    // Start at a mobile viewport. Many UC homepages use Foundation's
+    // ResponsiveMenu, which swaps between AccordionMenu (narrow) and
+    // DropdownMenu (medium+). Foundation's AccordionMenu._init() adds
+    // aria-multiselectable="true" to its root element; when the viewport
+    // later widens past the breakpoint, ResponsiveMenu hands the element
+    // off to DropdownMenu but does NOT strip the attribute. The result:
+    // a role="menubar" with a prohibited aria-multiselectable, which
+    // cascades into aria-allowed-attr + aria-required-children +
+    // aria-required-parent failures for every menuitem inside. A desktop-
+    // only scan misses this entirely because AccordionMenu never runs.
+    // Loading at 375×800 first lets AccordionMenu initialize; resizing
+    // to 1440×900 then triggers the real-world transition bug.
     context = await browser.newContext({
       ignoreHTTPSErrors: Boolean(proxyUrl),
-      userAgent: USER_AGENT
+      userAgent: USER_AGENT,
+      viewport: { width: 375, height: 800 }
     });
     const page = await context.newPage();
 
@@ -134,35 +144,93 @@ async function scanSite(site) {
       throw new Error(`HTTP ${status} from ${site.url}`);
     }
 
+    // Let mobile-mode JS (AccordionMenu, mobile nav, etc.) finish wiring up.
+    await page.waitForTimeout(1500);
+
+    // Resize to a desktop viewport. This triggers ResponsiveMenu's
+    // breakpoint-crossing logic and exposes any stranded mobile-state
+    // attributes on the now-desktop DOM.
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.evaluate(() => window.dispatchEvent(new Event('resize')));
+    await page.waitForTimeout(1500);
+
+    // Many UC homepages use scroll-triggered reveal animations
+    // (IntersectionObserver, AOS, GSAP, etc.) where text starts in an
+    // "invisible" state — often with color matched to the background —
+    // and animates to its final color when the element enters the
+    // viewport. In a headless scan that never scrolls, those elements
+    // are frozen in their pre-animation state when axe-core inspects
+    // them, producing 1.01:1 contrast false positives on every headline
+    // below the fold. Scrolling the full document height fires any
+    // IntersectionObserver callbacks, then we scroll back and wait for
+    // animations and lazy-init JS (e.g. Slick carousels on ucsf.edu) to
+    // settle before running axe. Two seconds is generous enough to give
+    // stable month-over-month numbers on JS-heavy homepages.
+    await page.evaluate(async () => {
+      const step = 400;
+      const delay = 40;
+      for (let y = 0; y < document.body.scrollHeight; y += step) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, delay));
+      }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForTimeout(2000);
+
     const elementCount = await page.locator('*').count();
 
-    // Run axe with WCAG 2.x A/AA tags only. These correspond to the
-    // standards most commonly referenced in higher-education policy.
-    // Legacy mode is enabled because many UC homepages embed cross-origin
-    // iframes whose documents are inaccessible to axe, causing
-    // "Cannot read properties of null" errors in flattenTree.
+    // Run axe with every WCAG 2.0/2.1/2.2 tag. We bucket the results
+    // ourselves below into "required" (legally mandated — WCAG 2.0 and
+    // 2.1 Level A/AA, the baseline under ADA Title II / Section 508)
+    // and "reach" (everything else: WCAG 2.0/2.1 AAA and all of WCAG
+    // 2.2). WCAG 2.2 — including SC 2.5.8 target-size at 24×24 — is
+    // not yet legally mandated in the US, so it's treated as a reach
+    // goal. Legacy mode is enabled because many UC homepages embed
+    // cross-origin iframes whose documents are inaccessible to axe,
+    // causing "Cannot read properties of null" errors in flattenTree.
     const axeResults = await new AxeBuilder({ page })
-      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+      .withTags([
+        'wcag2a', 'wcag2aa', 'wcag2aaa',
+        'wcag21a', 'wcag21aa', 'wcag21aaa',
+        'wcag22a', 'wcag22aa', 'wcag22aaa'
+      ])
       .setLegacyMode(true)
       .analyze();
 
-    // Count violations by impact level. axe-core may report impact as null
-    // for some rules; bucket those under "unknown" so totals stay consistent
-    // with violationsTotal and the report doesn't silently drop them.
-    const violationsByImpact = { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 };
-    const violationsByRule = {};
-    let violationsTotal = 0;
-
-    for (const v of axeResults.violations) {
-      const count = v.nodes.length;
-      const impact = v.impact || 'unknown';
-      violationsTotal += count;
-      violationsByImpact[impact] = (violationsByImpact[impact] || 0) + count;
-      violationsByRule[v.id] = (violationsByRule[v.id] || 0) + count;
+    // Bucket each violation into "required" vs "reach" by inspecting
+    // its WCAG tags. Required = 2.0/2.1 A/AA. Everything else is reach.
+    const REQUIRED_TAGS = new Set(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']);
+    function bucketFor(tags) {
+      for (const t of tags || []) {
+        if (REQUIRED_TAGS.has(t)) return 'required';
+      }
+      return 'reach';
     }
 
+    function emptyCounters() {
+      return {
+        total: 0,
+        by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+        by_rule: {},
+      };
+    }
+
+    const required = emptyCounters();
+    const reach = emptyCounters();
+
+    for (const v of axeResults.violations) {
+      const bucket = bucketFor(v.tags) === 'required' ? required : reach;
+      const count = v.nodes.length;
+      const impact = v.impact || 'unknown';
+      bucket.total += count;
+      bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
+      bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
+    }
+
+    // Error density is calculated against REQUIRED violations only —
+    // the headline "how dense are the legal-baseline issues?" question.
     const errorDensity = elementCount > 0
-      ? Math.round((violationsTotal / elementCount) * 10000) / 10000
+      ? Math.round((required.total / elementCount) * 10000) / 10000
       : 0;
 
     // Write the full axe output for archival.
@@ -184,7 +252,9 @@ async function scanSite(site) {
       JSON.stringify(fullResult, null, 2)
     );
 
-    console.log(`  [${site.slug}] OK: ${violationsTotal} violations, ${elementCount} elements`);
+    console.log(
+      `  [${site.slug}] OK: ${required.total} required + ${reach.total} reach, ${elementCount} elements`
+    );
 
     return {
       month,
@@ -194,9 +264,16 @@ async function scanSite(site) {
       url: site.url,
       status: 'ok',
       element_count: elementCount,
-      violations_total: violationsTotal,
-      violations_by_impact: violationsByImpact,
-      violations_by_rule: violationsByRule,
+      // Headline "violations_*" fields reflect REQUIRED issues only —
+      // this is the legal baseline the report centers. Old consumers
+      // that read these fields continue to work unchanged.
+      violations_total: required.total,
+      violations_by_impact: required.by_impact,
+      violations_by_rule: required.by_rule,
+      // Separate reach-goal bucket for aspirational tracking.
+      reach_violations_total: reach.total,
+      reach_violations_by_impact: reach.by_impact,
+      reach_violations_by_rule: reach.by_rule,
       error_density: errorDensity
     };
   } catch (err) {
@@ -225,6 +302,9 @@ async function scanSite(site) {
       violations_total: 0,
       violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
       violations_by_rule: {},
+      reach_violations_total: 0,
+      reach_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+      reach_violations_by_rule: {},
       error_density: 0
     };
   } finally {
