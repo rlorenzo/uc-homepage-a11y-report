@@ -407,9 +407,10 @@ function buildGroupHeaderCard(campus, rows, onToggle, isCollapsed) {
   chevron.innerHTML = CHEVRON_SVG_14;
   btn.appendChild(chevron);
 
-  const h = document.createElement("h3");
-  h.textContent = CAMPUS_NAMES[campus] || campus;
-  btn.appendChild(h);
+  const nameSpan = document.createElement("span");
+  nameSpan.className = "group-name";
+  nameSpan.textContent = CAMPUS_NAMES[campus] || campus;
+  btn.appendChild(nameSpan);
 
   const countSpan = document.createElement("span");
   countSpan.className = "group-count";

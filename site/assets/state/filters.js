@@ -115,7 +115,17 @@ export function readHashIntoState() {
     if (selected.length) state.campuses = new Set(selected);
   }
   const cat = params.get("cat");
-  if (cat && (state.type === TYPE_ALL || state.type === TYPE_SCHOOLS) && CATEGORY_LABELS[cat]) {
+  // homepage/admissions are exposed as their own View chips, so the
+  // discipline dropdown — and by extension the hash — must not accept
+  // them as category values. Otherwise #cat=homepage would set a
+  // filter the UI can't represent.
+  if (
+    cat &&
+    (state.type === TYPE_ALL || state.type === TYPE_SCHOOLS) &&
+    CATEGORY_LABELS[cat] &&
+    cat !== "homepage" &&
+    cat !== "admissions"
+  ) {
     state.category = cat;
   }
 }
