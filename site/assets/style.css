@@ -1143,6 +1143,15 @@ main {
   }
 }
 
+/* When Chart.js fails to load, the canvas is swapped out for a short
+   paragraph. The fixed wrapper height would otherwise leave that message
+   floating at the top of a 520px/460px empty box. Collapse the wrapper
+   to its natural height and center the message in its own padding. */
+.chart-wrap:has(.chart-fallback) {
+  height: auto;
+  display: block;
+}
+
 .chart-guide {
   font-family: var(--font-body);
   font-size: var(--fs-small);
@@ -1162,14 +1171,17 @@ main {
 }
 
 .chart-wrap canvas {
-  /* Let the canvas fill the wrapper minus padding. Flex on the parent
-     + min-height: 0 is what actually lets Chart.js shrink the canvas
-     when the legend takes more space on narrow viewports.
-     No explicit width — Chart.js sets its own inline width/height on
-     the canvas during responsive sizing (tied to devicePixelRatio for
-     crisp rendering). Using !important here would override that and
-     cause blurry/stale sizing on browser resize. `display: block`
-     kills the inline-baseline gap without interfering. */
+  /* Chart.js with `maintainAspectRatio: false` requires the parent
+     element to have an explicit height — that's what .chart-wrap's
+     fixed height + flex layout provides. The canvas itself gets its
+     pixel width/height set inline by Chart.js on every responsive
+     resize (display size + devicePixelRatio for crisp rendering);
+     we don't want to fight that with our own width rule. `display:
+     block` kills the inline-baseline gap without touching sizing.
+     `flex: 1 1 auto` + `min-height: 0` are layout belts-and-braces
+     in case an HTML legend or other sibling is added inside
+     .chart-wrap later — today the chart legend is painted inside
+     the canvas and isn't a separate DOM node. */
   display: block;
   flex: 1 1 auto;
   min-height: 0;
