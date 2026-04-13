@@ -75,8 +75,8 @@ jobs:
           # commit (e.g. this is a rerun after a downstream deploy step
           # failed). Scans only touch data/ files so conflicts are not
           # expected, but if they ever happen the run should fail loudly
-          # rather than force-pushing. Retry the push once in case the
-          # ref moved between fetch and push.
+          # rather than force-pushing. Retry the push up to 3 times in
+          # case the ref moved between fetch and push.
           for attempt in 1 2 3; do
             git fetch origin main
             git rebase origin/main || {
