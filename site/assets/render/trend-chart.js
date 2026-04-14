@@ -15,14 +15,23 @@ import {
   showChartFallback,
 } from "./chart-base.js";
 
-// Beyond the base palette, derive a stable color from the slug so each
-// site keeps the same color across renders without depending on its
-// position in the dataset list.
-function stableColor(slug, index) {
-  if (index < CHART_COLORS.length) return CHART_COLORS[index];
+// Beyond the base palette, derive a stable color pair from the slug
+// so each site keeps the same color across renders without depending
+// on its position in the dataset list. Returns both the solid border
+// color and an alpha-safe fill — the hex-plus-"22" trick only works
+// on hex literals, so the HSL branch has to use hsla() explicitly.
+function stableColorPair(slug, index) {
+  if (index < CHART_COLORS.length) {
+    const hex = CHART_COLORS[index];
+    return { border: hex, background: `${hex}22` };
+  }
   let hash = 0;
   for (let i = 0; i < slug.length; i++) hash = (hash * 31 + slug.charCodeAt(i)) | 0;
-  return `hsl(${Math.abs(hash) % 360}, 55%, 35%)`;
+  const hue = Math.abs(hash) % 360;
+  return {
+    border: `hsl(${hue}, 55%, 35%)`,
+    background: `hsla(${hue}, 55%, 35%, 0.13)`,
+  };
 }
 
 // Mode picker enforces the invariant: no chart mode ever produces more
@@ -39,20 +48,23 @@ function buildDatasets(rowFor, months, filteredCurrentRows, mode) {
     const bySlug = new Map();
     for (const row of filteredCurrentRows) bySlug.set(row.site, row);
     const slugs = [...bySlug.keys()].sort();
-    return slugs.map((slug, i) => ({
-      label: siteDisplayName(bySlug.get(slug)),
-      data: months.map((m) => {
-        const r = rowFor(m, slug);
-        return r && r.status === "ok" ? r.violations_total : null;
-      }),
-      borderColor: stableColor(slug, i),
-      backgroundColor: `${stableColor(slug, i)}22`,
-      borderWidth: 2,
-      tension: 0.35,
-      spanGaps: true,
-      pointRadius: 3,
-      pointHoverRadius: 6,
-    }));
+    return slugs.map((slug, i) => {
+      const { border, background } = stableColorPair(slug, i);
+      return {
+        label: siteDisplayName(bySlug.get(slug)),
+        data: months.map((m) => {
+          const r = rowFor(m, slug);
+          return r && r.status === "ok" ? r.violations_total : null;
+        }),
+        borderColor: border,
+        backgroundColor: background,
+        borderWidth: 2,
+        tension: 0.35,
+        spanGaps: true,
+        pointRadius: 3,
+        pointHoverRadius: 6,
+      };
+    });
   }
 
   const slugsByCampus = new Map();
