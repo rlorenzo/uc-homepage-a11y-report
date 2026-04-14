@@ -1,6 +1,13 @@
 import { deriveAggregates } from "./data/derive.js";
 import { fetchHistory } from "./data/history.js";
-import { getSection, readHashIntoState, setSection, subscribeSection } from "./state/filters.js";
+import {
+  buildSectionHash,
+  getSection,
+  readHashIntoState,
+  setSection,
+  subscribe,
+  subscribeSection,
+} from "./state/filters.js";
 import { configureChartDefaults } from "./render/chart-base.js";
 import { renderFilterBar } from "./render/filter-bar.js";
 import { renderMasthead } from "./render/masthead.js";
@@ -37,11 +44,25 @@ function scrollToSection(id) {
   );
 }
 
+// Rewrite every [data-section-link] anchor's href so it encodes the
+// current filter state plus its section id. Called once after initial
+// render and on every filter state change — that way Cmd/Ctrl-click
+// "open in new tab" and "copy link address" produce a permalink that
+// reproduces the same view the user was looking at.
+function updateSectionHrefs() {
+  for (const el of document.querySelectorAll("[data-section-link]")) {
+    const hash = buildSectionHash(el.dataset.sectionLink);
+    el.setAttribute("href", hash ? `#${hash}` : "#");
+  }
+}
+
 // Section anchor clicks: take over from the default hash-navigation
-// behavior so the current filter hash is preserved (native anchor
-// behavior would wipe it) and so scrolling matches CSS scroll-behavior.
-// Modifier and non-primary clicks fall through to the browser so
-// Cmd/Ctrl/middle-click still opens the permalink in a new tab.
+// behavior so scrolling matches CSS scroll-behavior. setSection()
+// synchronously notifies section subscribers (one of which scrolls
+// via subscribeSection below), so the click handler itself only
+// needs to flip the state. Modifier and non-primary clicks fall
+// through so Cmd/Ctrl/middle-click still opens the permalink in a
+// new tab — hrefs are already kept in sync by updateSectionHrefs().
 document.addEventListener("click", (event) => {
   const link = event.target.closest("[data-section-link]");
   if (!link) return;
@@ -49,9 +70,7 @@ document.addEventListener("click", (event) => {
     return;
   }
   event.preventDefault();
-  const id = link.dataset.sectionLink;
-  setSection(id);
-  scrollToSection(id);
+  setSection(link.dataset.sectionLink);
 });
 
 let ctx = null;
@@ -81,6 +100,12 @@ if (ctx?.empty) {
   renderTable(ctx);
   renderTrendChart(ctx);
   renderRuleChart(ctx);
+
+  // Seed hrefs once after initial render, then rewrite them on every
+  // filter change. Subscribed last so table re-renders (which create
+  // fresh group anchors) have already happened by the time this runs.
+  updateSectionHrefs();
+  subscribe(updateSectionHrefs);
 
   // Scroll into view after the first render frame so layout has
   // settled — Chart.js sizes its canvases during their constructors.
