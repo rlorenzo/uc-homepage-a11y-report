@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-13T17:03:31.448Z",
+  "scanned_at": "2026-04-14T04:20:16.847Z",
   "axe_version": "4.11.2",
   "site": "ucla-law",
   "name": "UCLA School of Law",
@@ -23,6 +23,40 @@
       "help": "Elements must meet enhanced color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2774ae",
+                "contrastRatio": 5,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types fade-section faded-in\">",
+                  "target": [
+                    ".degree-types"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5 (foreground color: #ffffff, background color: #2774ae, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".faded-in.fade-item > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5 (foreground color: #ffffff, background color: #2774ae, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+        },
         {
           "any": [
             {
@@ -390,9 +424,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -416,7 +450,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -442,9 +476,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -468,7 +502,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -546,9 +580,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -572,9 +606,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -624,9 +658,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -650,9 +684,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -976,9 +1010,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -994,7 +1028,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -1012,9 +1046,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -1030,7 +1064,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -1084,9 +1118,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -1102,9 +1136,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -1138,9 +1172,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -1156,9 +1190,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -1408,9 +1442,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_UCLA%20Aerial3.jpg?itok=eUQvDSLt\" role=\"presentation\"></div>",
+          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
           "target": [
-            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(2)"
+            ".masthead-home__image.image[role=\"presentation\"]:nth-child(2)"
           ]
         },
         {
@@ -1426,9 +1460,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_LawLibraryTower.jpg?itok=0X_eetaO\" role=\"presentation\"></div>",
           "target": [
-            ".masthead-home__image.image[role=\"presentation\"]:nth-child(3)"
+            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(3)"
           ]
         },
         {
@@ -1498,9 +1532,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -1516,7 +1550,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -1534,9 +1568,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -1552,7 +1586,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -1642,9 +1676,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -1678,9 +1712,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -2696,9 +2730,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -2714,7 +2748,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -2732,9 +2766,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -2750,7 +2784,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -2804,9 +2838,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -2822,9 +2856,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -2858,9 +2892,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -2876,9 +2910,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -3128,9 +3162,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_UCLA%20Aerial3.jpg?itok=eUQvDSLt\" role=\"presentation\"></div>",
+          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
           "target": [
-            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(2)"
+            ".masthead-home__image.image[role=\"presentation\"]:nth-child(2)"
           ]
         },
         {
@@ -3146,9 +3180,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_LawLibraryTower.jpg?itok=0X_eetaO\" role=\"presentation\"></div>",
           "target": [
-            ".masthead-home__image.image[role=\"presentation\"]:nth-child(3)"
+            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(3)"
           ]
         },
         {
@@ -3218,9 +3252,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -3236,7 +3270,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -3254,9 +3288,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -3272,7 +3306,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -3362,9 +3396,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -3398,9 +3432,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -3770,9 +3804,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_UCLA%20Aerial3.jpg?itok=eUQvDSLt\" role=\"presentation\"></div>",
+          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
           "target": [
-            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(2)"
+            ".masthead-home__image.image[role=\"presentation\"]:nth-child(2)"
           ]
         },
         {
@@ -3802,9 +3836,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+          "html": "<div class=\"masthead-home__image image js-not-loaded\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/images/masthead/about/Main_LawLibraryTower.jpg?itok=0X_eetaO\" role=\"presentation\"></div>",
           "target": [
-            ".masthead-home__image.image[role=\"presentation\"]:nth-child(3)"
+            ".js-not-loaded.masthead-home__image[role=\"presentation\"]:nth-child(3)"
           ]
         },
         {
@@ -3930,9 +3964,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -3962,7 +3996,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -3994,9 +4028,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -4026,7 +4060,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -4186,9 +4220,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -4250,9 +4284,9 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -4780,9 +4814,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -4812,7 +4846,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -4844,9 +4878,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -4876,7 +4910,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -4972,9 +5006,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -5004,9 +5038,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -5068,9 +5102,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -5100,9 +5134,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -5468,9 +5502,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -5486,7 +5520,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -5504,9 +5538,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -5522,7 +5556,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -5576,9 +5610,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -5594,9 +5628,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -5630,9 +5664,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -5648,9 +5682,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -6079,9 +6113,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -6111,9 +6145,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -6143,9 +6177,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -6175,9 +6209,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -6512,25 +6546,25 @@
                   ]
                 },
                 {
-                  "html": "<h2 class=\"home-story__heading\">Alumnus Boosts Trial Advocacy Program to New Heights</h2>",
+                  "html": "<h2 class=\"home-story__heading\">Advancing Police Accountability</h2>",
                   "target": [
                     "div[data-item=\"2\"] > .home-story__wrapper > article > .home-story__inner > .home-story__heading"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"home-story__heading\">Public Interest Grads Make a Mark With Skadden Fellowships</h2>",
+                  "html": "<h2 class=\"home-story__heading\">Online MLS Degree now Available!</h2>",
                   "target": [
                     "div[data-item=\"3\"] > .home-story__wrapper > article > .home-story__inner > .home-story__heading"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"home-story__heading\">UCLA Law Professors Play Key Role in Landmark Puerto Rico Debt Deal</h2>",
+                  "html": "<h2 class=\"home-story__heading\">At the Intersection of Emerging Tech and Public Policy</h2>",
                   "target": [
                     "div[data-item=\"4\"] > .home-story__wrapper > article > .home-story__inner > .home-story__heading"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"home-story__heading\">Online MLS Degree now Available!</h2>",
+                  "html": "<h2 class=\"home-story__heading\">Documentary Film Legal Clinic Shines at Sundance</h2>",
                   "target": [
                     "div[data-item=\"5\"] > .home-story__wrapper > article > .home-story__inner > .home-story__heading"
                   ]
@@ -6568,7 +6602,7 @@
                 {
                   "html": "<h2>Pursue Your Passion</h2>",
                   "target": [
-                    ".degree-types__content > .fade-item > h2"
+                    ".faded-in.fade-item > h2"
                   ]
                 }
               ],
@@ -6899,6 +6933,186 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<div class=\"news__date\">Apr 09, 2026</div>",
+          "target": [
+            ".news__story:nth-child(1) > .news__date"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"news__title\">Hadar Harris named executive director of The Promise Institute for Human Rights at UCLA</h2>",
+          "target": [
+            ".news__story:nth-child(1) > .news__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(1) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"news__date\">Apr 01, 2026</div>",
+          "target": [
+            ".news__story:nth-child(2) > .news__date"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"news__title\">Leaping higher: How professional jump rope prepared Connor Kraska ’28 for law school</h2>",
+          "target": [
+            ".news__story:nth-child(2) > .news__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(2) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"news__date\">Mar 16, 2026</div>",
+          "target": [
+            ".news__story:nth-child(3) > .news__date"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"news__title\">Commencement 2026: Goodwin Liu to deliver keynote address at UCLA Law</h2>",
+          "target": [
+            ".news__story:nth-child(3) > .news__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(3) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<span>Areas of Focus</span>",
           "target": [
             ".areas-of-focus__content > .section-header > span > span"
@@ -6919,9 +7133,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"areas-of-focus__tile-heading\">Entertainment Law</div>",
+          "html": "<div class=\"areas-of-focus__tile-heading\">Health Law</div>",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+            "a[href$=\"health-law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
           ]
         },
         {
@@ -6939,9 +7153,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"areas-of-focus__tile-heading\">Business &amp; Tax Law</div>",
+          "html": "<div class=\"areas-of-focus__tile-heading\">International Law</div>",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
           ]
         },
         {
@@ -6999,6 +7213,31 @@
             {
               "id": "color-contrast-enhanced",
               "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2774ae",
+                "contrastRatio": 5,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>Pursue Your Passion</h2>",
+          "target": [
+            ".faded-in.fade-item > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
                 "contrastRatio": null
               },
               "relatedNodes": [],
@@ -7032,266 +7271,6 @@
           "html": "<a href=\"/events\">See All</a>",
           "target": [
             ".section-header > a[href$=\"events\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>04</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .date > span:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>13</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .date > span:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"times\">12:15 PM - 1:30 PM</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .event-meta > .times"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"location\">Law Rm. 2357</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .event-meta > .location"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"event-title\">ITLP Research Group ft. Frances Hung</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-title"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>The ITLP Research Group (IRG) is a fortnightly meeting of tech law and engineering faculty and students, visiting scholars, and tech and society researchers from across the UCLA community.</p>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > p"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"arrow-button__title\">Read More</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .arrow-button > .arrow-button__title"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>04</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .date > span:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>16</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .date > span:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"times\">11:45 AM - 12:45 PM</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .event-meta > .times"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"location\">UCLA Law School 1357</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .event-meta > .location"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"event-title\">Autocrats vs. Democrats: China, Russia, America, and the New Global Disorder</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-title"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"arrow-button__title\">Read More</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .arrow-button > .arrow-button__title"
           ]
         },
         {
@@ -7828,6 +7807,56 @@
           "html": "<span>Academic Programs</span>",
           "target": [
             ".degree-types__content > .section-header > span > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2774ae",
+                "contrastRatio": 5,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>Pursue Your Passion</h2>",
+          "target": [
+            ".faded-in.fade-item > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2774ae",
+                "contrastRatio": 5,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>",
+          "target": [
+            ".faded-in.fade-item > p"
           ]
         },
         {
@@ -8434,7 +8463,7 @@
           "impact": null,
           "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/master-legal-studies\">",
           "target": [
-            "div[data-item=\"5\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
+            "div[data-item=\"3\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
         },
         {
@@ -8646,12 +8675,12 @@
             {
               "id": "identical-links-same-purpose",
               "data": {
-                "name": "entertainment law",
+                "name": "health law",
                 "urlProps": {
                   "protocol": "http:",
                   "hostname": "law.ucla.edu",
                   "port": "",
-                  "pathname": "/academics/areas/entertainment-law/",
+                  "pathname": "/academics/areas/health-law/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -8664,9 +8693,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -8675,12 +8704,12 @@
             {
               "id": "identical-links-same-purpose",
               "data": {
-                "name": "business tax law",
+                "name": "international law",
                 "urlProps": {
                   "protocol": "http:",
                   "hostname": "law.ucla.edu",
                   "port": "",
-                  "pathname": "/academics/areas/business-tax-law/",
+                  "pathname": "/academics/areas/international-and-comparative-law/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -8693,9 +8722,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -9770,7 +9799,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/alumnus-boosts-trial-advocacy-program-new-heights\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/advancing-police-accountability\">",
           "target": [
             "div[data-item=\"2\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -9796,7 +9825,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/public-interest-grads-make-mark-skadden-fellowships\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/master-legal-studies\">",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -9822,7 +9851,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/ucla-law-professors-play-key-role-landmark-puerto-rico-debt-deal\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/intersection-emerging-tech-and-public-policy\">",
           "target": [
             "div[data-item=\"4\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -9848,7 +9877,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/master-legal-studies\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/documentary-film-legal-clinic-shines-sundance\">",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -10141,9 +10170,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -10174,9 +10203,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -10382,9 +10411,9 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button\" href=\"/events/itlp-research-group-ft-frances-hung\">\n\t\t<span class=\"arrow-button__icon\">\n\t\t\t<svg class=\"brei-icon brei-icon-arrow\" focusable=\"false\"><use xlink:href=\"#brei-icon-arrow\"></use></svg>\n\t\t</span>\n        <span class=\"arrow-button__title\">Read More</span>\n    </a>",
+          "html": "<a class=\"arrow-button\" href=\"/events/autocrats-vs-democrats-china-russia-america-and-new-global-disorder-0\">",
           "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .arrow-button"
+            ".event-item.fade-item:nth-child(1) > div > .arrow-button"
           ]
         },
         {
@@ -10408,9 +10437,9 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"arrow-button\" href=\"/events/autocrats-vs-democrats-china-russia-america-and-new-global-disorder-0\">",
+          "html": "<a class=\"arrow-button\" href=\"/events/backtalker-ucla-law-book-conversation-kimberle-crenshaw\">",
           "target": [
-            ".event-item.hidden.faded-in > div > .arrow-button"
+            ".event-item.hidden.fade-item > div > .arrow-button"
           ]
         },
         {
@@ -11661,9 +11690,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -11679,7 +11708,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -11697,9 +11726,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
           "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
         {
@@ -11715,7 +11744,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
@@ -11769,9 +11798,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -11787,9 +11816,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         },
         {
@@ -11918,45 +11947,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-70_Cappello_0901-Trial%20Advocacy.jpg?itok=w2qwf_Sq')\" aria-label=\"UCLA Law alum A. Barry Cappello ’65\" role=\"img\"></div>",
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Advancing_Police_Accountability_Joanna_Schwartz.jpg?itok=G43fhXLb')\" aria-label=\"Joanna Schwartz\" role=\"img\"></div>",
           "target": [
-            "div[data-item=\"2\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"UCLA law alumni sele...\" role=\"img\">",
-          "target": [
-            "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-130124_LAW_0315-Business%20Profs-Puerto%20Rico.jpg?itok=N_nfrfRo')\" aria-label=\"Puerto Rico\" role=\"img\"></div>",
-          "target": [
-            ".home-story__large[aria-label=\"Puerto Rico\"][role=\"img\"]"
+            ".home-story__large[aria-label=\"Joanna Schwartz\"][role=\"img\"]"
           ]
         },
         {
@@ -11974,6 +11967,42 @@
           "impact": null,
           "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story_Thumbnail_MLS_Program_Online_Hybrid.jpg?itok=rUU_vtTM')\" aria-label=\"Smiling student sitting at a laptop computer\" role=\"img\"></div>",
           "target": [
+            "div[data-item=\"3\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"image home-story__la...\" style=\"background-image: ur...\" aria-label=\"Illustration depicti...\" role=\"img\">",
+          "target": [
+            "div[data-item=\"4\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"image home-story__large\" style=\"background-image: url('https://law.ucla.edu/sites/default/files/styles/home_impact/public/images/impact-story/Impact_Story-IMG_1881-Sundance.jpg?itok=gzVbDo31')\" aria-label=\"Theater Marquee at Sundance Film Festival\" role=\"img\"></div>",
+          "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > figure > .home-story__large.image[role=\"img\"]"
           ]
         },
@@ -11990,9 +12019,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Entertainment Sympos...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image areas-of-focus...\" style=\"background-image: ur...\" aria-label=\"Students in class at...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__item-image > .areas-of-focus__large.image[role=\"img\"]"
+            ".areas-of-focus__large[aria-label=\"Students in class at UCLA Law\"][role=\"img\"]"
           ]
         },
         {
@@ -12008,9 +12037,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"UCLA Student smiling...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
+          "html": "<div class=\"image\" style=\"background-image: ur...\" aria-label=\"International Law sp...\" role=\"img\" data-lazy=\"https://law.ucla.edu...\">",
           "target": [
-            "div[aria-label=\"UCLA Student smiling in crowd\"]"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__item-image > .image[role=\"img\"]"
           ]
         }
       ]
@@ -12253,12 +12282,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 61.9,
+                "width": 62.2,
                 "height": 25.6
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (61.9px by 25.6px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (62.2px by 25.6px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -12317,12 +12346,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 69.6,
+                "width": 69.5,
                 "height": 25.6
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (69.6px by 25.6px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (69.5px by 25.6px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -12530,7 +12559,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/alumnus-boosts-trial-advocacy-program-new-heights\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/advancing-police-accountability\">",
           "target": [
             "div[data-item=\"2\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -12541,12 +12570,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 235,
+                "width": 197.3,
                 "height": 33
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (235px by 33px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (197.3px by 33px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -12562,7 +12591,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/public-interest-grads-make-mark-skadden-fellowships\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/master-legal-studies\">",
           "target": [
             "div[data-item=\"3\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -12594,7 +12623,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/ucla-law-professors-play-key-role-landmark-puerto-rico-debt-deal\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/intersection-emerging-tech-and-public-policy\">",
           "target": [
             "div[data-item=\"4\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -12605,12 +12634,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 197.7,
+                "width": 235,
                 "height": 33
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (197.7px by 33px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (235px by 33px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -12626,7 +12655,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/master-legal-studies\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/documentary-film-legal-clinic-shines-sundance\">",
           "target": [
             "div[data-item=\"5\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ]
@@ -12944,9 +12973,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/entertainment-law\" class=\"areas-of-focus__item\" aria-label=\"Entertainment Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/health-law\" class=\"areas-of-focus__item\" aria-label=\"Health Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Entertainment Law\"]"
+            "a[href$=\"health-law\"]"
           ]
         },
         {
@@ -12975,9 +13004,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/academics/areas/business-tax-law\" class=\"areas-of-focus__item\" aria-label=\"Business & Tax Law\" style=\"width: 100%; display: inline-block;\">",
+          "html": "<a href=\"/academics/areas/international-and-comparative-law\" class=\"areas-of-focus__item\" aria-label=\"International Law\" style=\"width: 100%; display: inline-block;\">",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"]"
+            "a[aria-label=\"International Law\"]"
           ]
         },
         {
@@ -13228,26 +13257,16 @@
         {
           "any": [
             {
-              "id": "target-offset",
+              "id": "target-size",
               "data": {
-                "closestOffset": 24,
-                "minOffset": 24
+                "minSize": 24,
+                "width": 191,
+                "height": 33
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a class=\"arrow-button\" href=\"/events/itlp-research-group-ft-frances-hung\">\n\t\t<span class=\"arrow-button__icon\">\n\t\t\t<svg class=\"brei-icon brei-icon-arrow\" focusable=\"false\"><use xlink:href=\"#brei-icon-arrow\"></use></svg>\n\t\t</span>\n        <span class=\"arrow-button__title\">Read More</span>\n    </a>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .arrow-button"
-          ]
-        },
-        {
-          "any": [
+              "message": "Control has sufficient size (191px by 33px, should be at least 24px by 24px)"
+            },
             {
               "id": "target-offset",
               "data": {
@@ -13264,7 +13283,39 @@
           "impact": null,
           "html": "<a class=\"arrow-button\" href=\"/events/autocrats-vs-democrats-china-russia-america-and-new-global-disorder-0\">",
           "target": [
-            ".event-item.hidden.faded-in > div > .arrow-button"
+            ".event-item.fade-item:nth-child(1) > div > .arrow-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 191,
+                "height": 33
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (191px by 33px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"arrow-button\" href=\"/events/backtalker-ucla-law-book-conversation-kimberle-crenshaw\">",
+          "target": [
+            ".event-item.hidden.fade-item > div > .arrow-button"
           ]
         },
         {
@@ -14013,6 +14064,294 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"news__date\">Apr 09, 2026</div>",
+          "target": [
+            ".news__story:nth-child(1) > .news__date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"news__title\">Hadar Harris named executive director of The Promise Institute for Human Rights at UCLA</h2>",
+          "target": [
+            ".news__story:nth-child(1) > .news__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(1) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"news__date\">Apr 01, 2026</div>",
+          "target": [
+            ".news__story:nth-child(2) > .news__date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"news__title\">Leaping higher: How professional jump rope prepared Connor Kraska ’28 for law school</h2>",
+          "target": [
+            ".news__story:nth-child(2) > .news__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(2) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"news__date\">Mar 16, 2026</div>",
+          "target": [
+            ".news__story:nth-child(3) > .news__date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"news__title\">Commencement 2026: Goodwin Liu to deliver keynote address at UCLA Law</h2>",
+          "target": [
+            ".news__story:nth-child(3) > .news__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(3) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -14045,7 +14384,7 @@
                 {
                   "html": "<div class=\"areas-of-focus__tile\">",
                   "target": [
-                    "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__tile"
+                    "a[href$=\"health-law\"] > .areas-of-focus__tile"
                   ]
                 }
               ],
@@ -14056,9 +14395,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"areas-of-focus__tile-heading\">Entertainment Law</div>",
+          "html": "<div class=\"areas-of-focus__tile-heading\">Health Law</div>",
           "target": [
-            "a[aria-label=\"Entertainment Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+            "a[href$=\"health-law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -14077,7 +14416,7 @@
                 {
                   "html": "<div class=\"areas-of-focus__tile\">",
                   "target": [
-                    "a[aria-label=\"Business & Tax Law\"] > .areas-of-focus__tile"
+                    "a[aria-label=\"International Law\"] > .areas-of-focus__tile"
                   ]
                 }
               ],
@@ -14088,9 +14427,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"areas-of-focus__tile-heading\">Business &amp; Tax Law</div>",
+          "html": "<div class=\"areas-of-focus__tile-heading\">International Law</div>",
           "target": [
-            "a[aria-label=\"Business & Tax Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+            "a[aria-label=\"International Law\"] > .areas-of-focus__tile > .areas-of-focus__tile-heading"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -14150,331 +14489,6 @@
             ".section-header > a[href$=\"events\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "52.5pt (70px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span>04</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .date > span:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "52.5pt (70px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span>13</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .date > span:nth-child(3)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"times\">12:15 PM - 1:30 PM</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .event-meta > .times"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"location\">Law Rm. 2357</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-info > .event-meta > .location"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"event-title\">ITLP Research Group ft. Frances Hung</div>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .event-title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p>The ITLP Research Group (IRG) is a fortnightly meeting of tech law and engineering faculty and students, visiting scholars, and tech and society researchers from across the UCLA community.</p>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > p"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"arrow-button__title\">Read More</span>",
-          "target": [
-            ".event-item.faded-in.fade-item:nth-child(1) > div > .arrow-button > .arrow-button__title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "52.5pt (70px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span>04</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .date > span:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "52.5pt (70px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span>16</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .date > span:nth-child(3)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"times\">11:45 AM - 12:45 PM</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .event-meta > .times"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"location\">UCLA Law School 1357</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-info > .event-meta > .location"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"event-title\">Autocrats vs. Democrats: China, Russia, America, and the New Global Disorder</div>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .event-title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"arrow-button__title\">Read More</span>",
-          "target": [
-            ".event-item.hidden.faded-in > div > .arrow-button > .arrow-button__title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -15007,15 +15021,15 @@
                   ]
                 },
                 {
-                  "html": "<a class=\"arrow-button\" href=\"/events/itlp-research-group-ft-frances-hung\">\n\t\t<span class=\"arrow-button__icon\">\n\t\t\t<svg class=\"brei-icon brei-icon-arrow\" focusable=\"false\"><use xlink:href=\"#brei-icon-arrow\"></use></svg>\n\t\t</span>\n        <span class=\"arrow-button__title\">Read More</span>\n    </a>",
+                  "html": "<a class=\"arrow-button\" href=\"/events/autocrats-vs-democrats-china-russia-america-and-new-global-disorder-0\">",
                   "target": [
-                    ".event-item.faded-in.fade-item:nth-child(1) > div > .arrow-button"
+                    ".event-item.fade-item:nth-child(1) > div > .arrow-button"
                   ]
                 },
                 {
-                  "html": "<a class=\"arrow-button\" href=\"/events/autocrats-vs-democrats-china-russia-america-and-new-global-disorder-0\">",
+                  "html": "<a class=\"arrow-button\" href=\"/events/backtalker-ucla-law-book-conversation-kimberle-crenshaw\">",
                   "target": [
-                    ".event-item.hidden.faded-in > div > .arrow-button"
+                    ".event-item.hidden.fade-item > div > .arrow-button"
                   ]
                 }
               ],
@@ -15042,7 +15056,7 @@
                   "protocol": "http:",
                   "hostname": "law.ucla.edu",
                   "port": "",
-                  "pathname": "/about-ucla-law/impact-stories/alumnus-boosts-trial-advocacy-program-new-heights/",
+                  "pathname": "/about-ucla-law/impact-stories/advancing-police-accountability/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -15050,15 +15064,15 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/public-interest-grads-make-mark-skadden-fellowships\">",
+                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/intersection-emerging-tech-and-public-policy\">",
                   "target": [
-                    "div[data-item=\"3\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
+                    "div[data-item=\"4\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
                   ]
                 },
                 {
-                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/ucla-law-professors-play-key-role-landmark-puerto-rico-debt-deal\">",
+                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/documentary-film-legal-clinic-shines-sundance\">",
                   "target": [
-                    "div[data-item=\"4\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
+                    "div[data-item=\"5\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
                   ]
                 }
               ],
@@ -15068,7 +15082,7 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/alumnus-boosts-trial-advocacy-program-new-heights\">",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/about-ucla-law/impact-stories/advancing-police-accountability\">",
           "target": [
             "div[data-item=\"2\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button"
           ],
