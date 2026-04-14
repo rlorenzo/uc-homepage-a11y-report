@@ -18,9 +18,11 @@ const scannedAt = now.toISOString();
 let sites = JSON.parse(await readFile(join(__dirname, "sites.json"), "utf-8"));
 
 // Optional filter flags for selective re-scans / local iteration.
-//   --type=homepage,admissions   Only scan sites matching these types.
-//   --campus=berkeley,ucla       Only scan sites on these campuses.
-//   --slug=berkeley-haas         Only scan specific sites by slug.
+// Values match the raw sites.json fields, not the UI's plural chip
+// labels: type accepts homepage, admissions, school, division.
+//   --type=homepage,admissions    Only scan sites matching these types.
+//   --campus=berkeley,ucla        Only scan sites on these campuses.
+//   --slug=berkeley-haas          Only scan specific sites by slug.
 // All three accept comma-separated lists and combine with AND.
 const filters = { type: null, campus: null, slug: null };
 for (const arg of process.argv.slice(2)) {

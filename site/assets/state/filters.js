@@ -93,7 +93,9 @@ export function resetFilters() {
 function writeHash() {
   const params = new URLSearchParams();
   if (state.type !== TYPE_ALL) params.set("type", state.type);
-  if (state.campuses.size > 0) params.set("campus", [...state.campuses].join(","));
+  // Sort the campus list before serializing so deep links stay
+  // deterministic regardless of the order chips were toggled.
+  if (state.campuses.size > 0) params.set("campus", [...state.campuses].sort().join(","));
   if (state.category) params.set("cat", state.category);
   const hash = params.toString();
   const url = window.location.pathname + window.location.search + (hash ? `#${hash}` : "");
