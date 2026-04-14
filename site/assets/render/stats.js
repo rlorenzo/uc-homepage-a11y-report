@@ -227,6 +227,12 @@ export function renderStats(ctx) {
       if (avgDensity === 0) {
         densityValue = "0";
         densityCaption = `Zero axe-core flags per element across ${okRows.length} matching sites this month.`;
+      } else if (avgDensity >= 1) {
+        // Multiple rules can hit the same element, so density can
+        // exceed 1 per element. Flip the phrasing so the number
+        // stays meaningful instead of rounding "1 in N" down to zero.
+        densityValue = avgDensity.toFixed(2);
+        densityCaption = `On average, axe-core flags ${avgDensity.toFixed(2)} issues for every DOM element it inspects. Some elements get flagged by more than one rule at once.`;
       } else {
         const oneIn = Math.round(1 / avgDensity);
         densityValue = `1 in ${oneIn.toLocaleString()}`;

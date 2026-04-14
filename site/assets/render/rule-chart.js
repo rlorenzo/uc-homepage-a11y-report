@@ -29,6 +29,13 @@ export function renderRuleChart(ctx) {
   }
 
   const canvas = document.getElementById("rule-chart");
+  // Toggleable "no matching rules" placeholder. Kept as a sibling of
+  // the canvas so filter widening can restore the chart without any
+  // DOM surgery — showChartFallback() is one-way and would strand us.
+  const emptyState = document.createElement("p");
+  emptyState.className = "chart-fallback";
+  emptyState.hidden = true;
+  canvas.parentElement.appendChild(emptyState);
   let chart;
 
   function paint(state) {
@@ -43,12 +50,20 @@ export function renderRuleChart(ctx) {
     const top10 = topEntries(currentRuleTotals, 10);
 
     if (!top10.length) {
+      canvas.hidden = true;
+      emptyState.hidden = false;
+      emptyState.textContent =
+        "No required-level rules flagged in the current filter. Reach-goal rules may still appear in individual site details.";
       if (chart) {
+        chart.data.labels = [];
         chart.data.datasets = [];
         chart.update("none");
       }
       return;
     }
+
+    canvas.hidden = false;
+    emptyState.hidden = true;
 
     const labels = top10.map((e) => e[0]);
     // One dataset per impact key so Chart.js stacks them into a single
