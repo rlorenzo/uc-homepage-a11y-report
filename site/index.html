@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC Homepage Accessibility Report</title>
-  <meta name="description" content="Monthly automated accessibility report for all 10 University of California campuses and the Office of the President.">
+  <title>UC Web Accessibility Report</title>
+  <meta name="description" content="Monthly automated accessibility report covering UC campus homepages, admissions sites, and schools/colleges across all 10 University of California campuses and the Office of the President.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous" defer></script>
 
   <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/app.js" defer></script>
+  <script type="module" src="assets/app.js"></script>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
     <div class="masthead">
       <div class="masthead-brand">
         <span class="mark" aria-hidden="true"></span>
-        <span>UC&nbsp;Accessibility&nbsp;Report</span>
+        <span>UC&nbsp;Web&nbsp;Accessibility&nbsp;Report</span>
       </div>
       <div class="masthead-meta">
         <strong>Monthly edition</strong>
@@ -37,12 +37,13 @@
       <h1 id="hero-headline">
         <span id="hero-number">—</span>
         <em id="hero-number-word">opportunities</em>
-        <span id="hero-coda">to make UC homepages more accessible this month.</span>
+        <span id="hero-coda">to make the UC web presence more accessible this month.</span>
       </h1>
       <p class="hero-lede" id="hero-lede">
         Every month we run <a href="https://github.com/dequelabs/axe-core">axe-core</a>
-        against the homepages of all <span id="hero-site-count">—</span> University of California campuses
-        and the Office of the President. This is a shared checkpoint, not a
+        against <span id="hero-site-count">—</span> UC web properties — campus homepages,
+        admissions pages, and schools and colleges across all 10 University of California
+        campuses and the Office of the President. This is a shared checkpoint, not a
         scoreboard — a way to keep accessibility in view and make the web
         better for the widest possible audience.
       </p>
@@ -68,6 +69,31 @@
   </header>
 
   <main id="main">
+
+    <!-- Filter bar -->
+    <section class="filter-bar" id="filter-bar" aria-label="Filter report results">
+      <div class="filter-bar-row">
+        <div class="filter-group" role="group" aria-labelledby="filter-type-label">
+          <span class="filter-label" id="filter-type-label">View</span>
+          <div class="chip-group" id="filter-type-chips"></div>
+        </div>
+
+        <div class="filter-group" role="group" aria-labelledby="filter-campus-label">
+          <span class="filter-label" id="filter-campus-label">Campus</span>
+          <div class="chip-group chip-group-campus" id="filter-campus-chips"></div>
+        </div>
+
+        <div class="filter-group filter-group-category">
+          <label class="filter-label" for="filter-category-select">Discipline</label>
+          <select id="filter-category-select">
+            <option value="">All disciplines</option>
+          </select>
+        </div>
+
+        <button type="button" class="filter-reset" id="filter-reset" hidden>Reset</button>
+      </div>
+      <p class="filter-summary" id="filter-summary" aria-live="polite"></p>
+    </section>
 
     <!-- 1. This month at a glance -->
     <section class="section" aria-labelledby="stats-heading">
@@ -97,17 +123,17 @@
         <span class="section-num">§ 03</span>
       </div>
       <p class="section-lede" id="campus-description">
-        Every UC homepage is listed in alphabetical order. <strong>Required</strong> is the WCAG 2.0/2.1 A/AA baseline. <strong>Reach</strong> covers WCAG 2.1 AAA and all of WCAG 2.2 — aspirational, not yet legally required in the US. Select any row to see the specific rules and what they mean in plain language.
+        Every UC site that matches the current filter is listed below, grouped by campus when the view includes schools and colleges. <strong>Required</strong> is the WCAG 2.0/2.1 A/AA baseline. <strong>Reach</strong> covers WCAG 2.1 AAA and all of WCAG 2.2 — aspirational, not yet legally required in the US. Select any row to see the specific rules and what they mean in plain language.
       </p>
 
       <div class="campus-wrap">
         <table class="campus-table" id="campus-table" aria-describedby="campus-description">
           <caption class="visually-hidden">
-            Table listing each UC campus with columns for campus name, required violations, reach-goal violations, impact mix, element count, month-over-month change, and an expandable details button.
+            Table listing each UC site matching the current filter, with columns for site name, required violations, reach-goal violations, impact mix, element count, month-over-month change, and an expandable details button.
           </caption>
           <thead>
             <tr>
-              <th scope="col" class="sortable" data-sort="name">Campus</th>
+              <th scope="col" class="sortable" data-sort="name">Site</th>
               <th scope="col" class="sortable" data-sort="violations_total">Required</th>
               <th scope="col" class="sortable" data-sort="reach_violations_total">Reach</th>
               <th scope="col">Impact mix</th>
@@ -138,10 +164,10 @@
         <span class="section-num">§ 04</span>
       </div>
       <p class="chart-guide">
-        Lower lines are better. A flat line means the campus held steady between months. A drop means someone fixed something.
+        Lower lines are better. A flat line means that grouping held steady between months. A drop means someone fixed something. The chart's granularity follows the filter — campus-aggregated by default, per-site when you drill into a single campus or discipline.
       </p>
       <div class="chart-wrap">
-        <canvas id="trend-chart" role="img" aria-label="Line chart showing total accessibility errors over time for each UC campus">Errors over time trend chart</canvas>
+        <canvas id="trend-chart" role="img" aria-label="Line chart showing total accessibility errors over time for the current filter">Errors over time trend chart</canvas>
       </div>
     </section>
 
@@ -152,10 +178,10 @@
         <span class="section-num">§ 05</span>
       </div>
       <p class="chart-guide">
-        The 10 axe-core rules flagged most often this month, totalled across every homepage. Working through the top of this list tends to have the biggest impact for the most people.
+        The 10 required-level axe-core rules (WCAG 2.0/2.1 Level A/AA) flagged most often this month across the filtered UC sites, stacked by impact severity. Reach-goal rules are tracked separately in each site's details row. Working through the top of this list tends to have the biggest impact for the most people.
       </p>
       <div class="chart-wrap">
-        <canvas id="rule-chart" role="img" aria-label="Horizontal bar chart showing the ten most common accessibility rule violations">Top 10 rule violations chart</canvas>
+        <canvas id="rule-chart" role="img" aria-label="Horizontal bar chart showing the ten most common accessibility rule violations, stacked by impact severity">Top 10 rule violations chart</canvas>
       </div>
     </section>
   </main>
@@ -172,7 +198,8 @@
         <h2>About this report</h2>
         <p>
           On the first of every month a GitHub Actions workflow loads each UC
-          homepage in headless Chromium, runs
+          web property — campus homepages, admissions sites, and the schools
+          and colleges under each campus — in headless Chromium, runs
           <a href="https://github.com/dequelabs/axe-core">axe-core</a>
           (via <code>@axe-core/playwright</code>), and records the results.
           Each page is given time to reach network idle before analysis.
