@@ -387,13 +387,19 @@ main {
   letter-spacing: 0.18em;
   color: var(--ink-muted);
   flex-shrink: 0;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+a.section-num:hover,
+a.section-num:focus-visible {
+  color: var(--uc-dark-blue);
 }
 
 .section-lede {
-  max-width: 60ch;
   color: var(--ink-muted);
   font-size: var(--fs-small);
   margin: calc(var(--space-6) * -1) 0 var(--space-6);
+  padding: 0 var(--space-5);
 }
 
 /* --- 7. Stat grid -------------------------------------------- */
@@ -556,7 +562,10 @@ main {
   background: #f7e4e4;
 }
 .delta.neutral {
-  color: var(--ink-muted);
+  /* --ink-muted (#3e5566) on --tint-2 (#e8f2fa) gives 6.86:1, just
+     shy of WCAG 2.1 AAA SC 1.4.6 (7:1). Using --ink (#002033) pushes
+     it to ~16:1, so the "n/a" badge passes AAA everywhere it renders. */
+  color: var(--ink);
   background: var(--tint-2);
 }
 
@@ -584,6 +593,12 @@ main {
   margin-top: var(--space-5);
   color: var(--ink-muted);
 }
+/* Drop the top margin when Reach is the only heading — otherwise a
+   site with zero Required but non-zero Reach shows a gap where the
+   missing Required heading used to sit. */
+.rule-detail strong.reach-heading:first-child {
+  margin-top: 0;
+}
 .rule-detail strong.reach-heading::after {
   content: " · aspirational";
   font-family: var(--font-body);
@@ -600,6 +615,68 @@ main {
   font-size: var(--fs-micro);
   color: var(--ink-muted);
   margin-top: 2px;
+}
+
+/* Stack the rule code, optional impact pill, and description so
+   the pill always lands directly under the rule regardless of the
+   card width. align-items: flex-start keeps each child at its own
+   natural width instead of stretching to fill the column. */
+.rule-detail .rule-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+/* Rule ID link in each detail list item — subtle underline that
+   lifts to UC dark blue on hover so the learn-more affordance is
+   discoverable without fighting the neutral card design. */
+.rule-detail .rule-code-link {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: color-mix(in oklab, var(--uc-dark-blue) 45%, transparent);
+}
+.rule-detail .rule-code-link:hover,
+.rule-detail .rule-code-link:focus-visible {
+  text-decoration-color: var(--uc-dark-blue);
+}
+.rule-detail .rule-code-link code {
+  color: inherit;
+}
+
+/* Per-rule impact pill — required rules only. Placed on its own
+   line directly under the rule code so the list alignment stays
+   consistent whether or not a pill is present. Compact by design:
+   severity is a secondary cue, not the headline. */
+.rule-detail .impact-pill {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.rule-detail .impact-pill.crit {
+  background: var(--impact-critical);
+}
+.rule-detail .impact-pill.ser {
+  background: var(--impact-serious);
+}
+.rule-detail .impact-pill.mod {
+  background: var(--impact-moderate);
+}
+.rule-detail .impact-pill.min {
+  background: var(--impact-minor);
+}
+.rule-detail .impact-pill.unk {
+  background: var(--impact-unknown);
 }
 
 /* Zero-issue badge — factual, not celebratory */
@@ -1161,10 +1238,10 @@ main {
   font-size: var(--fs-small);
   font-style: italic;
   color: var(--ink-muted);
-  margin: 0 0 var(--space-5);
+  margin: 0 var(--space-5) var(--space-5);
   padding-left: var(--space-4);
+  padding-right: var(--space-5);
   border-left: 3px solid var(--uc-gold);
-  max-width: 60ch;
 }
 
 .chart-fallback {
@@ -1582,6 +1659,7 @@ main {
 .campus-table tbody .campus-group-header td:first-child {
   padding: 0;
   border-bottom: 2px solid var(--uc-dark-blue);
+  position: relative;
 }
 
 .campus-group-header .group-toggle {
@@ -1591,7 +1669,9 @@ main {
   align-items: center;
   gap: var(--space-3);
   width: 100%;
-  padding: var(--space-4) var(--space-5);
+  /* Extra right padding clears space for the absolutely-positioned
+     .group-anchor permalink so the count text never slides under it. */
+  padding: var(--space-4) var(--space-8) var(--space-4) var(--space-5);
   background: var(--tint);
   border: none;
   border-left: 4px solid var(--uc-dark-blue);
@@ -1639,10 +1719,51 @@ main {
   padding-left: var(--space-6);
 }
 
+/* Permalink anchor on each campus group header. Positioned over the
+   top-right of the header bar so it doesn't shift the button layout
+   but is still in the group's focus when clicked. min-width meets
+   WCAG 2.2 SC 2.5.8 target size (24×24px minimum) — the natural
+   size of "§" alone is just shy of that. */
+.group-anchor {
+  position: absolute;
+  top: 50%;
+  right: var(--space-5);
+  transform: translateY(-50%);
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  opacity: 0.55;
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+.campus-group-header .group-anchor,
+.campus-group-card-header .group-anchor {
+  /* Scoped rules above set color + position; keep the base rule
+     un-scoped so focus-visible styles still win. */
+}
+.group-anchor:hover,
+.group-anchor:focus-visible {
+  opacity: 1;
+  color: var(--uc-dark-blue);
+  background: color-mix(in oklab, var(--uc-dark-blue) 8%, transparent);
+}
+
 /* Mobile cards — matching group header */
 .campus-group-card-header {
   margin-top: var(--space-6);
   margin-bottom: var(--space-4);
+  position: relative;
 }
 
 .campus-group-card-header .group-toggle {
@@ -1652,7 +1773,7 @@ main {
   align-items: center;
   gap: var(--space-3);
   width: 100%;
-  padding: var(--space-4);
+  padding: var(--space-4) var(--space-8) var(--space-4) var(--space-4);
   background: var(--tint);
   border: none;
   border-left: 4px solid var(--uc-dark-blue);
