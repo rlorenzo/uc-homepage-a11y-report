@@ -147,7 +147,9 @@ export function describeFilter(s) {
   const parts = [];
   if (s.type !== TYPE_ALL) parts.push(TYPE_LABELS[s.type]);
   if (s.campuses.size > 0) {
-    const names = [...s.campuses].map((slug) => CAMPUS_NAMES[slug] || slug);
+    // Sort so the summary reads the same regardless of chip toggle
+    // order, matching the deterministic URL hash.
+    const names = [...s.campuses].sort().map((slug) => CAMPUS_NAMES[slug] || slug);
     parts.push(names.length <= 3 ? names.join(", ") : `${names.length} campuses`);
   }
   if (s.category) parts.push(CATEGORY_LABELS[s.category] || s.category);
