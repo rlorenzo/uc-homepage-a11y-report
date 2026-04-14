@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-14T04:20:16.847Z",
+  "scanned_at": "2026-04-14T06:45:20.317Z",
   "axe_version": "4.11.2",
   "site": "ucla-fielding",
   "name": "UCLA Fielding School of Public Health",
@@ -54,6 +54,89 @@
             ".secondary-nav__list"
           ],
           "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: aside[aria-label]"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
         }
       ]
     }
@@ -8097,7 +8180,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/news-events/news/dr-erica-pan-deliver-keynote-address-ucla-fieldings-2026-research-innovation\" class=\"masthead__hero-link\" style=\"\">",
+          "html": "<a href=\"/news-events/news/dr-kari-nadeau-named-dean-ucla-fielding-school-public-health\" class=\"masthead__hero-link\" style=\"\">",
           "target": [
             ".masthead__hero-link"
           ]
@@ -8336,7 +8419,7 @@
                   ]
                 },
                 {
-                  "html": "<h2 class=\"hero__heading\">Dr. Erica Pan to deliver keynote address at UCLA Fielding’s 2026 Research, Innovation &amp; Impact Day </h2>",
+                  "html": "<h2 class=\"hero__heading\">Dr. Kari Nadeau named dean of the UCLA Fielding School of Public Health</h2>",
                   "target": [
                     ".hero__heading"
                   ]
@@ -8386,7 +8469,7 @@
                 {
                   "html": "<h2>UCLA Fielding Magazine</h2>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+                    ".featured-content__card.animate-section:nth-child(1) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__content > h2"
                   ]
                 },
                 {
@@ -8398,7 +8481,7 @@
                 {
                   "html": "<h2>Inclusive Excellence </h2>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+                    ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__content > h2"
                   ]
                 },
                 {
@@ -8579,7 +8662,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2 class=\"hero__heading\">Dr. Erica Pan to deliver keynote address at UCLA Fielding’s 2026 Research, Innovation &amp; Impact Day </h2>",
+          "html": "<h2 class=\"hero__heading\">Dr. Kari Nadeau named dean of the UCLA Fielding School of Public Health</h2>",
           "target": [
             ".hero__heading"
           ]
@@ -9059,9 +9142,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2>UCLA Fielding Magazine</h2>",
+          "html": "<h2>Why <strong>UCLA Fielding</strong></h2>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > h2"
           ]
         },
         {
@@ -9073,7 +9156,7 @@
                 "bgColor": "#fefefe",
                 "contrastRatio": 11.69,
                 "fontSize": "51.6pt (68.8px)",
-                "fontWeight": "normal",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
@@ -9084,9 +9167,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2>Inclusive Excellence </h2>",
+          "html": "<strong>UCLA Fielding</strong>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+            ".featured-content-card__content > h2 > strong"
           ]
         },
         {
@@ -9109,9 +9192,144 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>The pursuit of inclusive excellence is a cornerstone of public health and at the core of UCLA Fielding's identity.</p>",
+          "html": "<p>Exceptional students and world renowned faculty in a unique setting to \naddress public health challenges confronting our global community.</p>",
           "target": [
-            ".featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > p"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"home-news__heading\">FSPH <strong>News</strong></h2>",
+          "target": [
+            ".home-news__heading"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>News</strong>",
+          "target": [
+            ".home-news__heading > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003b5c",
+                "bgColor": "#fefefe",
+                "contrastRatio": 11.69,
+                "fontSize": "20.7pt (27.6501px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.69"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"card__heading\">New York Times | \"How to reduce your exposure to pesticides\"</div>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__heading"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#fefefe",
+                "contrastRatio": 20.82,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 20.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"card__caption\">The New York Times interviewed Dr. Yoshira Ornelas Van Horne, assistant professor in the Department of Environmental Health Sciences, about how individuals can reduce the risks of exposure to pesticides.</p>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__caption"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003b5c",
+                "bgColor": "#fefefe",
+                "contrastRatio": 11.69,
+                "fontSize": "20.7pt (27.6501px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.69"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"card__heading\">Science | \"These small African antelopes may help Mpox spread\"</div>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__heading"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"card__caption\">",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__caption"
           ]
         },
         {
@@ -9675,9 +9893,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2>UCLA Fielding Magazine</h2>",
+          "html": "<h2>Why <strong>UCLA Fielding</strong></h2>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > h2"
           ]
         },
         {
@@ -9689,7 +9907,7 @@
                 "bgColor": "#fefefe",
                 "contrastRatio": 11.69,
                 "fontSize": "51.6pt (68.8px)",
-                "fontWeight": "normal",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
@@ -9700,9 +9918,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2>Inclusive Excellence </h2>",
+          "html": "<strong>UCLA Fielding</strong>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > h2"
+            ".featured-content-card__content > h2 > strong"
           ]
         },
         {
@@ -9725,9 +9943,134 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>The pursuit of inclusive excellence is a cornerstone of public health and at the core of UCLA Fielding's identity.</p>",
+          "html": "<p>Exceptional students and world renowned faculty in a unique setting to \naddress public health challenges confronting our global community.</p>",
           "target": [
-            ".featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > p"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#003b5c",
+                "bgColor": "#fefefe",
+                "contrastRatio": 11.69,
+                "fontSize": "20.7pt (27.6501px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.69"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"card__heading\">New York Times | \"How to reduce your exposure to pesticides\"</div>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__heading"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#fefefe",
+                "contrastRatio": 20.82,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 20.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"card__caption\">The New York Times interviewed Dr. Yoshira Ornelas Van Horne, assistant professor in the Department of Environmental Health Sciences, about how individuals can reduce the risks of exposure to pesticides.</p>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__caption"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.96"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#003b5c",
+                "bgColor": "#fefefe",
+                "contrastRatio": 11.69,
+                "fontSize": "20.7pt (27.6501px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.69"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"card__heading\">Science | \"These small African antelopes may help Mpox spread\"</div>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__heading"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.96"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
           ]
         },
         {
@@ -11382,12 +11725,12 @@
             {
               "id": "identical-links-same-purpose",
               "data": {
-                "name": "erica pan headshot dr erica pan to deliver keynote address at ucla fieldings 2026 research innovation impact day read full article",
+                "name": "kari dr kari nadeau named dean of the ucla fielding school of public health read full article",
                 "urlProps": {
                   "protocol": "http:",
                   "hostname": "ph.ucla.edu",
                   "port": "",
-                  "pathname": "/news-events/news/dr-erica-pan-deliver-keynote-address-ucla-fieldings-2026-research-innovation/",
+                  "pathname": "/news-events/news/dr-kari-nadeau-named-dean-ucla-fielding-school-public-health/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -11400,7 +11743,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/news-events/news/dr-erica-pan-deliver-keynote-address-ucla-fieldings-2026-research-innovation\" class=\"masthead__hero-link\" style=\"\">",
+          "html": "<a href=\"/news-events/news/dr-kari-nadeau-named-dean-ucla-fielding-school-public-health\" class=\"masthead__hero-link\" style=\"\">",
           "target": [
             ".masthead__hero-link"
           ]
@@ -11663,7 +12006,7 @@
           "impact": null,
           "html": "<a href=\"/news-events/ucla-fsph-public-health-magazine/ucla-magazine-60th-anniversary-issue-building\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(1) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -11721,7 +12064,7 @@
           "impact": null,
           "html": "<a href=\"/about/administrative-offices/office-inclusive-excellence/inclusive-excellence-ucla-fielding\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -12268,9 +12611,9 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"media__image\" src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2026-04/erica%20pan.png?itok=gtm9KmD5\" alt=\"erica pan headshot\">",
+          "html": "<img class=\"media__image\" src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2026-03/Kari%20Nadeau%20500x500.png?itok=HIBACiHY\" alt=\"Kari\">",
           "target": [
-            "img[alt=\"erica pan headshot\"]"
+            "img[alt=\"Kari\"]"
           ]
         },
         {
@@ -12374,7 +12717,7 @@
           "impact": null,
           "html": "<img src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2023-02/EDI%20edited_featured%20content.png?itok=VrwG0JQR\" alt=\"students and faculty member standing smiling\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__image > img"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__image > img"
           ]
         },
         {
@@ -13671,7 +14014,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/news-events/news/dr-erica-pan-deliver-keynote-address-ucla-fieldings-2026-research-innovation\" class=\"masthead__hero-link\" style=\"\">",
+          "html": "<a href=\"/news-events/news/dr-kari-nadeau-named-dean-ucla-fielding-school-public-health\" class=\"masthead__hero-link\" style=\"\">",
           "target": [
             ".masthead__hero-link"
           ]
@@ -13907,7 +14250,7 @@
           "impact": null,
           "html": "<a href=\"/news-events/ucla-fsph-public-health-magazine/ucla-magazine-60th-anniversary-issue-building\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(1) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -13959,7 +14302,7 @@
           "impact": null,
           "html": "<a href=\"/about/administrative-offices/office-inclusive-excellence/inclusive-excellence-ucla-fielding\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -14705,9 +15048,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"media__image\" src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2026-04/erica%20pan.png?itok=gtm9KmD5\" alt=\"erica pan headshot\">",
+          "html": "<img class=\"media__image\" src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2026-03/Kari%20Nadeau%20500x500.png?itok=HIBACiHY\" alt=\"Kari\">",
           "target": [
-            "img[alt=\"erica pan headshot\"]"
+            "img[alt=\"Kari\"]"
           ]
         },
         {
@@ -14905,7 +15248,7 @@
           "impact": null,
           "html": "<hr>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > hr"
+            ".featured-content__card.animate-section:nth-child(1) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__content > hr"
           ]
         },
         {
@@ -14959,7 +15302,7 @@
           "impact": null,
           "html": "<img src=\"https://ph.ucla.edu/sites/default/files/styles/standard/public/2023-02/EDI%20edited_featured%20content.png?itok=VrwG0JQR\" alt=\"students and faculty member standing smiling\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__image > img"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__image > img"
           ]
         },
         {
@@ -14977,7 +15320,7 @@
           "impact": null,
           "html": "<hr>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > hr"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link > .featured-content-card__content > hr"
           ]
         },
         {
@@ -16426,7 +16769,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/news-events/news/dr-erica-pan-deliver-keynote-address-ucla-fieldings-2026-research-innovation\" class=\"masthead__hero-link\" style=\"\">",
+          "html": "<a href=\"/news-events/news/dr-kari-nadeau-named-dean-ucla-fielding-school-public-health\" class=\"masthead__hero-link\" style=\"\">",
           "target": [
             ".masthead__hero-link"
           ]
@@ -16708,7 +17051,7 @@
           "impact": null,
           "html": "<a href=\"/news-events/ucla-fsph-public-health-magazine/ucla-magazine-60th-anniversary-issue-building\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(1) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -16770,7 +17113,7 @@
           "impact": null,
           "html": "<a href=\"/about/administrative-offices/office-inclusive-excellence/inclusive-excellence-ucla-fielding\" class=\"featured-content-card__link\">",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link"
+            ".featured-content__card.animate-section:nth-child(3) > .featured-content-card.animate-item > .featured-content-card__link"
           ]
         },
         {
@@ -17672,9 +18015,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Read the Magazine</span>\n                    </span>",
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button"
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
                   ]
                 }
               ],
@@ -17685,9 +18028,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span class=\"text\">Read the Magazine</span>",
+          "html": "<span class=\"text\">Learn More</span>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button > .text"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         },
@@ -17703,9 +18046,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Inclusive Excellence at UCLA Fielding</span>\n                    </span>",
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button"
+                    "a[href$=\"news\"]"
                   ]
                 }
               ],
@@ -17716,9 +18059,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span class=\"text\">Inclusive Excellence at UCLA Fielding</span>",
+          "html": "<span class=\"text\">FSPH News</span>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button > .text"
+            "a[href$=\"news\"] > .text"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         }
@@ -18032,22 +18375,29 @@
                 "contrastRatio": 0,
                 "fontSize": "29.9pt (39.8101px)",
                 "fontWeight": "bold",
-                "messageKey": "elmPartiallyObscuring",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero__inner\">",
+                  "target": [
+                    ".hero__inner"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h2 class=\"hero__heading\">Dr. Erica Pan to deliver keynote address at UCLA Fielding’s 2026 Research, Innovation &amp; Impact Day </h2>",
+          "html": "<h2 class=\"hero__heading\">Dr. Kari Nadeau named dean of the UCLA Fielding School of Public Health</h2>",
           "target": [
             ".hero__heading"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -18124,7 +18474,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18156,7 +18506,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18188,7 +18538,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18220,7 +18570,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18252,7 +18602,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18284,7 +18634,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18316,7 +18666,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18348,7 +18698,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18380,7 +18730,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18412,7 +18762,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18444,7 +18794,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18476,7 +18826,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18508,7 +18858,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18540,7 +18890,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18572,7 +18922,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18604,7 +18954,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18636,7 +18986,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18668,7 +19018,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18700,7 +19050,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"mwgcwu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"mwgcwu-equalizer\" data-mutate=\"mwgcwu-equalizer\" data-events=\"mutate\">",
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"nuwvin-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"nuwvin-equalizer\" data-mutate=\"nuwvin-equalizer\" data-events=\"mutate\">",
                   "target": [
                     "#department-grid"
                   ]
@@ -18731,9 +19081,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Read the Magazine</span>\n                    </span>",
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button"
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
                   ]
                 }
               ],
@@ -18744,11 +19094,75 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span class=\"text\">Read the Magazine</span>",
+          "html": "<span class=\"text\">Learn More</span>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(1) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button > .text"
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"home-news__heading\">FSPH <strong>News</strong></h2>",
+          "target": [
+            ".home-news__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>News</strong>",
+          "target": [
+            ".home-news__heading > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -18762,9 +19176,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Inclusive Excellence at UCLA Fielding</span>\n                    </span>",
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
                   "target": [
-                    ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button"
+                    "a[href$=\"news\"]"
                   ]
                 }
               ],
@@ -18775,11 +19189,36 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span class=\"text\">Inclusive Excellence at UCLA Fielding</span>",
+          "html": "<span class=\"text\">FSPH News</span>",
           "target": [
-            ".featured-content__card.animate-section.animated-in:nth-child(3) > .featured-content-card.animate-item.animated-in > .featured-content-card__link > .featured-content-card__content > .featured-content-card__button > .text"
+            "a[href$=\"news\"] > .text"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"card__caption\">",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         },
         {
           "any": [
