@@ -352,10 +352,13 @@ function buildMobileCard(row, prevRow) {
 }
 
 function groupSummaryText(rows) {
-  const required = rows.reduce((s, r) => s + (r.violations_total || 0), 0);
-  const reach = rows.reduce((s, r) => s + (r.reach_violations_total || 0), 0);
+  const okRows = rows.filter((r) => r.status === "ok");
+  const required = okRows.reduce((s, r) => s + (r.violations_total || 0), 0);
+  const reach = okRows.reduce((s, r) => s + (r.reach_violations_total || 0), 0);
   const word = rows.length === 1 ? "site" : "sites";
-  return `${rows.length} ${word} · ${required} required · ${reach} reach`;
+  const failed = rows.length - okRows.length;
+  const failedSuffix = failed > 0 ? ` · ${failed} failed` : "";
+  return `${rows.length} ${word} · ${required} required · ${reach} reach${failedSuffix}`;
 }
 
 function buildGroupHeaderRow(campus, rows, onToggle, isCollapsed) {
