@@ -25,6 +25,14 @@ const IMPACT_CSS_CLASS = {
   unknown: "unk",
 };
 
+const IMPACT_LABEL = {
+  critical: "Critical",
+  serious: "Serious",
+  moderate: "Moderate",
+  minor: "Minor",
+  unknown: "Unknown",
+};
+
 function makeImpactBar(impact) {
   const bar = document.createElement("span");
   bar.className = "impact-bar";
@@ -80,7 +88,17 @@ function sortRows(rows, key, dir) {
   });
 }
 
-function appendRuleList(wrap, title, entries, kind) {
+// Build the Deque University rule doc URL for a given rule ID. Axe's
+// doc URL format is stable: /rules/axe/<major.minor>/<rule-id>. The
+// exact axe-core version that produced the scan is recorded on the
+// row, so we pin the doc link to the same version the numbers came
+// from (a later axe version can rename or merge rules).
+function dequeRuleUrl(ruleId, axeVersion) {
+  const version = (axeVersion || "").split(".").slice(0, 2).join(".") || "latest";
+  return `https://dequeuniversity.com/rules/axe/${version}/${ruleId}`;
+}
+
+function appendRuleList(wrap, title, entries, kind, ruleImpact, axeVersion) {
   if (!entries.length) return;
   const strong = document.createElement("strong");
   strong.textContent = title;
@@ -91,9 +109,33 @@ function appendRuleList(wrap, title, entries, kind) {
   for (const [rule, count] of entries.slice(0, 10)) {
     const li = document.createElement("li");
     const ruleWrap = document.createElement("div");
+    ruleWrap.className = "rule-info";
+
+    // Rule ID links to the Deque University docs for that rule so
+    // anyone unfamiliar with a rule can click through to the
+    // canonical explanation and fix guidance.
+    const codeLink = document.createElement("a");
+    codeLink.className = "rule-code-link";
+    codeLink.href = dequeRuleUrl(rule, axeVersion);
+    codeLink.target = "_blank";
+    codeLink.rel = "noopener";
+    codeLink.setAttribute("aria-label", `Learn more about ${rule} (opens in new tab)`);
     const code = document.createElement("code");
     code.textContent = rule;
-    ruleWrap.appendChild(code);
+    codeLink.appendChild(code);
+    ruleWrap.appendChild(codeLink);
+
+    // Impact pill — required rules only. Reach-goal rules (WCAG AAA /
+    // WCAG 2.2) are aspirational and axe's severity on them is mostly
+    // noise for that audience, so we skip the pill there.
+    const impact = kind === "required" ? ruleImpact?.[rule] : null;
+    if (impact) {
+      const pill = document.createElement("span");
+      pill.className = `impact-pill ${IMPACT_CSS_CLASS[impact] || "unk"}`;
+      pill.textContent = IMPACT_LABEL[impact] || impact;
+      ruleWrap.appendChild(pill);
+    }
+
     const desc = document.createElement("span");
     desc.className = "rule-desc";
     desc.textContent = ruleFriendly(rule);
@@ -135,8 +177,22 @@ function buildRuleDetail(row) {
     return wrap;
   }
 
-  appendRuleList(wrap, "Required (WCAG 2.0/2.1 Level A/AA)", requiredRules, "required");
-  appendRuleList(wrap, "Reach goals (WCAG 2.1 Level AAA & WCAG 2.2)", reachRules, "reach");
+  appendRuleList(
+    wrap,
+    "Required (WCAG 2.0/2.1 Level A/AA)",
+    requiredRules,
+    "required",
+    row.violations_rule_impact,
+    row.axe_version,
+  );
+  appendRuleList(
+    wrap,
+    "Reach goals (WCAG 2.1 Level AAA & WCAG 2.2)",
+    reachRules,
+    "reach",
+    null,
+    row.axe_version,
+  );
   return wrap;
 }
 
@@ -361,9 +417,24 @@ function groupSummaryText(rows) {
   return `${rows.length} ${word} · ${required} required · ${reach} reach${failedSuffix}`;
 }
 
+// Anchor link that sits alongside the collapse button in a group
+// header. Clicking it fires the section-link handler in app.js, which
+// updates the hash and smooth-scrolls to the group. It lives outside
+// the collapse <button> so we aren't nesting interactive elements.
+function buildGroupAnchor(campus) {
+  const anchor = document.createElement("a");
+  anchor.className = "group-anchor";
+  anchor.href = `#section=group-${campus}`;
+  anchor.dataset.sectionLink = `group-${campus}`;
+  anchor.setAttribute("aria-label", `Link to ${CAMPUS_NAMES[campus] || campus} section`);
+  anchor.innerHTML = "§";
+  return anchor;
+}
+
 function buildGroupHeaderRow(campus, rows, onToggle, isCollapsed) {
   const tr = document.createElement("tr");
   tr.className = "campus-group-header";
+  tr.id = `group-${campus}-row`;
   if (isCollapsed) tr.classList.add("collapsed");
 
   const td = document.createElement("td");
@@ -391,6 +462,7 @@ function buildGroupHeaderRow(campus, rows, onToggle, isCollapsed) {
 
   btn.addEventListener("click", () => onToggle(campus));
   td.appendChild(btn);
+  td.appendChild(buildGroupAnchor(campus));
   tr.appendChild(td);
   return tr;
 }
@@ -398,6 +470,7 @@ function buildGroupHeaderRow(campus, rows, onToggle, isCollapsed) {
 function buildGroupHeaderCard(campus, rows, onToggle, isCollapsed) {
   const wrap = document.createElement("div");
   wrap.className = "campus-group-card-header";
+  wrap.id = `group-${campus}-card`;
   if (isCollapsed) wrap.classList.add("collapsed");
 
   const btn = document.createElement("button");
@@ -422,6 +495,7 @@ function buildGroupHeaderCard(campus, rows, onToggle, isCollapsed) {
 
   btn.addEventListener("click", () => onToggle(campus));
   wrap.appendChild(btn);
+  wrap.appendChild(buildGroupAnchor(campus));
   return wrap;
 }
 

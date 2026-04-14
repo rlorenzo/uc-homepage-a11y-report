@@ -22,6 +22,14 @@ const DEFAULTS = () => ({
 const state = DEFAULTS();
 const subscribers = new Set();
 
+// Section bookmark state. Lives alongside filter state in the hash so
+// deep links can combine a filter view with a specific section anchor,
+// but is kept separate from filter state because the two are orthogonal:
+// jumping to a section never resets filters, and changing filters never
+// clears a section anchor.
+let currentSection = null;
+const sectionSubscribers = new Set();
+
 export function subscribe(fn) {
   subscribers.add(fn);
   return () => subscribers.delete(fn);
@@ -90,16 +98,17 @@ export function resetFilters() {
   notify();
 }
 
-function writeHash() {
+function writeHash(historyMode = "replace") {
   const params = new URLSearchParams();
   if (state.type !== TYPE_ALL) params.set("type", state.type);
   // Sort the campus list before serializing so deep links stay
   // deterministic regardless of the order chips were toggled.
   if (state.campuses.size > 0) params.set("campus", [...state.campuses].sort().join(","));
   if (state.category) params.set("cat", state.category);
+  if (currentSection) params.set("section", currentSection);
   const hash = params.toString();
   const url = window.location.pathname + window.location.search + (hash ? `#${hash}` : "");
-  window.history.replaceState(null, "", url);
+  window.history[historyMode === "push" ? "pushState" : "replaceState"](null, "", url);
 }
 
 export function readHashIntoState() {
@@ -133,14 +142,35 @@ export function readHashIntoState() {
   ) {
     state.category = cat;
   }
+  currentSection = params.get("section") || null;
+}
+
+export function getSection() {
+  return currentSection;
+}
+
+export function setSection(id) {
+  if (currentSection === (id || null)) return;
+  currentSection = id || null;
+  writeHash("push");
+  for (const fn of sectionSubscribers) fn(currentSection);
+}
+
+export function subscribeSection(fn) {
+  sectionSubscribers.add(fn);
+  return () => sectionSubscribers.delete(fn);
 }
 
 // Re-hydrate when the user uses browser back/forward or edits the hash
 // manually — without this, deep links work but history navigation
 // desyncs the UI from the URL.
 window.addEventListener("hashchange", () => {
+  const prevSection = currentSection;
   readHashIntoState();
   notify();
+  if (currentSection !== prevSection) {
+    for (const fn of sectionSubscribers) fn(currentSection);
+  }
 });
 
 export function describeFilter(s) {

@@ -256,6 +256,10 @@ async function scanSite(site) {
         total: 0,
         by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
         by_rule: {},
+        // axe assigns one impact level per rule, so we can store a plain
+        // rule → impact map alongside the counts. The report uses this
+        // to tag each rule in the per-site detail rows.
+        by_rule_impact: {},
       };
     }
 
@@ -269,6 +273,7 @@ async function scanSite(site) {
       bucket.total += count;
       bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
       bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
+      bucket.by_rule_impact[v.id] = impact;
     }
 
     // Error density is calculated against REQUIRED violations only —
@@ -318,10 +323,12 @@ async function scanSite(site) {
       violations_total: required.total,
       violations_by_impact: required.by_impact,
       violations_by_rule: required.by_rule,
+      violations_rule_impact: required.by_rule_impact,
       // Separate reach-goal bucket for aspirational tracking.
       reach_violations_total: reach.total,
       reach_violations_by_impact: reach.by_impact,
       reach_violations_by_rule: reach.by_rule,
+      reach_violations_rule_impact: reach.by_rule_impact,
       error_density: errorDensity,
     };
   } catch (err) {
@@ -351,9 +358,11 @@ async function scanSite(site) {
       violations_total: 0,
       violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
       violations_by_rule: {},
+      violations_rule_impact: {},
       reach_violations_total: 0,
       reach_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
       reach_violations_by_rule: {},
+      reach_violations_rule_impact: {},
       error_density: 0,
     };
   } finally {
