@@ -118,7 +118,7 @@ function appendRuleList(wrap, title, entries, kind, ruleImpact, axeVersion) {
     codeLink.className = "rule-code-link";
     codeLink.href = dequeRuleUrl(rule, axeVersion);
     codeLink.target = "_blank";
-    codeLink.rel = "noopener";
+    codeLink.rel = "noopener noreferrer";
     codeLink.setAttribute("aria-label", `Learn more about ${rule} (opens in new tab)`);
     const code = document.createElement("code");
     code.textContent = rule;
