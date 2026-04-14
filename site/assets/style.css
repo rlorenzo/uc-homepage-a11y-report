@@ -1,5 +1,5 @@
 /* =============================================================
-   UC Homepage Accessibility Report
+   UC Web Accessibility Report
    Editorial Data Journal — WCAG 2.1 Level AAA compliant
    ============================================================= */
 
@@ -1395,4 +1395,310 @@ main {
   .campus-cards {
     display: none !important;
   }
+}
+
+/* --- 15. Filter bar ------------------------------------------
+   Sticky-feeling utility bar that floats between the masthead and
+   the first report section. Three filter groups (site type, campus,
+   discipline) plus a reset button. Every control writes through the
+   filter state store; all renderers subscribe and recompute. */
+
+.filter-bar {
+  max-width: var(--content);
+  margin: var(--space-7) auto 0;
+  padding: var(--space-5) var(--space-5);
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.filter-bar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-5) var(--space-6);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.filter-group-category {
+  min-width: 220px;
+}
+
+.filter-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip-group-campus {
+  /* Campus chips wrap onto a second line on narrower viewports. */
+  max-width: 100%;
+}
+
+.chip {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  line-height: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--uc-dark-blue);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--uc-dark-blue);
+  cursor: pointer;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.chip:hover {
+  background: var(--tint);
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--uc-gold);
+  outline-offset: 2px;
+}
+
+.chip.active,
+.chip[aria-pressed="true"] {
+  background: var(--uc-dark-blue);
+  color: var(--paper);
+}
+
+.chip.active:hover,
+.chip[aria-pressed="true"]:hover {
+  background: var(--uc-deep-blue);
+}
+
+/* Category dropdown — native <select> styled to match the chips. */
+#filter-category-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding: var(--space-3) var(--space-7) var(--space-3) var(--space-4);
+  border: 1.5px solid var(--uc-dark-blue);
+  border-radius: 999px;
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M4 6l4 4 4-4' stroke='%23005581' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  color: var(--uc-dark-blue);
+  cursor: pointer;
+  min-width: 0;
+  width: 100%;
+}
+
+#filter-category-select:focus-visible {
+  outline: 3px solid var(--uc-gold);
+  outline-offset: 2px;
+}
+
+#filter-category-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.filter-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--uc-dark-blue);
+  cursor: pointer;
+  align-self: flex-end;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.filter-reset:hover {
+  color: var(--uc-deep-blue);
+}
+
+.filter-reset:focus-visible {
+  outline: 3px solid var(--uc-gold);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+.filter-summary {
+  margin: var(--space-5) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Narrow viewports: drop to a single column, let each group span full
+   width. Campus chips continue to wrap horizontally within their group. */
+@media (max-width: 720px) {
+  .filter-bar {
+    padding: var(--space-4);
+  }
+  .filter-bar-row {
+    gap: var(--space-4);
+  }
+  .filter-group {
+    width: 100%;
+  }
+  .filter-group-category {
+    min-width: 0;
+  }
+}
+
+/* --- 16. Campus group headers + empty state ------------------
+   Grouped table rendering when the site-type filter shows schools
+   or mixed content. Each group is a single full-width header row
+   followed by the member rows; the header doubles as a collapse
+   toggle. Mobile cards get equivalent affordances. */
+
+.campus-table tbody .campus-group-header td,
+.campus-table tbody .campus-group-header td:first-child {
+  padding: 0;
+  border-bottom: 2px solid var(--uc-dark-blue);
+}
+
+.campus-group-header .group-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  background: var(--tint);
+  border: none;
+  border-left: 4px solid var(--uc-dark-blue);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.campus-group-header .group-toggle:hover {
+  background: var(--tint-2);
+}
+
+.campus-group-header .group-toggle:focus-visible {
+  outline: 3px solid var(--uc-gold);
+  outline-offset: -3px;
+}
+
+.campus-group-header .group-chevron {
+  display: inline-flex;
+  transition: transform var(--dur-fast) var(--ease);
+  color: var(--uc-dark-blue);
+}
+
+.campus-group-header.collapsed .group-chevron {
+  transform: rotate(-90deg);
+}
+
+.campus-group-header .group-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  color: var(--uc-deep-blue);
+}
+
+.campus-group-header .group-count {
+  margin-left: auto;
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.campus-row.in-group td:first-child {
+  padding-left: var(--space-6);
+}
+
+/* Mobile cards — matching group header */
+.campus-group-card-header {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.campus-group-card-header .group-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--tint);
+  border: none;
+  border-left: 4px solid var(--uc-dark-blue);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+
+.campus-group-card-header .group-toggle:hover {
+  background: var(--tint-2);
+}
+
+.campus-group-card-header .group-toggle:focus-visible {
+  outline: 3px solid var(--uc-gold);
+  outline-offset: -3px;
+}
+
+.campus-group-card-header .group-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-display-md);
+  color: var(--uc-deep-blue);
+}
+
+.campus-group-card-header .group-count {
+  margin-left: auto;
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+}
+
+.campus-group-card-header .group-chevron {
+  display: inline-flex;
+  transition: transform var(--dur-fast) var(--ease);
+  color: var(--uc-dark-blue);
+}
+
+.campus-group-card-header.collapsed .group-chevron {
+  transform: rotate(-90deg);
+}
+
+/* Empty state — shown when filters narrow to zero matching rows. */
+.empty-state {
+  padding: var(--space-7) var(--space-5);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--ink-muted);
+  font-style: italic;
 }
