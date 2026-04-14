@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-13T17:03:31.448Z",
+  "scanned_at": "2026-04-14T04:20:16.847Z",
   "axe_version": "4.11.2",
   "site": "uci-samueli",
   "name": "UCI Samueli School of Engineering",
@@ -350,7 +350,7 @@
           "impact": "moderate",
           "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1.0\">",
           "target": [
-            "meta[name=\"viewport\"]:nth-child(20)"
+            "meta[name=\"viewport\"]:nth-child(19)"
           ],
           "failureSummary": "Fix any of the following:\n  maximum-scale on <meta> tag disables zooming on mobile devices"
         }
@@ -401,60 +401,6 @@
             ".ui-state-default"
           ],
           "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
-        }
-      ]
-    },
-    {
-      "id": "target-size",
-      "impact": "serious",
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "wcag22aa",
-        "wcag258"
-      ],
-      "description": "Ensure touch targets have sufficient size and space",
-      "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "minSize": 24,
-                "width": 120.2,
-                "height": 19
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Target has insufficient size (120.2px by 19px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 23,
-                "minOffset": 24
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
-                  "target": [
-                    ".views-row-5 > a"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/news-events/events?dept=All\">\n    More Events  </a>",
-          "target": [
-            "a[href=\"/news-events/events?dept=All\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (120.2px by 19px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
         }
       ]
     }
@@ -1914,7 +1860,7 @@
           "impact": null,
           "html": "<li class=\"flex-active-slide\" style=\"width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;\">",
           "target": [
-            ".flex-active-slide"
+            ".slides > li:nth-child(1)"
           ]
         },
         {
@@ -2215,6 +2161,12 @@
                   ]
                 },
                 {
+                  "html": "<h2><strong>Lighting&nbsp;</strong>the Heart</h2>",
+                  "target": [
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
+                  ]
+                },
+                {
                   "html": "<h2><strong>Senior </strong>Showcase</h2>",
                   "target": [
                     ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
@@ -2236,12 +2188,6 @@
                   "html": "<h2><strong>A Pioneering&nbsp;</strong>Approach</h2>",
                   "target": [
                     ".media-id-337 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
-                  ]
-                },
-                {
-                  "html": "<h2><strong>Stress&nbsp;</strong>Profiler</h2>",
-                  "target": [
-                    ".media-id-336 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
                   ]
                 },
                 {
@@ -2668,9 +2614,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2><strong>Senior </strong>Showcase</h2>",
+          "html": "<h2><strong>Lighting&nbsp;</strong>the Heart</h2>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
           ]
         },
         {
@@ -2688,9 +2634,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<strong>Senior </strong>",
+          "html": "<strong>Lighting&nbsp;</strong>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2 > strong"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2 > strong"
           ]
         },
         {
@@ -2708,9 +2654,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>Seniors show off engineering projects at Annual Design Review.&nbsp;<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a></p>",
+          "html": "<p>UC Irvine researchers use the power of light to direct heart cells. &nbsp;<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a></p>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
           ]
         },
         {
@@ -2728,9 +2674,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
+          "html": "<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
           ]
         },
         {
@@ -3113,266 +3059,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<time datetime=\"2026-04-09T14:00:00-07:00\">9</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-09T14:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-09T14:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-09T14:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van\">MSE 298 Seminar: Identification and Engineering of Interlayer Stacking Configurations in van der Waals Crystals</a>",
-          "target": [
-            ".views-row-1.views-row-first.views-row-odd > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T09:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T09:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T09:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T09:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin\">EECS Seminar: Toward Energy-Efficient Foundation Models - Reimagining Digital Twin Solutions for Real-Time Sensing in Inaccessible Locations</a>",
-          "target": [
-            ".views-row-2.views-row-even.views-row > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T11:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T11:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T11:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T11:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining\">CBE Seminar: Designing Safer Energetics Under Multiple Property Constraints - Combining Chemistry-Informed Machine Learning with Multiscale Models</a>",
-          "target": [
-            ".views-row-3.views-row-odd.views-row > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T15:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T15:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<time datetime=\"2026-04-10T15:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T15:00:00-07:00\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity\">CEE Seminar: Earth as a Reactor - Engineering the Subsurface for Minerals, Energy, and Opportunity</a>",
-          "target": [
-            ".views-row-4.views-row-even.views-row > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "contrastRatio": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of null"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<time datetime=\"2026-04-16T14:00:00-07:00\">16</time>",
           "target": [
             ".day > time[datetime=\"2026-04-16T14:00:00-07:00\"]"
@@ -3419,6 +3105,266 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
+          "target": [
+            ".views-row-1.views-row-first.views-row-odd > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-17T11:00:00-07:00\">17</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-17T11:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-17T11:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-17T11:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#222222",
+                "bgColor": "#ffffff",
+                "contrastRatio": 15.9,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai\">CBE 298 Seminar: Exploring the Intersection of Human Work and Data - Understanding AI Capabilities, Responsible Usage and Future-Oriented Skills</a>",
+          "target": [
+            ".views-row-2.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-17T15:00:00-07:00\">17</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-17T15:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-17T15:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-17T15:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#222222",
+                "bgColor": "#ffffff",
+                "contrastRatio": 15.9,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire\">CEE Seminar: The Escalating Control of Weather and Climate Extremes on Wildfire</a>",
+          "target": [
+            ".views-row-3.views-row-odd.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-23T14:00:00-07:00\">23</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-23T14:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-23T14:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-23T14:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#222222",
+                "bgColor": "#ffffff",
+                "contrastRatio": 15.9,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics\">MSE 298 Seminar: Quantum Science and Technology with Rare Earth Ions and Nano-Photonics</a>",
+          "target": [
+            ".views-row-4.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-24T21:00:00-07:00\">24</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-24T21:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "contrastRatio": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of null"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<time datetime=\"2026-04-24T21:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-24T21:00:00-07:00\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#222222",
+                "bgColor": "#ffffff",
+                "contrastRatio": 15.9,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues\">EECS Seminar: Meta-imaging of Textures and Tissues</a>",
           "target": [
             ".views-row-5 > a"
           ]
@@ -4514,7 +4460,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van\">MSE 298 Seminar: Identification and Engineering of Interlayer Stacking Configurations in van der Waals Crystals</a>",
+          "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
           "target": [
             ".views-row-1.views-row-first.views-row-odd > a"
           ]
@@ -4539,7 +4485,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin\">EECS Seminar: Toward Energy-Efficient Foundation Models - Reimagining Digital Twin Solutions for Real-Time Sensing in Inaccessible Locations</a>",
+          "html": "<a href=\"/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai\">CBE 298 Seminar: Exploring the Intersection of Human Work and Data - Understanding AI Capabilities, Responsible Usage and Future-Oriented Skills</a>",
           "target": [
             ".views-row-2.views-row-even.views-row > a"
           ]
@@ -4564,7 +4510,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining\">CBE Seminar: Designing Safer Energetics Under Multiple Property Constraints - Combining Chemistry-Informed Machine Learning with Multiscale Models</a>",
+          "html": "<a href=\"/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire\">CEE Seminar: The Escalating Control of Weather and Climate Extremes on Wildfire</a>",
           "target": [
             ".views-row-3.views-row-odd.views-row > a"
           ]
@@ -4589,7 +4535,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity\">CEE Seminar: Earth as a Reactor - Engineering the Subsurface for Minerals, Energy, and Opportunity</a>",
+          "html": "<a href=\"/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics\">MSE 298 Seminar: Quantum Science and Technology with Rare Earth Ions and Nano-Photonics</a>",
           "target": [
             ".views-row-4.views-row-even.views-row > a"
           ]
@@ -4614,7 +4560,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
+          "html": "<a href=\"/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues\">EECS Seminar: Meta-imaging of Textures and Tissues</a>",
           "target": [
             ".views-row-5 > a"
           ]
@@ -6226,122 +6172,6 @@
             {
               "id": "identical-links-same-purpose",
               "data": {
-                "name": "mse 298 seminar identification and engineering of interlayer stacking configurations in van der waals crystals",
-                "urlProps": {
-                  "protocol": "http:",
-                  "hostname": "engineering.uci.edu",
-                  "port": "",
-                  "pathname": "/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van/",
-                  "search": {},
-                  "hash": "",
-                  "filename": ""
-                }
-              },
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "There are no other links with the same name, that go to a different URL"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van\">MSE 298 Seminar: Identification and Engineering of Interlayer Stacking Configurations in van der Waals Crystals</a>",
-          "target": [
-            ".views-row-1.views-row-first.views-row-odd > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "identical-links-same-purpose",
-              "data": {
-                "name": "eecs seminar toward energyefficient foundation models reimagining digital twin solutions for realtime sensing in inaccessible locations",
-                "urlProps": {
-                  "protocol": "http:",
-                  "hostname": "engineering.uci.edu",
-                  "port": "",
-                  "pathname": "/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin/",
-                  "search": {},
-                  "hash": "",
-                  "filename": ""
-                }
-              },
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "There are no other links with the same name, that go to a different URL"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin\">EECS Seminar: Toward Energy-Efficient Foundation Models - Reimagining Digital Twin Solutions for Real-Time Sensing in Inaccessible Locations</a>",
-          "target": [
-            ".views-row-2.views-row-even.views-row > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "identical-links-same-purpose",
-              "data": {
-                "name": "cbe seminar designing safer energetics under multiple property constraints combining chemistryinformed machine learning with multiscale models",
-                "urlProps": {
-                  "protocol": "http:",
-                  "hostname": "engineering.uci.edu",
-                  "port": "",
-                  "pathname": "/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining/",
-                  "search": {},
-                  "hash": "",
-                  "filename": ""
-                }
-              },
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "There are no other links with the same name, that go to a different URL"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining\">CBE Seminar: Designing Safer Energetics Under Multiple Property Constraints - Combining Chemistry-Informed Machine Learning with Multiscale Models</a>",
-          "target": [
-            ".views-row-3.views-row-odd.views-row > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "identical-links-same-purpose",
-              "data": {
-                "name": "cee seminar earth as a reactor engineering the subsurface for minerals energy and opportunity",
-                "urlProps": {
-                  "protocol": "http:",
-                  "hostname": "engineering.uci.edu",
-                  "port": "",
-                  "pathname": "/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity/",
-                  "search": {},
-                  "hash": "",
-                  "filename": ""
-                }
-              },
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "There are no other links with the same name, that go to a different URL"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity\">CEE Seminar: Earth as a Reactor - Engineering the Subsurface for Minerals, Energy, and Opportunity</a>",
-          "target": [
-            ".views-row-4.views-row-even.views-row > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "identical-links-same-purpose",
-              "data": {
                 "name": "mse 298 seminar lessons from nature bioinspired design of functional optical materials",
                 "urlProps": {
                   "protocol": "http:",
@@ -6361,6 +6191,122 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
+          "target": [
+            ".views-row-1.views-row-first.views-row-odd > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "cbe 298 seminar exploring the intersection of human work and data understanding ai capabilities responsible usage and futureoriented skills",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.uci.edu",
+                  "port": "",
+                  "pathname": "/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "There are no other links with the same name, that go to a different URL"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai\">CBE 298 Seminar: Exploring the Intersection of Human Work and Data - Understanding AI Capabilities, Responsible Usage and Future-Oriented Skills</a>",
+          "target": [
+            ".views-row-2.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "cee seminar the escalating control of weather and climate extremes on wildfire",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.uci.edu",
+                  "port": "",
+                  "pathname": "/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "There are no other links with the same name, that go to a different URL"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire\">CEE Seminar: The Escalating Control of Weather and Climate Extremes on Wildfire</a>",
+          "target": [
+            ".views-row-3.views-row-odd.views-row > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "mse 298 seminar quantum science and technology with rare earth ions and nanophotonics",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.uci.edu",
+                  "port": "",
+                  "pathname": "/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "There are no other links with the same name, that go to a different URL"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics\">MSE 298 Seminar: Quantum Science and Technology with Rare Earth Ions and Nano-Photonics</a>",
+          "target": [
+            ".views-row-4.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "eecs seminar metaimaging of textures and tissues",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.uci.edu",
+                  "port": "",
+                  "pathname": "/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "There are no other links with the same name, that go to a different URL"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues\">EECS Seminar: Meta-imaging of Textures and Tissues</a>",
           "target": [
             ".views-row-5 > a"
           ]
@@ -7238,9 +7184,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<p>Seniors show off engineering projects at Annual Design Review.&nbsp;<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a></p>",
+                  "html": "<p>UC Irvine researchers use the power of light to direct heart cells. &nbsp;<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a></p>",
                   "target": [
-                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
                   ]
                 }
               ],
@@ -7251,9 +7197,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
+          "html": "<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
           ]
         }
       ]
@@ -7673,6 +7619,32 @@
             }
           ],
           "impact": null,
+          "html": "<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a>",
+          "target": [
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
           "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
           "target": [
             ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
@@ -7754,32 +7726,6 @@
           "html": "<a href=\"/news/2026/2/breakthrough-drug-development-we-ve-been-waiting\">READ MORE</a>",
           "target": [
             ".media-id-337 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/news/2026/1/uc-irvine-researchers-develop-ml-powered-wearable-bioelectronic-stress-profiler\">READ MORE</a>",
-          "target": [
-            ".media-id-336 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
           ]
         },
         {
@@ -8271,7 +8217,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van\">MSE 298 Seminar: Identification and Engineering of Interlayer Stacking Configurations in van der Waals Crystals</a>",
+          "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
           "target": [
             ".views-row-1.views-row-first.views-row-odd > a"
           ]
@@ -8297,7 +8243,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin\">EECS Seminar: Toward Energy-Efficient Foundation Models - Reimagining Digital Twin Solutions for Real-Time Sensing in Inaccessible Locations</a>",
+          "html": "<a href=\"/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai\">CBE 298 Seminar: Exploring the Intersection of Human Work and Data - Understanding AI Capabilities, Responsible Usage and Future-Oriented Skills</a>",
           "target": [
             ".views-row-2.views-row-even.views-row > a"
           ]
@@ -8323,7 +8269,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining\">CBE Seminar: Designing Safer Energetics Under Multiple Property Constraints - Combining Chemistry-Informed Machine Learning with Multiscale Models</a>",
+          "html": "<a href=\"/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire\">CEE Seminar: The Escalating Control of Weather and Climate Extremes on Wildfire</a>",
           "target": [
             ".views-row-3.views-row-odd.views-row > a"
           ]
@@ -8349,7 +8295,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity\">CEE Seminar: Earth as a Reactor - Engineering the Subsurface for Minerals, Energy, and Opportunity</a>",
+          "html": "<a href=\"/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics\">MSE 298 Seminar: Quantum Science and Technology with Rare Earth Ions and Nano-Photonics</a>",
           "target": [
             ".views-row-4.views-row-even.views-row > a"
           ]
@@ -8375,7 +8321,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
+          "html": "<a href=\"/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues\">EECS Seminar: Meta-imaging of Textures and Tissues</a>",
           "target": [
             ".views-row-5 > a"
           ]
@@ -9459,7 +9405,7 @@
           "impact": null,
           "html": "<li class=\"flex-active-slide\" style=\"width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;\">",
           "target": [
-            ".flex-active-slide"
+            ".slides > li:nth-child(1)"
           ]
         },
         {
@@ -9477,7 +9423,7 @@
           "impact": null,
           "html": "<li style=\"width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;\">",
           "target": [
-            ".slides > li:nth-child(2)"
+            ".flex-active-slide"
           ]
         },
         {
@@ -10144,7 +10090,7 @@
           "impact": null,
           "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
           "target": [
-            "meta[name=\"viewport\"]:nth-child(19)"
+            "meta[name=\"viewport\"]:nth-child(18)"
           ]
         }
       ]
@@ -10319,7 +10265,7 @@
     },
     {
       "id": "target-size",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.sensory-and-visual-cues",
         "wcag22aa",
@@ -10398,12 +10344,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 131.8,
+                "width": 133,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (131.8px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (133px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10430,12 +10376,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 108.2,
+                "width": 109,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (108.2px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (109px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10462,12 +10408,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 83.1,
+                "width": 85,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (83.1px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (85px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10494,12 +10440,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 117.4,
+                "width": 120,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (117.4px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (120px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10526,12 +10472,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 131.7,
+                "width": 134,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (131.7px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (134px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10619,12 +10565,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 80.7,
+                "width": 80,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (80.7px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (80px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10651,12 +10597,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 123.5,
+                "width": 125,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (123.5px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (125px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10683,12 +10629,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 109.7,
+                "width": 108,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (109.7px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (108px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10715,12 +10661,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 105,
+                "width": 104,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (105px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (104px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10747,12 +10693,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 111.8,
+                "width": 109,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (111.8px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (109px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10779,12 +10725,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 150.1,
+                "width": 150,
                 "height": 40
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (150.1px by 40px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (150px by 40px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -10875,12 +10821,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 232.1,
+                "width": 229,
                 "height": 50
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (232.1px by 50px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (229px by 50px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -11099,12 +11045,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 348,
+                "width": 349,
                 "height": 56
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (348px by 56px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (349px by 56px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -11163,12 +11109,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 402.9,
+                "width": 408,
                 "height": 56
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (402.9px by 56px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (408px by 56px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -11227,12 +11173,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 406.2,
+                "width": 410,
                 "height": 84
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (406.2px by 84px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (410px by 84px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -11291,12 +11237,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 417.9,
+                "width": 429,
                 "height": 56
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (417.9px by 56px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (429px by 56px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -11344,12 +11290,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 109.8,
+                "width": 110,
                 "height": 44
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Control has sufficient size (109.8px by 44px, should be at least 24px by 24px)"
+              "message": "Control has sufficient size (110px by 44px, should be at least 24px by 24px)"
             }
           ],
           "all": [],
@@ -11358,134 +11304,6 @@
           "html": "<li class=\"ui-state-default ui-corner-top ui-tabs-active ui-state-active\" role=\"tab\" tabindex=\"0\" aria-controls=\"qt-events_twitter-ui-tabs1\" aria-labelledby=\"ui-id-1\" aria-selected=\"true\">",
           "target": [
             ".ui-state-default"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "minSize": 24,
-                "width": 201.5,
-                "height": 90
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Control has sufficient size (201.5px by 90px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 24,
-                "minOffset": 24
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/2/mse-298-seminar-identification-and-engineering-interlayer-stacking-configurations-van\">MSE 298 Seminar: Identification and Engineering of Interlayer Stacking Configurations in van der Waals Crystals</a>",
-          "target": [
-            ".views-row-1.views-row-first.views-row-odd > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "minSize": 24,
-                "width": 201.5,
-                "height": 108
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Control has sufficient size (201.5px by 108px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 24,
-                "minOffset": 24
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/3/eecs-seminar-toward-energy-efficient-foundation-models-reimagining-digital-twin\">EECS Seminar: Toward Energy-Efficient Foundation Models - Reimagining Digital Twin Solutions for Real-Time Sensing in Inaccessible Locations</a>",
-          "target": [
-            ".views-row-2.views-row-even.views-row > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "minSize": 24,
-                "width": 201.5,
-                "height": 126
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Control has sufficient size (201.5px by 126px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 24,
-                "minOffset": 24
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cbe-seminar-designing-safer-energetics-under-multiple-property-constraints-combining\">CBE Seminar: Designing Safer Energetics Under Multiple Property Constraints - Combining Chemistry-Informed Machine Learning with Multiscale Models</a>",
-          "target": [
-            ".views-row-3.views-row-odd.views-row > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "minSize": 24,
-                "width": 201.5,
-                "height": 72
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Control has sufficient size (201.5px by 72px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 24,
-                "minOffset": 24
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/events/2026/4/cee-seminar-earth-reactor-engineering-subsurface-minerals-energy-and-opportunity\">CEE Seminar: Earth as a Reactor - Engineering the Subsurface for Minerals, Energy, and Opportunity</a>",
-          "target": [
-            ".views-row-4.views-row-even.views-row > a"
           ]
         },
         {
@@ -11517,7 +11335,156 @@
           "impact": null,
           "html": "<a href=\"/events/2026/3/mse-298-seminar-lessons-nature-bio-inspired-design-functional-optical-materials\">MSE 298 Seminar: Lessons from Nature - Bio-Inspired Design of Functional Optical Materials</a>",
           "target": [
+            ".views-row-1.views-row-first.views-row-odd > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 201.5,
+                "height": 108
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (201.5px by 108px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cbe-298-seminar-exploring-intersection-human-work-and-data-understanding-ai\">CBE 298 Seminar: Exploring the Intersection of Human Work and Data - Understanding AI Capabilities, Responsible Usage and Future-Oriented Skills</a>",
+          "target": [
+            ".views-row-2.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 201.5,
+                "height": 54
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (201.5px by 54px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/cee-seminar-escalating-control-weather-and-climate-extremes-wildfire\">CEE Seminar: The Escalating Control of Weather and Climate Extremes on Wildfire</a>",
+          "target": [
+            ".views-row-3.views-row-odd.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 201.5,
+                "height": 72
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (201.5px by 72px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/2/mse-298-seminar-quantum-science-and-technology-rare-earth-ions-and-nano-photonics\">MSE 298 Seminar: Quantum Science and Technology with Rare Earth Ions and Nano-Photonics</a>",
+          "target": [
+            ".views-row-4.views-row-even.views-row > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 201.5,
+                "height": 36
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (201.5px by 36px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/events/2026/3/eecs-seminar-meta-imaging-textures-and-tissues\">EECS Seminar: Meta-imaging of Textures and Tissues</a>",
+          "target": [
             ".views-row-5 > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/news-events/events?dept=All\">\n    More Events  </a>",
+          "target": [
+            "a[href=\"/news-events/events?dept=All\"]"
           ]
         },
         {
@@ -12140,9 +12107,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<h2><strong>Senior </strong>Showcase</h2>",
+                  "html": "<h2><strong>Lighting&nbsp;</strong>the Heart</h2>",
                   "target": [
-                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
                   ]
                 }
               ],
@@ -12153,9 +12120,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h2><strong>Senior </strong>Showcase</h2>",
+          "html": "<h2><strong>Lighting&nbsp;</strong>the Heart</h2>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -12172,9 +12139,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<h2><strong>Senior </strong>Showcase</h2>",
+                  "html": "<h2><strong>Lighting&nbsp;</strong>the Heart</h2>",
                   "target": [
-                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2"
                   ]
                 }
               ],
@@ -12185,9 +12152,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<strong>Senior </strong>",
+          "html": "<strong>Lighting&nbsp;</strong>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2 > strong"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > h2 > strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -12204,9 +12171,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"leftsplash\">\n<h2><strong>Senior </strong>Showcase</h2>\n<p>Seniors show off engineering projects at Annual Design Review.&nbsp;<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a></p>\n</div>",
+                  "html": "<div class=\"leftsplash\">\n<h2><strong>Lighting&nbsp;</strong>the Heart</h2>\n<p>UC Irvine researchers use the power of light to direct heart cells. &nbsp;<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a></p>\n</div>",
                   "target": [
-                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash"
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash"
                   ]
                 }
               ],
@@ -12217,9 +12184,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p>Seniors show off engineering projects at Annual Design Review.&nbsp;<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a></p>",
+          "html": "<p>UC Irvine researchers use the power of light to direct heart cells. &nbsp;<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a></p>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -12236,9 +12203,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"leftsplash\">\n<h2><strong>Senior </strong>Showcase</h2>\n<p>Seniors show off engineering projects at Annual Design Review.&nbsp;<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a></p>\n</div>",
+                  "html": "<div class=\"leftsplash\">\n<h2><strong>Lighting&nbsp;</strong>the Heart</h2>\n<p>UC Irvine researchers use the power of light to direct heart cells. &nbsp;<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a></p>\n</div>",
                   "target": [
-                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash"
+                    ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash"
                   ]
                 }
               ],
@@ -12249,9 +12216,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
+          "html": "<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -12487,262 +12454,6 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "shortTextContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-09T14:00:00-07:00\">9</time></div>\n<div class=\"month\"><time datetime=\"2026-04-09T14:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-1.views-row-first.views-row-odd > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element content is too short to determine if it is actual text content"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-09T14:00:00-07:00\">9</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-09T14:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-09T14:00:00-07:00\">9</time></div>\n<div class=\"month\"><time datetime=\"2026-04-09T14:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-1.views-row-first.views-row-odd > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-09T14:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-09T14:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T09:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T09:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-2.views-row-even.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T09:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T09:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T09:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T09:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-2.views-row-even.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T09:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T09:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T11:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T11:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-3.views-row-odd.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T11:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T11:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T11:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T11:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-3.views-row-odd.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T11:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T11:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T15:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T15:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-4.views-row-even.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T15:00:00-07:00\">10</time>",
-          "target": [
-            ".day > time[datetime=\"2026-04-10T15:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-10T15:00:00-07:00\">10</time></div>\n<div class=\"month\"><time datetime=\"2026-04-10T15:00:00-07:00\">Apr</time></div>\n</div>",
-                  "target": [
-                    ".views-row-4.views-row-even.views-row > .datebox"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<time datetime=\"2026-04-10T15:00:00-07:00\">Apr</time>",
-          "target": [
-            ".month > time[datetime=\"2026-04-10T15:00:00-07:00\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
                 "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -12750,7 +12461,7 @@
                 {
                   "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-16T14:00:00-07:00\">16</time></div>\n<div class=\"month\"><time datetime=\"2026-04-16T14:00:00-07:00\">Apr</time></div>\n</div>",
                   "target": [
-                    ".views-row-5 > .datebox"
+                    ".views-row-1.views-row-first.views-row-odd > .datebox"
                   ]
                 }
               ],
@@ -12782,7 +12493,7 @@
                 {
                   "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-16T14:00:00-07:00\">16</time></div>\n<div class=\"month\"><time datetime=\"2026-04-16T14:00:00-07:00\">Apr</time></div>\n</div>",
                   "target": [
-                    ".views-row-5 > .datebox"
+                    ".views-row-1.views-row-first.views-row-odd > .datebox"
                   ]
                 }
               ],
@@ -12796,6 +12507,262 @@
           "html": "<time datetime=\"2026-04-16T14:00:00-07:00\">Apr</time>",
           "target": [
             ".month > time[datetime=\"2026-04-16T14:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-17T11:00:00-07:00\">17</time></div>\n<div class=\"month\"><time datetime=\"2026-04-17T11:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-2.views-row-even.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-17T11:00:00-07:00\">17</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-17T11:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-17T11:00:00-07:00\">17</time></div>\n<div class=\"month\"><time datetime=\"2026-04-17T11:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-2.views-row-even.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-17T11:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-17T11:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-17T15:00:00-07:00\">17</time></div>\n<div class=\"month\"><time datetime=\"2026-04-17T15:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-3.views-row-odd.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-17T15:00:00-07:00\">17</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-17T15:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-17T15:00:00-07:00\">17</time></div>\n<div class=\"month\"><time datetime=\"2026-04-17T15:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-3.views-row-odd.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-17T15:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-17T15:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-23T14:00:00-07:00\">23</time></div>\n<div class=\"month\"><time datetime=\"2026-04-23T14:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-4.views-row-even.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-23T14:00:00-07:00\">23</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-23T14:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-23T14:00:00-07:00\">23</time></div>\n<div class=\"month\"><time datetime=\"2026-04-23T14:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-4.views-row-even.views-row > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-23T14:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-23T14:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-24T21:00:00-07:00\">24</time></div>\n<div class=\"month\"><time datetime=\"2026-04-24T21:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-5 > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-24T21:00:00-07:00\">24</time>",
+          "target": [
+            ".day > time[datetime=\"2026-04-24T21:00:00-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"datebox\">\n<div class=\"day\"><time datetime=\"2026-04-24T21:00:00-07:00\">24</time></div>\n<div class=\"month\"><time datetime=\"2026-04-24T21:00:00-07:00\">Apr</time></div>\n</div>",
+                  "target": [
+                    ".views-row-5 > .datebox"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-04-24T21:00:00-07:00\">Apr</time>",
+          "target": [
+            ".month > time[datetime=\"2026-04-24T21:00:00-07:00\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -13080,13 +13047,19 @@
                   "protocol": "http:",
                   "hostname": "engineering.uci.edu",
                   "port": "",
-                  "pathname": "/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review/",
+                  "pathname": "/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface/",
                   "search": {},
                   "hash": "",
                   "filename": ""
                 }
               },
               "relatedNodes": [
+                {
+                  "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
+                  "target": [
+                    ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+                  ]
+                },
                 {
                   "html": "<a href=\"/news/2026/3/engineering-sustainability-institute-focus-critical-materials-0\">READ MORE</a>",
                   "target": [
@@ -13104,12 +13077,6 @@
                   "target": [
                     ".media-id-337 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
                   ]
-                },
-                {
-                  "html": "<a href=\"/news/2026/1/uc-irvine-researchers-develop-ml-powered-wearable-bioelectronic-stress-profiler\">READ MORE</a>",
-                  "target": [
-                    ".media-id-336 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
-                  ]
                 }
               ],
               "impact": "minor",
@@ -13118,9 +13085,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"/news/2026/3/eleven-senior-projects-win-deans-choice-awards-2026-annual-design-review\">READ MORE</a>",
+          "html": "<a href=\"/news/2026/3/uc-irvine-researchers-engineer-light-powered-biohybrid-cardiac-interface\">READ MORE</a>",
           "target": [
-            ".media-id-341 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
+            ".media-id-342 > .grid > .inner > .slide-content > .slide-text > .field-type-text-long.field_body.field > .leftsplash > p > a"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         },
