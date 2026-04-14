@@ -98,15 +98,23 @@ export function resetFilters() {
   notify();
 }
 
-function writeHash(historyMode = "replace") {
+// Serialize the full filter + section hash string (without the leading
+// "#"). Exported so the app can rewrite static section-link hrefs as
+// filter state changes — otherwise Cmd/Ctrl-click "open in new tab"
+// and "copy link address" would lose the current filter context.
+export function buildSectionHash(sectionId) {
   const params = new URLSearchParams();
   if (state.type !== TYPE_ALL) params.set("type", state.type);
   // Sort the campus list before serializing so deep links stay
   // deterministic regardless of the order chips were toggled.
   if (state.campuses.size > 0) params.set("campus", [...state.campuses].sort().join(","));
   if (state.category) params.set("cat", state.category);
-  if (currentSection) params.set("section", currentSection);
-  const hash = params.toString();
+  if (sectionId) params.set("section", sectionId);
+  return params.toString();
+}
+
+function writeHash(historyMode = "replace") {
+  const hash = buildSectionHash(currentSection);
   const url = window.location.pathname + window.location.search + (hash ? `#${hash}` : "");
   window.history[historyMode === "push" ? "pushState" : "replaceState"](null, "", url);
 }
