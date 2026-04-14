@@ -15,11 +15,12 @@ import {
   showChartFallback,
 } from "./chart-base.js";
 
-// Beyond the base palette, derive a stable color pair from the slug
-// so each site keeps the same color across renders without depending
-// on its position in the dataset list. Returns both the solid border
-// color and an alpha-safe fill — the hex-plus-"22" trick only works
-// on hex literals, so the HSL branch has to use hsla() explicitly.
+// Caller passes a slug-stable index (its position in the global slug
+// universe, not the filtered dataset) so each site keeps the same color
+// regardless of filter state. Beyond the base palette, fall back to a
+// hash-derived hue. Returns both the solid border color and an
+// alpha-safe fill — the hex-plus-"22" trick only works on hex literals,
+// so the HSL branch has to use hsla() explicitly.
 function stableColorPair(slug, index) {
   if (index < CHART_COLORS.length) {
     const hex = CHART_COLORS[index];
@@ -43,13 +44,13 @@ function trendMode(state) {
   return "per-campus";
 }
 
-function buildDatasets(rowFor, months, filteredCurrentRows, mode) {
+function buildDatasets(rowFor, months, filteredCurrentRows, mode, globalSlugIndex) {
   if (mode === "per-site") {
     const bySlug = new Map();
     for (const row of filteredCurrentRows) bySlug.set(row.site, row);
     const slugs = [...bySlug.keys()].sort();
-    return slugs.map((slug, i) => {
-      const { border, background } = stableColorPair(slug, i);
+    return slugs.map((slug) => {
+      const { border, background } = stableColorPair(slug, globalSlugIndex.get(slug) ?? 0);
       return {
         label: siteDisplayName(bySlug.get(slug)),
         data: months.map((m) => {
@@ -112,9 +113,15 @@ export function renderTrendChart(ctx) {
   const canvas = document.getElementById("trend-chart");
   let chart;
 
+  // Stable slug → palette index across all renders. Sorted over the
+  // full universe so a site keeps the same color regardless of which
+  // filter subset is currently active.
+  const globalSlugs = [...new Set(currentRows.map((r) => r.site))].sort();
+  const globalSlugIndex = new Map(globalSlugs.map((s, i) => [s, i]));
+
   function paint(state) {
     const filtered = applyFilter(currentRows, state);
-    const datasets = buildDatasets(rowFor, months, filtered, trendMode(state));
+    const datasets = buildDatasets(rowFor, months, filtered, trendMode(state), globalSlugIndex);
 
     if (datasets.length === 0) {
       if (chart) {
