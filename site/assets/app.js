@@ -40,9 +40,14 @@ function scrollToSection(id) {
 // Section anchor clicks: take over from the default hash-navigation
 // behavior so the current filter hash is preserved (native anchor
 // behavior would wipe it) and so scrolling matches CSS scroll-behavior.
+// Modifier and non-primary clicks fall through to the browser so
+// Cmd/Ctrl/middle-click still opens the permalink in a new tab.
 document.addEventListener("click", (event) => {
   const link = event.target.closest("[data-section-link]");
   if (!link) return;
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return;
+  }
   event.preventDefault();
   const id = link.dataset.sectionLink;
   setSection(id);
