@@ -1,33 +1,41 @@
-# UC Homepage Accessibility Report
+# UC Web Accessibility Report
 
-A monthly automated accessibility report for the 11 University of California
-system homepages, inspired by the [WebAIM Million](https://webaim.org/projects/million/)
-project.
+A monthly automated accessibility report covering 112 University of California
+web properties — campus homepages, admissions sites, and schools and colleges
+across all 10 UC campuses and the Office of the President. Inspired by the
+[WebAIM Million](https://webaim.org/projects/million/) project.
 
 **Live report:** [https://rlorenzo.github.io/uc-homepage-a11y-report/](https://rlorenzo.github.io/uc-homepage-a11y-report/)
 
 ## What this does
 
-On the first of every month a GitHub Actions workflow loads each UC homepage
-in headless Chromium, runs [axe-core](https://github.com/dequelabs/axe-core)
+On the first of every month a GitHub Actions workflow loads each UC web
+property in headless Chromium, runs [axe-core](https://github.com/dequelabs/axe-core)
 against it, and records the results. The report site is rebuilt and deployed
 to GitHub Pages so that month-over-month trends are visible at a glance.
 
+Violations are bucketed into two groups:
+
+- **Required** — WCAG 2.0 and 2.1 Level A & AA rules. The baseline under ADA
+  Title II and Section 508.
+- **Reach** — WCAG 2.1 AAA and all of WCAG 2.2. Tracked separately as
+  aspirational goals, not yet legally required in the US.
+
 ## Sites scanned
 
-| Campus | URL |
-|---|---|
-| UC Office of the President | https://www.ucop.edu |
-| UC Berkeley | https://www.berkeley.edu |
-| UCLA | https://www.ucla.edu |
-| UC San Diego | https://ucsd.edu |
-| UC Davis | https://www.ucdavis.edu |
-| UC Irvine | https://uci.edu |
-| UC Santa Barbara | https://www.ucsb.edu |
-| UC Santa Cruz | https://www.ucsc.edu |
-| UC Riverside | https://www.ucr.edu |
-| UC Merced | https://www.ucmerced.edu |
-| UC San Francisco | https://www.ucsf.edu |
+The report covers 112 UC web properties:
+
+- **11 campus homepages** — one per UC campus and the Office of the President.
+- **10 admissions sites** — one per campus. UCOP has no admissions page;
+  UCSF uses its Graduate Division admissions page.
+- **91 schools, colleges, and graduate divisions** — grouped by discipline
+  (business, engineering, law, medicine & health, humanities & arts,
+  social sciences, natural sciences, education, environment & design,
+  information & journalism).
+
+The full list with URLs lives in [`scan/sites.json`](scan/sites.json). Use
+the filter bar at the top of the live report to view any slice (by campus,
+by type, or by discipline).
 
 ## Running locally
 
@@ -39,52 +47,101 @@ npx playwright install chromium
 node scan/run.mjs
 ```
 
-The scan takes a few minutes. Results are written to `data/runs/YYYY-MM/` and
-`data/history.json`. To view the report, serve the `site/` directory with any
-static server:
+A full scan takes 10 to 12 minutes on a fast connection. Results are written
+to `data/runs/YYYY-MM/<slug>.json` (one file per site, full axe output) and
+appended to `data/history.json` (compact per-month summaries that the report
+site reads).
+
+To view the report, serve the `site/` directory with any static server:
 
 ```bash
 npx serve site
 ```
 
-Then open the URL printed in the terminal. The report loads `data/history.json`
-at runtime, so you will also need to copy (or symlink) that file into the site
-directory:
+The report loads `data/history.json` at runtime. The repo ships with a
+`site/data` symlink to `../data`, so most static servers resolve it
+automatically.
+
+### Scanning a subset
+
+For local iteration you rarely want to re-run all 112 sites. The scanner
+accepts filter flags that combine with AND:
 
 ```bash
-mkdir -p site/data
-cp data/history.json site/data/history.json
+# Just UCLA sites
+node scan/run.mjs --campus=ucla
+
+# All 11 homepages
+node scan/run.mjs --type=homepage
+
+# Specific sites by slug
+node scan/run.mjs --slug=berkeley-haas,ucla-anderson
+
+# All admissions sites on Berkeley and UCLA
+node scan/run.mjs --type=admissions --campus=berkeley,ucla
 ```
+
+`--type` accepts `homepage`, `admissions`, `school`, or `division` — these
+match the raw `type` field in `scan/sites.json`, not the plural chip labels
+in the report UI. All three flags accept comma-separated lists.
+
+Filtered runs write into the same `data/runs/YYYY-MM/` folder and replace
+only the matching rows in `history.json` — other rows for that month are
+left untouched.
 
 ## Adding or removing a site
 
-Edit `scan/sites.json`. Each entry needs a `slug` (short identifier used in
-file names and history keys), a `name` (displayed in the report), and a `url`.
-No code changes required.
+Edit [`scan/sites.json`](scan/sites.json). Each entry needs:
+
+| Field | Description |
+|---|---|
+| `slug` | Short identifier used in file names and history keys. Must be unique. |
+| `name` | Display name shown in the report. |
+| `campus` | One of `berkeley`, `ucla`, `ucsd`, `ucdavis`, `uci`, `ucsb`, `ucsc`, `ucr`, `ucmerced`, `ucsf`, `ucop`. |
+| `url` | The page to scan. |
+| `type` | `homepage`, `admissions`, `school`, or `division`. Controls which View chip the site appears under. |
+| `category` | `homepage`, `admissions`, or a discipline slug (`business`, `engineering`, `law`, `medicine-health`, `humanities-arts`, `social-sciences`, `natural-sciences`, `education`, `environment-design`, `information`). Controls the Discipline dropdown. |
+
+No code changes required — new entries are picked up on the next scan.
 
 ## How the monthly automation works
 
 The GitHub Actions workflow (`.github/workflows/monthly-scan.yml`) is triggered
-by a cron schedule (`0 14 1 * *`, i.e. 14:00 UTC on the 1st) and also supports
+by a cron schedule (`0 14 1 * *`, 14:00 UTC on the 1st) and also supports
 manual dispatch via `workflow_dispatch`. It:
 
-1. Checks out the repo.
+1. Checks out `main` at runtime (not the trigger SHA — protects against
+   stale reruns).
 2. Installs Node.js 24, npm dependencies, and Chromium.
 3. Runs `node scan/run.mjs` to scan all sites.
-4. Commits any new data under `data/` with the message "Monthly scan YYYY-MM".
-5. Deploys the `site/` directory (with `data/history.json` copied in) to
-   GitHub Pages.
+4. Commits any new data under `data/` with the message "Monthly scan YYYY-MM",
+   rebasing onto `origin/main` first to handle concurrent pushes.
+5. Deploys the `site/` directory — with `data/history.json` copied into
+   `site/data/` — to GitHub Pages.
 
 If the workflow is manually re-triggered for a month that has already been
-scanned, the existing rows for that month are replaced (not duplicated) in
-`history.json`.
+scanned, the existing rows for that (month, site) pair are replaced rather
+than duplicated.
+
+## Verifying scan drift
+
+If a site's numbers change between consecutive scans and you want to know
+whether it's a real site change or a scan-method artifact, run:
+
+```bash
+npm run verify
+```
+
+This scans every site twice — once with the old desktop-only viewport and
+once with the mobile → desktop transition the production scanner uses — and
+prints a per-site diff. It does not write to `data/`.
 
 ## Limitations
 
 Automated accessibility scanning with axe-core typically detects only 30 to 40
-percent of real accessibility issues. This report provides a useful lower bound,
-but it is not a substitute for manual testing, assistive technology evaluation,
-or testing with users who have disabilities.
+percent of real accessibility issues. This report provides a useful lower
+bound, but it is not a substitute for manual testing, assistive technology
+evaluation, or testing with users who have disabilities.
 
 ## License
 

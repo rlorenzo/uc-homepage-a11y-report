@@ -1,5 +1,5 @@
-// Verification tool: scan every UC homepage with both the old
-// desktop-only method and the new mobile-first transition method,
+// Verification tool: scan every UC site in sites.json with both the
+// old desktop-only method and the new mobile-first transition method,
 // and report the diff per site. Does NOT write anything to data/.
 // Run with `npm run verify`.
 //
