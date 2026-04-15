@@ -1,8 +1,10 @@
 # UC Web Accessibility Report
 
-A monthly automated accessibility report covering 112 University of California
-web properties — campus homepages, admissions sites, and schools and colleges
-across all 10 UC campuses and the Office of the President. Inspired by the
+A monthly automated accessibility report covering 183 University of California
+web properties — campus homepages, admissions sites, schools and colleges, and
+key student services (libraries, IT, disability offices, registrars, financial
+aid, student health, and housing) across all 10 UC campuses and the Office of
+the President. Inspired by the
 [WebAIM Million](https://webaim.org/projects/million/) project.
 
 **Live report:** [https://rlorenzo.github.io/uc-homepage-a11y-report/](https://rlorenzo.github.io/uc-homepage-a11y-report/)
@@ -23,7 +25,7 @@ Violations are bucketed into two groups:
 
 ## Sites scanned
 
-The report covers 112 UC web properties:
+The report covers 183 UC web properties:
 
 - **11 campus homepages** — one per UC campus and the Office of the President.
 - **10 admissions sites** — one per campus. UCOP has no admissions page;
@@ -32,6 +34,10 @@ The report covers 112 UC web properties:
   (business, engineering, law, medicine & health, humanities & arts,
   social sciences, natural sciences, education, environment & design,
   information & journalism).
+- **71 student services sites** — libraries, IT departments, disability
+  offices, registrars, financial aid, student health centers, and student
+  housing, one per campus for each category. The IT category also includes
+  UCOP.
 
 The full list with URLs lives in [`scan/sites.json`](scan/sites.json). Use
 the filter bar at the top of the live report to view any slice (by campus,
@@ -64,7 +70,7 @@ automatically.
 
 ### Scanning a subset
 
-For local iteration you rarely want to re-run all 112 sites. The scanner
+For local iteration you rarely want to re-run all 183 sites. The scanner
 accepts filter flags that combine with AND:
 
 ```bash
@@ -81,9 +87,10 @@ node scan/run.mjs --slug=berkeley-haas,ucla-anderson
 node scan/run.mjs --type=admissions --campus=berkeley,ucla
 ```
 
-`--type` accepts `homepage`, `admissions`, `school`, or `division` — these
-match the raw `type` field in `scan/sites.json`, not the plural chip labels
-in the report UI. All three flags accept comma-separated lists.
+`--type` accepts `homepage`, `admissions`, `school`, `division`, `library`,
+`it`, `disability`, `registrar`, `financial-aid`, `health`, or `housing` —
+these match the raw `type` field in `scan/sites.json`, not the plural chip
+labels in the report UI. All three flags accept comma-separated lists.
 
 Filtered runs write into the same `data/runs/YYYY-MM/` folder and replace
 only the matching rows in `history.json` — other rows for that month are
@@ -99,8 +106,8 @@ Edit [`scan/sites.json`](scan/sites.json). Each entry needs:
 | `name` | Display name shown in the report. |
 | `campus` | One of `berkeley`, `ucla`, `ucsd`, `ucdavis`, `uci`, `ucsb`, `ucsc`, `ucr`, `ucmerced`, `ucsf`, `ucop`. |
 | `url` | The page to scan. |
-| `type` | `homepage`, `admissions`, `school`, or `division`. Controls which View chip the site appears under. |
-| `category` | `homepage`, `admissions`, or a discipline slug (`business`, `engineering`, `law`, `medicine-health`, `humanities-arts`, `social-sciences`, `natural-sciences`, `education`, `environment-design`, `information`). Controls the Discipline dropdown. |
+| `type` | `homepage`, `admissions`, `school`, `division`, `library`, `it`, `disability`, `registrar`, `financial-aid`, `health`, or `housing`. Controls which View chip the site appears under. |
+| `category` | `homepage`, `admissions`, a discipline slug (`business`, `engineering`, `law`, `medicine-health`, `humanities-arts`, `social-sciences`, `natural-sciences`, `education`, `environment-design`, `information`), or a student-services slug matching the `type` (`library`, `it`, `disability`, `registrar`, `financial-aid`, `health`, `housing`). Controls the Discipline dropdown (discipline slugs only). |
 
 No code changes required — new entries are picked up on the next scan.
 
