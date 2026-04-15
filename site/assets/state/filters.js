@@ -18,7 +18,7 @@ import {
 } from "../data/constants.js";
 
 // filterState shape:
-//   type:     TYPE_ALL | TYPE_HOMEPAGES | TYPE_ADMISSIONS | TYPE_SCHOOLS
+//   type:     one of TYPE_ORDER (see data/constants.js)
 //   campuses: Set<slug>  — empty means "all campuses"
 //   category: string | null
 const DEFAULTS = () => ({
