@@ -1,11 +1,19 @@
 import {
   CAMPUS_NAMES,
   CATEGORY_LABELS,
+  CHIP_CATEGORIES,
   TYPE_ADMISSIONS,
   TYPE_ALL,
+  TYPE_DISABILITY,
+  TYPE_FINANCIAL_AID,
+  TYPE_HEALTH,
   TYPE_HOMEPAGES,
+  TYPE_HOUSING,
+  TYPE_IT,
   TYPE_LABELS,
+  TYPE_LIBRARIES,
   TYPE_ORDER,
+  TYPE_REGISTRARS,
   TYPE_SCHOOLS,
 } from "../data/constants.js";
 
@@ -137,16 +145,15 @@ export function readHashIntoState() {
     if (selected.length) state.campuses = new Set(selected);
   }
   const cat = params.get("cat");
-  // homepage/admissions are exposed as their own View chips, so the
-  // discipline dropdown — and by extension the hash — must not accept
-  // them as category values. Otherwise #cat=homepage would set a
-  // filter the UI can't represent.
+  // Categories that have their own View chip must not be accepted as
+  // cat= values — the discipline dropdown wouldn't represent them and
+  // users should switch chips via type= instead. Otherwise #cat=homepage
+  // or #cat=library would set a filter the UI can't expose.
   if (
     cat &&
     (state.type === TYPE_ALL || state.type === TYPE_SCHOOLS) &&
     CATEGORY_LABELS[cat] &&
-    cat !== "homepage" &&
-    cat !== "admissions"
+    !CHIP_CATEGORIES.has(cat)
   ) {
     state.category = cat;
   }
@@ -198,6 +205,13 @@ function rowTypeBucket(row) {
   const t = row.type || "homepage";
   if (t === "homepage") return TYPE_HOMEPAGES;
   if (t === "admissions") return TYPE_ADMISSIONS;
+  if (t === "library") return TYPE_LIBRARIES;
+  if (t === "it") return TYPE_IT;
+  if (t === "disability") return TYPE_DISABILITY;
+  if (t === "registrar") return TYPE_REGISTRARS;
+  if (t === "financial-aid") return TYPE_FINANCIAL_AID;
+  if (t === "health") return TYPE_HEALTH;
+  if (t === "housing") return TYPE_HOUSING;
   return TYPE_SCHOOLS;
 }
 

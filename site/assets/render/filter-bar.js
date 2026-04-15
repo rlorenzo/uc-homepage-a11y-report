@@ -1,11 +1,12 @@
 import {
   CAMPUS_NAMES,
   categoryLabel,
+  CHIP_CATEGORIES,
   orderedCampuses,
-  TYPE_ADMISSIONS,
-  TYPE_HOMEPAGES,
+  TYPE_ALL,
   TYPE_LABELS,
   TYPE_ORDER,
+  TYPE_SCHOOLS,
 } from "../data/constants.js";
 import {
   applyFilter,
@@ -29,11 +30,11 @@ export function renderFilterBar(ctx) {
   const campusUniverse = new Set(currentRows.map((r) => r.campus || r.site).filter(Boolean));
   const campusSlugs = orderedCampuses(campusUniverse);
 
-  // Dropdown lists discipline categories only — homepage and admissions
-  // already have their own View chip, so surfacing them here would be a
-  // redundant second path to the same filter.
+  // Dropdown lists discipline categories only — any category that has
+  // its own View chip is excluded here to avoid a redundant second path
+  // to the same filter.
   const disciplineCategories = new Set(
-    currentRows.map((r) => r.category).filter((c) => c && c !== "homepage" && c !== "admissions"),
+    currentRows.map((r) => r.category).filter((c) => c && !CHIP_CATEGORIES.has(c)),
   );
 
   const typeChipContainer = document.getElementById("filter-type-chips");
@@ -93,7 +94,10 @@ export function renderFilterBar(ctx) {
     }
 
     categorySelect.value = state.category || "";
-    categorySelect.disabled = state.type === TYPE_HOMEPAGES || state.type === TYPE_ADMISSIONS;
+    // Discipline dropdown only applies when browsing all sites or the
+    // schools & colleges bucket; every other chip type is already its
+    // own filter.
+    categorySelect.disabled = state.type !== TYPE_ALL && state.type !== TYPE_SCHOOLS;
 
     resetBtn.hidden = isDefaultState();
 
