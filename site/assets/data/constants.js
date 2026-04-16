@@ -35,22 +35,71 @@ export const CATEGORY_LABELS = {
   education: "Education",
   "environment-design": "Environment & design",
   information: "Information & journalism",
+  library: "Libraries",
+  it: "IT & technology",
+  disability: "Disability services",
+  registrar: "Registrars",
+  "financial-aid": "Financial aid",
+  health: "Student health",
+  housing: "Student housing",
 };
 
 export const categoryLabel = (key) => CATEGORY_LABELS[key] || key;
+
+// Category values that have their own top-level View chip. These should
+// NOT appear in the discipline dropdown (redundant with the chip) and
+// should NOT be accepted as `cat=` URL parameters (cat= is for discipline
+// filtering within a type, not for switching between type chips).
+export const CHIP_CATEGORIES = new Set([
+  "homepage",
+  "admissions",
+  "library",
+  "it",
+  "disability",
+  "registrar",
+  "financial-aid",
+  "health",
+  "housing",
+]);
 
 export const TYPE_ALL = "all";
 export const TYPE_HOMEPAGES = "homepages";
 export const TYPE_ADMISSIONS = "admissions";
 export const TYPE_SCHOOLS = "schools";
+export const TYPE_LIBRARIES = "libraries";
+export const TYPE_IT = "it";
+export const TYPE_DISABILITY = "disability";
+export const TYPE_REGISTRARS = "registrars";
+export const TYPE_FINANCIAL_AID = "financial-aid";
+export const TYPE_HEALTH = "health";
+export const TYPE_HOUSING = "housing";
 
-export const TYPE_ORDER = [TYPE_ALL, TYPE_HOMEPAGES, TYPE_ADMISSIONS, TYPE_SCHOOLS];
+export const TYPE_ORDER = [
+  TYPE_ALL,
+  TYPE_HOMEPAGES,
+  TYPE_ADMISSIONS,
+  TYPE_SCHOOLS,
+  TYPE_LIBRARIES,
+  TYPE_IT,
+  TYPE_DISABILITY,
+  TYPE_REGISTRARS,
+  TYPE_FINANCIAL_AID,
+  TYPE_HEALTH,
+  TYPE_HOUSING,
+];
 
 export const TYPE_LABELS = {
   [TYPE_ALL]: "All",
   [TYPE_HOMEPAGES]: "Homepages",
   [TYPE_ADMISSIONS]: "Admissions",
   [TYPE_SCHOOLS]: "Schools & colleges",
+  [TYPE_LIBRARIES]: "Libraries",
+  [TYPE_IT]: "IT & technology",
+  [TYPE_DISABILITY]: "Disability services",
+  [TYPE_REGISTRARS]: "Registrars",
+  [TYPE_FINANCIAL_AID]: "Financial aid",
+  [TYPE_HEALTH]: "Student health",
+  [TYPE_HOUSING]: "Student housing",
 };
 
 // axe-core impact levels in severity order (worst → least). Used by
@@ -80,6 +129,18 @@ export const RULE_DESCRIPTIONS = {
   "duplicate-id": "Element id is used more than once",
   "duplicate-id-aria": "id referenced by ARIA is duplicated",
   "meta-viewport": "Viewport meta tag prevents zooming",
+  "aria-input-field-name": "Input field has no accessible name via ARIA",
+  "aria-required-children": "ARIA role is missing required child roles",
+  "aria-required-parent": "Element with ARIA role lacks its required parent",
+  "aria-valid-attr": "ARIA attribute name is invalid or misspelled",
+  "aria-valid-attr-value": "ARIA attribute has an invalid value",
+  "color-contrast-enhanced": "Text doesn't meet AAA enhanced contrast (7:1)",
+  "definition-list": "<dl> markup is structurally broken",
+  "frame-title": "<iframe> is missing a title",
+  "link-in-text-block": "Link in text isn't distinguishable without color",
+  "nested-interactive": "Interactive element is nested inside another",
+  "role-img-alt": "Element with role=\"img\" has no accessible name",
+  "scrollable-region-focusable": "Scrollable area can't be reached by keyboard",
 };
 
 export const ruleFriendly = (rule) =>

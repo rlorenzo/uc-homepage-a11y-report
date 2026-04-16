@@ -1,5 +1,6 @@
 import {
   CAMPUS_NAMES,
+  categoryLabel,
   IMPACT_KEYS,
   orderedCampuses,
   ruleFriendly,
@@ -86,6 +87,24 @@ function sortRows(rows, key, dir) {
     const bv = b[key] ?? 0;
     return dir === "asc" ? av - bv : bv - av;
   });
+}
+
+// The category tag is redundant whenever the current filter state
+// already narrows the view to a single category: either an explicit
+// `cat=` filter, or a top-level View chip that maps 1:1 to one
+// category. Only TYPE_ALL and TYPE_SCHOOLS span multiple categories
+// (Schools & colleges buckets engineering, law, business, etc.).
+function shouldShowCategoryTag(state) {
+  if (state.category) return false;
+  return state.type === TYPE_ALL || state.type === TYPE_SCHOOLS;
+}
+
+function makeCategoryTag(row) {
+  if (!row.category) return null;
+  const tag = document.createElement("span");
+  tag.className = "category-tag";
+  tag.textContent = categoryLabel(row.category);
+  return tag;
 }
 
 // Build the Deque University rule doc URL for a given rule ID. Axe's
@@ -196,7 +215,7 @@ function buildRuleDetail(row) {
   return wrap;
 }
 
-function buildTableRow(row, prevRow) {
+function buildTableRow(row, prevRow, showCategoryTag) {
   const failed = row.status === "error";
   const pr = prevRow(row.site);
   const name = siteDisplayName(row);
@@ -225,13 +244,20 @@ function buildTableRow(row, prevRow) {
     nameBlock.appendChild(note);
   }
   tdName.appendChild(nameBlock);
+  const slugRow = document.createElement("div");
+  slugRow.className = "campus-slug-row";
   const slugLink = document.createElement("a");
   slugLink.className = "campus-slug campus-link";
   slugLink.href = row.url;
   slugLink.rel = "noopener";
   slugLink.textContent = hostname;
   slugLink.setAttribute("aria-label", `Visit ${name}: ${hostname}`);
-  tdName.appendChild(slugLink);
+  slugRow.appendChild(slugLink);
+  if (showCategoryTag) {
+    const tag = makeCategoryTag(row);
+    if (tag) slugRow.appendChild(tag);
+  }
+  tdName.appendChild(slugRow);
   tr.appendChild(tdName);
 
   if (failed) {
@@ -302,7 +328,7 @@ function buildTableRow(row, prevRow) {
   return [tr, detailTr];
 }
 
-function buildMobileCard(row, prevRow) {
+function buildMobileCard(row, prevRow, showCategoryTag) {
   const failed = row.status === "error";
   const pr = prevRow(row.site);
   const name = siteDisplayName(row);
@@ -318,13 +344,20 @@ function buildMobileCard(row, prevRow) {
   const h3 = document.createElement("h3");
   h3.textContent = name;
   hBlock.appendChild(h3);
+  const slugRow = document.createElement("div");
+  slugRow.className = "campus-slug-row";
   const hSlug = document.createElement("a");
   hSlug.className = "campus-slug campus-link";
   hSlug.href = row.url;
   hSlug.rel = "noopener";
   hSlug.textContent = hostname;
   hSlug.setAttribute("aria-label", `Visit ${name}: ${hostname}`);
-  hBlock.appendChild(hSlug);
+  slugRow.appendChild(hSlug);
+  if (showCategoryTag) {
+    const tag = makeCategoryTag(row);
+    if (tag) slugRow.appendChild(tag);
+  }
+  hBlock.appendChild(slugRow);
   cardHeader.appendChild(hBlock);
 
   const errCount = document.createElement("div");
@@ -523,6 +556,7 @@ export function renderTable(ctx) {
   function render() {
     const state = getFilterState();
     const filtered = applyFilter(currentRows, state);
+    const showTag = shouldShowCategoryTag(state);
 
     tbody.textContent = "";
     cardsContainer.textContent = "";
@@ -533,9 +567,9 @@ export function renderTable(ctx) {
     }
 
     if (isGroupedView(state)) {
-      renderGrouped(filtered);
+      renderGrouped(filtered, showTag);
     } else {
-      renderFlat(filtered);
+      renderFlat(filtered, showTag);
     }
   }
 
@@ -555,17 +589,17 @@ export function renderTable(ctx) {
     cardsContainer.appendChild(card);
   }
 
-  function renderFlat(rows) {
+  function renderFlat(rows, showTag) {
     const sorted = sortRows(rows, sortKey, sortDir);
     for (const row of sorted) {
-      const [tr, detailTr] = buildTableRow(row, prevRow);
+      const [tr, detailTr] = buildTableRow(row, prevRow, showTag);
       tbody.appendChild(tr);
       tbody.appendChild(detailTr);
-      cardsContainer.appendChild(buildMobileCard(row, prevRow));
+      cardsContainer.appendChild(buildMobileCard(row, prevRow, showTag));
     }
   }
 
-  function renderGrouped(rows) {
+  function renderGrouped(rows, showTag) {
     const byCampus = new Map();
     for (const r of rows) {
       const c = r.campus || r.site;
@@ -584,11 +618,11 @@ export function renderTable(ctx) {
       if (isCollapsed) continue;
 
       for (const row of sorted) {
-        const [tr, detailTr] = buildTableRow(row, prevRow);
+        const [tr, detailTr] = buildTableRow(row, prevRow, showTag);
         tr.classList.add("in-group");
         tbody.appendChild(tr);
         tbody.appendChild(detailTr);
-        const card = buildMobileCard(row, prevRow);
+        const card = buildMobileCard(row, prevRow, showTag);
         card.classList.add("in-group");
         cardsContainer.appendChild(card);
       }

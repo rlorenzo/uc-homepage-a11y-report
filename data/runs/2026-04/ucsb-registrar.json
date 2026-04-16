@@ -1,0 +1,232 @@
+{
+  "month": "2026-04",
+  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "axe_version": "4.11.2",
+  "site": "ucsb-registrar",
+  "name": "UC Santa Barbara Office of the Registrar",
+  "campus": "ucsb",
+  "type": "registrar",
+  "category": "registrar",
+  "url": "https://registrar.sa.ucsb.edu",
+  "element_count": 594,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#febc11",
+                "contrastRatio": 5.46,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-febc11\">\n                            <a href=\"https://my.sa.ucsb.edu/gold/login.aspx\">\n                            GOLD\n                            </a>\n                          </div>",
+                  "target": [
+                    ".highlighted.background-color-febc11.has-background"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://my.sa.ucsb.edu/gold/login.aspx\">\n                            GOLD\n                            </a>",
+          "target": [
+            ".highlighted.background-color-febc11.has-background > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#047c91",
+                "contrastRatio": 4.88,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-047c91\">\n                            <a href=\"https://kiosk.na1.qless.com/kiosk/app/home/100100000191\">\n                            Speak to a Rep.\n                            </a>\n                          </div>",
+                  "target": [
+                    ".background-color-047c91.highlighted.has-background"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://kiosk.na1.qless.com/kiosk/app/home/100100000191\">\n                            Speak to a Rep.\n                            </a>",
+          "target": [
+            ".background-color-047c91.highlighted.has-background > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "gold",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "my.sa.ucsb.edu",
+                  "port": "",
+                  "pathname": "/gold/",
+                  "search": {},
+                  "hash": "",
+                  "filename": "login.aspx"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://my.sa.ucsb.edu/gold/\">GOLD</a>",
+                  "target": [
+                    "blockquote:nth-child(2) > p > a[href$=\"gold/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://my.sa.ucsb.edu/gold/\">GOLD</a>",
+                  "target": [
+                    "blockquote:nth-child(3) > p > a[href$=\"gold/\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://my.sa.ucsb.edu/gold/login.aspx\">\n                            GOLD\n                            </a>",
+          "target": [
+            ".highlighted.background-color-febc11.has-background > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "general catalog",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "catalog.ucsb.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://my.sa.ucsb.edu/catalog/Current/Index.aspx\">General Catalog</a>",
+                  "target": [
+                    ".col-sm-6.col-md-3.second-column:nth-child(2) > .inner > .field--name-field-body.field--type-text-long.field--item > p:nth-child(6) > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://catalog.ucsb.edu/\">General Catalog</a>",
+          "target": [
+            ".text-align-center > a[href$=\"catalog.ucsb.edu/\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}
