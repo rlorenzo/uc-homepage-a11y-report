@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucsf",
   "name": "UC San Francisco",
@@ -1333,7 +1333,7 @@
           "impact": "serious",
           "html": "<span>Genetics and Genomics</span>",
           "target": [
-            "div[data-slick-index=\"4\"] > div > .topic-card > a[href$=\"genetics-and-genomics\"] > span"
+            ".slick-current > div > .topic-card > a[href$=\"genetics-and-genomics\"] > span"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         },
@@ -1496,6 +1496,1253 @@
             ".icon-directions"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": {
+                "messageKey": "bgOverlap"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li><p>Transforms patients’ <a href=\"https://www.ucsf.edu/saving-lives-with-science#devastating-diseases\">lives</a>.</p></li>",
+                  "target": [
+                    "ol > li:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's contrast ratio could not be determined because of element overlap"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsf.edu/saving-lives-with-science#devastating-diseases\">lives</a>",
+          "target": [
+            "li:nth-child(1) > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's contrast ratio could not be determined because of element overlap"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"home-banner__header\">",
+                  "target": [
+                    ".home-banner__header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button--alt\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"8bdddc7e-6f57-4629-9db4-60a37e86a6f5\" href=\"/saving-lives-with-science\" title=\"Saving Lives with Science\">Learn how</a>",
+          "target": [
+            ".button--alt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-banner-support\">",
+                  "target": [
+                    ".home-banner-support"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsf.edu/saving-lives-with-science#devastating-diseases\">lives</a>",
+          "target": [
+            "li:nth-child(1) > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-banner-support\">",
+                  "target": [
+                    ".home-banner-support"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsf.edu/saving-lives-with-science#jobs-description\">industries, companies and jobs</a>",
+          "target": [
+            "li:nth-child(2) > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-banner-support\">",
+                  "target": [
+                    ".home-banner-support"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsf.edu/saving-lives-with-science#safeguarding-america\">leadership in health and science</a>",
+          "target": [
+            "li:nth-child(3) > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input type=\"text\" name=\"search\" id=\"search\" class=\"home-search__form-input\" data-placeholder=\"\" placeholder=\"Search places\" onclick=\"this.value='';\" aria-label=\"Search through site content\">",
+                  "target": [
+                    "#search"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input type=\"text\" name=\"search\" id=\"search\" class=\"home-search__form-input\" data-placeholder=\"\" placeholder=\"Search places\" onclick=\"this.value='';\" aria-label=\"Search through site content\">",
+          "target": [
+            "#search"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-talking-about\">",
+                  "target": [
+                    ".home-talking-about"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"home-talking-about__description\">Browse our top stories, interesting events, and other highlights.</p>",
+          "target": [
+            ".home-talking-about__description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "article[data-primary-area=\"pa-education\"] > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "article[data-primary-area=\"pa-education\"] > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "article[data-primary-area=\"pa-education\"] > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-04T17:36:09Z\" class=\"datetime\">\n  March 4, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-04T17:36:09Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(2) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "li:nth-child(2) > article > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(2) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-10T16:37:02Z\" class=\"datetime\">\n  March 10, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-10T16:37:02Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "article[data-primary-area=\"pa-\"] > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "article[data-primary-area=\"pa-\"] > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "article[data-primary-area=\"pa-\"] > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-31T16:55:52Z\" class=\"datetime\">\n  March 31, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-31T16:55:52Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(4) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "li:nth-child(4) > article > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(4) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-02T18:52:02Z\" class=\"datetime\">\n  March 2, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-02T18:52:02Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(5) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "li:nth-child(5) > article > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(5) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-19T00:00:46Z\" class=\"datetime\">\n  March 18, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-19T00:00:46Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#14828c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(6) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"news-card__primary-area\" data-primary-area=\"pa-research\">\n                    \n                  Research\n            \n          </li>",
+          "target": [
+            "li:nth-child(6) > article > .news-card__link > .news-card__copy > .news-card__byline > .news-card__primary-area[data-primary-area=\"pa-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #14828c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"news-card__copy\">",
+                  "target": [
+                    "li:nth-child(6) > article > .news-card__link > .news-card__copy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-16T16:26:17Z\" class=\"datetime\">\n  March 16, 2026\n</time>",
+          "target": [
+            "time[datetime=\"2026-03-16T16:26:17Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#f2f3f4",
+                "contrastRatio": 5.49,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#f2f3f4"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"alias-home path-frontpage page-node-type-homepage loading\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.49 (foreground color: #506380, background color: #f2f3f4, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"topics-list__description\">Explore our health and science news by topic.</p>",
+          "target": [
+            ".topics-list__description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.49 (foreground color: #506380, background color: #f2f3f4, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time>12:00 pm - 1:00 pm</time>",
+          "target": [
+            ".event-card:nth-child(1) > .event-card__content > .event-card__date-location > .event-card__date > time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"event-card__location\"><span class=\"fas fa-map-marker-alt\"></span>UCSF Parnassus Kalmanovitz Library CL-213/214 </li>",
+          "target": [
+            ".event-card:nth-child(1) > .event-card__content > .event-card__date-location > .event-card__location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#506380",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.1,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"clearfix text-formatted field field-map-text field--type-text-long field--label-hidden field__item\">",
+                  "target": [
+                    ".field-map-text"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>With more than 20 locations throughout San Francisco and beyond, UC San Francisco is an industry of its own, contributing greatly to the intellectual vigor and economic vitality of the Bay Area.</p>",
+          "target": [
+            ".field-map-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #506380, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"clearfix text-formatted field field-map-text field--type-text-long field--label-hidden field__item\">",
+                  "target": [
+                    ".field-map-text"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"icon-transit\" href=\"https://campuslifeservices.ucsf.edu/transportation/\">Find transportation</a>",
+          "target": [
+            ".icon-transit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#006be9",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.9,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1",
+                "shadowColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"clearfix text-formatted field field-map-text field--type-text-long field--label-hidden field__item\">",
+                  "target": [
+                    ".field-map-text"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"icon-directions\" href=\"/about/locations\" data-entity-type=\"node\" data-entity-uuid=\"4f681788-34ee-44c7-8f5b-c4fea380db7e\" data-entity-substitution=\"canonical\" title=\"Locations \">Get directions</a>",
+          "target": [
+            ".icon-directions"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.9 (foreground color: #006be9, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/news\" class=\"link--cta\">Visit the News Center</a>",
+                  "target": [
+                    ".link--cta[href$=\"news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news\" class=\"link--cta\">Visit the News Center</a>",
+          "target": [
+            ".link--cta[href$=\"news\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://calendar.ucsf.edu\" class=\"link link--cta\">View all events</a>",
+                  "target": [
+                    ".link"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://calendar.ucsf.edu\" class=\"link link--cta\">View all events</a>",
+          "target": [
+            ".link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://calendar.ucsf.edu/event/the-annual-sustainability-celebration?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=UCSF+Events+Calendar\">The Annual Sustainability Celebration</a>",
+          "target": [
+            ".event-card:nth-child(2) > .event-card__content > h3 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time>2:30 pm - 4:30 pm</time>",
+          "target": [
+            ".event-card:nth-child(2) > .event-card__content > .event-card__date-location > .event-card__date > time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"event-card__location\"><span class=\"fas fa-map-marker-alt\"></span>Wayne and Gladys Valley Vision Center Topaz Room </li>",
+          "target": [
+            ".event-card:nth-child(2) > .event-card__content > .event-card__date-location > .event-card__location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time property=\"dc:date\" datatype=\"xsd:dateTime\" content=\"-T::00-8:00\"> Apr </time>",
+          "target": [
+            ".event-card:nth-child(3) > .event-card__icon > .event-card__month > time[property=\"dc:date\"][datatype=\"xsd:dateTime\"][content=\"-T::00-8:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time property=\"dc:date\" datatype=\"xsd:dateTime\" content=\"-T::00-8:00\"> 18 </time>",
+          "target": [
+            ".event-card:nth-child(3) > .event-card__icon > .event-card__icon-date > time[property=\"dc:date\"][datatype=\"xsd:dateTime\"][content=\"-T::00-8:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://calendar.ucsf.edu/event/2026-spring-nature-walks?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=UCSF+Events+Calendar\">2026 Spring Nature Walks</a>",
+          "target": [
+            ".event-card:nth-child(3) > .event-card__content > h3 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time>10:00 am - 12:00 am</time>",
+          "target": [
+            ".event-card:nth-child(3) > .event-card__content > .event-card__date-location > .event-card__date > time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-events-list\">",
+                  "target": [
+                    ".latest-events-list"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li class=\"event-card__location\"><span class=\"fas fa-map-marker-alt\"></span>The Aldea Center on Mount Sutro </li>",
+          "target": [
+            ".event-card:nth-child(3) > .event-card__content > .event-card__date-location > .event-card__location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
         }
       ]
     },

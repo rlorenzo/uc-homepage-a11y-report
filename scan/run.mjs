@@ -186,6 +186,53 @@ async function scanSite(site) {
     // Let mobile-mode JS (AccordionMenu, mobile nav, etc.) finish wiring up.
     await page.waitForTimeout(1500);
 
+    // Helper: scroll the full page bottom-to-top in increments to fire
+    // IntersectionObserver callbacks and trigger scroll-reveal animations,
+    // then scroll back to the top. Reused for both mobile and desktop
+    // viewports so lazy-loaded content is visible to axe in both passes.
+    async function scrollFullPage() {
+      await page.evaluate(async () => {
+        const step = 400;
+        const delay = 40;
+        for (let y = 0; y < document.body.scrollHeight; y += step) {
+          window.scrollTo(0, y);
+          await new Promise((r) => setTimeout(r, delay));
+        }
+        window.scrollTo(0, 0);
+      });
+    }
+
+    // The axe tag set shared by both mobile and desktop passes. We run
+    // every WCAG 2.0/2.1/2.2 tag and bucket results ourselves below
+    // into "required" (legally mandated — WCAG 2.0 and 2.1 Level A/AA,
+    // the baseline under ADA Title II / Section 508) and "reach"
+    // (everything else: WCAG 2.0/2.1 AAA and all of WCAG 2.2).
+    const axeTags = [
+      "wcag2a",
+      "wcag2aa",
+      "wcag2aaa",
+      "wcag21a",
+      "wcag21aa",
+      "wcag21aaa",
+      "wcag22a",
+      "wcag22aa",
+      "wcag22aaa",
+    ];
+
+    // ── Mobile pass ──────────────────────────────────────────────
+    // Scroll at the mobile viewport (375×800) to trigger any
+    // IntersectionObserver / scroll-reveal animations, then run axe at
+    // the mobile width before we resize to desktop. This captures
+    // accessibility issues unique to the narrow/touch layout.
+    await scrollFullPage();
+    await page.waitForTimeout(2000);
+
+    const mobileRaw = await new AxeBuilder({ page })
+      .withTags(axeTags)
+      .setLegacyMode(true)
+      .analyze();
+
+    // ── Desktop pass ─────────────────────────────────────────────
     // Resize to a desktop viewport. This triggers ResponsiveMenu's
     // breakpoint-crossing logic and exposes any stranded mobile-state
     // attributes on the now-desktop DOM.
@@ -205,40 +252,18 @@ async function scanSite(site) {
     // animations and lazy-init JS (e.g. Slick carousels on ucsf.edu) to
     // settle before running axe. Two seconds is generous enough to give
     // stable month-over-month numbers on JS-heavy homepages.
-    await page.evaluate(async () => {
-      const step = 400;
-      const delay = 40;
-      for (let y = 0; y < document.body.scrollHeight; y += step) {
-        window.scrollTo(0, y);
-        await new Promise((r) => setTimeout(r, delay));
-      }
-      window.scrollTo(0, 0);
-    });
+    await scrollFullPage();
     await page.waitForTimeout(2000);
 
     const elementCount = await page.locator("*").count();
 
-    // Run axe with every WCAG 2.0/2.1/2.2 tag. We bucket the results
-    // ourselves below into "required" (legally mandated — WCAG 2.0 and
-    // 2.1 Level A/AA, the baseline under ADA Title II / Section 508)
-    // and "reach" (everything else: WCAG 2.0/2.1 AAA and all of WCAG
-    // 2.2). WCAG 2.2 — including SC 2.5.8 target-size at 24×24 — is
-    // not yet legally mandated in the US, so it's treated as a reach
-    // goal. Legacy mode is enabled because many UC homepages embed
-    // cross-origin iframes whose documents are inaccessible to axe,
-    // causing "Cannot read properties of null" errors in flattenTree.
-    const axeResults = await new AxeBuilder({ page })
-      .withTags([
-        "wcag2a",
-        "wcag2aa",
-        "wcag2aaa",
-        "wcag21a",
-        "wcag21aa",
-        "wcag21aaa",
-        "wcag22a",
-        "wcag22aa",
-        "wcag22aaa",
-      ])
+    // WCAG 2.2 — including SC 2.5.8 target-size at 24×24 — is not yet
+    // legally mandated in the US, so it's treated as a reach goal.
+    // Legacy mode is enabled because many UC homepages embed cross-
+    // origin iframes whose documents are inaccessible to axe, causing
+    // "Cannot read properties of null" errors in flattenTree.
+    const desktopRaw = await new AxeBuilder({ page })
+      .withTags(axeTags)
       .setLegacyMode(true)
       .analyze();
 
@@ -264,18 +289,26 @@ async function scanSite(site) {
       };
     }
 
-    const required = emptyCounters();
-    const reach = emptyCounters();
-
-    for (const v of axeResults.violations) {
-      const bucket = bucketFor(v.tags) === "required" ? required : reach;
-      const count = v.nodes.length;
-      const impact = v.impact || "unknown";
-      bucket.total += count;
-      bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
-      bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
-      bucket.by_rule_impact[v.id] = impact;
+    function bucketViolations(violations) {
+      const required = emptyCounters();
+      const reach = emptyCounters();
+      for (const v of violations) {
+        const bucket = bucketFor(v.tags) === "required" ? required : reach;
+        const count = v.nodes.length;
+        const impact = v.impact || "unknown";
+        bucket.total += count;
+        bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
+        bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
+        bucket.by_rule_impact[v.id] = impact;
+      }
+      return { required, reach };
     }
+
+    // Bucket mobile violations.
+    const { required: mobileRequired, reach: mobileReach } = bucketViolations(mobileRaw.violations);
+
+    // Bucket desktop violations.
+    const { required, reach } = bucketViolations(desktopRaw.violations);
 
     // Error density is calculated against REQUIRED violations only —
     // the headline "how dense are the legal-baseline issues?" question.
@@ -294,14 +327,18 @@ async function scanSite(site) {
       category: site.category,
       url: site.url,
       element_count: elementCount,
-      violations: axeResults.violations,
-      incomplete: axeResults.incomplete,
+      violations: desktopRaw.violations,
+      incomplete: desktopRaw.incomplete,
+      mobile_violations: mobileRaw.violations,
+      mobile_incomplete: mobileRaw.incomplete,
     };
 
     await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(fullResult, null, 2));
 
     console.log(
-      `  [${site.slug}] OK: ${required.total} required + ${reach.total} reach, ${elementCount} elements`,
+      `  [${site.slug}] OK: ${required.total} required + ${reach.total} reach (desktop), ` +
+        `${mobileRequired.total} required + ${mobileReach.total} reach (mobile), ` +
+        `${elementCount} elements`,
     );
 
     return {
@@ -329,6 +366,15 @@ async function scanSite(site) {
       reach_violations_by_rule: reach.by_rule,
       reach_violations_rule_impact: reach.by_rule_impact,
       error_density: errorDensity,
+      // Mobile viewport results, mirroring the desktop structure.
+      mobile_violations_total: mobileRequired.total,
+      mobile_violations_by_impact: mobileRequired.by_impact,
+      mobile_violations_by_rule: mobileRequired.by_rule,
+      mobile_violations_rule_impact: mobileRequired.by_rule_impact,
+      mobile_reach_violations_total: mobileReach.total,
+      mobile_reach_violations_by_impact: mobileReach.by_impact,
+      mobile_reach_violations_by_rule: mobileReach.by_rule,
+      mobile_reach_violations_rule_impact: mobileReach.by_rule_impact,
     };
   } catch (err) {
     // A failure on one site must not abort the entire run. Record the
@@ -363,6 +409,20 @@ async function scanSite(site) {
       reach_violations_by_rule: {},
       reach_violations_rule_impact: {},
       error_density: 0,
+      mobile_violations_total: 0,
+      mobile_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+      mobile_violations_by_rule: {},
+      mobile_violations_rule_impact: {},
+      mobile_reach_violations_total: 0,
+      mobile_reach_violations_by_impact: {
+        critical: 0,
+        serious: 0,
+        moderate: 0,
+        minor: 0,
+        unknown: 0,
+      },
+      mobile_reach_violations_by_rule: {},
+      mobile_reach_violations_rule_impact: {},
     };
   } finally {
     if (context) await context.close();
@@ -392,6 +452,8 @@ const seenRules = new Set(
   results.flatMap((r) => [
     ...Object.keys(r.violations_by_rule || {}),
     ...Object.keys(r.reach_violations_by_rule || {}),
+    ...Object.keys(r.mobile_violations_by_rule || {}),
+    ...Object.keys(r.mobile_reach_violations_by_rule || {}),
   ]),
 );
 const uncovered = [...seenRules].filter((id) => !RULE_DESCRIPTIONS[id]).sort();

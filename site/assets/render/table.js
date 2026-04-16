@@ -8,7 +8,7 @@ import {
   TYPE_SCHOOLS,
 } from "../data/constants.js";
 import { applyFilter, getFilterState, subscribe } from "../state/filters.js";
-import { deltaEl, displayHostname, siteDisplayName, topEntries } from "../utils/format.js";
+import { deltaEl, displayHostname, siteDisplayName } from "../utils/format.js";
 
 const CHEVRON_SVG_16 =
   '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -16,7 +16,7 @@ const CHEVRON_SVG_16 =
 const CHEVRON_SVG_14 =
   '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-const TABLE_COL_COUNT = 7;
+const TABLE_COL_COUNT = 8;
 
 const IMPACT_CSS_CLASS = {
   critical: "crit",
@@ -33,6 +33,12 @@ const IMPACT_LABEL = {
   minor: "Minor",
   unknown: "Unknown",
 };
+
+function mergeImpact(desktop, mobile) {
+  const merged = {};
+  for (const k of IMPACT_KEYS) merged[k] = (desktop[k] || 0) + (mobile?.[k] || 0);
+  return merged;
+}
 
 function makeImpactBar(impact) {
   const bar = document.createElement("span");
@@ -117,15 +123,15 @@ function dequeRuleUrl(ruleId, axeVersion) {
   return `https://dequeuniversity.com/rules/axe/${version}/${ruleId}`;
 }
 
-function appendRuleList(wrap, title, entries, kind, ruleImpact, axeVersion) {
-  if (!entries.length) return;
+function appendRuleList(wrap, title, ruleEntries, kind, axeVersion) {
+  if (!ruleEntries.length) return;
   const strong = document.createElement("strong");
   strong.textContent = title;
   if (kind === "reach") strong.classList.add("reach-heading");
   wrap.appendChild(strong);
 
   const ul = document.createElement("ul");
-  for (const [rule, count] of entries.slice(0, 10)) {
+  for (const entry of ruleEntries.slice(0, 10)) {
     const li = document.createElement("li");
     const ruleWrap = document.createElement("div");
     ruleWrap.className = "rule-info";
@@ -135,35 +141,55 @@ function appendRuleList(wrap, title, entries, kind, ruleImpact, axeVersion) {
     // canonical explanation and fix guidance.
     const codeLink = document.createElement("a");
     codeLink.className = "rule-code-link";
-    codeLink.href = dequeRuleUrl(rule, axeVersion);
+    codeLink.href = dequeRuleUrl(entry.id, axeVersion);
     codeLink.target = "_blank";
     codeLink.rel = "noopener noreferrer";
-    codeLink.setAttribute("aria-label", `Learn more about ${rule} (opens in new tab)`);
+    codeLink.setAttribute("aria-label", `Learn more about ${entry.id} (opens in new tab)`);
     const code = document.createElement("code");
-    code.textContent = rule;
+    code.textContent = entry.id;
     codeLink.appendChild(code);
     ruleWrap.appendChild(codeLink);
+
+    // Viewport pills — show where this rule was flagged.
+    // Single-viewport rules show just "Desktop" or "Mobile" (the
+    // total count is already visible on the right). Mixed rules
+    // show "Desktop N" / "Mobile N" so readers can see the split.
+    const pillWrap = document.createElement("span");
+    pillWrap.className = "viewport-pills";
+    const mixed = entry.desktop_count > 0 && entry.mobile_count > 0;
+    if (entry.desktop_count > 0) {
+      const dPill = document.createElement("span");
+      dPill.className = "pill-desktop";
+      dPill.textContent = mixed ? `Desktop ${entry.desktop_count.toLocaleString()}` : "Desktop";
+      pillWrap.appendChild(dPill);
+    }
+    if (entry.mobile_count > 0) {
+      const mPill = document.createElement("span");
+      mPill.className = "pill-mobile";
+      mPill.textContent = mixed ? `Mobile ${entry.mobile_count.toLocaleString()}` : "Mobile";
+      pillWrap.appendChild(mPill);
+    }
+    ruleWrap.appendChild(pillWrap);
 
     // Impact pill — required rules only. Reach-goal rules (WCAG AAA /
     // WCAG 2.2) are aspirational and axe's severity on them is mostly
     // noise for that audience, so we skip the pill there.
-    const impact = kind === "required" ? ruleImpact?.[rule] : null;
-    if (impact) {
+    if (kind === "required" && entry.impact) {
       const pill = document.createElement("span");
-      pill.className = `impact-pill ${IMPACT_CSS_CLASS[impact] || "unk"}`;
-      pill.textContent = IMPACT_LABEL[impact] || impact;
+      pill.className = `impact-pill ${IMPACT_CSS_CLASS[entry.impact] || "unk"}`;
+      pill.textContent = IMPACT_LABEL[entry.impact] || entry.impact;
       ruleWrap.appendChild(pill);
     }
 
     const desc = document.createElement("span");
     desc.className = "rule-desc";
-    desc.textContent = ruleFriendly(rule);
+    desc.textContent = ruleFriendly(entry.id);
     ruleWrap.appendChild(desc);
     li.appendChild(ruleWrap);
 
     const num = document.createElement("span");
     num.className = "count";
-    num.textContent = String(count);
+    num.textContent = String(entry.desktop_count + entry.mobile_count);
     li.appendChild(num);
     ul.appendChild(li);
   }
@@ -183,8 +209,8 @@ function buildRuleDetail(row) {
     return wrap;
   }
 
-  const requiredRules = topEntries(row.violations_by_rule);
-  const reachRules = topEntries(row.reach_violations_by_rule);
+  const requiredRules = row.required_rules || [];
+  const reachRules = row.reach_rules || [];
 
   if (!requiredRules.length && !reachRules.length) {
     const strong = document.createElement("strong");
@@ -201,7 +227,6 @@ function buildRuleDetail(row) {
     "Required (WCAG 2.0/2.1 Level A/AA)",
     requiredRules,
     "required",
-    row.violations_rule_impact,
     row.axe_version,
   );
   appendRuleList(
@@ -209,7 +234,6 @@ function buildRuleDetail(row) {
     "Reach goals (WCAG 2.1 Level AAA & WCAG 2.2)",
     reachRules,
     "reach",
-    null,
     row.axe_version,
   );
   return wrap;
@@ -219,7 +243,7 @@ function buildTableRow(row, prevRow, showCategoryTag) {
   const failed = row.status === "error";
   const pr = prevRow(row.site);
   const name = siteDisplayName(row);
-  const isClean = !failed && row.violations_total === 0;
+  const isClean = !failed && row.violations_total === 0 && (row.mobile_violations_total || 0) === 0;
   const hostname = displayHostname(row.url);
 
   const tr = document.createElement("tr");
@@ -266,6 +290,7 @@ function buildTableRow(row, prevRow, showCategoryTag) {
     tr.appendChild(naCell());
     tr.appendChild(naCell());
     tr.appendChild(naCell());
+    tr.appendChild(naCell());
   } else {
     const tdErr = document.createElement("td");
     const num = document.createElement("span");
@@ -274,15 +299,25 @@ function buildTableRow(row, prevRow, showCategoryTag) {
     tdErr.appendChild(num);
     tr.appendChild(tdErr);
 
+    const mobileTd = document.createElement("td");
+    const mobileCount = row.mobile_violations_total || 0;
+    const mobileSpan = document.createElement("span");
+    mobileSpan.className = mobileCount > 0 ? "mobile-num" : "big-num";
+    mobileSpan.textContent = mobileCount;
+    mobileTd.appendChild(mobileSpan);
+    tr.appendChild(mobileTd);
+
     const tdReach = document.createElement("td");
     const reachNum = document.createElement("span");
     reachNum.className = "reach-num";
-    reachNum.textContent = row.reach_violations_total;
+    reachNum.textContent = row.reach_violations_total + (row.mobile_reach_violations_total || 0);
     tdReach.appendChild(reachNum);
     tr.appendChild(tdReach);
 
     const tdImpact = document.createElement("td");
-    tdImpact.appendChild(makeImpactBar(row.violations_by_impact));
+    tdImpact.appendChild(
+      makeImpactBar(mergeImpact(row.violations_by_impact, row.mobile_violations_by_impact)),
+    );
     tr.appendChild(tdImpact);
 
     const tdElem = document.createElement("td");
@@ -332,7 +367,7 @@ function buildMobileCard(row, prevRow, showCategoryTag) {
   const failed = row.status === "error";
   const pr = prevRow(row.site);
   const name = siteDisplayName(row);
-  const isClean = !failed && row.violations_total === 0;
+  const isClean = !failed && row.violations_total === 0 && (row.mobile_violations_total || 0) === 0;
   const hostname = displayHostname(row.url);
 
   const card = document.createElement("article");
@@ -366,6 +401,13 @@ function buildMobileCard(row, prevRow, showCategoryTag) {
   cardHeader.appendChild(errCount);
   card.appendChild(cardHeader);
 
+  if (!failed && (row.mobile_violations_total || 0) > 0) {
+    const mobileBadge = document.createElement("span");
+    mobileBadge.className = "card-mobile-badge";
+    mobileBadge.textContent = `${row.mobile_violations_total} mobile`;
+    card.appendChild(mobileBadge);
+  }
+
   if (isClean) {
     const badge = document.createElement("span");
     badge.className = "zero-badge";
@@ -379,7 +421,9 @@ function buildMobileCard(row, prevRow, showCategoryTag) {
     msg.textContent = `Scan failed: ${row.error || "Unknown error"}`;
     card.appendChild(msg);
   } else {
-    const cardBar = makeImpactBar(row.violations_by_impact);
+    const cardBar = makeImpactBar(
+      mergeImpact(row.violations_by_impact, row.mobile_violations_by_impact),
+    );
     cardBar.style.margin = "0 0 var(--space-4)";
     card.appendChild(cardBar);
   }
@@ -389,7 +433,10 @@ function buildMobileCard(row, prevRow, showCategoryTag) {
   const metaDefs = failed
     ? [["Status", "Failed"]]
     : [
-        ["Reach issues", String(row.reach_violations_total)],
+        [
+          "Reach issues",
+          String(row.reach_violations_total + (row.mobile_reach_violations_total || 0)),
+        ],
         ["Elements", row.element_count.toLocaleString()],
         ["Change", null],
       ];

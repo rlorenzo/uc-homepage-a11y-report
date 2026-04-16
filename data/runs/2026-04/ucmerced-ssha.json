@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucmerced-ssha",
   "name": "UC Merced School of Social Sciences, Humanities and Arts",
@@ -8,7 +8,7 @@
   "type": "school",
   "category": "humanities-arts",
   "url": "https://ssha.ucmerced.edu",
-  "element_count": 863,
+  "element_count": 874,
   "violations": [
     {
       "id": "link-in-text-block",
@@ -97,6 +97,306 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-views-voices-of-success-block-2\" class=\"clearfix block block-views\">",
+                  "target": [
+                    "#block-views-voices-of-success-block-2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Voices of Success</h2>",
+          "target": [
+            "#block-views-voices-of-success-block-2 > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><span class=\"qMark\"><em>\" </em></span>As a history major, I’ve gained versatile skills I can use beyond the classroom. At a smaller campus like UC Merced, it’s easier to access research, jobs, and meaningful ways to help others.\n<span class=\"qMark\"><em> \"</em></span></p>",
+          "target": [
+            "#views_slideshow_cycle_div_voices_of_success-block_2_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-vos-quote.views-field > .field-content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-views-voices-of-success-block-2\" class=\"clearfix block block-views\">",
+                  "target": [
+                    "#block-views-voices-of-success-block-2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>-Max Turkovich </em>",
+          "target": [
+            "#views_slideshow_cycle_div_voices_of_success-block_2_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-vos-quote.views-field > .field-content > div > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "graduate services",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "ssha.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/faculty-resources/graduate-services/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ssha-grad.ucmerced.edu/\" title=\"SSHA Graduate Services\" class=\"sf-depth-2 \" target=\"_blank\" rel=\"noopener noreferrer\" style=\"\">Graduate Services</a>",
+                  "target": [
+                    "a[title=\"SSHA Graduate Services\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/faculty-resources/graduate-services\" class=\"sf-depth-2 \" style=\"\">Graduate Services</a>",
+          "target": [
+            "#menu-6921-1 > .sf-depth-2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "academic advising",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "ssha.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/about/administrative-resources/academic-advising/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ssha-advising.ucmerced.edu/\" title=\"\" class=\"sf-depth-3 \" target=\"_blank\" rel=\"noopener noreferrer\" style=\"\">Academic Advising</a>",
+                  "target": [
+                    "#menu-2609-1 > .sf-depth-3[title=\"\"][rel=\"noopener noreferrer\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/about/administrative-resources/academic-advising\" class=\"sf-depth-2  menuparent\" style=\"\">Academic Advising</a>",
+          "target": [
+            "#menu-2028-1 > .menuparent.sf-depth-2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": {
+                "messageKey": "fgContrast",
+                "contrastRatio": 1.4,
+                "requiredContrastRatio": 3,
+                "nodeColor": "#ffd700",
+                "parentColor": "#ffffff"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"studentSpotlight\">Click to read our newsletter <a href=\"https://ssha.ucmerced.edu/about/ssha-spotlight\">SSHA Spotlight</a></div>",
+                  "target": [
+                    ".studentSpotlight"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has insufficient color contrast of 1.4:1 with the surrounding text. (Minimum contrast is 3:1, link text: #ffd700, surrounding text: #ffffff)"
+            },
+            {
+              "id": "link-in-text-block-style",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"studentSpotlight\">Click to read our newsletter <a href=\"https://ssha.ucmerced.edu/about/ssha-spotlight\">SSHA Spotlight</a></div>",
+                  "target": [
+                    ".studentSpotlight"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ssha.ucmerced.edu/about/ssha-spotlight\">SSHA Spotlight</a>",
+          "target": [
+            ".studentSpotlight > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.4:1 with the surrounding text. (Minimum contrast is 3:1, link text: #ffd700, surrounding text: #ffffff)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"findDegreeContent\">",
+                  "target": [
+                    ".findDegreeContent"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1>Find Your Degree</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
         {
           "any": [
             {
@@ -241,43 +541,6 @@
           "html": "<a href=\"/faculty-resources/graduate-services\" class=\"sf-depth-2 \" style=\"\">Graduate Services</a>",
           "target": [
             "#menu-6921-1 > .sf-depth-2"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "identical-links-same-purpose",
-              "data": {
-                "name": "academic advising",
-                "urlProps": {
-                  "protocol": "http:",
-                  "hostname": "ssha.ucmerced.edu",
-                  "port": "",
-                  "pathname": "/about/administrative-resources/academic-advising/",
-                  "search": {},
-                  "hash": "",
-                  "filename": ""
-                }
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"https://ssha-advising.ucmerced.edu/\" title=\"\" class=\"sf-depth-3 \" target=\"_blank\" rel=\"noopener noreferrer\" style=\"\">Academic Advising</a>",
-                  "target": [
-                    "#menu-2609-1 > .sf-depth-3[title=\"\"][rel=\"noopener noreferrer\"]"
-                  ]
-                }
-              ],
-              "impact": "minor",
-              "message": "Check that links have the same purpose, or are intentionally ambiguous."
-            }
-          ],
-          "none": [],
-          "impact": "minor",
-          "html": "<a href=\"/about/administrative-resources/academic-advising\" class=\"sf-depth-2  menuparent\" style=\"\">Academic Advising</a>",
-          "target": [
-            "#menu-2028-1 > .menuparent.sf-depth-2"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }

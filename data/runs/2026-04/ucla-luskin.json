@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucla-luskin",
   "name": "UCLA Luskin School of Public Affairs",
@@ -2556,6 +2556,2232 @@
           "all": [],
           "none": [],
           "impact": "serious",
+          "html": "<h2 class=\"avia-caption-title \" itemprop=\"name\">UCLA Luskin Social Welfare Receives Landmark $13.5 Million Investment</h2>",
+          "target": [
+            ".av-40sxmur-b69732933b7700527aab92022323f52f__1.av-slideshow-caption.caption_fullwidth > .caption_container.container > .slideshow_caption > .slideshow_inner_caption > .slideshow_align_caption > .avia-caption-title[itemprop=\"name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Part of a $33 million campuswide investment from Ballmer Group, the funds will address critical workforce shortages.</p>",
+          "target": [
+            ".av-40sxmur-b69732933b7700527aab92022323f52f__1.av-slideshow-caption.caption_fullwidth > .caption_container.container > .slideshow_caption > .slideshow_inner_caption > .slideshow_align_caption > .avia-caption-content[itemprop=\"description\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "read more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "luskin.ucla.edu",
+                  "port": "",
+                  "pathname": "/advancing-affordable-housing-through-ucla-luskins-masters-in-real-estate-development-program/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://luskin.ucla.edu/black-joy-unfiltered-draws-packed-house-at-ucla-nimoy-theater\" class=\"more-link\">Read more<span class=\"more-link-arrow\">  →</span></a>",
+                  "target": [
+                    ".post-entry-122072 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > .read-more-link > .more-link"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://luskin.ucla.edu/seeing-local-policy-in-action-at-luskins-annual-city-hall-day\" class=\"more-link\">Read more<span class=\"more-link-arrow\">  →</span></a>",
+                  "target": [
+                    ".post-entry-121365 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > .read-more-link > .more-link"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://luskin.ucla.edu/advancing-affordable-housing-through-ucla-luskins-masters-in-real-estate-development-program\" class=\"more-link\">Read more<span class=\"more-link-arrow\">  →</span></a>",
+          "target": [
+            ".post-entry-121636 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > .read-more-link > .more-link"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<li id=\"menu-item-search\" class=\"noMobile menu-item menu-item-search-dropdown menu-item-avia-special\" role=\"menuitem\">",
+          "target": [
+            "#menu-item-search"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<li class=\"av-burger-menu-main menu-item-avia-special \" role=\"menuitem\">",
+          "target": [
+            ".av-burger-menu-main"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (13.9725px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"date-container minor-meta updated\" itemprop=\"datePublished\" datetime=\"2026-02-18T13:29:56-08:00\">February 18, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-02-18T13:29:56-08:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.9pt (17.25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Francisco Castañeda leverages UCLA Luskin’s MRED program to gain hands-on training and advance equitable, affordable housing solutions.</p>",
+          "target": [
+            ".post-entry-121636 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (13.9725px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"date-container minor-meta updated\" itemprop=\"datePublished\" datetime=\"2026-03-03T11:08:15-08:00\">March 3, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-03-03T11:08:15-08:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.9pt (17.25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Michael Harriot and Michael Lens reflect on Black history, neighborhoods and lived experience during a Black History Month Luskin Lecture Series event.</p>",
+          "target": [
+            ".post-entry-122072 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (13.9725px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"date-container minor-meta updated\" itemprop=\"datePublished\" datetime=\"2026-02-09T11:05:20-08:00\">February 9, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-02-09T11:05:20-08:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (13.9725px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.9pt (17.25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Shay Rivera-Bremner, a UCLA Public Affairs undergraduate, reflects on leadership, learning, and local change in Los Angeles.</p>",
+          "target": [
+            ".post-entry-121365 > .standard-content.entry-content-wrapper.clearfix > .entry-content[itemprop=\"text\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.9pt (17.25px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-14T15:53:41-07:00\">April 14, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-14T15:53:41-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>MSW student Michelle Cisneros shares how her experience with justice-involved youth shapes her trauma-informed, culturally responsive approach to social work.</p>",
+          "target": [
+            ".av-magazine-entry-id-123245 > .av-magazine-content-wrap > .av-magazine-content.entry-content[itemprop=\"text\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-10T10:18:07-07:00\">April 10, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-10T10:18:07-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-09T12:10:59-07:00\">April 9, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-09T12:10:59-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-08T13:11:55-07:00\">April 8, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-08T13:11:55-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-03-30T09:39:38-07:00\">March 30, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-03-30T09:39:38-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5d5d5d",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.58,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tribe-events-widget-events-list__event-date-tag-month\">\n\t\t\tApr\t\t</span>",
+          "target": [
+            ".tribe-events-widget-events-list__event-date-tag-datetime[datetime=\"2026-04-21\"] > .tribe-events-widget-events-list__event-date-tag-month"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Join us for an inspiring and candid conversation with Luskin alumni who are charting bold, purpose-driven careers in social welfare. Life After Luskin: Designing Your Own Path in Social Welfare […]</p>",
+          "target": [
+            ".tribe-events-widget-events-list__event-excerpt:nth-child(2) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5d5d5d",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.58,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tribe-events-widget-events-list__event-date-tag-month\">\n\t\t\tApr\t\t</span>",
+          "target": [
+            ".tribe-events-widget-events-list__event-date-tag-datetime[datetime=\"2026-04-23\"] > .tribe-events-widget-events-list__event-date-tag-month"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Join us for an engaging alumni panel, Sustainability in the Entertainment Industry, featuring UCLA Luskin alumni Jazz Henry MURP'25&nbsp;and Irma&nbsp;Livadic MPP'19, who are building careers at the intersection of sustainability, […]</p>",
+          "target": [
+            ".tribe-events-widget-events-list__event-excerpt:nth-child(4) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5d5d5d",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.58,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tribe-events-widget-events-list__event-date-tag-month\">\n\t\t\tApr\t\t</span>",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(5) > .tribe-events-widget-events-list__event-date-tag.tribe-common-g-col > .tribe-events-widget-events-list__event-date-tag-datetime[datetime=\"2026-04-28\"] > .tribe-events-widget-events-list__event-date-tag-month"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come join us for a day of wellness and relaxation! UCLA Recreation Free 5 min massages offer a a chance to destress. I look forward to seeing you all there. […]</p>",
+          "target": [
+            ".tribe-events-widget-events-list__event-excerpt:nth-child(6) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5d5d5d",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.58,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"tribe-events-widget-events-list__event-date-tag-month\">\n\t\t\tApr\t\t</span>",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(7) > .tribe-events-widget-events-list__event-date-tag.tribe-common-g-col > .tribe-events-widget-events-list__event-date-tag-datetime[datetime=\"2026-04-28\"] > .tribe-events-widget-events-list__event-date-tag-month"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.58 (foreground color: #5d5d5d, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come decorate your graduation caps or create and enjoy some coffee and pastries. Let's relax and celebrate our fellow UCLA Luskin grads!</p>",
+          "target": [
+            ".tribe-events-widget-events-list__event-excerpt:nth-child(8) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#334aff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.89,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.89 (foreground color: #334aff, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://luskin.ucla.edu/events/\" class=\"tribe-events-widget-events-list__view-more-link tribe-common-anchor-thin\" title=\"View more events.\">\n\t\tView Calendar\t</a>",
+          "target": [
+            ".tribe-events-widget-events-list__view-more-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.89 (foreground color: #334aff, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-14T09:02:15-07:00\">April 14, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-14T09:02:15-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UCLA student Andrea Escobar urges bold action from gubernatorial candidates, highlighting economic struggles and Gen Z’s demand for real policy solutions.</p>",
+          "target": [
+            ".av-magazine-entry-id-123238 > .av-magazine-content-wrap > .av-magazine-content.entry-content[itemprop=\"text\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-13T10:58:20-07:00\">April 13, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-13T10:58:20-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-13T10:24:35-07:00\">April 13, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-13T10:24:35-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-10T09:08:33-07:00\">April 10, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-10T09:08:33-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"after_full_slider_1\" class=\"main_color av_default_container_wrap container_wrap fullsize\">",
+                  "target": [
+                    "#after_full_slider_1"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time class=\"av-magazine-time updated\" itemprop=\"datePublished\" datetime=\"2026-04-09T10:26:25-07:00\">April 9, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-04-09T10:26:25-07:00\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admission.ucla.edu/visit/maps-and-parking\">Maps, Directions, Parking</a>",
+          "target": [
+            ".textwidget > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.directory.ucla.edu\">Directory</a>",
+          "target": [
+            "a[href$=\"www.directory.ucla.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact\">Contact</a>",
+          "target": [
+            "a[href$=\"contact\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://registrar.ucla.edu/Calendars/Overview\">Academic Calendar</a>",
+          "target": [
+            ".textwidget > ul > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://hr.mycareer.ucla.edu/applicants/jsp/shared/frameset/Frameset.jsp?time=1332455457640\">Careers</a>",
+          "target": [
+            ".textwidget > ul > li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://equity.ucla.edu/\">Diversity</a>",
+          "target": [
+            "a[href$=\"equity.ucla.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.universityofcalifornia.edu/\">University of California</a>",
+          "target": [
+            ".textwidget > ul > li:nth-child(7) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://ucla.edu/terms-of-use\">Terms of Use</a>",
+          "target": [
+            "a[href$=\"terms-of-use\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#a8b3bc",
+                "bgColor": "#333333",
+                "contrastRatio": 5.91,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://socialmedia.ucla.edu/social-media-response-guide/\">policies of UCLA</a>",
+          "target": [
+            "em > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.91 (foreground color: #a8b3bc, background color: #333333, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#a8b3bc",
+                "contrastRatio": 2.13,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input type=\"submit\" value=\"\" id=\"searchsubmit\" class=\"button avia-font-entypo-fontello\">",
+                  "target": [
+                    "#searchsubmit"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.13 (foreground color: #ffffff, background color: #a8b3bc, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input type=\"submit\" value=\"\" id=\"searchsubmit\" class=\"button avia-font-entypo-fontello\">",
+          "target": [
+            "#searchsubmit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.13 (foreground color: #ffffff, background color: #a8b3bc, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 2.68,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input type=\"text\" id=\"s\" name=\"s\" value=\"\" placeholder=\"Search\">",
+                  "target": [
+                    "#s"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.68 (foreground color: #999999, background color: #f8f8f8, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input type=\"text\" id=\"s\" name=\"s\" value=\"\" placeholder=\"Search\">",
+          "target": [
+            "#s"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #999999, background color: #f8f8f8, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#333333",
+                "contrastRatio": 4.43,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"widgettitle\">Contact</h3>",
+          "target": [
+            "#text-11 > .widgettitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#333333",
+                "contrastRatio": 4.43,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"widgettitle\">Campus Resources</h3>",
+          "target": [
+            "#text-9 > .widgettitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#333333",
+                "contrastRatio": 4.43,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container_wrap footer_color\" id=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"widgettitle\">Follow</h3>",
+          "target": [
+            "#text-10 > .widgettitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #999999, background color: #333333, font size: 12.4pt (16.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img width=\"200\" src=\"/wp-content/uploads/2018/07/new-Luskin-short.png\">",
+          "target": [
+            "img[width=\"200\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://luskin.ucla.edu/wp-content/uploads/2026/03/updated-life-after-luskin-website-flyer.png\" class=\"lightbox-added alignleft\" style=\"float: left; margin: 0px; padding: 0px;\">",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(1) > .lightbox-added.alignleft"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://luskin.ucla.edu/wp-content/uploads/2026/03/updated-sustainability-in-the-entertainment-industry-website-flyer.png\" class=\"lightbox-added alignleft\" style=\"float: left; margin: 0px; padding: 0px;\">",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(3) > .lightbox-added.alignleft"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://luskin.ucla.edu/wp-content/uploads/2026/03/fitwell-flyer-5.png\" class=\"lightbox-added alignleft\" style=\"float: left; margin: 0px; padding: 0px;\">",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(5) > .lightbox-added.alignleft"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://luskin.ucla.edu/wp-content/uploads/2026/03/expression-session-1545x2000-flyer.png\" class=\"lightbox-added alignleft\" style=\"float: left; margin: 0px; padding: 0px;\">",
+          "target": [
+            ".tribe-common-g-row.tribe-events-widget-events-list__event-row:nth-child(7) > .lightbox-added.alignleft"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://www.facebook.com/UCLALuskinSchool\">",
+          "target": [
+            ".textwidget > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"http://twitter.com/uclaluskin\">",
+          "target": [
+            "a[href$=\"uclaluskin\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://www.linkedin.com/school/uclaluskin\">",
+          "target": [
+            ".textwidget > a:nth-child(3)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"http://vimeo.com/uclaluskin\">",
+          "target": [
+            "a[href$=\"uclaluskin\"]:nth-child(4)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"http://instagram.com/uclaluskin\">",
+          "target": [
+            ".textwidget > a:nth-child(5)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "impact": "serious",
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure that lists are structured correctly",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "only-listitems",
+              "data": {
+                "values": "[role=menuitem]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li id=\"menu-item-search\" class=\"noMobile menu-item menu-item-search-dropdown menu-item-avia-special\" role=\"menuitem\">",
+                  "target": [
+                    "#menu-item-search"
+                  ]
+                },
+                {
+                  "html": "<li class=\"av-burger-menu-main menu-item-avia-special \" role=\"menuitem\">",
+                  "target": [
+                    ".av-burger-menu-main"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "List element has direct children that are not allowed: [role=menuitem]"
+            }
+          ],
+          "impact": "serious",
+          "html": "<ul id=\"avia-menu\" class=\"menu av-main-nav\">",
+          "target": [
+            "#avia-menu"
+          ],
+          "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed: [role=menuitem]"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
           "html": "<h2 class=\"avia-caption-title \" itemprop=\"name\">L.A. County residents’ quality-of-life satisfaction hits record low in UCLA survey</h2>",
           "target": [
             ".av-40sxmur-b69732933b7700527aab92022323f52f__0.av-slideshow-caption.caption_fullwidth > .caption_container.container > .slideshow_caption > .slideshow_inner_caption > .slideshow_align_caption > .avia-caption-title[itemprop=\"name\"]"
@@ -2568,7 +4794,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "11.3pt (15px)",
+                "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"

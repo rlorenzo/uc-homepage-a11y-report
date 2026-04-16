@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucdavis-education",
   "name": "UC Davis School of Education",
@@ -36,9 +36,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/eddeducational-leadership\">\n      <h2 class=\"title\">Lead for equity and achievement</h2>\n      <p class=\"subtitle\">Learn about our doctorate in educational leadership</p>    </a>",
+                  "html": "<a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>",
                   "target": [
-                    ".show-banner-cap-.node-item.node-header > a[href$=\"eddeducational-leadership\"]"
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"teaching-credentialma\"]"
                   ]
                 }
               ],
@@ -48,9 +48,9 @@
           ],
           "none": [],
           "impact": "serious",
-          "html": "<article class=\"node node-carousel pt123\" aria-label=\"Lead for equity and achievement\" aria-hidden=\"true\" style=\"position: absolute; left: -50%; opacity: 0;\">",
+          "html": "<article class=\"node node-carousel pt123\" aria-label=\"Become a Teacher\" style=\"position: absolute; left: -50%; opacity: 0;\" aria-hidden=\"true\">",
           "target": [
-            ".is-selected.node-carousel.pt123"
+            "article[aria-label=\"Become a Teacher\"]"
           ],
           "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
         },
@@ -837,9 +837,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>\n  </header>",
+                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/eddeducational-leadership\">\n      <h2 class=\"title\">Lead for equity and achievement</h2>\n      <p class=\"subtitle\">Learn about our doctorate in educational leadership</p>    </a>\n  </header>",
                   "target": [
-                    "article[aria-label=\"Become a Teacher\"] > .show-banner-cap-.node-item.node-header"
+                    ".is-selected.node-carousel.pt123 > .show-banner-cap-.node-item.node-header"
                   ]
                 }
               ],
@@ -850,9 +850,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h2 class=\"title\">Become a Teacher</h2>",
+          "html": "<h2 class=\"title\">Lead for equity and achievement</h2>",
           "target": [
-            "a[href$=\"teaching-credentialma\"] > .title"
+            "a[href$=\"eddeducational-leadership\"] > .title"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -869,9 +869,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>\n  </header>",
+                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/eddeducational-leadership\">\n      <h2 class=\"title\">Lead for equity and achievement</h2>\n      <p class=\"subtitle\">Learn about our doctorate in educational leadership</p>    </a>\n  </header>",
                   "target": [
-                    "article[aria-label=\"Become a Teacher\"] > .show-banner-cap-.node-item.node-header"
+                    ".is-selected.node-carousel.pt123 > .show-banner-cap-.node-item.node-header"
                   ]
                 }
               ],
@@ -882,9 +882,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"subtitle\">Students need great teachers now more than ever</p>",
+          "html": "<p class=\"subtitle\">Learn about our doctorate in educational leadership</p>",
           "target": [
-            "a[href$=\"teaching-credentialma\"] > .subtitle"
+            "a[href$=\"eddeducational-leadership\"] > .subtitle"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -1297,6 +1297,653 @@
             ".tid-515"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/eddeducational-leadership\">\n      <h2 class=\"title\">Lead for equity and achievement</h2>\n      <p class=\"subtitle\">Learn about our doctorate in educational leadership</p>    </a>",
+                  "target": [
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"eddeducational-leadership\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<article class=\"node node-carousel pt123\" aria-label=\"Lead for equity and achievement\" aria-hidden=\"true\" style=\"position: absolute; left: -50%; opacity: 0;\">",
+          "target": [
+            ".node-carousel.pt123:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/phd-education\">\n      <h2 class=\"title\">Catalyze Change Through Scholarship</h2>\n      <p class=\"subtitle\">Learn about our PhD in education</p>    </a>",
+                  "target": [
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"phd-education\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<article class=\"node node-carousel pt123\" aria-label=\"Catalyze Change Through Scholarship\" aria-hidden=\"true\" style=\"position: absolute; left: -50%; opacity: 0;\">",
+          "target": [
+            ".node-carousel.pt123:nth-child(3)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://give.ucdavis.edu/dedu\">\n      <h2 class=\"title\">Support Education</h2>\n      <p class=\"subtitle\">Investments in students and research are investments in the future</p>    </a>",
+                  "target": [
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"dedu\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<article class=\"node node-carousel pt123\" aria-label=\"Support Education\" aria-hidden=\"true\" style=\"position: absolute; left: -50%; opacity: 0;\">",
+          "target": [
+            "article[aria-label=\"Support Education\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/post/planting-seeds-self-discovery\" title=\"How Newbery Medal-Winning Author Renée Watson Connects Story, Identity, and the Classroom\">\n      <h2 class=\"title\">How Newbery Medal-Winning Author Renée Watson Connects Story, Identity, and the Classroom</h2>\n          </a>",
+                  "target": [
+                    "#node-8677-teaser > .node-item.node-header > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 100%;\">",
+          "target": [
+            ".home-pods > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/photo-gallery/ma-symposium-2026\" title=\"M.A. Symposium 2026\">\n      <h2 class=\"title\">M.A. Symposium 2026</h2>\n      <p class=\"subtitle\">View a photo gallery of our M.A. students presenting their teacher inquiry projects</p>    </a>",
+                  "target": [
+                    "a[title=\"M.A. Symposium 2026\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 200%;\">",
+          "target": [
+            ".home-pods > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(3)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://youtube.com/shorts/YO3Jvzc4kZw?si=CJEyzN-denMoKFvE\" title=\"Hear From Master’s Candidates\" class=\"ext\" target=\"_blank\">\n      <h2 class=\"title\">Hear From Master’s Candidates</h2>\n      <p class=\"subtitle\">What Did You Research in Your Classroom This Year?</p>    </a>",
+                  "target": [
+                    "a[title=\"Hear From Master’s Candidates\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 300%;\">",
+          "target": [
+            ".home-pods > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(4)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/post/making-grades-work-every-student\" title=\"UC Davis Researchers Partner with San Benito High School District\">\n      <h2 class=\"title\">UC Davis Researchers Partner with San Benito High School District</h2>\n          </a>",
+                  "target": [
+                    "#node-8656-teaser > .node-item.node-header > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 400%;\">",
+          "target": [
+            ".home-pods > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(5)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/post/triple-alumnus-returns-his-roots-champion-future-teachers\" title=\"Triple Alumnus Returns to His Roots to Champion Future Teachers\">\n      <h2 class=\"title\">Triple Alumnus Returns to His Roots to Champion Future Teachers</h2>\n          </a>",
+                  "target": [
+                    "#node-8606-teaser > .node-item.node-header > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 500%;\">",
+          "target": [
+            ".cell[aria-hidden=\"true\"]:nth-child(6)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/post/noticing-what-counts-rethinking-literacy-classrooms\" title=\"Noticing What Counts: Rethinking Literacy in Classrooms\">\n      <h2 class=\"title\">Noticing What Counts: Rethinking Literacy in Classrooms</h2>\n          </a>",
+                  "target": [
+                    "#node-8604-teaser > .node-item.node-header > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 600%;\">",
+          "target": [
+            ".cell[aria-hidden=\"true\"]:nth-child(7)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/post/2026-super-bowl-halftime-civics-education\" title=\"What the 2026 Super Bowl Halftime Revealed About Civics Education\">\n      <h2 class=\"title\">What the 2026 Super Bowl Halftime Revealed About Civics Education</h2>\n          </a>",
+                  "target": [
+                    "#node-8602-teaser > .node-item.node-header > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 700%;\">",
+          "target": [
+            ".cell[aria-hidden=\"true\"]:nth-child(8)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/e-newsletter/february-2026-newsletter\">February 2026 Newsletter</a>",
+                  "target": [
+                    "article[aria-label=\"February 2026 Newsletter\"] > .node-header > .title > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 100%;\">",
+          "target": [
+            ".home-events > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/e-newsletter/january-2026-newsletter\">January 2026 Newsletter</a>",
+                  "target": [
+                    "article[aria-label=\"January 2026 Newsletter\"] > .node-header > .title > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 200%;\">",
+          "target": [
+            ".home-events > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(3)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/e-newsletter/december-2025-newsletter\">December 2025 Newsletter</a>",
+                  "target": [
+                    "article[aria-label=\"December 2025 Newsletter\"] > .node-header > .title > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 300%;\">",
+          "target": [
+            ".home-events > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(4)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/e-newsletter/september-2025-newsletter\">September 2025 Newsletter</a>",
+                  "target": [
+                    "article[aria-label=\"September 2025 Newsletter\"] > .node-header > .title > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"cell\" aria-hidden=\"true\" style=\"position: absolute; left: 400%;\">",
+          "target": [
+            ".home-events > .grid.flickity-enabled.is-draggable > .flickity-viewport > .flickity-slider > .cell[aria-hidden=\"true\"]:nth-child(5)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+      "help": "ARIA attributes must conform to valid names",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": [
+                "aria-popup"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Invalid ARIA attribute name: aria-popup"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"jumpmenu__toggle\" aria-popup=\"true\" aria-expanded=\"false\" aria-label=\"Expand jumpmenu links\">I want to ...</button>",
+          "target": [
+            ".home > .inner > .jumpmenu__toggle[aria-popup=\"true\"][aria-label=\"Expand jumpmenu links\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-popup"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"flyout\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"flyout\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"menu-icon\" aria-controls=\"flyout\" aria-haspopup=\"true\" aria-label=\"Toggle flyout menu\" aria-expanded=\"false\">Menu</button>",
+          "target": [
+            ".menu-icon"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"flyout\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>\n  </header>",
+                  "target": [
+                    "article[aria-label=\"Become a Teacher\"] > .show-banner-cap-.node-item.node-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"title\">Become a Teacher</h2>",
+          "target": [
+            "a[href$=\"teaching-credentialma\"] > .title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"node-header node-item show-banner-cap-\">\n    <a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>\n  </header>",
+                  "target": [
+                    "article[aria-label=\"Become a Teacher\"] > .show-banner-cap-.node-item.node-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"subtitle\">Students need great teachers now more than ever</p>",
+          "target": [
+            "a[href$=\"teaching-credentialma\"] > .subtitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".node-home-overview > .node-content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"node-header node-item\">",
+                  "target": [
+                    "#node-8679-teaser > .node-item.node-header"
+                  ]
+                },
+                {
+                  "html": "<img src=\"/sites/main/files/imagecache/pod/main-images/claudia_rodriguez-mojica_0.png?1774475175\" alt=\"&quot;&quot;\" title=\"\" loading=\"lazy\" width=\"960\" height=\"700\">",
+                  "target": [
+                    "#node-8679-teaser > .node-upper-image > .field-image-preset-pod.field-image.field-not-video > a[aria-label=\"\\\"\\\"\"][rel=\"\"] > img[alt=\"\\\"\\\"\"][width=\"960\"][height=\"700\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"title\">How Teachers Are Building Bilingual Students’ Confidence</h2>",
+          "target": [
+            "#node-8679-teaser > .node-item.node-header > a > .title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-events block ready\">",
+                  "target": [
+                    ".home-events"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"block-title-text\">News &amp; Events</span>",
+          "target": [
+            ".home-events > .block-title > .block-title-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
         }
       ]
     }
