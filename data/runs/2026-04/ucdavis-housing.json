@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucdavis-housing",
   "name": "UC Davis Student Housing and Dining Services",
@@ -3183,6 +3183,3096 @@
             ".tours"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "video-caption",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ],
+      "description": "Ensure <video> elements have captions",
+      "help": "<video> elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "caption",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Check that captions are available for the element"
+            }
+          ],
+          "impact": "critical",
+          "html": "<video class=\"hero-banner__video\" autoplay=\"true\" loop=\"true\" muted=\"true\"><source src=\"https://player.vimeo.com/progressive_redirect/playback/685758377/rendition/1080p?loc=external&amp;signature=d9a57cccc4eaf70867f7776417a757bf6e48f43a716c5257a1af91080c5fb669\" type=\"video/mp4\"></video>",
+          "target": [
+            "video"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>All incoming freshmen are guaranteed housing* in our on-campus residence halls!</p>",
+          "target": [
+            "a[href=\"/guaranteed-housing#freshmen\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>*Exclusions apply. Please review the guaranteed housing webpage for eligibility requirements.</p>",
+          "target": [
+            "a[href=\"/guaranteed-housing#freshmen\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Freshmen live on-campus in one of our residence halls!</p>",
+          "target": [
+            ".col-ms-12.col-md-4.col-sm-4:nth-child(2) > .roundbox-container[href$=\"residence-halls/\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>All residence halls are near classes, dining halls and campus recreation. Many residence halls are LEED certified!</p>",
+          "target": [
+            ".col-ms-12.col-md-4.col-sm-4:nth-child(2) > .roundbox-container[href$=\"residence-halls/\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Applying is easy! Fill out an online form, tell us your housing preferences, and submit.</p>",
+          "target": [
+            ".col-ms-12.col-md-4.col-sm-4:nth-child(3) > .roundbox-container[href$=\"residence-halls/\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Be sure to consider our Living-Learning Communities when you apply!</p>",
+          "target": [
+            ".col-ms-12.col-md-4.col-sm-4:nth-child(3) > .roundbox-container[href$=\"residence-halls/\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>All incoming transfers are guaranteed two years of housing*  on campus!</p>",
+          "target": [
+            "a[href=\"/guaranteed-housing#transfers\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>*Exclusions apply. Please review the guaranteed housing webpage for eligibility requirements.</p>",
+          "target": [
+            "a[href=\"/guaranteed-housing#transfers\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Most transfers live in The Green at West Village campus apartments!</p>",
+          "target": [
+            "a[href$=\"thegreen.ucdavis.edu\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The Green is located in our renowned West Village neighborhood. The Green is LEED certified!</p>",
+          "target": [
+            "a[href$=\"thegreen.ucdavis.edu\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Applying is easy! Fill out an online form, tell us your housing preferences, and submit.</p>",
+          "target": [
+            ".roundbox-container[href$=\"the-green/\"] > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.55,
+                "fontSize": "13.6pt (18.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Be sure to consider adding one of our dining commons meal plans when you apply!</p>",
+          "target": [
+            ".roundbox-container[href$=\"the-green/\"] > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #337ab7, background color: #ffffff, font size: 13.6pt (18.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 5.22,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Quick Links</h3>",
+          "target": [
+            "#footer_quicklinks > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 5.22,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>About Us</h3>",
+          "target": [
+            "#footer_abouthousing > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 5.22,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Our Newsletters</h3>",
+          "target": [
+            "#footer_housingpartnerwebsites > h3:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 5.22,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Our Partner Websites</h3>",
+          "target": [
+            "h3:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 5.22,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Campus Resources</h3>",
+          "target": [
+            "#footer_campusresources > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.22 (foreground color: #666666, background color: #f9f4e5, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ddb307",
+                "contrastRatio": 1.99,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/housing/\" class=\"link-overlay housing\">Housing at <span class=\"nobreak\">UC Davis</span></a>",
+                  "target": [
+                    ".housing"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/housing/\" class=\"link-overlay housing\">Housing at <span class=\"nobreak\">UC Davis</span></a>",
+          "target": [
+            ".housing"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ddb307",
+                "contrastRatio": 1.99,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/housing/\" class=\"link-overlay housing\">Housing at <span class=\"nobreak\">UC Davis</span></a>",
+                  "target": [
+                    ".housing"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"nobreak\">UC Davis</span>",
+          "target": [
+            ".housing > .nobreak"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ddb307",
+                "contrastRatio": 1.99,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/dining/\" class=\"link-overlay dining\">Dining at <span class=\"nobreak\">UC Davis</span></a>",
+                  "target": [
+                    ".dining"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/dining/\" class=\"link-overlay dining\">Dining at <span class=\"nobreak\">UC Davis</span></a>",
+          "target": [
+            ".dining"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ddb307",
+                "contrastRatio": 1.99,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/dining/\" class=\"link-overlay dining\">Dining at <span class=\"nobreak\">UC Davis</span></a>",
+                  "target": [
+                    ".dining"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"nobreak\">UC Davis</span>",
+          "target": [
+            ".dining > .nobreak"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ddb307",
+                "contrastRatio": 1.99,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/tours/\" class=\"link-overlay tours\">Come Tour With Us</a>",
+                  "target": [
+                    ".tours"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/tours/\" class=\"link-overlay tours\">Come Tour With Us</a>",
+          "target": [
+            ".tours"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.99 (foreground color: #ffffff, background color: #ddb307, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#ffbf00",
+                "contrastRatio": 2.75,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/how-to-apply/orchard-park-and-primero-grove/\">Now Accepting Applications for Orchard Park!</a>",
+                  "target": [
+                    ".accepting-applications > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.75 (foreground color: #337ab7, background color: #ffbf00, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/how-to-apply/orchard-park-and-primero-grove/\">Now Accepting Applications for Orchard Park!</a>",
+          "target": [
+            ".accepting-applications > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #337ab7, background color: #ffbf00, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffbf00",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.65,
+                "fontSize": "42.0pt (56px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"pagecontainer\">",
+                  "target": [
+                    "#pagecontainer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.65 (foreground color: #ffbf00, background color: #ffffff, font size: 42.0pt (56px), font weight: bold). Expected contrast ratio of 3:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Welcome, New Aggies!</h2>",
+          "target": [
+            ".admitted > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.65 (foreground color: #ffbf00, background color: #ffffff, font size: 42.0pt (56px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Copyright © The Regents of the University of California, Davis campus, 2007-2026. All Rights Reserved.</p>",
+          "target": [
+            "#footer_website_information > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Best viewed using modern browsers including: Firefox, Chrome, Safari or Internet Explorer 9+</p>",
+          "target": [
+            "#footer_website_information > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/help/privacy-accessibility\" target=\"_blank\">Privacy and Accessibility</a>",
+          "target": [
+            "a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Last Updated</strong>: March 09 2026 03:13:25.</p>",
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Last Updated</strong>",
+          "target": [
+            "p:nth-child(5) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Follow @ucdavishousing<br> on Instagram</strong>",
+          "target": [
+            ".col-lg-6.col-xs-12:nth-child(1) > p > a > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Follow @ucdavisdiningservices<br> on Instagram</strong>",
+          "target": [
+            ".col-lg-6.col-xs-12:nth-child(2) > p > a > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/announcements/\">Announcements</a>",
+          "target": [
+            "a[href$=\"announcements/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/how-to-apply/\">Apply for Housing</a>",
+          "target": [
+            "a[href$=\"how-to-apply/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/calendar/\">Calendar</a>",
+          "target": [
+            "a[href$=\"calendar/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/search/\">Search</a>",
+          "target": [
+            "a[href$=\"search/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/site-index/\">Site Index</a>",
+          "target": [
+            "a[href=\"/site-index/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucdstudenthousing-sso.prd.mykronos.com/\">Kronos</a>",
+          "target": [
+            "#footer_quicklinks > ul > li:nth-child(6) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/dining/ca-food-orders/\">CA Food Orders</a>",
+          "target": [
+            "a[href$=\"ca-food-orders/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/reaching-the-residents/\">Reaching the Residents</a>",
+          "target": [
+            "a[href$=\"reaching-the-residents/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact-us/\">Contact Us</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"contact-us/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/\">About</a>",
+          "target": [
+            "li:nth-child(2) > a[href$=\"about/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/maps/\">Maps</a>",
+          "target": [
+            "li:nth-child(3) > a[href$=\"maps/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/history/\">History</a>",
+          "target": [
+            "li:nth-child(4) > a[href$=\"history/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/sustainability/\">Sustainability</a>",
+          "target": [
+            "li:nth-child(5) > a[href$=\"sustainability/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/employment/\">Employment</a>",
+          "target": [
+            "li:nth-child(6) > a[href$=\"employment/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact_webmaster/\">Webmaster</a>",
+          "target": [
+            "a[href$=\"contact_webmaster/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://aggiereader.ucdavis.edu\">The Aggie Reader</a>",
+          "target": [
+            "#footer_housingpartnerwebsites > ul:nth-child(2) > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://lp.constantcontactpages.com/sl/gcR1ARV\">The Davis Dish (Dining Events and Specials)</a>",
+          "target": [
+            "#footer_housingpartnerwebsites > ul:nth-child(2) > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/sustainability/newsletter/\">Sustainability Newsletter</a>",
+          "target": [
+            "a[href$=\"newsletter/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://conferencehousing.ucdavis.edu/\">Conference Housing</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://orientation.ucdavis.edu/\">UC Davis Orientation</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://getlegal.ucdavis.edu/\">Get Legal</a>",
+          "target": [
+            "a[href$=\"getlegal.ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/\">UC Davis Homepage</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(1) > a[href$=\"ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/admissions/\">UC Davis Admissions</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://registrar.ucdavis.edu/\">University Registrar</a>",
+          "target": [
+            "a[href$=\"registrar.ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://financialaid.ucdavis.edu/\">Financial Aid</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/academics/colleges-and-schools\">Colleges and Schools</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/academics/majors\">Majors</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(6) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucdavisaggies.com/\">Athletics</a>",
+          "target": [
+            "a[href$=\"ucdavisaggies.com/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studentaffairs.ucdavis.edu/\">Student Life</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(8) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#999999",
+                "bgColor": "#f9f4e5",
+                "contrastRatio": 2.59,
+                "fontSize": "9.4pt (12.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer_bootstrap\">",
+                  "target": [
+                    "#footer_bootstrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/\">Campus Computing</a>",
+          "target": [
+            "a[href$=\"iet.ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #999999, background color: #f9f4e5, font size: 9.4pt (12.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 96.5,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (96.5px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/how-to-apply/\">Apply for Housing</a>",
+                  "target": [
+                    "a[href$=\"how-to-apply/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/announcements/\">Announcements</a>",
+          "target": [
+            "a[href$=\"announcements/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (96.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 104.8,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (104.8px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/announcements/\">Announcements</a>",
+                  "target": [
+                    "a[href$=\"announcements/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/how-to-apply/\">Apply for Housing</a>",
+          "target": [
+            "a[href$=\"how-to-apply/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (104.8px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 52.8,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (52.8px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 20.2,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/search/\">Search</a>",
+                  "target": [
+                    "a[href$=\"search/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.2px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/calendar/\">Calendar</a>",
+          "target": [
+            "a[href$=\"calendar/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (52.8px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.2px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 39.9,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (39.9px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 20.2,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/calendar/\">Calendar</a>",
+                  "target": [
+                    "a[href$=\"calendar/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/site-index/\">Site Index</a>",
+                  "target": [
+                    "a[href=\"/site-index/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.2px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/search/\">Search</a>",
+          "target": [
+            "a[href$=\"search/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (39.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.2px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 57.6,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (57.6px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 21.2,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/search/\">Search</a>",
+                  "target": [
+                    "a[href$=\"search/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://ucdstudenthousing-sso.prd.mykronos.com/\">Kronos</a>",
+                  "target": [
+                    "#footer_quicklinks > ul > li:nth-child(6) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.2px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/site-index/\">Site Index</a>",
+          "target": [
+            "a[href=\"/site-index/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (57.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.2px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 41.8,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (41.8px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 21.2,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/site-index/\">Site Index</a>",
+                  "target": [
+                    "a[href=\"/site-index/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.2px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucdstudenthousing-sso.prd.mykronos.com/\">Kronos</a>",
+          "target": [
+            "#footer_quicklinks > ul > li:nth-child(6) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (41.8px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.2px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 35.5,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (35.5px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/maps/\">Maps</a>",
+                  "target": [
+                    "li:nth-child(3) > a[href$=\"maps/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/\">About</a>",
+          "target": [
+            "li:nth-child(2) > a[href$=\"about/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (35.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 32.1,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (32.1px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/about/\">About</a>",
+                  "target": [
+                    "li:nth-child(2) > a[href$=\"about/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/about/history/\">History</a>",
+                  "target": [
+                    "li:nth-child(4) > a[href$=\"history/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/maps/\">Maps</a>",
+          "target": [
+            "li:nth-child(3) > a[href$=\"maps/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (32.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 42,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (42px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/maps/\">Maps</a>",
+                  "target": [
+                    "li:nth-child(3) > a[href$=\"maps/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/history/\">History</a>",
+          "target": [
+            "li:nth-child(4) > a[href$=\"history/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (42px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 78.1,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (78.1px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/employment/\">Employment</a>",
+                  "target": [
+                    "li:nth-child(6) > a[href$=\"employment/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/sustainability/\">Sustainability</a>",
+          "target": [
+            "li:nth-child(5) > a[href$=\"sustainability/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (78.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 74.4,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (74.4px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/sustainability/\">Sustainability</a>",
+                  "target": [
+                    "li:nth-child(5) > a[href$=\"sustainability/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/contact_webmaster/\">Webmaster</a>",
+                  "target": [
+                    "a[href$=\"contact_webmaster/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/employment/\">Employment</a>",
+          "target": [
+            "li:nth-child(6) > a[href$=\"employment/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (74.4px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 67.8,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (67.8px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.8,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/employment/\">Employment</a>",
+                  "target": [
+                    "li:nth-child(6) > a[href$=\"employment/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact_webmaster/\">Webmaster</a>",
+          "target": [
+            "a[href$=\"contact_webmaster/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (67.8px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 119.3,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (119.3px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://orientation.ucdavis.edu/\">UC Davis Orientation</a>",
+                  "target": [
+                    "ul:nth-child(4) > li:nth-child(2) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://conferencehousing.ucdavis.edu/\">Conference Housing</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (119.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 122.7,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (122.7px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://conferencehousing.ucdavis.edu/\">Conference Housing</a>",
+                  "target": [
+                    "ul:nth-child(4) > li:nth-child(1) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://orientation.ucdavis.edu/\">UC Davis Orientation</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (122.7px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 119.5,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (119.5px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucdavis.edu/admissions/\">UC Davis Admissions</a>",
+                  "target": [
+                    "#footer_campusresources > ul > li:nth-child(2) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/\">UC Davis Homepage</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(1) > a[href$=\"ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (119.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 122.3,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (122.3px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucdavis.edu/\">UC Davis Homepage</a>",
+                  "target": [
+                    "#footer_campusresources > ul > li:nth-child(1) > a[href$=\"ucdavis.edu/\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://registrar.ucdavis.edu/\">University Registrar</a>",
+                  "target": [
+                    "a[href$=\"registrar.ucdavis.edu/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/admissions/\">UC Davis Admissions</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (122.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 114.5,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (114.5px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucdavis.edu/admissions/\">UC Davis Admissions</a>",
+                  "target": [
+                    "#footer_campusresources > ul > li:nth-child(2) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://registrar.ucdavis.edu/\">University Registrar</a>",
+          "target": [
+            "a[href$=\"registrar.ucdavis.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (114.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 40.3,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (40.3px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ucdavisaggies.com/\">Athletics</a>",
+                  "target": [
+                    "a[href$=\"ucdavisaggies.com/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucdavis.edu/academics/majors\">Majors</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(6) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (40.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 50.2,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (50.2px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 19.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucdavis.edu/academics/majors\">Majors</a>",
+                  "target": [
+                    "#footer_campusresources > ul > li:nth-child(6) > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://studentaffairs.ucdavis.edu/\">Student Life</a>",
+                  "target": [
+                    "#footer_campusresources > ul > li:nth-child(8) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucdavisaggies.com/\">Athletics</a>",
+          "target": [
+            "a[href$=\"ucdavisaggies.com/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (50.2px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 70.5,
+                "height": 18
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (70.5px by 18px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22.8,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ucdavisaggies.com/\">Athletics</a>",
+                  "target": [
+                    "a[href$=\"ucdavisaggies.com/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studentaffairs.ucdavis.edu/\">Student Life</a>",
+          "target": [
+            "#footer_campusresources > ul > li:nth-child(8) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (70.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary_nav\" class=\"navbar navbar-default\" style=\"top: 0px; left: 0px;\">",
+                  "target": [
+                    "#primary_nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/maps/\">Maps</a>",
+          "target": [
+            ".navbar-mobilebuttons:nth-child(1) > a[href$=\"maps/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary_nav\" class=\"navbar navbar-default\" style=\"top: 0px; left: 0px;\">",
+                  "target": [
+                    "#primary_nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact-us/\">Contact Us</a>",
+          "target": [
+            ".navbar-mobilebuttons:nth-child(2) > a[href$=\"contact-us/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         }
       ]
     },
