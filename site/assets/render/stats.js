@@ -93,6 +93,7 @@ export function renderStats(ctx) {
       topImpactKey,
       topRuleEntry,
       topReachRuleEntry,
+      mobileViolationsTotal,
       systemTrend,
     } = computeAggregates({ okRows, prevOkRows, prev });
 
@@ -120,17 +121,22 @@ export function renderStats(ctx) {
         ),
       );
     }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "01",
-        label: "Issues flagged",
-        value: totalErrors !== null ? totalErrors : "n/a",
-        caption: totalCaption,
-        delta: prev ? deltaEl(totalErrors, prevTotalErrors) : null,
-        klass: "stat-big",
-        animate,
-      }),
-    );
+    const totalCard = makeStatCard(statGrid, {
+      badge: "01",
+      label: "Issues flagged",
+      value: totalErrors !== null ? totalErrors : "n/a",
+      caption: totalCaption,
+      delta: prev ? deltaEl(totalErrors, prevTotalErrors) : null,
+      klass: "stat-big",
+      animate,
+    });
+    if (mobileViolationsTotal > 0) {
+      const footnote = document.createElement("p");
+      footnote.className = "stat-mobile-footnote";
+      footnote.textContent = `${mobileViolationsTotal.toLocaleString()} mobile issues across all sites`;
+      totalCard.appendChild(footnote);
+    }
+    statGrid.appendChild(totalCard);
 
     // Card 2: Clean scans
     const cleanCaption = document.createElement("span");

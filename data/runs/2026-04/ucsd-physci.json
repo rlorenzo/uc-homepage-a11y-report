@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucsd-physci",
   "name": "UC San Diego School of Physical Sciences",
@@ -661,70 +661,6 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "42.0pt (56px)",
-                "fontWeight": "bold",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"Cecilia smiling, hair down\" class=\"first-slide\" src=\"_images/banner-images/sommerfield-web-banner.jpg\">",
-                  "target": [
-                    "img[alt=\"Cecilia smiling, hair down\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h1 class=\"rt-text-light \" tabindex=\"0\">The Waves Around Us </h1>",
-          "target": [
-            "div[aria-label=\"1 out of 6\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > h1"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"Cecilia smiling, hair down\" class=\"first-slide\" src=\"_images/banner-images/sommerfield-web-banner.jpg\">",
-                  "target": [
-                    "img[alt=\"Cecilia smiling, hair down\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"rt-text-light \" tabindex=\"0\">In the pool, in her music, in her research, waves rule Cecilia's life.</p>",
-          "target": [
-            "div[aria-label=\"1 out of 6\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > .rt-text-light:nth-child(2)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
         {
           "any": [
             {
@@ -1488,6 +1424,1417 @@
             ".Navy > .container > .row > .col-md-10 > .panel-primary.panel > .panel-body > p > span"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button aria-controls=\"navbar\" aria-expanded=\"false\" class=\"navbar-toggle\" data-canvas=\"body\" data-target=\".navmenu\" data-toggle=\"offcanvas\" type=\"button\">",
+                  "target": [
+                    ".navbar-header > .navbar-toggle[aria-controls=\"navbar\"][data-canvas=\"body\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"col-sm-1 mobile-nav-icon\">\n                          MENU\n          \t\t\t    </div>",
+          "target": [
+            ".mobile-nav-icon"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230</span>",
+          "target": [
+            ".col-sm-8 > p > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>\n        Copyright © <span class=\"footer-copyright-year\">2026</span> Regents of the University of California.\n        All rights reserved.\n        </span>",
+          "target": [
+            "p > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"footer-copyright-year\">2026</span>",
+          "target": [
+            ".footer-copyright-year"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+          "target": [
+            ".footer-links > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/privacy.html\">Privacy</a>",
+          "target": [
+            ".footer-links > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/terms-of-use.html\">Terms of Use</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:physicalsciences@ucsd.edu\">Feedback</a>",
+          "target": [
+            ".footer-links > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 80.6,
+                "height": 17
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (80.6px by 17px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"mailto:physicalsciences@ucsd.edu\">Feedback</a>",
+                  "target": [
+                    ".footer-links > li:nth-child(4) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+          "target": [
+            ".footer-links > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (80.6px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 62,
+                "height": 17
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (62px by 17px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+                  "target": [
+                    ".footer-links > li:nth-child(1) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:physicalsciences@ucsd.edu\">Feedback</a>",
+          "target": [
+            ".footer-links > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (62px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://astro.ucsd.edu/\">\n        \t\t   \t\tAstronomy &amp; Astrophysics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"astro.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://chemistry.ucsd.edu/\">\n        \t\t   \t\tChemistry &amp; Biochemistry\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"chemistry.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(3)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://math.ucsd.edu/\">\n        \t\t   \t\tMathematics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"math.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://physics.ucsd.edu/\">\n        \t\t   \t\tPhysics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"physics.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.4pt (19.2px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img alt=\"Cecilia smiling, hair down\" class=\"first-slide\" src=\"_images/banner-images/sommerfield-web-banner.jpg\">",
+                  "target": [
+                    "img[alt=\"Cecilia smiling, hair down\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"rt-text-light \" tabindex=\"0\">The Waves Around Us </h1>",
+          "target": [
+            "div[aria-label=\"1 out of 6\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "26.4pt (35.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>U.S. News Graduate School Rankings</h2>",
+          "target": [
+            ".navy-orbs > .container > .text-indent > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The School of Physical Sciences has&nbsp;<span>been recognized by U.S. News &amp; World Report for its academic excellence with&nbsp;</span>top-ranked graduate programs across multiple departments:</p>",
+          "target": [
+            ".navy-orbs > .container > .row > .col-md-10 > .panel-primary.panel > .panel-body > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>been recognized by U.S. News &amp; World Report for its academic excellence with&nbsp;</span>",
+          "target": [
+            ".navy-orbs > .container > .row > .col-md-10 > .panel-primary.panel > .panel-body > p:nth-child(1) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\"><strong>CHEMISTRY &amp; BIOCHEMISTRY </strong>(Overall #20)<strong><br></strong></span>",
+          "target": [
+            "p:nth-child(2) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>CHEMISTRY &amp; BIOCHEMISTRY </strong>",
+          "target": [
+            "p:nth-child(2) > span > strong:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Biochemistry #8</span>",
+          "target": [
+            "li[aria-level=\"3\"]:nth-child(1) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Inorganic Chemistry #14</span>",
+          "target": [
+            "ul:nth-child(3) > li[aria-level=\"3\"]:nth-child(2) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Theoretical Chemistry #15</span>",
+          "target": [
+            "ul:nth-child(3) > li:nth-child(3) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Physical Chemistry #17</span>",
+          "target": [
+            "li[aria-level=\"3\"]:nth-child(4) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><span style=\"font-weight: 400;\"><strong>MATHEMATICS</strong>&nbsp;(</span>Overall #20)</p>",
+          "target": [
+            "p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>MATHEMATICS</strong>",
+          "target": [
+            "p:nth-child(4) > span > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Discrete Mathematics #5</span>",
+          "target": [
+            "ul:nth-child(5) > li:nth-child(1) > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Algebra #10</span>",
+          "target": [
+            "ul:nth-child(5) > li[aria-level=\"3\"]:nth-child(2) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Geometry #15</span>",
+          "target": [
+            "li[aria-level=\"3\"]:nth-child(3) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><span style=\"font-weight: 400;\"><strong>PHYSICS</strong>&nbsp;(</span>Overall #21)</p>",
+          "target": [
+            "p:nth-child(6)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>PHYSICS</strong>",
+          "target": [
+            "p:nth-child(6) > span > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Physics of Living Systems #5</span>",
+          "target": [
+            "ul:nth-child(7) > li:nth-child(1) > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-orbs\">",
+                  "target": [
+                    ".navy-orbs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">Condensed Matter #13</span>",
+          "target": [
+            "ul:nth-child(7) > li[aria-level=\"3\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://astro.ucsd.edu/\">\n        \t\t   \t\tAstronomy &amp; Astrophysics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"astro.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://chemistry.ucsd.edu/\">\n        \t\t   \t\tChemistry &amp; Biochemistry\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"chemistry.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(3)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://math.ucsd.edu/\">\n        \t\t   \t\tMathematics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"math.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wrapper \">",
+                  "target": [
+                    ".wrapper:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://physics.ucsd.edu/\">\n        \t\t   \t\tPhysics\n        \t\t   \t</a>",
+          "target": [
+            "h3 > a[href$=\"physics.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "26.4pt (35.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one Navy Blue, Grit\">",
+                  "target": [
+                    ".Navy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>About Us</h2>",
+          "target": [
+            ".Navy > .container > .text-indent > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one Navy Blue, Grit\">",
+                  "target": [
+                    ".Navy"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">",
+          "target": [
+            ".Navy > .container > .row > .col-md-10 > .panel-primary.panel > .panel-body > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "search-scope",
+              "relatedNodes": [
+                {
+                  "html": "<select class=\"search-scope\" id=\"search-scope\" name=\"search-scope\">",
+                  "target": [
+                    "#cse-search-box > select"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: search-scope"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<select class=\"search-scope\" id=\"search-scope\" name=\"search-scope\">",
+          "target": [
+            ".msearch > li > .search > .search-content > form > select"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: search-scope"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "q",
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"form-control search-term\" id=\"q\" name=\"search-term\" placeholder=\"Search...\" type=\"search\">",
+                  "target": [
+                    "#cse-search-box > .input-group > .form-control.search-term[name=\"search-term\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: q"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"form-control search-term\" id=\"q\" name=\"search-term\" placeholder=\"Search...\" type=\"search\">",
+          "target": [
+            ".msearch > li > .search > .search-content > form > .input-group > .form-control.search-term[name=\"search-term\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: q"
         }
       ]
     }

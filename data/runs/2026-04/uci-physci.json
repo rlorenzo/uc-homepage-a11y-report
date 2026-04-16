@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "uci-physci",
   "name": "UCI School of Physical Sciences",
@@ -676,6 +676,701 @@
               "data": {
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7472px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"wp-block-button__link has-base-color has-custom-blue-gradient-gradient-background has-text-color has-background has-link-color wp-element-button\" href=\"https://ps.uci.edu/ps-events-calendar/\" style=\"text-transform:capitalize\" role=\"button\">Event Calendar</a>",
+                  "target": [
+                    ".has-base-background-color.wp-block-column.wp-block-column-is-layout-flow > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .wp-block-button > .wp-block-button__link.has-custom-blue-gradient-gradient-background[role=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__link has-base-color has-custom-blue-gradient-gradient-background has-text-color has-background has-link-color wp-element-button\" href=\"https://ps.uci.edu/ps-events-calendar/\" style=\"text-transform:capitalize\" role=\"button\">Event Calendar</a>",
+          "target": [
+            ".has-base-background-color.wp-block-column.wp-block-column-is-layout-flow > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .wp-block-button > .wp-block-button__link.has-custom-blue-gradient-gradient-background[role=\"button\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<input type=\"text\" name=\"b_7fd4b2b6429de37a607f1b510_059d8e3ec8\" value=\"\">",
+                  "target": [
+                    "div[aria-hidden=\"true\"] > input[type=\"text\"][value=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should be disabled or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div aria-hidden=\"true\" style=\"position:absolute; left:-5000px;\">\n          <input type=\"text\" name=\"b_7fd4b2b6429de37a607f1b510_059d8e3ec8\" value=\"\">\n        </div>",
+          "target": [
+            "#mc_embed_signup_scroll > div[aria-hidden=\"true\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "14.6pt (19.4837px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"wp-block-heading has-base-color has-text-color has-link-color wp-elements-ba6aa729649c9e8aa4e4f9e89ceff59f\">Announcing The First AI Master’s in the UC System Built for Scientists</h2>",
+          "target": [
+            ".wp-elements-ba6aa729649c9e8aa4e4f9e89ceff59f"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"has-base-color has-text-color has-link-color wp-elements-4dc64575f1f28a64bbcb0a14614e5c19\">",
+          "target": [
+            ".wp-elements-4dc64575f1f28a64bbcb0a14614e5c19"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>ArtificiaI Intelligence is transforming how scientists work in industry.</strong>",
+          "target": [
+            ".wp-elements-4dc64575f1f28a64bbcb0a14614e5c19 > strong:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>9-month full-time Master of Applied AI for Science</strong>",
+          "target": [
+            "strong:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__link has-base-color has-custom-blue-gradient-gradient-background has-text-color has-background has-link-color wp-element-button\" href=\"https://sites.uci.edu/ai4sci/\" style=\"text-transform:capitalize\" role=\"button\">AI Masters Program Website</a>",
+          "target": [
+            "a[href$=\"ai4sci/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.3pt (36.4375px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"wp-block-heading has-text-align-left has-white-color has-text-color\" style=\"font-size:clamp(35.2px, 2.2rem + ((1vw - 3.2px) * 2.25), 64px);font-style:normal;font-weight:700;letter-spacing:0px;line-height:1\">Training the Next Generation of Scientists</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Expanding the boundaries of knowledge and preparing the next generation of scientists and mathematicians to lead in industry, academic and beyond. </p>",
+          "target": [
+            ".wp-container-core-group-is-layout-0b562c1c > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__lin...\" href=\"https://ps.uci.edu/a...\" style=\"padding-top:24px;pad...\" role=\"button\">",
+          "target": [
+            ".has-white-color.has-custom-font-size[href$=\"about-us/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.1pt (16.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-group align...\" style=\"margin-top:0;margin-...\">",
+                  "target": [
+                    ".is-style-section-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"is-style-text-annotation has-medium-font-size is-style-text-annotation--6\" style=\"text-transform:capitalize\">Shaping A Better Future for the World</p>",
+          "target": [
+            ".is-style-text-annotation"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.1pt (28.1721px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-group align...\" style=\"margin-top:0;margin-...\">",
+                  "target": [
+                    ".is-style-section-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"wp-block-heading has-accent-1-color has-text-color has-link-color has-x-large-font-size wp-elements-420e141f97977c466f13058e9d985837\">The School of Physical Sciences</h2>",
+          "target": [
+            ".has-accent-1-color"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.1pt (16.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-group align...\" style=\"margin-top:0;margin-...\">",
+                  "target": [
+                    ".is-style-section-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"is-style-default has-medium-font-size\">",
+          "target": [
+            ".is-vertically-aligned-center.wp-block-column.wp-block-column-is-layout-flow:nth-child(1) > .is-style-default.has-medium-font-size"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"wp-block-button__link has-custom-blue-gradient-gradient-background has-background wp-element-button\" href=\"https://heyzine.com/flip-book/2025SoPS\" style=\"text-transform:capitalize\" role=\"button\">Read the Report</a>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .wp-block-button > .wp-block-button__link.has-custom-blue-gradient-gradient-background[role=\"button\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__link has-custom-blue-gradient-gradient-background has-background wp-element-button\" href=\"https://heyzine.com/flip-book/2025SoPS\" style=\"text-transform:capitalize\" role=\"button\">Read the Report</a>",
+          "target": [
+            ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .wp-block-button > .wp-block-button__link.has-custom-blue-gradient-gradient-background[role=\"button\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.1pt (16.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"wp-block-button__link has-custom-blue-gradient-gradient-background has-background has-medium-font-size has-custom-font-size wp-element-button\" href=\"https://ps.uci.edu/more-news/\" style=\"text-transform:capitalize\" role=\"button\">Physical Sciences News</a>",
+                  "target": [
+                    "a[href$=\"more-news/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__link has-custom-blue-gradient-gradient-background has-background has-medium-font-size has-custom-font-size wp-element-button\" href=\"https://ps.uci.edu/more-news/\" style=\"text-transform:capitalize\" role=\"button\">Physical Sciences News</a>",
+          "target": [
+            "a[href$=\"more-news/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "14.6pt (19.4837px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"wp-block-heading has-base-color has-text-color has-link-color wp-elements-ba6aa729649c9e8aa4e4f9e89ceff59f\">Announcing The First AI Master’s in the UC System Built for Scientists</h2>",
+          "target": [
+            ".wp-elements-ba6aa729649c9e8aa4e4f9e89ceff59f"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"has-base-color has-text-color has-link-color wp-elements-4dc64575f1f28a64bbcb0a14614e5c19\">",
+          "target": [
+            ".wp-elements-4dc64575f1f28a64bbcb0a14614e5c19"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>ArtificiaI Intelligence is transforming how scientists work in industry.</strong>",
+          "target": [
+            ".wp-elements-4dc64575f1f28a64bbcb0a14614e5c19 > strong:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>9-month full-time Master of Applied AI for Science</strong>",
+          "target": [
+            "strong:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.6pt (14.0858px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-coblocks-he...\" style=\"background-image:url...\">",
+                  "target": [
+                    ".wp-block-coblocks-hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"wp-block-button__link has-base-color has-custom-blue-gradient-gradient-background has-text-color has-background has-link-color wp-element-button\" href=\"https://sites.uci.edu/ai4sci/\" style=\"text-transform:capitalize\" role=\"button\">AI Masters Program Website</a>",
+          "target": [
+            "a[href$=\"ai4sci/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.1pt (28.1721px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wp-block-group align...\" style=\"margin-top:0;margin-...\">",
+                  "target": [
+                    ".is-style-default.has-custom-blue-gradient-gradient-background.alignfull"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"wp-block-heading has-text-align-center has-base-color has-text-color has-link-color has-x-large-font-size wp-elements-852bd521f487d46fc21fc495d7037ccb\" style=\"padding-top:0;text-transform:capitalize\">Upcoming Events<br></h2>",
+          "target": [
+            ".wp-elements-852bd521f487d46fc21fc495d7037ccb"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.6pt (14.0858px)",
                 "fontWeight": "normal",
                 "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"

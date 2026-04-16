@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucla-arts",
   "name": "UCLA School of the Arts and Architecture",
@@ -8,7 +8,7 @@
   "type": "school",
   "category": "humanities-arts",
   "url": "https://arts.ucla.edu",
-  "element_count": 778,
+  "element_count": 1198,
   "violations": [
     {
       "id": "aria-valid-attr-value",
@@ -1723,6 +1723,1819 @@
             "div[data-sr-id=\"73\"] > .post__category.link1--emphasis[ng-bind=\"postData.category\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "meta-viewport",
+      "impact": "moderate",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag2aa",
+        "wcag144",
+        "EN-301-549",
+        "EN-9.1.4.4",
+        "ACT",
+        "RGAAv4",
+        "RGAA-10.4.2"
+      ],
+      "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "meta-viewport",
+              "data": "user-scalable=no",
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "user-scalable=no on <meta> tag disables zooming on mobile devices"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">",
+          "target": [
+            "meta[name=\"viewport\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  user-scalable=no on <meta> tag disables zooming on mobile devices"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(1) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(1) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Spring 2026 Message from Interim Dean Lionel Popkin</h1>",
+          "target": [
+            "div[data-sr-id=\"3\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(2) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Announcement</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(2) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Visionary Media Artist and UCLA Arts Alumnus Refik Anadol to Deliver UCLA Arts Commencement Address</h1>",
+          "target": [
+            "div[data-sr-id=\"6\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Design Media Arts</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(3) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(3) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Alumnus Vinny Roca’s Video Games Explore Labor and Systems of Meaning</h1>",
+          "target": [
+            "div[data-sr-id=\"9\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Architecture &amp; Urban Design</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(4) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(4) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Art</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(5) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(5) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">After UCLA, Claudia Vera Rosas ’15 Founded a Bilingual School Rooted in Nature and Community</h1>",
+          "target": [
+            "div[data-sr-id=\"15\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">World Arts &amp; Cultures / Dance</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(6) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(6) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">For Dr. Shamell Bell '19, Dance Is a Tool for Resistance and Healing</h1>",
+          "target": [
+            "div[data-sr-id=\"18\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(7) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(7) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Architecture &amp; Urban Design</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(8) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(8) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Meet the Artist Who Supports the Department of Architecture and Urban Design</h1>",
+          "target": [
+            "div[data-sr-id=\"24\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(9) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(9) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Winter 2026 Message from Interim Dean Lionel Popkin</h1>",
+          "target": [
+            "div[data-sr-id=\"27\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">World Arts &amp; Cultures / Dance</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(10) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(10) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"post__info__subtitle link1 ng-binding\" ng-bind=\"postData.subtitle\">Five Things to See and Do Near L.A., Handpicked by UCLA Arts' Will Rawls</h2>",
+          "target": [
+            "div[data-sr-id=\"30\"] > .post__info > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Design Media Arts</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(11) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(11) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Meet the Artists and Designers Who Support the Department of Design Media Arts</h1>",
+          "target": [
+            "div[data-sr-id=\"33\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">World Arts &amp; Cultures / Dance</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(12) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(12) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Justina Blakeney '01 Hopes To Ignite Creativity Through Her Art</h1>",
+          "target": [
+            "div[data-sr-id=\"36\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(13) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(13) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(14) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Announcement</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(14) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Welcome the 2025-26 Dean’s Student Council</h1>",
+          "target": [
+            "div[data-sr-id=\"42\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Architecture &amp; Urban Design</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(15) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(15) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Art</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(16) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(16) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Susan Aparicio M.F.A. '22 Illuminates Memory Through Her Art</h1>",
+          "target": [
+            "div[data-sr-id=\"48\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Design Media Arts</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(17) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(17) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"post__info__subtitle link1 ng-binding\" ng-bind=\"postData.subtitle\">Five Things to See and Do Near L.A., Handpicked by UCLA Arts' Steve Anderson</h2>",
+          "target": [
+            "div[data-sr-id=\"51\"] > .post__info > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(18) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(18) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Fall 2025 Message from Interim Dean Lionel Popkin</h1>",
+          "target": [
+            "div[data-sr-id=\"54\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Art</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(19) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(19) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">Meet the Artist Mentors Who Support the Department of Art</h1>",
+          "target": [
+            "div[data-sr-id=\"57\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Design Media Arts</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(20) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(20) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">UCLA Arts Alumna Veronica Peitong Chen ‘16 on Creativity, AI, and Architectural Thinking</h1>",
+          "target": [
+            "div[data-sr-id=\"60\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(21) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(21) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">UCLA School of the Arts and Architecture Inaugural Student Exhibition</h1>",
+          "target": [
+            "div[data-sr-id=\"63\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(22) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(22) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">UCLA Arts Announces New Faculty Appointments</h1>",
+          "target": [
+            "div[data-sr-id=\"66\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Architecture &amp; Urban Design</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(23) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(23) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"post__info__title ng-binding\" ng-bind=\"postData.title\">West of West: Shaping Architecture Through Curiosity and Collaboration</h1>",
+          "target": [
+            "div[data-sr-id=\"69\"] > .post__info > .post__info__title[ng-bind=\"postData.title\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">Architecture &amp; Urban Design</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(24) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "div[ng-repeat=\"post in postsData\"][post=\"\"][post-data=\"post\"]:nth-child(24) > div > .post[ng-mouseenter=\"rolloverArticle(postData)\"][ng-mouseleave=\"rolloverArticle(false)\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.programs[0].name\" class=\"ng-binding\">school-wide</span>",
+          "target": [
+            "a[href$=\"2024-25-in-review/\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.programs[0].name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span ng-bind=\"postData.category\" class=\"ng-binding\">Story</span>",
+          "target": [
+            "a[href$=\"2024-25-in-review/\"] > .post__category-program.link1--emphasis.link1 > span[ng-bind=\"postData.category\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"post__info__subtitle link1 ng-binding\" ng-bind=\"postData.subtitle\">An End-Of-Year Message From Interim Dean Lionel Popkin</h2>",
+          "target": [
+            "div[data-sr-id=\"75\"] > .post__info > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         }
       ]
     }

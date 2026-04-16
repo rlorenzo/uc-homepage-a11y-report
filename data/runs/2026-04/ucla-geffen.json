@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucla-geffen",
   "name": "David Geffen School of Medicine at UCLA",
@@ -242,7 +242,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
+                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
                   "target": [
                     ".card.card--news:nth-child(3)"
                   ]
@@ -276,7 +276,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
+                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
                   "target": [
                     ".card.card--news:nth-child(3)"
                   ]
@@ -289,7 +289,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span>2 min read\n</span>",
+          "html": "<span>4 min read\n</span>",
           "target": [
             ".card.card--news:nth-child(3) > .card__content > .card__meta > .readtime > span"
           ],
@@ -310,7 +310,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
+                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
                   "target": [
                     ".card.card--news:nth-child(4)"
                   ]
@@ -344,7 +344,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
+                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
                   "target": [
                     ".card.card--news:nth-child(4)"
                   ]
@@ -357,7 +357,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span>4 min read\n</span>",
+          "html": "<span>2 min read\n</span>",
           "target": [
             ".card.card--news:nth-child(4) > .card__content > .card__meta > .readtime > span"
           ],
@@ -633,6 +633,775 @@
                 "bgColor": "#ffffff",
                 "contrastRatio": 1,
                 "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news-article/common-antidepressants-could-help-the-immune-system\" class=\"button button--primary\">\n    Learn More About Dr. Yang’s Work\n      </a>",
+          "target": [
+            ".quote__cta > .button--primary.button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div id=\"onetrust-policy-text\">",
+          "target": [
+            "#onetrust-policy-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "emergency",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "medschool.ucla.edu",
+                  "port": "",
+                  "pathname": "/departments/administrative/emergencies/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"menu__link ext\" href=\"https://www.bso.ucla.edu/\" data-extlink=\"\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"(opens in a new window)\">Emergency</a>",
+                  "target": [
+                    "a[href$=\"bso.ucla.edu/\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/departments/administrative/emergencies\" class=\"menu__link menu__link--link\" data-drupal-link-system-path=\"node/3056\">Emergency</a>",
+          "target": [
+            ".menu__item--link.menu__item:nth-child(6) > .menu__link--link.menu__link[data-drupal-link-system-path=\"node/3056\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    },
+    {
+      "id": "video-caption",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ],
+      "description": "Ensure <video> elements have captions",
+      "help": "<video> elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "caption",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Check that captions are available for the element"
+            }
+          ],
+          "impact": "critical",
+          "html": "<video aria-label=\"Keep on rising.\" autoplay=\"true\" loop=\"true\" muted=\"true\" width=\"1900\" height=\"650\">\n        <source src=\"/sites/default/files/2025-10/rising-edu.mp4\" type=\"video/mp4\">\n      </video>",
+          "target": [
+            "video"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2874af",
+                "contrastRatio": 4.99,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"site-alert\">",
+                  "target": [
+                    ".site-alert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.99 (foreground color: #ffffff, background color: #2874af, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Learn how UC is closely monitoring updates from the federal government.</strong>",
+          "target": [
+            "strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.99 (foreground color: #ffffff, background color: #2874af, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-25T12:00:00Z\">March 25, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-03-25T12:00:00Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/articles/news/a-future-physician-inspired-by-family-values\">",
+                  "target": [
+                    ".card.card--news:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-03-23T12:00:00Z\">March 23, 2026</time>",
+          "target": [
+            "time[datetime=\"2026-03-23T12:00:00Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/articles/news/a-future-physician-inspired-by-family-values\">",
+                  "target": [
+                    ".card.card--news:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>3 min read\n</span>",
+          "target": [
+            ".card.card--news:nth-child(1) > .card__content > .card__meta > .readtime > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/three-bruin-generations-celebrate-the-familys-first\">",
+                  "target": [
+                    ".card.card--news:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2025-12-08T12:00:00Z\">December 08, 2025</time>",
+          "target": [
+            "time[datetime=\"2025-12-08T12:00:00Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/three-bruin-generations-celebrate-the-familys-first\">",
+                  "target": [
+                    ".card.card--news:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>3 min read\n</span>",
+          "target": [
+            ".card.card--news:nth-child(2) > .card__content > .card__meta > .readtime > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
+                  "target": [
+                    ".card.card--news:nth-child(3)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2025-11-07T12:00:00Z\">November 07, 2025</time>",
+          "target": [
+            ".card.card--news:nth-child(3) > .card__content > .card__meta > .date.card__date > span > time[datetime=\"2025-11-07T12:00:00Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/student-cherishes-similarities-between-the-military-and\">",
+                  "target": [
+                    ".card.card--news:nth-child(3)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>4 min read\n</span>",
+          "target": [
+            ".card.card--news:nth-child(3) > .card__content > .card__meta > .readtime > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
+                  "target": [
+                    ".card.card--news:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2025-11-07T12:00:00Z\">November 07, 2025</time>",
+          "target": [
+            ".card.card--news:nth-child(4) > .card__content > .card__meta > .date.card__date > span > time[datetime=\"2025-11-07T12:00:00Z\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"card card--news \" about=\"/news-article/from-active-duty-to-ucla\">",
+                  "target": [
+                    ".card.card--news:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>2 min read\n</span>",
+          "target": [
+            ".card.card--news:nth-child(4) > .card__content > .card__meta > .readtime > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title field--type-string field--label-hidden field__item\">A Legacy Defined by Discovery</div>",
+          "target": [
+            ".grid__columns--3.bg-blue-700.cards-grid > .layout__region--heading.cards-grid__header > .section-heading.paragraph--type--section-heading.container > .section-heading__title > .field--name-field-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".grid__columns--3.bg-blue-700.cards-grid > .layout__region--heading.cards-grid__header > .section-heading.paragraph--type--section-heading.container > .section-heading__teaser > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"callout__title\">\n      A UCLA Health team has performed the first human bladder transplant\n  </h2>",
+          "target": [
+            ".is-reversed > .callout__inner > .callout__content--text > .callout__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UCLA Health Urology has long been at the frontier of urologic transplantation, with pioneering research in kidney transplantation and now, bladder transplantation.</p>",
+          "target": [
+            ".is-reversed > .callout__inner > .callout__content--text > .callout__teaser > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschool.ucla.edu/news-article/first-human-bladder-transplant-performed-at-ucla\" class=\"button button--primary\" onclick=\"typeof _sz !== 'undefined' &amp;&amp; _sz.push(['event', 'CTA', 'Conversion', 'Research Content']);\">\n    Learn About This Breakthrough\n      </a>",
+          "target": [
+            ".is-reversed > .callout__inner > .callout__content--text > .button--primary.button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<blockquote class=\"quote__text\">",
+          "target": [
+            "blockquote"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<html lang=\"en\" dir=\"ltr\" prefix=\"content: http://purl...\" data-theme=\"dgsom\" data-alert=\"true\" class=\"js fontawesome-i2svg...\">",
+                  "target": [
+                    "html"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"quote__author\">– Lili Yang, PhD, Microbiology, Immunology &amp; Molecular Genetics (MIMG)</p>",
+          "target": [
+            ".quote__author"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "10.5pt (14px)",
                 "fontWeight": "bold",
                 "messageKey": "equalRatio",
                 "expectedContrastRatio": "4.5:1"
