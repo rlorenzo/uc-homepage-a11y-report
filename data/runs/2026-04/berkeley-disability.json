@@ -1,0 +1,347 @@
+{
+  "month": "2026-04",
+  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "axe_version": "4.11.2",
+  "site": "berkeley-disability",
+  "name": "UC Berkeley Disabled Students' Program",
+  "campus": "berkeley",
+  "type": "disability",
+  "category": "disability",
+  "url": "https://dsp.berkeley.edu",
+  "element_count": 606,
+  "violations": [
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 31,
+                "height": 23.5
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23.6,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input placeholder=\"Search this site\" class=\"form-control form-control form-text\" type=\"text\" id=\"edit-keys--2\" name=\"keys\" value=\"\" size=\"20\" maxlength=\"255\">",
+                  "target": [
+                    "#edit-keys--2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"submit\" id=\"edit-submit--2\" name=\"op\" value=\"Submit Search\" class=\"form-submit btn btn-default btn-primary\"><span class=\"fa fa-search\"></span> <span class=\"button-text\">Submit Search</span></button>",
+          "target": [
+            "#edit-submit--2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-label\">\n    <div class=\"openberkeley-widgets-label-inner container\">\n      <h2>DSP Has MOVED to CREEKSIDE CENTER</h2>\n    </div>\n  </div>",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-golden-gate > .openberkeley-widgets-label"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>DSP Has MOVED to CREEKSIDE CENTER</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-golden-gate > .openberkeley-widgets-label > .container.openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-label\">\n    <div class=\"openberkeley-widgets-label-inner container\">\n      <h2>DSP Proctoring is located at 414 MLK Jr. Building</h2>\n    </div>\n  </div>",
+                  "target": [
+                    ".openberkeley-widgets-band.openberkeley-widgets-color-scheme-web-medalist.fieldable-panels-pane > .openberkeley-widgets-label"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>DSP Proctoring is located at 414 MLK Jr. Building</h2>",
+          "target": [
+            ".openberkeley-widgets-band.openberkeley-widgets-color-scheme-web-medalist.fieldable-panels-pane > .openberkeley-widgets-label > .container.openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Our Mission</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-lap-lane > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".openberkeley-widgets-label-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-rose-garden\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-rose-garden"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>DSP Spring 2026 Drop-In Hours and Specialist Onsite Days</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-rose-garden > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-wellman-tile\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-wellman-tile"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Meet the DSP Team</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-wellman-tile > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-soybean\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-soybean"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Accessible Information Management System (AIM)</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-soybean > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-medalist\">",
+                  "target": [
+                    ".openberkeley-widgets-promo.openberkeley-widgets-color-scheme-web-medalist.fieldable-panels-pane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Give to DSP</h2>",
+          "target": [
+            ".openberkeley-widgets-promo.openberkeley-widgets-color-scheme-web-medalist.fieldable-panels-pane > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ]
+}

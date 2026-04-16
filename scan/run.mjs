@@ -4,6 +4,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { updateHistory } from "./update-history.mjs";
+import { RULE_DESCRIPTIONS } from "../site/assets/data/constants.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -294,9 +295,7 @@ async function scanSite(site) {
       url: site.url,
       element_count: elementCount,
       violations: axeResults.violations,
-      passes: axeResults.passes,
       incomplete: axeResults.incomplete,
-      inapplicable: axeResults.inapplicable,
     };
 
     await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(fullResult, null, 2));
@@ -387,5 +386,19 @@ await browser.close();
 
 // Append (or replace) this month's rows in history.json.
 await updateHistory(results);
+
+// Warn about violation rules that have no friendly description in the report.
+const seenRules = new Set(
+  results.flatMap((r) => [
+    ...Object.keys(r.violations_by_rule || {}),
+    ...Object.keys(r.reach_violations_by_rule || {}),
+  ]),
+);
+const uncovered = [...seenRules].filter((id) => !RULE_DESCRIPTIONS[id]).sort();
+if (uncovered.length) {
+  console.warn(`\n⚠  ${uncovered.length} violation rule(s) missing from RULE_DESCRIPTIONS:`);
+  for (const id of uncovered) console.warn(`   - ${id}`);
+  console.warn("   Add descriptions in site/assets/data/constants.js\n");
+}
 
 console.log("Scan complete.");
