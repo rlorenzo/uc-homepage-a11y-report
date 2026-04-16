@@ -394,18 +394,28 @@ function buildMobileCard(row, prevRow, showCategoryTag) {
   }
   hBlock.appendChild(slugRow);
   cardHeader.appendChild(hBlock);
-
-  const errCount = document.createElement("div");
-  errCount.className = "card-error-count";
-  errCount.textContent = failed ? "—" : String(row.violations_total);
-  cardHeader.appendChild(errCount);
   card.appendChild(cardHeader);
 
-  if (!failed && (row.mobile_violations_total || 0) > 0) {
-    const mobileBadge = document.createElement("span");
-    mobileBadge.className = "card-mobile-badge";
-    mobileBadge.textContent = `${row.mobile_violations_total} mobile`;
-    card.appendChild(mobileBadge);
+  if (!failed) {
+    const desktopCount = row.violations_total || 0;
+    const mobileCount = row.mobile_violations_total || 0;
+    if (desktopCount > 0 || mobileCount > 0) {
+      const badges = document.createElement("div");
+      badges.className = "card-viewport-badges";
+      if (desktopCount > 0) {
+        const dBadge = document.createElement("span");
+        dBadge.className = "pill-desktop";
+        dBadge.textContent = `Desktop ${desktopCount}`;
+        badges.appendChild(dBadge);
+      }
+      if (mobileCount > 0) {
+        const mBadge = document.createElement("span");
+        mBadge.className = "pill-mobile";
+        mBadge.textContent = `Mobile ${mobileCount}`;
+        badges.appendChild(mBadge);
+      }
+      card.appendChild(badges);
+    }
   }
 
   if (isClean) {
