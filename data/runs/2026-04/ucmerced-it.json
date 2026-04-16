@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucmerced-it",
   "name": "UC Merced Office of Information Technology",
@@ -8,7 +8,7 @@
   "type": "it",
   "category": "it",
   "url": "https://it.ucmerced.edu",
-  "element_count": 682,
+  "element_count": 683,
   "violations": [],
   "incomplete": [
     {
@@ -49,7 +49,7 @@
           "impact": "serious",
           "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
           "target": [
-            "#views_slideshow_cycle_div_panoramic_slideshow-block_2_1_1"
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_2_1_2"
           ],
           "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
         }
@@ -74,6 +74,31 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content -field_panoramic_slideshow_colors\">The Service Hub interface allows you to easily search for information about our services, support options, and how-to documentation, plus view all your open tickets, find help, and more. Click to...</div>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_2_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-field-panoramic-slideshow-text.views-field > .-field_panoramic_slideshow_colors.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
         {
           "any": [
             {
@@ -376,5 +401,7 @@
         }
       ]
     }
-  ]
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": []
 }

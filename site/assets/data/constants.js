@@ -115,6 +115,7 @@ export const RULE_DESCRIPTIONS = {
   "target-size": "Tap target is smaller than 24×24 pixels",
   "aria-prohibited-attr": "An ARIA attribute is used where it's not allowed",
   "aria-allowed-attr": "An ARIA attribute doesn't belong on this element",
+  "aria-command-name": "Button, link, or menuitem has no accessible name",
   "aria-required-attr": "A required ARIA attribute is missing",
   "aria-hidden-focus": "Focusable element is hidden from assistive tech",
   label: "Form control has no label",

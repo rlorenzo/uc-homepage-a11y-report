@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "uci-library",
   "name": "UC Irvine Libraries",
@@ -871,6 +871,617 @@
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "library events",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "news.lib.uci.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a id=\"event-calendar\" href=\"http://news.lib.uci.edu/library-events\">Library Events <i class=\"fa fa-arrow-right yellow-font\"></i></a>",
+                  "target": [
+                    "#event-calendar"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://news.lib.uci.edu\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Library Events', 'Home (Quicklinks)']);\" rel=\" noopener\" target=\"_blank\">Library Events</a>",
+          "target": [
+            "a[rel=\" noopener\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1a66a1",
+                "contrastRatio": 6.07,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"navbar-header row visible-xs\" id=\"navbar-mobile\">",
+                  "target": [
+                    "#navbar-mobile"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.07 (foreground color: #ffffff, background color: #1a66a1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"center-block\" data-target=\"#menu-row-mobile\" data-toggle=\"collapse\" id=\"utility-main-nav-collapse\" type=\"button\">MENU</button>",
+          "target": [
+            "#utility-main-nav-collapse"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.07 (foreground color: #ffffff, background color: #1a66a1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#1966a2",
+                "bgColor": "#f5f5f5",
+                "contrastRatio": 5.56,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--three-column paragraph--view-mode--default\">",
+                  "target": [
+                    ".paragraph--type--three-column"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.56 (foreground color: #1966a2, background color: #f5f5f5, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"home_hours_text\">8am - 11pm</div>",
+          "target": [
+            ".home_hours_content:nth-child(1) > .home_hours_text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.56 (foreground color: #1966a2, background color: #f5f5f5, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#1966a2",
+                "bgColor": "#f5f5f5",
+                "contrastRatio": 5.56,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--three-column paragraph--view-mode--default\">",
+                  "target": [
+                    ".paragraph--type--three-column"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.56 (foreground color: #1966a2, background color: #f5f5f5, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"home_hours_text\">12pm - 3pm</div>",
+          "target": [
+            ".home_hours_content:nth-child(2) > .home_hours_text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.56 (foreground color: #1966a2, background color: #f5f5f5, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#216ddf",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.86,
+                "fontSize": "17.3pt (23px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"main-site path-frontpage page-node-type-page has-glyphicons\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.86 (foreground color: #216ddf, background color: #ffffff, font size: 17.3pt (23px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"home-slider-heading\">New Podcasting Studio at Science Library</div>",
+          "target": [
+            "#slick-slide00 > div > .slide--0.slick__slide.slide > .views-field.views-field-nothing > .field-content > .carousel-text > a[target=\"_blank\"] > .home-slider-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.86 (foreground color: #216ddf, background color: #ffffff, font size: 17.3pt (23px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0064a4",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.25,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"help-button unstyle-btn\" data-target=\"#askUsModal\" data-toggle=\"modal\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Ask button', 'Home']);\">",
+                  "target": [
+                    "button[data-target=\"#askUsModal\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">In-person research help at the Langson Library Check Out Desk, Mondays through Fridays, 12:00pm to 3:00pm.</p>",
+          "target": [
+            "button[data-target=\"#askUsModal\"] > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0064a4",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.25,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"help-button unstyle-btn\" data-target=\"#chatWithLibrarianModal\" data-toggle=\"modal\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Chat button', 'Home']);\">",
+                  "target": [
+                    ".unstyle-btn.help-button[data-target=\"#chatWithLibrarianModal\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">Chat with a real person when you have research questions or general questions about the UC Irvine Libraries. Available Mondays-Thursdays, 10 am to 5 pm, and Fridays, 10 am to 4 pm.</p>",
+          "target": [
+            ".unstyle-btn.help-button[data-target=\"#chatWithLibrarianModal\"] > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0064a4",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.25,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"help-button unstyle-btn\" data-target=\"#meetModal\" data-toggle=\"modal\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Meet button', 'Home']);\">",
+                  "target": [
+                    "button[data-target=\"#meetModal\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">Schedule a research appointment.</p>",
+          "target": [
+            "button[data-target=\"#meetModal\"] > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0064a4",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.25,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"help-button unstyle-btn\" data-target=\"#emailModal\" data-toggle=\"modal\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Email button', 'Home']);\">",
+                  "target": [
+                    "button[data-target=\"#emailModal\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">Email your library-related questions and get a response within 24 hours Monday through Friday (excluding holidays).</p>",
+          "target": [
+            "button[data-target=\"#emailModal\"] > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0064a4",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.25,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"help-button unstyle-btn\" data-target=\"#callModal\" data-toggle=\"modal\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Call button', 'Home']);\">",
+                  "target": [
+                    "button[data-target=\"#callModal\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">Find useful phone numbers.</p>",
+          "target": [
+            "button[data-target=\"#callModal\"] > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.25 (foreground color: #0064a4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1966a2",
+                "bgColor": "#d3d3d3",
+                "contrastRatio": 4.05,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-default\" href=\"/hours?lid=10394\" target=\"_blank\">More Hours</a>",
+                  "target": [
+                    "a[href=\"/hours?lid=10394\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.05 (foreground color: #1966a2, background color: #d3d3d3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-default\" href=\"/hours?lid=10394\" target=\"_blank\">More Hours</a>",
+          "target": [
+            "a[href=\"/hours?lid=10394\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.05 (foreground color: #1966a2, background color: #d3d3d3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "empty",
+                "needsReview": "aria-hidden"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute value is ignored while empty: aria-hidden"
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span aria-hidden=\"\" class=\"fa fa-search\" style=\"font-size:20px;\">&nbsp;</span>",
+          "target": [
+            ".fa-search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute value is ignored while empty: aria-hidden"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-title\">Ask Our Chatbot</p>",
+          "target": [
+            ".button-link > .inner-container > .text-container > .help-button-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"help-button-text\">ANTswers is an interactive FAQ that can answer simple questions about library resources and services.</p>",
+          "target": [
+            ".button-link > .inner-container > .text-container > .help-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>New Version Available!</strong>",
+          "target": [
+            "#chatbotLink > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "chatWithLibrarianModal",
+              "relatedNodes": [
+                {
+                  "html": "<div aria-labelledby=\"chatWithLibrarianModal\" class=\"modal fade help_modal\" id=\"chatWithLibrarianModal\" role=\"dialog\" style=\"max-width: 600px; margin: 0px auto; display: none\" tabindex=\"-1\">",
+                  "target": [
+                    ".help-section > .modal.fade[aria-labelledby=\"chatWithLibrarianModal\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: chatWithLibrarianModal"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<div aria-labelledby=\"chatWithLibrarianModal\" class=\"modal fade help_modal\" id=\"chatWithLibrarianModal\" role=\"dialog\" style=\"max-width:800px; width:800px;margin:0 auto;\" tabindex=\"-1\">",
+          "target": [
+            "#block-chatboxmessagecustomblock > .modal.fade[aria-labelledby=\"chatWithLibrarianModal\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: chatWithLibrarianModal"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
         {
           "any": [],
           "all": [

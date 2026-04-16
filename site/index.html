@@ -41,11 +41,11 @@
       </h1>
       <p class="hero-lede" id="hero-lede">
         Every month we run <a href="https://github.com/dequelabs/axe-core">axe-core</a>
-        against <span id="hero-site-count">—</span> UC web properties — campus homepages,
-        admissions pages, and schools and colleges across all 10 University of California
-        campuses and the Office of the President. This is a shared checkpoint, not a
-        scoreboard — a way to keep accessibility in view and make the web
-        better for the widest possible audience.
+        against <span id="hero-site-count">—</span> UC web properties at both mobile
+        and desktop widths — campus homepages, admissions pages, and schools and colleges
+        across all 10 University of California campuses and the Office of the President.
+        This is a shared checkpoint, not a scoreboard — a way to keep accessibility
+        in view and make the web better for the widest possible audience.
       </p>
       <dl class="hero-byline" id="hero-byline">
         <div>
@@ -99,10 +99,10 @@
     <section id="at-a-glance" class="section" aria-labelledby="stats-heading">
       <div class="section-head">
         <h2 id="stats-heading">This month at a glance</h2>
-        <a class="section-num" href="#section=at-a-glance" data-section-link="at-a-glance" aria-label="Link to This month at a glance section">§ 01</a>
+        <a class="section-num" href="#section=at-a-glance" data-section-link="at-a-glance" aria-label="§ 01 — Link to This month at a glance section">§ 01</a>
       </div>
       <p class="section-lede">
-        Every number below reflects <strong>required</strong> issues only — axe-core rules tagged WCAG 2.0 or 2.1 Level A/AA, the baseline under ADA Title II and Section 508. Reach-goal issues (WCAG 2.1 AAA and WCAG 2.2) are tracked separately in the campus table.
+        Every number below reflects <strong>required</strong> issues only — axe-core rules tagged WCAG 2.0 or 2.1 Level A/AA, the baseline under ADA Title II and Section 508. Reach-goal issues (WCAG 2.1 AAA and WCAG 2.2) are tracked separately in the campus table. The <strong>Mobile</strong> column shows issues found only at mobile viewport width.
       </p>
       <div class="stat-grid" id="stat-grid" role="list"></div>
     </section>
@@ -111,7 +111,7 @@
     <section id="why-it-matters" class="section" aria-labelledby="spotlight-heading">
       <div class="section-head">
         <h2 id="spotlight-heading">Why it matters</h2>
-        <a class="section-num" href="#section=why-it-matters" data-section-link="why-it-matters" aria-label="Link to Why it matters section">§ 02</a>
+        <a class="section-num" href="#section=why-it-matters" data-section-link="why-it-matters" aria-label="§ 02 — Link to Why it matters section">§ 02</a>
       </div>
       <div class="hall" id="hall"></div>
     </section>
@@ -120,21 +120,22 @@
     <section id="results-by-campus" class="section" aria-labelledby="campus-heading">
       <div class="section-head">
         <h2 id="campus-heading">Results by campus</h2>
-        <a class="section-num" href="#section=results-by-campus" data-section-link="results-by-campus" aria-label="Link to Results by campus section">§ 03</a>
+        <a class="section-num" href="#section=results-by-campus" data-section-link="results-by-campus" aria-label="§ 03 — Link to Results by campus section">§ 03</a>
       </div>
       <p class="section-lede" id="campus-description">
-        Every UC site that matches the current filter is listed below, grouped by campus when the view includes schools and colleges. <strong>Required</strong> is the WCAG 2.0/2.1 A/AA baseline. <strong>Reach</strong> covers WCAG 2.1 AAA and all of WCAG 2.2 — aspirational, not yet legally required in the US. Select any row to see the specific rules and what they mean in plain language.
+        Every UC site that matches the current filter is listed below, grouped by campus when the view includes schools and colleges. <strong>Desktop</strong> is the WCAG 2.0/2.1 A/AA violation count at desktop width (1440px). <strong>Mobile</strong> is the same at mobile width (375px). <strong>Reach</strong> covers WCAG 2.1 AAA and all of WCAG 2.2 — aspirational, not yet legally required in the US. Select any row to see the specific rules and what they mean in plain language.
       </p>
 
       <div class="campus-wrap">
         <table class="campus-table" id="campus-table" aria-describedby="campus-description">
           <caption class="visually-hidden">
-            Table listing each UC site matching the current filter, with columns for site name, required violations, reach-goal violations, impact mix, element count, month-over-month change, and an expandable details button.
+            Table listing each UC site matching the current filter, with columns for site name, desktop violations, mobile violations, reach-goal violations, impact mix, element count, month-over-month change, and an expandable details button.
           </caption>
           <thead>
             <tr>
               <th scope="col" class="sortable" data-sort="name">Site</th>
-              <th scope="col" class="sortable" data-sort="violations_total">Required</th>
+              <th scope="col" class="sortable" data-sort="violations_total">Desktop</th>
+              <th scope="col" class="sortable" data-sort="mobile_violations_total">Mobile</th>
               <th scope="col" class="sortable" data-sort="reach_violations_total">Reach</th>
               <th scope="col">Impact mix</th>
               <th scope="col" class="sortable" data-sort="element_count">Elements</th>
@@ -161,7 +162,7 @@
     <section id="errors-over-time" class="section" aria-labelledby="trend-heading">
       <div class="section-head">
         <h2 id="trend-heading">Errors over time</h2>
-        <a class="section-num" href="#section=errors-over-time" data-section-link="errors-over-time" aria-label="Link to Errors over time section">§ 04</a>
+        <a class="section-num" href="#section=errors-over-time" data-section-link="errors-over-time" aria-label="§ 04 — Link to Errors over time section">§ 04</a>
       </div>
       <p class="chart-guide">
         Lower lines are better. A flat line means that grouping held steady between months. A drop means someone fixed something. The chart's granularity follows the filter — campus-aggregated by default, per-site when you drill into a single campus or discipline.
@@ -175,7 +176,7 @@
     <section id="most-common-issues" class="section" aria-labelledby="rule-heading">
       <div class="section-head">
         <h2 id="rule-heading">Most common issues</h2>
-        <a class="section-num" href="#section=most-common-issues" data-section-link="most-common-issues" aria-label="Link to Most common issues section">§ 05</a>
+        <a class="section-num" href="#section=most-common-issues" data-section-link="most-common-issues" aria-label="§ 05 — Link to Most common issues section">§ 05</a>
       </div>
       <p class="chart-guide">
         The 10 required-level axe-core rules (WCAG 2.0/2.1 Level A/AA) flagged most often this month across the filtered UC sites, stacked by impact severity. Reach-goal rules are tracked separately in each site's details row. Working through the top of this list tends to have the biggest impact for the most people.
@@ -199,10 +200,13 @@
         <p>
           On the first of every month a GitHub Actions workflow loads each UC
           web property — campus homepages, admissions sites, and the schools
-          and colleges under each campus — in headless Chromium, runs
+          and colleges under each campus — in headless Chromium at both
+          mobile (375px) and desktop (1440px) viewport widths, runs
           <a href="https://github.com/dequelabs/axe-core">axe-core</a>
           (via <code>@axe-core/playwright</code>), and records the results.
           Each page is given time to reach network idle before analysis.
+          Issues found only at the mobile width are reported separately in
+          the Mobile column.
           The headline required metrics track WCAG 2.0 and 2.1 Level A and AA
           success criteria — the baseline mandated under ADA Title II and
           Section 508. WCAG 2.1 Level AAA and all of WCAG 2.2 are recorded

@@ -1,6 +1,6 @@
 {
   "month": "2026-04",
-  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "scanned_at": "2026-04-16T02:57:41.436Z",
   "axe_version": "4.11.2",
   "site": "ucmerced-financial-aid",
   "name": "UC Merced Financial Aid",
@@ -9,8 +9,164 @@
   "category": "financial-aid",
   "url": "https://financialaid.ucmerced.edu",
   "element_count": 701,
-  "violations": [],
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#a4a4a6",
+                "bgColor": "#f5f5f5",
+                "contrastRatio": 2.28,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-title\">        <span class=\"field-content\">Financial Wellness Center</span>  </div>",
+                  "target": [
+                    "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_4 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-title.views-field"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.28 (foreground color: #a4a4a6, background color: #f5f5f5, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content\">Financial Wellness Center</span>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_4 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-title.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.28 (foreground color: #a4a4a6, background color: #f5f5f5, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+        }
+      ]
+    }
+  ],
   "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content\">Financial Aid FAQ's</span>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_3 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-title.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "facebook",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.facebook.com",
+                  "port": "",
+                  "pathname": "/UCMOFAS/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.facebook.com/ucmerced/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\"><i class=\"fa fa-facebook\"></i></a>",
+                  "target": [
+                    "a[aria-label=\"Facebook\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://www.facebook.com/UCMOFAS\" target=\"_blank\">Facebook</a>",
+          "target": [
+            "#block-block-10 > .content > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
     {
       "id": "identical-links-same-purpose",
       "impact": "minor",
