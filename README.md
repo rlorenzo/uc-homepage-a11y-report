@@ -68,20 +68,33 @@ The report loads `data/history.json` at runtime. The repo ships with a
 `site/data` symlink to `../data`, so most static servers resolve it
 automatically.
 
-### Scanning a subset
+### Re-scanning a single site
 
-For local iteration you rarely want to re-run all 183 sites. The scanner
-accepts filter flags that combine with AND:
+The most common local workflow is re-running one site after fixing a bug
+on it or investigating a weird result. Pass its slug to `--slug`:
 
 ```bash
+node scan/run.mjs --slug=ucdavis-education
+```
+
+This overwrites only `data/runs/YYYY-MM/ucdavis-education.json` and replaces
+only that one row in `history.json` — every other site's results for the
+month are left untouched. Slugs match the `slug` field in
+[`scan/sites.json`](scan/sites.json).
+
+### Scanning other subsets
+
+The same filter flags combine with AND for larger selections:
+
+```bash
+# Multiple specific sites
+node scan/run.mjs --slug=berkeley-haas,ucla-anderson
+
 # Just UCLA sites
 node scan/run.mjs --campus=ucla
 
 # All 11 homepages
 node scan/run.mjs --type=homepage
-
-# Specific sites by slug
-node scan/run.mjs --slug=berkeley-haas,ucla-anderson
 
 # All admissions sites on Berkeley and UCLA
 node scan/run.mjs --type=admissions --campus=berkeley,ucla

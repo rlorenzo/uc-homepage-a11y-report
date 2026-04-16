@@ -14,7 +14,29 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const sites = JSON.parse(await readFile(join(__dirname, "..", "scan", "sites.json"), "utf-8"));
+let sites = JSON.parse(await readFile(join(__dirname, "..", "scan", "sites.json"), "utf-8"));
+
+// Same filter flags as scan/run.mjs so a targeted drift check
+// ("did ucdavis-education drift between last month and this month?")
+// doesn't require waiting for all 183 sites to rescan twice.
+const filters = { type: null, campus: null, slug: null };
+for (const arg of process.argv.slice(2)) {
+  const m = arg.match(/^--(type|campus|slug)=(.+)$/);
+  if (m)
+    filters[m[1]] = new Set(
+      m[2]
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean),
+    );
+}
+if (filters.type) sites = sites.filter((s) => filters.type.has(s.type));
+if (filters.campus) sites = sites.filter((s) => filters.campus.has(s.campus));
+if (filters.slug) sites = sites.filter((s) => filters.slug.has(s.slug));
+if (sites.length === 0) {
+  console.error("No sites match the provided filters. Exiting.");
+  process.exit(1);
+}
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +

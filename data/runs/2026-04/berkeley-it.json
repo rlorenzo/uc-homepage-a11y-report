@@ -1,0 +1,388 @@
+{
+  "month": "2026-04",
+  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "axe_version": "4.11.2",
+  "site": "berkeley-it",
+  "name": "UC Berkeley Information Technology",
+  "campus": "berkeley",
+  "type": "it",
+  "category": "it",
+  "url": "https://technology.berkeley.edu",
+  "element_count": 535,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#64788b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/home\" class=\"active-trail active\" aria-current=\"page\">Home</a>",
+                  "target": [
+                    ".menu-link-home > a[href$=\"home\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #64788b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/home\" class=\"active-trail active\" aria-current=\"page\">Home</a>",
+          "target": [
+            ".menu-link-home > a[href$=\"home\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #64788b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 31,
+                "height": 23.5
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23.6,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input placeholder=\"Search this site\" class=\"form-control form-control form-text\" type=\"text\" id=\"edit-keys--2\" name=\"keys\" value=\"\" size=\"20\" maxlength=\"255\">",
+                  "target": [
+                    "#edit-keys--2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"submit\" id=\"edit-submit--2\" name=\"op\" value=\"Submit Search\" class=\"form-submit btn btn-default btn-primary\"><span class=\"fa fa-search\"></span> <span class=\"button-text\">Submit Search</span></button>",
+          "target": [
+            "#edit-submit--2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\" class=\"panopoly-spotlight-pause-play openberkeley_theme-processed panopoly-spotlight-processed\" role=\"button\">Pause</a>",
+                  "target": [
+                    ".panopoly-spotlight-pause-play"
+                  ]
+                },
+                {
+                  "html": "<img class=\"openberkeley-widgets-spotlight-full\" src=\"https://technology.berkeley.edu/sites/default/files/styles/openberkeley_widgets_spotlight_full/public/general/uc-tech.png?itok=rdNtbEwV\" width=\"1140\" height=\"560\" alt=\"https://uctechnews.ucop.edu/save-the-date-2026-uc-tech-conference/\">",
+                  "target": [
+                    "a[rel=\"noreferrer\"] > .openberkeley-widgets-spotlight-full[width=\"1140\"][height=\"560\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\" class=\"panopoly-spotlight-pause-play openberkeley_theme-processed panopoly-spotlight-processed\" role=\"button\">Pause</a>",
+          "target": [
+            ".panopoly-spotlight-pause-play"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"panopoly-spotlight-processed\"><a href=\"#panopoly-spotlight-0\" role=\"button\" aria-label=\"1st slide\" aria-controls=\"panopoly-spotlight-0\" class=\"openberkeley_theme-processed\">1</a></li>",
+                  "target": [
+                    "ul > .panopoly-spotlight-processed:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "<img class=\"openberkeley-widgets-spotlight-full\" src=\"https://technology.berkeley.edu/sites/default/files/styles/openberkeley_widgets_spotlight_full/public/general/uc-tech.png?itok=rdNtbEwV\" width=\"1140\" height=\"560\" alt=\"https://uctechnews.ucop.edu/save-the-date-2026-uc-tech-conference/\">",
+                  "target": [
+                    "a[rel=\"noreferrer\"] > .openberkeley-widgets-spotlight-full[width=\"1140\"][height=\"560\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#panopoly-spotlight-0\" role=\"button\" aria-label=\"1st slide\" aria-controls=\"panopoly-spotlight-0\" class=\"openberkeley_theme-processed\">1</a>",
+          "target": [
+            "a[href$=\"#panopoly-spotlight-0\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"panopoly-spotlight-processed\"><a href=\"#panopoly-spotlight-2\" role=\"button\" aria-label=\"3rd slide\" aria-controls=\"panopoly-spotlight-2\" class=\"openberkeley_theme-processed\">3</a></li>",
+                  "target": [
+                    ".panopoly-spotlight-processed:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "<img class=\"openberkeley-widgets-spotlight-full\" src=\"https://technology.berkeley.edu/sites/default/files/styles/openberkeley_widgets_spotlight_full/public/general/uc-tech.png?itok=rdNtbEwV\" width=\"1140\" height=\"560\" alt=\"https://uctechnews.ucop.edu/save-the-date-2026-uc-tech-conference/\">",
+                  "target": [
+                    "a[rel=\"noreferrer\"] > .openberkeley-widgets-spotlight-full[width=\"1140\"][height=\"560\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#panopoly-spotlight-2\" role=\"button\" aria-label=\"3rd slide\" aria-controls=\"panopoly-spotlight-2\" class=\"openberkeley_theme-processed\">3</a>",
+          "target": [
+            "a[href$=\"#panopoly-spotlight-2\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"panopoly-spotlight-processed\"><a href=\"#panopoly-spotlight-3\" role=\"button\" aria-label=\"4th slide\" aria-controls=\"panopoly-spotlight-3\" class=\"openberkeley_theme-processed\">4</a></li>",
+                  "target": [
+                    ".panopoly-spotlight-processed:nth-child(4)"
+                  ]
+                },
+                {
+                  "html": "<img class=\"openberkeley-widgets-spotlight-full\" src=\"https://technology.berkeley.edu/sites/default/files/styles/openberkeley_widgets_spotlight_full/public/general/uc-tech.png?itok=rdNtbEwV\" width=\"1140\" height=\"560\" alt=\"https://uctechnews.ucop.edu/save-the-date-2026-uc-tech-conference/\">",
+                  "target": [
+                    "a[rel=\"noreferrer\"] > .openberkeley-widgets-spotlight-full[width=\"1140\"][height=\"560\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#panopoly-spotlight-3\" role=\"button\" aria-label=\"4th slide\" aria-controls=\"panopoly-spotlight-3\" class=\"openberkeley_theme-processed\">4</a>",
+          "target": [
+            "a[href$=\"#panopoly-spotlight-3\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-founders-rock\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-founders-rock"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Browse IT Service Hub</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-founders-rock > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Order Equipment</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-lap-lane > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-wellman-tile\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-wellman-tile"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Check System Status</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-wellman-tile > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ]
+}

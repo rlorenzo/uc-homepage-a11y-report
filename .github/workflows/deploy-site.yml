@@ -1,0 +1,52 @@
+name: Deploy Site
+
+# Rebuilds and deploys the Pages site when UI-only changes land on main.
+# Scan data is not regenerated here — the monthly-scan workflow owns that
+# and deploys its own results. Paths are filtered so a data-only commit
+# from the monthly scan does NOT trigger a redundant redeploy.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Serialize with the monthly-scan deploy so the two workflows never race
+# each other to github-pages.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare Pages artifact
+        run: |
+          # site/data is a symlink to ../data for local dev; replace with
+          # a clean directory that only contains history.json so we don't
+          # ship the per-run archives to Pages.
+          rm -rf site/data
+          mkdir -p site/data
+          cp data/history.json site/data/history.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
