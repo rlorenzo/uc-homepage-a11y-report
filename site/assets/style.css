@@ -721,6 +721,28 @@ a.section-num:focus-visible {
   text-decoration-color: currentColor;
 }
 
+/* URL + category tag row — keeps the tag next to the hostname and
+   wraps gracefully on narrow viewports. */
+.campus-slug-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  color: var(--ink);
+  padding: 1px 8px 2px;
+  background: var(--tint-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
 /* --- 8. Campus section --------------------------------------- */
 
 .campus-wrap {

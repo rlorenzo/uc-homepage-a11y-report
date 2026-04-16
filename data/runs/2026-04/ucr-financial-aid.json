@@ -1,0 +1,4197 @@
+{
+  "month": "2026-04",
+  "scanned_at": "2026-04-16T01:28:47.247Z",
+  "axe_version": "4.11.2",
+  "site": "ucr-financial-aid",
+  "name": "UC Riverside Office of Financial Aid",
+  "campus": "ucr",
+  "type": "financial-aid",
+  "category": "financial-aid",
+  "url": "https://financialaid.ucr.edu",
+  "element_count": 669,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"o06j07-responsive-menu\" data-dropdown-menu=\"f3khi7-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"o06j07-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"w2rixu-responsive-me...\" data-dropdown-menu=\"acvudg-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"audience-button is-dropdown-submenu-parent opens-left\" role=\"none\" aria-controls=\"7c17tb-acc-menu\" aria-expanded=\"false\" id=\"0xhowq-acc-menu-link\">",
+                  "target": [
+                    "#\\30 xhowq-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"o06j07-responsive-menu\" data-dropdown-menu=\"f3khi7-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"o06j07-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"mqmd3d-acc-menu\" aria-expanded=\"false\" id=\"8vet3j-acc-menu-link\">",
+                  "target": [
+                    "#\\38 vet3j-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"8lt7ig-acc-menu\" aria-expanded=\"false\" id=\"xsip9w-acc-menu-link\">",
+                  "target": [
+                    "#xsip9w-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"lkgrvg-acc-menu\" aria-expanded=\"false\" id=\"ovlkg7-acc-menu-link\">",
+                  "target": [
+                    "#ovlkg7-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"w2rixu-responsive-me...\" data-dropdown-menu=\"acvudg-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        }
+      ]
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"QuickLinks\">QuickLinks</a>",
+          "target": [
+            "#\\30 xhowq-acc-menu-link > a[href=\"\"][aria-label=\"QuickLinks\"][aria-haspopup=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/cost\" target=\"_self\" title=\"Understanding Cost\" data-drupal-link-system-path=\"node/266\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Understanding Cost\">Understanding Cost</a>",
+          "target": [
+            "a[title=\"Understanding Cost\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"https://financialaid.ucr.edu/applying-for-aid\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Applying for Aid\">Applying for Aid</a>",
+          "target": [
+            "a[aria-label=\"Applying for Aid\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/resources/guides-forms-appeals\" target=\"_self\" title=\"Resources\" data-drupal-link-system-path=\"node/106\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Resources and Forms\">Resources and Forms</a>",
+          "target": [
+            "a[title=\"Resources\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#fffaed",
+                "contrastRatio": 6.94,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"ucr-custom-block ucr-custom-alerts callout warning\" data-closable=\"\">",
+                  "target": [
+                    ".ucr-custom-alerts"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.94 (foreground color: #455a64, background color: #fffaed, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>UCR Scholarships</strong>",
+          "target": [
+            "a[title=\"UCR Scholarships\"] > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.94 (foreground color: #455a64, background color: #fffaed, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#e5e9ee",
+                "contrastRatio": 5.93,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #e5e9ee; padding: 10px 7px 10px 7px; border-top: 5px solid #52aef4;\">\n<p class=\"text-align-center\">Federal School Code:&nbsp;<span style=\"color:#1d3a61;\"><strong>001316</strong></span></p>\n</div>",
+                  "target": [
+                    ".margin-vertical-1 > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.93 (foreground color: #455a64, background color: #e5e9ee, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"text-align-center\">Federal School Code:&nbsp;<span style=\"color:#1d3a61;\"><strong>001316</strong></span></p>",
+          "target": [
+            ".margin-vertical-1 > .full.grid-container > .grid-padding-x.grid-x > .cell > div > .text-align-center"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.93 (foreground color: #455a64, background color: #e5e9ee, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#e4002b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.84,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr-outline-red\" href=\"https://www.youtube.com/@ucrfinancialaidoffice/videos\" title=\"UCR Financial Aid on YouTube\">FOLLOW US ON YOUTUBE</a>",
+                  "target": [
+                    "div:nth-child(1) > .text-align-center > .btn-ucr-outline-red[title=\"UCR Financial Aid on YouTube\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #e4002b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr-outline-red\" href=\"https://www.youtube.com/@ucrfinancialaidoffice/videos\" title=\"UCR Financial Aid on YouTube\">FOLLOW US ON YOUTUBE</a>",
+          "target": [
+            "div:nth-child(1) > .text-align-center > .btn-ucr-outline-red[title=\"UCR Financial Aid on YouTube\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #e4002b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#e4002b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.84,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr-outline-red\" href=\"https://www.youtube.com/@ucrfinancialaidoffice/videos\" title=\"UCR Financial Aid on YouTube\">FOLLOw US ON INSTAGRAM</a>",
+                  "target": [
+                    "div:nth-child(2) > .text-align-center > .btn-ucr-outline-red[title=\"UCR Financial Aid on YouTube\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #e4002b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr-outline-red\" href=\"https://www.youtube.com/@ucrfinancialaidoffice/videos\" title=\"UCR Financial Aid on YouTube\">FOLLOw US ON INSTAGRAM</a>",
+          "target": [
+            "div:nth-child(2) > .text-align-center > .btn-ucr-outline-red[title=\"UCR Financial Aid on YouTube\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #e4002b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#e9ecef",
+                "contrastRatio": 6.1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<tr>\n\t\t\t<td>\n\t\t\t<h5>June 1</h5>\n\t\t\t</td>\n\t\t\t<td>Financial Aid Requirements Deadline for undergraduate students</td>\n\t\t</tr>",
+                  "target": [
+                    "tr:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #455a64, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td>Financial Aid Requirements Deadline for undergraduate students</td>",
+          "target": [
+            "tr:nth-child(2) > td:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #455a64, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#e9ecef",
+                "contrastRatio": 6.1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<tr>\n\t\t\t<td>\n\t\t\t<h5>August 1</h5>\n\t\t\t</td>\n\t\t\t<td><a href=\"https://veterans.ucr.edu/cost\" target=\"_blank\">CalVet Fee Waiver</a> Deadline for Fall</td>\n\t\t</tr>",
+                  "target": [
+                    "tr:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.1 (foreground color: #455a64, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<td><a href=\"https://veterans.ucr.edu/cost\" target=\"_blank\">CalVet Fee Waiver</a> Deadline for Fall</td>",
+          "target": [
+            "tr:nth-child(4) > td:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.1 (foreground color: #455a64, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#e9ecef",
+                "contrastRatio": 5.98,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<tr>\n\t\t\t<td>\n\t\t\t<h5>August 1</h5>\n\t\t\t</td>\n\t\t\t<td><a href=\"https://veterans.ucr.edu/cost\" target=\"_blank\">CalVet Fee Waiver</a> Deadline for Fall</td>\n\t\t</tr>",
+                  "target": [
+                    "tr:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.98 (foreground color: #b4001f, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://veterans.ucr.edu/cost\" target=\"_blank\">CalVet Fee Waiver</a>",
+          "target": [
+            "tr:nth-child(4) > td:nth-child(2) > a[href$=\"cost\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.98 (foreground color: #b4001f, background color: #e9ecef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li><a href=\"https://financialaid.ucr.edu/faqs#when_are_the_financial_aid_application_deadlines\">Important dates and deadlines</a>&nbsp;for the academic year&nbsp;</li>",
+          "target": [
+            ".cell > div > ul:nth-child(2) > li:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://financialaid.ucr.edu/faqs#when_are_the_financial_aid_application_deadlines\">Important dates and deadlines</a>",
+          "target": [
+            "div > ul:nth-child(2) > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>If your financial aid award is not finalized, you will need to make <a href=\"https://sbs.ucr.edu/student-services#payment_options\" target=\"_blank\">alternative Payment Arrangements</a>.&nbsp;</li>",
+          "target": [
+            ".cell > div > ul:nth-child(2) > li:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sbs.ucr.edu/student-services#payment_options\" target=\"_blank\">alternative Payment Arrangements</a>",
+          "target": [
+            "ul:nth-child(2) > li:nth-child(2) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Monitor your status on <a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a>&nbsp;for any requirements that may need to be complete by clicking on the homepage.</li>",
+          "target": [
+            ".cell > div > ul:nth-child(2) > li:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a>",
+          "target": [
+            "li:nth-child(3) > a[href$=\"rweb.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Federal Loans – if you recently completed a Master Promissory Note and /or Entrance Counseling please allow 5 business days for the loan to be ready to disburse.</li>",
+          "target": [
+            ".cell > div > ul:nth-child(2) > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Visit the Student Business Services website for information about:</strong>",
+          "target": [
+            ".cell > div > p:nth-child(3) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Scholarship Checks</strong>",
+          "target": [
+            "li:nth-child(1) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>How to make <a href=\"https://sbs.ucr.edu/student-services#payment_options\" target=\"_blank\">Payment Arrangements</a>.&nbsp;</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sbs.ucr.edu/student-services#payment_options\" target=\"_blank\">Payment Arrangements</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(2) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Click here to review quarterly disbursements and <a href=\"https://registrar.ucr.edu/calendar#payment_and_disbursement\" target=\"_blank\">refund dates</a>.</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://registrar.ucr.edu/calendar#payment_and_disbursement\" target=\"_blank\">refund dates</a>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Direct Deposit allows 2-3 business days for the funds to show in your bank account.</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Refund checks will be mailed to the local address on file</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Review <strong>“Student Account Online,” “Dynamic Bill” </strong>in <a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a> for your refund amount.</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(6)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>“Student Account Online,” “Dynamic Bill” </strong>",
+          "target": [
+            "li:nth-child(6) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a>",
+          "target": [
+            "li:nth-child(6) > a[href$=\"rweb.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Your current billing statement – Check your “Student Account Online” via <a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a>.</li>",
+          "target": [
+            "ul:nth-child(4) > li:nth-child(7)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://rweb.ucr.edu/\" target=\"_blank\">R’Web</a>",
+          "target": [
+            "li:nth-child(7) > a[href$=\"rweb.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>Completing <a href=\"https://registrar.ucr.edu/calendar#payment_and_disbursement\" target=\"_blank\">Loan Requirements Promissory Notes/Entrance Counseling</a>.&nbsp;</li>",
+          "target": [
+            "li:nth-child(8)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://registrar.ucr.edu/calendar#payment_and_disbursement\" target=\"_blank\">Loan Requirements Promissory Notes/Entrance Counseling</a>",
+          "target": [
+            "li:nth-child(8) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>",
+          "target": [
+            "li:nth-child(9)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studentaid.gov/app/counselingInstructions.action?counselingType=exit\" rel=\"noopener\" target=\"_blank\" title=\"Exit Counseling Requirement\">Exit Counseling requirement</a>",
+          "target": [
+            "a[title=\"Exit Counseling Requirement\"][rel=\"noopener\"][target=\"_blank\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://heartland.ecsi.net/\" rel=\"noopener\" target=\"_blank\" title=\"Exit Counseling Requirement\">Exit Counseling requirement</a>",
+          "target": [
+            "a[href$=\"heartland.ecsi.net/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Quick tutorials on many of our processes can be found</strong> on <a href=\"https://www.instagram.com/ucrfinaid/\" target=\"_blank\">our Instagram Page</a>.</p>",
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#455a64",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.3,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Quick tutorials on many of our processes can be found</strong>",
+          "target": [
+            "p:nth-child(5) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.3 (foreground color: #455a64, background color: #f7eee2, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#b4001f",
+                "bgColor": "#f7eee2",
+                "contrastRatio": 6.17,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background-color: #f7eee2; padding: 30px 30px 30px 30px\">",
+                  "target": [
+                    ".layout-one-col.layout.grid-container:nth-child(4) > .grid-padding-x.grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block:nth-child(1) > .full.grid-container > .grid-padding-x.grid-x > .cell > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.instagram.com/ucrfinaid/\" target=\"_blank\">our Instagram Page</a>",
+          "target": [
+            "p:nth-child(5) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.17 (foreground color: #b4001f, background color: #f7eee2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#009cde",
+                "contrastRatio": 6.81,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr\" href=\"/faq\" title=\"FAQ\">FAQs</a>",
+                  "target": [
+                    "a[href$=\"faq\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr\" href=\"/faq\" title=\"FAQ\">FAQs</a>",
+          "target": [
+            "a[href$=\"faq\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#009cde",
+                "contrastRatio": 6.81,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr\" href=\"/emergency-funds\" title=\"Solutions for Money Emergencies\">MONEY EMERGENcy solutions</a>",
+                  "target": [
+                    ".btn-ucr[href$=\"emergency-funds\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr\" href=\"/emergency-funds\" title=\"Solutions for Money Emergencies\">MONEY EMERGENcy solutions</a>",
+          "target": [
+            ".btn-ucr[href$=\"emergency-funds\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#009cde",
+                "contrastRatio": 6.81,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr\" href=\"https://forms.office.com/pages/responsepage.aspx?id=xCpim6aGnUGbnr-zP0XAVD472vkzf9BFkWFWeIam_IZUQkpJMEJCRVpDSDFVWk8wQVlKODJNSllaUC4u\" title=\"Financial Aid Presentation Request Form\">ReQUEST FORM</a>",
+                  "target": [
+                    ".small-12.large-4.medium-6:nth-child(3) > .radius.bordered.shadow > .card-section.text-align-center > p:nth-child(4) > .btn-ucr"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr\" href=\"https://forms.office.com/pages/responsepage.aspx?id=xCpim6aGnUGbnr-zP0XAVD472vkzf9BFkWFWeIam_IZUQkpJMEJCRVpDSDFVWk8wQVlKODJNSllaUC4u\" title=\"Financial Aid Presentation Request Form\">ReQUEST FORM</a>",
+          "target": [
+            ".small-12.large-4.medium-6:nth-child(3) > .radius.bordered.shadow > .card-section.text-align-center > p:nth-child(4) > .btn-ucr"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.81 (foreground color: #000000, background color: #009cde, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#5ab400",
+                "contrastRatio": 2.63,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a id=\"buorgul\" href=\"https://browser-update.org/update-browser.html#3.3.65:financialaid.ucr.edu\" target=\"_blank\" rel=\"noopener\">Update browser</a>",
+                  "target": [
+                    "#buorgul"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.63 (foreground color: #ffffff, background color: #5ab400, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"buorgul\" href=\"https://browser-update.org/update-browser.html#3.3.65:financialaid.ucr.edu\" target=\"_blank\" rel=\"noopener\">Update browser</a>",
+          "target": [
+            "#buorgul"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.63 (foreground color: #ffffff, background color: #5ab400, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#edbc68",
+                "contrastRatio": 1.75,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a id=\"buorgig\" role=\"button\" tabindex=\"0\">Ignore</a>",
+                  "target": [
+                    "#buorgig"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.75 (foreground color: #ffffff, background color: #edbc68, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"buorgig\" role=\"button\" tabindex=\"0\">Ignore</a>",
+          "target": [
+            "#buorgig"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.75 (foreground color: #ffffff, background color: #edbc68, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button audience-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            "#block-ucr-design-1-ucriversideaudiencesearchblock > .google-search > .audience-search-button[data-open=\"gscSearchFormModal\"][aria-controls=\"gscSearchFormModal\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[role=\"navigation\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://library.ucr.edu/\" target=\"_blank\">UCR Library</a>",
+          "target": [
+            "a[href$=\"library.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusstatus.ucr.edu/\" target=\"_blank\">Campus Status</a>",
+          "target": [
+            "a[href$=\"campusstatus.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucr.bncollege.com/shop/ucr/home\" target=\"_blank\">Campus Store</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://jobs.ucr.edu\" target=\"_blank\">Career Opportunities</a>",
+          "target": [
+            "a[href$=\"jobs.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://vamos.ucr.edu/\" target=\"_blank\">Español</a>",
+          "target": [
+            "a[href$=\"vamos.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">Maps and Directions</a>",
+          "target": [
+            "a[href$=\"campusmap.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/visitors\" target=\"_blank\">Visit UCR</a>",
+          "target": [
+            "a[href$=\"visitors\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>UCR Financial Aid Office</h2>",
+          "target": [
+            "#block-ucr-design-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?find=P5614\" target=\"_blank\">            900 University Ave.\n            <br>Riverside, CA 92521                         </a>",
+          "target": [
+            ".address_2 > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: (951) 827-3878<br>                 fax: (951) 827-5619<br>         email: <a href=\"mailto:finaid@ucr.edu\">finaid@ucr.edu</a>                </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:finaid@ucr.edu\">finaid@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:finaid@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?find=P5614\" target=\"_blank\"> Find Us<br><br>\n            <img src=\"/themes/custom/ucr_default/images/googlemap.png\" alt=\"View campus map\"></a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Follow US:</p>",
+          "target": [
+            ".footer-item:nth-child(2) > .social-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sbs.ucr.edu/\" target=\"_blank\" title=\"Student Business Services\">Student Business Services</a>",
+          "target": [
+            "a[href$=\"sbs.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://registrar.ucr.edu/\" target=\"_blank\" title=\"Office of the Registrar\">Office of the Registrar</a>",
+          "target": [
+            "a[href$=\"registrar.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://admissions.ucr.edu\" target=\"_blank\" title=\"Undergraduate Admissions\">Undergraduate Admissions</a>",
+          "target": [
+            "a[href$=\"admissions.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://my.ucr.edu/\" target=\"_self\" title=\"MyUCR – Admissions Portal\">MyUCR – Admissions Portal</a>",
+          "target": [
+            "a[href$=\"my.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://housing.ucr.edu\" target=\"_blank\" title=\"Housing Services\">Housing Services</a>",
+          "target": [
+            "a[href$=\"housing.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://rdream.ucr.edu\" target=\"_blank\" title=\"R'Dream - Undocumented Student Programs\">R'Dream</a>",
+          "target": [
+            "a[href$=\"rdream.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://hoss.ucr.edu\" target=\"_blank\" title=\"Highlander One-Stop Shop\">Highlander One-Stop Shop</a>",
+          "target": [
+            "a[href$=\"hoss.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Disclaimer</p>",
+          "target": [
+            ".full.grid-container > .grid-padding-x.grid-x > .cell > .footer-item > .social-title:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>This information is accurate and reliable at time of posting&nbsp;but may change without notice. Please contact Financial Aid for the most up-to-date information.</p>",
+          "target": [
+            ".footer-item > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Campus Security and Fire Safety Report</p>",
+          "target": [
+            ".social-title:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".footer-item > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://compliance.ucr.edu/clery-act-compliance\" target=\"_blank\" title=\"Chief Compliance Office website\">Chief Compliance Office website</a>",
+          "target": [
+            ".footer-item > p:nth-child(4) > a[target=\"_blank\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:clery@ucr.edu\" rel=\"noopener noreferrer\" target=\"_blank\">clery@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:clery@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".margin-bottom-2 > .full.grid-container > .grid-padding-x.grid-x > .cell > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:#000000;\">Support for Students Affected by the SoCal Fires</span>",
+          "target": [
+            "p:nth-child(1) > strong > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".margin-bottom-2 > .full.grid-container > .grid-padding-x.grid-x > .cell > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:#000000;\">Resources for Undocumented Students</span>",
+          "target": [
+            "p:nth-child(3) > strong > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admission.universityofcalifornia.edu/tuition-financial-aid/apply-for-financial-aid/privacy-and-financial-aid.html\" rel=\"noopener\" target=\"_blank\" title=\"UC | Financial Aid and Privacy\">review the latest information issued by the University of California</a>",
+          "target": [
+            "a[title=\"UC | Financial Aid and Privacy\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Mixed-status families can find additional resources through the <a href=\"https://www.csac.ca.gov/undocumented\" rel=\"noopener\" target=\"_blank\" title=\"CSAC | Undocumented Students\">California Student Aid Commission</a>.</p>",
+          "target": [
+            ".cell > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container full\" style=\"background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1));\">",
+                  "target": [
+                    ".margin-bottom-2 > .full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.csac.ca.gov/undocumented\" rel=\"noopener\" target=\"_blank\" title=\"CSAC | Undocumented Students\">California Student Aid Commission</a>",
+          "target": [
+            "a[title=\"CSAC | Undocumented Students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://library.ucr.edu/\" target=\"_blank\">UCR Library</a>",
+          "target": [
+            "a[href$=\"library.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusstatus.ucr.edu/\" target=\"_blank\">Campus Status</a>",
+          "target": [
+            "a[href$=\"campusstatus.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucr.bncollege.com/shop/ucr/home\" target=\"_blank\">Campus Store</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://jobs.ucr.edu\" target=\"_blank\">Career Opportunities</a>",
+          "target": [
+            "a[href$=\"jobs.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://vamos.ucr.edu/\" target=\"_blank\">Español</a>",
+          "target": [
+            "a[href$=\"vamos.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">Maps and Directions</a>",
+          "target": [
+            "a[href$=\"campusmap.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/visitors\" target=\"_blank\">Visit UCR</a>",
+          "target": [
+            "a[href$=\"visitors\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>UCR Financial Aid Office</h2>",
+          "target": [
+            "#block-ucr-design-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?find=P5614\" target=\"_blank\">            900 University Ave.\n            <br>Riverside, CA 92521                         </a>",
+          "target": [
+            ".address_2 > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: (951) 827-3878<br>                 fax: (951) 827-5619<br>         email: <a href=\"mailto:finaid@ucr.edu\">finaid@ucr.edu</a>                </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:finaid@ucr.edu\">finaid@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:finaid@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?find=P5614\" target=\"_blank\"> Find Us<br><br>\n            <img src=\"/themes/custom/ucr_default/images/googlemap.png\" alt=\"View campus map\"></a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Follow US:</p>",
+          "target": [
+            ".footer-item:nth-child(2) > .social-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sbs.ucr.edu/\" target=\"_blank\" title=\"Student Business Services\">Student Business Services</a>",
+          "target": [
+            "a[href$=\"sbs.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://registrar.ucr.edu/\" target=\"_blank\" title=\"Office of the Registrar\">Office of the Registrar</a>",
+          "target": [
+            "a[href$=\"registrar.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://admissions.ucr.edu\" target=\"_blank\" title=\"Undergraduate Admissions\">Undergraduate Admissions</a>",
+          "target": [
+            "a[href$=\"admissions.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://my.ucr.edu/\" target=\"_self\" title=\"MyUCR – Admissions Portal\">MyUCR – Admissions Portal</a>",
+          "target": [
+            "a[href$=\"my.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://housing.ucr.edu\" target=\"_blank\" title=\"Housing Services\">Housing Services</a>",
+          "target": [
+            "a[href$=\"housing.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://rdream.ucr.edu\" target=\"_blank\" title=\"R'Dream - Undocumented Student Programs\">R'Dream</a>",
+          "target": [
+            "a[href$=\"rdream.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://hoss.ucr.edu\" target=\"_blank\" title=\"Highlander One-Stop Shop\">Highlander One-Stop Shop</a>",
+          "target": [
+            "a[href$=\"hoss.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Disclaimer</p>",
+          "target": [
+            ".full.grid-container > .grid-padding-x.grid-x > .cell > .footer-item > .social-title:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>This information is accurate and reliable at time of posting&nbsp;but may change without notice. Please contact Financial Aid for the most up-to-date information.</p>",
+          "target": [
+            ".footer-item > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"social-title\">Campus Security and Fire Safety Report</p>",
+          "target": [
+            ".social-title:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".footer-item > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://compliance.ucr.edu/clery-act-compliance\" target=\"_blank\" title=\"Chief Compliance Office website\">Chief Compliance Office website</a>",
+          "target": [
+            ".footer-item > p:nth-child(4) > a[target=\"_blank\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:clery@ucr.edu\" rel=\"noopener noreferrer\" target=\"_blank\">clery@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:clery@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".site-legal-footer > .grid-container > .grid-padding-x.grid-x > .cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\" title=\"UCR Privacy statement\" tabindex=\"0\">privacy statement</a>",
+          "target": [
+            "a[title=\"UCR Privacy statement\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "exit counseling requirement",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "studentaid.gov",
+                  "port": "",
+                  "pathname": "/app/",
+                  "search": {
+                    "counselingType": "exit"
+                  },
+                  "hash": "",
+                  "filename": "counselingInstructions.action"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://heartland.ecsi.net/\" rel=\"noopener\" target=\"_blank\" title=\"Exit Counseling Requirement\">Exit Counseling requirement</a>",
+                  "target": [
+                    "a[href$=\"heartland.ecsi.net/\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://studentaid.gov/app/counselingInstructions.action?counselingType=exit\" rel=\"noopener\" target=\"_blank\" title=\"Exit Counseling Requirement\">Exit Counseling requirement</a>",
+          "target": [
+            "a[title=\"Exit Counseling Requirement\"][rel=\"noopener\"][target=\"_blank\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}

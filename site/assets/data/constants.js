@@ -129,6 +129,18 @@ export const RULE_DESCRIPTIONS = {
   "duplicate-id": "Element id is used more than once",
   "duplicate-id-aria": "id referenced by ARIA is duplicated",
   "meta-viewport": "Viewport meta tag prevents zooming",
+  "aria-input-field-name": "Input field has no accessible name via ARIA",
+  "aria-required-children": "ARIA role is missing required child roles",
+  "aria-required-parent": "Element with ARIA role lacks its required parent",
+  "aria-valid-attr": "ARIA attribute name is invalid or misspelled",
+  "aria-valid-attr-value": "ARIA attribute has an invalid value",
+  "color-contrast-enhanced": "Text doesn't meet AAA enhanced contrast (7:1)",
+  "definition-list": "<dl> markup is structurally broken",
+  "frame-title": "<iframe> is missing a title",
+  "link-in-text-block": "Link in text isn't distinguishable without color",
+  "nested-interactive": "Interactive element is nested inside another",
+  "role-img-alt": "Element with role=\"img\" has no accessible name",
+  "scrollable-region-focusable": "Scrollable area can't be reached by keyboard",
 };
 
 export const ruleFriendly = (rule) =>
