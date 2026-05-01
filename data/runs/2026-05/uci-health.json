@@ -1,0 +1,971 @@
+{
+  "month": "2026-05",
+  "scanned_at": "2026-05-01T14:29:00.350Z",
+  "axe_version": "4.11.2",
+  "site": "uci-health",
+  "name": "UC Irvine Student Health Center",
+  "campus": "uci",
+  "type": "health",
+  "category": "health",
+  "url": "https://studenthealth.uci.edu",
+  "element_count": 521,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#d32f2f",
+                "contrastRatio": 4.97,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://studenthealth.uci.edu/after-hours-urgent-care/\" role=\"link\">After Hours <br> &amp; Urgent Care</a>",
+                  "target": [
+                    "#et-secondary-nav > .menu-item-693.menu-item-type-post_type.menu-item-object-page > a[role=\"link\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.97 (foreground color: #ffffff, background color: #d32f2f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/after-hours-urgent-care/\" role=\"link\">After Hours <br> &amp; Urgent Care</a>",
+          "target": [
+            "#et-secondary-nav > .menu-item-693.menu-item-type-post_type.menu-item-object-page > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.97 (foreground color: #ffffff, background color: #d32f2f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00b0ca",
+                "bgColor": "#002244",
+                "contrastRatio": 6.14,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_module et_pb_text et_pb_text_3 et_clickable  et_pb_text_align_center et_pb_bg_layout_dark\">",
+                  "target": [
+                    ".et_pb_text_3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.14 (foreground color: #00b0ca, background color: #002244, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/immunizations/\" role=\"link\">Immunization Compliance</a>",
+          "target": [
+            ".et_pb_text_3 > .et_pb_text_inner > h4 > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.14 (foreground color: #00b0ca, background color: #002244, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 170,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (170px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" aria-label=\"Insurance Options\" role=\"link\"><img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\"></a>",
+                  "target": [
+                    "a[aria-label=\"Insurance Options\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" role=\"link\">Insurance Options</a>",
+          "target": [
+            ".et_pb_text_2 > .et_pb_text_inner > h4 > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (170px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 245,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (245px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://studenthealth.uci.edu/immunizations/\" aria-label=\"Immunization Compliance\" role=\"link\">",
+                  "target": [
+                    "a[aria-label=\"Immunization Compliance\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/immunizations/\" role=\"link\">Immunization Compliance</a>",
+          "target": [
+            ".et_pb_text_3 > .et_pb_text_inner > h4 > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (245px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://mystudentchart.uci.edu/\" role=\"link\">My Student Chart</a>",
+          "target": [
+            "#top-menu > .menu-item-5227.menu-item-type-custom.menu-item-object-custom > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/about-us/\" aria-haspopup=\"true\" class=\"da11y-submenu\" aria-expanded=\"false\" role=\"link\">About Us</a>",
+          "target": [
+            "#top-menu > .menu-item-1196.menu-item-has-children.menu-item-type-post_type > .da11y-submenu[aria-haspopup=\"true\"][role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/how-can-we-help/\" aria-haspopup=\"true\" class=\"da11y-submenu\" aria-expanded=\"false\" role=\"link\">Care &amp; Services</a>",
+          "target": [
+            "#top-menu > .menu-item-734.menu-item-has-children.menu-item-type-post_type > .da11y-submenu[aria-haspopup=\"true\"][role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" role=\"link\">Insurance Options</a>",
+          "target": [
+            "#top-menu > .menu-item-638.menu-item-type-post_type.menu-item-object-page > a[role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sites.uci.edu/studenthealthcenter/how-can-we-help/\" aria-haspopup=\"true\" class=\"da11y-submenu\" aria-expanded=\"false\" role=\"link\">Additional</a>",
+          "target": [
+            "#top-menu > .menu-item-1125.menu-item-type-custom.menu-item-object-custom > .da11y-submenu[aria-haspopup=\"true\"][role=\"link\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "50.3pt (67px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<video loop=\"loop\" autoplay=\"\" playsinline=\"\" muted=\"\" width=\"1920\" height=\"1080\" aria-hidden=\"true\" id=\"mejs_4541019227383183_html5\" preload=\"none\" src=\"https://studenthealth.uci.edu/files/2025/02/2.21_Banner-Video4.mp4\" style=\"margin: 0px; width: 1440px; height: 810px;\">",
+                  "target": [
+                    "#mejs_4541019227383183_html5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"text-align: center;\">WELCOME TO THE</h1>",
+          "target": [
+            "h1:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "50.3pt (67px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<video loop=\"loop\" autoplay=\"\" playsinline=\"\" muted=\"\" width=\"1920\" height=\"1080\" aria-hidden=\"true\" id=\"mejs_4541019227383183_html5\" preload=\"none\" src=\"https://studenthealth.uci.edu/files/2025/02/2.21_Banner-Video4.mp4\" style=\"margin: 0px; width: 1440px; height: 810px;\">",
+                  "target": [
+                    "#mejs_4541019227383183_html5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"text-align: center;\">Student Health Center</h1>",
+          "target": [
+            "h1:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.3pt (39px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_row et_pb_row_0\">",
+                  "target": [
+                    ".et_pb_row_0"
+                  ]
+                },
+                {
+                  "html": "<span class=\"et_parallax_gradient et_pb_parallax_css\" style=\"background-image: linear-gradient( 180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.02) 100% );\"></span>",
+                  "target": [
+                    ".et_parallax_gradient"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"et_pb_module_heading\">Let's Get Started</h2>",
+          "target": [
+            "h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_row et_pb_row_0\">",
+                  "target": [
+                    ".et_pb_row_0"
+                  ]
+                },
+                {
+                  "html": "<span class=\"et_parallax_gradient et_pb_parallax_css\" style=\"background-image: linear-gradient( 180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.02) 100% );\"></span>",
+                  "target": [
+                    ".et_parallax_gradient"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Choose a box below, or use the top navigation menu.</h3>",
+          "target": [
+            ".et_pb_text_0 > .et_pb_text_inner > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\">",
+                  "target": [
+                    ".wp-image-8347"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" aria-label=\"Insurance Options\" role=\"link\"><img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\"></a>",
+          "target": [
+            "a[aria-label=\"Insurance Options\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Immunization-Compliance-284x300.png\" width=\"172\" height=\"182\" alt=\"\" class=\"wp-image-8348 alignnone size-medium\">",
+                  "target": [
+                    ".wp-image-8348"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/immunizations/\" aria-label=\"Immunization Compliance\" role=\"link\">",
+          "target": [
+            "a[aria-label=\"Immunization Compliance\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00b0ca",
+                "bgColor": "#002244",
+                "contrastRatio": 6.14,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_module et_pb_text et_pb_text_3 et_clickable  et_pb_text_align_center et_pb_bg_layout_dark\">",
+                  "target": [
+                    ".et_pb_text_3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.14 (foreground color: #00b0ca, background color: #002244, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/immunizations/\" role=\"link\">Immunization Compliance</a>",
+          "target": [
+            ".et_pb_text_3 > .et_pb_text_inner > h4 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.14 (foreground color: #00b0ca, background color: #002244, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1a1a1a",
+                "bgColor": "#002244",
+                "contrastRatio": 1.08,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"bottom-footer\" class=\"et_pb_section et_pb_section_3 et_pb_with_background et_section_regular\">",
+                  "target": [
+                    "#bottom-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.08 (foreground color: #1a1a1a, background color: #002244, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">(949) 824-5301</span>",
+          "target": [
+            ".et_pb_text_8 > .et_multi_view_swapped[data-et-multi-view-load-tablet-hidden=\"true\"][data-et-multi-view-load-phone-hidden=\"true\"] > p:nth-child(4) > span > span > a[href=\"tel:+9498245301\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #1a1a1a, background color: #002244, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1a1a1a",
+                "bgColor": "#002244",
+                "contrastRatio": 1.08,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"bottom-footer\" class=\"et_pb_section et_pb_section_3 et_pb_with_background et_section_regular\">",
+                  "target": [
+                    "#bottom-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.08 (foreground color: #1a1a1a, background color: #002244, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">(949) 824-5301</span>",
+          "target": [
+            ".et_pb_text_9 > .et_multi_view_swapped[data-et-multi-view-load-tablet-hidden=\"true\"][data-et-multi-view-load-phone-hidden=\"true\"] > p:nth-child(5) > span > span > a[href=\"tel:+9498245301\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #1a1a1a, background color: #002244, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "nested-interactive",
+      "impact": "serious",
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"mobile_menu_bar mobile_menu_bar_toggle\" role=\"button\" aria-expanded=\"false\" aria-label=\"Menu\" tabindex=\"0\"></span>",
+                  "target": [
+                    ".mobile_menu_bar"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div id=\"et_mobile_nav_menu\" role=\"button\">",
+          "target": [
+            "#et_mobile_nav_menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 170,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (170px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" aria-label=\"Insurance Options\" role=\"link\"><img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\"></a>",
+                  "target": [
+                    "a[aria-label=\"Insurance Options\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" role=\"link\">Insurance Options</a>",
+          "target": [
+            ".et_pb_text_2 > .et_pb_text_inner > h4 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (170px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_section et_pb_section_0 et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular\">",
+                  "target": [
+                    ".et_pb_section_0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"text-align: center;\">WELCOME TO THE</h1>",
+          "target": [
+            "h1:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"et_pb_section et_pb_section_0 et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular\">",
+                  "target": [
+                    ".et_pb_section_0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 style=\"text-align: center;\">Student Health Center</h1>",
+          "target": [
+            "h1:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"et_pb_module_heading\">Let's Get Started</h2>",
+          "target": [
+            "h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Choose a box below, or use the top navigation menu.</h3>",
+          "target": [
+            ".et_pb_text_0 > .et_pb_text_inner > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\">",
+                  "target": [
+                    ".wp-image-8347"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studenthealth.uci.edu/insurance-options/\" aria-label=\"Insurance Options\" role=\"link\"><img loading=\"lazy\" decoding=\"async\" src=\"https://studenthealth.uci.edu/files/2026/03/Insurance-Options-300x281.png\" width=\"194\" height=\"181\" alt=\"\" class=\"wp-image-8347 alignnone size-medium\"></a>",
+          "target": [
+            "a[aria-label=\"Insurance Options\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        }
+      ]
+    }
+  ]
+}
