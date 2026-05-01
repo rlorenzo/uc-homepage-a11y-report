@@ -1,0 +1,1392 @@
+{
+  "month": "2026-05",
+  "scanned_at": "2026-05-01T14:29:00.350Z",
+  "axe_version": "4.11.2",
+  "site": "berkeley-journalism",
+  "name": "UC Berkeley Graduate School of Journalism",
+  "campus": "berkeley",
+  "type": "school",
+  "category": "information",
+  "url": "https://journalism.berkeley.edu",
+  "element_count": 651,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2b7bb9",
+                "contrastRatio": 4.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\" https://forms.gle/GY3RMqKGTjq3YLqa7\" title=\"Click Here\" target=\"_self\" class=\"uabb-button  uabb-creative-button uabb-creative-flat-btn  uabb-none-btn  \" role=\"button\" aria-label=\"Click Here\">",
+                  "target": [
+                    ".uabb-button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.52 (foreground color: #ffffff, background color: #2b7bb9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"uabb-button-text uabb-creative-button-text\">Click Here</span>",
+          "target": [
+            ".uabb-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.52 (foreground color: #ffffff, background color: #2b7bb9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "definition-list",
+      "impact": "serious",
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ],
+      "description": "Ensure <dl> elements are structured correctly",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/definition-list?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd>121 North Gate Hall #5860</dd>\n<dd>University of California</dd>\n<dd>Berkeley, California 94720-5860</dd>\n<dd>(510) 642-3383 - phone</dd>\n<dd>(510) 643-9136 - fax</dd>\n<dd><a href=\"https://www.berkeley.edu/\">UC Berkeley - main site</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-5dcc81a470a38 > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd><a href=\"mailto:journalism@berkeley.edu\">journalism@berkeley.edu</a></dd>\n<dd>(510) 643-9411</dd>\n<dd><a href=\"/media-guide-to-faculty-experts/\">Media Guide to Faculty Experts</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-htegnyw6osju > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd><a href=\"https://journalism.berkeley.edu/login\">Log In</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-5dcc7db789e89 > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"sub-menu-42460\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42460\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span role=\"button\" tabindex=\"0\" aria-label=\"Why Berkeley submenu toggle\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"sub-menu-42460\" class=\"fl-menu-toggle fl-content-ui-button\"></span>",
+          "target": [
+            "span[aria-label=\"Why Berkeley submenu toggle\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42460\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"sub-menu-42480\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42480\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span role=\"button\" tabindex=\"0\" aria-label=\"What We Offer submenu toggle\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"sub-menu-42480\" class=\"fl-menu-toggle fl-content-ui-button\"></span>",
+          "target": [
+            "span[aria-label=\"What We Offer submenu toggle\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42480\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"sub-menu-42464\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42464\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span role=\"button\" tabindex=\"0\" aria-label=\"Admissions submenu toggle\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"sub-menu-42464\" class=\"fl-menu-toggle fl-content-ui-button\"></span>",
+          "target": [
+            "span[aria-label=\"Admissions submenu toggle\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42464\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"sub-menu-42465\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42465\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span role=\"button\" tabindex=\"0\" aria-label=\"News &amp; Events submenu toggle\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"sub-menu-42465\" class=\"fl-menu-toggle fl-content-ui-button\"></span>",
+          "target": [
+            "span[aria-label=\"News & Events submenu toggle\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42465\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"sub-menu-42467\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42467\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span role=\"button\" tabindex=\"0\" aria-label=\"People &amp; Resources submenu toggle\" aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"sub-menu-42467\" class=\"fl-menu-toggle fl-content-ui-button\"></span>",
+          "target": [
+            "span[aria-controls=\"sub-menu-42467\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sub-menu-42467\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "36.0pt (48px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"fl-row-content-wrap\">",
+                  "target": [
+                    ".fl-row-bg-photo > .fl-row-content-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://berkeleyjournalism.shorthandstories.com/uc-berkeley-journalism-impact-report-2025/\" title=\"UC Berkeley Journalism's Impact Report 2025\" target=\"_self\">\n\t\t\tUC Berkeley Journalism's Impact Report 2025 \t\t</a>",
+          "target": [
+            "#home-hero-headline > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Professor Elena Conis wins 2026 Guggenheim Fellowship</h3>",
+          "target": [
+            ".fl-node-fh4vlg9nrc3u > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Conis, who is also a historian and public health expert, plans to use the fellowship to complete a book about the history of measles, the first of its kind.</p>",
+          "target": [
+            ".fl-node-fh4vlg9nrc3u > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">George Polk Awards go to alums Nick Miroff and Brett Murphy</h3>",
+          "target": [
+            ".fl-node-quvr3ixz5dmh > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>“Berkeley Journalism graduates like Brett and Nick are world-class reporters who protect the public interest at a time when freedom of the press is under intense pressure,” Dean Michael D. Bolden said.</p>",
+          "target": [
+            ".fl-node-quvr3ixz5dmh > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Negar Ajayebi, Hussain Khan and Aisha Wallace-Palomares (all '25) win SPJ Mark of Excellence Award</h3>",
+          "target": [
+            "#what-we-make > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>They won the honor for their work on Berkeley Journalism’s flagship radio show and podcast, North Gate Radio.</p>",
+          "target": [
+            "#what-we-make > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Three promising non-fiction filmmaking students named Marlon Riggs Fellows</h3>",
+          "target": [
+            "#latest-news > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Alana Minkler, Koby Park and Franny Trinidad awarded fellowship celebrating the life and work of the groundbreaking filmmaker, an alum who later taught in the school’s documentary program.</p>",
+          "target": [
+            "#latest-news > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Student</h3>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">Eli Benton Cohen ('27)</h5>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>First-year student Eli Cohen publishes A1 story in the San Francisco Chronicle about the fight against unlawful detentions.</p>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Faculty</h3>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">David Barstow</h5>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The professor and chair of the Investigative Reporting Program is the first reporter in American history to win four Pulitzer Prizes.</p>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Event</h3>",
+          "target": [
+            ".infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">The State of the News Media</h5>",
+          "target": [
+            ".infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Watch Dean Michael D. Bolden in conversation with PBS News Host William Brangham at Commonwealth Club World Affairs in San Francisco April 15.</p>",
+          "target": [
+            ".fl-node-61b7a98edc550 > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#2b7bb9",
+                "contrastRatio": 4.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\" https://forms.gle/GY3RMqKGTjq3YLqa7\" title=\"Click Here\" target=\"_self\" class=\"uabb-button  uabb-creative-button uabb-creative-flat-btn  uabb-none-btn  \" role=\"button\" aria-label=\"Click Here\">",
+                  "target": [
+                    ".uabb-button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.52 (foreground color: #ffffff, background color: #2b7bb9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"uabb-button-text uabb-creative-button-text\">Click Here</span>",
+          "target": [
+            ".uabb-button-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.52 (foreground color: #ffffff, background color: #2b7bb9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "definition-list",
+      "impact": "serious",
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ],
+      "description": "Ensure <dl> elements are structured correctly",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/definition-list?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd>121 North Gate Hall #5860</dd>\n<dd>University of California</dd>\n<dd>Berkeley, California 94720-5860</dd>\n<dd>(510) 642-3383 - phone</dd>\n<dd>(510) 643-9136 - fax</dd>\n<dd><a href=\"https://www.berkeley.edu/\">UC Berkeley - main site</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-5dcc81a470a38 > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd><a href=\"mailto:journalism@berkeley.edu\">journalism@berkeley.edu</a></dd>\n<dd>(510) 643-9411</dd>\n<dd><a href=\"/media-guide-to-faculty-experts/\">Media Guide to Faculty Experts</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-htegnyw6osju > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "structured-dlitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+            }
+          ],
+          "impact": "serious",
+          "html": "<dl>\n<dd><a href=\"https://journalism.berkeley.edu/login\">Log In</a></dd>\n</dl>",
+          "target": [
+            ".fl-node-5dcc7db789e89 > .fl-module-content.fl-node-content > .fl-html > dl"
+          ],
+          "failureSummary": "Fix all of the following:\n  When not empty, element does not have at least one <dt> element followed by at least one <dd> element"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"menu-main-menu-dropdown\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-main-menu-dropdown\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"fl-menu-mobile-toggle hamburger-label fl-content-ui-button\" aria-haspopup=\"menu\" aria-label=\"Site Menu\" aria-controls=\"menu-main-menu-dropdown\">",
+          "target": [
+            "button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-main-menu-dropdown\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"fl-row-content-wrap\">",
+                  "target": [
+                    ".fl-row-bg-photo > .fl-row-content-wrap"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://berkeleyjournalism.shorthandstories.com/uc-berkeley-journalism-impact-report-2025/\" title=\"UC Berkeley Journalism's Impact Report 2025\" target=\"_self\">\n\t\t\tUC Berkeley Journalism's Impact Report 2025 \t\t</a>",
+          "target": [
+            "#home-hero-headline > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Professor Elena Conis wins 2026 Guggenheim Fellowship</h3>",
+          "target": [
+            ".fl-node-fh4vlg9nrc3u > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Conis, who is also a historian and public health expert, plans to use the fellowship to complete a book about the history of measles, the first of its kind.</p>",
+          "target": [
+            ".fl-node-fh4vlg9nrc3u > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">George Polk Awards go to alums Nick Miroff and Brett Murphy</h3>",
+          "target": [
+            ".fl-node-quvr3ixz5dmh > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>“Berkeley Journalism graduates like Brett and Nick are world-class reporters who protect the public interest at a time when freedom of the press is under intense pressure,” Dean Michael D. Bolden said.</p>",
+          "target": [
+            ".fl-node-quvr3ixz5dmh > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Negar Ajayebi, Hussain Khan and Aisha Wallace-Palomares (all '25) win SPJ Mark of Excellence Award</h3>",
+          "target": [
+            "#what-we-make > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>They won the honor for their work on Berkeley Journalism’s flagship radio show and podcast, North Gate Radio.</p>",
+          "target": [
+            "#what-we-make > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title\">Three promising non-fiction filmmaking students named Marlon Riggs Fellows</h3>",
+          "target": [
+            "#latest-news > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Alana Minkler, Koby Park and Franny Trinidad awarded fellowship celebrating the life and work of the groundbreaking filmmaker, an alum who later taught in the school’s documentary program.</p>",
+          "target": [
+            "#latest-news > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Student</h3>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">Eli Benton Cohen ('27)</h5>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>First-year student Eli Cohen publishes A1 story in the San Francisco Chronicle about the fight against unlawful detentions.</p>",
+          "target": [
+            ".fl-node-61b7a98edc54e > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Faculty</h3>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">David Barstow</h5>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The professor and chair of the Investigative Reporting Program is the first reporter in American history to win four Pulitzer Prizes.</p>",
+          "target": [
+            ".fl-node-61b7a98edc54f > .fl-module-content.fl-node-content > .infobox-center.infobox-has-photo.infobox-photo-above-title > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"uabb-infobox-title-prefix\">Featured Event</h3>",
+          "target": [
+            ".infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > .uabb-infobox-title-prefix"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h5 class=\"uabb-infobox-title\">The State of the News Media</h5>",
+          "target": [
+            ".infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-title-wrap > h5"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Watch Dean Michael D. Bolden in conversation with PBS News Host William Brangham at Commonwealth Club World Affairs in San Francisco April 15.</p>",
+          "target": [
+            ".fl-node-61b7a98edc550 > .fl-module-content.fl-node-content > .infobox-responsive-center.infobox-center.infobox-has-photo > .uabb-infobox-left-right-wrap > .uabb-infobox-content > .uabb-infobox-text-wrap > .uabb-infobox-text.uabb-text-editor > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ]
+}

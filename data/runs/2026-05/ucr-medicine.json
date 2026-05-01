@@ -1,0 +1,3715 @@
+{
+  "month": "2026-05",
+  "scanned_at": "2026-05-01T14:29:00.350Z",
+  "axe_version": "4.11.2",
+  "site": "ucr-medicine",
+  "name": "UC Riverside School of Medicine",
+  "campus": "ucr",
+  "type": "school",
+  "category": "medicine-health",
+  "url": "https://medschool.ucr.edu",
+  "element_count": 1150,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"x0lf7o-responsive-menu\" data-dropdown-menu=\"2db2rb-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-alignment=\"left\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/\" target=\"_self\" data-drupal-link-system-path=\"&lt;front&gt;\" class=\"is-active\" aria-current=\"page\" id=\"accessible-megamenu-1777646081999-2\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\">Home</a>",
+                  "target": [
+                    "#accessible-megamenu-1777646081999-2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/\" target=\"_self\" data-drupal-link-system-path=\"&lt;front&gt;\" class=\"is-active\" aria-current=\"page\" id=\"accessible-megamenu-1777646081999-2\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\">Home</a>",
+          "target": [
+            "#accessible-megamenu-1777646081999-2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/alumni\" data-drupal-link-system-path=\"node/585\" id=\"accessible-megamenu-1777646082001-12\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\" class=\"\">Alumni</a>",
+                  "target": [
+                    "#accessible-megamenu-1777646082001-12"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/alumni\" data-drupal-link-system-path=\"node/585\" id=\"accessible-megamenu-1777646082001-12\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\" class=\"\">Alumni</a>",
+          "target": [
+            "#accessible-megamenu-1777646082001-12"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ucrhealth.org\" id=\"accessible-megamenu-1777646082001-16\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\" class=\"\">UCR Health</a>",
+                  "target": [
+                    "#accessible-megamenu-1777646082001-16"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrhealth.org\" id=\"accessible-megamenu-1777646082001-16\" role=\"region\" aria-expanded=\"false\" aria-hidden=\"true\" class=\"\">UCR Health</a>",
+          "target": [
+            "#accessible-megamenu-1777646082001-16"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"audience-button is-dropdown-submenu-parent opens-left\" role=\"none\" aria-controls=\"3rdo1t-acc-menu\" aria-expanded=\"false\" id=\"sidgh5-acc-menu-link\">",
+                  "target": [
+                    "#sidgh5-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"x0lf7o-responsive-menu\" data-dropdown-menu=\"2db2rb-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-alignment=\"left\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        }
+      ]
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" rel=\"\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"More from us...\">More from us...</a>",
+          "target": [
+            "a[rel=\"\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#546d79",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.46,
+                "fontSize": "17.4pt (23.2px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 id=\"-menu\" data-once=\"quick-links\">Quick Links</h2>",
+                  "target": [
+                    "#-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #546d79, background color: #ffffff, font size: 17.4pt (23.2px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"-menu\" data-once=\"quick-links\">Quick Links</h2>",
+          "target": [
+            "#-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #546d79, background color: #ffffff, font size: 17.4pt (23.2px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3364b7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.75,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr-outline-dk-blue\" href=\"https://somnews.ucr.edu/\">Read more at our News site</a>",
+                  "target": [
+                    ".btn-ucr-outline-dk-blue"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.75 (foreground color: #3364b7, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr-outline-dk-blue\" href=\"https://somnews.ucr.edu/\">Read more at our News site</a>",
+          "target": [
+            ".btn-ucr-outline-dk-blue"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.75 (foreground color: #3364b7, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button audience-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            "#block-ucr-design-1-ucriversideaudiencesearchblock > .google-search > .audience-search-button[data-open=\"gscSearchFormModal\"][aria-controls=\"gscSearchFormModal\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"general-navigation\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"general-navigation\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"general-navigation\">",
+          "target": [
+            "nav[aria-labelledby=\"general-navigation\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"general-navigation\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>University of California, Riverside School of Medicine</h2>",
+          "target": [
+            "#block-ucr-design-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?find=P5588\" target=\"_blank\">            SOM Education Building\n            <br>900 University Ave.             <br>Riverside, CA, 92521             </a>",
+          "target": [
+            "p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:medadmissions@medsch.ucr.edu\">medadmissions@medsch.ucr.edu</a>",
+          "target": [
+            "p:nth-child(2) > a:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:medschool@ucr.edu\">medschool@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:medschool@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?find=P5588\" target=\"_blank\"> Find Us<br><br>\n            <img src=\"/themes/custom/ucr_default/images/googlemap.png\" alt=\"View campus map\"></a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://smpph.ucr.edu/\" target=\"_self\">Department of Social Medicine, Population, and Public Health</a>",
+          "target": [
+            "a[href$=\"smpph.ucr.edu/\"][target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://biomed.ucr.edu/\" target=\"_self\">Division of Biomedical Sciences</a>",
+          "target": [
+            "a[href$=\"biomed.ucr.edu/\"][target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschoolintranet.ucr.edu/\" target=\"_self\">Medical School Intranet</a>",
+          "target": [
+            "li:nth-child(3) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://somsa.ucr.edu/thomas-haider-program-ucr-school-medicine\" target=\"_self\">The Thomas Haider Program at the UCR School of Medicine</a>",
+          "target": [
+            "li:nth-child(4) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucrhealth.org/\">UCR Health</a>",
+          "target": [
+            "a[href$=\"ucrhealth.org/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschoolcompliance.ucr.edu/\" target=\"_self\">UCR School of Medicine Compliance Office</a>",
+          "target": [
+            "li:nth-child(6) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Follow Us:</h2>",
+          "target": [
+            ".medium-auto.cell:nth-child(4) > .footer-item > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_1836152226 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/curriculum_enhancement_banner.jpg?h=28b65dca&amp;itok=y2X4KTgh\" alt=\"students working together\">",
+                  "target": [
+                    "img[alt=\"students working together\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Curriculum Enhancement Project    </div>",
+          "target": [
+            ".ctaItem_1836152226 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_155955669 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/pegan_lab_fume_hood.jpg?h=2f26e61b&amp;itok=oCrMfRfS\" alt=\"Scott Pegan and student at a fume hood\">",
+                  "target": [
+                    ".ctaItem_155955669 > a[target=\"\"] > .cta-bg-image > div:nth-child(1) > picture > img[height=\"768\"][width=\"768\"][loading=\"eager\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Impact of Research at UCR    </div>",
+          "target": [
+            ".ctaItem_155955669 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_2089639089 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/yir-website-mockup1.jpg?h=043e74ee&amp;itok=uWZG6EDt\" alt=\"2024-25 Year in Review\">",
+                  "target": [
+                    "img[alt=\"2024-25 Year in Review\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            2024-25 Year in Review    </div>",
+          "target": [
+            ".ctaItem_2089639089 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_1900212775 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/mph_homepage_image.jpg?h=92903f94&amp;itok=r3jpU35M\" alt=\"Dr. Wolfson and Dr. Sims\">",
+                  "target": [
+                    "img[alt=\"Dr. Wolfson and Dr. Sims\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Master of Public Health (MPH) Degree    </div>",
+          "target": [
+            ".ctaItem_1900212775 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/Zheng_lab_2.jpg?h=f7d9296c&amp;itok=eQhbe8SM\" alt=\"Student preparing samples as Dr. Zheng looks on.\">",
+                  "target": [
+                    "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-bg-image > div:nth-child(1) > picture > img[height=\"768\"][width=\"768\"][loading=\"eager\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Division of Biomedical Sciences    </div>",
+          "target": [
+            "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    "a[href$=\"www.ucrhealth.org\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/UCR-health.JPG?h=56d0ca2e&amp;itok=Gl3jq3Yl\" alt=\"UCR Health Women's Health\">",
+                  "target": [
+                    "img[alt=\"UCR Health Women's Health\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            UCR Health    </div>",
+          "target": [
+            "a[href$=\"www.ucrhealth.org\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            394    \n            </div>\n            <div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            394    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            394    \n            </div>\n            <div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            40%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            40%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            40%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            52.5%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            52.5%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            52.5%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            36.8%    \n            </div>\n            <div class=\"stat-description\">\n                \n            First generation college student    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            36.8%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            36.8%    \n            </div>\n            <div class=\"stat-description\">\n                \n            First generation college student    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            First generation college student    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            81    \n            </div>\n            <div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            81    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            81    \n            </div>\n            <div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "40.8pt (54.4px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            134    \n            </div>\n            <div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            134    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            134    \n            </div>\n            <div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Featured Videos</h2>",
+          "target": [
+            ".margin-bottom-1.full.grid-container > .grid-padding-x.grid-x > .cell > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">2025 Haider Biomedical<br>\nBreakthrough Lecture</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(1) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">2025 Mission Award<br>\nScholarship&nbsp;Video</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(2) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">Drone Flythough<br>\nof Education Building II</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(3) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>University of California, Riverside School of Medicine</h2>",
+          "target": [
+            "#block-ucr-design-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?find=P5588\" target=\"_blank\">            SOM Education Building\n            <br>900 University Ave.             <br>Riverside, CA, 92521             </a>",
+          "target": [
+            "p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:medadmissions@medsch.ucr.edu\">medadmissions@medsch.ucr.edu</a>",
+          "target": [
+            "p:nth-child(2) > a:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:medschool@ucr.edu\">medschool@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:medschool@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?find=P5588\" target=\"_blank\"> Find Us<br><br>\n            <img src=\"/themes/custom/ucr_default/images/googlemap.png\" alt=\"View campus map\"></a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://smpph.ucr.edu/\" target=\"_self\">Department of Social Medicine, Population, and Public Health</a>",
+          "target": [
+            "a[href$=\"smpph.ucr.edu/\"][target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://biomed.ucr.edu/\" target=\"_self\">Division of Biomedical Sciences</a>",
+          "target": [
+            "a[href$=\"biomed.ucr.edu/\"][target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschoolintranet.ucr.edu/\" target=\"_self\">Medical School Intranet</a>",
+          "target": [
+            "li:nth-child(3) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://somsa.ucr.edu/thomas-haider-program-ucr-school-medicine\" target=\"_self\">The Thomas Haider Program at the UCR School of Medicine</a>",
+          "target": [
+            "li:nth-child(4) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucrhealth.org/\">UCR Health</a>",
+          "target": [
+            "a[href$=\"ucrhealth.org/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschoolcompliance.ucr.edu/\" target=\"_self\">UCR School of Medicine Compliance Office</a>",
+          "target": [
+            "li:nth-child(6) > a[target=\"_self\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Follow Us:</h2>",
+          "target": [
+            ".medium-auto.cell:nth-child(4) > .footer-item > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".grid-padding-x.grid-x > .cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\" title=\"UCR Privacy statement\" tabindex=\"0\">privacy statement</a>",
+          "target": [
+            "a[title=\"UCR Privacy statement\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "video-caption",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ],
+      "description": "Ensure <video> elements have captions",
+      "help": "<video> elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "caption",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Check that captions are available for the element"
+            }
+          ],
+          "impact": "critical",
+          "html": "<video id=\"ucrHeroVideo\" src=\"https://ucr.yuja.com/Dashboard/Permalink?authCode=45711995&b=13878534&linkType=video\" class=\"hero-video-player\" autoplay=\"true\" loop=\"true\" muted=\"true\" aria-labelledby=\"main-header-title\" data-once=\"hero-video-player\" style=\"opacity: 1;\">",
+          "target": [
+            "#ucrHeroVideo"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fefefe",
+                "bgColor": "#4b6e9d",
+                "contrastRatio": 5.18,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 id=\"-menu\" data-once=\"quick-links\">Quick Links</h2>",
+                  "target": [
+                    "#-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.18 (foreground color: #fefefe, background color: #4b6e9d, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"-menu\" data-once=\"quick-links\">Quick Links</h2>",
+          "target": [
+            "#-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.18 (foreground color: #fefefe, background color: #4b6e9d, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3364b7",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.75,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn-ucr-outline-dk-blue\" href=\"https://somnews.ucr.edu/\">Read more at our News site</a>",
+                  "target": [
+                    ".btn-ucr-outline-dk-blue"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.75 (foreground color: #3364b7, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn-ucr-outline-dk-blue\" href=\"https://somnews.ucr.edu/\">Read more at our News site</a>",
+          "target": [
+            ".btn-ucr-outline-dk-blue"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.75 (foreground color: #3364b7, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"general-navigation\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"general-navigation\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"general-navigation\">",
+          "target": [
+            "nav[aria-labelledby=\"general-navigation\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"general-navigation\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medschool.ucr.edu\">University of California, Riverside School of Medicine</a>",
+          "target": [
+            "a[href$=\"medschool.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Curriculum Enhancement Project    </div>",
+          "target": [
+            ".ctaItem_1836152226 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_155955669 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/pegan_lab_fume_hood.jpg?h=2f26e61b&amp;itok=oCrMfRfS\" alt=\"Scott Pegan and student at a fume hood\">",
+                  "target": [
+                    ".ctaItem_155955669 > a[target=\"\"] > .cta-bg-image > div:nth-child(1) > picture > img[height=\"768\"][width=\"768\"][loading=\"eager\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Impact of Research at UCR    </div>",
+          "target": [
+            ".ctaItem_155955669 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    ".ctaItem_2089639089 > a[target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/yir-website-mockup1.jpg?h=043e74ee&amp;itok=uWZG6EDt\" alt=\"2024-25 Year in Review\">",
+                  "target": [
+                    "img[alt=\"2024-25 Year in Review\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            2024-25 Year in Review    </div>",
+          "target": [
+            ".ctaItem_2089639089 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Master of Public Health (MPH) Degree    </div>",
+          "target": [
+            ".ctaItem_1900212775 > a[target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/Zheng_lab_2.jpg?h=f7d9296c&amp;itok=eQhbe8SM\" alt=\"Student preparing samples as Dr. Zheng looks on.\">",
+                  "target": [
+                    "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-bg-image > div:nth-child(1) > picture > img[height=\"768\"][width=\"768\"][loading=\"eager\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            Division of Biomedical Sciences    </div>",
+          "target": [
+            "a[href$=\"biomed.ucr.edu/\"][target=\"\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cta-bg-dark-overlay\"></div>",
+                  "target": [
+                    "a[href$=\"www.ucrhealth.org\"] > .cta-bg-image > .cta-bg-dark-overlay"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"eager\" width=\"768\" height=\"768\" src=\"/sites/default/files/styles/cta_image_small/public/UCR-health.JPG?h=56d0ca2e&amp;itok=Gl3jq3Yl\" alt=\"UCR Health Women's Health\">",
+                  "target": [
+                    "img[alt=\"UCR Health Women's Health\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>\n            UCR Health    </div>",
+          "target": [
+            "a[href$=\"www.ucrhealth.org\"] > .cta-text-area > .cta-title > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            394    \n            </div>\n            <div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            394    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            394    \n            </div>\n            <div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Current Medical Students    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            40%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            40%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            40%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Underrepresented in Medicine    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            52.5%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            52.5%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            52.5%    \n            </div>\n            <div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Socioeconomically or educationally disadvantaged    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            36.8%    \n            </div>\n            <div class=\"stat-description\">\n                \n            First generation college student    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            36.8%    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            36.8%    \n            </div>\n            <div class=\"stat-description\">\n                \n            First generation college student    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            First generation college student    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            81    \n            </div>\n            <div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            81    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            81    \n            </div>\n            <div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Biomedical Sciences Masters and PhD Students    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "38.4pt (51.25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            134    \n            </div>\n            <div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            134    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"stat\">\n            <div class=\"stat-number\">\n                \n            134    \n            </div>\n            <div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>\n        </div>",
+                  "target": [
+                    ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat"
+                  ]
+                },
+                {
+                  "html": "<div class=\"stat-container stat-container-custom-bg stat-bg-white stat-opacity-80 stat-font-color-blue \" style=\"background: url(/sites/default/files/som-ed-2-building-2025-se-side-1.jpg); background-size:cover;\">",
+                  "target": [
+                    ".stat-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            Residents &amp; Fellows    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(6) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Featured Videos</h2>",
+          "target": [
+            ".margin-bottom-1.full.grid-container > .grid-padding-x.grid-x > .cell > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">2025 Haider Biomedical<br>\nBreakthrough Lecture</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(1) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">2025 Mission Award<br>\nScholarship&nbsp;Video</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(2) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"inline_block:ucr_columns\" class=\"ucr-custom-block dc-shadowborder\" style=\"background: linear-gradient(rgba(165,200,234,0.33),rgba(165,200,234,0.33)); background-size:cover;\">",
+                  "target": [
+                    ".dc-shadowborder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"text-align-center\">Drone Flythough<br>\nof Education Building II</h3>",
+          "target": [
+            ".paragraph--type--ucr-columns.paragraph.paragraph--view-mode--default:nth-child(3) > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<abbr class=\"event-month\" title=\"May\">\n                                    May\n                                </abbr>",
+          "target": [
+            ".event-short-date[datetime=\"2026-05-19\"] > .event-month[title=\"May\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<abbr class=\"event-date\">19</abbr>",
+          "target": [
+            ".event-short-date[datetime=\"2026-05-19\"] > .event-date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-location\">",
+          "target": [
+            ".event:nth-child(6) > .event-card > .event-overview > header > .event-title-short-date > .event-title-location-time > .event-location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<time datetime=\"2026-05-19\">\n                                        12:00 pm\n                                    </time>",
+          "target": [
+            ".event-date > time[datetime=\"2026-05-19\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,866 @@
+{
+  "month": "2026-05",
+  "scanned_at": "2026-05-01T14:29:00.350Z",
+  "axe_version": "4.11.2",
+  "site": "ucmerced-naturalsciences",
+  "name": "UC Merced School of Natural Sciences",
+  "campus": "ucmerced",
+  "type": "school",
+  "category": "natural-sciences",
+  "url": "https://naturalsciences.ucmerced.edu",
+  "element_count": 645,
+  "violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://conta.cc/4iUxkFO\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\"><img typeof=\"foaf:Image\" src=\"https://naturalsciences.ucmerced.edu/sites/g/files/ufvvjh1296/f/newsletterimage.jpg\" width=\"1192\" height=\"1056\" alt=\"\"></a>",
+          "target": [
+            ".views-field-field-featuredstory-image > .field-content > a[href$=\"4iUxkFO\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 106,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (106px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://chemistry.ucmerced.edu/\" rel=\"noopener\" aria-label=\"uc merced chemistry website\">Chemistry &amp;&nbsp;</a>",
+                  "target": [
+                    ".vertical-link.deptTitles > a[aria-label=\"uc merced chemistry website\"][rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://chemistry.ucmerced.edu/\" target=\"_blank\" aria-label=\"uc merced chemistry Biochemistry website\">Biochemistry</a>",
+          "target": [
+            "a[href$=\"chemistry.ucmerced.edu/\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (106px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content-overlay\"><a aria-label=\"uc merced natural sciences undergraduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/majors-minors\">&nbsp;</a></div>",
+                  "target": [
+                    ".span6:nth-child(1) > .buttonOverlay > .button-content > .content-overlay"
+                  ]
+                },
+                {
+                  "html": "<img alt=\"students working in a laboratory\" class=\"content-image\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/56day1research140421_550x300px.jpg\" style=\"width: 100%;\">",
+                  "target": [
+                    ".span6:nth-child(1) > .buttonOverlay > .button-content > p > a > .content-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-label=\"Natural Sciences Majors and Minors undergraduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/majors-minors\">UNDERGRADUATE PROGRAMS</a>",
+          "target": [
+            ".span6:nth-child(1) > .buttonOverlay > .button-content > .content-details > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content-overlay\"><a aria-label=\"natural sciences graduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/graduate-programs\">&nbsp;</a></div>",
+                  "target": [
+                    ".span6:nth-child(2) > .buttonOverlay > .button-content > .content-overlay"
+                  ]
+                },
+                {
+                  "html": "<img alt=\"faculty and a student in a field gathering samples\" class=\"content-image\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/11research130315_550x300px.jpg\" style=\"width: 100%;\">",
+                  "target": [
+                    ".span6:nth-child(2) > .buttonOverlay > .button-content > p > a > .content-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-label=\"natural sciences graduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/graduate-programs\">GRADUATE PROGRAMS</a>",
+          "target": [
+            ".span6:nth-child(2) > .buttonOverlay > .button-content > .content-details > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "apply",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "admissions.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/first-year/apply/",
+                  "search": {
+                    "button": ""
+                  },
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://admissions.ucmerced.edu/apply\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\"><img alt=\"Apply\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/apply_bg.png\"></a>",
+                  "target": [
+                    ".nsTop-links--apply > .vlTop__figure > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://admissions.ucmerced.edu/apply\"><strong>Apply</strong></a>",
+                  "target": [
+                    ".nsTop-links--apply > .vlTop__body > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://admissions.ucmerced.edu/first-year/apply?button\" target=\"_blank\" rel=\"noopener\">Apply</a>",
+          "target": [
+            "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "school of natural sciences",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/about\" title=\"\" class=\"sf-depth-2 \" style=\"\">School of Natural Sciences</a>",
+                  "target": [
+                    ".sf-depth-2[href$=\"about\"][title=\"\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu\" target=\"_blank\" rel=\"noopener\" title=\"UC Merced School of Natural Sciences\">School of Natural Sciences</a>",
+                  "target": [
+                    ".fColumn:nth-child(2) > ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/\" title=\"School of Natural Sciences\" rel=\"home\">School of Natural Sciences</a>",
+          "target": [
+            "#site-name > a[href=\"/\"][title=\"School of Natural Sciences\"][rel=\"home\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "newsroom",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/news/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/news\" rel=\"noopener\">Newsroom</a>",
+                  "target": [
+                    "strong > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://news.ucmerced.edu\" target=\"_blank\" rel=\"noopener\" title=\"UC Merced News\">Newsroom</a>",
+                  "target": [
+                    "a[href$=\"news.ucmerced.edu\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/news\" title=\"\" class=\"sf-depth-2 \" style=\"\">Newsroom</a>",
+          "target": [
+            "#menu-10243-1 > a[href$=\"news\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "events",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/events/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/events\" rel=\"noopener\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\">",
+                  "target": [
+                    ".nsBottom-links--second > .vlBottom__figure > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/events\" rel=\"noopener\"><strong>Events</strong></a>",
+                  "target": [
+                    ".nsBottom-links--second > .vlBottom__body > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://myemail-api.constantcontact.com/Spring-Newsletter--School-of-Natural-Sciences--STEM---LEAF.html?soid=1131086413283&aid=iADFTlLeAR4\" rel=\"noopener\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\">",
+                  "target": [
+                    ".nsBottom-links--third > .vlBottom__figure > a[rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/events\" title=\"\" class=\"sf-depth-2 \" style=\"\">Events</a>",
+          "target": [
+            "#menu-10244-1 > a[href$=\"events\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://conta.cc/4iUxkFO\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\"><img typeof=\"foaf:Image\" src=\"https://naturalsciences.ucmerced.edu/sites/g/files/ufvvjh1296/f/newsletterimage.jpg\" width=\"1192\" height=\"1056\" alt=\"\"></a>",
+          "target": [
+            ".views-field-field-featuredstory-image > .field-content > a[href$=\"4iUxkFO\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 106,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (106px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 18.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://chemistry.ucmerced.edu/\" rel=\"noopener\" aria-label=\"uc merced chemistry website\">Chemistry &amp;&nbsp;</a>",
+                  "target": [
+                    ".vertical-link.deptTitles > a[aria-label=\"uc merced chemistry website\"][rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://chemistry.ucmerced.edu/\" target=\"_blank\" aria-label=\"uc merced chemistry Biochemistry website\">Biochemistry</a>",
+          "target": [
+            "a[href$=\"chemistry.ucmerced.edu/\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (106px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.4px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content-overlay\"><a aria-label=\"uc merced natural sciences undergraduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/majors-minors\">&nbsp;</a></div>",
+                  "target": [
+                    ".span6:nth-child(1) > .buttonOverlay > .button-content > .content-overlay"
+                  ]
+                },
+                {
+                  "html": "<img alt=\"students working in a laboratory\" class=\"content-image\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/56day1research140421_550x300px.jpg\" style=\"width: 100%;\">",
+                  "target": [
+                    ".span6:nth-child(1) > .buttonOverlay > .button-content > p > a > .content-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-label=\"Natural Sciences Majors and Minors undergraduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/majors-minors\">UNDERGRADUATE PROGRAMS</a>",
+          "target": [
+            ".span6:nth-child(1) > .buttonOverlay > .button-content > .content-details > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content-overlay\"><a aria-label=\"natural sciences graduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/graduate-programs\">&nbsp;</a></div>",
+                  "target": [
+                    ".span6:nth-child(2) > .buttonOverlay > .button-content > .content-overlay"
+                  ]
+                },
+                {
+                  "html": "<img alt=\"faculty and a student in a field gathering samples\" class=\"content-image\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/11research130315_550x300px.jpg\" style=\"width: 100%;\">",
+                  "target": [
+                    ".span6:nth-child(2) > .buttonOverlay > .button-content > p > a > .content-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-label=\"natural sciences graduate programs\" href=\"https://naturalsciences.ucmerced.edu/information-for/students/graduate-programs\">GRADUATE PROGRAMS</a>",
+          "target": [
+            ".span6:nth-child(2) > .buttonOverlay > .button-content > .content-details > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "school of natural sciences",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/\" title=\"School of Natural Sciences\" rel=\"home\">School of Natural Sciences</a>",
+                  "target": [
+                    ".site-name-mobile > a[href=\"/\"][title=\"School of Natural Sciences\"][rel=\"home\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/about\" title=\"\" class=\"sf-depth-2 \" style=\"\">School of Natural Sciences</a>",
+                  "target": [
+                    ".sf-depth-2[href$=\"about\"][title=\"\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu\" target=\"_blank\" rel=\"noopener\" title=\"UC Merced School of Natural Sciences\">School of Natural Sciences</a>",
+                  "target": [
+                    ".fColumn:nth-child(2) > ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/\" title=\"School of Natural Sciences\" rel=\"home\">School of Natural Sciences</a>",
+          "target": [
+            "#site-name > a[href=\"/\"][title=\"School of Natural Sciences\"][rel=\"home\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "newsroom",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/news/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/news\" rel=\"noopener\">Newsroom</a>",
+                  "target": [
+                    "strong > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://news.ucmerced.edu\" target=\"_blank\" rel=\"noopener\" title=\"UC Merced News\">Newsroom</a>",
+                  "target": [
+                    "a[href$=\"news.ucmerced.edu\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/news\" title=\"\" class=\"sf-depth-2 \" style=\"\">Newsroom</a>",
+          "target": [
+            "#menu-10243-1 > a[href$=\"news\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "events",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "naturalsciences.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/events/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/events\" rel=\"noopener\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\">",
+                  "target": [
+                    ".nsBottom-links--second > .vlBottom__figure > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://naturalsciences.ucmerced.edu/events\" rel=\"noopener\"><strong>Events</strong></a>",
+                  "target": [
+                    ".nsBottom-links--second > .vlBottom__body > a[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://myemail-api.constantcontact.com/Spring-Newsletter--School-of-Natural-Sciences--STEM---LEAF.html?soid=1131086413283&aid=iADFTlLeAR4\" rel=\"noopener\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\">",
+                  "target": [
+                    ".nsBottom-links--third > .vlBottom__figure > a[rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/events\" title=\"\" class=\"sf-depth-2 \" style=\"\">Events</a>",
+          "target": [
+            "#menu-10244-1 > a[href$=\"events\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "apply",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "admissions.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/first-year/apply/",
+                  "search": {
+                    "button": ""
+                  },
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://admissions.ucmerced.edu/apply\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\"><img alt=\"Apply\" src=\"https://naturalsciences.ucmerced.edu/sites/naturalsciences.ucmerced.edu/files/images/Homepage/apply_bg.png\"></a>",
+                  "target": [
+                    ".nsTop-links--apply > .vlTop__figure > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://admissions.ucmerced.edu/apply\"><strong>Apply</strong></a>",
+                  "target": [
+                    ".nsTop-links--apply > .vlTop__body > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://admissions.ucmerced.edu/first-year/apply?button\" target=\"_blank\" rel=\"noopener\">Apply</a>",
+          "target": [
+            ".quick-links-mobile > ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}

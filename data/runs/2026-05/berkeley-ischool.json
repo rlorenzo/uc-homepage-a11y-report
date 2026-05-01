@@ -1,0 +1,1738 @@
+{
+  "month": "2026-05",
+  "scanned_at": "2026-05-01T14:29:00.350Z",
+  "axe_version": "4.11.2",
+  "site": "berkeley-ischool",
+  "name": "UC Berkeley School of Information",
+  "campus": "berkeley",
+  "type": "school",
+  "category": "information",
+  "url": "https://ischool.berkeley.edu",
+  "element_count": 2221,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"213bf990-cb4b-4a59-9aa6-cb604d9c71d7\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
+          "target": [
+            "#\\32 13bf990-cb4b-4a59-9aa6-cb604d9c71d7"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"tbm tbm-main tbm-no-arrows\" id=\"f1e6af48-ba91-4392-b241-19ffa70a8796\" data-breakpoint=\"0\" aria-label=\"main navigation\" data-initialized=\"true\">",
+          "target": [
+            "#f1e6af48-ba91-4392-b241-19ffa70a8796"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "11.8pt (15.75px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"view-footer\">",
+                  "target": [
+                    ".view-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ischool.berkeley.edu/news/2026/new-bellwether-postdoctoral-scholars-bring-bold-research-ideas-i-school\">New Bellwether Postdoctoral Scholars Bring Bold Research Ideas to the I School</a>",
+          "target": [
+            ".news-small > .view-content > .views-row:nth-child(3) > .views-field-title.views-field > .field-content > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-subheadline\">Boldly leading the way with education and research in a world awash in information and data</div>",
+          "target": [
+            ".hero-subheadline"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "17.3pt (23.12px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/programs\">Degree Programs</a>",
+          "target": [
+            "h2 > a[href$=\"programs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/programs/mims\">Master of Information Management and Systems (MIMS)</a>",
+          "target": [
+            "h3:nth-child(2) > a[href$=\"mims\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.2pt (14.875px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Educating information professionals to provide leadership for an information-driven world.</p>",
+          "target": [
+            ".col-1 > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/programs/phd\">Ph.D. in Information Science</a>",
+          "target": [
+            "h3:nth-child(4) > a[href$=\"phd\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.2pt (14.875px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>A research program for next-generation scholars of the information age.</p>",
+          "target": [
+            ".col-1 > p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/programs/mids\">Master of Information and Data Science (MIDS)</a>",
+          "target": [
+            "h3:nth-child(2) > a[href$=\"mids\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.2pt (14.875px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Online degree preparing data science professionals to solve real-world problems.</p>",
+          "target": [
+            ".col-2 > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/programs/mics\">Master of Information and Cybersecurity (MICS)</a>",
+          "target": [
+            "h3:nth-child(4) > a[href$=\"mics\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.2pt (14.875px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"wide-box hero-bottom-box\">",
+                  "target": [
+                    ".wide-box"
+                  ]
+                },
+                {
+                  "html": "<div class=\"hero-image image-3-of-8 image-7-of-9 \">",
+                  "target": [
+                    ".hero-image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Online degree preparing cybersecurity leaders for complex cybersecurity challenges.</p>",
+          "target": [
+            ".col-2 > p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "11.8pt (15.75px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"view-footer\">",
+                  "target": [
+                    ".view-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ischool.berkeley.edu/news/2026/new-bellwether-postdoctoral-scholars-bring-bold-research-ideas-i-school\">New Bellwether Postdoctoral Scholars Bring Bold Research Ideas to the I School</a>",
+          "target": [
+            ".news-small > .view-content > .views-row:nth-child(3) > .views-field-title.views-field > .field-content > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a></div>\n                    <div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/homeme-logo.png?itok=-wyai8bX\" width=\"295\" height=\"295\" alt=\"HomeMe's Logo - A robot with the HDB skyline as an outline in the background\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a>",
+          "target": [
+            ".project-title > a[href$=\"homeme\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a></div>\n                    <div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/homeme-logo.png?itok=-wyai8bX\" width=\"295\" height=\"295\" alt=\"HomeMe's Logo - A robot with the HDB skyline as an outline in the background\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>",
+          "target": [
+            ".views-row:nth-child(1) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-04/print-out-sign.png?itok=f7iXBk21\" width=\"295\" height=\"295\" alt=\"Logo image of the text Brain Type\" title=\"BrainType: A Co-Located Pro-Social Game\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/brain-type-co-located-game-designed-social-presence\" hreflang=\"en\">Brain Type: A Co-Located Game Designed for Social Presence </a>",
+          "target": [
+            ".views-row:nth-child(2) > .project-image-box > .project-text-box > .project-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-04/print-out-sign.png?itok=f7iXBk21\" width=\"295\" height=\"295\" alt=\"Logo image of the text Brain Type\" title=\"BrainType: A Co-Located Pro-Social Game\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> A novel co-located gaming experience that facilitates community… </div>",
+          "target": [
+            ".views-row:nth-child(2) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(3) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/2860080c-b8fc-41ce-b8da-b184eb213452.png?itok=n_5_htX-\" width=\"295\" height=\"295\" alt=\"DDNS Teaser\" title=\"DDNS Teaser\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"DDNS Teaser\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/decentralized-domain-name-system-ddns\" hreflang=\"en\">Decentralized Domain Name System (DDNS)</a>",
+          "target": [
+            ".views-row:nth-child(3) > .project-image-box > .project-text-box > .project-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(3) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/2860080c-b8fc-41ce-b8da-b184eb213452.png?itok=n_5_htX-\" width=\"295\" height=\"295\" alt=\"DDNS Teaser\" title=\"DDNS Teaser\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"DDNS Teaser\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> 🛡️ What if your domain couldn’t be censored, hijacked, or taken down—… </div>",
+          "target": [
+            ".views-row:nth-child(3) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a></div>\n                    <div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(4) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-05/1artboard-2.png?h=dd095780&amp;itok=xx3y03_K\" width=\"295\" height=\"295\" alt=\"FloodNavigator Logo\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"FloodNavigator Logo\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a>",
+          "target": [
+            ".project-title > a[href$=\"floodnavigator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a></div>\n                    <div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(4) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-05/1artboard-2.png?h=dd095780&amp;itok=xx3y03_K\" width=\"295\" height=\"295\" alt=\"FloodNavigator Logo\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"FloodNavigator Logo\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>",
+          "target": [
+            ".views-row:nth-child(4) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.linkedin.com/edu/school?id=42210\" class=\"social-link social-link-ln\" target=\"_blank\">Connect on Linkedin</a>",
+                  "target": [
+                    ".social-link-ln"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.linkedin.com/edu/school?id=42210\" class=\"social-link social-link-ln\" target=\"_blank\">Connect on Linkedin</a>",
+          "target": [
+            ".social-link-ln"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.instagram.com/BerkeleyISchool\" class=\"social-link social-link-inst\" target=\"_blank\">Follow us on Instagram</a>",
+                  "target": [
+                    ".social-link-inst"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.instagram.com/BerkeleyISchool\" class=\"social-link social-link-inst\" target=\"_blank\">Follow us on Instagram</a>",
+          "target": [
+            ".social-link-inst"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.facebook.com/BerkeleyISchool\" class=\"social-link social-link-fb\" target=\"_blank\">Find us on Facebook</a>",
+                  "target": [
+                    ".social-link-fb"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.facebook.com/BerkeleyISchool\" class=\"social-link social-link-fb\" target=\"_blank\">Find us on Facebook</a>",
+          "target": [
+            ".social-link-fb"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://bsky.app/profile/berkeleyischool.bsky.social\" class=\"social-link social-link-bluesky\" target=\"_blank\">Follow us on Bluesky</a>",
+                  "target": [
+                    ".social-link-bluesky"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://bsky.app/profile/berkeleyischool.bsky.social\" class=\"social-link social-link-bluesky\" target=\"_blank\">Follow us on Bluesky</a>",
+          "target": [
+            ".social-link-bluesky"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://x.com/BerkeleyISchool\" class=\"social-link social-link-twitter\" target=\"_blank\">Find us on X</a>",
+                  "target": [
+                    ".social-link-twitter"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://x.com/BerkeleyISchool\" class=\"social-link social-link-twitter\" target=\"_blank\">Find us on X</a>",
+          "target": [
+            ".social-link-twitter"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.youtube.com/BerkeleyISchool\" class=\"social-link social-link-yt\" target=\"_blank\">Watch us on YouTube</a>",
+                  "target": [
+                    ".social-link-yt"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.youtube.com/BerkeleyISchool\" class=\"social-link social-link-yt\" target=\"_blank\">Watch us on YouTube</a>",
+          "target": [
+            ".social-link-yt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.flickr.com/photos/BerkeleyISchool/albums\" class=\"social-link social-link-fl\" target=\"_blank\">View Flickr Photos</a>",
+                  "target": [
+                    ".social-link-fl"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.flickr.com/photos/BerkeleyISchool/albums\" class=\"social-link social-link-fl\" target=\"_blank\">View Flickr Photos</a>",
+          "target": [
+            ".social-link-fl"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://medium.com/berkeleyischool\" class=\"social-link social-link-medium\" target=\"_blank\">Read our Medium Publication</a>",
+                  "target": [
+                    ".social-link-medium"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medium.com/berkeleyischool\" class=\"social-link social-link-medium\" target=\"_blank\">Read our Medium Publication</a>",
+          "target": [
+            ".social-link-medium"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"213bf990-cb4b-4a59-9aa6-cb604d9c71d7\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
+          "target": [
+            "#\\32 13bf990-cb4b-4a59-9aa6-cb604d9c71d7"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a></div>\n                    <div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/homeme-logo.png?itok=-wyai8bX\" width=\"295\" height=\"295\" alt=\"HomeMe's Logo - A robot with the HDB skyline as an outline in the background\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a>",
+          "target": [
+            ".project-title > a[href$=\"homeme\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/homeme\" hreflang=\"en\">HomeMe</a></div>\n                    <div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/homeme-logo.png?itok=-wyai8bX\" width=\"295\" height=\"295\" alt=\"HomeMe's Logo - A robot with the HDB skyline as an outline in the background\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(1) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> Meet HomeMe, where geospatial intelligence meets HTML-RAG precision—… </div>",
+          "target": [
+            ".views-row:nth-child(1) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-04/print-out-sign.png?itok=f7iXBk21\" width=\"295\" height=\"295\" alt=\"Logo image of the text Brain Type\" title=\"BrainType: A Co-Located Pro-Social Game\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/brain-type-co-located-game-designed-social-presence\" hreflang=\"en\">Brain Type: A Co-Located Game Designed for Social Presence </a>",
+          "target": [
+            ".views-row:nth-child(2) > .project-image-box > .project-text-box > .project-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-04/print-out-sign.png?itok=f7iXBk21\" width=\"295\" height=\"295\" alt=\"Logo image of the text Brain Type\" title=\"BrainType: A Co-Located Pro-Social Game\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    ".views-row:nth-child(2) > .project-image-box > .project-image > a > .image-style-homepage-student-projects[width=\"295\"][height=\"295\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> A novel co-located gaming experience that facilitates community… </div>",
+          "target": [
+            ".views-row:nth-child(2) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(3) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/2860080c-b8fc-41ce-b8da-b184eb213452.png?itok=n_5_htX-\" width=\"295\" height=\"295\" alt=\"DDNS Teaser\" title=\"DDNS Teaser\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"DDNS Teaser\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/decentralized-domain-name-system-ddns\" hreflang=\"en\">Decentralized Domain Name System (DDNS)</a>",
+          "target": [
+            ".views-row:nth-child(3) > .project-image-box > .project-text-box > .project-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">",
+                  "target": [
+                    ".views-row:nth-child(3) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-08/2860080c-b8fc-41ce-b8da-b184eb213452.png?itok=n_5_htX-\" width=\"295\" height=\"295\" alt=\"DDNS Teaser\" title=\"DDNS Teaser\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"DDNS Teaser\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> 🛡️ What if your domain couldn’t be censored, hijacked, or taken down—… </div>",
+          "target": [
+            ".views-row:nth-child(3) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a></div>\n                    <div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(4) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-05/1artboard-2.png?h=dd095780&amp;itok=xx3y03_K\" width=\"295\" height=\"295\" alt=\"FloodNavigator Logo\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"FloodNavigator Logo\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a>",
+          "target": [
+            ".project-title > a[href$=\"floodnavigator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"project-text-box\">\n            <div class=\"project-title\"> <a href=\"/projects/2025/floodnavigator\" hreflang=\"en\">FloodNavigator</a></div>\n                    <div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>\n          </div>",
+                  "target": [
+                    ".views-row:nth-child(4) > .project-image-box > .project-text-box"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/homepage_student_projects/public/2025-05/1artboard-2.png?h=dd095780&amp;itok=xx3y03_K\" width=\"295\" height=\"295\" alt=\"FloodNavigator Logo\" class=\"image-style-homepage-student-projects\">",
+                  "target": [
+                    "img[alt=\"FloodNavigator Logo\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"project-teaser\"> A mobile app offering real-time, crowdsourced updates on road… </div>",
+          "target": [
+            ".views-row:nth-child(4) > .project-image-box > .project-text-box > .project-teaser"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.linkedin.com/edu/school?id=42210\" class=\"social-link social-link-ln\" target=\"_blank\">Connect on Linkedin</a>",
+                  "target": [
+                    ".social-link-ln"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.linkedin.com/edu/school?id=42210\" class=\"social-link social-link-ln\" target=\"_blank\">Connect on Linkedin</a>",
+          "target": [
+            ".social-link-ln"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.instagram.com/BerkeleyISchool\" class=\"social-link social-link-inst\" target=\"_blank\">Follow us on Instagram</a>",
+                  "target": [
+                    ".social-link-inst"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.instagram.com/BerkeleyISchool\" class=\"social-link social-link-inst\" target=\"_blank\">Follow us on Instagram</a>",
+          "target": [
+            ".social-link-inst"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.facebook.com/BerkeleyISchool\" class=\"social-link social-link-fb\" target=\"_blank\">Find us on Facebook</a>",
+                  "target": [
+                    ".social-link-fb"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.facebook.com/BerkeleyISchool\" class=\"social-link social-link-fb\" target=\"_blank\">Find us on Facebook</a>",
+          "target": [
+            ".social-link-fb"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://bsky.app/profile/berkeleyischool.bsky.social\" class=\"social-link social-link-bluesky\" target=\"_blank\">Follow us on Bluesky</a>",
+                  "target": [
+                    ".social-link-bluesky"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://bsky.app/profile/berkeleyischool.bsky.social\" class=\"social-link social-link-bluesky\" target=\"_blank\">Follow us on Bluesky</a>",
+          "target": [
+            ".social-link-bluesky"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://x.com/BerkeleyISchool\" class=\"social-link social-link-twitter\" target=\"_blank\">Find us on X</a>",
+                  "target": [
+                    ".social-link-twitter"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://x.com/BerkeleyISchool\" class=\"social-link social-link-twitter\" target=\"_blank\">Find us on X</a>",
+          "target": [
+            ".social-link-twitter"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.youtube.com/BerkeleyISchool\" class=\"social-link social-link-yt\" target=\"_blank\">Watch us on YouTube</a>",
+                  "target": [
+                    ".social-link-yt"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.youtube.com/BerkeleyISchool\" class=\"social-link social-link-yt\" target=\"_blank\">Watch us on YouTube</a>",
+          "target": [
+            ".social-link-yt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.flickr.com/photos/BerkeleyISchool/albums\" class=\"social-link social-link-fl\" target=\"_blank\">View Flickr Photos</a>",
+                  "target": [
+                    ".social-link-fl"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.flickr.com/photos/BerkeleyISchool/albums\" class=\"social-link social-link-fl\" target=\"_blank\">View Flickr Photos</a>",
+          "target": [
+            ".social-link-fl"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://medium.com/berkeleyischool\" class=\"social-link social-link-medium\" target=\"_blank\">Read our Medium Publication</a>",
+                  "target": [
+                    ".social-link-medium"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://medium.com/berkeleyischool\" class=\"social-link social-link-medium\" target=\"_blank\">Read our Medium Publication</a>",
+          "target": [
+            ".social-link-medium"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ]
+}
