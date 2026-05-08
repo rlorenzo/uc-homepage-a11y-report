@@ -108,6 +108,9 @@ jobs:
           mkdir -p site/data
           cp data/history.json site/data/history.json
 
+      - name: Minify CSS
+        run: npm run minify:css
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

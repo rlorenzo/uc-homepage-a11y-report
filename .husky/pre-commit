@@ -1,8 +1,11 @@
-# Run Biome checks on every commit. Blocks the commit on failure.
+# Run lint/quality checks on every commit. Blocks the commit on failure.
 
 set -e
 
 echo "→ Biome check (lint + format, JS and CSS)"
-npm run --silent check
+npx --no -- biome check
+
+echo "→ Fallow audit (dead code, duplication, complexity — new issues only)"
+npx --no -- fallow audit
 
 echo "✓ pre-commit checks passed"

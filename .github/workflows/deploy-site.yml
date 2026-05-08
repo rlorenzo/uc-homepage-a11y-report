@@ -33,6 +33,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Prepare Pages artifact
         run: |
           # site/data is a symlink to ../data for local dev; replace with
@@ -41,6 +50,9 @@ jobs:
           rm -rf site/data
           mkdir -p site/data
           cp data/history.json site/data/history.json
+
+      - name: Minify CSS
+        run: npm run minify:css
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

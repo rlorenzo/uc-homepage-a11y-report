@@ -147,7 +147,7 @@ export const RULE_DESCRIPTIONS = {
 export const ruleFriendly = (rule) =>
   RULE_DESCRIPTIONS[rule] || "Automated accessibility rule violation";
 
-export const RULE_IMPACT = {
+const RULE_IMPACT = {
   "color-contrast":
     "Low-contrast text is a barrier for anyone with low vision, color blindness, or age-related vision loss — roughly 1 in 12 people.",
   "link-name":
