@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "timeout": 30000,
+    "wait": 500,
+    "levelCapWhenNeedsReview": "warning",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      "wait for element #campus-tbody tr to be added"
+    ],
+    "ignore": [
+      "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID"
+    ],
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--force-prefers-reduced-motion"
+      ]
+    }
+  },
+  "urls": [
+    "http://localhost:3000/"
+  ]
+}
