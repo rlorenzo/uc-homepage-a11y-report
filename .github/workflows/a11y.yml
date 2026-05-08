@@ -1,0 +1,31 @@
+name: A11y
+
+# Verifies the generated report site (site/) is accessible by serving it
+# locally and running pa11y-ci against the rendered DOM with both axe-core
+# and HTML_CodeSniffer rule sets at WCAG 2.0/2.1 A & AA.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run pa11y-ci against rendered site
+        run: npm run a11y

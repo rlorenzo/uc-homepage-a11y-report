@@ -11,6 +11,9 @@
     "lint": "biome lint",
     "format": "biome format --write",
     "format:check": "biome format",
+    "a11y": "start-server-and-test a11y:serve http://localhost:3000 a11y:scan",
+    "a11y:serve": "serve site -l 3000 --no-clipboard",
+    "a11y:scan": "pa11y-ci",
     "prepare": "husky"
   },
   "license": "MIT",
@@ -23,6 +26,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.6",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "pa11y-ci": "^4.1.0",
+    "serve": "^14.2.4",
+    "start-server-and-test": "^2.0.10"
   }
 }
