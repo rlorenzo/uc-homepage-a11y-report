@@ -9,11 +9,13 @@ permissions:
   contents: read
 
 jobs:
-  biome:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,4 +27,7 @@ jobs:
         run: npm ci
 
       - name: Biome check (lint + format, JS and CSS)
-        run: npm run check
+        run: npx biome check
+
+      - name: Fallow audit (dead code, duplication, complexity — new issues only)
+        run: npx fallow audit
