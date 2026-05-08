@@ -6,11 +6,12 @@
   "scripts": {
     "scan": "node scan/run.mjs",
     "verify": "node scripts/verify-all.mjs",
-    "check": "biome check",
-    "check:fix": "biome check --write",
+    "check": "biome check && fallow audit",
+    "check:fix": "biome check --write && fallow fix && fallow audit",
     "lint": "biome lint",
     "format": "biome format --write",
     "format:check": "biome format",
+    "fallow": "fallow",
     "a11y": "start-server-and-test a11y:serve http://localhost:3000 a11y:scan",
     "a11y:serve": "serve site -l 3000 --no-clipboard",
     "a11y:scan": "pa11y-ci",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.6",
+    "fallow": "^2.67.0",
     "husky": "^9.1.7",
     "pa11y-ci": "^4.1.0",
     "serve": "^14.2.4",
