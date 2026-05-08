@@ -54,11 +54,14 @@ jobs:
             response=$(curl -sf \
               -H "Authorization: Bearer ${CF_TOKEN}" \
               "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/${CF_PROJECT}/deployments?per_page=25" || true)
-            url=$(echo "$response" | jq -r --arg sha "$SHA" '
+            # Default to an empty object on curl failure / non-JSON so jq
+            # can't blow up the retry loop with a parse error.
+            [ -z "$response" ] && response='{}'
+            url=$(printf '%s' "$response" | jq -r --arg sha "$SHA" '
               .result // []
               | map(select(.deployment_trigger.metadata.commit_hash == $sha))
               | .[0].url // empty
-            ')
+            ' 2>/dev/null || true)
             if [ -n "$url" ]; then
               echo "url=${url}" >> "$GITHUB_OUTPUT"
               exit 0
