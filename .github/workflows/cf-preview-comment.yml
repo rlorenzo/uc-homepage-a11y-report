@@ -1,0 +1,86 @@
+name: PR Preview Comment
+
+# Cloudflare Workers Builds posts a "Deployment successful" comment with
+# only a link to the build dashboard, not the public preview URL. This
+# workflow watches for that check to finish, asks the Cloudflare API for
+# the deployment URL of the matching commit, and edits/upserts a PR
+# comment with the actual link.
+#
+# Setup (one-time): add a CLOUDFLARE_API_TOKEN repo secret with a token
+# scoped read-only to "Account / Cloudflare Pages:Read" (and/or
+# "Account / Workers Scripts:Read" if the API path falls back).
+
+on:
+  check_run:
+    types: [completed]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: |
+      github.event.check_run.conclusion == 'success' &&
+      startsWith(github.event.check_run.name, 'Workers Builds:')
+    runs-on: ubuntu-latest
+    env:
+      CF_ACCOUNT: 547c90e13da9904d9a344399ade3fb12
+      CF_PROJECT: uc-homepage-a11y-report
+      SHA: ${{ github.event.check_run.head_sha }}
+    steps:
+      - name: Find PR for commit
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No PR for commit ${SHA}; nothing to comment on."
+            exit 0
+          fi
+          echo "pr=${pr}" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch preview URL from Cloudflare
+        id: cf
+        if: steps.pr.outputs.pr
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          # Workers Builds for Pages-style projects exposes deployments via
+          # the Pages API. Retry briefly because the deployment record can
+          # lag the check completion by a few seconds.
+          for attempt in 1 2 3 4 5; do
+            response=$(curl -sf \
+              -H "Authorization: Bearer ${CF_TOKEN}" \
+              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/${CF_PROJECT}/deployments?per_page=25" || true)
+            url=$(echo "$response" | jq -r --arg sha "$SHA" '
+              .result // []
+              | map(select(.deployment_trigger.metadata.commit_hash == $sha))
+              | .[0].url // empty
+            ')
+            if [ -n "$url" ]; then
+              echo "url=${url}" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Attempt ${attempt}: no deployment yet for ${SHA}; sleeping."
+            sleep 6
+          done
+          echo "::warning::No Cloudflare deployment URL found for ${SHA} after retries."
+
+      - name: Upsert preview comment
+        if: steps.cf.outputs.url
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr.outputs.pr }}
+          URL: ${{ steps.cf.outputs.url }}
+        run: |
+          marker="<!-- cf-preview-link -->"
+          body=$(printf '%s\n\nPreview: %s\n\nDeployed commit: `%s`' "$marker" "$URL" "$SHA")
+          existing=$(gh api "repos/${{ github.repository }}/issues/${PR}/comments" \
+            --jq "[.[] | select(.body | contains(\"${marker}\"))] | .[0].id // empty")
+          if [ -n "$existing" ]; then
+            gh api -X PATCH "repos/${{ github.repository }}/issues/comments/${existing}" -f body="$body"
+          else
+            gh api "repos/${{ github.repository }}/issues/${PR}/comments" -f body="$body"
+          fi
