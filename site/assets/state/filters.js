@@ -193,11 +193,18 @@ export function describeFilter(s) {
   if (s.type !== TYPE_ALL) parts.push(TYPE_LABELS[s.type]);
   if (s.campuses.size > 0) {
     // Sort so the summary reads the same regardless of chip toggle
-    // order, matching the deterministic URL hash.
-    const names = [...s.campuses].sort().map((slug) => CAMPUS_NAMES[slug] || slug);
-    parts.push(names.length <= 3 ? names.join(", ") : `${names.length} campuses`);
+    // order, matching the deterministic URL hash. Drop any slug not in
+    // the known campus map so URL-hash input can never leak through
+    // verbatim into the DOM.
+    const names = [...s.campuses]
+      .sort()
+      .map((slug) => CAMPUS_NAMES[slug])
+      .filter(Boolean);
+    if (names.length) {
+      parts.push(names.length <= 3 ? names.join(", ") : `${names.length} campuses`);
+    }
   }
-  if (s.category) parts.push(CATEGORY_LABELS[s.category] || s.category);
+  if (s.category && CATEGORY_LABELS[s.category]) parts.push(CATEGORY_LABELS[s.category]);
   return parts.join(" · ");
 }
 
