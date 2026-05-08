@@ -30,4 +30,7 @@ jobs:
         run: npx biome check
 
       - name: Fallow audit (dead code, duplication, complexity — new issues only)
-        run: npx fallow audit
+        # GitHub's PR checkout doesn't set an upstream ref, so fallow can't
+        # auto-detect the base. Pass it explicitly: PR base for pull_request
+        # events, main for direct pushes.
+        run: npx fallow audit --base "origin/${{ github.base_ref || 'main' }}"
