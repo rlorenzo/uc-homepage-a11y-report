@@ -57,10 +57,14 @@ jobs:
             # Default to an empty object on curl failure / non-JSON so jq
             # can't blow up the retry loop with a parse error.
             [ -z "$response" ] && response='{}'
+            # Prefer the branch alias (https://<branch>.<project>.pages.dev)
+            # over the per-commit URL — it stays valid across new commits on
+            # the same PR. Fall back to .url if no alias is published.
             url=$(printf '%s' "$response" | jq -r --arg sha "$SHA" '
               .result // []
               | map(select(.deployment_trigger.metadata.commit_hash == $sha))
-              | .[0].url // empty
+              | .[0] as $d
+              | (($d.aliases // [])[0]) // $d.url // empty
             ' 2>/dev/null || true)
             if [ -n "$url" ]; then
               echo "url=${url}" >> "$GITHUB_OUTPUT"
