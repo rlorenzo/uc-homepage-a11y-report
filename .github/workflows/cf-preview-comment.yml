@@ -11,8 +11,17 @@ name: PR Preview Comment
 # "Account / Workers Scripts:Read" if the API path falls back).
 
 on:
+  # Cloudflare Workers Builds finishing posts a "Workers Builds:" check_run.
+  # That's the normal path. But Cloudflare builds on branch push, before any
+  # PR exists, so the check can complete *before* the PR is opened — in that
+  # window the comment step has nowhere to comment. The pull_request trigger
+  # below catches that case: when a PR is opened (or reopened) we look back
+  # at the deployment Cloudflare has already produced for the head SHA and
+  # post the comment retroactively.
   check_run:
     types: [completed]
+  pull_request:
+    types: [opened, reopened]
 
 permissions:
   contents: read
@@ -21,20 +30,29 @@ permissions:
 jobs:
   comment:
     if: |
-      github.event.check_run.conclusion == 'success' &&
-      startsWith(github.event.check_run.name, 'Workers Builds:')
+      (github.event_name == 'check_run' &&
+        github.event.check_run.conclusion == 'success' &&
+        startsWith(github.event.check_run.name, 'Workers Builds:')) ||
+      github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     env:
       CF_ACCOUNT: 547c90e13da9904d9a344399ade3fb12
       CF_PROJECT: uc-homepage-a11y-report
-      SHA: ${{ github.event.check_run.head_sha }}
+      SHA: ${{ github.event.check_run.head_sha || github.event.pull_request.head.sha }}
+      PR_FROM_EVENT: ${{ github.event.pull_request.number }}
     steps:
       - name: Find PR for commit
         id: pr
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pr=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+          # On pull_request events we already know the PR number; skip the
+          # commit-to-PR lookup, which would otherwise be a wasted API call.
+          if [ -n "${PR_FROM_EVENT}" ]; then
+            pr="${PR_FROM_EVENT}"
+          else
+            pr=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+          fi
           if [ -z "$pr" ]; then
             echo "No PR for commit ${SHA}; nothing to comment on."
             exit 0
@@ -83,7 +101,7 @@ jobs:
           URL: ${{ steps.cf.outputs.url }}
         run: |
           marker="<!-- cf-preview-link -->"
-          body=$(printf '%s\n\nPreview: %s\n\nDeployed commit: `%s`' "$marker" "$URL" "$SHA")
+          body=$(printf '%s\n\nPreview: %s' "$marker" "$URL")
           existing=$(gh api "repos/${{ github.repository }}/issues/${PR}/comments" \
             --jq "[.[] | select(.body | contains(\"${marker}\"))] | .[0].id // empty")
           if [ -n "$existing" ]; then
