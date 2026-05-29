@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "title": "Design System: UC Homepage Accessibility Report",
+  "extensions": {
+    "colorMeta": {
+      "uc-blue": {
+        "role": "primary",
+        "displayName": "UC Blue",
+        "canonical": "#1295D8",
+        "tonalRamp": ["#04263A", "#06405F", "#085C86", "#0A78AD", "#1295D8", "#5AB6E6", "#9CD3F0", "#D3ECF9"]
+      },
+      "uc-gold": {
+        "role": "primary",
+        "displayName": "UC Gold",
+        "canonical": "#FFB511",
+        "tonalRamp": ["#3D2B00", "#5E4300", "#876100", "#B58200", "#FFB511", "#FFCB54", "#FFE08C", "#FFF1C7"]
+      },
+      "uc-blue-secondary": {
+        "role": "secondary",
+        "displayName": "UC Blue (Secondary)",
+        "canonical": "#005581",
+        "tonalRamp": ["#001620", "#002636", "#003B57", "#004A6C", "#005581", "#1F7CAC", "#5AA6CE", "#A6D2E8"]
+      },
+      "uc-dark-blue": {
+        "role": "neutral",
+        "displayName": "UC Dark Blue (Ink)",
+        "canonical": "#002033",
+        "tonalRamp": ["#002033", "#0A3142", "#1C4456", "#3E5566", "#5E7280", "#8A9AA6", "#B9C6CF", "#E2EAEF"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#D6E3EC",
+        "tonalRamp": ["#0A3142", "#1C4456", "#3E5566", "#6E8696", "#9FB6C4", "#C2D4DF", "#D6E3EC", "#EDF4F9"]
+      },
+      "impact-critical": {
+        "role": "semantic",
+        "displayName": "Critical",
+        "canonical": "#8E0C0C",
+        "tonalRamp": ["#2E0303", "#4A0606", "#660909", "#7A0A0A", "#8E0C0C", "#B83A3A", "#D98080", "#F2CCCC"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Front-page figure and hero title; fluid serif headline." },
+      "stat": { "displayName": "Stat", "purpose": "Large quantitative values in the stat grid; serif for gravity." },
+      "headline": { "displayName": "Headline", "purpose": "Major section openers." },
+      "title": { "displayName": "Title", "purpose": "Subsection and card headings (h2)." },
+      "body": { "displayName": "Body", "purpose": "Reading text, held to ~65-75ch in the narrow column." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows, filter labels, and pill text at 0.18em tracking." }
+    },
+    "shadows": [
+      { "name": "subtle", "value": "0 1px 2px rgba(0,32,51,0.05), 0 0 0 1px #D6E3EC", "purpose": "Default panel definition; the ring does most of the work." },
+      { "name": "raised", "value": "0 2px 8px rgba(0,32,51,0.06), 0 0 0 1px #D6E3EC", "purpose": "Interactive groups and hovered surfaces." },
+      { "name": "lifted", "value": "0 12px 32px rgba(0,32,51,0.1), 0 0 0 1px #D6E3EC", "purpose": "The single most prominent surface only; used sparingly." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Default ease-out for all state transitions; no bounce." },
+      { "name": "dur-fast", "value": "180ms", "purpose": "Hover and focus state changes." },
+      { "name": "dur", "value": "320ms", "purpose": "Standard transitions." },
+      { "name": "dur-slow", "value": "600ms", "purpose": "Largest deliberate transitions; rare." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "720px" },
+      { "name": "lg", "value": "900px" },
+      { "name": "xl", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Interactive filter toggle. Unselected pill with a 1.5px brand-blue border; selected inverts to a solid blue fill. Uses aria-pressed for state.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">All campuses</button> <button class=\"ds-chip\" aria-pressed=\"true\">Universitywide</button>",
+      "css": ".ds-chip { appearance: none; font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif; font-size: 0.9375rem; font-weight: 500; line-height: 1; padding: 0.75rem 1rem; border: 1.5px solid #005581; border-radius: 999px; background: #FFFFFF; color: #005581; cursor: pointer; transition: background 180ms cubic-bezier(0.2,0.7,0.2,1), color 180ms cubic-bezier(0.2,0.7,0.2,1); } .ds-chip:hover { background: #F3F9FD; } .ds-chip[aria-pressed=\"true\"] { background: #005581; color: #FFFFFF; } .ds-chip[aria-pressed=\"true\"]:hover { background: #002033; } .ds-chip:focus-visible { outline: 3px solid #FFB511; outline-offset: 2px; }"
+    },
+    {
+      "name": "Category Tag",
+      "kind": "chip",
+      "refersTo": "category-tag",
+      "description": "Inline, non-interactive classification label. Tags inform; chips act.",
+      "html": "<span class=\"ds-category-tag\">Color contrast</span>",
+      "css": ".ds-category-tag { display: inline-flex; align-items: center; font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif; font-size: 0.8125rem; font-weight: 500; color: #002033; padding: 1px 8px 2px; background: #E8F2FA; border: 1px solid #D6E3EC; border-radius: 999px; white-space: nowrap; }"
+    },
+    {
+      "name": "Impact Pill",
+      "kind": "chip",
+      "refersTo": "impact-pill",
+      "description": "Severity badge. Fill is a darkened severity token so white text clears WCAG AA on white.",
+      "html": "<span class=\"ds-impact-pill\">Serious</span>",
+      "css": ".ds-impact-pill { display: inline-block; padding: 1px 6px; border-radius: 4px; font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #FFFFFF; line-height: 1.5; background: #7A2A0A; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis disclosure/expand control. 44x44px minimum target with a hairline rule border.",
+      "html": "<button class=\"ds-btn-ghost\" aria-label=\"Expand row\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 9l6 6 6-6\"/></svg></button>",
+      "css": ".ds-btn-ghost { background: #FFFFFF; border: 1px solid #D6E3EC; border-radius: 8px; padding: 8px 10px; cursor: pointer; color: #3E5566; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; transition: background 180ms cubic-bezier(0.2,0.7,0.2,1), color 180ms cubic-bezier(0.2,0.7,0.2,1); } .ds-btn-ghost:hover { background: #F3F9FD; color: #002033; } .ds-btn-ghost:focus-visible { outline: 3px solid #005581; outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Reset",
+      "kind": "button",
+      "refersTo": "button-reset",
+      "description": "Link-style reset action, intentionally low emphasis. Underlined text in secondary blue.",
+      "html": "<button class=\"ds-filter-reset\">Reset filters</button>",
+      "css": ".ds-filter-reset { appearance: none; font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif; font-size: 0.9375rem; font-weight: 600; padding: 0.75rem 1.5rem; border: none; border-radius: 999px; background: transparent; color: #005581; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; } .ds-filter-reset:hover { color: #002033; } .ds-filter-reset:focus-visible { outline: 3px solid #005581; outline-offset: 3px; }"
+    },
+    {
+      "name": "Campus Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A flat printed panel for a single campus record. Defined by a 1px Rule ring, no resting shadow.",
+      "html": "<article class=\"ds-card\"><h2 class=\"ds-card-title\">UC Berkeley</h2><p class=\"ds-card-body\">0 critical, 3 serious issues across the homepage scan.</p></article>",
+      "css": ".ds-card { background: #FFFFFF; border: 1px solid #D6E3EC; border-radius: 8px; padding: 1.5rem; } .ds-card-title { font-family: 'Source Serif 4', 'Iowan Old Style', Georgia, serif; font-weight: 600; font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem); line-height: 1.2; color: #002033; margin: 0 0 0.5rem; } .ds-card-body { font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; line-height: 1.6; color: #002033; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Accessible Broadsheet",
+    "overview": "A public, monthly record of how the University of California's homepages, admissions sites, and schools-and-colleges measure up on accessibility. It carries the systemwide identity all ten campuses share, so it reads as an institutional document, not a marketing page. The metaphor is a printed broadsheet: a two-rule masthead, a serif voice for headlines, fluid display numerals, and generous column measure. Authority comes from typography and restraint, never decoration. The palette is the official UC systemwide blue and gold, applied with discipline; color is information, and an impact hue means a severity, never a flourish. Because the subject is accessibility, the artifact must be the most accessible page in the room: a loud 3px focus ring, severity colors darkened until they clear WCAG AA on white, semantic tables, 44px targets, and motion that disappears under prefers-reduced-motion.",
+    "keyCharacteristics": [
+      "Editorial, institutional, calm; a record rather than a pitch.",
+      "Official UC blue-and-gold as the spine; secondary hues only as data legends.",
+      "Paper-white surface, hairline rules, near-flat elevation.",
+      "Serif display voice over humanist-sans body.",
+      "Accessibility is a visible design feature, not an afterthought."
+    ],
+    "rules": [
+      { "name": "The Blue-and-Gold Spine Rule", "body": "UC Blue and UC Gold are the only colors permitted to carry identity. Every secondary and tertiary hue must justify itself as data, not decoration.", "section": "colors" },
+      { "name": "The Contrast-First Rule", "body": "Severity and text colors are chosen for WCAG AA on paper first, brand vibrancy second. Never use raw UC Orange, UC Gold, or UC Light Blue as text or small-pill fills on white.", "section": "colors" },
+      { "name": "The Serif-for-Significance Rule", "body": "Serif (Source Serif 4) carries headlines and figures; sans (Source Sans 3) carries everything you read.", "section": "typography" },
+      { "name": "The Steady-Metrics Rule", "body": "Always load the metrics-matched fallback faces. Web fonts must never cause layout shift; CLS is an accessibility regression.", "section": "typography" },
+      { "name": "The Printed-Panel Rule", "body": "Borders before shadows. A surface earns its edge from the 1px Rule ring; ambient shadow is a whisper, never a drop.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do treat UC Blue (#1295D8) and UC Gold (#FFB511) as the identity spine and keep every other hue earning its place as data.",
+      "Do pick text and small-pill colors for WCAG AA on paper first; use the darkened severity tokens, never raw bright-brand hues, on white.",
+      "Do keep the global 3px focus-visible ring at 3px offset on every interactive element.",
+      "Do load the metrics-matched fallback fonts so the page never shifts on font swap.",
+      "Do define surfaces with the 1px Rule ring and keep ambient shadow to a whisper.",
+      "Do keep interactive targets at a 44x44px minimum and let real button/th semantics carry sort and disclosure state.",
+      "Do honor prefers-reduced-motion: disable smooth scroll and transitions entirely.",
+      "Do set headlines and figures in Source Serif 4 and reading text in Source Sans 3; hold body to ~65-75ch."
+    ],
+    "donts": [
+      "Don't use side-stripe borders: a border-left or border-right greater than 1px as a colored accent. Use a full border, a background tint, or a leading severity pill.",
+      "Don't ship a dark data-dashboard theme, neon-on-charcoal, or any palette guessable from the word dashboard.",
+      "Don't build the hero-metric template (giant gradient number, label, supporting stats).",
+      "Don't use gradient text, glassmorphism, or decorative blur.",
+      "Don't repeat identical icon-heading-text card grids, and never nest a card inside a card.",
+      "Don't color anything for vibrancy alone, and never use UC Gold for text on white.",
+      "Don't animate layout properties or use bounce/elastic easing; ease out on background, color, and transform only.",
+      "Don't use em dashes in interface copy."
+    ]
+  }
+}
