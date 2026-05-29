@@ -8,7 +8,18 @@ import {
   SHARED_LEGEND,
   SHARED_TOOLTIP,
   showChartFallback,
+  syncChartDataTable,
 } from "./chart-base.js";
+
+const RULE_TABLE_HEADERS = [
+  "Rule",
+  "Critical",
+  "Serious",
+  "Moderate",
+  "Minor",
+  "Unknown",
+  "Total instances",
+];
 
 // Mirrors the impact-mix legend elsewhere in the report (CSS vars
 // --impact-*). Edit both together if the palette changes.
@@ -54,6 +65,12 @@ export function renderRuleChart(ctx) {
       emptyState.hidden = false;
       emptyState.textContent =
         "No required-level rules flagged in the current filter. Reach-goal rules may still appear in individual site details.";
+      syncChartDataTable(canvas.parentElement, {
+        id: "rule-chart-data",
+        caption: "No required-level rules flagged in the current filter.",
+        headers: RULE_TABLE_HEADERS,
+        rows: [],
+      });
       if (chart) {
         chart.data.labels = [];
         chart.data.datasets = [];
@@ -66,6 +83,21 @@ export function renderRuleChart(ctx) {
     emptyState.hidden = true;
 
     const labels = top10.map((e) => e[0]);
+
+    // Mirror the stacked bars into a visually-hidden data table so a screen
+    // reader gets exact per-severity counts, not just a canvas image.
+    syncChartDataTable(canvas.parentElement, {
+      id: "rule-chart-data",
+      caption:
+        "Most-flagged required-level rules this month, with instance counts by impact severity.",
+      headers: RULE_TABLE_HEADERS,
+      rows: top10.map(([rule, total]) => [
+        rule,
+        ...IMPACT_KEYS.map((k) => String(Math.round(currentRuleImpact[rule]?.[k] ?? 0))),
+        String(total),
+      ]),
+    });
+    canvas.setAttribute("aria-describedby", "rule-chart-data");
     // One dataset per impact key so Chart.js stacks them into a single
     // bar per rule. Attribution is proportional (see derive.js): shape
     // and ordering are stable but raw numbers are rounded.

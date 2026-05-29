@@ -13,7 +13,28 @@ import {
   SHARED_LEGEND,
   SHARED_TOOLTIP,
   showChartFallback,
+  syncChartDataTable,
 } from "./chart-base.js";
+
+// Distinguish series by marker shape and dash pattern, not color alone, so
+// the lines stay separable for color-blind readers and in the point-style
+// legend. Keyed by the stable slug/campus index, so a series keeps its
+// marker across filter changes the same way it keeps its color.
+const POINT_STYLES = [
+  "circle",
+  "rect",
+  "triangle",
+  "rectRot",
+  "star",
+  "cross",
+  "crossRot",
+  "rectRounded",
+];
+const DASH_PATTERNS = [[], [7, 4], [2, 3], [10, 4, 2, 4]];
+const seriesStyle = (index) => ({
+  pointStyle: POINT_STYLES[index % POINT_STYLES.length],
+  borderDash: DASH_PATTERNS[index % DASH_PATTERNS.length],
+});
 
 // Caller passes a slug-stable index (its position in the global slug
 // universe, not the filtered dataset) so each site keeps the same color
@@ -35,71 +56,92 @@ function stableColorPair(slug, index) {
   };
 }
 
-// Mode picker enforces the invariant: no chart mode ever produces more
-// than ~18 lines, so the chart stays legible at every filter combination.
-function trendMode(state) {
-  if (state.type === TYPE_HOMEPAGES || state.type === TYPE_ADMISSIONS) return "per-site";
-  if (state.category) return "per-site";
-  if (state.campuses.size === 1) return "per-site";
-  return "per-campus";
+function isPerSiteView(state) {
+  if (state.category || state.campuses.size === 1) return true;
+  return state.type === TYPE_HOMEPAGES || state.type === TYPE_ADMISSIONS;
 }
 
-function buildDatasets(rowFor, months, filteredCurrentRows, mode, globalSlugIndex) {
-  if (mode === "per-site") {
-    const bySlug = new Map();
-    for (const row of filteredCurrentRows) bySlug.set(row.site, row);
-    const slugs = [...bySlug.keys()].sort();
-    return slugs.map((slug) => {
-      const { border, background } = stableColorPair(slug, globalSlugIndex.get(slug) ?? 0);
-      return {
-        label: siteDisplayName(bySlug.get(slug)),
-        data: months.map((m) => {
-          const r = rowFor(m, slug);
-          return r && r.status === "ok" ? r.violations_total : null;
-        }),
-        borderColor: border,
-        backgroundColor: background,
-        borderWidth: 2,
-        tension: 0.35,
-        spanGaps: true,
-        pointRadius: 3,
-        pointHoverRadius: 6,
-      };
-    });
-  }
+// Mode picker enforces the invariant: no chart mode ever produces more
+// than ~18 lines, so the chart stays legible at every filter combination.
+const trendMode = (state) => (isPerSiteView(state) ? "per-site" : "per-campus");
 
-  const slugsByCampus = new Map();
-  for (const row of filteredCurrentRows) {
-    const c = row.campus || row.site;
-    if (!slugsByCampus.has(c)) slugsByCampus.set(c, []);
-    slugsByCampus.get(c).push(row.site);
-  }
-
-  return orderedCampuses(slugsByCampus.keys()).map((campus, i) => {
-    const campusSlugs = slugsByCampus.get(campus);
+function buildPerSiteDatasets(rowFor, months, rows, globalSlugIndex) {
+  const bySlug = new Map();
+  for (const row of rows) bySlug.set(row.site, row);
+  return [...bySlug.keys()].sort().map((slug) => {
+    const idx = globalSlugIndex.get(slug) ?? 0;
+    const { border, background } = stableColorPair(slug, idx);
+    const style = seriesStyle(idx);
     return {
-      label: CAMPUS_NAMES[campus] || campus,
+      label: siteDisplayName(bySlug.get(slug)),
       data: months.map((m) => {
-        let sum = 0;
-        let anyData = false;
-        for (const slug of campusSlugs) {
-          const r = rowFor(m, slug);
-          if (r && r.status === "ok") {
-            sum += r.violations_total;
-            anyData = true;
-          }
-        }
-        return anyData ? sum : null;
+        const r = rowFor(m, slug);
+        return r && r.status === "ok" ? r.violations_total : null;
       }),
-      borderColor: CHART_COLORS[i % CHART_COLORS.length],
-      backgroundColor: `${CHART_COLORS[i % CHART_COLORS.length]}22`,
+      borderColor: border,
+      backgroundColor: background,
       borderWidth: 2,
+      borderDash: style.borderDash,
+      pointStyle: style.pointStyle,
       tension: 0.35,
       spanGaps: true,
       pointRadius: 3,
       pointHoverRadius: 6,
     };
   });
+}
+
+// Sum one campus's required violations for a month, or null when no site in
+// the group reported a successful scan that month (so the line spans gaps
+// rather than dropping to a misleading zero).
+function campusMonthTotal(rowFor, month, campusSlugs) {
+  const oks = campusSlugs.map((slug) => rowFor(month, slug)).filter((r) => r && r.status === "ok");
+  return oks.length ? oks.reduce((sum, r) => sum + r.violations_total, 0) : null;
+}
+
+function buildPerCampusDatasets(rowFor, months, rows) {
+  const slugsByCampus = new Map();
+  for (const row of rows) {
+    const c = row.campus || row.site;
+    if (!slugsByCampus.has(c)) slugsByCampus.set(c, []);
+    slugsByCampus.get(c).push(row.site);
+  }
+  return orderedCampuses(slugsByCampus.keys()).map((campus, i) => {
+    const style = seriesStyle(i);
+    return {
+      label: CAMPUS_NAMES[campus] || campus,
+      data: months.map((m) => campusMonthTotal(rowFor, m, slugsByCampus.get(campus))),
+      borderColor: CHART_COLORS[i % CHART_COLORS.length],
+      backgroundColor: `${CHART_COLORS[i % CHART_COLORS.length]}22`,
+      borderWidth: 2,
+      borderDash: style.borderDash,
+      pointStyle: style.pointStyle,
+      tension: 0.35,
+      spanGaps: true,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+    };
+  });
+}
+
+function buildDatasets(rowFor, months, rows, mode, globalSlugIndex) {
+  return mode === "per-site"
+    ? buildPerSiteDatasets(rowFor, months, rows, globalSlugIndex)
+    : buildPerCampusDatasets(rowFor, months, rows);
+}
+
+// Mirror the chart into a visually-hidden data table every paint, so a
+// screen reader gets the same per-series numbers the lines convey.
+function syncTrendTable(canvas, datasets, months, mode) {
+  syncChartDataTable(canvas.parentElement, {
+    id: "trend-chart-data",
+    caption: datasets.length
+      ? `Required accessibility violations over time, ${mode === "per-site" ? "per site" : "per campus"}, for the current filter.`
+      : "No data for the current filter.",
+    headers: ["Series", ...months.map(prettyMonth)],
+    rows: datasets.map((d) => [d.label, ...d.data.map((v) => (v == null ? "no data" : String(v)))]),
+  });
+  canvas.setAttribute("aria-describedby", "trend-chart-data");
 }
 
 export function renderTrendChart(ctx) {
@@ -119,9 +161,20 @@ export function renderTrendChart(ctx) {
   const globalSlugs = [...new Set(currentRows.map((r) => r.site))].sort();
   const globalSlugIndex = new Map(globalSlugs.map((s, i) => [s, i]));
 
+  // Point-style legend reinforces the per-series marker shapes, so the
+  // legend is readable without relying on color.
+  const legend = { ...SHARED_LEGEND, labels: { ...SHARED_LEGEND.labels, usePointStyle: true } };
+
   function paint(state) {
-    const filtered = applyFilter(currentRows, state);
-    const datasets = buildDatasets(rowFor, months, filtered, trendMode(state), globalSlugIndex);
+    const mode = trendMode(state);
+    const datasets = buildDatasets(
+      rowFor,
+      months,
+      applyFilter(currentRows, state),
+      mode,
+      globalSlugIndex,
+    );
+    syncTrendTable(canvas, datasets, months, mode);
 
     if (datasets.length === 0) {
       if (chart) {
@@ -139,7 +192,7 @@ export function renderTrendChart(ctx) {
           responsive: true,
           maintainAspectRatio: false,
           animation: sharedAnimation(),
-          plugins: { legend: SHARED_LEGEND, tooltip: SHARED_TOOLTIP },
+          plugins: { legend, tooltip: SHARED_TOOLTIP },
           scales: {
             y: {
               beginAtZero: true,
