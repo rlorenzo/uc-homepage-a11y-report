@@ -19,7 +19,7 @@ export function renderMasthead(ctx) {
     heroWordEl.textContent = "yet";
   } else if (totalErrors === 0) {
     heroNumEl.textContent = "0";
-    heroWordEl.textContent = "axe issues found —";
+    heroWordEl.textContent = "axe issues found,";
     document.getElementById("hero-coda").textContent =
       "and plenty of room to keep pushing deeper with manual testing.";
   } else {
