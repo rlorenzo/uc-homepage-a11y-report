@@ -44,6 +44,7 @@
   --ink-muted: #3e5566; /* ~8.5:1 on white */
   --success: #1f4426;
   --regress: #8e0c0c;
+  --regress-tint: #faecec; /* Faint regress wash for flagged rows/cards */
 
   /* Typography — UC system brand hierarchy */
   /* Primary: Kievit (sans-serif) and secondary: Lyon (serif) are licensed
@@ -1019,10 +1020,9 @@ a.section-num:focus-visible {
 }
 
 .error-row {
-  border-left: 4px solid var(--regress);
-}
-.error-row td:first-child {
-  padding-left: calc(var(--space-5) - 4px);
+  /* Full-row tint instead of a left stripe: signals a flagged scan without
+     a colored side border. The detail row spells out the error in text. */
+  background: var(--regress-tint);
 }
 
 /* Detail row */
@@ -1096,7 +1096,10 @@ a.section-num:focus-visible {
   padding: var(--space-5);
 }
 .campus-card.error-row {
-  border-left: 4px solid var(--regress);
+  /* Full regress-colored border plus a faint wash, replacing the left
+     stripe — the whole card reads as flagged, not just its edge. */
+  border-color: var(--regress);
+  background: var(--regress-tint);
 }
 
 .campus-card header {
@@ -1282,9 +1285,7 @@ a.section-num:focus-visible {
   font-style: italic;
   color: var(--ink-muted);
   margin: 0 var(--space-5) var(--space-5);
-  padding-left: var(--space-4);
-  padding-right: var(--space-5);
-  border-left: 3px solid var(--uc-gold);
+  padding: 0 var(--space-4);
 }
 
 .chart-fallback {
@@ -1361,8 +1362,10 @@ a.section-num:focus-visible {
   font-style: italic;
   line-height: 1.3;
   color: var(--ink);
-  border-left: 3px solid var(--uc-gold);
-  padding-left: var(--space-5);
+  /* Short gold rule above the quote, not a left stripe: a full top edge is
+     a broadsheet device and keeps the gold editorial accent on-brand. */
+  border-top: 3px solid var(--uc-gold);
+  padding-top: var(--space-4);
   margin: 0 0 var(--space-5);
   max-width: 32ch;
   font-variation-settings:
@@ -1772,8 +1775,9 @@ a.section-num:focus-visible {
      .group-anchor permalink so the count text never slides under it. */
   padding: var(--space-4) var(--space-8) var(--space-4) var(--space-5);
   background: var(--tint);
+  /* No left stripe: the group's blue identity comes from the full-width
+     2px bottom rule on the header cell (see .campus-group-header td). */
   border: none;
-  border-left: 4px solid var(--uc-dark-blue);
   font-family: var(--font-body);
   font-size: var(--fs-body);
   color: var(--ink);
@@ -1869,8 +1873,10 @@ a.section-num:focus-visible {
   width: 100%;
   padding: var(--space-4) var(--space-8) var(--space-4) var(--space-4);
   background: var(--tint);
+  /* Full-width bottom rule instead of a left stripe, mirroring the table
+     group header's blue underline so the mobile banner reads the same. */
   border: none;
-  border-left: 4px solid var(--uc-dark-blue);
+  border-bottom: 2px solid var(--uc-dark-blue);
   font-family: var(--font-body);
   text-align: left;
   cursor: pointer;

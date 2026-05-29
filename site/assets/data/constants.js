@@ -149,13 +149,13 @@ export const ruleFriendly = (rule) =>
 
 const RULE_IMPACT = {
   "color-contrast":
-    "Low-contrast text is a barrier for anyone with low vision, color blindness, or age-related vision loss — roughly 1 in 12 people.",
+    "Low-contrast text is a barrier for anyone with low vision, color blindness, or age-related vision loss, roughly 1 in 12 people.",
   "link-name":
     'A link without an accessible name is announced as "link, link, link" to a screen reader. Fixing it gives every assistive-tech user a clear sense of where they are going.',
   "button-name":
     "A button with no accessible name is invisible to screen reader users. It also confuses voice-control software that tries to match the button label.",
   "image-alt":
-    "Missing alt text means a screen reader user hears nothing — or worse, the file name. Good alt text lets everyone in on what the image conveys.",
+    "Missing alt text means a screen reader user hears nothing, or worse, the file name. Good alt text lets everyone in on what the image conveys.",
   "target-size":
     "Small tap targets are a barrier for users with tremors, larger fingers, or motor conditions. Bigger targets help everyone, especially on mobile.",
   "aria-prohibited-attr":

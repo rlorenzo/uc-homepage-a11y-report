@@ -14,11 +14,70 @@ import {
   getFilterState,
   isDefaultState,
   resetFilters,
+  selectAllCampuses,
   setCategory,
   setType,
   subscribe,
   toggleCampus,
 } from "../state/filters.js";
+
+function makeChip(className, label, dataset, onClick) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = className;
+  for (const [key, value] of Object.entries(dataset)) btn.dataset[key] = value;
+  btn.setAttribute("aria-pressed", "false");
+  btn.textContent = label;
+  btn.addEventListener("click", onClick);
+  return btn;
+}
+
+function buildTypeChips(container) {
+  for (const key of TYPE_ORDER) {
+    container.appendChild(
+      makeChip("chip chip-type", TYPE_LABELS[key], { type: key }, () => setType(key)),
+    );
+  }
+}
+
+function buildCampusChips(container, campusSlugs) {
+  // Leading "All campuses" chip mirrors the View row's "All" chip: it is
+  // the resting/default selection and the one-click way back to it. Without
+  // it, the only way to clear a multi-campus selection was to toggle every
+  // chip off, and the default state lit all eleven chips at once.
+  container.appendChild(
+    makeChip("chip chip-campus chip-campus-all", "All campuses", { campusAll: "true" }, () =>
+      selectAllCampuses(),
+    ),
+  );
+  for (const slug of campusSlugs) {
+    container.appendChild(
+      makeChip("chip chip-campus", CAMPUS_NAMES[slug] || slug, { campus: slug }, () =>
+        toggleCampus(slug, campusSlugs),
+      ),
+    );
+  }
+}
+
+function buildCategoryOptions(select, categories) {
+  const ordered = [...categories].sort((a, b) => categoryLabel(a).localeCompare(categoryLabel(b)));
+  for (const key of ordered) {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.textContent = categoryLabel(key);
+    select.appendChild(opt);
+  }
+}
+
+// Toggle .active + aria-pressed on every chip in a container from a
+// predicate, so the active-state logic stays declarative per chip group.
+function syncChips(container, isActive) {
+  for (const btn of container.querySelectorAll(".chip")) {
+    const active = isActive(btn);
+    btn.setAttribute("aria-pressed", String(active));
+    btn.classList.toggle("active", active);
+  }
+}
 
 export function renderFilterBar(ctx) {
   const { currentRows } = ctx;
@@ -43,55 +102,21 @@ export function renderFilterBar(ctx) {
   const resetBtn = document.getElementById("filter-reset");
   const summaryEl = document.getElementById("filter-summary");
 
-  for (const key of TYPE_ORDER) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "chip chip-type";
-    btn.dataset.type = key;
-    btn.setAttribute("aria-pressed", "false");
-    btn.textContent = TYPE_LABELS[key];
-    btn.addEventListener("click", () => setType(key));
-    typeChipContainer.appendChild(btn);
-  }
-
-  for (const slug of campusSlugs) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "chip chip-campus";
-    btn.dataset.campus = slug;
-    btn.setAttribute("aria-pressed", "false");
-    btn.textContent = CAMPUS_NAMES[slug] || slug;
-    btn.addEventListener("click", () => toggleCampus(slug, campusSlugs));
-    campusChipContainer.appendChild(btn);
-  }
-
-  const orderedCategoryKeys = [...disciplineCategories].sort((a, b) =>
-    categoryLabel(a).localeCompare(categoryLabel(b)),
-  );
-  for (const key of orderedCategoryKeys) {
-    const opt = document.createElement("option");
-    opt.value = key;
-    opt.textContent = categoryLabel(key);
-    categorySelect.appendChild(opt);
-  }
+  buildTypeChips(typeChipContainer);
+  buildCampusChips(campusChipContainer, campusSlugs);
+  buildCategoryOptions(categorySelect, disciplineCategories);
   categorySelect.addEventListener("change", (e) => setCategory(e.target.value || null));
-
   resetBtn.addEventListener("click", () => resetFilters());
 
   function syncUI(state) {
-    for (const btn of typeChipContainer.querySelectorAll(".chip-type")) {
-      const active = btn.dataset.type === state.type;
-      btn.setAttribute("aria-pressed", String(active));
-      btn.classList.toggle("active", active);
-    }
-
-    // Empty campuses set means "all", so every chip lights up.
-    const allActive = state.campuses.size === 0;
-    for (const btn of campusChipContainer.querySelectorAll(".chip-campus")) {
-      const active = allActive || state.campuses.has(btn.dataset.campus);
-      btn.setAttribute("aria-pressed", String(active));
-      btn.classList.toggle("active", active);
-    }
+    syncChips(typeChipContainer, (btn) => btn.dataset.type === state.type);
+    // Empty campuses set means "all": light up only the dedicated All chip
+    // so individual chips read as the unselected affordances they are.
+    // Clicking a campus then filters TO it. This is what stops the default
+    // state from rendering eleven identical solid-blue pills.
+    syncChips(campusChipContainer, (btn) =>
+      btn.dataset.campusAll ? state.campuses.size === 0 : state.campuses.has(btn.dataset.campus),
+    );
 
     categorySelect.value = state.category || "";
     // Discipline dropdown only applies when browsing all sites or the
