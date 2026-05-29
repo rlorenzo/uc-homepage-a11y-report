@@ -44,7 +44,7 @@ export function renderSpotlight(ctx) {
         accent: true,
         label: "Reach-goal opportunity",
         headline,
-        detail: `Zero required-level issues across the system this month — a strong baseline. The top reach-goal rule is ${headline.toLowerCase()}, flagged ${topReachRuleEntry[1]} times. ${ruleImpact(topReachRuleEntry[0])}`,
+        detail: `Zero required-level issues across the system this month, a strong baseline. The top reach-goal rule is ${headline.toLowerCase()}, flagged ${topReachRuleEntry[1]} times. ${ruleImpact(topReachRuleEntry[0])}`,
       }),
     );
   } else {
@@ -81,7 +81,7 @@ export function renderSpotlight(ctx) {
         makeHallCard(hall, {
           label: "System-wide trend",
           headline: "Holding steady",
-          detail: `The same system-wide total as ${prettyMonth(prev)}. Consistency is not nothing — and there is always room to widen who the web works for.`,
+          detail: `The same system-wide total as ${prettyMonth(prev)}. Consistency is not nothing, and there is always room to widen who the web works for.`,
         }),
       );
     }

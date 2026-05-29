@@ -109,7 +109,7 @@ export function renderStats(ctx) {
     if (totalErrors === null) {
       totalCaption.textContent = "No successful scans in the current filter.";
     } else if (totalErrors === 0) {
-      totalCaption.textContent = `No axe-core violations across ${okRows.length} of ${filteredCurrent.length} matching UC sites this month${scopeSuffix}. A strong start — keep going with manual testing.`;
+      totalCaption.textContent = `No axe-core violations across ${okRows.length} of ${filteredCurrent.length} matching UC sites this month${scopeSuffix}. A strong start; keep going with manual testing.`;
     } else {
       totalCaption.appendChild(document.createTextNode("Flagged by axe-core across "));
       const strong = document.createElement("strong");
@@ -142,7 +142,7 @@ export function renderStats(ctx) {
     const cleanCaption = document.createElement("span");
     if (cleanRows.length) {
       cleanCaption.appendChild(
-        document.createTextNode("A clean axe-core scan is a great floor — not the ceiling. "),
+        document.createTextNode("A clean axe-core scan is a great floor, not the ceiling. "),
       );
       cleanCaption.appendChild(document.createTextNode("Automated tools still miss "));
       const strong = document.createElement("strong");
@@ -167,7 +167,7 @@ export function renderStats(ctx) {
     );
 
     // Card 3: Month over month
-    let momValue = "—";
+    let momValue = "–";
     let momCaption =
       "This is the first scan on record. Once there is a second month, the trend lands here.";
     if (systemTrend) {
@@ -204,7 +204,7 @@ export function renderStats(ctx) {
       ruleCaption.appendChild(
         document.createTextNode(
           displayRuleIsReach
-            ? ". No required-level rules flagged — this is the top reach-goal rule."
+            ? ". No required-level rules flagged; this is the top reach-goal rule."
             : ". Fixing this pattern first tends to have the widest benefit.",
         ),
       );
@@ -215,7 +215,7 @@ export function renderStats(ctx) {
       makeStatCard(statGrid, {
         badge: "04",
         label: displayRuleIsReach ? "Top rule (reach)" : "Top rule flagged",
-        value: displayRule ? displayRule[0] : "—",
+        value: displayRule ? displayRule[0] : "–",
         unit: displayRule ? ` · ${displayRule[1]} instances` : "",
         caption: ruleCaption,
         klass: "stat-third",
@@ -267,7 +267,7 @@ export function renderStats(ctx) {
       mixCaption.appendChild(strong);
       mixCaption.appendChild(
         document.createTextNode(
-          ` (${pct} percent). Severity is what axe-core reports — real user impact can be different.`,
+          ` (${pct} percent). Severity is what axe-core reports; real user impact can be different.`,
         ),
       );
     } else {
@@ -277,7 +277,7 @@ export function renderStats(ctx) {
       makeStatCard(statGrid, {
         badge: "06",
         label: "Severity mix",
-        value: totalImpact && topImpactKey ? topImpactKey[0] : "—",
+        value: totalImpact && topImpactKey ? topImpactKey[0] : "–",
         unit: totalImpact && topImpactKey ? ` · ${topImpactKey[1]}` : "",
         caption: mixCaption,
         klass: "stat-third",
