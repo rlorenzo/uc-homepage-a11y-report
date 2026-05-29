@@ -44,3 +44,47 @@ export const SHARED_TOOLTIP = {
 export const CHART_GRID_COLOR = "#EFE9D9";
 
 export const sharedAnimation = () => (REDUCED_MOTION ? false : { duration: 700 });
+
+function cell(tag, scope, text) {
+  const node = document.createElement(tag);
+  if (scope) node.scope = scope;
+  node.textContent = text;
+  return node;
+}
+
+function headerRow(headers) {
+  const tr = document.createElement("tr");
+  for (const h of headers) tr.appendChild(cell("th", "col", h));
+  return tr;
+}
+
+// First cell is the row's header; the rest are data cells.
+function bodyRow(cells) {
+  const tr = document.createElement("tr");
+  tr.appendChild(cell("th", "row", cells[0]));
+  for (const value of cells.slice(1)) tr.appendChild(cell("td", null, value));
+  return tr;
+}
+
+// Build or refresh a visually-hidden data table mirroring a chart, so
+// screen-reader users get the same data the canvas conveys visually. The
+// table is created once per host (keyed by id) and rewritten on each paint.
+// Returns the table id so the canvas can point at it via aria-describedby.
+export function syncChartDataTable(host, { id, caption, headers, rows }) {
+  let table = host.querySelector(`#${id}`);
+  if (!table) {
+    table = document.createElement("table");
+    table.id = id;
+    table.className = "visually-hidden";
+    table.append(
+      document.createElement("caption"),
+      document.createElement("thead"),
+      document.createElement("tbody"),
+    );
+    host.appendChild(table);
+  }
+  table.querySelector("caption").textContent = caption;
+  table.querySelector("thead").replaceChildren(headerRow(headers));
+  table.querySelector("tbody").replaceChildren(...rows.map(bodyRow));
+  return id;
+}
