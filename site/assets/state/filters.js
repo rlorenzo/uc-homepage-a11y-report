@@ -78,21 +78,34 @@ export function setCategory(category) {
   notify();
 }
 
-// "Empty set = all" convention: the first toggle off an active chip has
-// to materialize the explicit list minus the clicked slug; the last
-// toggle that would re-select everything collapses back to empty. The
-// caller passes the full campus universe so this module doesn't need
-// to know it separately.
+// "Empty set = all" convention: an empty selection means every campus is
+// shown, and the dedicated "All campuses" chip (see selectAllCampuses) is
+// the affordance that returns to it. Clicking an individual chip filters
+// TO that campus rather than removing it, mirroring the View row: from the
+// default "all" state the first click selects only the clicked campus,
+// further clicks add to the selection, and clicking a selected chip toggles
+// it back off. Selecting the whole universe collapses back to empty so the
+// All chip lights up instead of all eleven. The caller passes the full
+// campus universe so this module doesn't need to know it separately.
 export function toggleCampus(slug, allCampuses) {
-  if (state.campuses.size === 0) {
-    state.campuses = new Set(allCampuses);
+  if (state.campuses.has(slug)) {
     state.campuses.delete(slug);
-  } else if (state.campuses.has(slug)) {
-    state.campuses.delete(slug);
+  } else if (state.campuses.size === 0) {
+    state.campuses = new Set([slug]);
   } else {
     state.campuses.add(slug);
     if (state.campuses.size === allCampuses.length) state.campuses = new Set();
   }
+  writeHash();
+  notify();
+}
+
+// Return to the "all campuses" default. Backs the dedicated All chip so a
+// multi-campus selection can be cleared in one click without toggling each
+// chip off individually.
+export function selectAllCampuses() {
+  if (state.campuses.size === 0) return;
+  state.campuses = new Set();
   writeHash();
   notify();
 }
