@@ -14,6 +14,7 @@ import {
   getFilterState,
   isDefaultState,
   resetFilters,
+  selectAllCampuses,
   setCategory,
   setType,
   subscribe,
@@ -54,6 +55,19 @@ export function renderFilterBar(ctx) {
     typeChipContainer.appendChild(btn);
   }
 
+  // Leading "All campuses" chip mirrors the View row's "All" chip: it is
+  // the resting/default selection and the one-click way back to it. Without
+  // it, the only way to clear a multi-campus selection was to toggle every
+  // chip off, and the default state lit all eleven chips at once.
+  const allCampusBtn = document.createElement("button");
+  allCampusBtn.type = "button";
+  allCampusBtn.className = "chip chip-campus chip-campus-all";
+  allCampusBtn.dataset.campusAll = "true";
+  allCampusBtn.setAttribute("aria-pressed", "false");
+  allCampusBtn.textContent = "All campuses";
+  allCampusBtn.addEventListener("click", () => selectAllCampuses());
+  campusChipContainer.appendChild(allCampusBtn);
+
   for (const slug of campusSlugs) {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -85,10 +99,18 @@ export function renderFilterBar(ctx) {
       btn.classList.toggle("active", active);
     }
 
-    // Empty campuses set means "all", so every chip lights up.
+    // Empty campuses set means "all": light up only the dedicated All chip
+    // so individual chips read as the unselected affordances they are.
+    // Clicking a campus then filters TO it. This is what stops the default
+    // state from rendering eleven identical solid-blue pills.
     const allActive = state.campuses.size === 0;
-    for (const btn of campusChipContainer.querySelectorAll(".chip-campus")) {
-      const active = allActive || state.campuses.has(btn.dataset.campus);
+    const allBtn = campusChipContainer.querySelector(".chip-campus-all");
+    if (allBtn) {
+      allBtn.setAttribute("aria-pressed", String(allActive));
+      allBtn.classList.toggle("active", allActive);
+    }
+    for (const btn of campusChipContainer.querySelectorAll(".chip-campus[data-campus]")) {
+      const active = state.campuses.has(btn.dataset.campus);
       btn.setAttribute("aria-pressed", String(active));
       btn.classList.toggle("active", active);
     }
