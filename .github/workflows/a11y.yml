@@ -24,8 +24,19 @@ jobs:
           node-version: '24'
           cache: 'npm'
 
+      # Skip puppeteer's postinstall Chrome download. On the runner it leaves a
+      # partial cache (folder present, executable missing) that pa11y can't
+      # launch; we use the runner's preinstalled Chrome instead.
       - name: Install dependencies
         run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
 
+      # ubuntu-latest ships Google Chrome stable. Point puppeteer at it so the
+      # scan is deterministic and independent of puppeteer's managed download.
       - name: Run pa11y-ci against rendered site
-        run: npm run a11y
+        run: |
+          google-chrome --version
+          npm run a11y
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
