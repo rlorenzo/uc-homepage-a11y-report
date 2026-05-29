@@ -3,15 +3,7 @@ import { computeAggregates } from "../data/derive.js";
 import { applyFilter, describeFilter, getFilterState, subscribe } from "../state/filters.js";
 import { countUp, deltaEl, prettyMonth } from "../utils/format.js";
 
-function makeStatCard(
-  statGrid,
-  { label, badge, value, unit, caption, delta, klass, animate = true },
-) {
-  const card = document.createElement("div");
-  const reveal = animate ? ` reveal reveal-${(statGrid.children.length % 7) + 1}` : "";
-  card.className = `stat ${klass || ""}${reveal}`;
-  card.setAttribute("role", "listitem");
-
+function statLabelEl(label, badge) {
   const labelEl = document.createElement("div");
   labelEl.className = "stat-label";
   if (badge) {
@@ -21,54 +13,297 @@ function makeStatCard(
     labelEl.appendChild(b);
   }
   labelEl.appendChild(document.createTextNode(label));
-  card.appendChild(labelEl);
+  return labelEl;
+}
 
-  // Wrap the animated number in its own inner span so countUp's
-  // textContent assignments target only the number, leaving the
-  // sibling unit span intact.
+function setStatNumber(numNode, value, animate) {
+  if (typeof value !== "number") {
+    numNode.textContent = value;
+    return;
+  }
+  if (animate) {
+    // Wrap the animated number in its own inner span (the caller's numNode)
+    // so countUp's textContent assignments leave the sibling unit intact.
+    numNode.textContent = "0";
+    requestAnimationFrame(() => countUp(numNode, value));
+    return;
+  }
+  numNode.textContent = String(value);
+}
+
+function statValueEl(value, unit, klass, animate) {
   const valueEl = document.createElement("span");
   valueEl.className =
     klass === "stat-third" || klass === "stat-half" ? "stat-value small" : "stat-value";
   const numNode = document.createElement("span");
   numNode.className = "stat-num";
   valueEl.appendChild(numNode);
-  if (typeof value === "number") {
-    if (animate) {
-      numNode.textContent = "0";
-      requestAnimationFrame(() => countUp(numNode, value));
-    } else {
-      numNode.textContent = String(value);
-    }
-  } else {
-    numNode.textContent = value;
-  }
-  card.appendChild(valueEl);
-
+  setStatNumber(numNode, value, animate);
   if (unit) {
     const u = document.createElement("span");
     u.className = "stat-unit";
     u.textContent = unit;
     valueEl.appendChild(u);
   }
+  return valueEl;
+}
 
-  if (caption) {
-    const cap = document.createElement("p");
-    cap.className = "stat-caption";
-    if (typeof caption === "string") cap.textContent = caption;
-    else cap.appendChild(caption);
-    card.appendChild(cap);
-  }
+function statCaptionEl(caption) {
+  const cap = document.createElement("p");
+  cap.className = "stat-caption";
+  if (typeof caption === "string") cap.textContent = caption;
+  else cap.appendChild(caption);
+  return cap;
+}
 
-  if (delta) {
-    const d = document.createElement("div");
-    d.className = "stat-delta";
-    d.appendChild(document.createTextNode("vs. last month "));
-    d.appendChild(delta);
-    card.appendChild(d);
-  }
+function statDeltaEl(delta) {
+  const d = document.createElement("div");
+  d.className = "stat-delta";
+  d.appendChild(document.createTextNode("vs. last month "));
+  d.appendChild(delta);
+  return d;
+}
 
+// Reveal class cycles 1-7 off the current child count so a fresh grid
+// staggers its entrance; only on the animated first paint.
+function statCardClass(statGrid, klass, animate) {
+  const reveal = animate ? ` reveal reveal-${(statGrid.children.length % 7) + 1}` : "";
+  return `stat ${klass || ""}${reveal}`;
+}
+
+function makeStatCard(statGrid, { label, badge, value, unit, caption, delta, klass, animate }) {
+  const card = document.createElement("div");
+  card.className = statCardClass(statGrid, klass, animate);
+  card.setAttribute("role", "listitem");
+  card.appendChild(statLabelEl(label, badge));
+  card.appendChild(statValueEl(value, unit, klass, animate));
+  if (caption) card.appendChild(statCaptionEl(caption));
+  if (delta) card.appendChild(statDeltaEl(delta));
   return card;
 }
+
+function totalCaptionEl({ totalErrors, okRows, filteredCurrent, scopeSuffix }) {
+  const caption = document.createElement("span");
+  if (totalErrors === null) {
+    caption.textContent = "No successful scans in the current filter.";
+    return caption;
+  }
+  if (totalErrors === 0) {
+    caption.textContent = `No axe-core violations across ${okRows.length} of ${filteredCurrent.length} matching UC sites this month${scopeSuffix}. A strong start; keep going with manual testing.`;
+    return caption;
+  }
+  caption.appendChild(document.createTextNode("Flagged by axe-core across "));
+  const strong = document.createElement("strong");
+  strong.textContent = `${okRows.length} of ${filteredCurrent.length} UC sites${scopeSuffix}`;
+  caption.appendChild(strong);
+  caption.appendChild(
+    document.createTextNode(
+      ". Each one is an opportunity to make the UC web more accessible for someone.",
+    ),
+  );
+  return caption;
+}
+
+function buildTotalCard(statGrid, view) {
+  const { totalErrors, prevTotalErrors, mobileViolationsTotal, prev, animate } = view;
+  const card = makeStatCard(statGrid, {
+    badge: "01",
+    label: "Issues flagged",
+    value: totalErrors !== null ? totalErrors : "n/a",
+    caption: totalCaptionEl(view),
+    delta: prev ? deltaEl(totalErrors, prevTotalErrors) : null,
+    klass: "stat-big",
+    animate,
+  });
+  if (mobileViolationsTotal > 0) {
+    const footnote = document.createElement("p");
+    footnote.className = "stat-mobile-footnote";
+    footnote.textContent = `${mobileViolationsTotal.toLocaleString()} mobile issues across all sites`;
+    card.appendChild(footnote);
+  }
+  return card;
+}
+
+function cleanCaptionEl({ cleanRows, okRows }) {
+  const caption = document.createElement("span");
+  if (cleanRows.length) {
+    caption.appendChild(
+      document.createTextNode("A clean axe-core scan is a great floor, not the ceiling. "),
+    );
+    caption.appendChild(document.createTextNode("Automated tools still miss "));
+    const strong = document.createElement("strong");
+    strong.textContent = "60 to 70 percent";
+    caption.appendChild(strong);
+    caption.appendChild(document.createTextNode(" of real barriers."));
+    return caption;
+  }
+  caption.textContent = okRows.length
+    ? "Every matching UC site had at least one flag this month. The top rule below is a good place to start."
+    : "No clean scans in the current filter.";
+  return caption;
+}
+
+function buildCleanCard(statGrid, view) {
+  return makeStatCard(statGrid, {
+    badge: "02",
+    label: "Clean scans",
+    value: view.cleanRows.length,
+    unit: ` of ${view.okRows.length}`,
+    caption: cleanCaptionEl(view),
+    klass: "stat-half",
+    animate: view.animate,
+  });
+}
+
+function momView({ systemTrend, prev, scopeNote }) {
+  if (!systemTrend) {
+    return {
+      value: "–",
+      caption:
+        "This is the first scan on record. Once there is a second month, the trend lands here.",
+    };
+  }
+  if (systemTrend.delta < 0) {
+    return {
+      value: `▼ ${Math.abs(systemTrend.delta)}`,
+      caption: `Fewer issues than ${prettyMonth(prev)}${scopeNote}. Collective progress.`,
+    };
+  }
+  if (systemTrend.delta > 0) {
+    return {
+      value: `▲ ${systemTrend.delta}`,
+      caption: `More issues than ${prettyMonth(prev)}${scopeNote}. New content often adds new opportunities to improve.`,
+    };
+  }
+  return { value: "0", caption: `The same total as ${prettyMonth(prev)}${scopeNote}. Steady.` };
+}
+
+function buildMomCard(statGrid, view) {
+  const { value, caption } = momView(view);
+  return makeStatCard(statGrid, {
+    badge: "03",
+    label: "Month over month",
+    value,
+    caption,
+    klass: "stat-half",
+    animate: view.animate,
+  });
+}
+
+function ruleCaptionEl(displayRule, isReach) {
+  const caption = document.createElement("span");
+  if (!displayRule) {
+    caption.textContent = "No rules were flagged in the current filter.";
+    return caption;
+  }
+  const strong = document.createElement("strong");
+  strong.textContent = ruleFriendly(displayRule[0]);
+  caption.appendChild(strong);
+  caption.appendChild(
+    document.createTextNode(
+      isReach
+        ? ". No required-level rules flagged; this is the top reach-goal rule."
+        : ". Fixing this pattern first tends to have the widest benefit.",
+    ),
+  );
+  return caption;
+}
+
+function topRuleConfig(displayRule, isReach) {
+  return {
+    badge: "04",
+    label: isReach ? "Top rule (reach)" : "Top rule flagged",
+    value: displayRule ? displayRule[0] : "–",
+    unit: displayRule ? ` · ${displayRule[1]} instances` : "",
+    caption: ruleCaptionEl(displayRule, isReach),
+    klass: "stat-third",
+  };
+}
+
+function buildTopRuleCard(statGrid, view) {
+  const displayRule = view.topRuleEntry || view.topReachRuleEntry;
+  const isReach = !view.topRuleEntry && Boolean(view.topReachRuleEntry);
+  return makeStatCard(statGrid, { ...topRuleConfig(displayRule, isReach), animate: view.animate });
+}
+
+function densityView(okRows) {
+  if (!okRows.length) return { value: "n/a", caption: "No data in the current filter." };
+  const avg = okRows.reduce((s, r) => s + r.error_density, 0) / okRows.length;
+  if (avg === 0) {
+    return {
+      value: "0",
+      caption: `Zero axe-core flags per element across ${okRows.length} matching sites this month.`,
+    };
+  }
+  // Multiple rules can hit the same element, so density can exceed 1 per
+  // element. Flip the phrasing above 1 so the number stays meaningful
+  // instead of rounding "1 in N" down to zero.
+  if (avg >= 1) {
+    return {
+      value: avg.toFixed(2),
+      caption: `On average, axe-core flags ${avg.toFixed(2)} issues for every DOM element it inspects. Some elements get flagged by more than one rule at once.`,
+    };
+  }
+  const oneIn = Math.round(1 / avg);
+  return {
+    value: `1 in ${oneIn.toLocaleString()}`,
+    caption: `On average, axe-core flags one issue for every ${oneIn.toLocaleString()} DOM elements it inspects. Raw density: ${avg.toFixed(4)}.`,
+  };
+}
+
+function buildDensityCard(statGrid, view) {
+  const { value, caption } = densityView(view.okRows);
+  return makeStatCard(statGrid, {
+    badge: "05",
+    label: "Issue density",
+    value,
+    caption,
+    klass: "stat-third",
+    animate: view.animate,
+  });
+}
+
+function severityCaptionEl(totalImpact, topImpactKey) {
+  const caption = document.createElement("span");
+  if (!(totalImpact && topImpactKey && topImpactKey[1] > 0)) {
+    caption.textContent = "No issues flagged in the current filter.";
+    return caption;
+  }
+  const pct = Math.round((topImpactKey[1] / totalImpact) * 100);
+  caption.appendChild(document.createTextNode("Most flags are "));
+  const strong = document.createElement("strong");
+  strong.textContent = topImpactKey[0];
+  caption.appendChild(strong);
+  caption.appendChild(
+    document.createTextNode(
+      ` (${pct} percent). Severity is what axe-core reports; real user impact can be different.`,
+    ),
+  );
+  return caption;
+}
+
+function buildSeverityCard(statGrid, view) {
+  const totalImpact = Object.values(view.impactTotals).reduce((a, b) => a + b, 0);
+  const has = Boolean(totalImpact && view.topImpactKey);
+  return makeStatCard(statGrid, {
+    badge: "06",
+    label: "Severity mix",
+    value: has ? view.topImpactKey[0] : "–",
+    unit: has ? ` · ${view.topImpactKey[1]}` : "",
+    caption: severityCaptionEl(totalImpact, view.topImpactKey),
+    klass: "stat-third",
+    animate: view.animate,
+  });
+}
+
+const CARD_BUILDERS = [
+  buildTotalCard,
+  buildCleanCard,
+  buildMomCard,
+  buildTopRuleCard,
+  buildDensityCard,
+  buildSeverityCard,
+];
 
 export function renderStats(ctx) {
   const { currentRows, prevRows, prev } = ctx;
@@ -81,210 +316,23 @@ export function renderStats(ctx) {
     // schools this month" vs "law schools last month", not "law schools
     // now" vs "everything last month".
     const filteredCurrent = applyFilter(currentRows, state);
-    const filteredPrev = applyFilter(prevRows, state);
     const okRows = filteredCurrent.filter((r) => r.status === "ok");
-    const prevOkRows = filteredPrev.filter((r) => r.status === "ok");
-
-    const {
-      totalErrors,
-      prevTotalErrors,
-      cleanRows,
-      impactTotals,
-      topImpactKey,
-      topRuleEntry,
-      topReachRuleEntry,
-      mobileViolationsTotal,
-      systemTrend,
-    } = computeAggregates({ okRows, prevOkRows, prev });
+    const prevOkRows = applyFilter(prevRows, state).filter((r) => r.status === "ok");
+    const agg = computeAggregates({ okRows, prevOkRows, prev });
 
     const filterDesc = describeFilter(state);
-    const scopeSuffix = filterDesc ? ` · ${filterDesc}` : "";
-    const scopeNote = filterDesc ? ` (${filterDesc})` : " across the system";
-    const animate = firstPaint;
+    const view = {
+      ...agg,
+      okRows,
+      filteredCurrent,
+      prev,
+      scopeSuffix: filterDesc ? ` · ${filterDesc}` : "",
+      scopeNote: filterDesc ? ` (${filterDesc})` : " across the system",
+      animate: firstPaint,
+    };
 
     statGrid.textContent = "";
-
-    // Card 1: Total issues
-    const totalCaption = document.createElement("span");
-    if (totalErrors === null) {
-      totalCaption.textContent = "No successful scans in the current filter.";
-    } else if (totalErrors === 0) {
-      totalCaption.textContent = `No axe-core violations across ${okRows.length} of ${filteredCurrent.length} matching UC sites this month${scopeSuffix}. A strong start; keep going with manual testing.`;
-    } else {
-      totalCaption.appendChild(document.createTextNode("Flagged by axe-core across "));
-      const strong = document.createElement("strong");
-      strong.textContent = `${okRows.length} of ${filteredCurrent.length} UC sites${scopeSuffix}`;
-      totalCaption.appendChild(strong);
-      totalCaption.appendChild(
-        document.createTextNode(
-          ". Each one is an opportunity to make the UC web more accessible for someone.",
-        ),
-      );
-    }
-    const totalCard = makeStatCard(statGrid, {
-      badge: "01",
-      label: "Issues flagged",
-      value: totalErrors !== null ? totalErrors : "n/a",
-      caption: totalCaption,
-      delta: prev ? deltaEl(totalErrors, prevTotalErrors) : null,
-      klass: "stat-big",
-      animate,
-    });
-    if (mobileViolationsTotal > 0) {
-      const footnote = document.createElement("p");
-      footnote.className = "stat-mobile-footnote";
-      footnote.textContent = `${mobileViolationsTotal.toLocaleString()} mobile issues across all sites`;
-      totalCard.appendChild(footnote);
-    }
-    statGrid.appendChild(totalCard);
-
-    // Card 2: Clean scans
-    const cleanCaption = document.createElement("span");
-    if (cleanRows.length) {
-      cleanCaption.appendChild(
-        document.createTextNode("A clean axe-core scan is a great floor, not the ceiling. "),
-      );
-      cleanCaption.appendChild(document.createTextNode("Automated tools still miss "));
-      const strong = document.createElement("strong");
-      strong.textContent = "60 to 70 percent";
-      cleanCaption.appendChild(strong);
-      cleanCaption.appendChild(document.createTextNode(" of real barriers."));
-    } else {
-      cleanCaption.textContent = okRows.length
-        ? "Every matching UC site had at least one flag this month. The top rule below is a good place to start."
-        : "No clean scans in the current filter.";
-    }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "02",
-        label: "Clean scans",
-        value: cleanRows.length,
-        unit: ` of ${okRows.length}`,
-        caption: cleanCaption,
-        klass: "stat-half",
-        animate,
-      }),
-    );
-
-    // Card 3: Month over month
-    let momValue = "–";
-    let momCaption =
-      "This is the first scan on record. Once there is a second month, the trend lands here.";
-    if (systemTrend) {
-      if (systemTrend.delta < 0) {
-        momValue = `▼ ${Math.abs(systemTrend.delta)}`;
-        momCaption = `Fewer issues than ${prettyMonth(prev)}${scopeNote}. Collective progress.`;
-      } else if (systemTrend.delta > 0) {
-        momValue = `▲ ${systemTrend.delta}`;
-        momCaption = `More issues than ${prettyMonth(prev)}${scopeNote}. New content often adds new opportunities to improve.`;
-      } else {
-        momValue = "0";
-        momCaption = `The same total as ${prettyMonth(prev)}${scopeNote}. Steady.`;
-      }
-    }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "03",
-        label: "Month over month",
-        value: momValue,
-        caption: momCaption,
-        klass: "stat-half",
-        animate,
-      }),
-    );
-
-    // Card 4: Top rule flagged
-    const ruleCaption = document.createElement("span");
-    const displayRule = topRuleEntry || topReachRuleEntry;
-    const displayRuleIsReach = !topRuleEntry && Boolean(topReachRuleEntry);
-    if (displayRule) {
-      const strong = document.createElement("strong");
-      strong.textContent = ruleFriendly(displayRule[0]);
-      ruleCaption.appendChild(strong);
-      ruleCaption.appendChild(
-        document.createTextNode(
-          displayRuleIsReach
-            ? ". No required-level rules flagged; this is the top reach-goal rule."
-            : ". Fixing this pattern first tends to have the widest benefit.",
-        ),
-      );
-    } else {
-      ruleCaption.textContent = "No rules were flagged in the current filter.";
-    }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "04",
-        label: displayRuleIsReach ? "Top rule (reach)" : "Top rule flagged",
-        value: displayRule ? displayRule[0] : "–",
-        unit: displayRule ? ` · ${displayRule[1]} instances` : "",
-        caption: ruleCaption,
-        klass: "stat-third",
-        animate,
-      }),
-    );
-
-    // Card 5: Issue density
-    const avgDensity = okRows.length
-      ? okRows.reduce((s, r) => s + r.error_density, 0) / okRows.length
-      : null;
-    let densityValue = "n/a";
-    let densityCaption = "No data in the current filter.";
-    if (avgDensity !== null) {
-      if (avgDensity === 0) {
-        densityValue = "0";
-        densityCaption = `Zero axe-core flags per element across ${okRows.length} matching sites this month.`;
-      } else if (avgDensity >= 1) {
-        // Multiple rules can hit the same element, so density can
-        // exceed 1 per element. Flip the phrasing so the number
-        // stays meaningful instead of rounding "1 in N" down to zero.
-        densityValue = avgDensity.toFixed(2);
-        densityCaption = `On average, axe-core flags ${avgDensity.toFixed(2)} issues for every DOM element it inspects. Some elements get flagged by more than one rule at once.`;
-      } else {
-        const oneIn = Math.round(1 / avgDensity);
-        densityValue = `1 in ${oneIn.toLocaleString()}`;
-        densityCaption = `On average, axe-core flags one issue for every ${oneIn.toLocaleString()} DOM elements it inspects. Raw density: ${avgDensity.toFixed(4)}.`;
-      }
-    }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "05",
-        label: "Issue density",
-        value: densityValue,
-        caption: densityCaption,
-        klass: "stat-third",
-        animate,
-      }),
-    );
-
-    // Card 6: Severity mix
-    const totalImpact = Object.values(impactTotals).reduce((a, b) => a + b, 0);
-    const mixCaption = document.createElement("span");
-    if (totalImpact && topImpactKey && topImpactKey[1] > 0) {
-      const pct = Math.round((topImpactKey[1] / totalImpact) * 100);
-      mixCaption.appendChild(document.createTextNode("Most flags are "));
-      const strong = document.createElement("strong");
-      strong.textContent = topImpactKey[0];
-      mixCaption.appendChild(strong);
-      mixCaption.appendChild(
-        document.createTextNode(
-          ` (${pct} percent). Severity is what axe-core reports; real user impact can be different.`,
-        ),
-      );
-    } else {
-      mixCaption.textContent = "No issues flagged in the current filter.";
-    }
-    statGrid.appendChild(
-      makeStatCard(statGrid, {
-        badge: "06",
-        label: "Severity mix",
-        value: totalImpact && topImpactKey ? topImpactKey[0] : "–",
-        unit: totalImpact && topImpactKey ? ` · ${topImpactKey[1]}` : "",
-        caption: mixCaption,
-        klass: "stat-third",
-        animate,
-      }),
-    );
-
+    for (const build of CARD_BUILDERS) statGrid.appendChild(build(statGrid, view));
     firstPaint = false;
   }
 
