@@ -1,0 +1,1438 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "ucsb-gevirtz",
+  "name": "Gevirtz Graduate School of Education",
+  "campus": "ucsb",
+  "type": "school",
+  "category": "education",
+  "url": "https://education.ucsb.edu",
+  "element_count": 677,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#9cbebe",
+                "contrastRatio": 4.62,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-9cbebe top-padding-2 bottom-padding-2\">",
+                  "target": [
+                    ".background-color-9cbebe"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.62 (foreground color: #3d4952, background color: #9cbebe, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><br>\nProfessor and Interim Dean Jill Sharkey introduces you to the Gevirtz School, a hub of educational innovation with world-class research produced by our distinguished faculty and exceptional graduate students.</p>",
+          "target": [
+            ".col-md-10 > .inner > .field--name-field-body.field--type-text-long.field > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.62 (foreground color: #3d4952, background color: #9cbebe, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/clinics-centers/hosford-clinic-office/overview\">Learn more</a>",
+          "target": [
+            ".small > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"/sites/default/files/images/people/christopherograin.jpg\">",
+          "target": [
+            ".container > .image-container > img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">CCSP</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Department of Counseling, Clinical, and School Psychology</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a Ph.D. in Counseling/Clinical Psychology, a Ph.D. in School Psychology, and a M.Ed. in School Psychology.</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">Education</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Department of Education</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers an M.A. and Ph.D. centered around three different research focus areas.</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">TEP</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Teacher Education Program</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a M.Ed. with an emphasis in Teaching and Credential Programs for elementary, secondary and special education teaching.</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 top-padding-3 bottom-padding-3 facultySpotlight-and-findAnExpert\">",
+                  "target": [
+                    ".facultySpotlight-and-findAnExpert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"section-title\">Faculty Spotlight</h2>",
+          "target": [
+            ".container > .text-container > .section-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 top-padding-3 bottom-padding-3 facultySpotlight-and-findAnExpert\">",
+                  "target": [
+                    ".facultySpotlight-and-findAnExpert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"name\">Christopher Ograin</h3>",
+          "target": [
+            ".name"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 top-padding-3 bottom-padding-3 facultySpotlight-and-findAnExpert\">",
+                  "target": [
+                    ".facultySpotlight-and-findAnExpert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"bio\">Christopher Ograin is a Teaching Professor with a joint position in the Department of Education and Department of Mathematics. After...</p>",
+          "target": [
+            ".bio"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 top-padding-3 bottom-padding-3 facultySpotlight-and-findAnExpert\">",
+                  "target": [
+                    ".facultySpotlight-and-findAnExpert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"section-title\">Find an Expert</h2>",
+          "target": [
+            ".field--name-field-body.field--type-text-long.field > .text-container > .section-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 top-padding-3 bottom-padding-3 facultySpotlight-and-findAnExpert\">",
+                  "target": [
+                    ".facultySpotlight-and-findAnExpert"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"text\">The Gevirtz School faculty offers broad and deep knowledge about topics in education, teacher training, and counseling, clinical, and school psychology.</p>",
+          "target": [
+            ".text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-quote-title field--type-string field--label-hidden field--item\">Innovate, Inspire, Imagine</div>",
+          "target": [
+            ".field--name-field-quote-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The Gevirtz School of Education will be a leader in addressing pressing social justice issues through interdisciplinary collaborations grounded in educational and applied psychological research, teaching, and service.</p>",
+          "target": [
+            ".field--name-field-quote > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "education.ucsb.edu",
+                  "port": "",
+                  "pathname": "/gevirtz-school-diversity-statement/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/clinics-centers/hosford-clinic-office/overview\">Learn more</a>",
+                  "target": [
+                    ".small > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/clinics-centers/koegel-autism-center/general-information-and-resources/welcome\">Learn More</a>",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/clinics-centers/mcenroe-reading-language-arts-clinic/mission\">Learn more</a>",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/gevirtz-school-diversity-statement\">Learn More</a>",
+          "target": [
+            ".field--name-field-full-width-card-link > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#047c91",
+                "contrastRatio": 4.88,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-047c91 top-padding-3 bottom-padding-3\">",
+                  "target": [
+                    ".background-color-047c91"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"produkt\">PROSPECTIVE STUDENTS</span>",
+          "target": [
+            ".produkt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#047c91",
+                "contrastRatio": 4.88,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-047c91 top-padding-3 bottom-padding-3\">",
+                  "target": [
+                    ".background-color-047c91"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"large\">",
+          "target": [
+            ".col-md-7 > .inner > .field--name-field-body.field--type-text-long.field > .large"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #ffffff, background color: #047c91, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#9cbebe",
+                "contrastRatio": 4.62,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-9cbebe top-padding-2 bottom-padding-2\">",
+                  "target": [
+                    ".background-color-9cbebe"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.62 (foreground color: #3d4952, background color: #9cbebe, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><br>\nProfessor and Interim Dean Jill Sharkey introduces you to the Gevirtz School, a hub of educational innovation with world-class research produced by our distinguished faculty and exceptional graduate students.</p>",
+          "target": [
+            ".col-md-10 > .inner > .field--name-field-body.field--type-text-long.field > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.62 (foreground color: #3d4952, background color: #9cbebe, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<b>GGSE Compliance with Regents Policy 4408: Policy on Public and Discretionary Statements by Academic Units</b>",
+          "target": [
+            "b"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/COVID-19-information\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">COVID-19 Information for the UC Santa Barbara Campus</a>",
+          "target": [
+            ".field--name-field-announcement-text > p:nth-child(2) > a[rel=\"nofollow noopener noreferrer\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/clinics-centers/hosford-clinic-office/overview\">Learn more</a>",
+          "target": [
+            ".small > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/clinics-centers/koegel-autism-center/general-information-and-resources/welcome\">Learn More</a>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/clinics-centers/mcenroe-reading-language-arts-clinic/mission\">Learn more</a>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#047c91",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.88,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://gradslam.ucsb.edu/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">2026 Grad Slam</a>",
+          "target": [
+            "a[href$=\"gradslam.ucsb.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.88 (foreground color: #047c91, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"/sites/default/files/images/people/christopherograin.jpg\">",
+          "target": [
+            ".container > .image-container > img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">CCSP</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Department of Counseling, Clinical, and School Psychology</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a Ph.D. in Counseling/Clinical Psychology, a Ph.D. in School Psychology, and a M.Ed. in School Psychology.</div>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">Education</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Department of Education</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers an M.A. and Ph.D. centered around three different research focus areas.</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">TEP</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Teacher Education Program</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a M.Ed. with an emphasis in Teaching and Credential Programs for elementary, secondary and special education teaching.</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.5pt (26px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-quote-title field--type-string field--label-hidden field--item\">Innovate, Inspire, Imagine</div>",
+          "target": [
+            ".field--name-field-quote-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>The Gevirtz School of Education will be a leader in addressing pressing social justice issues through interdisciplinary collaborations grounded in educational and applied psychological research, teaching, and service.</p>",
+          "target": [
+            ".field--name-field-quote > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "education.ucsb.edu",
+                  "port": "",
+                  "pathname": "/gevirtz-school-diversity-statement/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/clinics-centers/hosford-clinic-office/overview\">Learn more</a>",
+                  "target": [
+                    ".small > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/clinics-centers/koegel-autism-center/general-information-and-resources/welcome\">Learn More</a>",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/clinics-centers/mcenroe-reading-language-arts-clinic/mission\">Learn more</a>",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(3) > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/gevirtz-school-diversity-statement\">Learn More</a>",
+          "target": [
+            ".field--name-field-full-width-card-link > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2966 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "ucsb-health",
+  "name": "UC Santa Barbara Student Health Service",
+  "campus": "ucsb",
+  "type": "health",
+  "category": "health",
+  "url": "https://studenthealth.sa.ucsb.edu",
+  "element_count": 658,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#111517",
+                "bgColor": "#ef5645",
+                "contrastRatio": 5.32,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-ef5645\">\n                        <a href=\"/emergency-after-hours\">\n                          Emergency/After&nbsp;Hours Care\n                        </a>\n                      </div>",
+                  "target": [
+                    ".background-color-ef5645"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.32 (foreground color: #111517, background color: #ef5645, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/emergency-after-hours\">\n                          Emergency/After&nbsp;Hours Care\n                        </a>",
+          "target": [
+            ".background-color-ef5645 > a[href$=\"emergency-after-hours\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.32 (foreground color: #111517, background color: #ef5645, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#febc11",
+                "contrastRatio": 5.46,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-febc11\">\n                        <a href=\"https://myhealth.ucsb.edu\">\n                          MyHealth Portal\n                        </a>\n                      </div>",
+                  "target": [
+                    ".background-color-febc11"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://myhealth.ucsb.edu\">\n                          MyHealth Portal\n                        </a>",
+          "target": [
+            ".background-color-febc11 > a[href$=\"myhealth.ucsb.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5c6670",
+                "bgColor": "#f1eeea",
+                "contrastRatio": 5.05,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--column paragraph--view-mode--default has-background background-color-f1eeea col-sm-12 col-md-5\">",
+                  "target": [
+                    ".col-md-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.05 (foreground color: #5c6670, background color: #f1eeea, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div style=\"color:#5c6670;font-size:15px;line-height:1.4;margin:0;\">Appointments | Medical Records | Messaging | Forms</div>",
+          "target": [
+            ".border-color-c9bf9d > .field--name-field-body.field--type-text-long.field--label-hidden > div:nth-child(2) > div:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.05 (foreground color: #5c6670, background color: #f1eeea, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn sandstone-btn\" href=\"https://myhealth.ucsb.edu/\" style=\"font-size:16px;display:block;width:100%;box-sizing:border-box;text-align:center;\">Sign In to MyHealth Portal </a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"myhealth.ucsb.edu/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn sandstone-btn\" href=\"https://myhealth.ucsb.edu/\" style=\"font-size:16px;display:block;width:100%;box-sizing:border-box;text-align:center;\">Sign In to MyHealth Portal </a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"myhealth.ucsb.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://www.sydneyhealth.com/\" style=\"font-size:16px; width: 100%;\">Sydney Health App</a>",
+                  "target": [
+                    "a[href$=\"sydneyhealth.com/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://www.sydneyhealth.com/\" style=\"font-size:16px; width: 100%;\">Sydney Health App</a>",
+          "target": [
+            "a[href$=\"sydneyhealth.com/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://studenthealth.sa.ucsb.edu/disability-assistance\" style=\"font-size:16px; width: 100%;\">ADA Assistance &amp; Policies</a>",
+                  "target": [
+                    ".col-md-6.col-sm-12.paragraph--type--column:nth-child(2) > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center > .sandstone-btn.ucsb-button.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://studenthealth.sa.ucsb.edu/disability-assistance\" style=\"font-size:16px; width: 100%;\">ADA Assistance &amp; Policies</a>",
+          "target": [
+            ".col-md-6.col-sm-12.paragraph--type--column:nth-child(2) > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center > .sandstone-btn.ucsb-button.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/about-us/sexual-misconduct-reporting\" style=\"width: 270px; font-size: 16px;\">How to Report Sexual Misconduct</a>",
+                  "target": [
+                    ".col-md-4.col-sm-12.paragraph--type--column:nth-child(1) > .border-color-dcd6cc.has-border.inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center:nth-child(3) > .sandstone-btn.ucsb-button.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/about-us/sexual-misconduct-reporting\" style=\"width: 270px; font-size: 16px;\">How to Report Sexual Misconduct</a>",
+          "target": [
+            ".col-md-4.col-sm-12.paragraph--type--column:nth-child(1) > .border-color-dcd6cc.has-border.inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center:nth-child(3) > .sandstone-btn.ucsb-button.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/patient-feedback\" style=\"width: 270px; font-size: 16px;\">How to Provide Feedback</a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"patient-feedback\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/patient-feedback\" style=\"width: 270px; font-size: 16px;\">How to Provide Feedback</a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"patient-feedback\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/medical-records\" style=\"width: 270px; font-size: 16px;\">How to Access your Medical Records</a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"medical-records\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/medical-records\" style=\"width: 270px; font-size: 16px;\">How to Access your Medical Records</a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"medical-records\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/medical-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"medical-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/behavioral-health\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"behavioral-health\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/no-cost-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"no-cost-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/insurancebilling/uc-ship-insurance-overview\">",
+          "target": [
+            ".ucsb-icon:nth-child(7) > .ucsb-icon-lnk:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/patient-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"patient-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"https://x.com/UCSBshs\">",
+          "target": [
+            "a[href$=\"UCSBshs\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"https://www.facebook.com/pages/UCSB-Student-Health-Service/219956004683289\">",
+          "target": [
+            ".col-sm-8 > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .center-container > .ucsb-icon:nth-child(4) > .ucsb-icon-lnk"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 100,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (100px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">Immunizations</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (100px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 68,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (68px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">Pharmacy</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (68px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 110,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (110px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">Vision &amp; Dental</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (110px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 79,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (79px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">Contact Us</a>",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (79px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 69,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (69px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">About Us</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (69px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>I'm a virtual assistant that can help you with your Student Health questions.</p>",
+          "target": [
+            ".ivy-intro > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "contact us",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "studenthealth.sa.ucsb.edu",
+                  "port": "",
+                  "pathname": "/contact-us/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">Contact Us</a>",
+                  "target": [
+                    ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/contact-us\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Contact Us <span class=\"caret\"></span></a>",
+          "target": [
+            ".dropdown-toggle[href$=\"contact-us\"][data-toggle=\"dropdown\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 10.75765 18.31184\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M8.78567,9.15714a4.2...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 13.10939 18.53031\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M9.56909,5.27922V6.6...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 20.75812 10.5874\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M10.3329,9.21686A4.3...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 14.0522 18.90212\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M3.31,11.933.047,16....\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 17.99982 17.99891\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M11.12641,3.834A5.15...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#5c6670",
+                "bgColor": "#f1eeea",
+                "contrastRatio": 5.05,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--column paragraph--view-mode--default has-background background-color-f1eeea col-sm-12 col-md-5\">",
+                  "target": [
+                    ".col-md-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.05 (foreground color: #5c6670, background color: #f1eeea, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div style=\"color:#5c6670;font-size:15px;line-height:1.4;margin:0;\">Appointments | Medical Records | Messaging | Forms</div>",
+          "target": [
+            ".border-color-c9bf9d > .field--name-field-body.field--type-text-long.field--label-hidden > div:nth-child(2) > div:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.05 (foreground color: #5c6670, background color: #f1eeea, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn sandstone-btn\" href=\"https://myhealth.ucsb.edu/\" style=\"font-size:16px;display:block;width:100%;box-sizing:border-box;text-align:center;\">Sign In to MyHealth Portal </a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"myhealth.ucsb.edu/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn sandstone-btn\" href=\"https://myhealth.ucsb.edu/\" style=\"font-size:16px;display:block;width:100%;box-sizing:border-box;text-align:center;\">Sign In to MyHealth Portal </a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"myhealth.ucsb.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://www.sydneyhealth.com/\" style=\"font-size:16px; width: 100%;\">Sydney Health App</a>",
+                  "target": [
+                    "a[href$=\"sydneyhealth.com/\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://www.sydneyhealth.com/\" style=\"font-size:16px; width: 100%;\">Sydney Health App</a>",
+          "target": [
+            "a[href$=\"sydneyhealth.com/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://studenthealth.sa.ucsb.edu/disability-assistance\" style=\"font-size:16px; width: 100%;\">ADA Assistance &amp; Policies</a>",
+                  "target": [
+                    ".col-md-6.col-sm-12.paragraph--type--column:nth-child(2) > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center > .sandstone-btn.ucsb-button.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"https://studenthealth.sa.ucsb.edu/disability-assistance\" style=\"font-size:16px; width: 100%;\">ADA Assistance &amp; Policies</a>",
+          "target": [
+            ".col-md-6.col-sm-12.paragraph--type--column:nth-child(2) > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center > .sandstone-btn.ucsb-button.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/about-us/sexual-misconduct-reporting\" style=\"width: 270px; font-size: 16px;\">How to Report Sexual Misconduct</a>",
+                  "target": [
+                    ".col-md-4.col-sm-12.paragraph--type--column:nth-child(1) > .border-color-dcd6cc.has-border.inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center:nth-child(3) > .sandstone-btn.ucsb-button.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/about-us/sexual-misconduct-reporting\" style=\"width: 270px; font-size: 16px;\">How to Report Sexual Misconduct</a>",
+          "target": [
+            ".col-md-4.col-sm-12.paragraph--type--column:nth-child(1) > .border-color-dcd6cc.has-border.inner > .field--name-field-body.field--type-text-long.field--label-hidden > .text-align-center:nth-child(3) > .sandstone-btn.ucsb-button.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/patient-feedback\" style=\"width: 270px; font-size: 16px;\">How to Provide Feedback</a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"patient-feedback\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/patient-feedback\" style=\"width: 270px; font-size: 16px;\">How to Provide Feedback</a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"patient-feedback\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#c9bf9d",
+                "contrastRatio": 5.02,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/medical-records\" style=\"width: 270px; font-size: 16px;\">How to Access your Medical Records</a>",
+                  "target": [
+                    ".sandstone-btn.ucsb-button[href$=\"medical-records\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  sandstone-btn\" href=\"/contact-us/medical-records\" style=\"width: 270px; font-size: 16px;\">How to Access your Medical Records</a>",
+          "target": [
+            ".sandstone-btn.ucsb-button[href$=\"medical-records\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.02 (foreground color: #3d4952, background color: #c9bf9d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/medical-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"medical-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/behavioral-health\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"behavioral-health\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/no-cost-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"no-cost-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/insurancebilling/uc-ship-insurance-overview\">",
+          "target": [
+            ".ucsb-icon:nth-child(7) > .ucsb-icon-lnk:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/patient-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"patient-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"https://x.com/UCSBshs\">",
+          "target": [
+            "a[href$=\"UCSBshs\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"https://www.facebook.com/pages/UCSB-Student-Health-Service/219956004683289\">",
+          "target": [
+            ".col-sm-8 > .inner > .field--name-field-body.field--type-text-long.field--label-hidden > .center-container > .ucsb-icon:nth-child(4) > .ucsb-icon-lnk"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 100,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (100px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">Immunizations</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (100px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 68,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (68px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">Pharmacy</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (68px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 110,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (110px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">Vision &amp; Dental</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (110px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 79,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (79px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">Contact Us</a>",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (79px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 69,
+                "height": 22
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (69px by 22px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+                  "target": [
+                    ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">About Us</a>",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (69px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 74,
+                "height": 23
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (74px by 23px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.sa.ucsb.edu/policies/anti-discrimination-compliance\">Anti-Discrimination Compliance</a>",
+                  "target": [
+                    ".field--name-body > p > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/terms-of-use\" class=\"terms\">Terms of Use</a>",
+          "target": [
+            ".terms:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (74px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 72,
+                "height": 23
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (72px by 23px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.sa.ucsb.edu/policies/anti-discrimination-compliance\">Anti-Discrimination Compliance</a>",
+                  "target": [
+                    ".field--name-body > p > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+          "target": [
+            "a[href$=\"accessibility\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (72px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 181,
+                "height": 23
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (181px by 23px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+                  "target": [
+                    "a[href$=\"accessibility\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.sa.ucsb.edu/policies/anti-discrimination-compliance\">Anti-Discrimination Compliance</a>",
+          "target": [
+            ".field--name-body > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (181px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 10.75765 18.31184\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M8.78567,9.15714a4.2...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 10.75765 18.31184\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/immunizations\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"immunizations\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 13.10939 18.53031\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M9.56909,5.27922V6.6...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 13.10939 18.53031\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/pharmacy-services\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"pharmacy-services\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 20.75812 10.5874\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M10.3329,9.21686A4.3...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 20.75812 10.5874\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/vision-dental-information\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"vision-dental-information\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 14.0522 18.90212\" width=\"50\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M3.31,11.933.047,16....\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 14.0522 18.90212\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"tel:8058933371\">",
+          "target": [
+            ".ucsb-icon-lnk[href=\"tel:8058933371\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 17.99982 17.99891\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"]"
+                  ]
+                },
+                {
+                  "html": "<g>",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"] > g"
+                  ]
+                },
+                {
+                  "html": "<path d=\"M11.12641,3.834A5.15...\" style=\"fill: rgb(206, 197, ...\">",
+                  "target": [
+                    "svg[viewBox=\"0 0 17.99982 17.99891\"] > g > path"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-icon-lnk\" href=\"/about-us\">",
+          "target": [
+            ".ucsb-icon-lnk[href$=\"about-us\"]:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        }
+      ]
+    }
+  ]
+}

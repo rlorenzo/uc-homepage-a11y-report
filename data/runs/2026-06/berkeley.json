@@ -1,0 +1,410 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "berkeley",
+  "name": "UC Berkeley",
+  "campus": "berkeley",
+  "type": "homepage",
+  "category": "homepage",
+  "url": "https://www.berkeley.edu",
+  "element_count": 597,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "36.0pt (48px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img src=\"https://www.berkeley.edu/wp-content/uploads/2025/06/231011UCB2153-scaled-1.jpg\" alt=\"\">",
+                  "target": [
+                    ".has-overlay > img[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"take-a-tour-title\" class=\"building-block__title title\">Take a tour</h2>",
+          "target": [
+            "#take-a-tour-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "us news world report",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "news.berkeley.edu",
+                  "port": "",
+                  "pathname": "/2025/09/22/uc-berkeley-named-top-public-school-in-the-country-by-us-news/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://news.berkeley.edu/2025/04/08/uc-berkeley-graduate-programs-soar-to-elite-status-in-latest-us-news-rankings/\"><em>U.S. News &amp; World Report</em>.</a>",
+                  "target": [
+                    ".stat.none.column:nth-child(2) > .text--bg-small.column__content > p > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://news.berkeley.edu/2025/09/22/uc-berkeley-named-top-public-school-in-the-country-by-us-news/\">U.S. News &amp; World Report</a>",
+          "target": [
+            ".stat.none.column:nth-child(1) > .text--bg-small.column__content > p > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"video-control--no-audio\" style=\"opacity: 0.102528;\">No Audio</span>",
+                  "target": [
+                    ".video-control--no-audio"
+                  ]
+                },
+                {
+                  "html": "<video tabindex=\"-1\" aria-hidden=\"true\" autoplay=\"\" playsinline=\"\" muted=\"\" loop=\"\" disablepictureinpicture=\"\">\n          <source src=\"https://www.berkeley.edu/wp-content/uploads/2025/06/Research-Banner-v3.mp4\">\n        </video>",
+                  "target": [
+                    "video"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"video-control--no-audio\" style=\"opacity: 0.102528;\">No Audio</span>",
+          "target": [
+            ".video-control--no-audio"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 400;\">UC Berkeley researchers work every day to make discoveries that change the world. Whether advancing cures for Alzheimer’s, trailblazing the future of AI, or mapping the edges of the universe, our breakthroughs propel humanity forward. Here’s how.</span>",
+          "target": [
+            ".block--text__text > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".stat.none.column:nth-child(1) > .text--bg-small.column__content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<main id=\"content\">",
+                  "target": [
+                    "#content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>Wall Street Journal</em>",
+          "target": [
+            "a:nth-child(3) > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "37.2pt (49.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<main id=\"content\">",
+                  "target": [
+                    "#content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"h1 stat__number text--bg-large\">\n\t\t\t\t\t\t\t\tHundreds of groundbreaking inventions\n\t\t\t\t\t\t\t</span>",
+          "target": [
+            ".stat.none.column:nth-child(3) > .text--bg-small.column__content > .h1.stat__number.text--bg-large"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<main id=\"content\">",
+                  "target": [
+                    "#content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ipira.berkeley.edu/about/our-impact\">UC Berkeley research and patents</a>",
+          "target": [
+            ".stat.none.column:nth-child(3) > .text--bg-small.column__content > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img src=\"https://www.berkeley.edu/wp-content/uploads/2025/06/231011UCB2153-scaled-1.jpg\" alt=\"\">",
+                  "target": [
+                    ".has-overlay > img[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"take-a-tour-title\" class=\"building-block__title title\">Take a tour</h2>",
+          "target": [
+            "#take-a-tour-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "us news world report",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "news.berkeley.edu",
+                  "port": "",
+                  "pathname": "/2025/09/22/uc-berkeley-named-top-public-school-in-the-country-by-us-news/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://news.berkeley.edu/2025/04/08/uc-berkeley-graduate-programs-soar-to-elite-status-in-latest-us-news-rankings/\"><em>U.S. News &amp; World Report</em>.</a>",
+                  "target": [
+                    ".stat.none.column:nth-child(2) > .text--bg-small.column__content > p > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://news.berkeley.edu/2025/09/22/uc-berkeley-named-top-public-school-in-the-country-by-us-news/\">U.S. News &amp; World Report</a>",
+          "target": [
+            ".stat.none.column:nth-child(1) > .text--bg-small.column__content > p > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}
