@@ -1,0 +1,506 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "ucdavis-vetmed",
+  "name": "UC Davis Weill School of Veterinary Medicine",
+  "campus": "ucdavis",
+  "type": "school",
+  "category": "medicine-health",
+  "url": "https://www.vetmed.ucdavis.edu",
+  "element_count": 568,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.2pt (16.2031px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button id=\"block-sf1subtheme-quicklinks-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\" aria-label=\"Toggle Quick Links Menu\">\n    quick-links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+                  "target": [
+                    "#block-sf1subtheme-quicklinks-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button id=\"block-sf1subtheme-quicklinks-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\" aria-label=\"Toggle Quick Links Menu\">\n    quick-links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+          "target": [
+            "#block-sf1subtheme-quicklinks-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://secure.adnxs.com/px?id=1129775&amp;seg=18365691&amp;redir=https%3A%2F%2Fpixel.mediaiqdigital.com%2Fpixel%3Fu3%3D%26u4%3D%26pixel_id%3D1129775%26uid%3D%24%7BUID%7D&amp;t=2\" width=\"1\" height=\"1\">",
+          "target": [
+            "img[width=\"1\"][height=\"1\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "34.0pt (45.2734px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Five smiling graduat...\" class=\"image-style-sf-hero-...\">",
+                  "target": [
+                    ".image-style-sf-hero-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">Celebrating the Class of 2026!</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-rssfeed-5\" class=\"panel--icon panel--icon-feed block block-rss-feed-block panel o-box\">",
+                  "target": [
+                    "#block-rssfeed-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.vetmed.ucdavis.edu/news/uc-davis-researchers-identify-genetic-cause-fatal-neurologic-disease-foals\">UC Davis Researchers Identify Genetic Cause for Fatal Neurologic Disease in Foals</a>",
+          "target": [
+            ".rss-feed__item:nth-child(1) > div > .rss-feed__title > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-rssfeed-5\" class=\"panel--icon panel--icon-feed block block-rss-feed-block panel o-box\">",
+                  "target": [
+                    "#block-rssfeed-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.vetmed.ucdavis.edu/news/dog-rescued-landfill-recovering-surgery\">Dog Rescued from Landfill Recovering from Surgery</a>",
+          "target": [
+            ".rss-feed__item:nth-child(2) > div > .rss-feed__title > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-rssfeed-5\" class=\"panel--icon panel--icon-feed block block-rss-feed-block panel o-box\">",
+                  "target": [
+                    "#block-rssfeed-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.vetmed.ucdavis.edu/news/congratulations-class-2026\">Congratulations, Class of 2026!</a>",
+          "target": [
+            ".rss-feed__item:nth-child(3) > div > .rss-feed__title > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-rssfeed-5\" class=\"panel--icon panel--icon-feed block block-rss-feed-block panel o-box\">",
+                  "target": [
+                    "#block-rssfeed-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.vetmed.ucdavis.edu/news/dog-daycare-leptospirosis-outbreak-los-angeles-reveals-broader-public-health-risks\">Dog Daycare Leptospirosis Outbreak in Los Angeles Reveals Broader Public Health Risks </a>",
+          "target": [
+            ".rss-feed__item:nth-child(4) > div > .rss-feed__title > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"block-rssfeed-5\" class=\"panel--icon panel--icon-feed block block-rss-feed-block panel o-box\">",
+                  "target": [
+                    "#block-rssfeed-5"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.vetmed.ucdavis.edu/news/center-animal-locomotion-and-innovation-opens\">Center for Animal Locomotion and Innovation Opens</a>",
+          "target": [
+            ".rss-feed__item:nth-child(5) > div > .rss-feed__title > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://secure.adnxs.com/px?id=1129775&amp;seg=18365691&amp;redir=https%3A%2F%2Fpixel.mediaiqdigital.com%2Fpixel%3Fu3%3D%26u4%3D%26pixel_id%3D1129775%26uid%3D%24%7BUID%7D&amp;t=2\" width=\"1\" height=\"1\">",
+          "target": [
+            "img[width=\"1\"][height=\"1\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Five smiling graduat...\" class=\"image-style-sf-hero-...\">",
+                  "target": [
+                    ".image-style-sf-hero-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">Celebrating the Class of 2026!</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ]
+}

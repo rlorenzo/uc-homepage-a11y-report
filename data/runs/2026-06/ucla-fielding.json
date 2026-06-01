@@ -1,0 +1,3089 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "ucla-fielding",
+  "name": "UCLA Fielding School of Public Health",
+  "campus": "ucla",
+  "type": "school",
+  "category": "medicine-health",
+  "url": "https://ph.ucla.edu",
+  "element_count": 768,
+  "violations": [
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "aside[aria-label]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<aside data-wg-notranslate=\"true\" aria-label=\"Language selected: English\" class=\"weglot_switcher country-selector default closed wg-drop\">",
+                  "target": [
+                    "aside"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: aside[aria-label]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"secondary-nav__list clearfix\" role=\"menubar\">",
+          "target": [
+            ".secondary-nav__list"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: aside[aria-label]"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tAbout\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"about\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/degree-programs\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tDegree Programs\n\t\t\t\t\t</a>",
+          "target": [
+            ".primary-nav__item.primary-nav__item--has-children[role=\"menuitem\"]:nth-child(2) > a[href$=\"degree-programs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/departments\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tDepartments\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"departments\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/students\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tStudents\n\t\t\t\t\t</a>",
+          "target": [
+            ".primary-nav__item.primary-nav__item--has-children[role=\"menuitem\"]:nth-child(4) > a[href$=\"students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/faculty-research\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tFaculty &amp; Research\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"faculty-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/community-collaboration\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tCommunity Collaboration\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"community-collaboration\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/admissions\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tAdmissions\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn--primary\">\n                                  <span class=\"text\">Read Full Article</span>\n                              </span>",
+                  "target": [
+                    ".hero__content-inner > .btn--primary.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".hero__content-inner > .btn--primary.btn > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ph.ucla.edu/news-events/events/2026-ucla-fielding-commencement\" class=\"btn btn--primary btn--with-icon\">",
+                  "target": [
+                    ".btn--with-icon"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".btn--with-icon > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
+                  "target": [
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
+                  "target": [
+                    "a[href$=\"news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">FSPH News</span>",
+          "target": [
+            "a[href$=\"news\"] > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tAbout\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"about\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/degree-programs\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tDegree Programs\n\t\t\t\t\t</a>",
+          "target": [
+            ".primary-nav__item.primary-nav__item--has-children[role=\"menuitem\"]:nth-child(2) > a[href$=\"degree-programs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/departments\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tDepartments\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"departments\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/students\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tStudents\n\t\t\t\t\t</a>",
+          "target": [
+            ".primary-nav__item.primary-nav__item--has-children[role=\"menuitem\"]:nth-child(4) > a[href$=\"students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/faculty-research\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tFaculty &amp; Research\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"faculty-research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/community-collaboration\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tCommunity Collaboration\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"community-collaboration\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav id=\"primary-nav\" class=\"primary-nav\" aria-label=\"Primary Navigation\">",
+                  "target": [
+                    "#primary-nav"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/admissions\" class=\"menu-primary primary-nav__parent-link\">\n\t\t\t\t\t\tAdmissions\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "66.0pt (88px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead__wrapper\">\n        <div class=\"masthead__inner\">\n            <div class=\"masthead__content animate-item animated-in\">\n                <h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>\n            </div>\n        </div>\n    </div>",
+                  "target": [
+                    ".masthead__wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "66.0pt (88px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead__wrapper\">\n        <div class=\"masthead__inner\">\n            <div class=\"masthead__content animate-item animated-in\">\n                <h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>\n            </div>\n        </div>\n    </div>",
+                  "target": [
+                    ".masthead__wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Healthier</strong>",
+          "target": [
+            "h1 > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.9pt (39.8101px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero__inner\">",
+                  "target": [
+                    ".hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"hero__heading\">Dr. Erica Pan delivers keynote address at UCLA Fielding’s 2026 Research, Innovation &amp; Impact Day </h2>",
+          "target": [
+            ".hero__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero__inner\">",
+                  "target": [
+                    ".hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>California's highest-ranking state public health official gave the keynote address at the event celebrating the vital role of public health research and practice during difficult times.</p>",
+          "target": [
+            ".hero__content-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn--primary\">\n                                  <span class=\"text\">Read Full Article</span>\n                              </span>",
+                  "target": [
+                    ".hero__content-inner > .btn--primary.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".hero__content-inner > .btn--primary.btn > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ph.ucla.edu/news-events/events/2026-ucla-fielding-commencement\" class=\"btn btn--primary btn--with-icon\">",
+                  "target": [
+                    ".btn--with-icon"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".btn--with-icon > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"department-grid__heading\">Education to <strong>Effect Change</strong></h2>",
+          "target": [
+            ".department-grid__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Effect Change</strong>",
+          "target": [
+            ".department-grid__heading > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"department-grid__copy\">Explore UCLA Fielding School of Public of Health's five academic departments and learn which degree is right for you with the degree program comparison tool.</p>",
+          "target": [
+            ".department-grid__copy"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.65px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 data-equalizer-watch=\"\" style=\"height: 64px;\">Biostatistics</h3>",
+          "target": [
+            ".department-card__link[href$=\"biostatistics\"] > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Biostatistics helps researchers in public health and beyond with study conception and design, data collection and analysis, and drawing conclusions.</p>",
+          "target": [
+            ".department-card__link[href$=\"biostatistics\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Biostatistics</span>",
+          "target": [
+            ".department-card__link[href$=\"biostatistics\"] > .department-card__arrow > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.65px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 data-equalizer-watch=\"\" style=\"height: 64px;\">Community Health Sciences</h3>",
+          "target": [
+            ".department-card--red > .department-card__link > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Community health sciences experts work with communities to address the social, cultural, and environmental factors that influence health.</p>",
+          "target": [
+            ".department-card--red > .department-card__link > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Community Health Sciences</span>",
+          "target": [
+            ".department-card--red > .department-card__link > .department-card__arrow > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.65px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 data-equalizer-watch=\"\" style=\"height: 64px;\">Environmental Health Sciences</h3>",
+          "target": [
+            ".department-card--green > .department-card__link > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Environmental Health Sciences explores the health risks associated with exposures to stressors in the ambient, built, and occupational environments.</p>",
+          "target": [
+            ".department-card--green > .department-card__link > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Environment Health Sciences</span>",
+          "target": [
+            ".department-card--green > .department-card__link > .department-card__arrow > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.65px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 data-equalizer-watch=\"\" style=\"height: 64px;\">Epidemiology</h3>",
+          "target": [
+            "a[href$=\"epidemiology\"] > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Epidemiology studies how diseases and other health-related factors are caused, transmitted, and prevented in populations.</p>",
+          "target": [
+            "a[href$=\"epidemiology\"] > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Epidemiology</span>",
+          "target": [
+            "a[href$=\"epidemiology\"] > .department-card__arrow > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.65px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 data-equalizer-watch=\"\" style=\"height: 64px;\">Health Policy and Management</h3>",
+          "target": [
+            ".department-card--yellow > .department-card__link > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Health Policy and Management enhances healthcare quality, access, cost and financing through policies and practices that improve health institutions.</p>",
+          "target": [
+            ".department-card--yellow > .department-card__link > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Health Policy and Management</span>",
+          "target": [
+            ".department-card--yellow > .department-card__link > .department-card__arrow > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.9pt (33.18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<nav class=\"department-grid animate-section animated-in\" data-equalizer=\"3uibsu-equalizer\" data-equalize-on=\"medium\" id=\"department-grid\" data-resize=\"3uibsu-equalizer\" data-mutate=\"3uibsu-equalizer\" data-events=\"mutate\">",
+                  "target": [
+                    "#department-grid"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"link-card__arrow\">",
+          "target": [
+            ".link-card__arrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
+                  "target": [
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"home-news__heading\">FSPH <strong>News</strong></h2>",
+          "target": [
+            ".home-news__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "51.6pt (68.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>News</strong>",
+          "target": [
+            ".home-news__heading > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
+                  "target": [
+                    "a[href$=\"news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">FSPH News</span>",
+          "target": [
+            "a[href$=\"news\"] > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.7pt (27.6501px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"card__heading\">Associated Press | \"Landlords want to be paid for pandemic losses and hope to reach a deal with the Trump administration” </div>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .card__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/alumni\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tAlumni\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"alumni\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/faculty-staff-directory\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tFaculty &amp; Staff Directory\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__link.menu-primary[href$=\"faculty-staff-directory\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/administrative-offices/office-human-resources/employment-opportunities\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tEmployment Opportunities\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__item[role=\"menuitem\"]:nth-child(3) > .footer-nav__link.menu-primary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/administrative-offices/office-marketing-communications/media-resources\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tMedia Resources\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__item[role=\"menuitem\"]:nth-child(4) > .footer-nav__link.menu-primary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/subscriptions\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tSubscriptions\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"subscriptions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"line-1\">650 Charles E. Young Dr. South</span>",
+          "target": [
+            ".line-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"line-2\">16-035 Center for Health Sciences</span>",
+          "target": [
+            ".line-2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"locality\">Los Angeles</span>",
+          "target": [
+            ".locality"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"region\" title=\"California\">CA</span>",
+          "target": [
+            ".region"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"postal-code\">90095-1772</span>",
+          "target": [
+            ".postal-code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tel:310.825.6381\" class=\"tel\">310.825.6381</a>",
+          "target": [
+            ".tel"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "aside[aria-label]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<aside data-wg-notranslate=\"true\" aria-label=\"Language selected: English\" class=\"weglot_switcher country-selector default closed wg-drop\">",
+                  "target": [
+                    "aside"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: aside[aria-label]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"secondary-nav__list clearfix\" role=\"menubar\">",
+          "target": [
+            ".secondary-nav__list"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: aside[aria-label]"
+        }
+      ]
+    },
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<button type=\"submit\" id=\"site-search-submit\" class=\"site-search__submit\" disabled=\"disabled\">",
+          "target": [
+            "#site-search-submit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(1) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#fefefe",
+                "contrastRatio": 4.96,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card card--news card--inline card--with-img\">",
+                  "target": [
+                    ".card.card--news.card--inline:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".card.card--news.card--inline:nth-child(2) > .card-link-wrapper[target=\"_blank\"] > .card__inner > .card__content > .menu-secondary > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.96 (foreground color: #2774ae, background color: #fefefe, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn--primary\">\n                                  <span class=\"text\">Read Full Article</span>\n                              </span>",
+                  "target": [
+                    ".hero__content-inner > .btn--primary.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".hero__content-inner > .btn--primary.btn > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ph.ucla.edu/news-events/events/2026-ucla-fielding-commencement\" class=\"btn btn--primary btn--with-icon\">",
+                  "target": [
+                    ".btn--with-icon"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".btn--with-icon > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
+                  "target": [
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
+                  "target": [
+                    "a[href$=\"news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">FSPH News</span>",
+          "target": [
+            "a[href$=\"news\"] > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.9pt (39.81px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead__wrapper\">\n        <div class=\"masthead__inner\">\n            <div class=\"masthead__content animate-item animated-in\">\n                <h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>\n            </div>\n        </div>\n    </div>",
+                  "target": [
+                    ".masthead__wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.9pt (39.81px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead__wrapper\">\n        <div class=\"masthead__inner\">\n            <div class=\"masthead__content animate-item animated-in\">\n                <h1 class=\"masthead__heading\">Building a <strong>Healthier</strong> Future Together</h1>\n            </div>\n        </div>\n    </div>",
+                  "target": [
+                    ".masthead__wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Healthier</strong>",
+          "target": [
+            "h1 > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.9pt (33.18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero__inner\">",
+                  "target": [
+                    ".hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"hero__heading\">Dr. Erica Pan delivers keynote address at UCLA Fielding’s 2026 Research, Innovation &amp; Impact Day </h2>",
+          "target": [
+            ".hero__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero__inner\">",
+                  "target": [
+                    ".hero__inner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>California's highest-ranking state public health official gave the keynote address at the event celebrating the vital role of public health research and practice during difficult times.</p>",
+          "target": [
+            ".hero__content-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn--primary\">\n                                  <span class=\"text\">Read Full Article</span>\n                              </span>",
+                  "target": [
+                    ".hero__content-inner > .btn--primary.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Read Full Article</span>",
+          "target": [
+            ".hero__content-inner > .btn--primary.btn > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://ph.ucla.edu/news-events/events/2026-ucla-fielding-commencement\" class=\"btn btn--primary btn--with-icon\">",
+                  "target": [
+                    ".btn--with-icon"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".btn--with-icon > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"featured-content-card__button\">\n                        <span class=\"text\">Learn More</span>\n                    </span>",
+                  "target": [
+                    ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">Learn More</span>",
+          "target": [
+            ".featured-content-card__link[href$=\"why-ucla-fielding\"] > .featured-content-card__content > .featured-content-card__button > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.9pt (39.81px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"home-news__heading\">FSPH <strong>News</strong></h2>",
+          "target": [
+            ".home-news__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.9pt (39.81px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"home-news__bg\" role=\"presentation\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".home-news__bg"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>News</strong>",
+          "target": [
+            ".home-news__heading > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/news-events/news\" target=\"_blank\" title=\"(This link opens a new tab)\" rel=\"noopener noreferrer\" class=\"btn btn--primary\">\n                            <span class=\"text\">FSPH News</span>\n                        </a>",
+                  "target": [
+                    "a[href$=\"news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"text\">FSPH News</span>",
+          "target": [
+            "a[href$=\"news\"] > .text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/alumni\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tAlumni\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"alumni\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/faculty-staff-directory\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tFaculty &amp; Staff Directory\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__link.menu-primary[href$=\"faculty-staff-directory\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/administrative-offices/office-human-resources/employment-opportunities\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tEmployment Opportunities\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__item[role=\"menuitem\"]:nth-child(3) > .footer-nav__link.menu-primary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about/administrative-offices/office-marketing-communications/media-resources\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tMedia Resources\n\t\t\t\t\t</a>",
+          "target": [
+            ".footer-nav__item[role=\"menuitem\"]:nth-child(4) > .footer-nav__link.menu-primary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/subscriptions\" class=\"menu-primary footer-nav__link\">\n\t\t\t\t\t\tSubscriptions\n\t\t\t\t\t</a>",
+          "target": [
+            "a[href$=\"subscriptions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"line-1\">650 Charles E. Young Dr. South</span>",
+          "target": [
+            ".line-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"line-2\">16-035 Center for Health Sciences</span>",
+          "target": [
+            ".line-2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"locality\">Los Angeles</span>",
+          "target": [
+            ".locality"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"region\" title=\"California\">CA</span>",
+          "target": [
+            ".region"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"postal-code\">90095-1772</span>",
+          "target": [
+            ".postal-code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__row\">",
+                  "target": [
+                    ".global-footer__row"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tel:310.825.6381\" class=\"tel\">310.825.6381</a>",
+          "target": [
+            ".tel"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

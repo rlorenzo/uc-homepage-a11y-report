@@ -1,0 +1,814 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "ucsb-theaterdance",
+  "name": "UC Santa Barbara Department of Theater and Dance",
+  "campus": "ucsb",
+  "type": "school",
+  "category": "humanities-arts",
+  "url": "https://theaterdance.ucsb.edu",
+  "element_count": 385,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#febc11",
+                "contrastRatio": 5.46,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-febc11\">\n                            <a href=\"/events/purchase-tickets-here\">\n                            Purchase Tickets Online\n                            </a>\n                          </div>",
+                  "target": [
+                    ".background-color-febc11"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/purchase-tickets-here\">\n                            Purchase Tickets Online\n                            </a>",
+          "target": [
+            ".background-color-febc11 > a[href$=\"purchase-tickets-here\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2371\" about=\"/news/kinetic-lab\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Woven%20Memoirs_Umbra_Spring%20Dance%20Concert%202026_0062.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2371\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Kinetic Lab</span>",
+          "target": [
+            "article[data-history-node-id=\"2371\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2372\" about=\"/news/forest-fuel\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_2658%20-%20Claire%20Ruberg.jpeg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2372\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Forest Fuel</span>",
+          "target": [
+            "article[data-history-node-id=\"2372\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2373\" about=\"/news/bfa-acting-auditions\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/BFA%20Audition%20Flyer%202026.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2373\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">BFA in Acting Auditions</span>",
+          "target": [
+            "article[data-history-node-id=\"2373\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2370\" about=\"/news/particle-collider\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Particle%20Collider%202026%20poster.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2370\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Particle Collider</span>",
+          "target": [
+            "article[data-history-node-id=\"2370\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "37.5pt (50px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-eef0f2 has-background background-image height-480 is-retina top-padding-none bottom-padding-4 blade-background-image-color-overlay\">\n      </div>",
+                  "target": [
+                    ".blade-background-image-color-overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"paragraph paragraph-...\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".blade-background-image-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\">Welcome!</span>",
+          "target": [
+            ".serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-eef0f2 has-background background-image height-480 is-retina top-padding-none bottom-padding-4 blade-background-image-color-overlay\">\n      </div>",
+                  "target": [
+                    ".blade-background-image-color-overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"paragraph paragraph-...\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".blade-background-image-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"lead\">",
+          "target": [
+            ".lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2371\" about=\"/news/kinetic-lab\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Woven%20Memoirs_Umbra_Spring%20Dance%20Concert%202026_0062.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2371\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Kinetic Lab</span>",
+          "target": [
+            "article[data-history-node-id=\"2371\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2372\" about=\"/news/forest-fuel\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_2658%20-%20Claire%20Ruberg.jpeg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2372\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Forest Fuel</span>",
+          "target": [
+            "article[data-history-node-id=\"2372\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2373\" about=\"/news/bfa-acting-auditions\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/BFA%20Audition%20Flyer%202026.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2373\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">BFA in Acting Auditions</span>",
+          "target": [
+            "article[data-history-node-id=\"2373\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2370\" about=\"/news/particle-collider\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Particle%20Collider%202026%20poster.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2370\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Particle Collider</span>",
+          "target": [
+            "article[data-history-node-id=\"2370\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2371\" about=\"/news/kinetic-lab\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Woven%20Memoirs_Umbra_Spring%20Dance%20Concert%202026_0062.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2371\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Kinetic Lab</span>",
+          "target": [
+            "article[data-history-node-id=\"2371\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2372\" about=\"/news/forest-fuel\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_2658%20-%20Claire%20Ruberg.jpeg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2372\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Forest Fuel</span>",
+          "target": [
+            "article[data-history-node-id=\"2372\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2373\" about=\"/news/bfa-acting-auditions\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/BFA%20Audition%20Flyer%202026.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2373\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">BFA in Acting Auditions</span>",
+          "target": [
+            "article[data-history-node-id=\"2373\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2370\" about=\"/news/particle-collider\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Particle%20Collider%202026%20poster.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2370\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Particle Collider</span>",
+          "target": [
+            "article[data-history-node-id=\"2370\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "28.5pt (38px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-eef0f2 has-background background-image height-480 is-retina top-padding-none bottom-padding-4 blade-background-image-color-overlay\">\n      </div>",
+                  "target": [
+                    ".blade-background-image-color-overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"paragraph paragraph-...\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".blade-background-image-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\">Welcome!</span>",
+          "target": [
+            ".serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"lead\">",
+          "target": [
+            ".lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2371\" about=\"/news/kinetic-lab\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Woven%20Memoirs_Umbra_Spring%20Dance%20Concert%202026_0062.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2371\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Kinetic Lab</span>",
+          "target": [
+            "article[data-history-node-id=\"2371\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2372\" about=\"/news/forest-fuel\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_2658%20-%20Claire%20Ruberg.jpeg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2372\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Forest Fuel</span>",
+          "target": [
+            "article[data-history-node-id=\"2372\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2373\" about=\"/news/bfa-acting-auditions\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/BFA%20Audition%20Flyer%202026.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2373\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">BFA in Acting Auditions</span>",
+          "target": [
+            "article[data-history-node-id=\"2373\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2370\" about=\"/news/particle-collider\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/Particle%20Collider%202026%20poster.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2370\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Particle Collider</span>",
+          "target": [
+            "article[data-history-node-id=\"2370\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ]
+}

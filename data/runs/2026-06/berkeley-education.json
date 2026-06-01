@@ -1,0 +1,653 @@
+{
+  "month": "2026-06",
+  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "axe_version": "4.11.4",
+  "site": "berkeley-education",
+  "name": "Berkeley School of Education",
+  "campus": "berkeley",
+  "type": "school",
+  "category": "education",
+  "url": "https://gse.berkeley.edu",
+  "element_count": 561,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#3b7ea1",
+                "contrastRatio": 4.48,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer-slogan-wrapper\" class=\"footer-slogan-color-founders-rock\">\n    <div id=\"footer-slogan\">\n      Join us in igniting ideas    </div>\n  </div>",
+                  "target": [
+                    "#footer-slogan-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.48 (foreground color: #ffffff, background color: #3b7ea1, font size: 22.5pt (30px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div id=\"footer-slogan\">\n      Join us in igniting ideas    </div>",
+          "target": [
+            "#footer-slogan"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #ffffff, background color: #3b7ea1, font size: 22.5pt (30px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#829db5",
+                "bgColor": "#003262",
+                "contrastRatio": 4.55,
+                "fontSize": "9.8pt (13.05px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer id=\"footer\" class=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #829db5, background color: #003262, font size: 9.8pt (13.05px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/home\" class=\"active-trail active\" aria-current=\"page\">Home</a>",
+          "target": [
+            "a[aria-current=\"page\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #829db5, background color: #003262, font size: 9.8pt (13.05px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 31,
+                "height": 23.5
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 23.6,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input placeholder=\"Search this site\" class=\"form-control form-control form-text\" type=\"text\" id=\"edit-keys--2\" name=\"keys\" value=\"\" size=\"20\" maxlength=\"255\">",
+                  "target": [
+                    "#edit-keys--2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"submit\" id=\"edit-submit--2\" name=\"op\" value=\"Submit Search\" class=\"form-submit btn btn-default btn-primary\"><span class=\"fa fa-search\"></span> <span class=\"button-text\">Submit Search</span></button>",
+          "target": [
+            "#edit-submit--2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (31px by 23.5px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-founders-rock\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-founders-rock"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Admissions</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-founders-rock > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-soybean\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-soybean"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Stay Connected with BSE</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-soybean > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-golden-gate\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-golden-gate"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Give to the BSE</h2>",
+          "target": [
+            ".openberkeley-widgets-image-link[href$=\"give\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Submit an event for BSE's calendar</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-lap-lane > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>CalNet ID credentials required</p>",
+          "target": [
+            ".openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "about us",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "bse.berkeley.edu",
+                  "port": "",
+                  "pathname": "/about-us/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://gse.berkeley.edu/about-us\" title=\"\" rel=\"noreferrer\" data-extlink=\"\">About Us</a>",
+                  "target": [
+                    ".menu-link-about-us > a[rel=\"noreferrer\"][title=\"\"][data-extlink=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/about-us\" title=\"\" class=\"expanded menu-fields-menu-link dropdown-toggle\" data-toggle=\"dropdown\" data-target=\"#\" aria-expanded=\"false\">About Us <span class=\"fa fa-caret-down\"></span></a>",
+          "target": [
+            ".dropdown-toggle[href$=\"about-us\"][data-toggle=\"dropdown\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#3b7ea1",
+                "contrastRatio": 4.48,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"footer-slogan-wrapper\" class=\"footer-slogan-color-founders-rock\">\n    <div id=\"footer-slogan\">\n      Join us in igniting ideas    </div>\n  </div>",
+                  "target": [
+                    "#footer-slogan-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.48 (foreground color: #ffffff, background color: #3b7ea1, font size: 22.5pt (30px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div id=\"footer-slogan\">\n      Join us in igniting ideas    </div>",
+          "target": [
+            "#footer-slogan"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #ffffff, background color: #3b7ea1, font size: 22.5pt (30px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#829db5",
+                "bgColor": "#003262",
+                "contrastRatio": 4.55,
+                "fontSize": "9.8pt (13.05px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer id=\"footer\" class=\"footer\">",
+                  "target": [
+                    "#footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.55 (foreground color: #829db5, background color: #003262, font size: 9.8pt (13.05px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/home\" class=\"active-trail active\" aria-current=\"page\">Home</a>",
+          "target": [
+            "a[aria-current=\"page\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.55 (foreground color: #829db5, background color: #003262, font size: 9.8pt (13.05px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-founders-rock\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-founders-rock"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Admissions</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-founders-rock > .openberkeley-widgets-image-link > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-soybean\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-soybean"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Stay Connected with BSE</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-soybean > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-golden-gate\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-golden-gate"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Give to the BSE</h2>",
+          "target": [
+            ".openberkeley-widgets-image-link[href$=\"give\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Submit an event for BSE's calendar</h2>",
+          "target": [
+            ".openberkeley-widgets-color-scheme-web-lap-lane > .openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"openberkeley-widgets-promo fieldable-panels-pane openberkeley-widgets-color-scheme-web-lap-lane\">",
+                  "target": [
+                    ".openberkeley-widgets-color-scheme-web-lap-lane"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>CalNet ID credentials required</p>",
+          "target": [
+            ".openberkeley-widgets-image-link[data-extlink=\"\"] > .openberkeley-widgets-label > .openberkeley-widgets-label-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    }
+  ]
+}
