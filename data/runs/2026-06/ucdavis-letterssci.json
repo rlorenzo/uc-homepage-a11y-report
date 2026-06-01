@@ -1,6 +1,6 @@
 {
   "month": "2026-06",
-  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "scanned_at": "2026-06-01T16:05:14.336Z",
   "axe_version": "4.11.4",
   "site": "ucdavis-letterssci",
   "name": "UC Davis College of Letters and Science",
@@ -8,7 +8,7 @@
   "type": "school",
   "category": "humanities-arts",
   "url": "https://lettersandscience.ucdavis.edu",
-  "element_count": 638,
+  "element_count": 633,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -615,61 +615,6 @@
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         }
       ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#888888",
-                "bgColor": "#ffffff",
-                "contrastRatio": 3.54,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"Background__Base-sc-fa0f38ac-1 ixnVLT es-background-base\" style=\"display: block; background-color: rgb(255, 255, 255);\"></div>",
-                  "target": [
-                    ".Background__Base-sc-fa0f38ac-1"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 3.54 (foreground color: #888888, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"Error__Text-sc-33c4197-1 ibDaSU eapp-events-calendar-error-text\">Sorry, no events right now. But really cool stuff is coming up soon.</div>",
-          "target": [
-            ".Error__Text-sc-33c4197-1"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #888888, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
-        }
-      ]
     }
   ],
   "mobile_incomplete": [
@@ -915,6 +860,31 @@
             ".tile-link[href=\"/centers-museums-institutes\"][data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"Error__Text-sc-33c4197-1 ibDaSU eapp-events-calendar-error-text\">Sorry, no events right now. But really cool stuff is coming up soon.</div>",
+          "target": [
+            ".Error__Text-sc-33c4197-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [

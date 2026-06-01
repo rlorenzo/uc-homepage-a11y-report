@@ -1,6 +1,6 @@
 {
   "month": "2026-06",
-  "scanned_at": "2026-06-01T15:37:02.259Z",
+  "scanned_at": "2026-06-01T16:05:14.336Z",
   "axe_version": "4.11.4",
   "site": "ucmerced-housing",
   "name": "UC Merced Housing & Residence Education",
@@ -8,7 +8,7 @@
   "type": "housing",
   "category": "housing",
   "url": "https://housing.ucmerced.edu",
-  "element_count": 698,
+  "element_count": 717,
   "violations": [
     {
       "id": "color-contrast",
@@ -29,6 +29,74 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c1c1c2",
+                "bgColor": "#f4f4f4",
+                "contrastRatio": 1.63,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-title\">        <span class=\"field-content\">Residential Meal Plans</span>  </div>",
+                  "target": [
+                    "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-title.views-field"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.63 (foreground color: #c1c1c2, background color: #f4f4f4, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content\">Residential Meal Plans</span>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-title.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #c1c1c2, background color: #f4f4f4, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c1c1c2",
+                "bgColor": "#f4f4f4",
+                "contrastRatio": 1.63,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-field-panoramic-slideshow-text\">        <div class=\"field-content\">All-you-care-to-eat meal plans ensure residents always have access to nutritious and delicious options at UC Merced.\n</div>  </div>",
+                  "target": [
+                    "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-field-panoramic-slideshow-text.views-field"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.63 (foreground color: #c1c1c2, background color: #f4f4f4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content\">All-you-care-to-eat meal plans ensure residents always have access to nutritious and delicious options at UC Merced.\n</div>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-field-panoramic-slideshow-text.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #c1c1c2, background color: #f4f4f4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
         {
           "any": [
             {
@@ -540,9 +608,155 @@
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #808080, background color: #f7f7f7, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
         }
       ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://housing.ucmerced.edu/off-campus\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
     }
   ],
   "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content\">Off-Campus Housing</span>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-title.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content\">Learn more about off-campus housing options in the Merced area. Still have questions? Please email och@ucmerced.edu.\n</div>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row.views-row-0 > .views-field-field-panoramic-slideshow-text.views-field > .field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
     {
       "id": "identical-links-same-purpose",
       "impact": "minor",
