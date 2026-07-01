@@ -37,6 +37,8 @@ jobs:
 
       - name: Scan UC Merced only (no commit, no deploy)
         run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" node scan/run.mjs --campus=ucmerced
+        env:
+          SCAN_UA_TOKEN: ${{ secrets.SCAN_UA_TOKEN }}
 
       - name: Summarize UC Merced results
         if: always()
