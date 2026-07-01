@@ -69,6 +69,10 @@ jobs:
       # never trip the fallback stay fully headless and ignore the display.
       - name: Run accessibility scan
         run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" node scan/run.mjs
+        env:
+          # Token UC Merced whitelists in Akamai; kept out of the repo. Unset in
+          # forks / PRs without the secret, which simply falls back to headed.
+          SCAN_UA_TOKEN: ${{ secrets.SCAN_UA_TOKEN }}
 
       - name: Commit results
         run: |

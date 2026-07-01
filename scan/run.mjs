@@ -171,6 +171,27 @@ async function resolveUserAgent() {
 const USER_AGENT = await resolveUserAgent();
 console.log(`Using user agent: ${USER_AGENT}\n`);
 
+// UC Merced sanctioned this scan by allowlisting a bot User-Agent in their bot
+// manager (they match the "UC-A11Y-Report-Bot/1.0" token) — the scan runs on
+// GitHub Actions and has no stable IP to allowlist. We send that exact UA for
+// identified campuses' *headless* (sanctioned) requests. The value comes from
+// the SCAN_UA_TOKEN env var (a GitHub Actions secret) so it stays out of this
+// public repo and is overridable, though the UA itself is a public identifier.
+// When unset (local dev / forks) no override is applied and Merced falls through
+// to the headed fallback. The headed fallback keeps the real Chrome UA — it
+// clears bot detection on browser fingerprint, and a non-browser bot UA there
+// would only work against it.
+const SANCTIONED_UA = process.env.SCAN_UA_TOKEN || "";
+const IDENTIFIED_CAMPUSES = new Set(["ucmerced"]);
+
+// The UA to send for a given site/attempt: Merced's sanctioned bot UA for its
+// headless requests (when configured), the real Chrome UA everywhere else.
+function userAgentFor(site, mode) {
+  if (mode === "headed") return USER_AGENT;
+  if (SANCTIONED_UA && IDENTIFIED_CAMPUSES.has(site.campus)) return SANCTIONED_UA;
+  return USER_AGENT;
+}
+
 // The axe tag set shared by both mobile and desktop passes. Every WCAG
 // 2.0/2.1/2.2 tag runs; results bucket below into "required" (WCAG 2.0 and 2.1
 // Level A/AA — the ADA Title II / Section 508 baseline) and "reach".
@@ -309,7 +330,7 @@ async function scanWith(site, browser, mode) {
     // to 1440×900 then triggers the real-world transition bug.
     context = await browser.newContext({
       ignoreHTTPSErrors: Boolean(proxyUrl),
-      userAgent: USER_AGENT,
+      userAgent: userAgentFor(site, mode),
       viewport: { width: 375, height: 800 },
     });
     const page = await context.newPage();
