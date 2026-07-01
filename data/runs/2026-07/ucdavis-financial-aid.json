@@ -1,0 +1,596 @@
+{
+  "month": "2026-07",
+  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "axe_version": "4.11.4",
+  "site": "ucdavis-financial-aid",
+  "name": "UC Davis Financial Aid and Scholarships",
+  "campus": "ucdavis",
+  "type": "financial-aid",
+  "category": "financial-aid",
+  "url": "https://financialaid.ucdavis.edu",
+  "element_count": 510,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.2pt (16.2031px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button id=\"block-sitefarm-one-quicklinks-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\" aria-label=\"Toggle Quick Links Menu\">\n    Quick Links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+                  "target": [
+                    "#block-sitefarm-one-quicklinks-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button id=\"block-sitefarm-one-quicklinks-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\" aria-label=\"Toggle Quick Links Menu\">\n    Quick Links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+          "target": [
+            "#block-sitefarm-one-quicklinks-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>MyAwards</h2>",
+          "target": [
+            ".block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel--weighted-underline block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".panel--weighted-underline"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"panel__title--weighted\">\n                  Our mission\n    </span>",
+          "target": [
+            ".panel__title--weighted"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": "serious",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.2.1"
+      ],
+      "description": "Ensure <iframe> and <frame> elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title-unique?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "uc davis - about myawards",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is not unique"
+            }
+          ],
+          "impact": "serious",
+          "html": "<iframe src=\"https://financialaid.ucdavis.edu/media/oembed?url=https%3A//youtu.be/C5VCGxLAMGM&amp;max_width=0&amp;max_height=0&amp;hash=qFU0hP9JCckzroRIB7HsEeNIHLwnZRswpelE7qS3ESE\" width=\"200\" height=\"113\" class=\"media-oembed-content\" loading=\"eager\" title=\"UC Davis - About MyAwards\"></iframe>",
+          "target": [
+            ".media-oembed-content"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "uc davis - about myawards",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is not unique"
+            }
+          ],
+          "impact": "serious",
+          "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube....\" frameborder=\"0\" allow=\"accelerometer; autop...\" referrerpolicy=\"strict-origin-when-c...\" allowfullscreen=\"\" title=\"UC Davis - About MyA...\">",
+          "target": [
+            ".media-oembed-content",
+            "iframe[width=\"200\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#e6eaee",
+                "contrastRatio": 5.25,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"focus-box__body category-brand__background--lighten\">",
+                  "target": [
+                    ".l-first > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten"
+                  ]
+                },
+                {
+                  "html": "<div class=\"focus-box block block-layout-builder block-inline-blocksf-focus-box panel\">",
+                  "target": [
+                    ".l-first > .block-inline-blocksf-focus-box.focus-box.panel"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Review the cost of attendance</strong>",
+          "target": [
+            "a[href$=\"cost\"] > span > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#e6eaee",
+                "contrastRatio": 5.25,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"focus-box__body category-brand__background--lighten\">",
+                  "target": [
+                    ".l-second > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten"
+                  ]
+                },
+                {
+                  "html": "<div class=\"focus-box block block-layout-builder block-inline-blocksf-focus-box panel\">",
+                  "target": [
+                    ".l-second > .block-inline-blocksf-focus-box.focus-box.panel"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Compare costs</strong>",
+          "target": [
+            ".l-second > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten > .clearfix.text-formatted.field--name-body > p > a > span > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#e6eaee",
+                "contrastRatio": 5.25,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"focus-box__body category-brand__background--lighten\">",
+                  "target": [
+                    ".l-third > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten"
+                  ]
+                },
+                {
+                  "html": "<div class=\"focus-box block block-layout-builder block-inline-blocksf-focus-box panel\">",
+                  "target": [
+                    ".l-third > .block-inline-blocksf-focus-box.focus-box.panel"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Explore samples</strong>",
+          "target": [
+            ".l-third > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten > .clearfix.text-formatted.field--name-body > p > a > span > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#e6eaee",
+                "contrastRatio": 5.25,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"focus-box__body category-brand__background--lighten\">",
+                  "target": [
+                    ".l-fourth > .block-inline-blocksf-focus-box.focus-box.panel > .focus-box[data-component-id=\"sitefarm_one:focus-box\"] > .focus-box__body.category-brand__background--lighten"
+                  ]
+                },
+                {
+                  "html": "<div class=\"focus-box block block-layout-builder block-inline-blocksf-focus-box panel\">",
+                  "target": [
+                    ".l-fourth > .block-inline-blocksf-focus-box.focus-box.panel"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Explore scholarships</strong>",
+          "target": [
+            "a[href$=\"scholarships\"] > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.25 (foreground color: #13639e, background color: #e6eaee, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>MyAwards</h2>",
+          "target": [
+            ".block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.5pt (36.7px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-factoid panel\">",
+                  "target": [
+                    ".l-first > .block-inline-blocksf-factoid.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"factoid__big-text\">How aid works</h2>",
+          "target": [
+            ".factoid__link[href$=\"how-aid-works\"] > .factoid__bracket-wrapper > .factoid__body > .factoid__big-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.5pt (36.7px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-factoid panel\">",
+                  "target": [
+                    ".l-fourth > .block-inline-blocksf-factoid.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"factoid__big-text\">Apply for aid</h2>",
+          "target": [
+            ".factoid__link[href$=\"apply\"] > .factoid__bracket-wrapper > .factoid__body > .factoid__big-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"panel--weighted-underline block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".panel--weighted-underline"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"panel__title--weighted\">\n                  Our mission\n    </span>",
+          "target": [
+            ".panel__title--weighted"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": "serious",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.2.1"
+      ],
+      "description": "Ensure <iframe> and <frame> elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title-unique?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "uc davis - about myawards",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is not unique"
+            }
+          ],
+          "impact": "serious",
+          "html": "<iframe src=\"https://financialaid.ucdavis.edu/media/oembed?url=https%3A//youtu.be/C5VCGxLAMGM&amp;max_width=0&amp;max_height=0&amp;hash=qFU0hP9JCckzroRIB7HsEeNIHLwnZRswpelE7qS3ESE\" width=\"200\" height=\"113\" class=\"media-oembed-content\" loading=\"eager\" title=\"UC Davis - About MyAwards\"></iframe>",
+          "target": [
+            ".media-oembed-content"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "uc davis - about myawards",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is not unique"
+            }
+          ],
+          "impact": "serious",
+          "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube....\" frameborder=\"0\" allow=\"accelerometer; autop...\" referrerpolicy=\"strict-origin-when-c...\" allowfullscreen=\"\" title=\"UC Davis - About MyA...\">",
+          "target": [
+            ".media-oembed-content",
+            "iframe[width=\"200\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
+        }
+      ]
+    }
+  ]
+}

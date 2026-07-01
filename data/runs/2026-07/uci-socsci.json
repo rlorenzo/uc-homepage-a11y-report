@@ -1,0 +1,1833 @@
+{
+  "month": "2026-07",
+  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "axe_version": "4.11.4",
+  "site": "uci-socsci",
+  "name": "UCI School of Social Sciences",
+  "campus": "uci",
+  "type": "school",
+  "category": "social-sciences",
+  "url": "https://www.socsci.uci.edu",
+  "element_count": 1332,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"departments-heading\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"departments-heading\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<section role=\"region\" aria-labelledby=\"departments-heading\" aria-label=\"Top-ranked departments\">",
+          "target": [
+            "section[aria-labelledby=\"departments-heading\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"departments-heading\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45.05px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<video id=\"mainvideo\" class=\"hero-vid\" autoplay=\"true\" muted=\"true\" playsinline=\"true\" loop=\"true\" controls=\"true\" poster=\"/_resources/images/poster.jpg\" aria-describedby=\"video-description\" width=\"100%\">",
+                  "target": [
+                    "#mainvideo"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 id=\"hero-heading\">\n                        \t\t\t\t\tIn the UC Irvine School of Social Sciences,\n                        \t\t\t\t</h1>",
+          "target": [
+            ".hero-text > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.3pt (29.75px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<video id=\"mainvideo\" class=\"hero-vid\" autoplay=\"true\" muted=\"true\" playsinline=\"true\" loop=\"true\" controls=\"true\" poster=\"/_resources/images/poster.jpg\" aria-describedby=\"video-description\" width=\"100%\">",
+                  "target": [
+                    "#mainvideo"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"hero-subheading\">\n                        \t\t\t\t\twe're on a bold mission to create positive change in societies, economies and\n                        for human well-being.\n                        \t\t\t\t</p>",
+          "target": [
+            ".hero-text > .hero-subheading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.3pt (29.75px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<video id=\"mainvideo\" class=\"hero-vid\" autoplay=\"true\" muted=\"true\" playsinline=\"true\" loop=\"true\" controls=\"true\" poster=\"/_resources/images/poster.jpg\" aria-describedby=\"video-description\" width=\"100%\">",
+                  "target": [
+                    "#mainvideo"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"hero-tagline\">\n                        \t\t\t\t\tJoin us in our boundaryless pursuit.\n                        \t\t\t\t</p>",
+          "target": [
+            ".hero-tagline"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">5,807</h2>",
+          "target": [
+            ".one-third:nth-child(2) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">enrolled students</p>",
+          "target": [
+            ".one-third:nth-child(2) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">24</h2>",
+          "target": [
+            ".one-third:nth-child(3) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">",
+          "target": [
+            ".one-third:nth-child(3) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 300; font-style: oblique;\">\n                                    \t\t\t\t\t\t\t\t\t\t(bachelor's, master's, and Ph.D.s)\n                                    \t\t\t\t\t\t\t\t\t</span>",
+          "target": [
+            ".one-third:nth-child(3) > .box > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">#9</h2>",
+          "target": [
+            ".one-third:nth-child(4) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">",
+          "target": [
+            ".one-third:nth-child(4) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 300; font-style: oblique;\">\n                                    \t\t\t\t\t\t\t\t\t\t(U.S. News &amp; World Report)\n                                    \t\t\t\t\t\t\t\t\t</span>",
+          "target": [
+            ".one-third:nth-child(4) > .box > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">$7.63M</h2>",
+          "target": [
+            ".one-third:nth-child(5) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\textramural research funding annually</p>",
+          "target": [
+            ".one-third:nth-child(5) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">25%</h2>",
+          "target": [
+            ".one-third:nth-child(6) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\tof all UCI bachelor's recipients</p>",
+          "target": [
+            ".one-third:nth-child(6) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "44.6pt (59.5px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">64,000+</h2>",
+          "target": [
+            ".one-third:nth-child(7) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\talumni</p>",
+          "target": [
+            ".one-third:nth-child(7) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27.008px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"whatsnext-heading\" style=\"color:#fff;\">What's next?</h2>",
+          "target": [
+            "#whatsnext-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".one > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".one > p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.8pt (18.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button color-alt huge circle\" href=\"/next.php\">Learn more</a>",
+          "target": [
+            "p:nth-child(6) > .huge.circle[href$=\"next.php\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45.05px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay2\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".color-overlay2"
+                  ]
+                },
+                {
+                  "html": "<section class=\"container-div3\" role=\"region\" aria-labelledby=\"hero-heading\">",
+                  "target": [
+                    ".container-div3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 id=\"hero-heading\">Research with reach</h1>",
+          "target": [
+            ".hero-text2 > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.3pt (29.75px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay2\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".color-overlay2"
+                  ]
+                },
+                {
+                  "html": "<section class=\"container-div3\" role=\"region\" aria-labelledby=\"hero-heading\">",
+                  "target": [
+                    ".container-div3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"hero-subheading\">With 15+ institutes and centers, our scholars collaborate across ideas, disciplinary\n                     boundaries and communities to create research that drives impact.</h2>",
+          "target": [
+            ".hero-text2 > .hero-subheading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "hero-heading",
+              "relatedNodes": [
+                {
+                  "html": "<h1 id=\"hero-heading\">Research with reach</h1>",
+                  "target": [
+                    ".hero-text2 > h1"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: hero-heading"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<h1 id=\"hero-heading\">\n                        \t\t\t\t\tIn the UC Irvine School of Social Sciences,\n                        \t\t\t\t</h1>",
+          "target": [
+            ".hero-text > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: hero-heading"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.socsci.uci.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": "next.php"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"button color-alt huge circle\" href=\"/next.php\">Learn more</a>",
+                  "target": [
+                    "p:nth-child(6) > .huge.circle[href$=\"next.php\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"button color-alt huge circle\" style=\"height: 44px; min-height: 44px;\" alt=\"Learn more about Undergraduate Studies\" href=\"https://www.undergrad.socsci.uci.edu/\" target=\"_blank\" rel=\"noopener\">Learn more</a>",
+                  "target": [
+                    ".one-half > p:nth-child(3) > .huge.circle[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a alt=\"Learn more about Graduate Studies\" style=\"height: 44px; min-height: 44px;\" href=\"https://www.gradstudies.socsci.uci.edu/\" target=\"_blank\" rel=\"noopener\" class=\"button color-alt huge circle\">Learn more</a>",
+                  "target": [
+                    ".one > p:nth-child(3) > .huge.circle[rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a style=\"min-width: 44px; min-height: 44px;\" href=\"/next.php\" class=\"button color-alt huge circle\" target=\"_blank\" rel=\"noopener noreferrer\" aria-describedby=\"newtab-notice\">\n                           \t\t\t\t\t\tLearn more\n                           \t\t\t\t\t</a>",
+          "target": [
+            "a[aria-describedby=\"newtab-notice\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    },
+    {
+      "id": "video-caption",
+      "impact": "critical",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ],
+      "description": "Ensure <video> elements have captions",
+      "help": "<video> elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "caption",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Check that captions are available for the element"
+            }
+          ],
+          "impact": "critical",
+          "html": "<video id=\"mainvideo\" class=\"hero-vid\" autoplay=\"true\" muted=\"true\" playsinline=\"true\" loop=\"true\" controls=\"true\" poster=\"/_resources/images/poster.jpg\" aria-describedby=\"video-description\" width=\"100%\">",
+          "target": [
+            "#mainvideo"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://www.socsci.uci.edu/\">\n            <img src=\"/_resources/images/socsci_logo.png\" id=\"socsci\" alt=\"School of Social Sciences Wordmark\">\n        </a>",
+          "target": [
+            ".logo-container:nth-child(3) > a[href$=\"socsci.uci.edu/\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"departments-heading\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"departments-heading\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<section role=\"region\" aria-labelledby=\"departments-heading\" aria-label=\"Top-ranked departments\">",
+          "target": [
+            "section[aria-labelledby=\"departments-heading\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"departments-heading\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".cookies > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay-vid\"></div>",
+                  "target": [
+                    ".color-overlay-vid"
+                  ]
+                },
+                {
+                  "html": "<div class=\"banner\">",
+                  "target": [
+                    ".banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 id=\"hero-heading\">\n                        \t\t\t\t\tIn the UC Irvine School of Social Sciences,\n                        \t\t\t\t</h1>",
+          "target": [
+            ".hero-text > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay-vid\"></div>",
+                  "target": [
+                    ".color-overlay-vid"
+                  ]
+                },
+                {
+                  "html": "<div class=\"banner\">",
+                  "target": [
+                    ".banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"hero-subheading\">\n                        \t\t\t\t\twe're on a bold mission to create positive change in societies, economies and\n                        for human well-being.\n                        \t\t\t\t</p>",
+          "target": [
+            ".hero-text > .hero-subheading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay-vid\"></div>",
+                  "target": [
+                    ".color-overlay-vid"
+                  ]
+                },
+                {
+                  "html": "<div class=\"banner\">",
+                  "target": [
+                    ".banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"hero-tagline\">\n                        \t\t\t\t\tJoin us in our boundaryless pursuit.\n                        \t\t\t\t</p>",
+          "target": [
+            ".hero-tagline"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27.008px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"at-a-glance-heading\">At a Glance</h2>",
+          "target": [
+            "#at-a-glance-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">5,807</h2>",
+          "target": [
+            ".one-third:nth-child(2) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">enrolled students</p>",
+          "target": [
+            ".one-third:nth-child(2) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">24</h2>",
+          "target": [
+            ".one-third:nth-child(3) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">",
+          "target": [
+            ".one-third:nth-child(3) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 300; font-style: oblique;\">\n                                    \t\t\t\t\t\t\t\t\t\t(bachelor's, master's, and Ph.D.s)\n                                    \t\t\t\t\t\t\t\t\t</span>",
+          "target": [
+            ".one-third:nth-child(3) > .box > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">#9</h2>",
+          "target": [
+            ".one-third:nth-child(4) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">",
+          "target": [
+            ".one-third:nth-child(4) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-weight: 300; font-style: oblique;\">\n                                    \t\t\t\t\t\t\t\t\t\t(U.S. News &amp; World Report)\n                                    \t\t\t\t\t\t\t\t\t</span>",
+          "target": [
+            ".one-third:nth-child(4) > .box > p > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">$7.63M</h2>",
+          "target": [
+            ".one-third:nth-child(5) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\textramural research funding annually</p>",
+          "target": [
+            ".one-third:nth-child(5) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">25%</h2>",
+          "target": [
+            ".one-third:nth-child(6) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\tof all UCI bachelor's recipients</p>",
+          "target": [
+            ".one-third:nth-child(6) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #fff;\">64,000+</h2>",
+          "target": [
+            ".one-third:nth-child(7) > .box > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"color:#fff; font-size: 1.25rem;\">\n                                 \t\t\t\t\t\t\t\t\talumni</p>",
+          "target": [
+            ".one-third:nth-child(7) > .box > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27.008px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"whatsnext-heading\" style=\"color:#fff;\">What's next?</h2>",
+          "target": [
+            "#whatsnext-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".one > p:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".one > p:nth-child(5)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.8pt (18.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button color-alt huge circle\" href=\"/next.php\">Learn more</a>",
+          "target": [
+            "p:nth-child(6) > .huge.circle[href$=\"next.php\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p style=\"padding: 10px 40px 10px 0px;\">",
+          "target": [
+            ".one > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.8pt (18.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a alt=\"Learn more about Graduate Studies\" style=\"height: 44px; min-height: 44px;\" href=\"https://www.gradstudies.socsci.uci.edu/\" target=\"_blank\" rel=\"noopener\" class=\"button color-alt huge circle\">Learn more</a>",
+          "target": [
+            ".one > p:nth-child(3) > .huge.circle[rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay2\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".color-overlay2"
+                  ]
+                },
+                {
+                  "html": "<section class=\"container-div3\" role=\"region\" aria-labelledby=\"hero-heading\">",
+                  "target": [
+                    ".container-div3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 id=\"hero-heading\">Research with reach</h1>",
+          "target": [
+            ".hero-text2 > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"color-overlay2\" aria-hidden=\"true\"></div>",
+                  "target": [
+                    ".color-overlay2"
+                  ]
+                },
+                {
+                  "html": "<section class=\"container-div3\" role=\"region\" aria-labelledby=\"hero-heading\">",
+                  "target": [
+                    ".container-div3"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"hero-subheading\">With 15+ institutes and centers, our scholars collaborate across ideas, disciplinary\n                     boundaries and communities to create research that drives impact.</h2>",
+          "target": [
+            ".hero-text2 > .hero-subheading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "hero-heading",
+              "relatedNodes": [
+                {
+                  "html": "<h1 id=\"hero-heading\">Research with reach</h1>",
+                  "target": [
+                    ".hero-text2 > h1"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: hero-heading"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<h1 id=\"hero-heading\">\n                        \t\t\t\t\tIn the UC Irvine School of Social Sciences,\n                        \t\t\t\t</h1>",
+          "target": [
+            ".hero-text > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: hero-heading"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.socsci.uci.edu",
+                  "port": "",
+                  "pathname": "/",
+                  "search": {},
+                  "hash": "",
+                  "filename": "next.php"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"button color-alt huge circle\" href=\"/next.php\">Learn more</a>",
+                  "target": [
+                    "p:nth-child(6) > .huge.circle[href$=\"next.php\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"button color-alt huge circle\" style=\"height: 44px; min-height: 44px;\" alt=\"Learn more about Undergraduate Studies\" href=\"https://www.undergrad.socsci.uci.edu/\" target=\"_blank\" rel=\"noopener\">Learn more</a>",
+                  "target": [
+                    ".one-half > p:nth-child(3) > .huge.circle[rel=\"noopener\"]"
+                  ]
+                },
+                {
+                  "html": "<a alt=\"Learn more about Graduate Studies\" style=\"height: 44px; min-height: 44px;\" href=\"https://www.gradstudies.socsci.uci.edu/\" target=\"_blank\" rel=\"noopener\" class=\"button color-alt huge circle\">Learn more</a>",
+                  "target": [
+                    ".one > p:nth-child(3) > .huge.circle[rel=\"noopener\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a style=\"min-width: 44px; min-height: 44px;\" href=\"/next.php\" class=\"button color-alt huge circle\" target=\"_blank\" rel=\"noopener noreferrer\" aria-describedby=\"newtab-notice\">\n                           \t\t\t\t\t\tLearn more\n                           \t\t\t\t\t</a>",
+          "target": [
+            "a[aria-describedby=\"newtab-notice\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}
