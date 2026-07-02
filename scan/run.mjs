@@ -122,6 +122,14 @@ function getHeadedBrowser() {
       headless: false,
       channel: HEADED_CHANNEL,
       args: ["--disable-blink-features=AutomationControlled"],
+      // The headed retry must reach the network the same way the fleet does,
+      // so it inherits the fleet's proxy when one is configured.
+      ...(launchOptions.proxy ? { proxy: launchOptions.proxy } : {}),
+    });
+    // A failed launch must not stick: clear the slot so a later blocked site
+    // attempts a fresh launch instead of inheriting the cached rejection.
+    headedBrowserPromise.catch(() => {
+      headedBrowserPromise = null;
     });
   }
   return headedBrowserPromise;
@@ -427,6 +435,7 @@ async function scanWith(site, browser, mode) {
       category: site.category,
       url: site.url,
       status: "ok",
+      render_mode: mode,
       element_count: elementCount,
       // Headline "violations_*" fields reflect REQUIRED issues only —
       // this is the legal baseline the report centers. Old consumers
@@ -458,8 +467,9 @@ async function scanWith(site, browser, mode) {
 
 // Build (and archive) the error record for a site whose scan failed after all
 // retries. Mirrors the success summary shape with zeroed counters so the report
-// and updateHistory consume ok/error rows uniformly.
-async function buildErrorResult(site, err) {
+// and updateHistory consume ok/error rows uniformly. `mode` is the render mode
+// of the final attempt, matching the render_mode success rows record.
+async function buildErrorResult(site, err, mode) {
   console.error(`  [${site.slug}] ERROR: ${err.message}`);
 
   const errorResult = {
@@ -473,6 +483,7 @@ async function buildErrorResult(site, err) {
     category: site.category,
     url: site.url,
     status: "error",
+    render_mode: mode,
     error: err.message,
   };
 
@@ -519,7 +530,7 @@ async function retryScan(site, browserForRetry, mode) {
   try {
     return await scanWith(site, browserForRetry, mode);
   } catch (err) {
-    return buildErrorResult(site, err);
+    return buildErrorResult(site, err, mode);
   }
 }
 
@@ -536,14 +547,24 @@ async function scanSite(site) {
   } catch (err) {
     if (isBlock(err)) {
       console.log(`  [${site.slug}] blocked (HTTP ${err.httpStatus}); retrying on headed ...`);
-      return retryScan(site, await getHeadedBrowser(), "headed");
+      // A headed-launch failure (channel not installed, no display) is an
+      // infra problem, not a site problem: record the site's original block
+      // error rather than rejecting out of the worker and killing the run.
+      let headed;
+      try {
+        headed = await getHeadedBrowser();
+      } catch (launchErr) {
+        console.error(`  Headed ${HEADED_CHANNEL} launch failed: ${launchErr.message}`);
+        return buildErrorResult(site, err, "headless");
+      }
+      return retryScan(site, headed, "headed");
     }
     if (err.name === "TimeoutError") {
       console.log(`  [${site.slug}] navigation timed out; retrying once ...`);
       await pause(2000);
       return retryScan(site, browser, "headless");
     }
-    return buildErrorResult(site, err);
+    return buildErrorResult(site, err, "headless");
   }
 }
 
