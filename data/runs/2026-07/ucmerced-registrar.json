@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucmerced-registrar",
   "name": "UC Merced Office of the Registrar",
@@ -8,6 +8,357 @@
   "type": "registrar",
   "category": "registrar",
   "url": "https://registrar.ucmerced.edu",
-  "status": "error",
-  "error": "HTTP 403 from https://registrar.ucmerced.edu"
+  "render_mode": "headed",
+  "element_count": 694,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"slideshow image\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "ferpa",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "registrar.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/policies/ferpa/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/faculty-and-staff/faculty/ferpa\" class=\"sf-depth-3 \" style=\"\">FERPA</a>",
+                  "target": [
+                    "#menu-3530-1 > .sf-depth-3"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/policies/ferpa\" class=\"sf-depth-2 \" style=\"\">FERPA</a>",
+          "target": [
+            "#menu-622-1 > a[href$=\"ferpa\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "grades",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "registrar.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/policies/grades/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/faculty-and-staff/faculty/grades\" class=\"sf-depth-3 \" style=\"\">Grades</a>",
+                  "target": [
+                    "#menu-3532-1 > .sf-depth-3"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/policies/grades\" class=\"sf-depth-2  menuparent sf-with-ul\" style=\"\">Grades<span class=\"sf-sub-indicator\"> »</span><span class=\"sf-sub-indicator\"> »</span></a>",
+          "target": [
+            "#menu-624-1 > a[href$=\"grades\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "forms",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "registrar.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/forms/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/faculty-and-staff/faculty/forms\" class=\"sf-depth-3 \" style=\"\">Forms</a>",
+                  "target": [
+                    "#menu-3534-1 > .sf-depth-3"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/forms\" class=\"sf-depth-1 \">Forms</a>",
+          "target": [
+            "#menu-641-1 > a[href$=\"forms\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"slideshow image\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+        }
+      ]
+    }
+  ]
 }
