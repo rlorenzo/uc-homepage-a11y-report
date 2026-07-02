@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucla-financial-aid",
   "name": "UCLA Financial Aid & Scholarships",
@@ -8,7 +8,8 @@
   "type": "financial-aid",
   "category": "financial-aid",
   "url": "https://financialaid.ucla.edu",
-  "element_count": 416,
+  "render_mode": "headless",
+  "element_count": 455,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -372,7 +373,230 @@
       ]
     }
   ],
-  "incomplete": [],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"gecko-chat-widget-header-title\" style=\"color: rgb(255, 255, 255);\">You are speaking with<span>BruinChat</span></h2>",
+          "target": [
+            ".gecko-chat-widget-header-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>BruinChat</span>",
+          "target": [
+            ".gecko-chat-widget-header-title > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"tooltip-inner\">Minimize chat window</div>",
+          "target": [
+            ".tooltip-inner"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"gecko-chat-widget-header-title\" style=\"color: rgb(255, 255, 255);\">You are speaking with<span>BruinChat</span></h2>",
+          "target": [
+            ".gecko-chat-widget-header-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>BruinChat</span>",
+          "target": [
+            ".gecko-chat-widget-header-title > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"tooltip-inner\">Minimize chat window</div>",
+          "target": [
+            ".tooltip-inner"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
   "mobile_violations": [
     {
       "id": "color-contrast-enhanced",
@@ -640,7 +864,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260627052233\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
+                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260702052055\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
                   "target": [
                     "body"
                   ]
@@ -674,7 +898,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260627052233\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
+                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260702052055\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
                   "target": [
                     "body"
                   ]
@@ -708,7 +932,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260627052233\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
+                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260702052055\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
                   "target": [
                     "body"
                   ]
@@ -742,7 +966,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260627052233\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
+                  "html": "<body data-ucla-ref=\"financialaid/\" data-ucla-path=\"/\" data-ucla-origin=\"https://financialaid.ucla.edu\" data-ucla-theme-cache-version=\"a20260702052055\" data-ucla-theme-root=\"/themes/custom/ucla_campus\" class=\"js page-is-english js-hcollapse-activated\">",
                   "target": [
                     "body"
                   ]
@@ -764,5 +988,228 @@
       ]
     }
   ],
-  "mobile_incomplete": []
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"gecko-chat-widget-header-title\" style=\"color: rgb(255, 255, 255);\">You are speaking with<span>BruinChat</span></h2>",
+          "target": [
+            ".gecko-chat-widget-header-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>BruinChat</span>",
+          "target": [
+            ".gecko-chat-widget-header-title > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"tooltip-inner\">Minimize chat window</div>",
+          "target": [
+            ".tooltip-inner"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"gecko-chat-widget-header-title\" style=\"color: rgb(255, 255, 255);\">You are speaking with<span>BruinChat</span></h2>",
+          "target": [
+            ".gecko-chat-widget-header-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>BruinChat</span>",
+          "target": [
+            ".gecko-chat-widget-header-title > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"gecko-chat-widget-app-header\" style=\"background-color: rgb(0, 89, 140); color: rgb(255, 255, 255); --header-btn-outline: #FFFFFF;\">",
+                  "target": [
+                    ".gecko-chat-widget-app-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"tooltip-inner\">Minimize chat window</div>",
+          "target": [
+            ".tooltip-inner"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ]
 }

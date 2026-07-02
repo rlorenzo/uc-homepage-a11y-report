@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucsd-jacobs",
   "name": "Jacobs School of Engineering",
@@ -8,7 +8,8 @@
   "type": "school",
   "category": "engineering",
   "url": "https://jacobsschool.ucsd.edu",
-  "element_count": 658,
+  "render_mode": "headless",
+  "element_count": 620,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -130,6 +131,40 @@
             {
               "id": "color-contrast-enhanced",
               "data": {
+                "fgColor": "#0071b3",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.23,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"main-wrapper\" class=\"layout-main-wrapper clearfix\">",
+                  "target": [
+                    "#main-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.23 (foreground color: #0071b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\">https://jacobsschool...</a>",
+          "target": [
+            ".col-lg-4 > p:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.23 (foreground color: #0071b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
                 "fgColor": "#484949",
                 "bgColor": "#ffcd00",
                 "contrastRatio": 6.01,
@@ -140,9 +175,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" class=\"btn btn_gold\">Read More</a>",
+                  "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
                   "target": [
-                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
+                    ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
                   ]
                 }
               ],
@@ -153,9 +188,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
+            ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -838,7 +873,56 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\">",
+          "target": [
+            ".carousel-item:nth-child(2) > .row > .col-lg-8.mb-4 > a > img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/ring ceremony rotator.png\">",
           "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a > img"
           ],
@@ -887,7 +971,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/LFP-battery-upcycling-TEASER.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .w-100.mb-3"
           ],
@@ -936,7 +1020,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(3) > .w-100.mb-3"
           ],
@@ -985,7 +1069,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/solar-telescope-metasurface-TEASER.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(4) > .w-100.mb-3"
           ],
@@ -1034,7 +1118,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/202606-Kane_Daniel_A-award.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/solar-telescope-metasurface-TEASER.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(5) > .w-100.mb-3"
           ],
@@ -1083,7 +1167,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/Savage_email_to_text_spoofing_1 (1).jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/202606-Kane_Daniel_A-award.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(6) > .w-100.mb-3"
           ],
@@ -1158,9 +1242,159 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\"></a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\"></a>",
+          "target": [
+            ".carousel-item:nth-child(2) > .row > .col-lg-8.mb-4 > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/ring ceremony rotator.png\"></a>",
           "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\">\n                            </a>",
+          "target": [
+            ".col-lg-4 > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\"></a>",
+          "target": [
+            ".col-lg-4 > p:nth-child(4) > a:nth-child(1)"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         }
@@ -1359,7 +1593,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\">UC San Diego Researchers Receive ARPA-H Award to Make Birth Safer</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\" target=\"_blank\">Spent EV Batteries Get Second Life as Higher-Performance Battery Material</a>",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .mb-1:nth-child(2) > a[target=\"_blank\"]"
           ],
@@ -1384,7 +1618,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h6 class=\"publish_date mb-1\">June 23, 2026</h6>",
+          "html": "<h6 class=\"publish_date mb-1\">July 1, 2026</h6>",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > h6"
           ],
@@ -1409,7 +1643,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"mb-0\">Researchers in obstetrics and engineering at UC San Diego were awarded up to $10.4 million from ARPA...</p>",
+          "html": "<p class=\"mb-0\">Engineers have developed an environmentally-friendly method to upcycle material from spent batteries...</p>",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .mb-0:nth-child(4)"
           ],
@@ -1434,7 +1668,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .text-right.mb-0 > a[target=\"_blank\"]"
           ],
@@ -1459,7 +1693,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" target=\"_blank\">New Data Center, Student Collaboration Space Put People at the Heart of Computer Science</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\">UC San Diego Researchers Receive ARPA-H Award to Make Birth Safer</a>",
           "target": [
             ".phone_news_item.mb-4:nth-child(3) > .mb-1:nth-child(2) > a[target=\"_blank\"]"
           ],
@@ -1783,7 +2017,7 @@
                   "protocol": "http:",
                   "hostname": "today.ucsd.edu",
                   "port": "",
-                  "pathname": "/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science/",
+                  "pathname": "/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -1791,31 +2025,37 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
+                  "target": [
+                    ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(2) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(3) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/photo-essays/a-small-metasurface-could-change-how-telescopes-view-the-sun\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(4) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-professor-daniel-kane-awarded-goedel-prize-highest-theoretical-computer-science-honor\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/photo-essays/a-small-metasurface-could-change-how-telescopes-view-the-sun\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(5) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"http://today.ucsd.edu/story/from-verizon-to-apple-a-hidden-texting-flaw-has-finally-been-patched\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-professor-daniel-kane-awarded-goedel-prize-highest-theoretical-computer-science-honor\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(6) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
@@ -1827,9 +2067,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
+            ".carousel-item:nth-child(2) > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }
@@ -2009,40 +2249,6 @@
             {
               "id": "color-contrast-enhanced",
               "data": {
-                "fgColor": "#0071b3",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.23,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div id=\"main-wrapper\" class=\"layout-main-wrapper clearfix\">",
-                  "target": [
-                    "#main-wrapper"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 5.23 (foreground color: #0071b3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\">https://jacobsschool...</a>",
-          "target": [
-            ".col-lg-4 > p:nth-child(2) > a"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.23 (foreground color: #0071b3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
                 "fgColor": "#484949",
                 "bgColor": "#ffcd00",
                 "contrastRatio": 6.01,
@@ -2053,9 +2259,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" class=\"btn btn_gold\">Read More</a>",
                   "target": [
-                    ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
+                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
                   ]
                 }
               ],
@@ -2066,9 +2272,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
+            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -2751,7 +2957,56 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/ring ceremony rotator.png\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/LFP-battery-upcycling-TEASER.jpg\">",
+          "target": [
+            ".carousel-item:nth-child(1) > .row > .col-lg-8.mb-4 > a > img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\">",
           "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a > img"
           ],
@@ -2800,7 +3055,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/LFP-battery-upcycling-TEASER.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .w-100.mb-3"
           ],
@@ -2849,7 +3104,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(3) > .w-100.mb-3"
           ],
@@ -2898,7 +3153,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/solar-telescope-metasurface-TEASER.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/UCSD-JacobsSchool-2602-CSE_serverroom-1200x628.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(4) > .w-100.mb-3"
           ],
@@ -2947,7 +3202,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/202606-Kane_Daniel_A-award.jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/solar-telescope-metasurface-TEASER.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(5) > .w-100.mb-3"
           ],
@@ -2996,7 +3251,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/Savage_email_to_text_spoofing_1 (1).jpg\" class=\"w-100 mb-3\">",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/202606-Kane_Daniel_A-award.jpg\" class=\"w-100 mb-3\">",
           "target": [
             ".phone_news_item.mb-4:nth-child(6) > .w-100.mb-3"
           ],
@@ -3071,109 +3326,59 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/ring ceremony rotator.png\"></a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/LFP-battery-upcycling-TEASER.jpg\"></a>",
+          "target": [
+            ".carousel-item:nth-child(1) > .row > .col-lg-8.mb-4 > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/_2606-Hall_fetal_hypoxia_chip--7-1200x628.jpg\"></a>",
           "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\">\n                            </a>",
-          "target": [
-            ".col-lg-4 > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\"></a>",
-          "target": [
-            ".col-lg-4 > p:nth-child(4) > a:nth-child(1)"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         }
@@ -3931,9 +4136,9 @@
                 "name": "read more",
                 "urlProps": {
                   "protocol": "http:",
-                  "hostname": "jacobsschool.ucsd.edu",
+                  "hostname": "today.ucsd.edu",
                   "port": "",
-                  "pathname": "/idea/current-undergraduates/ring-ceremony/",
+                  "pathname": "/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material/",
                   "search": {},
                   "hash": "",
                   "filename": ""
@@ -3941,31 +4146,37 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" class=\"btn btn_gold\">Read More</a>",
+                  "target": [
+                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(2) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-researchers-receive-arpa-h-award-to-make-birth-safer\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(3) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/photo-essays/a-small-metasurface-could-change-how-telescopes-view-the-sun\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/new-data-center-student-collaboration-space-put-people-at-the-heart-of-computer-science\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(4) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-professor-daniel-kane-awarded-goedel-prize-highest-theoretical-computer-science-honor\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/photo-essays/a-small-metasurface-could-change-how-telescopes-view-the-sun\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(5) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"http://today.ucsd.edu/story/from-verizon-to-apple-a-hidden-texting-flaw-has-finally-been-patched\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/uc-san-diego-professor-daniel-kane-awarded-goedel-prize-highest-theoretical-computer-science-honor\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(6) > .text-right.mb-0 > a[target=\"_blank\"]"
                   ]
@@ -3977,9 +4188,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"https://jacobsschool.ucsd.edu/idea/current-undergraduates/ring-ceremony\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/spent-ev-batteries-get-second-life-as-higher-performance-battery-material\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".col-lg-4 > p:nth-child(4) > .btn_gold.btn"
+            ".carousel-item:nth-child(1) > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }

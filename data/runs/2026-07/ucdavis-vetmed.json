@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucdavis-vetmed",
   "name": "UC Davis Weill School of Veterinary Medicine",
@@ -8,6 +8,7 @@
   "type": "school",
   "category": "medicine-health",
   "url": "https://www.vetmed.ucdavis.edu",
+  "render_mode": "headless",
   "element_count": 578,
   "violations": [
     {
@@ -191,7 +192,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk491/files/styles/sf_hero_banner/public/media/images/Kitsune-Hero-Banner.png?h=8e58fdb5&itok=-wrmWKuc\" width=\"2000\" height=\"770\" alt=\"Smiling older couple with small tan dog; vintage car sketches on wall behind them\" ...>",
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Smiling older couple...\" class=\"image-style-sf-hero-...\">",
                   "target": [
                     ".image-style-sf-hero-banner"
                   ]
@@ -223,7 +224,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk491/files/styles/sf_hero_banner/public/media/images/Kitsune-Hero-Banner.png?h=8e58fdb5&itok=-wrmWKuc\" width=\"2000\" height=\"770\" alt=\"Smiling older couple with small tan dog; vintage car sketches on wall behind them\" ...>",
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Smiling older couple...\" class=\"image-style-sf-hero-...\">",
                   "target": [
                     ".image-style-sf-hero-banner"
                   ]
@@ -241,6 +242,131 @@
             ".hero-banner__summary > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "dvm admissions",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.vetmed.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/index.php/admissions/application-process-timeline/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.vetmed.ucdavis.edu/admissions/application-process-timeline\" data-component-id=\"sitefarm_one:vertical-link\" class=\"vertical-link vertical-link--circle\">",
+                  "target": [
+                    "#block-fldvmadmissions > .vertical-link.vertical-link--circle[data-component-id=\"sitefarm_one:vertical-link\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/index.php/admissions/application-process-timeline\" data-drupal-link-system-path=\"node/106\">DVM Admissions</a>",
+          "target": [
+            ".menu-item:nth-child(1) > a[data-drupal-link-system-path=\"node/106\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "alumni",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.vetmed.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/index.php/alumni/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.vetmed.ucdavis.edu/alumni\">Alumni</a>",
+                  "target": [
+                    ".clearfix.text-formatted.field--name-body > div > div > p:nth-child(1) > a:nth-child(5)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/index.php/alumni\" data-drupal-link-system-path=\"node/1791\">Alumni</a>",
+          "target": [
+            ".menu-item:nth-child(6) > a[href$=\"alumni\"][data-drupal-link-system-path=\"node/1791\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "emergency",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.vetmed.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/index.php/hospital/emergency/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/hospital/emergency\">Emergency</a>",
+                  "target": [
+                    "p:nth-child(1) > a[href$=\"emergency\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/index.php/hospital/emergency\" data-drupal-link-system-path=\"node/3486\">Emergency</a>",
+          "target": [
+            ".menu-item:nth-child(1) > a[data-drupal-link-system-path=\"node/3486\"][href$=\"emergency\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }
       ]
     }
@@ -572,7 +698,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk491/files/styles/sf_hero_banner/public/media/images/Kitsune-Hero-Banner.png?h=8e58fdb5&itok=-wrmWKuc\" width=\"2000\" height=\"770\" alt=\"Smiling older couple with small tan dog; vintage car sketches on wall behind them\" ...>",
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Smiling older couple...\" class=\"image-style-sf-hero-...\">",
                   "target": [
                     ".image-style-sf-hero-banner"
                   ]
@@ -604,7 +730,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk491/files/styles/sf_hero_banner/public/media/images/Kitsune-Hero-Banner.png?h=8e58fdb5&itok=-wrmWKuc\" width=\"2000\" height=\"770\" alt=\"Smiling older couple with small tan dog; vintage car sketches on wall behind them\" ...>",
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"770\" alt=\"Smiling older couple...\" class=\"image-style-sf-hero-...\">",
                   "target": [
                     ".image-style-sf-hero-banner"
                   ]

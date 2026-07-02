@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucla-admissions",
   "name": "UCLA Admission",
@@ -8,7 +8,8 @@
   "type": "admissions",
   "category": "admissions",
   "url": "https://admission.ucla.edu",
-  "element_count": 819,
+  "render_mode": "headless",
+  "element_count": 836,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -3257,6 +3258,31 @@
             "a[href$=\"terms-of-use/\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"gecko-chat-widget-prompt-open-widget-message-content\">Hi! Welcome to BruinChat, your go-to for quick answers and info. How can I help?</button>",
+          "target": [
+            ".gecko-chat-widget-prompt-open-widget-message-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "scanned_at": "2026-07-01T15:03:59.132Z",
+  "scanned_at": "2026-07-02T17:15:06.568Z",
   "axe_version": "4.11.4",
   "site": "ucla-education",
   "name": "UCLA School of Education & Information Studies",
@@ -8,6 +8,7 @@
   "type": "school",
   "category": "education",
   "url": "https://seis.ucla.edu",
+  "render_mode": "headless",
   "element_count": 1110,
   "violations": [
     {
@@ -3141,6 +3142,40 @@
             {
               "id": "color-contrast-enhanced",
               "data": {
+                "fgColor": "#005587",
+                "bgColor": "#ffc72c",
+                "contrastRatio": 5.07,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"n2-style-5bb7a6837a5b8f7353134dff910072a0-heading  n2-ow \" href=\"https://seis.ucla.edu/commencement/\" tabindex=\"0\"><div><div>Learn more</div></div></a>",
+                  "target": [
+                    ".n-uc-g8KdlwiSZSba > .n2-font-c508ed77dabd3573b5152d9421778307-link.n2-ss-button-container.n2-ss-nowrap > .n2-style-5bb7a6837a5b8f7353134dff910072a0-heading.n2-ow"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.07 (foreground color: #005587, background color: #ffc72c, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>Learn more</div>",
+          "target": [
+            ".n-uc-g8KdlwiSZSba > .n2-font-c508ed77dabd3573b5152d9421778307-link.n2-ss-button-container.n2-ss-nowrap > .n2-style-5bb7a6837a5b8f7353134dff910072a0-heading.n2-ow > div > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.07 (foreground color: #005587, background color: #ffc72c, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
                 "fgColor": "#ffffff",
                 "bgColor": "#2774ae",
                 "contrastRatio": 5.03,
@@ -5169,6 +5204,52 @@
       ]
     },
     {
+      "id": "nested-interactive",
+      "impact": "serious",
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"n2-style-5bb7a6837a5b8f7353134dff910072a0-heading  n2-ow \" href=\"https://seis.ucla.edu/commencement/\" tabindex=\"0\"><div><div>Learn more</div></div></a>",
+                  "target": [
+                    ".n-uc-g8KdlwiSZSba > .n2-font-c508ed77dabd3573b5152d9421778307-link.n2-ss-button-container.n2-ss-nowrap > .n2-style-5bb7a6837a5b8f7353134dff910072a0-heading.n2-ow"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div data-slide-duration=\"0\" data-id=\"64\" data-slide-public-id=\"2\" data-title=\"Announcements Slide ...\" data-haslink=\"1\" data-href=\"https://seis.ucla.ed...\" tabindex=\"0\" role=\"button\" data-n2click=\"url\" data-force-pointer=\"\" class=\"n2-ss-slide n2-ow n2...\" style=\"transform: translate...\">",
+          "target": [
+            ".n2-ss-slide-64"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+        }
+      ]
+    },
+    {
       "id": "target-size",
       "impact": "serious",
       "tags": [
@@ -5201,7 +5282,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\"></div>",
+                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot n2-active\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\" aria-current=\"true\"></div>",
                   "target": [
                     ".n2-active"
                   ]
@@ -5214,7 +5295,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot n2-active\" tabindex=\"0\" role=\"button\" aria-label=\"Title Slide\" aria-current=\"true\"></div>",
+          "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot\" tabindex=\"0\" role=\"button\" aria-label=\"Title Slide\"></div>",
           "target": [
             "div[aria-label=\"Title Slide\"]"
           ],
@@ -5241,7 +5322,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot n2-active\" tabindex=\"0\" role=\"button\" aria-label=\"Title Slide\" aria-current=\"true\"></div>",
+                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot\" tabindex=\"0\" role=\"button\" aria-label=\"Title Slide\"></div>",
                   "target": [
                     "div[aria-label=\"Title Slide\"]"
                   ]
@@ -5260,7 +5341,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\"></div>",
+          "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot n2-active\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\" aria-current=\"true\"></div>",
           "target": [
             ".n2-active"
           ],
@@ -5287,7 +5368,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\"></div>",
+                  "html": "<div class=\"n2-bullet n2-style-4f72beb15bfb0511e07bfb33dde48a42-dot n2-active\" tabindex=\"0\" role=\"button\" aria-label=\"Announcements Slide - Commencement\" aria-current=\"true\"></div>",
                   "target": [
                     ".n2-active"
                   ]
@@ -5545,16 +5626,16 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
+                "fontSize": "20.7pt (27.6px)",
                 "fontWeight": "bold",
                 "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
+                "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-153023fc3458e-inner\">",
+                  "html": "<div class=\"n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1LwhuY5A7oEj-inner\">",
                   "target": [
-                    ".n-uc-153023fc3458e-inner"
+                    ".n-uc-1LwhuY5A7oEj-inner"
                   ]
                 }
               ],
@@ -5565,9 +5646,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div id=\"n2-ss-8item1\" class=\"n2-font-8be231505102640aa32fa142b3f6d509-hover   n2-ss-item-content n2-ss-text n2-ow\" style=\"display:block;\">A Tradition of</div>",
+          "html": "<div id=\"n2-ss-8item3\" class=\"n2-font-29001f0f8e30a74f1338a7ba74993824-hover   n2-ss-item-content n2-ss-text n2-ow\" style=\"display:block;\">Commencement</div>",
           "target": [
-            "#n2-ss-8item1"
+            "#n2-ss-8item3"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -5577,16 +5658,16 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "20.7pt (27.6px)",
-                "fontWeight": "bold",
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
                 "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
+                "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-153023fc3458e-inner\">",
+                  "html": "<div class=\"n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1LwhuY5A7oEj-inner\">",
                   "target": [
-                    ".n-uc-153023fc3458e-inner"
+                    ".n-uc-1LwhuY5A7oEj-inner"
                   ]
                 }
               ],
@@ -5597,9 +5678,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div id=\"n2-ss-8item2\" class=\"n2-font-29001f0f8e30a74f1338a7ba74993824-hover   n2-ss-item-content n2-ss-text n2-ow\" style=\"display:block;\">Challenging<br>Traditional<br>Thinking</div>",
+          "html": "<div id=\"n2-ss-8item4\" class=\"n2-font-881d88108e6ace2433b5cf631a09dfb7-hover   n2-ss-item-content n2-ss-text n2-ow\" style=\"display:block;\">Congratulations Class of 2026</div>",
           "target": [
-            "#n2-ss-8item2"
+            "#n2-ss-8item4"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
@@ -5653,13 +5734,19 @@
                   "protocol": "http:",
                   "hostname": "seis.ucla.edu",
                   "port": "",
-                  "pathname": "/academics/department-of-education/",
+                  "pathname": "/commencement/",
                   "search": {},
                   "hash": "",
                   "filename": ""
                 }
               },
               "relatedNodes": [
+                {
+                  "html": "<a href=\"https://seis.ucla.edu/academics/department-of-education/#undergrad\" target=\"_self\" class=\"ucla-btn ucla-btn--primary ucla-btn--icon-trail\">",
+                  "target": [
+                    ".is-style-group--md.wp-block-group:nth-child(4) > .wp-block-group__inner-container > .wp-block-columns.is-style-u-content--gaps > .wp-block-column:nth-child(1) > .ucla-btn.ucla-btn--primary[target=\"_self\"]"
+                  ]
+                },
                 {
                   "html": "<a href=\"https://seis.ucla.edu/academics/department-of-education/#graduate\" target=\"_self\" class=\"ucla-btn ucla-btn--primary ucla-btn--icon-trail\">",
                   "target": [
@@ -5685,9 +5772,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"https://seis.ucla.edu/academics/department-of-education/#undergrad\" target=\"_self\" class=\"ucla-btn ucla-btn--primary ucla-btn--icon-trail\">",
+          "html": "<a class=\"n2-style-5bb7a6837a5b8f7353134dff910072a0-heading  n2-ow \" href=\"https://seis.ucla.edu/commencement/\" tabindex=\"0\"><div><div>Learn more</div></div></a>",
           "target": [
-            ".is-style-group--md.wp-block-group:nth-child(4) > .wp-block-group__inner-container > .wp-block-columns.is-style-u-content--gaps > .wp-block-column:nth-child(1) > .ucla-btn.ucla-btn--primary[target=\"_self\"]"
+            ".n-uc-g8KdlwiSZSba > .n2-font-c508ed77dabd3573b5152d9421778307-link.n2-ss-button-container.n2-ss-nowrap > .n2-style-5bb7a6837a5b8f7353134dff910072a0-heading.n2-ow"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }
