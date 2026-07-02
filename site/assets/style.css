@@ -1313,6 +1313,126 @@ a.section-num:focus-visible {
   max-width: 100%;
 }
 
+/* The trend panel hosts the HTML legend below its canvas, so unlike the
+   other charts its height follows content: the canvas gets its explicit
+   Chart.js-required height from .chart-canvas-box instead of the wrapper,
+   and the legend takes as many rows as the filter needs (11 campus pills
+   wrap to four-plus rows on a phone). */
+.chart-wrap.chart-wrap--trend {
+  height: auto;
+  display: block;
+}
+
+.chart-canvas-box {
+  position: relative;
+  height: 280px;
+}
+
+@media (min-width: 720px) {
+  .chart-canvas-box {
+    height: 320px;
+  }
+}
+
+/* Mirror .chart-wrap--fallback: showChartFallback() collapses the canvas
+   host when Chart.js fails to load, and for the trend chart that host is
+   the canvas box. */
+.chart-canvas-box.chart-wrap--fallback {
+  height: auto;
+}
+
+/* Interactive trend-chart legend (render/trend-legend.js): real buttons
+   below the canvas. Hover or focus spotlights a line, click pins it. */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.legend-items {
+  /* The buttons participate directly in .chart-legend's wrapping row,
+     alongside the reset control. */
+  display: contents;
+}
+
+.legend-item {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.legend-item:hover {
+  background: var(--tint);
+}
+
+.legend-item[aria-pressed="true"] {
+  background: var(--tint-2);
+  border-color: var(--uc-dark-blue);
+}
+
+.legend-swatch {
+  flex: none;
+}
+
+/* The pinned state carries a check as well as a tint, so it never reads
+   through color alone. The slot is always reserved so toggling a pin
+   doesn't reflow the row. */
+.legend-check {
+  flex: none;
+  color: var(--uc-dark-blue);
+  opacity: 0;
+}
+
+.legend-item[aria-pressed="true"] .legend-check {
+  opacity: 1;
+}
+
+.legend-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--uc-dark-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.legend-reset:hover {
+  color: var(--uc-deep-blue);
+}
+
+/* visibility (not display) keeps the reset's space reserved, so pinning
+   never reflows the legend or resizes the flexing canvas above it. */
+.legend-reset.is-hidden {
+  visibility: hidden;
+}
+
 /* --- 11. Methodology / Footer -------------------------------- */
 
 .methodology {

@@ -70,18 +70,23 @@ function bodyRow(cells) {
 // screen-reader users get the same data the canvas conveys visually. The
 // table is created once per host (keyed by id) and rewritten on each paint.
 // Returns the table id so the canvas can point at it via aria-describedby.
+// The hiding class goes on a wrapper div, not the table: tables treat
+// `width: 1px` as a minimum, so a hidden table's layout box would stretch
+// the page's scrollWidth and cause phantom horizontal scrolling on phones.
 export function syncChartDataTable(host, { id, caption, headers, rows }) {
   let table = host.querySelector(`#${id}`);
   if (!table) {
+    const wrap = document.createElement("div");
+    wrap.className = "visually-hidden";
     table = document.createElement("table");
     table.id = id;
-    table.className = "visually-hidden";
     table.append(
       document.createElement("caption"),
       document.createElement("thead"),
       document.createElement("tbody"),
     );
-    host.appendChild(table);
+    wrap.appendChild(table);
+    host.appendChild(wrap);
   }
   table.querySelector("caption").textContent = caption;
   table.querySelector("thead").replaceChildren(headerRow(headers));
