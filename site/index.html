@@ -6,6 +6,10 @@
   <title>UC Web Accessibility Report</title>
   <meta name="description" content="Monthly automated accessibility report covering UC campus homepages, admissions sites, and schools/colleges across all 10 University of California campuses and the Office of the President.">
 
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&display=swap" media="print" onload="this.media='all'">
@@ -166,10 +170,12 @@
         <a class="section-num" href="#section=errors-over-time" data-section-link="errors-over-time" aria-label="§ 04: Link to Errors over time section">§ 04</a>
       </div>
       <p class="chart-guide">
-        Lower lines are better. A flat line means that grouping held steady between months. A drop means someone fixed something. The chart's granularity follows the filter: campus-aggregated by default, per-site when you drill into a single campus or discipline.
+        Lower lines are better. A flat line means that grouping held steady between months. A drop means someone fixed something. The chart's granularity follows the filter: campus-aggregated by default, per-site when you drill into a single campus or discipline. Click a legend entry to spotlight that line and fade the rest; click it again to release.
       </p>
-      <div class="chart-wrap">
-        <canvas id="trend-chart" role="img" aria-label="Line chart showing total accessibility errors over time for the current filter">Errors over time trend chart</canvas>
+      <div class="chart-wrap chart-wrap--trend">
+        <div class="chart-canvas-box">
+          <canvas id="trend-chart" role="img" aria-label="Line chart showing total accessibility errors over time for the current filter">Errors over time trend chart</canvas>
+        </div>
       </div>
     </section>
 
