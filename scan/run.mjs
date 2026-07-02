@@ -74,6 +74,19 @@ const proxyUrl =
 // (e.g. www.vetmed.ucdavis.edu) don't reflexively serve a 403 challenge
 // page. Real Chrome doesn't expose this flag, so the absence is what
 // the bot detector keys on.
+//
+// Some bot-managed sites go further and deny *headless* Chrome on its
+// fingerprint alone — regardless of source IP or a spoofed UA. Akamai on
+// ucmerced.edu is the clearest case: every ucmerced.edu host 403s a headless
+// browser but serves a real, headed Chrome fine. Rather than run the whole
+// fleet headed (heavier, and it would shift the month-over-month baseline for
+// the ~170 sites that scan fine headless), the fleet stays headless and any
+// site that comes back blocked is retried once on a real headed browser — see
+// the headed-fallback logic in scanSite(). Set SCAN_NO_HEADED_FALLBACK=1 to
+// turn that off; SCAN_HEADED_CHANNEL overrides the headed browser channel
+// (default "chrome"; use e.g. "msedge" if Chrome isn't the installed browser).
+const HEADED_CHANNEL = process.env.SCAN_HEADED_CHANNEL || "chrome";
+const HEADED_FALLBACK = !/^(1|true|yes)$/i.test(process.env.SCAN_NO_HEADED_FALLBACK || "");
 const launchOptions = {
   headless: true,
   args: ["--disable-blink-features=AutomationControlled"],
@@ -91,11 +104,43 @@ if (proxyUrl) {
   }
 }
 
-// Reuse a single browser instance for efficiency, but create a fresh
-// context per site so cookies and storage do not leak between sites.
+// Reuse a single headless browser for efficiency, but create a fresh context
+// per site so cookies and storage do not leak between sites. This is the
+// baseline every site is scanned with first.
 const browser = await chromium.launch(launchOptions);
 
-const CONCURRENCY = 5;
+// A real, headed browser, launched lazily (at most once, on first need) and
+// used only to retry sites a headless scan can't reach because of bot
+// detection. A run with no blocked sites never launches it, so the common
+// case pays nothing. The singleton promise also means concurrent workers that
+// all hit a block share one browser instead of each launching their own.
+let headedBrowserPromise = null;
+function getHeadedBrowser() {
+  if (!headedBrowserPromise) {
+    console.log(`  Launching headed ${HEADED_CHANNEL} browser for bot-blocked retries ...`);
+    headedBrowserPromise = chromium.launch({
+      headless: false,
+      channel: HEADED_CHANNEL,
+      args: ["--disable-blink-features=AutomationControlled"],
+      // The headed retry must reach the network the same way the fleet does,
+      // so it inherits the fleet's proxy when one is configured.
+      ...(launchOptions.proxy ? { proxy: launchOptions.proxy } : {}),
+    });
+    // A failed launch must not stick: clear the slot so a later blocked site
+    // attempts a fresh launch instead of inheriting the cached rejection.
+    headedBrowserPromise.catch(() => {
+      headedBrowserPromise = null;
+    });
+  }
+  return headedBrowserPromise;
+}
+
+// HTTP statuses that typically signal a bot/WAF block rather than a genuine
+// error. A block is worth one retry on the headed browser; a real 404/500 is
+// not (headed Chrome wouldn't change the outcome).
+const BLOCK_STATUSES = new Set([401, 403, 406, 429, 503]);
+
+const CONCURRENCY = Number(process.env.SCAN_CONCURRENCY) || 5;
 
 // Some UC sites (e.g. uci.edu via AWS ELB) return 403 to the default
 // Playwright "HeadlessChrome" user agent. Use a realistic desktop Chrome UA
@@ -134,11 +179,149 @@ async function resolveUserAgent() {
 const USER_AGENT = await resolveUserAgent();
 console.log(`Using user agent: ${USER_AGENT}\n`);
 
-async function scanSite(site) {
-  console.log(`Scanning ${site.name} (${site.url}) ...`);
+// UC Merced sanctioned this scan by allowlisting a bot User-Agent in their bot
+// manager (they match the "UC-A11Y-Report-Bot/1.0" token) — the scan runs on
+// GitHub Actions and has no stable IP to allowlist. We send that exact UA for
+// identified campuses' *headless* (sanctioned) requests. The value comes from
+// the SCAN_UA_TOKEN env var (a GitHub Actions secret) so it stays out of this
+// public repo and is overridable, though the UA itself is a public identifier.
+// When unset (local dev / forks) no override is applied and Merced falls through
+// to the headed fallback. The headed fallback keeps the real Chrome UA — it
+// clears bot detection on browser fingerprint, and a non-browser bot UA there
+// would only work against it.
+const SANCTIONED_UA = process.env.SCAN_UA_TOKEN || "";
+const IDENTIFIED_CAMPUSES = new Set(["ucmerced"]);
+
+// The UA to send for a given site/attempt: Merced's sanctioned bot UA for its
+// headless requests (when configured), the real Chrome UA everywhere else.
+function userAgentFor(site, mode) {
+  if (mode === "headed") return USER_AGENT;
+  if (SANCTIONED_UA && IDENTIFIED_CAMPUSES.has(site.campus)) return SANCTIONED_UA;
+  return USER_AGENT;
+}
+
+// The axe tag set shared by both mobile and desktop passes. Every WCAG
+// 2.0/2.1/2.2 tag runs; results bucket below into "required" (WCAG 2.0 and 2.1
+// Level A/AA — the ADA Title II / Section 508 baseline) and "reach".
+const AXE_TAGS = [
+  "wcag2a",
+  "wcag2aa",
+  "wcag2aaa",
+  "wcag21a",
+  "wcag21aa",
+  "wcag21aaa",
+  "wcag22a",
+  "wcag22aa",
+  "wcag22aaa",
+];
+
+// Required = WCAG 2.0/2.1 Level A/AA; everything else buckets as reach.
+const REQUIRED_TAGS = new Set(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]);
+function bucketFor(tags) {
+  for (const t of tags || []) {
+    if (REQUIRED_TAGS.has(t)) return "required";
+  }
+  return "reach";
+}
+
+function emptyCounters() {
+  return {
+    total: 0,
+    by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+    by_rule: {},
+    // axe assigns one impact level per rule, so a plain rule → impact map
+    // rides alongside the counts; the report tags each rule from it.
+    by_rule_impact: {},
+  };
+}
+
+// Fold one violation's node count into its bucket's running totals.
+function addViolation(bucket, v) {
+  const count = v.nodes.length;
+  const impact = v.impact || "unknown";
+  bucket.total += count;
+  bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
+  bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
+  bucket.by_rule_impact[v.id] = impact;
+}
+
+// Split violations into "required" vs "reach" buckets with per-impact and
+// per-rule counts.
+function bucketViolations(violations) {
+  const required = emptyCounters();
+  const reach = emptyCounters();
+  for (const v of violations) {
+    addViolation(bucketFor(v.tags) === "required" ? required : reach, v);
+  }
+  return { required, reach };
+}
+
+// Error density is REQUIRED violations per element (4 dp) — the headline
+// "how dense are the legal-baseline issues?" number.
+function computeDensity(total, elementCount) {
+  return elementCount > 0 ? Math.round((total / elementCount) * 10000) / 10000 : 0;
+}
+
+// Scroll the full page in increments (firing IntersectionObserver / scroll-
+// reveal animations so lazy content is visible to axe), then scroll back up.
+async function scrollFullPage(page) {
+  await page.evaluate(async () => {
+    const step = 400;
+    const delay = 40;
+    for (let y = 0; y < document.body.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => setTimeout(r, delay));
+    }
+    window.scrollTo(0, 0);
+  });
+}
+
+// Navigate with networkidle, falling back to the "load" event. Some sites
+// (e.g. UCSD) keep persistent connections open so networkidle never settles;
+// "load" fires once the page and subresources finish. Non-timeout nav errors
+// propagate unchanged.
+async function gotoWithFallback(page, site) {
+  try {
+    return await page.goto(site.url, { waitUntil: "networkidle", timeout: 30_000 });
+  } catch (navError) {
+    if (navError.name !== "TimeoutError") throw navError;
+    console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
+    return page.goto(site.url, { waitUntil: "load", timeout: 30_000 });
+  }
+}
+
+// The HTTP status of a response, or 0 if there was none.
+const statusOf = (response) => (response ? response.status() : 0);
+
+// Throw a status-tagged error for a non-OK response so scanSite can decide
+// whether a headed retry is warranted.
+function assertOk(response, site) {
+  if (response?.ok()) return;
+  const status = statusOf(response);
+  const err = new Error(`HTTP ${status || "no response"} from ${site.url}`);
+  err.httpStatus = status;
+  throw err;
+}
+
+// One-line per-site success log, tagging headed retries.
+function logScanOk(site, mode, r) {
+  const tag = mode === "headed" ? " (headed)" : "";
+  console.log(
+    `  [${site.slug}] OK${tag}: ${r.required.total} required + ${r.reach.total} reach (desktop), ` +
+      `${r.mobileRequired.total} required + ${r.mobileReach.total} reach (mobile), ` +
+      `${r.elementCount} elements`,
+  );
+}
+
+// Scan one site with a specific browser (the headless fleet browser or the
+// headed fallback). Returns the success summary and writes the full axe output
+// to disk, or throws — the caller (scanSite) decides whether a thrown error is
+// worth a retry. `mode` is "headless" | "headed", used for logging and the
+// archived render_mode field.
+async function scanWith(site, browser, mode) {
   // Context/page creation is inside the try so that failures in
-  // newContext()/newPage() (e.g. bad proxy, browser crash) are handled as
-  // per-site errors rather than aborting the whole run.
+  // newContext()/newPage() (e.g. bad proxy, browser crash) propagate to the
+  // caller as a per-site error rather than aborting the whole run.
   let context;
   try {
     // Start at a mobile viewport. Many UC homepages use Foundation's
@@ -155,80 +338,27 @@ async function scanSite(site) {
     // to 1440×900 then triggers the real-world transition bug.
     context = await browser.newContext({
       ignoreHTTPSErrors: Boolean(proxyUrl),
-      userAgent: USER_AGENT,
+      userAgent: userAgentFor(site, mode),
       viewport: { width: 375, height: 800 },
     });
     const page = await context.newPage();
 
-    // networkidle waits until there are no more than 0 network connections
-    // for at least 500ms. This gives JS-heavy homepages time to finish
-    // rendering before we count elements and run axe. Some sites (e.g. UCSD)
-    // keep persistent connections open (analytics, websockets), so networkidle
-    // never resolves. In that case we fall back to the "load" event, which
-    // fires once the page and its subresources have finished loading.
-    let response;
-    try {
-      response = await page.goto(site.url, { waitUntil: "networkidle", timeout: 30_000 });
-    } catch (navError) {
-      if (navError.name === "TimeoutError") {
-        console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
-        response = await page.goto(site.url, { waitUntil: "load", timeout: 30_000 });
-      } else {
-        throw navError;
-      }
-    }
-
-    if (!response?.ok()) {
-      const status = response ? response.status() : "no response";
-      throw new Error(`HTTP ${status} from ${site.url}`);
-    }
+    const response = await gotoWithFallback(page, site);
+    assertOk(response, site);
 
     // Let mobile-mode JS (AccordionMenu, mobile nav, etc.) finish wiring up.
     await page.waitForTimeout(1500);
-
-    // Helper: scroll the full page bottom-to-top in increments to fire
-    // IntersectionObserver callbacks and trigger scroll-reveal animations,
-    // then scroll back to the top. Reused for both mobile and desktop
-    // viewports so lazy-loaded content is visible to axe in both passes.
-    async function scrollFullPage() {
-      await page.evaluate(async () => {
-        const step = 400;
-        const delay = 40;
-        for (let y = 0; y < document.body.scrollHeight; y += step) {
-          window.scrollTo(0, y);
-          await new Promise((r) => setTimeout(r, delay));
-        }
-        window.scrollTo(0, 0);
-      });
-    }
-
-    // The axe tag set shared by both mobile and desktop passes. We run
-    // every WCAG 2.0/2.1/2.2 tag and bucket results ourselves below
-    // into "required" (legally mandated — WCAG 2.0 and 2.1 Level A/AA,
-    // the baseline under ADA Title II / Section 508) and "reach"
-    // (everything else: WCAG 2.0/2.1 AAA and all of WCAG 2.2).
-    const axeTags = [
-      "wcag2a",
-      "wcag2aa",
-      "wcag2aaa",
-      "wcag21a",
-      "wcag21aa",
-      "wcag21aaa",
-      "wcag22a",
-      "wcag22aa",
-      "wcag22aaa",
-    ];
 
     // ── Mobile pass ──────────────────────────────────────────────
     // Scroll at the mobile viewport (375×800) to trigger any
     // IntersectionObserver / scroll-reveal animations, then run axe at
     // the mobile width before we resize to desktop. This captures
     // accessibility issues unique to the narrow/touch layout.
-    await scrollFullPage();
+    await scrollFullPage(page);
     await page.waitForTimeout(2000);
 
     const mobileRaw = await new AxeBuilder({ page })
-      .withTags(axeTags)
+      .withTags(AXE_TAGS)
       .setLegacyMode(true)
       .analyze();
 
@@ -252,7 +382,7 @@ async function scanSite(site) {
     // animations and lazy-init JS (e.g. Slick carousels on ucsf.edu) to
     // settle before running axe. Two seconds is generous enough to give
     // stable month-over-month numbers on JS-heavy homepages.
-    await scrollFullPage();
+    await scrollFullPage(page);
     await page.waitForTimeout(2000);
 
     const elementCount = await page.locator("*").count();
@@ -263,57 +393,13 @@ async function scanSite(site) {
     // origin iframes whose documents are inaccessible to axe, causing
     // "Cannot read properties of null" errors in flattenTree.
     const desktopRaw = await new AxeBuilder({ page })
-      .withTags(axeTags)
+      .withTags(AXE_TAGS)
       .setLegacyMode(true)
       .analyze();
 
-    // Bucket each violation into "required" vs "reach" by inspecting
-    // its WCAG tags. Required = 2.0/2.1 A/AA. Everything else is reach.
-    const REQUIRED_TAGS = new Set(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]);
-    function bucketFor(tags) {
-      for (const t of tags || []) {
-        if (REQUIRED_TAGS.has(t)) return "required";
-      }
-      return "reach";
-    }
-
-    function emptyCounters() {
-      return {
-        total: 0,
-        by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-        by_rule: {},
-        // axe assigns one impact level per rule, so we can store a plain
-        // rule → impact map alongside the counts. The report uses this
-        // to tag each rule in the per-site detail rows.
-        by_rule_impact: {},
-      };
-    }
-
-    function bucketViolations(violations) {
-      const required = emptyCounters();
-      const reach = emptyCounters();
-      for (const v of violations) {
-        const bucket = bucketFor(v.tags) === "required" ? required : reach;
-        const count = v.nodes.length;
-        const impact = v.impact || "unknown";
-        bucket.total += count;
-        bucket.by_impact[impact] = (bucket.by_impact[impact] || 0) + count;
-        bucket.by_rule[v.id] = (bucket.by_rule[v.id] || 0) + count;
-        bucket.by_rule_impact[v.id] = impact;
-      }
-      return { required, reach };
-    }
-
-    // Bucket mobile violations.
+    // Bucket mobile and desktop violations (helpers hoisted to module scope).
     const { required: mobileRequired, reach: mobileReach } = bucketViolations(mobileRaw.violations);
-
-    // Bucket desktop violations.
     const { required, reach } = bucketViolations(desktopRaw.violations);
-
-    // Error density is calculated against REQUIRED violations only —
-    // the headline "how dense are the legal-baseline issues?" question.
-    const errorDensity =
-      elementCount > 0 ? Math.round((required.total / elementCount) * 10000) / 10000 : 0;
 
     // Write the full axe output for archival.
     const fullResult = {
@@ -326,6 +412,7 @@ async function scanSite(site) {
       type: site.type,
       category: site.category,
       url: site.url,
+      render_mode: mode,
       element_count: elementCount,
       violations: desktopRaw.violations,
       incomplete: desktopRaw.incomplete,
@@ -335,11 +422,7 @@ async function scanSite(site) {
 
     await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(fullResult, null, 2));
 
-    console.log(
-      `  [${site.slug}] OK: ${required.total} required + ${reach.total} reach (desktop), ` +
-        `${mobileRequired.total} required + ${mobileReach.total} reach (mobile), ` +
-        `${elementCount} elements`,
-    );
+    logScanOk(site, mode, { required, reach, mobileRequired, mobileReach, elementCount });
 
     return {
       month,
@@ -352,6 +435,7 @@ async function scanSite(site) {
       category: site.category,
       url: site.url,
       status: "ok",
+      render_mode: mode,
       element_count: elementCount,
       // Headline "violations_*" fields reflect REQUIRED issues only —
       // this is the legal baseline the report centers. Old consumers
@@ -365,7 +449,7 @@ async function scanSite(site) {
       reach_violations_by_impact: reach.by_impact,
       reach_violations_by_rule: reach.by_rule,
       reach_violations_rule_impact: reach.by_rule_impact,
-      error_density: errorDensity,
+      error_density: computeDensity(required.total, elementCount),
       // Mobile viewport results, mirroring the desktop structure.
       mobile_violations_total: mobileRequired.total,
       mobile_violations_by_impact: mobileRequired.by_impact,
@@ -376,56 +460,111 @@ async function scanSite(site) {
       mobile_reach_violations_by_rule: mobileReach.by_rule,
       mobile_reach_violations_rule_impact: mobileReach.by_rule_impact,
     };
-  } catch (err) {
-    // A failure on one site must not abort the entire run. Record the
-    // error so the report can display "scan failed" for this site.
-    console.error(`  [${site.slug}] ERROR: ${err.message}`);
-
-    const errorResult = {
-      month,
-      scanned_at: scannedAt,
-      axe_version: axeVersion,
-      site: site.slug,
-      name: site.name,
-      campus: site.campus,
-      type: site.type,
-      category: site.category,
-      url: site.url,
-      status: "error",
-      error: err.message,
-    };
-
-    await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(errorResult, null, 2));
-
-    return {
-      ...errorResult,
-      element_count: 0,
-      violations_total: 0,
-      violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-      violations_by_rule: {},
-      violations_rule_impact: {},
-      reach_violations_total: 0,
-      reach_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-      reach_violations_by_rule: {},
-      reach_violations_rule_impact: {},
-      error_density: 0,
-      mobile_violations_total: 0,
-      mobile_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-      mobile_violations_by_rule: {},
-      mobile_violations_rule_impact: {},
-      mobile_reach_violations_total: 0,
-      mobile_reach_violations_by_impact: {
-        critical: 0,
-        serious: 0,
-        moderate: 0,
-        minor: 0,
-        unknown: 0,
-      },
-      mobile_reach_violations_by_rule: {},
-      mobile_reach_violations_rule_impact: {},
-    };
   } finally {
     if (context) await context.close();
+  }
+}
+
+// Build (and archive) the error record for a site whose scan failed after all
+// retries. Mirrors the success summary shape with zeroed counters so the report
+// and updateHistory consume ok/error rows uniformly. `mode` is the render mode
+// of the final attempt, matching the render_mode success rows record.
+async function buildErrorResult(site, err, mode) {
+  console.error(`  [${site.slug}] ERROR: ${err.message}`);
+
+  const errorResult = {
+    month,
+    scanned_at: scannedAt,
+    axe_version: axeVersion,
+    site: site.slug,
+    name: site.name,
+    campus: site.campus,
+    type: site.type,
+    category: site.category,
+    url: site.url,
+    status: "error",
+    render_mode: mode,
+    error: err.message,
+  };
+
+  await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(errorResult, null, 2));
+
+  return {
+    ...errorResult,
+    element_count: 0,
+    violations_total: 0,
+    violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+    violations_by_rule: {},
+    violations_rule_impact: {},
+    reach_violations_total: 0,
+    reach_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+    reach_violations_by_rule: {},
+    reach_violations_rule_impact: {},
+    error_density: 0,
+    mobile_violations_total: 0,
+    mobile_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
+    mobile_violations_by_rule: {},
+    mobile_violations_rule_impact: {},
+    mobile_reach_violations_total: 0,
+    mobile_reach_violations_by_impact: {
+      critical: 0,
+      serious: 0,
+      moderate: 0,
+      minor: 0,
+      unknown: 0,
+    },
+    mobile_reach_violations_by_rule: {},
+    mobile_reach_violations_rule_impact: {},
+  };
+}
+
+// A thrown error worth a headed retry: the fallback is enabled and the status
+// looks like a bot/WAF block rather than a genuine 404/500.
+const isBlock = (err) => HEADED_FALLBACK && BLOCK_STATUSES.has(err.httpStatus);
+
+const pause = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Run one scan attempt, converting any failure into an archived error record
+// so a doomed retry never rejects out of the worker.
+async function retryScan(site, browserForRetry, mode) {
+  try {
+    return await scanWith(site, browserForRetry, mode);
+  } catch (err) {
+    return buildErrorResult(site, err, mode);
+  }
+}
+
+// Orchestrate one site: scan headless first, then apply targeted retries.
+//  • Bot-block (403 etc.)  → retry once on a real headed browser, whose genuine
+//    fingerprint clears Akamai/Cloudflare bot detection (e.g. all ucmerced.edu).
+//  • Transient nav timeout → retry once more on the headless fleet browser
+//    (e.g. sio.ucsd.edu occasionally stalls its initial load).
+// Anything still failing after its one retry is recorded as an error.
+async function scanSite(site) {
+  console.log(`Scanning ${site.name} (${site.url}) ...`);
+  try {
+    return await scanWith(site, browser, "headless");
+  } catch (err) {
+    if (isBlock(err)) {
+      console.log(`  [${site.slug}] blocked (HTTP ${err.httpStatus}); retrying on headed ...`);
+      // A headed-launch failure (channel not installed, no display) is an
+      // infra problem, not a site problem: record the site's original block
+      // error rather than rejecting out of the worker and killing the run.
+      let headed;
+      try {
+        headed = await getHeadedBrowser();
+      } catch (launchErr) {
+        console.error(`  Headed ${HEADED_CHANNEL} launch failed: ${launchErr.message}`);
+        return buildErrorResult(site, err, "headless");
+      }
+      return retryScan(site, headed, "headed");
+    }
+    if (err.name === "TimeoutError") {
+      console.log(`  [${site.slug}] navigation timed out; retrying once ...`);
+      await pause(2000);
+      return retryScan(site, browser, "headless");
+    }
+    return buildErrorResult(site, err, "headless");
   }
 }
 
@@ -443,19 +582,25 @@ async function worker() {
 await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
 await browser.close();
+// Close the headed fallback browser too, but only if a blocked site actually
+// triggered its launch.
+if (headedBrowserPromise) {
+  const headed = await headedBrowserPromise.catch(() => null);
+  if (headed) await headed.close();
+}
 
 // Append (or replace) this month's rows in history.json.
 await updateHistory(results);
 
 // Warn about violation rules that have no friendly description in the report.
-const seenRules = new Set(
-  results.flatMap((r) => [
-    ...Object.keys(r.violations_by_rule || {}),
-    ...Object.keys(r.reach_violations_by_rule || {}),
-    ...Object.keys(r.mobile_violations_by_rule || {}),
-    ...Object.keys(r.mobile_reach_violations_by_rule || {}),
-  ]),
-);
+const keysOf = (obj) => Object.keys(obj || {});
+const ruleKeys = (r) => [
+  ...keysOf(r.violations_by_rule),
+  ...keysOf(r.reach_violations_by_rule),
+  ...keysOf(r.mobile_violations_by_rule),
+  ...keysOf(r.mobile_reach_violations_by_rule),
+];
+const seenRules = new Set(results.flatMap(ruleKeys));
 const uncovered = [...seenRules].filter((id) => !RULE_DESCRIPTIONS[id]).sort();
 if (uncovered.length) {
   console.warn(`\n⚠  ${uncovered.length} violation rule(s) missing from RULE_DESCRIPTIONS:`);
