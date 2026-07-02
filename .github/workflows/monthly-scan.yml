@@ -57,11 +57,22 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-${{ hashFiles('package-lock.json') }}
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      # chromium runs the fleet; chrome (real Google Chrome) is the headed
+      # fallback for bot-managed sites (e.g. Akamai on ucmerced.edu) that deny
+      # headless Chrome on fingerprint. See scan/run.mjs for the fallback logic.
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium chrome
 
+      # Run under a virtual display (xvfb) so the headed-Chrome fallback has a
+      # screen on the headless runner. The screen is sized above the scan's
+      # 1440x900 desktop viewport so headed windows aren't clamped. Sites that
+      # never trip the fallback stay fully headless and ignore the display.
       - name: Run accessibility scan
-        run: node scan/run.mjs
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" node scan/run.mjs
+        env:
+          # Token UC Merced whitelists in Akamai; kept out of the repo. Unset in
+          # forks / PRs without the secret, which simply falls back to headed.
+          SCAN_UA_TOKEN: ${{ secrets.SCAN_UA_TOKEN }}
 
       - name: Commit results
         run: |
