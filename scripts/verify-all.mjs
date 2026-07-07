@@ -84,7 +84,10 @@ async function scrollThrough(page) {
   await page.evaluate(async () => {
     const step = 400;
     const delay = 40;
-    for (let y = 0; y < document.body.scrollHeight; y += step) {
+    // Same cap as scan/run.mjs — keeps an infinite-scroll page from
+    // trapping the loop (scrollHeight is re-read each iteration).
+    const maxScroll = 30000;
+    for (let y = 0; y < document.body.scrollHeight && y < maxScroll; y += step) {
       window.scrollTo(0, y);
       await new Promise((r) => setTimeout(r, delay));
     }
@@ -113,7 +116,11 @@ async function scanDesktopOnly(site) {
   }
 }
 
-// NEW method: mobile first, then resize to desktop before scan.
+// NEW method: mirror scan/run.mjs step for step — load at mobile width,
+// scroll and run the mobile axe pass, then resize to desktop, scroll again,
+// and run the desktop pass. The mobile results are discarded (this tool
+// diffs desktop numbers), but the pass still runs so the page reaches the
+// desktop scan in exactly the same state as the production pipeline.
 async function scanMobileFirst(site) {
   const ctx = await browser.newContext({
     userAgent: UA,
@@ -123,6 +130,8 @@ async function scanMobileFirst(site) {
   try {
     await gotoForgiving(page, site.url);
     await page.waitForTimeout(1500);
+    await scrollThrough(page);
+    await runAxe(page);
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.evaluate(() => window.dispatchEvent(new Event("resize")));
     await page.waitForTimeout(1500);

@@ -29,11 +29,15 @@ permissions:
 
 jobs:
   comment:
+    # Fork PRs are skipped: their GITHUB_TOKEN is read-only, so the comment
+    # upsert would fail anyway. (Cloudflare only builds branches on this
+    # repo, so forks get no preview deployment to link either.)
     if: |
       (github.event_name == 'check_run' &&
         github.event.check_run.conclusion == 'success' &&
         startsWith(github.event.check_run.name, 'Workers Builds:')) ||
-      github.event_name == 'pull_request'
+      (github.event_name == 'pull_request' &&
+        github.event.pull_request.head.repo.fork == false)
     runs-on: ubuntu-latest
     env:
       CF_ACCOUNT: 547c90e13da9904d9a344399ade3fb12

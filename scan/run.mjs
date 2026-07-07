@@ -20,7 +20,8 @@ let sites = JSON.parse(await readFile(join(__dirname, "sites.json"), "utf-8"));
 
 // Optional filter flags for selective re-scans / local iteration.
 // Values match the raw sites.json fields, not the UI's plural chip
-// labels: type accepts homepage, admissions, school, division.
+// labels: type accepts homepage, admissions, school, division, library,
+// it, disability, registrar, financial-aid, health, and housing.
 //   --type=homepage,admissions    Only scan sites matching these types.
 //   --campus=berkeley,ucla        Only scan sites on these campuses.
 //   --slug=berkeley-haas          Only scan specific sites by slug.
@@ -268,7 +269,13 @@ async function scrollFullPage(page) {
   await page.evaluate(async () => {
     const step = 400;
     const delay = 40;
-    for (let y = 0; y < document.body.scrollHeight; y += step) {
+    // Cap the total distance: scrollHeight is re-read every iteration, so a
+    // page that lazy-appends content as it scrolls (infinite feed) would
+    // otherwise grow the goalpost forever — and page.evaluate has no
+    // timeout, so one such site would hang its worker until the workflow's
+    // job timeout killed the entire run.
+    const maxScroll = 30000;
+    for (let y = 0; y < document.body.scrollHeight && y < maxScroll; y += step) {
       window.scrollTo(0, y);
       await new Promise((r) => setTimeout(r, delay));
     }
