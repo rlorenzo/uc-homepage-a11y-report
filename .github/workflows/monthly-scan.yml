@@ -18,9 +18,10 @@ concurrency:
 jobs:
   scan-and-deploy:
     runs-on: ubuntu-latest
-    # 112 sites at concurrency 5 runs ~10-12 min; this ceiling stops a
-    # pathological run (hung browser, bot-gated site) from burning CI
-    # minutes while still leaving headroom for the occasional slow tail.
+    # The full fleet (183 sites, see scan/sites.json) at concurrency 5 runs
+    # ~10-15 min; this ceiling stops a pathological run (hung browser,
+    # bot-gated site) from burning CI minutes while still leaving headroom
+    # for the occasional slow tail. Revisit it if the fleet grows further.
     timeout-minutes: 30
     environment:
       name: github-pages
