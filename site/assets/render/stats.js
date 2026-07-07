@@ -118,7 +118,9 @@ function buildTotalCard(statGrid, view) {
   if (mobileViolationsTotal > 0) {
     const footnote = document.createElement("p");
     footnote.className = "stat-mobile-footnote";
-    footnote.textContent = `${mobileViolationsTotal.toLocaleString()} mobile issues across all sites`;
+    // "in view" not "across all sites" — the total is computed from the
+    // filtered rows, so the copy must scope itself the same way.
+    footnote.textContent = `${mobileViolationsTotal.toLocaleString()} mobile issues across the sites in view`;
     card.appendChild(footnote);
   }
   return card;

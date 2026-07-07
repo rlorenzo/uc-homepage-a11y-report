@@ -75,6 +75,19 @@ function naCell() {
   return td;
 }
 
+// Columns whose displayed value combines fields need a matching sort
+// accessor — the Reach column shows desktop + mobile reach together, so
+// sorting on the raw desktop field alone would misorder rows whenever
+// mobile counts differ.
+const SORT_ACCESSORS = {
+  reach_violations_total: (r) =>
+    (r.reach_violations_total ?? 0) + (r.mobile_reach_violations_total ?? 0),
+};
+
+// ?? 0 keeps error rows (which lack the numeric fields) from
+// poisoning the sort comparator if they slip past the failed check.
+const sortValue = (row, key) => SORT_ACCESSORS[key]?.(row) ?? row[key] ?? 0;
+
 function sortRows(rows, key, dir) {
   return [...rows].sort((a, b) => {
     // Failed scans always sink to the bottom of any sort.
@@ -87,10 +100,8 @@ function sortRows(rows, key, dir) {
       const bv = siteDisplayName(b).toLowerCase();
       return dir === "asc" ? av.localeCompare(bv) : bv.localeCompare(av);
     }
-    // ?? 0 keeps error rows (which lack the numeric fields) from
-    // poisoning the sort comparator if they slip past the failed check.
-    const av = a[key] ?? 0;
-    const bv = b[key] ?? 0;
+    const av = sortValue(a, key);
+    const bv = sortValue(b, key);
     return dir === "asc" ? av - bv : bv - av;
   });
 }
