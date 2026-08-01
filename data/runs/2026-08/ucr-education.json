@@ -1,0 +1,3854 @@
+{
+  "month": "2026-08",
+  "scanned_at": "2026-08-01T14:33:04.716Z",
+  "axe_version": "4.11.4",
+  "site": "ucr-education",
+  "name": "UC Riverside School of Education",
+  "campus": "ucr",
+  "type": "school",
+  "category": "education",
+  "url": "https://education.ucr.edu",
+  "render_mode": "headless",
+  "element_count": 717,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"ecgo7s-responsive-menu\" data-dropdown-menu=\"7c6yq7-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"ecgo7s-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"wer7ev-responsive-me...\" data-dropdown-menu=\"f8medz-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"audience-button is-dropdown-submenu-parent opens-left\" role=\"none\" aria-controls=\"g7h0c1-acc-menu\" aria-expanded=\"false\" id=\"pzine4-acc-menu-link\">",
+                  "target": [
+                    "#pzine4-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"ecgo7s-responsive-menu\" data-dropdown-menu=\"7c6yq7-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"ecgo7s-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"x28eh7-acc-menu\" aria-expanded=\"false\" id=\"f70hzg-acc-menu-link\">",
+                  "target": [
+                    "#f70hzg-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"e4z03y-acc-menu\" aria-expanded=\"false\" id=\"cfso2v-acc-menu-link\">",
+                  "target": [
+                    "#cfso2v-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"yw5sww-acc-menu\" aria-expanded=\"false\" id=\"223z0c-acc-menu-link\">",
+                  "target": [
+                    "#\\32 23z0c-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"vn78tk-acc-menu\" aria-expanded=\"false\" id=\"g7tow0-acc-menu-link\">",
+                  "target": [
+                    "#g7tow0-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"opuwcu-acc-menu\" aria-expanded=\"false\" id=\"6ken74-acc-menu-link\">",
+                  "target": [
+                    "#\\36 ken74-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"wer7ev-responsive-me...\" data-dropdown-menu=\"f8medz-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        }
+      ]
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_blank\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Quick Links\">Quick Links</a>",
+          "target": [
+            "#pzine4-acc-menu-link > a[aria-label=\"Quick Links\"][href=\"\"][aria-haspopup=\"true\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"About SOE\">About SOE</a>",
+          "target": [
+            "a[aria-label=\"About SOE\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Prospective Students\">Prospective Students</a>",
+          "target": [
+            "a[aria-label=\"Prospective Students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Current Students\">Current Students</a>",
+          "target": [
+            "a[aria-label=\"Current Students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Faculty &amp; Research\">Faculty &amp; Research</a>",
+          "target": [
+            "a[aria-label=\"Faculty & Research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/soe-community\" data-drupal-link-system-path=\"node/1719\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"SOE Community\">SOE Community</a>",
+          "target": [
+            "a[aria-label=\"SOE Community\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003da5",
+                "bgColor": "#ffb81c",
+                "contrastRatio": 5.48,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"site-legal-footer\">",
+                  "target": [
+                    ".site-legal-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003da5",
+                "bgColor": "#ffb81c",
+                "contrastRatio": 5.48,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"site-legal-footer\">",
+                  "target": [
+                    ".site-legal-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003da5",
+                "bgColor": "#ffb81c",
+                "contrastRatio": 5.48,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"site-legal-footer\">",
+                  "target": [
+                    ".site-legal-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#003da5",
+                "bgColor": "#ffb81c",
+                "contrastRatio": 5.48,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"site-legal-footer\">",
+                  "target": [
+                    ".site-legal-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.48 (foreground color: #003da5, background color: #ffb81c, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button audience-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversideaudiencesearchblock > .google-search > .audience-search-button[data-open=\"gscSearchFormModal\"][aria-controls=\"gscSearchFormModal\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p></div>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the UCR Teacher Education Program</p></div>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the UCR Teacher Education Program</p>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.6pt (20.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/\"> School of Education </a>",
+          "target": [
+            ".masthead-title > a[href=\"/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"slogan\">Educators are liberators because knowledge is transformative.</p>",
+          "target": [
+            ".slogan"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cell small-order-3 medium-order-3 main-nav-bar\">",
+                  "target": [
+                    ".main-nav-bar"
+                  ]
+                },
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"About SOE\">About SOE</a>",
+          "target": [
+            "a[aria-label=\"About SOE\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cell small-order-3 medium-order-3 main-nav-bar\">",
+                  "target": [
+                    ".main-nav-bar"
+                  ]
+                },
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Prospective Students\">Prospective Students</a>",
+          "target": [
+            "a[aria-label=\"Prospective Students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cell small-order-3 medium-order-3 main-nav-bar\">",
+                  "target": [
+                    ".main-nav-bar"
+                  ]
+                },
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Current Students\">Current Students</a>",
+          "target": [
+            "a[aria-label=\"Current Students\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cell small-order-3 medium-order-3 main-nav-bar\">",
+                  "target": [
+                    ".main-nav-bar"
+                  ]
+                },
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"\" target=\"_self\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Faculty &amp; Research\">Faculty &amp; Research</a>",
+          "target": [
+            "a[aria-label=\"Faculty & Research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"cell small-order-3 medium-order-3 main-nav-bar\">",
+                  "target": [
+                    ".main-nav-bar"
+                  ]
+                },
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 1440px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/soe-community\" data-drupal-link-system-path=\"node/1719\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"SOE Community\">SOE Community</a>",
+          "target": [
+            "a[aria-label=\"SOE Community\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.6pt (44.8px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"slider-text-bg-container hs-right\">",
+                  "target": [
+                    "#slick-slide02 > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"slider-title\">\n            Education in Motion    </div>",
+          "target": [
+            "#slick-slide02 > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container > .slider-text-container > .slider-text-area > .slider-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.8pt (22.4px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"slider-subtitle\">\n            Listen to how our work impacts our community. Follow our podcast on Apple, Spotify or other podcast platforms.    </div>",
+          "target": [
+            "#slick-slide02 > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container > .slider-text-container > .slider-text-area > .slider-subtitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.1pt (40.176px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 aria-level=\"1\" class=\"text-align-center\" style=\"margin-top:10px !important;margin-bottom:0px !important;padding-bottom:0px !important\">UCR School of Education</h2>",
+          "target": [
+            "h2[aria-level=\"1\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.5pt (26px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container basic-block full\">",
+                  "target": [
+                    ".ucr-custom-block-custom-paddings > .basic-block.full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:#ffb81c;line-height:1.4em;\">Our mission is to advance equitable educational systems and practices, driven by our core values of equity, evidence, excellence, community, critical thinking, and compassion.</span>",
+          "target": [
+            "h4 > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.1pt (40.176px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">Upcoming Events</span>",
+          "target": [
+            ".layout__region--column-1.layout__region > .ucr-custom-block:nth-child(1) > .basic-block.full.grid-container > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"event-title\">TEP Bilingual Authorization Information Session</h2>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > header > .event-title"
+                  ]
+                },
+                {
+                  "html": "<img class=\"event-img\" height=\"225\" width=\"225\" alt=\"Image of TEP Bilingu...\" srcset=\"https://localist-ima...\" src=\"https://localist-ima...\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > header > .event-img[height=\"225\"][width=\"225\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">TEP Bilingual Authorization Information Session</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > header > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p></div>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"event-title\">TEP Information Session Webinar</h2>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > header > .event-title"
+                  ]
+                },
+                {
+                  "html": "<img class=\"event-img\" height=\"225\" width=\"225\" alt=\"Image of TEP Informa...\" srcset=\"https://localist-ima...\" src=\"https://localist-ima...\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > header > .event-img[height=\"225\"][width=\"225\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">TEP Information Session Webinar</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > header > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the UCR Teacher Education Program</p></div>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the UCR Teacher Education Program</p>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.1pt (40.176px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">SOE News</span>",
+          "target": [
+            ".layout__region--column-2.layout__region > .ucr-custom-block:nth-child(1) > .basic-block.full.grid-container > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.1pt (40.176px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">SOE By the Numbers</span>",
+          "target": [
+            ".margin-bottom-1 > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "75.6pt (100.8px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            74    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.9pt (15.84px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            rank of Best Graduate Education Programs in the nation per U.S. News &amp; World Report    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "75.6pt (100.8px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            100    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.9pt (15.84px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of entering doctoral students receive multiyear fellowships    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "75.6pt (100.8px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            86    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.9pt (15.84px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of students receive grants, scholarships, and fellowships    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "75.6pt (100.8px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            21    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.9pt (15.84px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            million plus dollars in grant money awarded to faculty in the last five years    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "75.6pt (100.8px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            75    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.9pt (15.84px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of first-generation undergraduate students (2025-2026)    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"slider-text-bg-container hs-right\">",
+                  "target": [
+                    ".slide--0.slick__slide.slide > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"slider-title\">\n            SOE Community    </div>",
+          "target": [
+            ".slide--0.slick__slide.slide > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container > .slider-text-container > .slider-text-area > .slider-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.8pt (22.4px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"slider-text-bg-container hs-right\">",
+                  "target": [
+                    ".slide--0.slick__slide.slide > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"slider-subtitle\">\n            SOE Community extends far beyond the classroom. We invite you to learn more, give, join, participate and help cultivate our mission beyond the walls of Sproul Hall.    </div>",
+          "target": [
+            ".slide--0.slick__slide.slide > .paragraph--type--carousel-slider.carousel-slider.paragraph > .hs-right.slider-text-bg-container > .slider-text-container > .slider-text-area > .slider-subtitle"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>School of Education</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\">            900 University Ave.\n            <br>1124 Sproul Hall             <br>Riverside, CA 92521             </a>",
+          "target": [
+            ".address_2 > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: 951-827- 5802<br>                                        </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\"> Find Us</a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Related Links</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversiderelatedlinks > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/\" target=\"_blank\">UCR Admissions</a>",
+          "target": [
+            "a[href$=\"admissions.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduate.ucr.edu/\" target=\"_blank\">Graduate Division</a>",
+          "target": [
+            "a[href$=\"graduate.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/myucr-login\" target=\"_blank\">MyUCR</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/current-students\" target=\"_blank\">Campus Student Resources</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(4) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://financialaid.ucr.edu/\" target=\"_blank\">UCR Financial Aid website</a>",
+          "target": [
+            "a[href$=\"financialaid.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/jobs\" data-drupal-link-system-path=\"node/276\">Jobs</a>",
+          "target": [
+            "a[href$=\"jobs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/marketing-resources\" title=\"Marketing Resources\" data-drupal-link-system-path=\"node/1086\">Marketing Resources</a>",
+          "target": [
+            "a[href$=\"marketing-resources\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p></div>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the UCR Teacher Education Program</p></div>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the UCR Teacher Education Program</p>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>School of Education</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\">            900 University Ave.\n            <br>1124 Sproul Hall             <br>Riverside, CA 92521             </a>",
+          "target": [
+            ".address_2 > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: 951-827- 5802<br>                                        </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\"> Find Us</a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Related Links</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversiderelatedlinks > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/\" target=\"_blank\">UCR Admissions</a>",
+          "target": [
+            "a[href$=\"admissions.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduate.ucr.edu/\" target=\"_blank\">Graduate Division</a>",
+          "target": [
+            "a[href$=\"graduate.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/myucr-login\" target=\"_blank\">MyUCR</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/current-students\" target=\"_blank\">Campus Student Resources</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(4) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://financialaid.ucr.edu/\" target=\"_blank\">UCR Financial Aid website</a>",
+          "target": [
+            "a[href$=\"financialaid.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/jobs\" data-drupal-link-system-path=\"node/276\">Jobs</a>",
+          "target": [
+            "a[href$=\"jobs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/marketing-resources\" title=\"Marketing Resources\" data-drupal-link-system-path=\"node/1086\">Marketing Resources</a>",
+          "target": [
+            "a[href$=\"marketing-resources\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.6pt (20.8px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"header-sticky-container sticky is-anchored is-at-top\" data-ucr-sticky=\"1\" data-once=\"ucrThemeSticky\" data-resize=\"n537js-sticky\" data-mutate=\"n537js-sticky\" data-sticky=\"jitfne-sticky\" data-events=\"mutate\" style=\"max-width: 375px; margin-top: 0px; bottom: auto; top: 0px;\">",
+                  "target": [
+                    ".header-sticky-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/\"> School of Education </a>",
+          "target": [
+            ".masthead-title > a[href=\"/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 aria-level=\"1\" class=\"text-align-center\" style=\"margin-top:10px !important;margin-bottom:0px !important;padding-bottom:0px !important\">UCR School of Education</h2>",
+          "target": [
+            "h2[aria-level=\"1\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.5pt (26px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"grid-container basic-block full\">",
+                  "target": [
+                    ".ucr-custom-block-custom-paddings > .basic-block.full.grid-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:#ffb81c;line-height:1.4em;\">Our mission is to advance equitable educational systems and practices, driven by our core values of equity, evidence, excellence, community, critical thinking, and compassion.</span>",
+          "target": [
+            "h4 > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">Upcoming Events</span>",
+          "target": [
+            ".layout__region--column-1.layout__region > .ucr-custom-block:nth-child(1) > .basic-block.full.grid-container > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"event-title\">TEP Bilingual Authorization Information Session</h2>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > header > .event-title"
+                  ]
+                },
+                {
+                  "html": "<img class=\"event-img\" height=\"225\" width=\"225\" alt=\"Image of TEP Bilingu...\" srcset=\"https://localist-ima...\" src=\"https://localist-ima...\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > header > .event-img[height=\"225\"][width=\"225\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">TEP Bilingual Authorization Information Session</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > header > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p></div>",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the requirement and benefits of getting a bilingual authorization in Spanish. (Please note: This information session will focus solely on the BILA program)</p>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"event-title\">TEP Information Session Webinar</h2>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > header > .event-title"
+                  ]
+                },
+                {
+                  "html": "<img class=\"event-img\" height=\"225\" width=\"225\" alt=\"Image of TEP Informa...\" srcset=\"https://localist-ima...\" src=\"https://localist-ima...\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > header > .event-img[height=\"225\"][width=\"225\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">TEP Information Session Webinar</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > header > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.8pt (11.7px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\"><p>Come learn about the UCR Teacher Education Program</p></div>",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Come learn about the UCR Teacher Education Program</p>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">SOE News</span>",
+          "target": [
+            ".layout__region--column-2.layout__region > .ucr-custom-block:nth-child(1) > .basic-block.full.grid-container > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"separator-line-gold-after\">SOE By the Numbers</span>",
+          "target": [
+            ".margin-bottom-1 > .grid-padding-x.grid-x > .cell > h2 > .separator-line-gold-after"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "60.0pt (80px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            74    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            rank of Best Graduate Education Programs in the nation per U.S. News &amp; World Report    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(1) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "60.0pt (80px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            100    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of entering doctoral students receive multiyear fellowships    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(2) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "60.0pt (80px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            86    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of students receive grants, scholarships, and fellowships    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(3) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "60.0pt (80px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            21    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            million plus dollars in grant money awarded to faculty in the last five years    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(4) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "60.0pt (80px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-number\">\n                \n            75    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-number"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.2pt (25.6px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"layout path-frontpage node--type-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null\" data-once=\"b-root buBehavior\" data-eu-cookie-compliance-once=\"true\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stat-description\">\n                \n            percent of first-generation undergraduate students (2025-2026)    \n            </div>",
+          "target": [
+            ".paragraph--type--statistic.paragraph.paragraph--view-mode--default:nth-child(5) > .stat > .stat-description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>School of Education</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\">            900 University Ave.\n            <br>1124 Sproul Hall             <br>Riverside, CA 92521             </a>",
+          "target": [
+            ".address_2 > p:nth-child(1) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: 951-827- 5802<br>                                        </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"link-img link-img-location\" href=\"https://campusmap.ucr.edu/?id=2106#!m/830422\" target=\"_blank\"> Find Us</a>",
+          "target": [
+            ".link-img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Related Links</h2>",
+          "target": [
+            "#block-ucr-cnas-1-ucriversiderelatedlinks > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/\" target=\"_blank\">UCR Admissions</a>",
+          "target": [
+            "a[href$=\"admissions.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduate.ucr.edu/\" target=\"_blank\">Graduate Division</a>",
+          "target": [
+            "a[href$=\"graduate.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/myucr-login\" target=\"_blank\">MyUCR</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/current-students\" target=\"_blank\">Campus Student Resources</a>",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"] > .vertical.menu > li:nth-child(4) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://financialaid.ucr.edu/\" target=\"_blank\">UCR Financial Aid website</a>",
+          "target": [
+            "a[href$=\"financialaid.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/jobs\" data-drupal-link-system-path=\"node/276\">Jobs</a>",
+          "target": [
+            "a[href$=\"jobs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/marketing-resources\" title=\"Marketing Resources\" data-drupal-link-system-path=\"node/1086\">Marketing Resources</a>",
+          "target": [
+            "a[href$=\"marketing-resources\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    }
+  ]
+}

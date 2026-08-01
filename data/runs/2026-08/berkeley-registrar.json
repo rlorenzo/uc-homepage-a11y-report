@@ -1,0 +1,747 @@
+{
+  "month": "2026-08",
+  "scanned_at": "2026-08-01T14:33:04.716Z",
+  "axe_version": "4.11.4",
+  "site": "berkeley-registrar",
+  "name": "UC Berkeley Office of the Registrar",
+  "campus": "berkeley",
+  "type": "registrar",
+  "category": "registrar",
+  "url": "https://registrar.berkeley.edu",
+  "render_mode": "headless",
+  "element_count": 774,
+  "violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_98760\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"//classes.berkeley.e...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
+          "target": [
+            "#rs_slidelink_98760"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<rs-layer id=\"slider-3-slide-49-la...\" data-type=\"text\" data-rsp_ch=\"on\" data-xy=\"xo:875px,646px,543px...\" data-text=\"w:normal;l:40,40,30,...\" data-dim=\"w:290px,290px,205px,...\" data-frame_1=\"sR:10;\" data-frame_999=\"o:0;st:w;sR:8690;\" style=\"z-index: 12; font-fa...\" class=\"rs-layer\" ...>",
+          "target": [
+            "#slider-3-slide-49-layer-7"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.8pt (29px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"slider-3-slide-49-la...\" class=\"rs-layer\" href=\"https://twitter.com/...\" target=\"_self\" rel=\"nofollow\" data-type=\"text\" data-rsp_ch=\"on\" data-xy=\"xo:875px,647px,543px...\" data-text=\"w:normal;s:32,32,26,...\" data-dim=\"w:276px,276px,188px,...\" data-frame_1=\"sR:10;\" data-idcheck=\"true\" ...>",
+          "target": [
+            "#slider-3-slide-49-layer-8"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.2pt (26.992px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>From admission to graduation, the Office of the Registrar helps students navigate their Berkeley journey.</strong>",
+          "target": [
+            ".intro:nth-child(3) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6125 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Important dates in the academic year. </span></div>",
+                  "target": [
+                    ".eg-post-6125.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Important dates in the academic year. </span>",
+          "target": [
+            ".eg-post-6125.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6120 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Critical deadlines for enrolling in classes and related tasks.</span></div>",
+                  "target": [
+                    ".eg-post-6120.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Critical deadlines for enrolling in classes and related tasks.</span>",
+          "target": [
+            ".eg-post-6120.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6132 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">The process to officially register for courses at UC Berkeley.</span></div>",
+                  "target": [
+                    ".eg-post-6132.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">The process to officially register for courses at UC Berkeley.</span>",
+          "target": [
+            ".eg-post-6132.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6134 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Explore residency for tuition purposes and how to apply for residency.</span></div>",
+                  "target": [
+                    ".eg-post-6134.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Explore residency for tuition purposes and how to apply for residency.</span>",
+          "target": [
+            ".eg-post-6134.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6133 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">How to order transcripts and related documents.</span></div>",
+                  "target": [
+                    ".eg-post-6133.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">How to order transcripts and related documents.</span>",
+          "target": [
+            ".eg-post-6133.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6131 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Details about physical and electronic diplomas for graduates.</span></div>",
+                  "target": [
+                    ".eg-post-6131.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Details about physical and electronic diplomas for graduates.</span>",
+          "target": [
+            ".eg-post-6131.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_98760\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"//classes.berkeley.e...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
+          "target": [
+            "#rs_slidelink_98760"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<rs-layer id=\"slider-3-slide-49-la...\" data-type=\"text\" data-rsp_ch=\"on\" data-xy=\"xo:875px,646px,543px...\" data-text=\"w:normal;l:40,40,30,...\" data-dim=\"w:290px,290px,205px,...\" data-frame_1=\"sR:10;\" data-frame_999=\"o:0;st:w;sR:8690;\" style=\"z-index: 12; font-fa...\" class=\"rs-layer\" ...>",
+          "target": [
+            "#slider-3-slide-49-layer-7"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"slider-3-slide-49-la...\" class=\"rs-layer\" href=\"https://twitter.com/...\" target=\"_self\" rel=\"nofollow\" data-type=\"text\" data-rsp_ch=\"on\" data-xy=\"xo:875px,647px,543px...\" data-text=\"w:normal;s:32,32,26,...\" data-dim=\"w:276px,276px,188px,...\" data-frame_1=\"sR:10;\" data-idcheck=\"true\" ...>",
+          "target": [
+            "#slider-3-slide-49-layer-8"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.2pt (26.992px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"intro\">The Office of the Registrar provides support services for registration, transferring credits, transcripts, residency requirements, veterans benefits, and much more. We also assist faculty and staff with grading policies, procedures, training, and course and classroom management.</p>",
+          "target": [
+            ".intro:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6125 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Important dates in the academic year. </span></div>",
+                  "target": [
+                    ".eg-post-6125.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Important dates in the academic year. </span>",
+          "target": [
+            ".eg-post-6125.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6120 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Critical deadlines for enrolling in classes and related tasks.</span></div>",
+                  "target": [
+                    ".eg-post-6120.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Critical deadlines for enrolling in classes and related tasks.</span>",
+          "target": [
+            ".eg-post-6120.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6132 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">The process to officially register for courses at UC Berkeley.</span></div>",
+                  "target": [
+                    ".eg-post-6132.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">The process to officially register for courses at UC Berkeley.</span>",
+          "target": [
+            ".eg-post-6132.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6134 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Explore residency for tuition purposes and how to apply for residency.</span></div>",
+                  "target": [
+                    ".eg-post-6134.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Explore residency for tuition purposes and how to apply for residency.</span>",
+          "target": [
+            ".eg-post-6134.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6133 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">How to order transcripts and related documents.</span></div>",
+                  "target": [
+                    ".eg-post-6133.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">How to order transcripts and related documents.</span>",
+          "target": [
+            ".eg-post-6133.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-content eg-post-6131 eg-bar_bblue-element-24\"><span style=\"display: block;min-height: 80px;\">Details about physical and electronic diplomas for graduates.</span></div>",
+                  "target": [
+                    ".eg-post-6131.eg-bar_bblue-element-24.esg-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"display: block;min-height: 80px;\">Details about physical and electronic diplomas for graduates.</span>",
+          "target": [
+            ".eg-post-6131.eg-bar_bblue-element-24.esg-content > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    }
+  ]
+}

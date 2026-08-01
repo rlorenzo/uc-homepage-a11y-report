@@ -1,0 +1,3747 @@
+{
+  "month": "2026-08",
+  "scanned_at": "2026-08-01T14:33:04.716Z",
+  "axe_version": "4.11.4",
+  "site": "ucla-law",
+  "name": "UCLA School of Law",
+  "campus": "ucla",
+  "type": "school",
+  "category": "law",
+  "url": "https://law.ucla.edu",
+  "render_mode": "headless",
+  "element_count": 1456,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#ffd100",
+                "contrastRatio": 3.42,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"region-alerts\">\n\t\n            <div>HELP US IMPROVE OUR WEBSITE&nbsp;<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a></div>\n      \n\n</div>",
+                  "target": [
+                    ".region-alerts"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>HELP US IMPROVE OUR WEBSITE&nbsp;<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a></div>",
+          "target": [
+            ".region-alerts > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#ffd100",
+                "contrastRatio": 3.42,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"region-alerts\">\n\t\n            <div>HELP US IMPROVE OUR WEBSITE&nbsp;<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a></div>\n      \n\n</div>",
+                  "target": [
+                    ".region-alerts"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a>",
+          "target": [
+            "a[href$=\"feedback\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "scrollable-region-focusable",
+      "impact": "serious",
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ],
+      "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/scrollable-region-focusable?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element should have focusable content"
+            },
+            {
+              "id": "focusable-element",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element should be focusable"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"off-canvas-bar\" id=\"off-canvas-bar\" tabindex=\"-1\">",
+          "target": [
+            "#off-canvas-bar"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"popup-text\" class=\"eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\" aria-hidden=\"false\">",
+          "target": [
+            ".eu-cookie-compliance-banner"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"home-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null js-home-scrolling\" data-eu-cookie-compliance-once=\"true\" style=\"\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/admissions\" data-drupal-link-system-path=\"node/79696\">Apply</a>",
+          "target": [
+            ".audience-nav__item:nth-child(1) > a[data-drupal-link-system-path=\"node/79696\"][href$=\"admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"home-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null js-home-scrolling\" data-eu-cookie-compliance-once=\"true\" style=\"\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://giving.ucla.edu/campaign/Donate.aspx?SiteNum=5\" target=\"_blank\">Give</a>",
+          "target": [
+            ".audience-nav__item:nth-child(2) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "equalRatio",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"home-page eu-cookie-compliance-popup-open eu-cookie-compliance-status-null js-home-scrolling\" data-eu-cookie-compliance-once=\"true\" style=\"\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has a 1:1 contrast ratio with the background"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://my.law.ucla.edu/\" target=\"_blank\">MyLaw</a>",
+          "target": [
+            ".audience-nav__item:nth-child(3) > a[href$=\"my.law.ucla.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Pursue Your Passion</span>",
+          "target": [
+            ".masthead-home__callout-expanded > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "22.5pt (30px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"masthead-home__callout-expanded-copy\">\n\t\t\t\t\t\tElite faculty.\nInnovative curriculum.\nInclusive community.\nEndless opportunity.\n\t\t\t\t\t</p>",
+          "target": [
+            ".masthead-home__callout-expanded-copy"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news\"> All News</a>",
+          "target": [
+            ".section-header > a[href$=\"news\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Areas of Focus</span>",
+          "target": [
+            ".areas-of-focus__content > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"areas-of-focus__heading\">Breadth and Depth</h2>",
+          "target": [
+            ".areas-of-focus__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"areas-of-focus__copy\">",
+          "target": [
+            ".areas-of-focus__copy"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Explore all Areas</span>",
+          "target": [
+            ".arrow-button[href$=\"areas\"] > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"areas-of-focus__tile-heading\">Intellectual Property</div>",
+          "target": [
+            ".slick-current > div > .areas-of-focus__item > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"areas-of-focus__tile-heading\">Trial Advocacy</div>",
+          "target": [
+            "div[data-slick-index=\"1\"] > div > .areas-of-focus__item > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Centers of Excellence</h2>",
+          "target": [
+            ".centers__body > .fade-item.faded-in > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".centers__body > .fade-item.faded-in > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Learn More</span>",
+          "target": [
+            ".arrow-button[href$=\"centers\"] > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "33.8pt (45px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__image image\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/2020-05/DSC_0195.jpg?itok=5-kB2OI_\" role=\"presentation\" ...>",
+                  "target": [
+                    ".degree-types__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Pursue Your Passion</h2>",
+          "target": [
+            ".degree-types__content > .fade-item.faded-in > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__image image\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/2020-05/DSC_0195.jpg?itok=5-kB2OI_\" role=\"presentation\" ...>",
+                  "target": [
+                    ".degree-types__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".degree-types__content > .fade-item.faded-in > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile[href$=\"jd-program\"]:nth-child(1) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">J.D. Program</span>",
+          "target": [
+            ".degree-types__tile[href$=\"jd-program\"]:nth-child(1) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(2) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">LL.M. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(2) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(3) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">M.L.S. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(3) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(4) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">S.J.D. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(4) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(5) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Executive Education</span>",
+          "target": [
+            ".degree-types__tile:nth-child(5) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Events</span>",
+          "target": [
+            ".events__content > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events\">See All</a>",
+          "target": [
+            ".section-header > a[href$=\"events\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>09</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .date > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>09</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .date > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"times\">5:00 PM - 4:59 PM</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .event-meta > .times"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"location\">UCLA School of Law</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .event-meta > .location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-title\">25 Years After 9/11: Reimagining Freedom, Justice, and Security</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>09</span>",
+          "target": [
+            ".event-item.hidden.fade-item > div > .event-info > .date > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "52.5pt (70px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>22</span>",
+          "target": [
+            ".event-item.hidden.fade-item > div > .event-info > .date > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"times\">4:30 PM - 8:00 PM</div>",
+          "target": [
+            ".event-item.hidden.fade-item > div > .event-info > .event-meta > .times"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"location\">UCLA School of Law</div>",
+          "target": [
+            ".event-item.hidden.fade-item > div > .event-info > .event-meta > .location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-title\">Careers in Tech Law 2026</div>",
+          "target": [
+            ".event-item.hidden.fade-item > div > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            "a[href$=\"careers-tech-law-2026\"] > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions\" data-drupal-link-system-path=\"node/79696\"><span>Apply</span></a>",
+                  "target": [
+                    ".footer-cta__ctas > a[data-drupal-link-system-path=\"node/79696\"][href$=\"admissions\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Apply</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/79696\"][href$=\"admissions\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/meet-us/attend-tour-or-info-session\" data-drupal-link-system-path=\"node/80986\"><span>Visit</span></a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/80986\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Visit</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80986\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/meet-us\" data-drupal-link-system-path=\"node/80981\"><span>Meet Us</span></a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/80981\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Meet Us</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80981\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about-ucla-law\" data-drupal-link-system-path=\"node/80346\">About UCLA Law</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80346\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news\" data-drupal-link-system-path=\"node/136862\">News</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/136862\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events\" data-drupal-link-system-path=\"node/78541\">Events</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/78541\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/library\" data-drupal-link-system-path=\"node/82116\">Library</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/82116\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/aba-required-disclosures\" data-drupal-link-system-path=\"node/82111\">Consumer Info (ABA Required Disclosures)</a>",
+          "target": [
+            "a[href$=\"aba-required-disclosures\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/alumni-giving\" data-drupal-link-system-path=\"node/80351\">Make a Gift</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80351\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about-ucla-law/school-directory\" target=\"_blank\" data-drupal-link-system-path=\"node/138324\">Directory</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/138324\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/terms-of-use/\">Terms of Use &amp; Privacy Policy</a>",
+          "target": [
+            ".legal__link:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/accessibility\">Accessibility</a>",
+          "target": [
+            ".legal__link:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/site-information\">Copyright Information</a>",
+          "target": [
+            ".legal__link:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucop.edu/institutional-research-academic-planning/content-analysis/academic-planning/licensure-and-certification-disclosures.html\" target=\"_blank\">Licensure &amp; Certification Disclosures</a>",
+          "target": [
+            ".legal__link:nth-child(4) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"legal__copyright\">© Copyright 2026 The Regents of the University of California. UCLA School of Law. All Rights Reserved.</div>",
+          "target": [
+            ".legal__copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "sjd program",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/academics/programs/sjd-program/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/sjd-program\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t<span>S.J.D Program</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    ".primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > a[href$=\"sjd-program\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://law.ucla.edu/academics/degrees/sjd-program\" class=\"degree-types__tile\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/academics/programs/sjd-program\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>S.J.D Program</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(1) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(1) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "events",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/admissions/llm-admissions/llm-program-recruitment-events/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/events?keywords=&events-category%5B0%5D=1181&year=&month=&page=1\" tabindex=\"-1\" class=\"primary-nav__child-item\" has-grandchildren=\"\">",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item[has-grandchildren=\"\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events?keywords=&events-category%5B0%5D=1181&year=&month=&page=1\" tabindex=\"-1\" class=\"primary-nav__child-title\">",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-title"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events\" tabindex=\"-1\" class=\"secondary-nav__item\">\n\t\t\t\t\t<span>Events</span>\n\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    ".secondary-nav__item[href$=\"events\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events\" data-drupal-link-system-path=\"node/78541\">Events</a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/78541\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/admissions/llm-admissions/llm-program-recruitment-events\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Events</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(2) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "contact us",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/admissions/llm-admissions/contact-us/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/master-legal-studies/view-mls-program-guide\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    "li:nth-child(2) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(3) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/alumni-giving/ways-connect/office-external-affairs-development\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(3) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/admissions/llm-admissions/contact-us\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(2) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(5) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "read more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/news/alexander-arnold-honored-hellman-fellowship-talented-assistant-professors-and-earns-recognition-his-research/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/news/recognizing-ucla-laws-public-interest-graduates-who-have-earned-prestigious-fellowships\">",
+                  "target": [
+                    ".news__story:nth-child(2) > .arrow-button--white.arrow-button"
+                  ]
+                },
+                {
+                  "html": "<a class=\"arrow-button arrow-button--white\" href=\"/news/remembering-billy-mills-54-ucla-laws-first-black-graduate-and-titan-la-civic-life\">",
+                  "target": [
+                    ".news__story:nth-child(3) > .arrow-button--white.arrow-button"
+                  ]
+                },
+                {
+                  "html": "<a class=\"arrow-button\" href=\"/events/25-years-after-9/11-reimagining-freedom-justice-and-security\">",
+                  "target": [
+                    ".event-item.fade-item.faded-in:nth-child(1) > div > .arrow-button"
+                  ]
+                },
+                {
+                  "html": "<a class=\"arrow-button\" href=\"/events/careers-tech-law-2026\">\n\t\t<span class=\"arrow-button__icon\">\n\t\t\t<svg class=\"brei-icon brei-icon-arrow\" focusable=\"false\"><use xlink:href=\"#brei-icon-arrow\"></use></svg>\n\t\t</span>\n        <span class=\"arrow-button__title\">Read More</span>\n    </a>",
+                  "target": [
+                    "a[href$=\"careers-tech-law-2026\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/news/alexander-arnold-honored-hellman-fellowship-talented-assistant-professors-and-earns-recognition-his-research\">",
+          "target": [
+            ".news__story:nth-child(1) > .arrow-button--white.arrow-button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#ffd100",
+                "contrastRatio": 3.42,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead-home__callout\" aria-hidden=\"true\">\n\t\t\t\t\t<span>UCLA Law</span>\n\t\t\t\t</div>",
+                  "target": [
+                    ".masthead-home__callout"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 27.0pt (36px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>UCLA Law</span>",
+          "target": [
+            ".masthead-home__callout > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 27.0pt (36px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#2774ae",
+                "bgColor": "#ffd100",
+                "contrastRatio": 3.42,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"region-alerts\">\n\t\n            <div>HELP US IMPROVE OUR WEBSITE&nbsp;<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a></div>\n      \n\n</div>",
+                  "target": [
+                    ".region-alerts"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>HELP US IMPROVE OUR WEBSITE&nbsp;<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a></div>",
+          "target": [
+            ".region-alerts > div"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #2774ae, background color: #ffd100, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"popup-text\" class=\"eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\" aria-hidden=\"false\">",
+          "target": [
+            ".eu-cookie-compliance-banner"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/feedback\">TAKE THE \"ABOUT YOU\" SURVEY TODAY.</a>",
+          "target": [
+            "a[href$=\"feedback\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "26.3pt (35px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"masthead-home__image...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".masthead-home__image.image[role=\"presentation\"]:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"masthead-home__headline\" aria-hidden=\"true\">\n\t\t\t\t\t\n\t\t\t\t\tLawyers. Leaders. \n\t\t\t\t\t\n\t\t\t\t</div>",
+          "target": [
+            ".masthead-home__headline"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Law in the AI era</span>",
+          "target": [
+            "div[data-item=\"1\"] > .home-story__wrapper > article > .home-story__inner > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"home-story__article\">",
+                  "target": [
+                    "div[data-item=\"1\"] > .home-story__wrapper > article"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"home-story__heading\">UCLA Law is harnessing its strengths to meet the AI revolution</h2>",
+          "target": [
+            "div[data-item=\"1\"] > .home-story__wrapper > article > .home-story__inner > .home-story__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"home-story__article\">",
+                  "target": [
+                    "div[data-item=\"1\"] > .home-story__wrapper > article"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "div[data-item=\"1\"] > .home-story__wrapper > article > .home-story__inner > .home-story__copy > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article class=\"home-story__article\">",
+                  "target": [
+                    "div[data-item=\"1\"] > .home-story__wrapper > article"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read the story</span>",
+          "target": [
+            "div[data-item=\"1\"] > .home-story__wrapper > article > .home-story__inner > .arrow-button--white.arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"news__date\">Jul 24, 2026</div>",
+          "target": [
+            ".news__story:nth-child(1) > .news__date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"news__title\">Alexander Arnold is honored with a Hellman Fellowship for talented assistant professors and earns recognition for his research</h2>",
+          "target": [
+            ".news__story:nth-child(1) > .news__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay\"></div>",
+                  "target": [
+                    ".news__articles > .overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".news__story:nth-child(1) > .arrow-button--white.arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Areas of Focus</span>",
+          "target": [
+            ".areas-of-focus__content > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"areas-of-focus__imag...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".areas-of-focus__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"areas-of-focus__heading\">Breadth and Depth</h2>",
+          "target": [
+            ".areas-of-focus__heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"areas-of-focus__imag...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".areas-of-focus__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"areas-of-focus__copy\">",
+          "target": [
+            ".areas-of-focus__copy"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"areas-of-focus__imag...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".areas-of-focus__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Explore all Areas</span>",
+          "target": [
+            ".arrow-button[href$=\"areas\"] > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"areas-of-focus__tile-heading\">Intellectual Property</div>",
+          "target": [
+            ".slick-current > div > .areas-of-focus__item > .areas-of-focus__tile > .areas-of-focus__tile-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Centers of Excellence</h2>",
+          "target": [
+            ".centers__body > .fade-item.faded-in > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".centers__body > .fade-item.faded-in > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"centers__molecule\" style=\"background-image: url('/themes/custom/law/_files/img/molecule.svg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".centers__molecule"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Learn More</span>",
+          "target": [
+            ".arrow-button[href$=\"centers\"] > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__image image\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/2020-05/DSC_0195.jpg?itok=5-kB2OI_\" role=\"presentation\" ...>",
+                  "target": [
+                    ".degree-types__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Pursue Your Passion</h2>",
+          "target": [
+            ".degree-types__content > .fade-item.faded-in > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__image image\" data-src=\"https://law.ucla.edu/sites/default/files/styles/desktop/public/2020-05/DSC_0195.jpg?itok=5-kB2OI_\" role=\"presentation\" ...>",
+                  "target": [
+                    ".degree-types__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".degree-types__content > .fade-item.faded-in > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile[href$=\"jd-program\"]:nth-child(1) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">J.D. Program</span>",
+          "target": [
+            ".degree-types__tile[href$=\"jd-program\"]:nth-child(1) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(2) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">LL.M. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(2) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(3) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">M.L.S. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(3) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(4) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">S.J.D. Program</span>",
+          "target": [
+            ".degree-types__tile:nth-child(4) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"degree-types__tile-i...\" data-src=\"https://law.ucla.edu...\" role=\"presentation\" style=\"background-image: ur...\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(5) > .degree-types__tile-image.image[role=\"presentation\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Executive Education</span>",
+          "target": [
+            ".degree-types__tile:nth-child(5) > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Events</span>",
+          "target": [
+            ".events__content > .section-header > span > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>09</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .date > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>09</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .date > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"times\">5:00 PM - 4:59 PM</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .event-meta > .times"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"location\">UCLA School of Law</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-info > .event-meta > .location"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-title\">25 Years After 9/11: Reimagining Freedom, Justice, and Security</div>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"arrow-button__title\">Read More</span>",
+          "target": [
+            ".event-item.fade-item.faded-in:nth-child(1) > div > .arrow-button > .arrow-button__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions\" data-drupal-link-system-path=\"node/79696\"><span>Apply</span></a>",
+                  "target": [
+                    ".footer-cta__ctas > a[data-drupal-link-system-path=\"node/79696\"][href$=\"admissions\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Apply</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/79696\"][href$=\"admissions\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/meet-us/attend-tour-or-info-session\" data-drupal-link-system-path=\"node/80986\"><span>Visit</span></a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/80986\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Visit</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80986\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/meet-us\" data-drupal-link-system-path=\"node/80981\"><span>Meet Us</span></a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/80981\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Meet Us</span>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80981\"] > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about-ucla-law\" data-drupal-link-system-path=\"node/80346\">About UCLA Law</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80346\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news\" data-drupal-link-system-path=\"node/136862\">News</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/136862\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events\" data-drupal-link-system-path=\"node/78541\">Events</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/78541\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/library\" data-drupal-link-system-path=\"node/82116\">Library</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/82116\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/aba-required-disclosures\" data-drupal-link-system-path=\"node/82111\">Consumer Info (ABA Required Disclosures)</a>",
+          "target": [
+            "a[href$=\"aba-required-disclosures\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/alumni-giving\" data-drupal-link-system-path=\"node/80351\">Make a Gift</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/80351\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"global-footer__image\" style=\"background-image: url('/themes/custom/law/_files/img/_content/events_bg.jpg')\" role=\"presentation\"></div>",
+                  "target": [
+                    ".global-footer__image"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about-ucla-law/school-directory\" target=\"_blank\" data-drupal-link-system-path=\"node/138324\">Directory</a>",
+          "target": [
+            "a[data-drupal-link-system-path=\"node/138324\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/terms-of-use/\">Terms of Use &amp; Privacy Policy</a>",
+          "target": [
+            ".legal__link:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/accessibility\">Accessibility</a>",
+          "target": [
+            ".legal__link:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://www.ucla.edu/site-information\">Copyright Information</a>",
+          "target": [
+            ".legal__link:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucop.edu/institutional-research-academic-planning/content-analysis/academic-planning/licensure-and-certification-disclosures.html\" target=\"_blank\">Licensure &amp; Certification Disclosures</a>",
+          "target": [
+            ".legal__link:nth-child(4) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"js-global-footer\" class=\"global-footer\">",
+                  "target": [
+                    "#js-global-footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"legal__copyright\">© Copyright 2026 The Regents of the University of California. UCLA School of Law. All Rights Reserved.</div>",
+          "target": [
+            ".legal__copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "sjd program",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/academics/programs/sjd-program/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/sjd-program\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t<span>S.J.D Program</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    ".primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > a[href$=\"sjd-program\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://law.ucla.edu/academics/degrees/sjd-program\" class=\"degree-types__tile\">",
+                  "target": [
+                    ".degree-types__tile:nth-child(4)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/academics/programs/sjd-program\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>S.J.D Program</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(1) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(1) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "events",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/admissions/llm-admissions/llm-program-recruitment-events/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/events?keywords=&events-category%5B0%5D=1181&year=&month=&page=1\" tabindex=\"-1\" class=\"primary-nav__child-item\" has-grandchildren=\"\">",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item[has-grandchildren=\"\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events?keywords=&events-category%5B0%5D=1181&year=&month=&page=1\" tabindex=\"-1\" class=\"primary-nav__child-title\">",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-title"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events\" tabindex=\"-1\" class=\"secondary-nav__item\">\n\t\t\t\t\t<span>Events</span>\n\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    ".secondary-nav__item[href$=\"events\"]"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/events\" data-drupal-link-system-path=\"node/78541\">Events</a>",
+                  "target": [
+                    "a[data-drupal-link-system-path=\"node/78541\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/admissions/llm-admissions/llm-program-recruitment-events\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Events</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(2) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "contact us",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/admissions/llm-admissions/contact-us/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/admissions/master-legal-studies/view-mls-program-guide\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    "li:nth-child(2) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(3) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+                  ]
+                },
+                {
+                  "html": "<a href=\"/alumni-giving/ways-connect/office-external-affairs-development\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+                  "target": [
+                    "li:nth-child(5) > .primary-nav__sub[children-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(3) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(4) > .primary-nav__child-item"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/admissions/llm-admissions/contact-us\" tabindex=\"-1\" class=\"primary-nav__child-item\">\n\t\t\t\t\t\t\t\t\t\t\t<span>Contact Us</span>\n\t\t\t\t\t\t\t\t\t\t</a>",
+          "target": [
+            "li:nth-child(2) > .primary-nav__sub[grandchildren-sub-menu=\"\"] > .primary-nav__child-list.clearfix > li:nth-child(5) > .primary-nav__child-item"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "read more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "law.ucla.edu",
+                  "port": "",
+                  "pathname": "/news/alexander-arnold-honored-hellman-fellowship-talented-assistant-professors-and-earns-recognition-his-research/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"arrow-button\" href=\"/events/25-years-after-9/11-reimagining-freedom-justice-and-security\">",
+                  "target": [
+                    ".event-item.fade-item.faded-in:nth-child(1) > div > .arrow-button"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a class=\"arrow-button arrow-button--white\" href=\"/news/alexander-arnold-honored-hellman-fellowship-talented-assistant-professors-and-earns-recognition-his-research\">",
+          "target": [
+            ".news__story:nth-child(1) > .arrow-button--white.arrow-button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}

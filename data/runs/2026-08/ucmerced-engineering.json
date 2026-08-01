@@ -1,0 +1,441 @@
+{
+  "month": "2026-08",
+  "scanned_at": "2026-08-01T14:33:04.716Z",
+  "axe_version": "4.11.4",
+  "site": "ucmerced-engineering",
+  "name": "UC Merced School of Engineering",
+  "campus": "ucmerced",
+  "type": "school",
+  "category": "engineering",
+  "url": "https://engineering.ucmerced.edu",
+  "render_mode": "headed",
+  "element_count": 701,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5f8498",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"html front not-logged-in no-sidebars page-node        form-single-submit-processed\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4 (foreground color: #5f8498, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://myemail.constantcontact.com/NAME-CORRECTION--Professor-Xiaoyi-Lu----UC-Merced-Engineering---Fall-2023-News.html?soid=1135486464446&amp;aid=Pt_7jIpWJSw\" class=\"views-more-link\">Read More</a>",
+          "target": [
+            ".views-more-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4 (foreground color: #5f8498, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "apply",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/admissions/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/admissions\"><strong>Apply</strong></a>",
+                  "target": [
+                    ".priority-links--apply > .vertical-link__body > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://www.ucmerced.edu/admissions\" target=\"_blank\" rel=\"noopener\">Apply</a>",
+          "target": [
+            "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "directions",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/contact-us-engineering/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucmerced.edu/maps-and-directions\" title=\"Directions\" rel=\"noopener\">Directions</a>",
+                  "target": [
+                    "a[title=\"Directions\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://engineering.ucmerced.edu/contact-us-engineering\" title=\"Directions to Campus and Parking Maps\" class=\"sf-depth-2 \" style=\"\">Directions</a>",
+          "target": [
+            "#menu-9161-1 > .sf-depth-2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "programs",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/academics/academic-departments/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/academics\"><strong>Programs</strong></a>",
+                  "target": [
+                    ".priority-links--books > .vertical-link__body > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/admissions\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;\"><img alt=\"Programs\" src=\"https://engineering.ucmerced.edu/sites/engineering.ucmerced.edu/files/images/Apply_BG.png\"></a>",
+                  "target": [
+                    ".priority-links--apply > .vertical-link__figure > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://engineering.ucmerced.edu/academics/academic-departments\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;\"><img alt=\"Programs\" src=\"https://engineering.ucmerced.edu/sites/engineering.ucmerced.edu/files/images/Books_BG.png\"></a>",
+          "target": [
+            ".priority-links--books > .vertical-link__figure > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5f8498",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"html front not-logged-in no-sidebars page-node        form-single-submit-processed\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4 (foreground color: #5f8498, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://myemail.constantcontact.com/NAME-CORRECTION--Professor-Xiaoyi-Lu----UC-Merced-Engineering---Fall-2023-News.html?soid=1135486464446&amp;aid=Pt_7jIpWJSw\" class=\"views-more-link\">Read More</a>",
+          "target": [
+            ".views-more-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4 (foreground color: #5f8498, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "directions",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/contact-us-engineering/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.ucmerced.edu/maps-and-directions\" title=\"Directions\" rel=\"noopener\">Directions</a>",
+                  "target": [
+                    "a[title=\"Directions\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://engineering.ucmerced.edu/contact-us-engineering\" title=\"Directions to Campus and Parking Maps\" class=\"sf-depth-2 \" style=\"\">Directions</a>",
+          "target": [
+            "#menu-9161-1 > .sf-depth-2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "apply",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/admissions/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/admissions\"><strong>Apply</strong></a>",
+                  "target": [
+                    ".priority-links--apply > .vertical-link__body > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://www.ucmerced.edu/admissions\" target=\"_blank\" rel=\"noopener\">Apply</a>",
+          "target": [
+            ".quick-links-mobile > ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "programs",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "engineering.ucmerced.edu",
+                  "port": "",
+                  "pathname": "/academics/academic-departments/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/academics\"><strong>Programs</strong></a>",
+                  "target": [
+                    ".priority-links--books > .vertical-link__body > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://engineering.ucmerced.edu/admissions\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;\"><img alt=\"Programs\" src=\"https://engineering.ucmerced.edu/sites/engineering.ucmerced.edu/files/images/Apply_BG.png\"></a>",
+                  "target": [
+                    ".priority-links--apply > .vertical-link__figure > a"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://engineering.ucmerced.edu/academics/academic-departments\" style=\"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;\"><img alt=\"Programs\" src=\"https://engineering.ucmerced.edu/sites/engineering.ucmerced.edu/files/images/Books_BG.png\"></a>",
+          "target": [
+            ".priority-links--books > .vertical-link__figure > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": {
+                "messageKey": "bgOverlap"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-field-featuredstory-body\">",
+                  "target": [
+                    ".views-field-field-featuredstory-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's contrast ratio could not be determined because of element overlap"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://myemail.constantcontact.com/NAME-CORRECTION--Professor-Xiaoyi-Lu----UC-Merced-Engineering---Fall-2023-News.html?soid=1135486464446&amp;aid=Pt_7jIpWJSw\" class=\"views-more-link\">Read More</a>",
+          "target": [
+            ".views-more-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's contrast ratio could not be determined because of element overlap"
+        }
+      ]
+    }
+  ]
+}
