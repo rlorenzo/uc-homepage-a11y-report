@@ -1,0 +1,106 @@
+name: Diagnose Scan Failures
+
+# Runs the real scanner against a chosen subset of sites from the same runner
+# environment the monthly scan uses, and prints the diagnostics — including
+# which requests were still in flight when a navigation timed out (see
+# trackPendingRequests in scan/run.mjs).
+#
+# Why this exists: navigation timeouts have been environment-specific. The
+# 2026-08 run failed on three UCI sites that load fine, and fast, from a
+# developer machine — so the stall is somewhere in the runner's network path
+# and cannot be observed locally. This workflow reproduces the conditions
+# without disturbing the archive.
+#
+# It deliberately does NOT commit, push, or deploy. The scan writes into
+# data/ in the runner's checkout, and that checkout is thrown away; the
+# published report and history.json are untouched.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: 'Comma-separated site slugs to scan (see scan/sites.json)'
+        required: true
+        default: 'uci-admissions,uci-financial-aid,uci-law'
+      concurrency:
+        description: 'Parallel workers (1 isolates a site from fleet load)'
+        required: false
+        default: '1'
+  # Lets the diagnostic run from a branch, since workflow_dispatch only
+  # appears once the file is on the default branch.
+  push:
+    branches: ['diag/**']
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ hashFiles('package-lock.json') }}
+
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium chrome
+
+      # Where the runner actually sits, and whether the failing hosts are
+      # reachable at all from it. Recorded before the scan so a network-level
+      # block shows up plainly next to the scan's own diagnostics.
+      - name: Network baseline from the runner
+        run: |
+          echo "── runner egress IP ──"
+          curl -sS --max-time 15 https://api.ipify.org || echo "(egress IP lookup failed)"
+          echo
+          UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+          for url in \
+            https://admissions.uci.edu/ \
+            https://www.ofas.uci.edu/ \
+            https://law.uci.edu/ \
+            https://cdn.enrollment.uci.edu/assets/js/vendor.js \
+            https://static.xx.fbcdn.net/rsrc.php/v4/yb/r/lEu8iVizeCO.js \
+            https://use.typekit.net/xzu6ejm.js
+          do
+            echo "── $url"
+            # Five samples: an intermittent stall rarely shows on a single hit.
+            for i in 1 2 3 4 5; do
+              curl -sS -o /dev/null -A "$UA" --max-time 45 \
+                -w "   http=%{http_code} dns=%{time_namelookup}s connect=%{time_connect}s tls=%{time_appconnect}s ttfb=%{time_starttransfer}s total=%{time_total}s\n" \
+                "$url" || echo "   REQUEST FAILED (timeout or connection error)"
+            done
+          done
+
+      - name: Run scanner on the selected sites
+        run: |
+          xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" \
+            node scan/run.mjs --slug="${SLUGS}"
+        env:
+          SLUGS: ${{ github.event.inputs.slugs || 'uci-admissions,uci-financial-aid,uci-law' }}
+          SCAN_CONCURRENCY: ${{ github.event.inputs.concurrency || '1' }}
+          SCAN_UA_TOKEN: ${{ secrets.SCAN_UA_TOKEN }}
+
+      # The per-site JSON carries the pending_requests list; keep it as an
+      # artifact so the culprit host is inspectable after the logs age out.
+      - name: Upload scan output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnostic-scan-results
+          path: data/runs/
+          retention-days: 14
