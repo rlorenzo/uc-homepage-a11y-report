@@ -86,6 +86,28 @@ jobs:
             done
           done
 
+      # A hostname with several A records fails intermittently when only some
+      # of them are reachable: the client stalls on SYN retransmits to a dead
+      # address before failing over, which reads as a slow-or-timed-out
+      # connect rather than a clean error. Probing each address separately is
+      # what turns "the host is flaky" into "this specific endpoint is down",
+      # which is the form the site's operators can act on.
+      - name: Per-address reachability
+        run: |
+          UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+          for host in law.uci.edu admissions.uci.edu www.ofas.uci.edu; do
+            echo "══ $host"
+            for ip in $(dig +short A "$host" | grep -E '^[0-9]+\.'); do
+              echo "── $ip"
+              for i in 1 2 3; do
+                curl -sS -o /dev/null -A "$UA" --max-time 30 \
+                  --resolve "${host}:443:${ip}" \
+                  -w "   http=%{http_code} connect=%{time_connect}s total=%{time_total}s\n" \
+                  "https://${host}/" || echo "   UNREACHABLE (no TCP connection within 30s)"
+              done
+            done
+          done
+
       - name: Run scanner on the selected sites
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" \
