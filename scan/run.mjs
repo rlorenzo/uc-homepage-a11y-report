@@ -334,17 +334,30 @@ function logPendingRequests(site, pending) {
   }
 }
 
+// The first attempt's per-navigation budget, and the wider budget the retry
+// gets. Some origins penalise *first contact* from an address they have not
+// seen before: law.uci.edu drops the initial SYN and only admits the
+// connection after ~20-30s, then serves in under 40ms. CI is the worst case
+// for that, because a fresh runner IP each month is always an unseen source,
+// so the scan is racing the penalty on the one attempt that decides pass or
+// fail. Giving the retry a wider budget lets that first handshake complete
+// instead of recording a site as unreachable when it is merely slow to admit
+// us. Sites that connect immediately — the overwhelming majority — are
+// unaffected, since the budget is a ceiling and not a delay.
+const NAV_TIMEOUT_MS = 30_000;
+const RETRY_NAV_TIMEOUT_MS = 60_000;
+
 // Navigate with networkidle, falling back to the "load" event. Some sites
 // (e.g. UCSD) keep persistent connections open so networkidle never settles;
 // "load" fires once the page and subresources finish. Non-timeout nav errors
 // propagate unchanged.
-async function gotoWithFallback(page, site) {
+async function gotoWithFallback(page, site, timeout = NAV_TIMEOUT_MS) {
   try {
-    return await page.goto(site.url, { waitUntil: "networkidle", timeout: 30_000 });
+    return await page.goto(site.url, { waitUntil: "networkidle", timeout });
   } catch (navError) {
     if (navError.name !== "TimeoutError") throw navError;
     console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
-    return page.goto(site.url, { waitUntil: "load", timeout: 30_000 });
+    return page.goto(site.url, { waitUntil: "load", timeout });
   }
 }
 
@@ -375,8 +388,9 @@ function logScanOk(site, mode, r) {
 // headed fallback). Returns the success summary and writes the full axe output
 // to disk, or throws — the caller (scanSite) decides whether a thrown error is
 // worth a retry. `mode` is "headless" | "headed", used for logging and the
-// archived render_mode field.
-async function scanWith(site, browser, mode) {
+// archived render_mode field. `navTimeout` is the per-navigation budget; the
+// retry path widens it (see NAV_TIMEOUT_MS).
+async function scanWith(site, browser, mode, navTimeout = NAV_TIMEOUT_MS) {
   // Context/page creation is inside the try so that failures in
   // newContext()/newPage() (e.g. bad proxy, browser crash) propagate to the
   // caller as a per-site error rather than aborting the whole run.
@@ -404,11 +418,14 @@ async function scanWith(site, browser, mode) {
 
     let response;
     try {
-      response = await gotoWithFallback(page, site);
+      response = await gotoWithFallback(page, site, navTimeout);
     } catch (navError) {
       // Snapshot the in-flight set before the context is torn down; the
-      // finally block below closes it and the listeners go with it.
-      if (navError.name === "TimeoutError") navError.pendingRequests = pendingRequests();
+      // finally block below closes it and the listeners go with it. Captured
+      // for every navigation failure, not just Playwright's TimeoutError: a
+      // stalled connection often surfaces as Chrome's own net::ERR_TIMED_OUT
+      // instead, and that case needs the same diagnosis.
+      navError.pendingRequests = pendingRequests();
       throw navError;
     }
     assertOk(response, site);
@@ -577,22 +594,26 @@ const isBlock = (err) => HEADED_FALLBACK && BLOCK_STATUSES.has(err.httpStatus);
 
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// A stalled navigation reaches us two different ways: Playwright raises its own
+// TimeoutError when the waitUntil budget expires, but a connection that never
+// completes its handshake often trips Chrome's network stack first and arrives
+// as net::ERR_TIMED_OUT. Both are the same transient class — an origin that is
+// slow to admit us rather than one that is genuinely down — so both earn the
+// wider-budget retry. Treating only the former as retryable meant the harder
+// failure got no second chance at all.
+const isNavTimeout = (err) =>
+  err.name === "TimeoutError" || /ERR_(CONNECTION_)?TIMED_OUT/.test(err.message || "");
+
 // Run one scan attempt, converting any failure into an archived error record
 // so a doomed retry never rejects out of the worker.
-async function retryScan(site, browserForRetry, mode) {
+async function retryScan(site, browserForRetry, mode, navTimeout) {
   try {
-    return await scanWith(site, browserForRetry, mode);
+    return await scanWith(site, browserForRetry, mode, navTimeout);
   } catch (err) {
     return buildErrorResult(site, err, mode);
   }
 }
 
-// Orchestrate one site: scan headless first, then apply targeted retries.
-//  • Bot-block (403 etc.)  → retry once on a real headed browser, whose genuine
-//    fingerprint clears Akamai/Cloudflare bot detection (e.g. all ucmerced.edu).
-//  • Transient nav timeout → retry once more on the headless fleet browser
-//    (e.g. sio.ucsd.edu occasionally stalls its initial load).
-// Anything still failing after its one retry is recorded as an error.
 // Retry a bot-blocked site on the headed browser. A headed-launch failure
 // (channel not installed, no display) is an infra problem, not a site problem:
 // record the site's original block error rather than rejecting out of the
@@ -609,16 +630,25 @@ async function retryBlockedOnHeaded(site, err) {
   return retryScan(site, headed, "headed");
 }
 
+// Orchestrate one site: scan headless first, then apply targeted retries.
+//  • Bot-block (403 etc.)  → retry once on a real headed browser, whose genuine
+//    fingerprint clears Akamai/Cloudflare bot detection (e.g. all ucmerced.edu).
+//  • Transient nav timeout → retry once more on the headless fleet browser,
+//    with a wider navigation budget so an origin that stalls first contact
+//    (e.g. law.uci.edu) gets the handshake it needs rather than being recorded
+//    as unreachable.
+// Anything still failing after its one retry is recorded as an error.
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
   try {
     return await scanWith(site, browser, "headless");
   } catch (err) {
     if (isBlock(err)) return retryBlockedOnHeaded(site, err);
-    if (err.name === "TimeoutError") {
-      console.log(`  [${site.slug}] navigation timed out; retrying once ...`);
+    if (isNavTimeout(err)) {
+      const seconds = RETRY_NAV_TIMEOUT_MS / 1000;
+      console.log(`  [${site.slug}] navigation timed out; retrying once at ${seconds}s ...`);
       await pause(2000);
-      return retryScan(site, browser, "headless");
+      return retryScan(site, browser, "headless", RETRY_NAV_TIMEOUT_MS);
     }
     return buildErrorResult(site, err, "headless");
   }
