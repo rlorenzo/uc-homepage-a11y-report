@@ -37,7 +37,12 @@ permissions:
 jobs:
   diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Generous ceiling because the probes are slowest in exactly the case this
+    # workflow exists to capture: every sample stalling to its own limit. The
+    # real protection is the per-step budget below — a job-level timeout would
+    # cancel the run outright and take the always() artifact upload with it,
+    # discarding the diagnostics instead of preserving them.
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,7 +68,12 @@ jobs:
       # Where the runner actually sits, and whether the failing hosts are
       # reachable at all from it. Recorded before the scan so a network-level
       # block shows up plainly next to the scan's own diagnostics.
+      # Bounded and non-fatal: the probes are context for the scan, so a probe
+      # that runs long or fails outright must not stop the scan from running or
+      # the results from being uploaded.
       - name: Network baseline from the runner
+        timeout-minutes: 12
+        continue-on-error: true
         run: |
           echo "── runner egress IP ──"
           curl -sS --max-time 15 https://api.ipify.org || echo "(egress IP lookup failed)"
@@ -93,6 +103,8 @@ jobs:
       # what turns "the host is flaky" into "this specific endpoint is down",
       # which is the form the site's operators can act on.
       - name: Per-address reachability
+        timeout-minutes: 10
+        continue-on-error: true
         run: |
           UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
           for host in law.uci.edu admissions.uci.edu www.ofas.uci.edu; do
@@ -109,6 +121,7 @@ jobs:
           done
 
       - name: Run scanner on the selected sites
+        timeout-minutes: 20
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" \
             node scan/run.mjs --slug="${SLUGS}"
