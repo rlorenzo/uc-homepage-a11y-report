@@ -236,6 +236,19 @@ function emptyCounters() {
   };
 }
 
+// Flatten one counter set into the prefixed fields a result row exposes, so
+// ok and error rows are built from a single definition of the shape
+// (e.g. "violations" → violations_total, violations_by_impact,
+// violations_by_rule, violations_rule_impact).
+function counterFields(prefix, c) {
+  return {
+    [`${prefix}_total`]: c.total,
+    [`${prefix}_by_impact`]: c.by_impact,
+    [`${prefix}_by_rule`]: c.by_rule,
+    [`${prefix}_rule_impact`]: c.by_rule_impact,
+  };
+}
+
 // Fold one violation's node count into its bucket's running totals.
 function addViolation(bucket, v) {
   const count = v.nodes.length;
@@ -283,17 +296,70 @@ async function scrollFullPage(page) {
   });
 }
 
+// Track in-flight requests so a navigation timeout can report *what* was still
+// outstanding. Both waitUntil conditions the scan uses are gated by
+// subresources — "load" waits on every blocking resource (script, stylesheet,
+// image, font, iframe), and even "domcontentloaded" waits on parser-blocking
+// scripts — so a single third-party host that accepts the connection and then
+// never responds is enough to hang the whole navigation. A bare
+// "Timeout 30000ms exceeded" says nothing about which host that was, which
+// makes an intermittent, environment-specific stall (one that reproduces on
+// the CI runner but not on a developer's machine) effectively undiagnosable
+// after the fact. Recording the pending set at the moment of failure turns
+// that into a one-line answer in the archived error record.
+function trackPendingRequests(page) {
+  const inflight = new Map();
+  page.on("request", (r) =>
+    inflight.set(r, { url: r.url(), type: r.resourceType(), startedAt: Date.now() }),
+  );
+  const settle = (r) => inflight.delete(r);
+  page.on("requestfinished", settle);
+  page.on("requestfailed", settle);
+  // Longest-pending first: the request that has been hanging the longest is
+  // almost always the one holding the navigation open.
+  return () =>
+    [...inflight.values()]
+      .map(({ url, type, startedAt }) => ({ url, type, pending_ms: Date.now() - startedAt }))
+      .sort((a, b) => b.pending_ms - a.pending_ms);
+}
+
+// On a navigation timeout, name the requests that were still hanging — the
+// longest-pending one is the lead suspect. Capped so one pathological page
+// can't flood the log.
+function logPendingRequests(site, pending) {
+  if (!pending.length) return;
+  console.error(`  [${site.slug}] ${pending.length} request(s) in flight at timeout:`);
+  for (const p of pending.slice(0, 15)) {
+    console.error(`     ${(p.pending_ms / 1000).toFixed(1)}s [${p.type}] ${p.url}`);
+  }
+}
+
+// The first attempt's per-navigation budget, and the wider budget the retry
+// gets. Some origins silently drop a share of inbound connections rather than
+// refusing them: measured from GitHub Actions, law.uci.edu hung 3 of 12 TCP
+// handshakes for 30s+, spread across both of its A records and not confined to
+// first contact, while the connections that did land completed in under 40ms.
+// SYN retransmits were seen getting through at 18-22s, so the handshake
+// usually does complete — just not inside a single 30s attempt. The loss is
+// invisible from a developer machine, which makes a site look fine locally
+// while failing in CI. Giving the retry room lets the handshake land instead
+// of recording a site as unreachable when it is merely lossy to reach. Sites
+// that connect immediately — the overwhelming majority — are unaffected, since
+// the budget is a ceiling and not a delay.
+const NAV_TIMEOUT_MS = 30_000;
+const RETRY_NAV_TIMEOUT_MS = 60_000;
+
 // Navigate with networkidle, falling back to the "load" event. Some sites
 // (e.g. UCSD) keep persistent connections open so networkidle never settles;
 // "load" fires once the page and subresources finish. Non-timeout nav errors
 // propagate unchanged.
-async function gotoWithFallback(page, site) {
+async function gotoWithFallback(page, site, timeout = NAV_TIMEOUT_MS) {
   try {
-    return await page.goto(site.url, { waitUntil: "networkidle", timeout: 30_000 });
+    return await page.goto(site.url, { waitUntil: "networkidle", timeout });
   } catch (navError) {
     if (navError.name !== "TimeoutError") throw navError;
     console.log(`  [${site.slug}] networkidle timed out, retrying with waitUntil: load ...`);
-    return page.goto(site.url, { waitUntil: "load", timeout: 30_000 });
+    return page.goto(site.url, { waitUntil: "load", timeout });
   }
 }
 
@@ -324,8 +390,9 @@ function logScanOk(site, mode, r) {
 // headed fallback). Returns the success summary and writes the full axe output
 // to disk, or throws — the caller (scanSite) decides whether a thrown error is
 // worth a retry. `mode` is "headless" | "headed", used for logging and the
-// archived render_mode field.
-async function scanWith(site, browser, mode) {
+// archived render_mode field. `navTimeout` is the per-navigation budget; the
+// retry path widens it (see NAV_TIMEOUT_MS).
+async function scanWith(site, browser, mode, navTimeout = NAV_TIMEOUT_MS) {
   // Context/page creation is inside the try so that failures in
   // newContext()/newPage() (e.g. bad proxy, browser crash) propagate to the
   // caller as a per-site error rather than aborting the whole run.
@@ -349,8 +416,20 @@ async function scanWith(site, browser, mode) {
       viewport: { width: 375, height: 800 },
     });
     const page = await context.newPage();
+    const pendingRequests = trackPendingRequests(page);
 
-    const response = await gotoWithFallback(page, site);
+    let response;
+    try {
+      response = await gotoWithFallback(page, site, navTimeout);
+    } catch (navError) {
+      // Snapshot the in-flight set before the context is torn down; the
+      // finally block below closes it and the listeners go with it. Captured
+      // for every navigation failure, not just Playwright's TimeoutError: a
+      // stalled connection often surfaces as Chrome's own net::ERR_TIMED_OUT
+      // instead, and that case needs the same diagnosis.
+      navError.pendingRequests = pendingRequests();
+      throw navError;
+    }
     assertOk(response, site);
 
     // Let mobile-mode JS (AccordionMenu, mobile nav, etc.) finish wiring up.
@@ -479,6 +558,9 @@ async function scanWith(site, browser, mode) {
 async function buildErrorResult(site, err, mode) {
   console.error(`  [${site.slug}] ERROR: ${err.message}`);
 
+  const pending = err.pendingRequests || [];
+  logPendingRequests(site, pending);
+
   const errorResult = {
     month,
     scanned_at: scannedAt,
@@ -492,6 +574,7 @@ async function buildErrorResult(site, err, mode) {
     status: "error",
     render_mode: mode,
     error: err.message,
+    ...(pending.length ? { pending_requests: pending.slice(0, 25) } : {}),
   };
 
   await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(errorResult, null, 2));
@@ -499,29 +582,11 @@ async function buildErrorResult(site, err, mode) {
   return {
     ...errorResult,
     element_count: 0,
-    violations_total: 0,
-    violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-    violations_by_rule: {},
-    violations_rule_impact: {},
-    reach_violations_total: 0,
-    reach_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-    reach_violations_by_rule: {},
-    reach_violations_rule_impact: {},
+    ...counterFields("violations", emptyCounters()),
+    ...counterFields("reach_violations", emptyCounters()),
     error_density: 0,
-    mobile_violations_total: 0,
-    mobile_violations_by_impact: { critical: 0, serious: 0, moderate: 0, minor: 0, unknown: 0 },
-    mobile_violations_by_rule: {},
-    mobile_violations_rule_impact: {},
-    mobile_reach_violations_total: 0,
-    mobile_reach_violations_by_impact: {
-      critical: 0,
-      serious: 0,
-      moderate: 0,
-      minor: 0,
-      unknown: 0,
-    },
-    mobile_reach_violations_by_rule: {},
-    mobile_reach_violations_rule_impact: {},
+    ...counterFields("mobile_violations", emptyCounters()),
+    ...counterFields("mobile_reach_violations", emptyCounters()),
   };
 }
 
@@ -531,45 +596,61 @@ const isBlock = (err) => HEADED_FALLBACK && BLOCK_STATUSES.has(err.httpStatus);
 
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// A stalled navigation reaches us two different ways: Playwright raises its own
+// TimeoutError when the waitUntil budget expires, but a connection that never
+// completes its handshake often trips Chrome's network stack first and arrives
+// as net::ERR_TIMED_OUT. Both are the same transient class — an origin that is
+// slow to admit us rather than one that is genuinely down — so both earn the
+// wider-budget retry. Treating only the former as retryable meant the harder
+// failure got no second chance at all.
+const isNavTimeout = (err) =>
+  err.name === "TimeoutError" || /ERR_(CONNECTION_)?TIMED_OUT/.test(err.message || "");
+
 // Run one scan attempt, converting any failure into an archived error record
 // so a doomed retry never rejects out of the worker.
-async function retryScan(site, browserForRetry, mode) {
+async function retryScan(site, browserForRetry, mode, navTimeout) {
   try {
-    return await scanWith(site, browserForRetry, mode);
+    return await scanWith(site, browserForRetry, mode, navTimeout);
   } catch (err) {
     return buildErrorResult(site, err, mode);
   }
 }
 
+// Retry a bot-blocked site on the headed browser. A headed-launch failure
+// (channel not installed, no display) is an infra problem, not a site problem:
+// record the site's original block error rather than rejecting out of the
+// worker and killing the run.
+async function retryBlockedOnHeaded(site, err) {
+  console.log(`  [${site.slug}] blocked (HTTP ${err.httpStatus}); retrying on headed ...`);
+  let headed;
+  try {
+    headed = await getHeadedBrowser();
+  } catch (launchErr) {
+    console.error(`  Headed ${HEADED_CHANNEL} launch failed: ${launchErr.message}`);
+    return buildErrorResult(site, err, "headless");
+  }
+  return retryScan(site, headed, "headed");
+}
+
 // Orchestrate one site: scan headless first, then apply targeted retries.
 //  • Bot-block (403 etc.)  → retry once on a real headed browser, whose genuine
 //    fingerprint clears Akamai/Cloudflare bot detection (e.g. all ucmerced.edu).
-//  • Transient nav timeout → retry once more on the headless fleet browser
-//    (e.g. sio.ucsd.edu occasionally stalls its initial load).
+//  • Transient nav timeout → retry once more on the headless fleet browser,
+//    with a wider navigation budget so an origin that drops connections
+//    intermittently (e.g. law.uci.edu) gets the handshake it needs rather than
+//    being recorded as unreachable.
 // Anything still failing after its one retry is recorded as an error.
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
   try {
     return await scanWith(site, browser, "headless");
   } catch (err) {
-    if (isBlock(err)) {
-      console.log(`  [${site.slug}] blocked (HTTP ${err.httpStatus}); retrying on headed ...`);
-      // A headed-launch failure (channel not installed, no display) is an
-      // infra problem, not a site problem: record the site's original block
-      // error rather than rejecting out of the worker and killing the run.
-      let headed;
-      try {
-        headed = await getHeadedBrowser();
-      } catch (launchErr) {
-        console.error(`  Headed ${HEADED_CHANNEL} launch failed: ${launchErr.message}`);
-        return buildErrorResult(site, err, "headless");
-      }
-      return retryScan(site, headed, "headed");
-    }
-    if (err.name === "TimeoutError") {
-      console.log(`  [${site.slug}] navigation timed out; retrying once ...`);
+    if (isBlock(err)) return retryBlockedOnHeaded(site, err);
+    if (isNavTimeout(err)) {
+      const seconds = RETRY_NAV_TIMEOUT_MS / 1000;
+      console.log(`  [${site.slug}] navigation timed out; retrying once at ${seconds}s ...`);
       await pause(2000);
-      return retryScan(site, browser, "headless");
+      return retryScan(site, browser, "headless", RETRY_NAV_TIMEOUT_MS);
     }
     return buildErrorResult(site, err, "headless");
   }
