@@ -335,15 +335,17 @@ function logPendingRequests(site, pending) {
 }
 
 // The first attempt's per-navigation budget, and the wider budget the retry
-// gets. Some origins penalise *first contact* from an address they have not
-// seen before: law.uci.edu drops the initial SYN and only admits the
-// connection after ~20-30s, then serves in under 40ms. CI is the worst case
-// for that, because a fresh runner IP each month is always an unseen source,
-// so the scan is racing the penalty on the one attempt that decides pass or
-// fail. Giving the retry a wider budget lets that first handshake complete
-// instead of recording a site as unreachable when it is merely slow to admit
-// us. Sites that connect immediately — the overwhelming majority — are
-// unaffected, since the budget is a ceiling and not a delay.
+// gets. Some origins silently drop a share of inbound connections rather than
+// refusing them: measured from GitHub Actions, law.uci.edu hung 3 of 12 TCP
+// handshakes for 30s+, spread across both of its A records and not confined to
+// first contact, while the connections that did land completed in under 40ms.
+// SYN retransmits were seen getting through at 18-22s, so the handshake
+// usually does complete — just not inside a single 30s attempt. The loss is
+// invisible from a developer machine, which makes a site look fine locally
+// while failing in CI. Giving the retry room lets the handshake land instead
+// of recording a site as unreachable when it is merely lossy to reach. Sites
+// that connect immediately — the overwhelming majority — are unaffected, since
+// the budget is a ceiling and not a delay.
 const NAV_TIMEOUT_MS = 30_000;
 const RETRY_NAV_TIMEOUT_MS = 60_000;
 
@@ -634,9 +636,9 @@ async function retryBlockedOnHeaded(site, err) {
 //  • Bot-block (403 etc.)  → retry once on a real headed browser, whose genuine
 //    fingerprint clears Akamai/Cloudflare bot detection (e.g. all ucmerced.edu).
 //  • Transient nav timeout → retry once more on the headless fleet browser,
-//    with a wider navigation budget so an origin that stalls first contact
-//    (e.g. law.uci.edu) gets the handshake it needs rather than being recorded
-//    as unreachable.
+//    with a wider navigation budget so an origin that drops connections
+//    intermittently (e.g. law.uci.edu) gets the handshake it needs rather than
+//    being recorded as unreachable.
 // Anything still failing after its one retry is recorded as an error.
 async function scanSite(site) {
   console.log(`Scanning ${site.name} (${site.url}) ...`);
