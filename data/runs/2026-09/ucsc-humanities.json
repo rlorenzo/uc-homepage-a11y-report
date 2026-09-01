@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsc-humanities",
   "name": "UC Santa Cruz Humanities",
   "campus": "ucsc",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -145,7 +145,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -202,7 +202,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -372,12 +372,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -387,7 +400,7 @@
           "target": [
             ".is-style-default > strong"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -397,12 +410,25 @@
                 "contrastRatio": 0,
                 "fontSize": "34.1pt (45.408px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -412,7 +438,7 @@
           "target": [
             ".has-six-font-size"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -422,12 +448,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -437,32 +476,7 @@
           "target": [
             ".wp-container-core-column-is-layout-1d4cc416 > .wp-block-paragraph"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-black-color has-text-color has-link-color wp-element-button\" href=\"https://humanities.ucsc.edu/academics/course-highlights/\">Explore Course Highlights</a>",
-          "target": [
-            ".wp-block-button__link"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -644,7 +658,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -685,7 +699,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -776,7 +790,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -899,7 +913,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -956,7 +970,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1126,12 +1140,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1141,7 +1168,7 @@
           "target": [
             ".is-style-default > strong"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1151,12 +1178,25 @@
                 "contrastRatio": 0,
                 "fontSize": "22.2pt (29.646px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1166,7 +1206,7 @@
           "target": [
             ".has-six-font-size"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1176,12 +1216,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"683\" class=\"wp-block-cover__imag...\" alt=\"Elaine Sullivan teac...\" src=\"https://humanities.u...\" style=\"object-position:50% ...\" data-object-fit=\"cover\" data-object-position=\"50% 30%\" srcset=\"https://humanities.u...\" ...>",
+                  "target": [
+                    ".wp-block-cover__image-background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1191,32 +1244,7 @@
           "target": [
             ".wp-container-core-column-is-layout-1d4cc416 > .wp-block-paragraph"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-black-color has-text-color has-link-color wp-element-button\" href=\"https://humanities.ucsc.edu/academics/course-highlights/\">Explore Course Highlights</a>",
-          "target": [
-            ".wp-block-button__link"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1398,7 +1426,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],

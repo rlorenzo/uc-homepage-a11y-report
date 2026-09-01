@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsc-baskin",
   "name": "Baskin School of Engineering",
   "campus": "ucsc",
@@ -9,7 +9,7 @@
   "category": "engineering",
   "url": "https://engineering.ucsc.edu",
   "render_mode": "headless",
-  "element_count": 854,
+  "element_count": 855,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -78,7 +78,7 @@
       ],
       "description": "Ensure <iframe> and <frame> elements have an accessible name",
       "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=playwright",
       "nodes": [
         {
           "any": [
@@ -140,7 +140,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -295,7 +295,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -502,7 +502,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1178,12 +1178,25 @@
                 "contrastRatio": 0,
                 "fontSize": "36.0pt (48px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-primary-blue-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-background-dim-40"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1244\" class=\"wp-block-cover__imag...\" alt=\"Two students working...\" src=\"https://engineering....\" data-object-fit=\"cover\" srcset=\"https://engineering....\" sizes=\"auto, (max-width: 25...\">",
+                  "target": [
+                    ".wp-image-254448"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1193,7 +1206,7 @@
           "target": [
             ".wp-block-cover-is-layout-flow.wp-block-cover__inner-container.is-layout-flow > .wp-block-heading.has-text-align-center"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1203,12 +1216,25 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-primary-blue-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-background-dim-40"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1244\" class=\"wp-block-cover__imag...\" alt=\"Two students working...\" src=\"https://engineering....\" data-object-fit=\"cover\" srcset=\"https://engineering....\" sizes=\"auto, (max-width: 25...\">",
+                  "target": [
+                    ".wp-image-254448"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1218,7 +1244,7 @@
           "target": [
             "a[href$=\"research\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         }
       ]
     },
@@ -1232,7 +1258,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1300,7 +1326,7 @@
       ],
       "description": "Ensure buttons have discernible text",
       "help": "Buttons must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1378,7 +1404,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1434,7 +1460,7 @@
       ],
       "description": "Ensure <iframe> and <frame> elements have an accessible name",
       "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1496,7 +1522,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1651,7 +1677,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1858,7 +1884,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2406,12 +2432,25 @@
                 "contrastRatio": 0,
                 "fontSize": "36.0pt (48px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-primary-blue-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-background-dim-40"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1244\" class=\"wp-block-cover__imag...\" alt=\"Two students working...\" src=\"https://engineering....\" data-object-fit=\"cover\" srcset=\"https://engineering....\" sizes=\"auto, (max-width: 25...\">",
+                  "target": [
+                    ".wp-image-254448"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -2421,7 +2460,7 @@
           "target": [
             ".wp-block-cover-is-layout-flow.wp-block-cover__inner-container.is-layout-flow > .wp-block-heading.has-text-align-center"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -2431,12 +2470,25 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-primary-blue-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-background-dim-40"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1244\" class=\"wp-block-cover__imag...\" alt=\"Two students working...\" src=\"https://engineering....\" data-object-fit=\"cover\" srcset=\"https://engineering....\" sizes=\"auto, (max-width: 25...\">",
+                  "target": [
+                    ".wp-image-254448"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -2446,7 +2498,7 @@
           "target": [
             "a[href$=\"research\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         }
       ]
     },
@@ -2460,7 +2512,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

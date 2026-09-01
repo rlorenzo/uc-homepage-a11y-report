@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsb-creativestudies",
   "name": "UC Santa Barbara College of Creative Studies",
   "campus": "ucsb",
@@ -25,7 +25,7 @@
       ],
       "description": "Ensure elements with ARIA roles have all required ARIA attributes",
       "help": "Required ARIA attributes must be provided",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=playwright",
       "nodes": [
         {
           "any": [
@@ -51,6 +51,637 @@
       ]
     },
     {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#f7f7f7",
+                "contrastRatio": 4.25,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"a2a_label\">Twitter</span>",
+          "target": [
+            ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/meet-2025-2026-jo-little-memorial-scholarship-recipients\" hreflang=\"en\">Meet 2025-2026 Jo Little Memorial Scholarship Recipients</a>\n</div>",
+                  "target": [
+                    ".node--view-mode-grid-box-1 > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/2026/meet-2025-2026-jo-little-memorial-scholarship-recipients\" hreflang=\"en\">Meet 2025-2026 Jo Little Memorial Scholarship Recipients</a>",
+          "target": [
+            ".node--view-mode-grid-box-1 > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#f7f7f7",
+                "contrastRatio": 4.25,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"a2a_label\">Twitter</span>",
+          "target": [
+            ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/luis-munoz-83-ccs-music-composition-honored-lifetime-music\" hreflang=\"en\">Luis Muñoz ‘83 (CCS Music Composition) Honored for a Lifetime of Music</a>\n</div>",
+                  "target": [
+                    ".node--view-mode-grid-box-2 > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/2026/luis-munoz-83-ccs-music-composition-honored-lifetime-music\" hreflang=\"en\">Luis Muñoz ‘83 (CCS Music Composition) Honored for a Lifetime of Music</a>",
+          "target": [
+            ".node--view-mode-grid-box-2 > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#f7f7f7",
+                "contrastRatio": 4.25,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"a2a_label\">Twitter</span>",
+          "target": [
+            ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/five-ccs-students-three-alumni-among-2026-national-science-foundation-nsf-graduate\" hreflang=\"en\">Five CCS students, three alumni, among 2026 National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) recipients</a>\n</div>",
+                  "target": [
+                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/2026/five-ccs-students-three-alumni-among-2026-national-science-foundation-nsf-graduate\" hreflang=\"en\">Five CCS students, three alumni, among 2026 National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) recipients</a>",
+          "target": [
+            ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#337ab7",
+                "bgColor": "#f7f7f7",
+                "contrastRatio": 4.25,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"a2a_label\">Twitter</span>",
+          "target": [
+            ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.25 (foreground color: #337ab7, background color: #f7f7f7, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/four-uc-santa-barbara-undergraduates-named-goldwater-scholars\" hreflang=\"en\">Four UC Santa Barbara undergraduates named Goldwater Scholars </a>\n</div>",
+                  "target": [
+                    ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/2026/four-uc-santa-barbara-undergraduates-named-goldwater-scholars\" hreflang=\"en\">Four UC Santa Barbara undergraduates named Goldwater Scholars </a>",
+          "target": [
+            ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(1) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a>",
+          "target": [
+            ".event-grid-box:nth-child(1) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(1) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(1) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(2) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a>",
+          "target": [
+            ".teaser-title > a[href$=\"ccs-summer-send-0\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(2) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(2) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(3) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a>",
+          "target": [
+            ".event-grid-box:nth-child(3) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(3) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(3) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "14.9pt (19.8px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(4) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a>",
+          "target": [
+            ".event-grid-box:nth-child(4) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 14.9pt (19.8px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(4) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div role=\"main\" class=\"main-container container-fluid js-quickedit-main-content\">",
+                  "target": [
+                    ".main-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(4) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
       "id": "color-contrast",
       "impact": "serious",
       "tags": [
@@ -67,7 +698,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -108,46 +739,6 @@
             "#edit-keys"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #93aabc, background color: #265478, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#337ab7",
-                "bgColor": "#f2f2f2",
-                "contrastRatio": 4.07,
-                "fontSize": "11.5pt (15.3px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"image-align-right paragraph paragraph--type--inline-text paragraph--view-mode--default\">",
-                  "target": [
-                    ".image-align-right"
-                  ]
-                },
-                {
-                  "html": "<div class=\"default-bg paragraph paragraph--type--container paragraph--view-mode--default\">",
-                  "target": [
-                    ".field--item:nth-child(2) > .default-bg.paragraph--type--container.paragraph--view-mode--default"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.07 (foreground color: #337ab7, background color: #f2f2f2, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://giving.ucsb.edu/Funds/Give?id=39\">Support</a>",
-          "target": [
-            "p:nth-child(3) > a"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #337ab7, background color: #f2f2f2, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]
     },
@@ -169,7 +760,7 @@
       ],
       "description": "Ensure <iframe> and <frame> elements have an accessible name",
       "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=playwright",
       "nodes": [
         {
           "any": [
@@ -225,7 +816,7 @@
       ],
       "description": "Ensure touch targets have sufficient size and space",
       "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
       "nodes": [
         {
           "any": [
@@ -256,7 +847,7 @@
                 {
                   "html": "<a href=\"#\" class=\"\">2</a>",
                   "target": [
-                    "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
+                    "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
                   ]
                 }
               ],
@@ -269,7 +860,7 @@
           "impact": "serious",
           "html": "<a href=\"#\" class=\"flex-active\">1</a>",
           "target": [
-            "#flexslider-2 > ol > li:nth-child(1) > a[href=\"#\"]"
+            "#flexslider-2 > ol > li:nth-child(1) > .flex-active[href=\"#\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Target has insufficient size (11px by 11px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
         },
@@ -302,7 +893,7 @@
                 {
                   "html": "<a href=\"#\" class=\"flex-active\">1</a>",
                   "target": [
-                    "#flexslider-2 > ol > li:nth-child(1) > a[href=\"#\"]"
+                    "#flexslider-2 > ol > li:nth-child(1) > .flex-active[href=\"#\"]"
                   ]
                 },
                 {
@@ -321,7 +912,7 @@
           "impact": "serious",
           "html": "<a href=\"#\" class=\"\">2</a>",
           "target": [
-            "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
+            "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Target has insufficient size (11px by 11px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
         },
@@ -354,7 +945,7 @@
                 {
                   "html": "<a href=\"#\" class=\"\">2</a>",
                   "target": [
-                    "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
+                    "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
                   ]
                 }
               ],
@@ -392,8 +983,33 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "17.2pt (22.95px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Dean's Fund for Excellence</h2>",
+          "target": [
+            ".image-align-right > .field--name-field-text.field--type-text-long.field > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -402,12 +1018,12 @@
                 "contrastRatio": 0,
                 "fontSize": "11.5pt (15.3px)",
                 "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -417,7 +1033,107 @@
           "target": [
             "p:nth-child(2)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><a href=\"https://giving.ucsb.edu/Funds/Give?id=39\">Support</a>&nbsp;our student scholars and creators!&nbsp;</p>",
+          "target": [
+            "p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://giving.ucsb.edu/Funds/Give?id=39\">Support</a>",
+          "target": [
+            "p:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1>College of Creative Studies</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>MASTER YOUR PASSION</em>",
+          "target": [
+            ".field--item:nth-child(2) > .default-bg.paragraph--type--container.paragraph--view-mode--default > .field--name-field-paragraph.field--type-entity-reference-revisions.field--items > .field--item > .paragraph--type--content.paragraph--view-mode--default.paragraph > .field--name-field-text.field--type-text-long.field > h2 > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -577,21 +1293,64 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
+                "fontSize": "20.3pt (27px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>WHAT IS CCS?</em>",
+          "target": [
+            ".field--item:nth-child(4) > .default-bg.paragraph--type--container.paragraph--view-mode--default > .field--name-field-paragraph.field--type-entity-reference-revisions.field--items > .field--item > .paragraph--type--content.paragraph--view-mode--default.paragraph > .field--name-field-text.field--type-text-long.field > h2 > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>News &amp;&nbsp;Events</em>",
+          "target": [
+            ".field--item:nth-child(6) > .default-bg.paragraph--type--container.paragraph--view-mode--default > .field--name-field-paragraph.field--type-entity-reference-revisions.field--items > .field--item > .paragraph--type--content.paragraph--view-mode--default.paragraph > .field--name-field-text.field--type-text-long.field > h2 > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -601,7 +1360,7 @@
           "target": [
             ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -611,89 +1370,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"Jo Little Memorial S...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"600\" height=\"600\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[height=\"600\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"a2a_label\">Twitter</span>",
-          "target": [
-            ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/meet-2025-2026-jo-little-memorial-scholarship-recipients\" hreflang=\"en\">Meet 2025-2026 Jo Little Memorial Scholarship Recipients</a>\n</div>",
-                  "target": [
-                    ".node--view-mode-grid-box-1 > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Jo Little Memorial S...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"600\" height=\"600\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[height=\"600\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/news/2026/meet-2025-2026-jo-little-memorial-scholarship-recipients\" hreflang=\"en\">Meet 2025-2026 Jo Little Memorial Scholarship Recipients</a>",
-          "target": [
-            ".node--view-mode-grid-box-1 > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -703,7 +1385,7 @@
           "target": [
             ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -713,89 +1395,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"Luis Muñoz '83 (CCS ...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"600\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".media__image[width=\"600\"][height=\"300\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"a2a_label\">Twitter</span>",
-          "target": [
-            ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/luis-munoz-83-ccs-music-composition-honored-lifetime-music\" hreflang=\"en\">Luis Muñoz ‘83 (CCS Music Composition) Honored for a Lifetime of Music</a>\n</div>",
-                  "target": [
-                    ".node--view-mode-grid-box-2 > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Luis Muñoz '83 (CCS ...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"600\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".media__image[width=\"600\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/news/2026/luis-munoz-83-ccs-music-composition-honored-lifetime-music\" hreflang=\"en\">Luis Muñoz ‘83 (CCS Music Composition) Honored for a Lifetime of Music</a>",
-          "target": [
-            ".node--view-mode-grid-box-2 > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -805,7 +1410,7 @@
           "target": [
             ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -815,89 +1420,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"UCSB Green Campus; P...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .blazy--field-image--grid-box-3.blazy.blazy--content > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"a2a_label\">Twitter</span>",
-          "target": [
-            ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/five-ccs-students-three-alumni-among-2026-national-science-foundation-nsf-graduate\" hreflang=\"en\">Five CCS students, three alumni, among 2026 National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) recipients</a>\n</div>",
-                  "target": [
-                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"UCSB Green Campus; P...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .blazy--field-image--grid-box-3.blazy.blazy--content > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/news/2026/five-ccs-students-three-alumni-among-2026-national-science-foundation-nsf-graduate\" hreflang=\"en\">Five CCS students, three alumni, among 2026 National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) recipients</a>",
-          "target": [
-            ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -907,115 +1435,7 @@
           "target": [
             ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "24.0pt (32px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"collage of four UCSB students\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-05/1.png?itok=GB0cJbt5\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"collage of four UCSB students\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"a2a_label\">Twitter</span>",
-          "target": [
-            ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\">\n        <a href=\"/news/2026/four-uc-santa-barbara-undergraduates-named-goldwater-scholars\" hreflang=\"en\">Four UC Santa Barbara undergraduates named Goldwater Scholars </a>\n</div>",
-                  "target": [
-                    ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"collage of four UCSB students\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-05/1.png?itok=GB0cJbt5\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"collage of four UCSB students\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/news/2026/four-uc-santa-barbara-undergraduates-named-goldwater-scholars\" hreflang=\"en\">Four UC Santa Barbara undergraduates named Goldwater Scholars </a>",
-          "target": [
-            ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Dr. Sharon Tettegah'...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a>",
-          "target": [
-            ".event-grid-box:nth-child(1) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -1025,73 +1445,22 @@
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Dr. Sharon Tettegah'...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
+          "html": "<a href=\"/news\">More News</a>",
           "target": [
-            ".event-grid-box:nth-child(1) > .content-event.field-content"
+            ".paragraph-button > a[href$=\"news\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(2) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"CCS Summer Send-Off 2026\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-06/CCS%20Summer%20Send%20Off%202026.png?itok=sUTMYEh7\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"CCS Summer Send-Off 2026\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a>",
-          "target": [
-            ".teaser-title > a[href$=\"ccs-summer-send-0\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -1101,187 +1470,22 @@
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(2) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"CCS Summer Send-Off 2026\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-06/CCS%20Summer%20Send%20Off%202026.png?itok=sUTMYEh7\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"CCS Summer Send-Off 2026\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
+          "html": "<a href=\"/events\">More Events</a>",
           "target": [
-            ".event-grid-box:nth-child(2) > .content-event.field-content"
+            ".paragraph-button > a[href$=\"events\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Spectrum Launch Part...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a>",
-          "target": [
-            ".event-grid-box:nth-child(3) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Spectrum Launch Part...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(3) > .content-event.field-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"\"Burrow of the Habit...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a>",
-          "target": [
-            ".event-grid-box:nth-child(4) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"\"Burrow of the Habit...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(4) > .content-event.field-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     }
@@ -1301,7 +1505,7 @@
       ],
       "description": "Ensure elements with ARIA roles have all required ARIA attributes",
       "help": "Required ARIA attributes must be provided",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1327,6 +1531,341 @@
       ]
     },
     {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(1) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a>",
+          "target": [
+            ".event-grid-box:nth-child(1) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(1) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(1) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(2) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a>",
+          "target": [
+            ".teaser-title > a[href$=\"ccs-summer-send-0\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(2) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(2) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(3) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a>",
+          "target": [
+            ".event-grid-box:nth-child(3) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(3) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(3) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "11.5pt (15.3px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"teaser-title\"><a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a></div>",
+                  "target": [
+                    ".event-grid-box:nth-child(4) > .teaser-title"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a>",
+          "target": [
+            ".event-grid-box:nth-child(4) > .teaser-title > a[hreflang=\"en\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 11.5pt (15.3px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#636363",
+                "contrastRatio": 6,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"field-content content-event\">Event</div>",
+                  "target": [
+                    ".event-grid-box:nth-child(4) > .content-event.field-content"
+                  ]
+                },
+                {
+                  "html": "<div class=\"region region-content\">",
+                  "target": [
+                    ".region-content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content content-event\">Event</div>",
+          "target": [
+            ".event-grid-box:nth-child(4) > .content-event.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6 (foreground color: #ffffff, background color: #636363, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
       "id": "color-contrast",
       "impact": "serious",
       "tags": [
@@ -1343,7 +1882,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1405,7 +1944,7 @@
       ],
       "description": "Ensure <iframe> and <frame> elements have an accessible name",
       "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1461,7 +2000,7 @@
       ],
       "description": "Ensure touch targets have sufficient size and space",
       "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1484,15 +2023,15 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"#\" class=\"\">2</a>",
+                  "html": "<a href=\"#\" class=\"flex-active\">2</a>",
                   "target": [
-                    "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
+                    "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
                   ]
                 }
               ],
@@ -1530,9 +2069,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1542,9 +2081,9 @@
                   ]
                 },
                 {
-                  "html": "<a href=\"#\" class=\"flex-active\">3</a>",
+                  "html": "<a href=\"#\">3</a>",
                   "target": [
-                    "li:nth-child(3) > .flex-active[href=\"#\"]"
+                    "li:nth-child(3) > a[href=\"#\"]"
                   ]
                 }
               ],
@@ -1555,9 +2094,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"#\" class=\"\">2</a>",
+          "html": "<a href=\"#\" class=\"flex-active\">2</a>",
           "target": [
-            "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
+            "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Target has insufficient size (11px by 11px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
         },
@@ -1582,15 +2121,15 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"#\" class=\"\">2</a>",
+                  "html": "<a href=\"#\" class=\"flex-active\">2</a>",
                   "target": [
-                    "#flexslider-2 > ol > li:nth-child(2) > a[href=\"#\"]"
+                    "#flexslider-2 > ol > li:nth-child(2) > .flex-active[href=\"#\"]"
                   ]
                 },
                 {
@@ -1607,9 +2146,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"#\" class=\"flex-active\">3</a>",
+          "html": "<a href=\"#\">3</a>",
           "target": [
-            "li:nth-child(3) > .flex-active[href=\"#\"]"
+            "li:nth-child(3) > a[href=\"#\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Target has insufficient size (11px by 11px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
         },
@@ -1634,15 +2173,15 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
-                  "html": "<a href=\"#\" class=\"flex-active\">3</a>",
+                  "html": "<a href=\"#\">3</a>",
                   "target": [
-                    "li:nth-child(3) > .flex-active[href=\"#\"]"
+                    "li:nth-child(3) > a[href=\"#\"]"
                   ]
                 },
                 {
@@ -1686,9 +2225,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1738,9 +2277,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1790,9 +2329,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1842,9 +2381,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1894,9 +2433,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">",
+                  "html": "<a href=\"/majors/biology\" hreflang=\"en\"><img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">\n\n</a>",
                   "target": [
-                    ".field-content > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+                    ".field-content > a[href$=\"biology\"][hreflang=\"en\"]"
                   ]
                 },
                 {
@@ -1940,7 +2479,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1955,15 +2494,15 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"overlay-title\"><a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">Chemistry &amp; Biochemistry</a></div>",
+                  "html": "<div class=\"overlay-title\"><a href=\"/majors/biology\" hreflang=\"en\">Biology</a></div>",
                   "target": [
-                    "li[data-thumb-alt=\"\"]:nth-child(3) > div:nth-child(2) > .overlay-title"
+                    "li[data-thumb-alt=\"\"]:nth-child(2) > div:nth-child(2) > .overlay-title"
                   ]
                 },
                 {
-                  "html": "<img src=\"/sites/default/files/styles/medium/public/2022-08/Madalyn-Phan-Photoshoot-8-1-22-%282-of-48%29_web.jpg?itok=A7cCBP0M\" width=\"640\" height=\"480\" alt=\"Madalyn Phan in lab Photo: Christin Palmstrom\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">",
+                  "html": "<img src=\"/sites/default/files/styles/medium/public/2025-07/IMG_0564.jpeg?itok=D50l2hwD\" width=\"640\" height=\"480\" alt=\"Biology\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"img-responsive\" draggable=\"false\">",
                   "target": [
-                    "a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"] > img[width=\"640\"][height=\"480\"][draggable=\"false\"]"
+                    "img[alt=\"Biology\"]"
                   ]
                 }
               ],
@@ -1974,9 +2513,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"/majors/chemistry-biochemistry\" hreflang=\"en\">Chemistry &amp; Biochemistry</a>",
+          "html": "<a href=\"/majors/biology\" hreflang=\"en\">Biology</a>",
           "target": [
-            ".overlay-title > a[href$=\"chemistry-biochemistry\"][hreflang=\"en\"]"
+            ".overlay-title > a[href$=\"biology\"][hreflang=\"en\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
@@ -1988,19 +2527,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -2010,7 +2542,7 @@
           "target": [
             ".node--view-mode-grid-box-1 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -2090,19 +2622,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -2112,7 +2637,7 @@
           "target": [
             ".node--view-mode-grid-box-2 > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -2192,19 +2717,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -2214,7 +2732,7 @@
           "target": [
             ".views-row:nth-child(3) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -2294,19 +2812,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
-                "messageKey": "imgNode",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<svg focusable=\"false\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">",
-                  "target": [
-                    ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_twitter[href$=\"/#twitter\"][rel=\"nofollow noopener\"] > .a2a_s_twitter.a2a_s__default.a2a_svg > svg[viewBox=\"0 0 32 32\"]"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -2316,7 +2827,7 @@
           "target": [
             ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .a2a_kit.a2a_kit_size_32.addtoany_list > .a2a_button_facebook[href$=\"/#facebook\"][rel=\"nofollow noopener\"] > .a2a_label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -2385,310 +2896,6 @@
           "html": "<a href=\"/news/2026/four-uc-santa-barbara-undergraduates-named-goldwater-scholars\" hreflang=\"en\">Four UC Santa Barbara undergraduates named Goldwater Scholars </a>",
           "target": [
             ".views-row:nth-child(4) > .node--view-mode-grid-box-3.grid-box.node--type-news > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.5pt (15.3px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Dr. Sharon Tettegah'...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/dr-sharon-tettegahs-social-justice-sentient-systems-technology-emotion-and-arc-human\" hreflang=\"en\">Dr. Sharon Tettegah's \"From Social Justice to Sentient Systems: Technology, Emotion, and the Arc of Human-Centered Research\"</a>",
-          "target": [
-            ".event-grid-box:nth-child(1) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Dr. Sharon Tettegah'...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(1) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(1) > .content-event.field-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.5pt (15.3px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(2) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"CCS Summer Send-Off 2026\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-06/CCS%20Summer%20Send%20Off%202026.png?itok=sUTMYEh7\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"CCS Summer Send-Off 2026\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/ccs-summer-send-0\" hreflang=\"en\">CCS Summer Send-Off</a>",
-          "target": [
-            ".teaser-title > a[href$=\"ccs-summer-send-0\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(2) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"CCS Summer Send-Off 2026\" class=\"media__image media__element b-lazy img-responsive\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files/styles/grid_box_3/public/2026-06/CCS%20Summer%20Send%20Off%202026.png?itok=sUTMYEh7\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    "img[alt=\"CCS Summer Send-Off 2026\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(2) > .content-event.field-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.5pt (15.3px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Spectrum Launch Part...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/spectrum-vol-69-launch-party\" hreflang=\"en\">Spectrum Vol. 69 Launch Party</a>",
-          "target": [
-            ".event-grid-box:nth-child(3) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"Spectrum Launch Part...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(3) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(3) > .content-event.field-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.5pt (15.3px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"teaser-title\"><a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a></div>",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > .teaser-title"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"\"Burrow of the Habit...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"/events/burrow-habitual-self-senior-exhibition-haley-harcke-26-ccs-art\" hreflang=\"en\">\"Burrow of the Habitual Self\": A Senior Exhibition by Haley Harcke '26 (CCS Art)</a>",
-          "target": [
-            ".event-grid-box:nth-child(4) > .teaser-title > a[hreflang=\"en\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"field-content content-event\">Event</div>",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > .content-event.field-content"
-                  ]
-                },
-                {
-                  "html": "<img alt=\"\"Burrow of the Habit...\" class=\"media__image media__...\" decoding=\"async\" loading=\"lazy\" src=\"/sites/default/files...\" width=\"300\" height=\"300\" typeof=\"foaf:Image\">",
-                  "target": [
-                    ".event-grid-box:nth-child(4) > a > .media.media--blazy.media--switch > .media__image[width=\"300\"][height=\"300\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field-content content-event\">Event</div>",
-          "target": [
-            ".event-grid-box:nth-child(4) > .content-event.field-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         }

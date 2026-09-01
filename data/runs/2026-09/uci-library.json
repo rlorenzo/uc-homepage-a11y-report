@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "uci-library",
   "name": "UC Irvine Libraries",
   "campus": "uci",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -485,7 +485,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -520,40 +520,6 @@
             ".home_hours_text > a"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #216ddf, background color: #f5f5f5, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#1966a2",
-                "bgColor": "#d3d3d3",
-                "contrastRatio": 4.05,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a class=\"btn btn-default\" href=\"/hours?lid=10394\" target=\"_blank\">More Hours</a>",
-                  "target": [
-                    "a[href=\"/hours?lid=10394\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.05 (foreground color: #1966a2, background color: #d3d3d3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"btn btn-default\" href=\"/hours?lid=10394\" target=\"_blank\">More Hours</a>",
-          "target": [
-            "a[href=\"/hours?lid=10394\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.05 (foreground color: #1966a2, background color: #d3d3d3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]
     }
@@ -573,7 +539,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -584,14 +550,14 @@
               "data": {
                 "role": null,
                 "nodeName": "div",
-                "messageKey": "noRoleSingular",
+                "messageKey": "visibleLabelSingular",
                 "prohibited": [
                   "aria-labelledby"
                 ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+              "message": "aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
             }
           ],
           "impact": "serious",
@@ -599,7 +565,7 @@
           "target": [
             "#utility-nav"
           ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
         }
       ]
     },
@@ -620,7 +586,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -692,10 +658,10 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "10.5pt (14px)",
+                "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
+                "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
@@ -705,9 +671,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a id=\"event-calendar\" href=\"http://news.lib.uci.edu/library-events\">Library Events <i class=\"fa fa-arrow-right yellow-font\"></i></a>",
+          "html": "<h3>Today's Hours</h3>",
           "target": [
-            "#event-calendar"
+            ".field--name-field-column-1 > .field--item > .paragraph--type--text-editor.paragraph.paragraph--view-mode--default > h3"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -717,7 +683,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "10.5pt (14px)",
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -730,9 +696,384 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a id=\"more-news\" href=\"http://news.lib.uci.edu\">More News <i class=\"fa fa-arrow-right yellow-font\"></i></a>",
+          "html": "<a class=\"btn btn-default\" href=\"/hours?lid=10394\" target=\"_blank\">More Hours</a>",
           "target": [
-            "#more-news"
+            "a[href=\"/hours?lid=10394\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Top Requests and Questions</h3>",
+          "target": [
+            ".field--name-field-column-2 > .field--item > .paragraph--type--text-editor.paragraph.paragraph--view-mode--default > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button\" href=\"/study-space-locator\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Study at the Libraries', 'Home (Top Requests and Questions)']);\">Study at the Libraries</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"study-space-locator\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button\" href=\"/equipment\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Equipment Lending', 'Home (Top Requests and Questions)']);\">Equipment Lending</a>",
+          "target": [
+            "li:nth-child(2) > a[href$=\"equipment\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button\" href=\"/paging-pickup-services\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Paging &amp; Pickup Services', 'Home (Top Requests and Questions)']);\">Paging &amp; Pickup Services</a>",
+          "target": [
+            "li:nth-child(3) > a[href$=\"paging-pickup-services\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button\" href=\"/collection-suggestion\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Suggest a Title For Purchase', 'Home (Top Requests and Questions)']);\">Suggest a Title For Purchase</a>",
+          "target": [
+            "li:nth-child(4) > a[href$=\"collection-suggestion\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"button\" href=\"https://guides.lib.uci.edu/StreamingMedia\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Streaming Media Options', 'Home (Top Requests and Questions)']);\" target=\"_blank\">Streaming Media Options</a>",
+          "target": [
+            ".button[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Quick Links</h3>",
+          "target": [
+            ".field--name-field-column-3 > .field--item > .paragraph--type--text-editor.paragraph.paragraph--view-mode--default > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-default\" href=\"https://uci.primo.exlibrisgroup.com/discovery/search?vid=01CDL_IRV_INST:UCI&amp;sortby=rank\" style=\"overflow: auto\" target=\"_blank\">UC Library Search </a>",
+          "target": [
+            ".row > .quicklinks-catalog-buttons > .btn-default.btn[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"course-reserves/list\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Course Reserves', 'Home (Quicklinks)']);\" style=\"\">Course Reserves </a>",
+          "target": [
+            "a[href$=\"list\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://guides.lib.uci.edu/az.php\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Databases A-Z', 'Home (Quicklinks)']);\" target=\"_blank\">Databases A-Z</a>",
+          "target": [
+            "ul > li:nth-child(2) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://guides.lib.uci.edu/az/databases/recommended\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Recommended Databases', 'Home (Quicklinks)']);\" target=\"_blank\">Recommended Databases</a>",
+          "target": [
+            "ul > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://news.lib.uci.edu\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Library Events', 'Home (Quicklinks)']);\" rel=\" noopener\" target=\"_blank\">Library Events</a>",
+          "target": [
+            "a[rel=\" noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://guides.lib.uci.edu\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Research Guides', 'Home (Quicklinks)']);\" target=\"_blank\">Research Guides </a>",
+          "target": [
+            "a[href$=\"guides.lib.uci.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://special.lib.uci.edu\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Special Collections &amp; Archives', 'Home (Quicklinks)']);\">Special Collections &amp; Archives </a>",
+          "target": [
+            "a[href$=\"special.lib.uci.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"subject-librarians\" onclick=\"_paq.push(['trackEvent', 'Interaction', 'Click Subject Librarians', 'Home (Quicklinks)']);\">Subject Librarians</a>",
+          "target": [
+            "li:nth-child(7) > a[href$=\"subject-librarians\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -810,6 +1151,206 @@
             "#chatbotLink > strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"col-sm-6\" id=\"footer-lib-info\">",
+          "target": [
+            "#footer-lib-info"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://uci.edu/copyright/index.php\" target=\"_blank\">© 2026 UC Regents</a>",
+          "target": [
+            "a[target=\"_blank\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Text us questions - <a href=\"sms:19493037535\">949.303.7535</a></span>",
+          "target": [
+            "#footer-lib-info > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"sms:19493037535\">949.303.7535</a>",
+          "target": [
+            "a[href=\"sms:19493037535\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.lib.uci.edu/send-us-your-comments?loc=www&amp;sender_referer=https://www.lib.uci.edu/home\" target=\"_blank\">Comments and Suggestions</a>",
+          "target": [
+            "a[target=\"_blank\"]:nth-child(6)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.lib.uci.edu/accessibility\" target=\"_blank\">Accessibility</a>",
+          "target": [
+            "a[target=\"_blank\"]:nth-child(8)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/sitemap\" target=\"_blank\">Site Map</a>",
+          "target": [
+            "a[href$=\"sitemap\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"//www.uci.edu\" target=\"_blank\">UC Irvine Homepage</a>",
+          "target": [
+            "a[href$=\"www.uci.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     },
@@ -827,7 +1368,7 @@
       ],
       "description": "Ensure every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria?application=playwright",
       "nodes": [
         {
           "any": [
@@ -867,7 +1408,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -958,42 +1499,8 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#1a66a1",
-                "contrastRatio": 6.07,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"navbar-header row visible-xs\" id=\"navbar-mobile\">",
-                  "target": [
-                    "#navbar-mobile"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 6.07 (foreground color: #ffffff, background color: #1a66a1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<button class=\"center-block\" data-target=\"#menu-row-mobile\" data-toggle=\"collapse\" id=\"utility-main-nav-collapse\" type=\"button\">MENU</button>",
-          "target": [
-            "#utility-main-nav-collapse"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.07 (foreground color: #ffffff, background color: #1a66a1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
-        },
         {
           "any": [
             {
@@ -1285,7 +1792,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1373,7 +1880,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1416,8 +1923,33 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"center-block\" data-target=\"#menu-row-mobile\" data-toggle=\"collapse\" id=\"utility-main-nav-collapse\" type=\"button\">MENU</button>",
+          "target": [
+            "#utility-main-nav-collapse"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -1509,7 +2041,7 @@
       ],
       "description": "Ensure every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1549,7 +2081,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
