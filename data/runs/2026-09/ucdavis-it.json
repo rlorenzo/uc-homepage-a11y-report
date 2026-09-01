@@ -1,0 +1,1797 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucdavis-it",
+  "name": "UC Davis Information & Educational Technology",
+  "campus": "ucdavis",
+  "type": "it",
+  "category": "it",
+  "url": "https://iet.ucdavis.edu",
+  "render_mode": "headless",
+  "element_count": 472,
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"chatIcon\" class=\"sp-ac-btn unselectable btn-wrapper closed\"></button>",
+          "target": [
+            "#chatIcon"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        Ally assesses courses and individual course content based on current accessibility standards and provides downloadable alternative formats for course materials.\n      </p>",
+          "target": [
+            ".l-first > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        The updated UC Davis Mobile app for iOS and Android was built through a collaboration between students and Information and Educational Technology (IET) staff to solve real campus user pain points.\n      </p>",
+          "target": [
+            ".l-second > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        Beginning Monday, July 6, 2026, the UCD-Guest Wireless login process will be streamlined, yet remain secure, by allowing guests to simply accept our terms of service to access the network.\n      </p>",
+          "target": [
+            ".l-third > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tel:5307544357\">(530) 754-HELP (4357)</a>",
+          "target": [
+            "a[href=\"tel:5307544357\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:ithelp@ucdavis.edu\">ithelp@ucdavis.edu</a>",
+          "target": [
+            "a[href$=\"mailto:ithelp@ucdavis.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"javascript:;\" onclick=\"openBotrock()\">Start a chat</a>",
+          "target": [
+            "a[href=\"javascript:;\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/registry-of-authentic-messages\">Authentic Message Registry</a>",
+          "target": [
+            ".list--arrow > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/uc-davis-computing-access-and-printing-services\">Computing &amp; Printing</a>",
+          "target": [
+            ".list--arrow > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://computingaccounts.ucdavis.edu/cgi-bin/services/index.cgi\">Computing Accounts</a>",
+          "target": [
+            ".list--arrow > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/supplier-risk-management\">Supplier Risk Management</a>",
+          "target": [
+            "a[href$=\"supplier-risk-management\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://login.canvas.ucdavis.edu/\">UC Davis Canvas</a>",
+          "target": [
+            "li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#808080",
+                "bgColor": "#ffffff",
+                "contrastRatio": 3.94,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.94 (foreground color: #808080, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:grey\">Do not email personal information, such as dates of birth, passwords or Social Security Numbers.</span>",
+          "target": [
+            "i > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.94 (foreground color: #808080, background color: #ffffff, font size: 14.3pt (19.0625px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "53.6pt (71.4844px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"460\" alt=\"Smartphone showing a...\" loading=\"lazy\" class=\"image-style-sf-title...\">",
+                  "target": [
+                    ".image-style-sf-title-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">New UC Davis Mobile App</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--50-50 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events\">Upcoming Events</a>",
+          "target": [
+            "h2 > a[href$=\"events\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.3pt (19.0625px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-element-container events-title block block-views block-views-blockiet-upcoming-events--block-1 panel\">",
+                  "target": [
+                    ".views-element-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field field--name-title field--type-string field--label-hidden\">Ally in UC Davis Canvas Faculty Live Training 9/4</span>",
+          "target": [
+            ".vm-listing[data-component-id=\"sitefarm_one:vm-listing\"]:nth-child(1) > .vm-listing__body > .vm-listing__title > a[rel=\"bookmark\"] > .field--name-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".u-space-mb--small > .l-header > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/iet-initiatives\">Initiatives</a>",
+          "target": [
+            ".u-space-mb--small > .l-header > .block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-01/Aggie%20AI%20Initiatives%20Button.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".tile-link[href$=\"aggie-ai\"][data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Aggie AI</h3>",
+          "target": [
+            ".tile-link[href$=\"aggie-ai\"][data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2026-03/Initiative%20Icon-Accessibility_2.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".l-second > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Digital Accessibility Resources</h3>",
+          "target": [
+            ".l-second > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-07/Wi-Fi%20Refresh.svg\" width=\"1000\" height=\"1000\" alt=\"Wi-Fi Icon\">",
+                  "target": [
+                    "img[alt=\"Wi-Fi Icon\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Campus Wi-Fi Refresh</h3>",
+          "target": [
+            ".tile-link[href$=\"campus-wifi-refresh\"][data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-12/Initiative%20Icon_IAM.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".l-fourth > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Digital Identity &amp; Access Transformation</h3>",
+          "target": [
+            ".l-fourth > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Still need help? Contact IT Express</h2>",
+          "target": [
+            ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40.0217px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Quicklinks</h2>",
+          "target": [
+            ".quicklinks-title > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"chatIcon\" class=\"sp-ac-btn unselectable btn-wrapper closed\"></button>",
+          "target": [
+            "#chatIcon"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        Ally assesses courses and individual course content based on current accessibility standards and provides downloadable alternative formats for course materials.\n      </p>",
+          "target": [
+            ".l-first > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        The updated UC Davis Mobile app for iOS and Android was built through a collaboration between students and Information and Educational Technology (IET) staff to solve real campus user pain points.\n      </p>",
+          "target": [
+            ".l-second > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"layout layout--threecol-section layout--threecol-section--33-34-33 l-container--edge l-gutter u-space-mt--small u-space-pt--huge u-space-pb--medium layout-section--wonder-blue layout-section--force-contrast\">",
+                  "target": [
+                    ".layout--threecol-section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>        Beginning Monday, July 6, 2026, the UCD-Guest Wireless login process will be streamlined, yet remain secure, by allowing guests to simply accept our terms of service to access the network.\n      </p>",
+          "target": [
+            ".l-third > .category-brand--secondary.block-inline-blocksf-marketing-highlight.panel > .marketing-highlight > .marketing-highlight__body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"l-container--edge l-gutter u-space-mt--flush u-space-pt--flush u-space-pb--huge layout-section--wonder-blue layout-section--force-contrast layout layout--onecol\">",
+                  "target": [
+                    ".u-space-mt--flush"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/technews\">See all Tech News articles</a>",
+          "target": [
+            "strong > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tel:5307544357\">(530) 754-HELP (4357)</a>",
+          "target": [
+            "a[href=\"tel:5307544357\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:ithelp@ucdavis.edu\">ithelp@ucdavis.edu</a>",
+          "target": [
+            "a[href$=\"mailto:ithelp@ucdavis.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"javascript:;\" onclick=\"openBotrock()\">Start a chat</a>",
+          "target": [
+            "a[href=\"javascript:;\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/registry-of-authentic-messages\">Authentic Message Registry</a>",
+          "target": [
+            ".list--arrow > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/uc-davis-computing-access-and-printing-services\">Computing &amp; Printing</a>",
+          "target": [
+            ".list--arrow > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://computingaccounts.ucdavis.edu/cgi-bin/services/index.cgi\">Computing Accounts</a>",
+          "target": [
+            ".list--arrow > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/supplier-risk-management\">Supplier Risk Management</a>",
+          "target": [
+            "a[href$=\"supplier-risk-management\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#13639e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.35,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://login.canvas.ucdavis.edu/\">UC Davis Canvas</a>",
+          "target": [
+            "li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #13639e, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#808080",
+                "bgColor": "#ffffff",
+                "contrastRatio": 3.94,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.94 (foreground color: #808080, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"color:grey\">Do not email personal information, such as dates of birth, passwords or Social Security Numbers.</span>",
+          "target": [
+            "i > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.94 (foreground color: #808080, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img src=\"/sites/g/files/dgvns...\" width=\"2000\" height=\"460\" alt=\"Smartphone showing a...\" loading=\"lazy\" class=\"image-style-sf-title...\">",
+                  "target": [
+                    ".image-style-sf-title-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">New UC Davis Mobile App</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--50-50 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events\">Upcoming Events</a>",
+          "target": [
+            "h2 > a[href$=\"events\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-element-container events-title block block-views block-views-blockiet-upcoming-events--block-1 panel\">",
+                  "target": [
+                    ".views-element-container"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field field--name-title field--type-string field--label-hidden\">Ally in UC Davis Canvas Faculty Live Training 9/4</span>",
+          "target": [
+            ".vm-listing[data-component-id=\"sitefarm_one:vm-listing\"]:nth-child(1) > .vm-listing__body > .vm-listing__title > a[rel=\"bookmark\"] > .field--name-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".u-space-mb--small > .l-header > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://iet.ucdavis.edu/iet-initiatives\">Initiatives</a>",
+          "target": [
+            ".u-space-mb--small > .l-header > .block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.1pt (24.15px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-01/Aggie%20AI%20Initiatives%20Button.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".tile-link[href$=\"aggie-ai\"][data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Aggie AI</h3>",
+          "target": [
+            ".tile-link[href$=\"aggie-ai\"][data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.1pt (24.15px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2026-03/Initiative%20Icon-Accessibility_2.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".l-second > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Digital Accessibility Resources</h3>",
+          "target": [
+            ".l-second > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.1pt (24.15px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-07/Wi-Fi%20Refresh.svg\" width=\"1000\" height=\"1000\" alt=\"Wi-Fi Icon\">",
+                  "target": [
+                    "img[alt=\"Wi-Fi Icon\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Campus Wi-Fi Refresh</h3>",
+          "target": [
+            ".tile-link[href$=\"campus-wifi-refresh\"][data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.1pt (24.15px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" class=\"no-image-style image-style-sf-large-tile lazyload lazyload--loaded\" src=\"/sites/g/files/dgvnsk14931/files/2025-12/Initiative%20Icon_IAM.svg\" width=\"1000\" height=\"1000\" alt=\"Decorative\">",
+                  "target": [
+                    ".l-fourth > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .o-filtered-image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field__item > .no-image-style.image-style-sf-large-tile[alt=\"Decorative\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"tile-link__title-heading\">Digital Identity &amp; Access Transformation</h3>",
+          "target": [
+            ".l-fourth > .block-inline-blocksf-tile-link.category-brand--primary.block-layout-builder > .tile-link[data-component-id=\"sitefarm_one:tile-link\"] > .tile-link__title > .tile-link__title-heading"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Still need help? Contact IT Express</h2>",
+          "target": [
+            ".l-2col--67-33 > .l-first > .block-inline-blocksf-basic.panel.block-layout-builder > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "19.3pt (25.688px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscured",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"quicklinks-title block block-layout-builder block-inline-blocksf-basic panel\">",
+                  "target": [
+                    ".quicklinks-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Quicklinks</h2>",
+          "target": [
+            ".quicklinks-title > .clearfix.text-formatted.field--name-body > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+        }
+      ]
+    }
+  ]
+}

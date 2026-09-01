@@ -1,0 +1,1364 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucsb-theaterdance",
+  "name": "UC Santa Barbara Department of Theater and Dance",
+  "campus": "ucsb",
+  "type": "school",
+  "category": "humanities-arts",
+  "url": "https://theaterdance.ucsb.edu",
+  "render_mode": "headless",
+  "element_count": 369,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#09847a",
+                "contrastRatio": 4.57,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"eyebrow\">",
+                  "target": [
+                    "#eyebrow"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/\" class=\"edu-link\">University of California, Santa Barbara</a>",
+          "target": [
+            ".edu-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#febc11",
+                "contrastRatio": 5.46,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-febc11\">\n                            <a href=\"/events/purchase-tickets-here\">\n                            Tickets\n                            </a>\n                          </div>",
+                  "target": [
+                    ".background-color-febc11"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/events/purchase-tickets-here\">\n                            Tickets\n                            </a>",
+          "target": [
+            ".background-color-febc11 > a[href$=\"purchase-tickets-here\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#09847a",
+                "contrastRatio": 4.57,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"eyebrow\">",
+                  "target": [
+                    "#eyebrow"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://giving.ucsb.edu/\">Give</a>",
+          "target": [
+            ".give > a[href$=\"giving.ucsb.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo and Juliet</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              5:30pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo &amp; Juliet</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              4:00pm to 6:00pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2382\" about=\"/news/sbdt-brings-movement-sbma\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_7730.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2382\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">SBDT Brings Movement to SBMA</span>",
+          "target": [
+            "article[data-history-node-id=\"2382\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2381\" about=\"/news/ucsb-dance-students-take-new-york-arnhold-summer-fellows-program\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_1080-preview.JPG)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2381\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB Dance Students Take New York with Arnhold Summer Fellows Program</span>",
+          "target": [
+            "article[data-history-node-id=\"2381\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2374\" about=\"/news/gabriella-roberts-receives-2026-shirley-jo-finney-excellence-award\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"2374\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Gabriella Roberts receives the 2026 Shirley Jo Finney Excellence Award</span>",
+          "target": [
+            "article[data-history-node-id=\"2374\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo and Juliet</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              5:30pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo &amp; Juliet</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              4:00pm to 6:00pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2382\" about=\"/news/sbdt-brings-movement-sbma\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_7730.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2382\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">SBDT Brings Movement to SBMA</span>",
+          "target": [
+            "article[data-history-node-id=\"2382\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2381\" about=\"/news/ucsb-dance-students-take-new-york-arnhold-summer-fellows-program\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_1080-preview.JPG)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2381\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB Dance Students Take New York with Arnhold Summer Fellows Program</span>",
+          "target": [
+            "article[data-history-node-id=\"2381\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2374\" about=\"/news/gabriella-roberts-receives-2026-shirley-jo-finney-excellence-award\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"2374\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Gabriella Roberts receives the 2026 Shirley Jo Finney Excellence Award</span>",
+          "target": [
+            "article[data-history-node-id=\"2374\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo and Juliet</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              5:30pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo &amp; Juliet</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              4:00pm to 6:00pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2382\" about=\"/news/sbdt-brings-movement-sbma\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_7730.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2382\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">SBDT Brings Movement to SBMA</span>",
+          "target": [
+            "article[data-history-node-id=\"2382\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2381\" about=\"/news/ucsb-dance-students-take-new-york-arnhold-summer-fellows-program\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_1080-preview.JPG)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2381\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB Dance Students Take New York with Arnhold Summer Fellows Program</span>",
+          "target": [
+            "article[data-history-node-id=\"2381\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2374\" about=\"/news/gabriella-roberts-receives-2026-shirley-jo-finney-excellence-award\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"2374\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Gabriella Roberts receives the 2026 Shirley Jo Finney Excellence Award</span>",
+          "target": [
+            "article[data-history-node-id=\"2374\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo and Juliet</h2>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              5:30pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(1) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(1) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"event-title\">Naked Shakes: Romeo &amp; Juliet</h2>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .event-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"start-time\">\n                              \n                              4:00pm to 6:00pm\n                              \n                          </div>",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .start-time"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"content\">",
+                  "target": [
+                    ".event:nth-child(2) > .event-card > .event-overview > .content"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"em-card_event-text\">",
+          "target": [
+            ".event:nth-child(2) > .event-card > .event-overview > .content > .location > .em-card_event-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2382\" about=\"/news/sbdt-brings-movement-sbma\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_7730.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2382\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">SBDT Brings Movement to SBMA</span>",
+          "target": [
+            "article[data-history-node-id=\"2382\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2381\" about=\"/news/ucsb-dance-students-take-new-york-arnhold-summer-fellows-program\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article/IMG_1080-preview.JPG)\">",
+                  "target": [
+                    "article[data-history-node-id=\"2381\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB Dance Students Take New York with Arnhold Summer Fellows Program</span>",
+          "target": [
+            "article[data-history-node-id=\"2381\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"2374\" about=\"/news/gabriella-roberts-receives-2026-shirley-jo-finney-excellence-award\" typeof=\"schema:Article\" class=\"article grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"2374\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Gabriella Roberts receives the 2026 Shirley Jo Finney Excellence Award</span>",
+          "target": [
+            "article[data-history-node-id=\"2374\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ]
+}
