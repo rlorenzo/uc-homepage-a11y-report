@@ -31,20 +31,26 @@ function setStatNumber(numNode, value, animate) {
   numNode.textContent = String(value);
 }
 
-function statValueEl(value, unit, klass, animate) {
+function statValueClass(klass, valueModifier) {
+  const size = klass === "stat-third" || klass === "stat-half" ? "stat-value small" : "stat-value";
+  return valueModifier ? `${size} ${valueModifier}` : size;
+}
+
+function statUnitEl(unit) {
+  const u = document.createElement("span");
+  u.className = "stat-unit";
+  u.textContent = unit;
+  return u;
+}
+
+function statValueEl({ value, unit, klass, animate, valueModifier }) {
   const valueEl = document.createElement("span");
-  valueEl.className =
-    klass === "stat-third" || klass === "stat-half" ? "stat-value small" : "stat-value";
+  valueEl.className = statValueClass(klass, valueModifier);
   const numNode = document.createElement("span");
   numNode.className = "stat-num";
   valueEl.appendChild(numNode);
   setStatNumber(numNode, value, animate);
-  if (unit) {
-    const u = document.createElement("span");
-    u.className = "stat-unit";
-    u.textContent = unit;
-    valueEl.appendChild(u);
-  }
+  if (unit) valueEl.appendChild(statUnitEl(unit));
   return valueEl;
 }
 
@@ -71,12 +77,13 @@ function statCardClass(statGrid, klass, animate) {
   return `stat ${klass || ""}${reveal}`;
 }
 
-function makeStatCard(statGrid, { label, badge, value, unit, caption, delta, klass, animate }) {
+function makeStatCard(statGrid, config) {
+  const { label, badge, value, unit, caption, delta, klass, animate, valueModifier } = config;
   const card = document.createElement("div");
   card.className = statCardClass(statGrid, klass, animate);
   card.setAttribute("role", "listitem");
   card.appendChild(statLabelEl(label, badge));
-  card.appendChild(statValueEl(value, unit, klass, animate));
+  card.appendChild(statValueEl({ value, unit, klass, animate, valueModifier }));
   if (caption) card.appendChild(statCaptionEl(caption));
   if (delta) card.appendChild(statDeltaEl(delta));
   return card;
@@ -111,7 +118,7 @@ function buildTotalCard(statGrid, view) {
     label: "Issues flagged",
     value: totalErrors !== null ? totalErrors : "n/a",
     caption: totalCaptionEl(view),
-    delta: prev ? deltaEl(totalErrors, prevTotalErrors) : null,
+    delta: prev ? deltaEl(totalErrors, prevTotalErrors, "no change") : null,
     klass: "stat-big",
     animate,
   });
@@ -177,16 +184,21 @@ function momView({ systemTrend, prev, scopeNote }) {
       caption: `More issues than ${prettyMonth(prev)}${scopeNote}. New content often adds new opportunities to improve.`,
     };
   }
-  return { value: "0", caption: `The same total as ${prettyMonth(prev)}${scopeNote}. Steady.` };
+  return {
+    value: "No change",
+    valueModifier: "stat-value-word",
+    caption: `The same total as ${prettyMonth(prev)}${scopeNote}. Steady.`,
+  };
 }
 
 function buildMomCard(statGrid, view) {
-  const { value, caption } = momView(view);
+  const { value, caption, valueModifier } = momView(view);
   return makeStatCard(statGrid, {
     badge: "03",
     label: "Month over month",
     value,
     caption,
+    valueModifier,
     klass: "stat-half",
     animate: view.animate,
   });

@@ -2,26 +2,25 @@ import { CAMPUS_NAMES } from "../data/constants.js";
 
 export const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-export function deltaEl(current, previous) {
-  if (current === null || current === undefined || previous === null || previous === undefined) {
-    const s = document.createElement("span");
-    s.className = "delta neutral";
-    s.textContent = "n/a";
-    return s;
-  }
-  const diff = current - previous;
+const isMissing = (v) => v === null || v === undefined;
+
+function deltaBadge(variant, text) {
   const s = document.createElement("span");
-  if (diff === 0) {
-    s.className = "delta neutral";
-    s.textContent = "0";
-  } else if (diff < 0) {
-    s.className = "delta improved";
-    s.textContent = `▼ ${Math.abs(diff)}`;
-  } else {
-    s.className = "delta regressed";
-    s.textContent = `▲ ${diff}`;
-  }
+  s.className = `delta ${variant}`;
+  s.textContent = text;
   return s;
+}
+
+// zeroLabel: the stat cards prefix this with "vs. last month ", where a bare
+// "0" reads as "last month was zero". They pass "no change". The site table
+// keeps the default — its column is headed "Change", so "0" is unambiguous
+// there and the column stays narrow across 183 rows.
+export function deltaEl(current, previous, zeroLabel = "0") {
+  if (isMissing(current) || isMissing(previous)) return deltaBadge("neutral", "n/a");
+  const diff = current - previous;
+  if (diff === 0) return deltaBadge("neutral", zeroLabel);
+  if (diff < 0) return deltaBadge("improved", `▼ ${Math.abs(diff)}`);
+  return deltaBadge("regressed", `▲ ${diff}`);
 }
 
 export function countUp(el, target, suffix = "") {
