@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "berkeley-ced",
   "name": "UC Berkeley College of Environmental Design",
   "campus": "berkeley",
@@ -9,7 +9,7 @@
   "category": "environment-design",
   "url": "https://ced.berkeley.edu",
   "render_mode": "headless",
-  "element_count": 1301,
+  "element_count": 1311,
   "violations": [],
   "incomplete": [
     {
@@ -29,7 +29,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -167,19 +167,12 @@
                 "contrastRatio": 0,
                 "fontSize": "27.0pt (36px)",
                 "fontWeight": "bold",
-                "messageKey": "elmPartiallyObscured",
+                "messageKey": "elmPartiallyObscuring",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"xl:w-full px-6 xl:pl-16 bg-white pt-9\">",
-                  "target": [
-                    ".pt-9.xl\\:w-full.xl\\:pl-16"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it's partially obscured by another element"
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
             }
           ],
           "all": [],
@@ -189,7 +182,7 @@
           "target": [
             ".mb-24.max-w-feature.text-black:nth-child(2) > .pb-3px.flex-col.no-underline > .lg\\:text-36.p-4.leading-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         },
         {
           "any": [

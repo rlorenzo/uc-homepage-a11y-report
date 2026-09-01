@@ -1,15 +1,15 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsc-admissions",
   "name": "UC Santa Cruz Admissions",
   "campus": "ucsc",
   "type": "admissions",
   "category": "admissions",
   "url": "https://admissions.ucsc.edu",
-  "render_mode": "headless",
-  "element_count": 2723,
+  "render_mode": "headed",
+  "element_count": 2721,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -417,9 +417,9 @@
         "RGAAv4",
         "RGAA-1.1.1"
       ],
-      "description": "Ensure [role=\"img\"] elements have alternative text",
-      "help": "[role=\"img\"] elements must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/role-img-alt?application=playwright",
+      "description": "Ensure [role=\"img\"] and [role=\"image\"] elements have alternative text",
+      "help": "[role=\"img\"] and [role=\"image\"] elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/role-img-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -807,74 +807,6 @@
           "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         }
       ]
-    },
-    {
-      "id": "target-size",
-      "impact": "serious",
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "wcag22aa",
-        "wcag258"
-      ],
-      "description": "Ensure touch targets have sufficient size and space",
-      "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "messageKey": "partiallyObscured",
-                "minSize": 24,
-                "width": 22,
-                "height": 80
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"https://www.youtube.com/watch?v=YJysVq3_PdU\" tabindex=\"0\"><div class=\"field--name-field-link-content\">Helen Yoo<span class=\"arrow\"></span></div></a>",
-                  "target": [
-                    "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Target has insufficient size because it is partially obscured (smallest space is 22px by 80px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 22,
-                "minOffset": 24
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"https://www.youtube.com/watch?v=WoqmKP2LJZ4\" tabindex=\"0\"><div class=\"field--name-field-link-content\">Kevin Fu<span class=\"arrow\"></span></div></a>",
-                  "target": [
-                    ".slick-current > .field--name-field-link.field--type-link.field--label-hidden > a"
-                  ]
-                },
-                {
-                  "html": "<a href=\"https://www.youtube.com/watch?v=YJysVq3_PdU\" tabindex=\"0\"><div class=\"field--name-field-link-content\">Helen Yoo<span class=\"arrow\"></span></div></a>",
-                  "target": [
-                    "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://www.youtube.com/watch?v=L1kE2Yj5RLM\" tabindex=\"0\"><div class=\"field--name-field-link-content\">Sabina Javier<span class=\"arrow\"></span></div></a>",
-          "target": [
-            "div[data-slick-index=\"1\"] > .field--name-field-link.field--type-link.field--label-hidden > a"
-          ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 22px by 80px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px."
-        }
-      ]
     }
   ],
   "incomplete": [
@@ -889,7 +821,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1244,68 +1176,6 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"slick__slide slide slide--12 slick-slide slick-cloned\" tabindex=\"-1\" style=\"\" data-slick-index=\"-2\" id=\"\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"-2\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Advice to New Students with Vaishnavi Dornodula<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"-2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--13 slick-slide slick-cloned\" tabindex=\"-1\" style=\"\" data-slick-index=\"-1\" id=\"\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"-1\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Aravind Nair<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"-1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
                   "html": "<div class=\"slick__slide slide slide--0 slick-slide slick-current slick-active\" tabindex=\"0\" style=\"\" data-slick-index=\"0\" aria-hidden=\"false\">",
                   "target": [
                     ".slick-current"
@@ -1322,6 +1192,37 @@
           "html": "<div class=\"field--name-field-link-content\">Kevin Fu<span class=\"arrow\"></span></div>",
           "target": [
             ".slick-current > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"slick__slide slide slide--1 slick-slide slick-active\" tabindex=\"0\" style=\"\" data-slick-index=\"1\" aria-hidden=\"false\">",
+                  "target": [
+                    "div[data-slick-index=\"1\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--name-field-link-content\">Sabina Javier<span class=\"arrow\"></span></div>",
+          "target": [
+            "div[data-slick-index=\"1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         },
@@ -1355,192 +1256,6 @@
             "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--3 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"3\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"3\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Lia Lara<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"3\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--4 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"4\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"4\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Amir Valipour<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"4\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--5 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"5\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"5\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">First-Year Students<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"5\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--6 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"6\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"6\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Transfers<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"6\"] > .field--name-field-link.field--type-link.field--label-hidden > a[href$=\"a3dC0j0_v1Y\"] > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--7 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"7\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"7\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Day in the Life - Transfer Student Irma Rodriguez<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"7\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--8 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"8\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"8\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\"> The UCSC Advantage - Part 1<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"8\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         }
       ]
     },
@@ -1561,7 +1276,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2055,93 +1770,6 @@
             {
               "id": "color-contrast",
               "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p>Thinking about applying to UC Santa Cruz for next year or beyond? Find out why you should consider becoming a new Banana Slug!</p>",
-          "target": [
-            ".block__story--slider-body > .field--name-body.field--type-text-with-summary.text-formatted > p"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--12 slick-slide slick-cloned\" tabindex=\"-1\" style=\"\" data-slick-index=\"-2\" id=\"\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"-2\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Advice to New Students with Vaishnavi Dornodula<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"-2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--13 slick-slide slick-cloned\" tabindex=\"-1\" style=\"\" data-slick-index=\"-1\" id=\"\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"-1\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Aravind Nair<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"-1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
                 "fontSize": "16.5pt (22px)",
                 "fontWeight": "normal",
                 "messageKey": "pseudoContent",
@@ -2180,6 +1808,37 @@
               },
               "relatedNodes": [
                 {
+                  "html": "<div class=\"slick__slide slide slide--1 slick-slide slick-active\" tabindex=\"0\" style=\"\" data-slick-index=\"1\" aria-hidden=\"false\">",
+                  "target": [
+                    "div[data-slick-index=\"1\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--name-field-link-content\">Sabina Javier<span class=\"arrow\"></span></div>",
+          "target": [
+            "div[data-slick-index=\"1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
                   "html": "<div class=\"slick__slide slide slide--2 slick-slide slick-active\" tabindex=\"0\" style=\"\" data-slick-index=\"2\" aria-hidden=\"false\">",
                   "target": [
                     "div[data-slick-index=\"2\"]"
@@ -2196,192 +1855,6 @@
           "html": "<div class=\"field--name-field-link-content\">Helen Yoo<span class=\"arrow\"></span></div>",
           "target": [
             "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--3 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"3\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"3\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Lia Lara<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"3\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--4 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"4\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"4\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Amir Valipour<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"4\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--5 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"5\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"5\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">First-Year Students<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"5\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--6 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"6\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"6\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Transfers<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"6\"] > .field--name-field-link.field--type-link.field--label-hidden > a[href$=\"a3dC0j0_v1Y\"] > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--7 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"7\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"7\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Day in the Life - Transfer Student Irma Rodriguez<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"7\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "16.5pt (22px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--8 slick-slide\" tabindex=\"-1\" style=\"\" data-slick-index=\"8\" aria-hidden=\"true\">",
-                  "target": [
-                    "div[data-slick-index=\"8\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\"> The UCSC Advantage - Part 1<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"8\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         },
@@ -2714,7 +2187,7 @@
       ],
       "description": "Ensure every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2754,7 +2227,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2865,7 +2338,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2915,7 +2388,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2951,7 +2424,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3346,9 +2819,9 @@
         "RGAAv4",
         "RGAA-1.1.1"
       ],
-      "description": "Ensure [role=\"img\"] elements have alternative text",
-      "help": "[role=\"img\"] elements must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/role-img-alt?application=playwright",
+      "description": "Ensure [role=\"img\"] and [role=\"image\"] elements have alternative text",
+      "help": "[role=\"img\"] and [role=\"image\"] elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/role-img-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3575,7 +3048,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3917,99 +3390,6 @@
             "div[data-slick-index=\"-1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--0 slick-slide slick-current slick-active\" data-slick-index=\"0\" aria-hidden=\"false\" tabindex=\"0\">",
-                  "target": [
-                    ".slick-current"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Kevin Fu<span class=\"arrow\"></span></div>",
-          "target": [
-            ".slick-current > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--2 slick-slide\" data-slick-index=\"2\" aria-hidden=\"true\" tabindex=\"-1\">",
-                  "target": [
-                    "div[data-slick-index=\"2\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Helen Yoo<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--3 slick-slide\" data-slick-index=\"3\" aria-hidden=\"true\" tabindex=\"-1\">",
-                  "target": [
-                    "div[data-slick-index=\"3\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Lia Lara<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"3\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         }
       ]
     },
@@ -4030,7 +3410,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -4211,106 +3591,6 @@
             {
               "id": "color-contrast",
               "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.8pt (17px)",
-                "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p style=\"text-align: center;\">\n  The Slug Connection - Sign up to get updates and announcements from UCSC!\n</p>",
-          "target": [
-            "#form_question_57860eb0-11ff-499b-8fa5-2646eca88b1c > .form_label > p:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.3pt (15px)",
-                "fontWeight": "bold",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<strong>I plan to apply as a</strong>",
-          "target": [
-            "#form_514b8ac2-2fdc-484e-8331-5115be0eb94a > .form_label > strong"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<label for=\"form_514b8ac2-2fdc-484e-8331-5115be0eb94a_1\">First-Year Student</label>",
-          "target": [
-            "#form_514b8ac2-2fdc-484e-8331-5115be0eb94a > .form_responses > .form_response:nth-child(1) > label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<label for=\"form_514b8ac2-2fdc-484e-8331-5115be0eb94a_4\">I am the Parent of a Student</label>",
-          "target": [
-            "#form_514b8ac2-2fdc-484e-8331-5115be0eb94a > .form_responses > .form_response:nth-child(4) > label"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
                 "fontSize": "24.0pt (32px)",
                 "fontWeight": "normal",
                 "messageKey": "pseudoContent",
@@ -4520,99 +3800,6 @@
           "html": "<div class=\"field--name-field-link-content\">Aravind Nair<span class=\"arrow\"></span></div>",
           "target": [
             "div[data-slick-index=\"-1\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--0 slick-slide slick-current slick-active\" data-slick-index=\"0\" aria-hidden=\"false\" tabindex=\"0\">",
-                  "target": [
-                    ".slick-current"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Kevin Fu<span class=\"arrow\"></span></div>",
-          "target": [
-            ".slick-current > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--2 slick-slide\" data-slick-index=\"2\" aria-hidden=\"true\" tabindex=\"-1\">",
-                  "target": [
-                    "div[data-slick-index=\"2\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Helen Yoo<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"2\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "pseudoContent",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"slick__slide slide slide--3 slick-slide\" data-slick-index=\"3\" aria-hidden=\"true\" tabindex=\"-1\">",
-                  "target": [
-                    "div[data-slick-index=\"3\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a pseudo element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field--name-field-link-content\">Lia Lara<span class=\"arrow\"></span></div>",
-          "target": [
-            "div[data-slick-index=\"3\"] > .field--name-field-link.field--type-link.field--label-hidden > a > .field--name-field-link-content"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         },
@@ -4920,7 +4107,7 @@
       ],
       "description": "Ensure every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria?application=playwright",
       "nodes": [
         {
           "any": [
@@ -4960,7 +4147,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -5041,7 +4228,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -5091,7 +4278,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],

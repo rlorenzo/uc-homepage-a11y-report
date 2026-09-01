@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsf-nursing",
   "name": "UCSF School of Nursing",
   "campus": "ucsf",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -229,6 +229,60 @@
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.59 (foreground color: #007bbd, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
         }
       ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 20,
+                "height": 20
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (20px by 20px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 10,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"slick-next slick-arrow\" type=\"button\" style=\"left: 70px;\"><span class=\"slick-next-icon\" aria-hidden=\"true\"></span><span class=\"slick-sr-only\">Next</span></button>",
+                  "target": [
+                    ".slick-initialized.slick-slider.accessible-slick > .slick-next.slick-arrow"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\"><span class=\"slick-dot-icon\" aria-hidden=\"true\"></span><span class=\"slick-sr-only\">Go to slide 2</span></button>",
+          "target": [
+            ".welcome-block > .slick-initialized.slick-slider.accessible-slick > .slick-dots > li:nth-child(2) > button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 10px instead of at least 24px."
+        }
+      ]
     }
   ],
   "incomplete": [
@@ -243,7 +297,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -605,7 +659,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1056,7 +1110,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1184,7 +1238,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1408,7 +1462,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1417,20 +1471,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-2\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-2\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-2\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-2\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-1\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-2\" aria-expanded=\"false\">Admissions<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-1\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-2\" aria-expanded=\"false\">Admissions<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-1"
+            "#sm-17882982264531653-1"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-2\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-2\""
         },
         {
           "any": [],
@@ -1439,20 +1493,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-4\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-4\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-4\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-4\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-3\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-4\" aria-expanded=\"false\">Programs<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-3\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-4\" aria-expanded=\"false\">Programs<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-3"
+            "#sm-17882982264531653-3"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-4\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-4\""
         },
         {
           "any": [],
@@ -1461,20 +1515,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-8\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-8\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-8\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-8\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-7\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-8\" aria-expanded=\"false\">Research<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-7\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-8\" aria-expanded=\"false\">Research<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-7"
+            "#sm-17882982264531653-7"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-8\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-8\""
         },
         {
           "any": [],
@@ -1483,20 +1537,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-10\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-10\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-10\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-10\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-9\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-10\" aria-expanded=\"false\">Resources<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-9\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-10\" aria-expanded=\"false\">Resources<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-9"
+            "#sm-17882982264531653-9"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-10\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-10\""
         },
         {
           "any": [],
@@ -1505,20 +1559,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-14\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-14\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-14\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-14\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-13\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-14\" aria-expanded=\"false\">News &amp; Events<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-13\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-14\" aria-expanded=\"false\">News &amp; Events<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-13"
+            "#sm-17882982264531653-13"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-14\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-14\""
         },
         {
           "any": [],
@@ -1527,20 +1581,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882848416263625-16\""
+                "needsReview": "aria-controls=\"sm-17882982264531653-16\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-16\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-16\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"/about/our-organization\" data-drupal-link-system-path=\"node/5\" class=\"has-submenu\" id=\"sm-17882848416263625-15\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-16\" aria-expanded=\"false\">About<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"/about/our-organization\" data-drupal-link-system-path=\"node/5\" class=\"has-submenu\" id=\"sm-17882982264531653-15\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-16\" aria-expanded=\"false\">About<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-15"
+            "#sm-17882982264531653-15"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882848416263625-16\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882982264531653-16\""
         }
       ]
     },
@@ -1555,7 +1609,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1762,7 +1816,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2058,7 +2112,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2091,9 +2145,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882848416263625-7\" aria-haspopup=\"true\" aria-controls=\"sm-17882848416263625-8\" aria-expanded=\"false\">Research<span class=\"sub-arrow\"></span></a>",
+          "html": "<a href=\"#\" class=\"has-submenu\" id=\"sm-17882982264531653-7\" aria-haspopup=\"true\" aria-controls=\"sm-17882982264531653-8\" aria-expanded=\"false\">Research<span class=\"sub-arrow\"></span></a>",
           "target": [
-            "#sm-17882848416263625-7"
+            "#sm-17882982264531653-7"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }

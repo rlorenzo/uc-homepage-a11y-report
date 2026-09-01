@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "berkeley-ischool",
   "name": "UC Berkeley School of Information",
   "campus": "berkeley",
@@ -26,7 +26,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -48,9 +48,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"4dcdae7a-4c0b-4b26-b55c-ad14625ef73f\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
+          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"d9dd265d-ea24-47d7-bbf6-fc802d6580cc\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
           "target": [
-            "#\\34 dcdae7a-4c0b-4b26-b55c-ad14625ef73f"
+            "#d9dd265d-ea24-47d7-bbf6-fc802d6580cc"
           ],
           "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
         },
@@ -74,9 +74,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<div class=\"tbm tbm-main tbm-no-arrows\" id=\"a86da366-4f5b-4790-a4a7-254987946451\" data-breakpoint=\"0\" aria-label=\"main navigation\" data-initialized=\"true\">",
+          "html": "<div class=\"tbm tbm-main tbm-no-arrows\" id=\"8f697051-e32b-414c-8ab7-c58345c9919d\" data-breakpoint=\"0\" aria-label=\"main navigation\" data-initialized=\"true\">",
           "target": [
-            "#a86da366-4f5b-4790-a4a7-254987946451"
+            "#\\38 f697051-e32b-414c-8ab7-c58345c9919d"
           ],
           "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
         }
@@ -93,7 +93,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -207,8 +207,33 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input placeholder=\"Search\" aria-label=\"Search\" data-drupal-selector=\"edit-search\" type=\"text\" id=\"edit-search\" name=\"search\" value=\"\" size=\"15\" maxlength=\"128\" class=\"form-text required\" required=\"required\" aria-required=\"true\">",
+          "target": [
+            "#edit-search"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -1248,7 +1273,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1270,9 +1295,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"4dcdae7a-4c0b-4b26-b55c-ad14625ef73f\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
+          "html": "<div class=\"tbm tbm-top-nav tbm-no-arrows\" id=\"d9dd265d-ea24-47d7-bbf6-fc802d6580cc\" data-breakpoint=\"0\" aria-label=\"top-nav navigation\" data-initialized=\"true\">",
           "target": [
-            "#\\34 dcdae7a-4c0b-4b26-b55c-ad14625ef73f"
+            "#d9dd265d-ea24-47d7-bbf6-fc802d6580cc"
           ],
           "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
         }
@@ -1295,7 +1320,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [

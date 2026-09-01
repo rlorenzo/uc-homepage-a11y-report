@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsb",
   "name": "UC Santa Barbara",
   "campus": "ucsb",
@@ -25,7 +25,7 @@
       ],
       "description": "Ensure an element's role supports its ARIA attributes",
       "help": "Elements must only use supported ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -61,8 +61,128 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#09847a",
+                "contrastRatio": 4.57,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-09847a align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#6d7d33",
+                "contrastRatio": 4.53,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-6d7d33 align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Majors, Degrees &amp; Credentials</p>",
+          "target": [
+            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#6d7d33",
+                "contrastRatio": 4.53,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-6d7d33 align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
         {
           "any": [
             {
@@ -112,7 +232,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -381,312 +501,8 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "93.8pt (125px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"font-size:2.5em;\">#8</span>",
-          "target": [
-            "h1 > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.3pt (27px)",
-                "fontWeight": "bold",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\">Public University</span>",
-          "target": [
-            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > h2 > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.3pt (27px)",
-                "fontWeight": "bold",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
-                  "target": [
-                    ".has-backside.overlay.background-color-003660"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"clear: left;\">Platinum<br>\nBike-Friendly<br>\nUniversity</span>",
-          "target": [
-            ".text-align-center > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
-                  "target": [
-                    ".has-backside.overlay.background-color-003660"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "82.5pt (110px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"font-size: 2.2em;\">200+</span>",
-          "target": [
-            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > .display-large > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p>Majors, Degrees &amp; Credentials</p>",
-          "target": [
-            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
         {
           "any": [
             {
@@ -934,6 +750,81 @@
             ".top-padding-4 > .content > h3 > span[property=\"schema:name\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"copyright\">Copyright © 2026 The Regents of the University of California. All Rights Reserved.</span>",
+          "target": [
+            ".col-xs- > .copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/terms-of-use\" class=\"terms\">Terms of Use</a>",
+          "target": [
+            "a[href$=\"terms-of-use\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+          "target": [
+            "a[href$=\"accessibility\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     }
@@ -950,8 +841,128 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#09847a",
+                "contrastRatio": 4.57,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-09847a align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.57 (foreground color: #ffffff, background color: #09847a, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#6d7d33",
+                "contrastRatio": 4.53,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-6d7d33 align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Majors, Degrees &amp; Credentials</p>",
+          "target": [
+            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#6d7d33",
+                "contrastRatio": 4.53,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"inner inner-container has-background background-color-6d7d33 align-middle_center\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.53 (foreground color: #ffffff, background color: #6d7d33, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
         {
           "any": [
             {
@@ -1001,7 +1012,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1270,312 +1281,8 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "71.3pt (95px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"font-size:2.5em;\">#8</span>",
-          "target": [
-            "h1 > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.3pt (27px)",
-                "fontWeight": "bold",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\">Public University</span>",
-          "target": [
-            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > h2 > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-09847a.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.3pt (27px)",
-                "fontWeight": "bold",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
-                  "target": [
-                    ".has-backside.overlay.background-color-003660"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"clear: left;\">Platinum<br>\nBike-Friendly<br>\nUniversity</span>",
-          "target": [
-            ".text-align-center > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
-                  "target": [
-                    ".has-backside.overlay.background-color-003660"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
-                  "target": [
-                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "62.7pt (83.6px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"serif\" style=\"font-size: 2.2em;\">200+</span>",
-          "target": [
-            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > .display-large > .serif"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p>Majors, Degrees &amp; Credentials</p>",
-          "target": [
-            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": "bgImage",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
-                  "target": [
-                    ".has-backside.background-color-6d7d33.overlay"
-                  ]
-                },
-                {
-                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
-                  "target": [
-                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
-          "target": [
-            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
-        },
         {
           "any": [
             {

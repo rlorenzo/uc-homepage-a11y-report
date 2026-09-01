@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "uci-physci",
   "name": "UCI School of Physical Sciences",
   "campus": "uci",
@@ -27,7 +27,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -70,7 +70,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -246,7 +246,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -256,12 +256,19 @@
                 "contrastRatio": 0,
                 "fontSize": "45.3pt (60.4px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -271,7 +278,7 @@
           "target": [
             "h1"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -281,12 +288,19 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7472px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -296,7 +310,7 @@
           "target": [
             ".wp-container-core-group-is-layout-b3a9afdc > .wp-block-paragraph"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -306,12 +320,19 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7472px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -321,7 +342,7 @@
           "target": [
             ".has-white-color.has-custom-font-size[href$=\"about-us/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -722,7 +743,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -765,7 +786,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -941,7 +962,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -951,12 +972,19 @@
                 "contrastRatio": 0,
                 "fontSize": "27.3pt (36.4375px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -966,7 +994,7 @@
           "target": [
             "h1"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -976,12 +1004,19 @@
                 "contrastRatio": 0,
                 "fontSize": "10.6pt (14.0858px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -991,7 +1026,7 @@
           "target": [
             ".wp-container-core-group-is-layout-b3a9afdc > .wp-block-paragraph"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1001,12 +1036,19 @@
                 "contrastRatio": 0,
                 "fontSize": "10.6pt (14.0858px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(112deg,rgb(1,1,1) 0%,rgb(19,19,34) 35%,rgba(25,21,61,0) 65%)\"></span>",
+                  "target": [
+                    ".wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1016,7 +1058,7 @@
           "target": [
             ".has-white-color.has-custom-font-size[href$=\"about-us/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [

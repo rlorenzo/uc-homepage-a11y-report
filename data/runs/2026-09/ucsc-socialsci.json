@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsc-socialsci",
   "name": "UC Santa Cruz Social Sciences",
   "campus": "ucsc",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -79,7 +79,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -279,114 +279,21 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "40.7pt (54.216px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h1 style=\"padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0\" class=\"has-link-color wp-elements-10acf82d2365b458bcb6c7444ae7f37a wp-block-post-title has-text-color has-ucsc-rubine-blue-color has-seven-font-size\">",
-          "target": [
-            ".wp-elements-10acf82d2365b458bcb6c7444ae7f37a"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-ucsc-primary-blue-color has-text-color has-link-color has-three-font-size wp-elements-b7e4f40767d08855c69aefb270c59935 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">",
-          "target": [
-            ".wp-elements-b7e4f40767d08855c69aefb270c59935"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/academics/\">Learn with us&nbsp;</a>",
-          "target": [
-            ".is-style-ucsc-blue.wp-block-button:nth-child(1) > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/news-events/\">Explore our impact</a>",
-          "target": [
-            ".is-style-ucsc-blue.wp-block-button:nth-child(2) > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.0pt (26.7296px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -396,7 +303,7 @@
           "target": [
             "a[href$=\"anthro.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -406,12 +313,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -421,7 +335,7 @@
           "target": [
             "a[href$=\"csp.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -431,12 +345,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -446,7 +367,7 @@
           "target": [
             ".wp-elements-4612c526a4e49d0131faf81dd1a5cbaf > a[data-type=\"link\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -456,12 +377,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -471,7 +399,7 @@
           "target": [
             "a[href$=\"economics.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -481,12 +409,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -496,7 +431,7 @@
           "target": [
             "a[href$=\"education.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -506,12 +441,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -521,7 +463,7 @@
           "target": [
             "a[href$=\"envs.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -531,12 +473,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -546,7 +495,7 @@
           "target": [
             "a[href$=\"gch.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -556,12 +505,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -571,7 +527,7 @@
           "target": [
             "a[href$=\"lals.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -581,12 +537,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -596,7 +559,7 @@
           "target": [
             "a[href$=\"legalstudies.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -606,12 +569,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -621,7 +591,7 @@
           "target": [
             "a[href$=\"politics.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -631,12 +601,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -646,7 +623,7 @@
           "target": [
             "a[href$=\"psychology.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -656,12 +633,19 @@
                 "contrastRatio": 0,
                 "fontSize": "20.0pt (26.7296px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -671,7 +655,7 @@
           "target": [
             "a[href$=\"sociology.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -681,12 +665,25 @@
                 "contrastRatio": 0,
                 "fontSize": "23.9pt (31.8896px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -696,7 +693,7 @@
           "target": [
             ".has-xx-large-font-size"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -706,12 +703,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -721,7 +731,7 @@
           "target": [
             ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(2)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -731,12 +741,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -746,32 +769,7 @@
           "target": [
             ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(3)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/about/about-us/\">Find out more</a>",
-          "target": [
-            ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .is-style-ucsc-gold.wp-block-button > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -781,112 +779,25 @@
                 "contrastRatio": 0,
                 "fontSize": "23.9pt (31.8896px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h2 class=\"wp-block-heading has-black-color has-text-color\" style=\"font-style:normal;font-weight:400\">Academics</h2>",
-          "target": [
-            ".wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-black-color:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.1pt (18.8px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-black-color has-text-color has-one-font-size wp-block-paragraph\">",
-          "target": [
-            ".wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-one-font-size.has-black-color.has-text-color"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.0pt (26.7296px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://socialsciences.ucsc.edu/academics/undergraduate-programs/\" data-type=\"page\" data-id=\"677\">Undergraduate education</a>",
-          "target": [
-            "a[data-id=\"677\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.0pt (26.7296px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://socialsciences.ucsc.edu/academics/graduate-programs/\" data-type=\"page\" data-id=\"674\">Graduate education</a>",
-          "target": [
-            "a[data-id=\"674\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "23.9pt (31.8896px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -896,7 +807,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -906,12 +817,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -921,7 +845,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(2)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -931,12 +855,25 @@
                 "contrastRatio": 0,
                 "fontSize": "11.8pt (15.7808px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -946,132 +883,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(3)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/research/impact/\">Discover our research</a>",
-          "target": [
-            ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .is-style-ucsc-gold.wp-block-button > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "23.9pt (31.8896px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h2 class=\"wp-block-heading has-black-color has-text-color\" style=\"font-style:normal;font-weight:400\">Affiliated residential communities</h2>",
-          "target": [
-            ".ucsc-grid-with-background__wrapper > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-black-color:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "14.1pt (18.8px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-black-color has-text-color has-one-font-size wp-block-paragraph\">",
-          "target": [
-            ".ucsc-grid-with-background__wrapper > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-one-font-size.has-black-color.has-text-color"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.0pt (26.7296px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://collegenine.ucsc.edu/\">College Nine</a>",
-          "target": [
-            "a[href$=\"collegenine.ucsc.edu/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.0pt (26.7296px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://johnrlewis.ucsc.edu/\">John R. Lewis College</a>",
-          "target": [
-            "a[href$=\"johnrlewis.ucsc.edu/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -1189,7 +1001,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1230,7 +1042,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1327,7 +1139,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1384,7 +1196,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1584,114 +1396,21 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "25.1pt (33.5018px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h1 style=\"padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0\" class=\"has-link-color wp-elements-10acf82d2365b458bcb6c7444ae7f37a wp-block-post-title has-text-color has-ucsc-rubine-blue-color has-seven-font-size\">",
-          "target": [
-            ".wp-elements-10acf82d2365b458bcb6c7444ae7f37a"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-ucsc-primary-blue-color has-text-color has-link-color has-three-font-size wp-elements-b7e4f40767d08855c69aefb270c59935 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">",
-          "target": [
-            ".wp-elements-b7e4f40767d08855c69aefb270c59935"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/academics/\">Learn with us&nbsp;</a>",
-          "target": [
-            ".is-style-ucsc-blue.wp-block-button:nth-child(1) > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/news-events/\">Explore our impact</a>",
-          "target": [
-            ".is-style-ucsc-blue.wp-block-button:nth-child(2) > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.4pt (20.5739px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1701,7 +1420,7 @@
           "target": [
             "a[href$=\"anthro.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1711,12 +1430,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1726,7 +1452,7 @@
           "target": [
             "a[href$=\"csp.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1736,12 +1462,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1751,7 +1484,7 @@
           "target": [
             ".wp-elements-4612c526a4e49d0131faf81dd1a5cbaf > a[data-type=\"link\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1761,12 +1494,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1776,7 +1516,7 @@
           "target": [
             "a[href$=\"economics.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1786,12 +1526,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1801,7 +1548,7 @@
           "target": [
             "a[href$=\"education.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1811,12 +1558,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1826,7 +1580,7 @@
           "target": [
             "a[href$=\"envs.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1836,12 +1590,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1851,7 +1612,7 @@
           "target": [
             "a[href$=\"gch.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1861,12 +1622,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1876,7 +1644,7 @@
           "target": [
             "a[href$=\"lals.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1886,12 +1654,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1901,7 +1676,7 @@
           "target": [
             "a[href$=\"legalstudies.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1911,12 +1686,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1926,7 +1708,7 @@
           "target": [
             "a[href$=\"politics.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1936,12 +1718,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1951,7 +1740,7 @@
           "target": [
             "a[href$=\"psychology.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1961,12 +1750,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.4pt (20.5739px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient\" style=\"background:linear-gradient(184deg,rgba(0,0,0,0) 0%,rgba(242,242,242,0.14) 27%,rgb(0,0,0) 92%,rgb(0,0,0) 100%)\"></span>",
+                  "target": [
+                    ".wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .wp-container-core-columns-is-layout-930d3512.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(2) > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .ucsc__card.ucsc__card-plain.wp-block-group-is-layout-flow > .has-custom-content-position.is-position-bottom-left.wp-block-cover > .wp-block-cover__gradient-background.has-background-gradient.wp-block-cover__background"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1976,7 +1772,7 @@
           "target": [
             "a[href$=\"sociology.ucsc.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -1986,12 +1782,25 @@
                 "contrastRatio": 0,
                 "fontSize": "17.4pt (23.2311px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2001,7 +1810,7 @@
           "target": [
             ".has-xx-large-font-size"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2011,12 +1820,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2026,7 +1848,7 @@
           "target": [
             ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(2)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2036,12 +1858,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(4) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2051,32 +1886,7 @@
           "target": [
             ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(3)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/about/about-us/\">Find out more</a>",
-          "target": [
-            ".has-media-on-the-right > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .is-style-ucsc-gold.wp-block-button > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2086,112 +1896,25 @@
                 "contrastRatio": 0,
                 "fontSize": "17.4pt (23.2311px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h2 class=\"wp-block-heading has-black-color has-text-color\" style=\"font-style:normal;font-weight:400\">Academics</h2>",
-          "target": [
-            ".wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-black-color:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.1pt (16.1375px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-black-color has-text-color has-one-font-size wp-block-paragraph\">",
-          "target": [
-            ".wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-one-font-size.has-black-color.has-text-color"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.4pt (20.5739px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://socialsciences.ucsc.edu/academics/undergraduate-programs/\" data-type=\"page\" data-id=\"677\">Undergraduate education</a>",
-          "target": [
-            "a[data-id=\"677\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.4pt (20.5739px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://socialsciences.ucsc.edu/academics/graduate-programs/\" data-type=\"page\" data-id=\"674\">Graduate education</a>",
-          "target": [
-            "a[data-id=\"674\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "17.4pt (23.2311px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2201,7 +1924,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2211,12 +1934,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2226,7 +1962,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(2)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2236,12 +1972,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.7pt (14.3005px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-white-background-color has-background-dim-70 has-background-dim\"></span>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .has-white-background-color.has-background-dim-70.wp-block-cover__background"
+                  ]
+                },
+                {
+                  "html": "<div role=\"img\" aria-label=\"Background Pattern\" class=\"wp-block-cover__image-background wp-image-5216 has-parallax is-repeated\" style=\"background-position:48% 7%;background-image:url(https://socialsciences.ucsc.edu/files/2025/02/Background-Pattern.png)\"></div>",
+                  "target": [
+                    ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-image-5216.has-parallax[aria-label=\"Background Pattern\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2251,132 +2000,7 @@
           "target": [
             ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-paragraph:nth-child(3)"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://socialsciences.ucsc.edu/research/impact/\">Discover our research</a>",
-          "target": [
-            ".ucsc-grid-with-background.is-light.has-parallax:nth-child(5) > .wp-block-cover__inner-container.wp-block-cover-is-layout-flow.is-layout-flow > .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-top > .wp-block-media-text__content > .wp-container-core-group-is-layout-c7795aed.wp-block-group-is-layout-constrained.has-global-padding > .wp-block-buttons.wp-block-buttons-is-layout-flex.is-layout-flex > .is-style-ucsc-gold.wp-block-button > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "17.4pt (23.2311px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h2 class=\"wp-block-heading has-black-color has-text-color\" style=\"font-style:normal;font-weight:400\">Affiliated residential communities</h2>",
-          "target": [
-            ".ucsc-grid-with-background__wrapper > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-black-color:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.1pt (16.1375px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"has-black-color has-text-color has-one-font-size wp-block-paragraph\">",
-          "target": [
-            ".ucsc-grid-with-background__wrapper > .wp-container-core-columns-is-layout-16c74fa4.wp-block-columns.wp-block-columns-is-layout-flex > .wp-block-column.wp-block-column-is-layout-flow.is-layout-flow:nth-child(1) > .wp-container-core-group-is-layout-892a1e88.has-ucsc-primary-yellow-background-color.is-vertical > .has-one-font-size.has-black-color.has-text-color"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.4pt (20.5739px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://collegenine.ucsc.edu/\">College Nine</a>",
-          "target": [
-            "a[href$=\"collegenine.ucsc.edu/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "15.4pt (20.5739px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://johnrlewis.ucsc.edu/\">John R. Lewis College</a>",
-          "target": [
-            "a[href$=\"johnrlewis.ucsc.edu/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -2494,7 +2118,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
