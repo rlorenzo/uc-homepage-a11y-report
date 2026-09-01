@@ -1,0 +1,3493 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucsd-registrar",
+  "name": "UC San Diego Office of the Registrar",
+  "campus": "ucsd",
+  "type": "registrar",
+  "category": "registrar",
+  "url": "https://students.ucsd.edu/sponsor/registrar",
+  "render_mode": "headless",
+  "element_count": 630,
+  "violations": [
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a aria-hidden=\"true\" href=\"https://status.ucsd.edu/\" id=\"status-link\"> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> </a>",
+                  "target": [
+                    "#status-link"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div aria-hidden=\"true\" class=\"si-container\">",
+          "target": [
+            ".si-container"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"layout-title\">",
+                  "target": [
+                    ".layout-title"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://status.ucsd.edu/\">All Services are operating normally.</a>",
+          "target": [
+            ".system-status-message > a[href$=\"status.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#747678",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.56,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input aria-label=\"Search Input Field\" class=\"form-control input-search directorySearch facultySearch\" data-id=\"inputSearch\" id=\"q\" name=\"q\" placeholder=\"Search Tritonlink\" type=\"search\" value=\"\">",
+                  "target": [
+                    ".directorySearch"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.56 (foreground color: #747678, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input aria-label=\"Search Input Field\" class=\"form-control input-search directorySearch facultySearch\" data-id=\"inputSearch\" id=\"q\" name=\"q\" placeholder=\"Search Tritonlink\" type=\"search\" value=\"\">",
+          "target": [
+            ".directorySearch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.56 (foreground color: #747678, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#006a96",
+                "contrastRatio": 5.99,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\">TritonLink Topics</a>",
+                  "target": [
+                    ".nav-group-sm.nav-group:nth-child(1) > a[href=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\">TritonLink Topics</a>",
+          "target": [
+            ".nav-group-sm.nav-group:nth-child(1) > a[href=\"#\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#006a96",
+                "contrastRatio": 5.99,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\">Advising &amp; Grades</a>",
+                  "target": [
+                    ".nav-group-sm.nav-group:nth-child(2) > a[href=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\">Advising &amp; Grades</a>",
+          "target": [
+            ".nav-group-sm.nav-group:nth-child(2) > a[href=\"#\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#006a96",
+                "contrastRatio": 5.99,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\">Classes &amp; Registration</a>",
+                  "target": [
+                    ".nav-group-sm.nav-group:nth-child(3) > a[href=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\">Classes &amp; Registration</a>",
+          "target": [
+            ".nav-group-sm.nav-group:nth-child(3) > a[href=\"#\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#006a96",
+                "contrastRatio": 5.99,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\">Financial Tools</a>",
+                  "target": [
+                    ".nav-group-sm.nav-group:nth-child(4) > a[href=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\">Financial Tools</a>",
+          "target": [
+            ".nav-group-sm.nav-group:nth-child(4) > a[href=\"#\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#006a96",
+                "contrastRatio": 5.99,
+                "fontSize": "11.4pt (15.2px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"#\">Personal Tools &amp; Forms</a>",
+                  "target": [
+                    ".nav-group:nth-child(5) > a[href=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"#\">Personal Tools &amp; Forms</a>",
+          "target": [
+            ".nav-group:nth-child(5) > a[href=\"#\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.99 (foreground color: #ffffff, background color: #006a96, font size: 11.4pt (15.2px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentMajorMinorChange/majorminorchange\">Major and Minor</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/special-enrollment/transfer-courses.html\">Transfer Course Approximations</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentDars/select\">Degree Audit</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"../../academics/index.html\">Academics</a>",
+                  "target": [
+                    ".styled-yellow.btn[href=\"../../academics/index.html\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"../../academics/index.html\">Academics</a>",
+          "target": [
+            ".styled-yellow.btn[href=\"../../academics/index.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/index.html\">Enrolling in Classes</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://blink.ucsd.edu/instructors/resources/catalog.html\">Course Catalog</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentHolds/holds\">Holds</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"ferpa.html\">FERPA Student Notification</a>",
+          "target": [
+            "a[href$=\"ferpa.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/special-enrollment/return-to-ucsd.html\">Returning to UC San Diego After an Absence</a>",
+          "target": [
+            ".registrar-col-content > ul > li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"https://act.ucsd.edu/webreg2\">WebReg</a>",
+                  "target": [
+                    ".styled-yellow.btn[href$=\"webreg2\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"https://act.ucsd.edu/webreg2\">WebReg</a>",
+          "target": [
+            ".styled-yellow.btn[href$=\"webreg2\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tax-id-number.html\">Your Tax ID Number</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"tax-id-number.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"clearinghouse.html\">NSC Data Correction</a>",
+          "target": [
+            "a[href$=\"clearinghouse.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"lived_name_students.html\">Preferred Name &amp; Personal Pronouns</a>",
+          "target": [
+            "a[href$=\"lived_name_students.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"name-change.html\">Changing Your Legal Name in University Records</a>",
+          "target": [
+            "li:nth-child(4) > a[href$=\"name-change.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"../../academics/exams-grades-transcripts/transcripts-verifications/index.html\">Transcripts</a>",
+                  "target": [
+                    ".registrar-col.col-md-4:nth-child(3) > .registrar-col-btn > .styled-yellow.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"../../academics/exams-grades-transcripts/transcripts-verifications/index.html\">Transcripts</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(3) > .registrar-col-btn > .styled-yellow.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://alumni.ucsd.edu/\">UCSD Alumni</a>",
+          "target": [
+            "a[href$=\"alumni.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://si-apps.ucsd.edu/studentETranscript/order.htm\">transcript</a>",
+          "target": [
+            "strong > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://si-apps.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            "strong > a:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/exams-grades-transcripts/transcripts-verifications/social-login.html\">Social Login</a>",
+          "target": [
+            "strong > a:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://uc.sumtotal.host/core/pillarRedirect?relyingParty=LM&amp;url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D287667%26UserMode%3D0\">FERPA on-line training</a>",
+          "target": [
+            ".col-md-6:nth-child(2) > p:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://blink.ucsd.edu/instructors/index.html\">Student/Class Info tab</a>",
+          "target": [
+            ".col-md-6:nth-child(2) > p:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230</span>",
+          "target": [
+            "p > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>\n        Copyright © <span class=\"footer-copyright-year\">2026</span> Regents of the University of California.\n        All rights reserved.\n        </span>",
+          "target": [
+            "p > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"footer-copyright-year\">2026</span>",
+          "target": [
+            ".footer-copyright-year"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+          "target": [
+            ".footer-links > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/privacy.html\">Privacy</a>",
+          "target": [
+            ".footer-links > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/terms-of-use.html\">Terms of Use</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://eforms.ucsd.edu/view.php?id=339417\">Feedback</a>",
+          "target": [
+            ".footer-links > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "select-name",
+      "impact": "critical",
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure select element has an accessible name",
+      "help": "Select element must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/select-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<select id=\"rec_doc_selector\">",
+          "target": [
+            "#rec_doc_selector"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"col-md-2\" id=\"mytlbutton-y\"><a href=\"http://mytritonlink.ucsd.edu/\">MY TRITONLINK</a></div>",
+                  "target": [
+                    "#mytlbutton-y"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://mytritonlink.ucsd.edu/\">MY TRITONLINK</a>",
+          "target": [
+            "a[href$=\"mytritonlink.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"col-md-2\" id=\"tssbutton\"><a href=\"https://sis.ucsd.edu\">TRITON STUDENT SYSTEM</a></div>",
+                  "target": [
+                    "#tssbutton"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://sis.ucsd.edu\">TRITON STUDENT SYSTEM</a>",
+          "target": [
+            "#tssbutton > a[href$=\"sis.ucsd.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "42.0pt (56px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img alt=\"Aerial Image of UCSD\" class=\"first-slide\" src=\"../../_images/sponsor/registrar/home-page/aerial-home-banner-dark.jpg\">",
+                  "target": [
+                    "div[aria-label=\"2 out of 4\"] > .first-slide[alt=\"Aerial Image of UCSD\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"rt-text-light cntr\" tabindex=\"0\">Zoom Office Hours </h1>",
+          "target": [
+            "div[aria-label=\"2 out of 4\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img alt=\"Aerial Image of UCSD\" class=\"first-slide\" src=\"../../_images/sponsor/registrar/home-page/aerial-home-banner-dark.jpg\">",
+                  "target": [
+                    "div[aria-label=\"2 out of 4\"] > .first-slide[alt=\"Aerial Image of UCSD\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"rt-text-light cntr\" tabindex=\"0\">The Registrar's Zoom office hours are Monday – Friday from 1 p.m. to 4 p.m. PT. </p>",
+          "target": [
+            "div[aria-label=\"2 out of 4\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > .rt-text-light.cntr:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Important Notice for Fall 2026</h2>",
+          "target": [
+            ".text-indent > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Continuing student enrollment/booking for Fall Quarter 2026 is being moved to mid-July&nbsp;2026 to allow for the implementation of the new Triton Student System. Read the <a href=\"https://adminrecords.ucsd.edu/Notices/2025/2025-11-17-3.html\">Campus Notice</a> for more information.</p>",
+          "target": [
+            ".panel-primary > .panel-body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://adminrecords.ucsd.edu/Notices/2025/2025-11-17-3.html\">Campus Notice</a>",
+          "target": [
+            ".panel-primary > .panel-body > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"jumbotron jumbotron-full-width side-image-white trident \">",
+                  "target": [
+                    ".jumbotron-full-width"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Have a Question?</h2>",
+          "target": [
+            ".jumbotron-full-width > .container > .row > .col-md-6:nth-child(1) > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"jumbotron jumbotron-full-width side-image-white trident \">",
+                  "target": [
+                    ".jumbotron-full-width"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Select a topic from the dropdown below and we'll point you to the right people. If applicable, make sure to include your student PID so we can better assist you.</p>",
+          "target": [
+            ".jumbotron-full-width > .container > .row > .col-md-6:nth-child(1) > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button id=\"chat-bubble\" aria-label=\"Ask TritonGPT, a Generative AI Assistant\">",
+                  "target": [
+                    "#chat-bubble"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Ask TritonGPT</p>",
+          "target": [
+            "#chat-bubble > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "q",
+              "relatedNodes": [
+                {
+                  "html": "<input aria-label=\"Mobile Search Box\" class=\"form-control input-search is-mobile\" data-id=\"inputSearchMobile\" id=\"q\" name=\"q\" placeholder=\"Search TritonLink\" type=\"search\">",
+                  "target": [
+                    ".is-mobile"
+                  ]
+                },
+                {
+                  "html": "<input class=\"form-control search-term\" id=\"q\" name=\"search-term\" placeholder=\"Search...\" type=\"search\">",
+                  "target": [
+                    ".search-term"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: q"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input aria-label=\"Search Input Field\" class=\"form-control input-search directorySearch facultySearch\" data-id=\"inputSearch\" id=\"q\" name=\"q\" placeholder=\"Search Tritonlink\" type=\"search\" value=\"\">",
+          "target": [
+            ".directorySearch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: q"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "academic history",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "act.ucsd.edu",
+                  "port": "",
+                  "pathname": "/studentAcademicHistory/",
+                  "search": {},
+                  "hash": "",
+                  "filename": "academichistorystudentdisplay.htm"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://act.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+                  "target": [
+                    ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(1) > a"
+                  ]
+                },
+                {
+                  "html": "<a href=\"https://si-apps.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+                  "target": [
+                    "strong > a:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://act.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            ".nav-group-sm.nav-group:nth-child(2) > .list-unstyled > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a aria-hidden=\"true\" href=\"https://status.ucsd.edu/\" id=\"status-link\"> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> <span aria-hidden=\"true\" class=\"status-indicator allclear\"></span> </a>",
+                  "target": [
+                    "#status-link"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div aria-hidden=\"true\" class=\"si-container\">",
+          "target": [
+            ".si-container"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentMajorMinorChange/majorminorchange\">Major and Minor</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/special-enrollment/transfer-courses.html\">Transfer Course Approximations</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentDars/select\">Degree Audit</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"../../academics/index.html\">Academics</a>",
+                  "target": [
+                    ".styled-yellow.btn[href=\"../../academics/index.html\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"../../academics/index.html\">Academics</a>",
+          "target": [
+            ".styled-yellow.btn[href=\"../../academics/index.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/index.html\">Enrolling in Classes</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://blink.ucsd.edu/instructors/resources/catalog.html\">Course Catalog</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://act.ucsd.edu/studentHolds/holds\">Holds</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(2) > .registrar-col-content > ul > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"ferpa.html\">FERPA Student Notification</a>",
+          "target": [
+            "a[href$=\"ferpa.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/enroll/special-enrollment/return-to-ucsd.html\">Returning to UC San Diego After an Absence</a>",
+          "target": [
+            ".registrar-col-content > ul > li:nth-child(5) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"https://act.ucsd.edu/webreg2\">WebReg</a>",
+                  "target": [
+                    ".styled-yellow.btn[href$=\"webreg2\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"https://act.ucsd.edu/webreg2\">WebReg</a>",
+          "target": [
+            ".styled-yellow.btn[href$=\"webreg2\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"tax-id-number.html\">Your Tax ID Number</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"tax-id-number.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"clearinghouse.html\">NSC Data Correction</a>",
+          "target": [
+            "a[href$=\"clearinghouse.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"lived_name_students.html\">Preferred Name &amp; Personal Pronouns</a>",
+          "target": [
+            "a[href$=\"lived_name_students.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"name-change.html\">Changing Your Legal Name in University Records</a>",
+          "target": [
+            "li:nth-child(4) > a[href$=\"name-change.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#484949",
+                "bgColor": "#ffcd00",
+                "contrastRatio": 6.01,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn styled-yellow\" href=\"../../academics/exams-grades-transcripts/transcripts-verifications/index.html\">Transcripts</a>",
+                  "target": [
+                    ".registrar-col.col-md-4:nth-child(3) > .registrar-col-btn > .styled-yellow.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn styled-yellow\" href=\"../../academics/exams-grades-transcripts/transcripts-verifications/index.html\">Transcripts</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(3) > .registrar-col-btn > .styled-yellow.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://alumni.ucsd.edu/\">UCSD Alumni</a>",
+          "target": [
+            "a[href$=\"alumni.ucsd.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://si-apps.ucsd.edu/studentETranscript/order.htm\">transcript</a>",
+          "target": [
+            "strong > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://si-apps.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            "strong > a:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"../../academics/exams-grades-transcripts/transcripts-verifications/social-login.html\">Social Login</a>",
+          "target": [
+            "strong > a:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://uc.sumtotal.host/core/pillarRedirect?relyingParty=LM&amp;url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D287667%26UserMode%3D0\">FERPA on-line training</a>",
+          "target": [
+            ".col-md-6:nth-child(2) > p:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#00629b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.52,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://blink.ucsd.edu/instructors/index.html\">Student/Class Info tab</a>",
+          "target": [
+            ".col-md-6:nth-child(2) > p:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #00629b, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230</span>",
+          "target": [
+            "p > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>\n        Copyright © <span class=\"footer-copyright-year\">2026</span> Regents of the University of California.\n        All rights reserved.\n        </span>",
+          "target": [
+            "p > span:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"footer-copyright-year\">2026</span>",
+          "target": [
+            ".footer-copyright-year"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+          "target": [
+            ".footer-links > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/privacy.html\">Privacy</a>",
+          "target": [
+            ".footer-links > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsd.edu/about/terms-of-use.html\">Terms of Use</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00629b",
+                "contrastRatio": 6.52,
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"footer\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://eforms.ucsd.edu/view.php?id=339417\">Feedback</a>",
+          "target": [
+            ".footer-links > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"search-icon search-expand dropdown-toggle visible-xs visible-sm\" data-toggle=\"dropdown\" href=\"#\"> <span class=\"search-icon\"></span> </a>",
+          "target": [
+            ".visible-xs.visible-sm.search-expand"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    },
+    {
+      "id": "select-name",
+      "impact": "critical",
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure select element has an accessible name",
+      "help": "Select element must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/select-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<select id=\"rec_doc_selector\">",
+          "target": [
+            "#rec_doc_selector"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 26,
+                "height": 23
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (26px by 23px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 15.4,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-lg btn-default   cntr-btn\" data-h1=\"\" data-module=\"hero-homepage\" href=\"reg-operations.html\" role=\"button\" tabindex=\"0\">Current Registrar Operations and contact info</a>",
+                  "target": [
+                    "a[href$=\"reg-operations.html\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.4px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button aria-label=\"carousel is playing, click to pause\" id=\"toggleCarousel\"><span class=\"glyphicon glyphicon-pause\"></span></button>",
+          "target": [
+            "#toggleCarousel"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (26px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.4px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 80,
+                "height": 17
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (80px by 17px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22.8,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://eforms.ucsd.edu/view.php?id=339417\">Feedback</a>",
+                  "target": [
+                    ".footer-links > li:nth-child(4) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+          "target": [
+            ".footer-links > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (80px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 62,
+                "height": 17
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (62px by 17px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 22.8,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://accessibility.ucsd.edu/\">Accessibility</a>",
+                  "target": [
+                    ".footer-links > li:nth-child(1) > a"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://eforms.ucsd.edu/view.php?id=339417\">Feedback</a>",
+          "target": [
+            ".footer-links > li:nth-child(4) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (62px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "14.4pt (19.2px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img alt=\"Aerial Image of UCSD\" class=\"first-slide\" src=\"../../_images/sponsor/registrar/home-page/aerial-home-banner-dark.jpg\">",
+                  "target": [
+                    "div[aria-label=\"1 out of 4\"] > .first-slide[alt=\"Aerial Image of UCSD\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"rt-text-light cntr\" tabindex=\"0\">Office of the Registrar </h1>",
+          "target": [
+            "div[aria-label=\"1 out of 4\"] > .container > .cr-item-container > .row > .col-sm-12 > .animated.fadeInUp > h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "26.4pt (35.2px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Important Notice for Fall 2026</h2>",
+          "target": [
+            ".text-indent > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Continuing student enrollment/booking for Fall Quarter 2026 is being moved to mid-July&nbsp;2026 to allow for the implementation of the new Triton Student System. Read the <a href=\"https://adminrecords.ucsd.edu/Notices/2025/2025-11-17-3.html\">Campus Notice</a> for more information.</p>",
+          "target": [
+            ".panel-primary > .panel-body > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"jumbotron jumbotron-callout-content-one navy-grit\">",
+                  "target": [
+                    ".jumbotron-callout-content-one"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://adminrecords.ucsd.edu/Notices/2025/2025-11-17-3.html\">Campus Notice</a>",
+          "target": [
+            ".panel-primary > .panel-body > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button id=\"chat-bubble\" aria-label=\"Ask TritonGPT, a Generative AI Assistant\">",
+                  "target": [
+                    "#chat-bubble"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Ask TritonGPT</p>",
+          "target": [
+            "#chat-bubble > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "q",
+              "relatedNodes": [
+                {
+                  "html": "<input aria-label=\"Mobile Search Box\" class=\"form-control input-search is-mobile\" data-id=\"inputSearchMobile\" id=\"q\" name=\"q\" placeholder=\"Search TritonLink\" type=\"search\">",
+                  "target": [
+                    ".is-mobile"
+                  ]
+                },
+                {
+                  "html": "<input class=\"form-control search-term\" id=\"q\" name=\"search-term\" placeholder=\"Search...\" type=\"search\">",
+                  "target": [
+                    ".search-term"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: q"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input aria-label=\"Search Input Field\" class=\"form-control input-search directorySearch facultySearch\" data-id=\"inputSearch\" id=\"q\" name=\"q\" placeholder=\"Search Tritonlink\" type=\"search\" value=\"\">",
+          "target": [
+            ".directorySearch"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: q"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "academic history",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "act.ucsd.edu",
+                  "port": "",
+                  "pathname": "/studentAcademicHistory/",
+                  "search": {},
+                  "hash": "",
+                  "filename": "academichistorystudentdisplay.htm"
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://si-apps.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+                  "target": [
+                    "strong > a:nth-child(2)"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://act.ucsd.edu/studentAcademicHistory/academichistorystudentdisplay.htm\">Academic History</a>",
+          "target": [
+            ".registrar-col.col-md-4:nth-child(1) > .registrar-col-content > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "messageKey": "contentOverflow"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"glyphicon glyphicon-chevron-right\"></span>",
+                  "target": [
+                    ".glyphicon-chevron-right"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element size could not be accurately determined due to overflow content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-controls=\"heroslider\" aria-label=\"next slide\" class=\"right carousel-control\" data-slide=\"next\" href=\"#heroslider\" onclick=\"$('.carousel-inner').focus()\" role=\"button\" tabindex=\"0\">",
+          "target": [
+            ".right"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element size could not be accurately determined due to overflow content"
+        }
+      ]
+    }
+  ]
+}

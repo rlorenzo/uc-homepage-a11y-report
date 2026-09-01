@@ -1,0 +1,303 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucdavis-registrar",
+  "name": "UC Davis Office of the University Registrar",
+  "campus": "ucdavis",
+  "type": "registrar",
+  "category": "registrar",
+  "url": "https://registrar.ucdavis.edu",
+  "render_mode": "headless",
+  "element_count": 388,
+  "violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#13639e",
+                "contrastRatio": 6.35,
+                "fontSize": "12.2pt (16.2031px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button id=\"block-generalcataloglink-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\">\n    Quick Links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+                  "target": [
+                    "#block-generalcataloglink-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button id=\"block-generalcataloglink-menu\" class=\"quick-links__title\" aria-controls=\"quick-links\" aria-expanded=\"false\">\n    Quick Links\n    <span class=\"submenu-toggle\"><span class=\"submenu-toggle__icon\">+</span></span>\n  </button>",
+          "target": [
+            "#block-generalcataloglink-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.35 (foreground color: #ffffff, background color: #13639e, font size: 12.2pt (16.2031px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "53.6pt (71.4844px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk17661/files/styles/sf_hero_banner/public/media/images/Hero-Banner-Home-Page-fall-2026_1.png?h=8e58fdb5&amp;itok=wRkzelLt\" width=\"2000\" height=\"770\" alt=\"Group usie with the Chancellor.\" class=\"image-style-sf-hero-banner lazyload lazyload--loaded\">",
+                  "target": [
+                    ".image-style-sf-hero-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">Office of the University Registrar (OUR)</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.1pt (36.1228px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"1280\" height=\"720\" alt=\"Graduation cap decor...\" class=\"image-style-sf-lands...\">",
+                  "target": [
+                    ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"transcripts\"] > .marketing-highlight-horizontal__image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field > .image-style-sf-landscape-16x9[width=\"1280\"][height=\"720\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"marketing-highlight-horizontal__title\">Order My Transcripts</h3>",
+          "target": [
+            ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"transcripts\"] > .marketing-highlight-horizontal__body > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.1pt (36.1228px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"1280\" height=\"720\" alt=\"Sunlit rooftop helip...\" class=\"image-style-sf-lands...\">",
+                  "target": [
+                    ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"privacy\"] > .marketing-highlight-horizontal__image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field > .image-style-sf-landscape-16x9[width=\"1280\"][height=\"720\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"marketing-highlight-horizontal__title\">Student Privacy (FERPA)</h3>",
+          "target": [
+            ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"privacy\"] > .marketing-highlight-horizontal__body > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.1pt (36.1231px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"1280\" height=\"720\" alt=\"Smiling man in acade...\" class=\"image-style-sf-lands...\">",
+                  "target": [
+                    ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"verifications\"] > .marketing-highlight-horizontal__image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field > .image-style-sf-landscape-16x9[width=\"1280\"][height=\"720\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"marketing-highlight-horizontal__title\">Education &amp; Degree Verifications</h3>",
+          "target": [
+            ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"verifications\"] > .marketing-highlight-horizontal__body > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.1pt (36.1231px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvns...\" width=\"1280\" height=\"720\" alt=\"Large black dog clos...\" class=\"image-style-sf-lands...\">",
+                  "target": [
+                    ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"contact\"] > .marketing-highlight-horizontal__image > .field--name-field-sf-m-block-primary-img.field--type-entity-reference.field > .image-style-sf-landscape-16x9[width=\"1280\"][height=\"720\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3 class=\"marketing-highlight-horizontal__title\">Contact Us</h3>",
+          "target": [
+            ".marketing-highlight-horizontal.marketing-highlight-horizontal--overlay[href$=\"contact\"] > .marketing-highlight-horizontal__body > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/g/files/dgvnsk17661/files/styles/sf_hero_banner/public/media/images/Hero-Banner-Home-Page-fall-2026_1.png?h=8e58fdb5&amp;itok=wRkzelLt\" width=\"2000\" height=\"770\" alt=\"Group usie with the Chancellor.\" class=\"image-style-sf-hero-banner lazyload lazyload--loaded\">",
+                  "target": [
+                    ".image-style-sf-hero-banner"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"hero-banner__title\">Office of the University Registrar (OUR)</div>",
+          "target": [
+            ".hero-banner__title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1830 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucsb",
+  "name": "UC Santa Barbara",
+  "campus": "ucsb",
+  "type": "homepage",
+  "category": "homepage",
+  "url": "https://www.ucsb.edu",
+  "render_mode": "headless",
+  "element_count": 689,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#005099",
+                "bgColor": "#dce1e5",
+                "contrastRatio": 6.11,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-dce1e5 top-padding-none\">",
+                  "target": [
+                    ".background-color-dce1e5.top-padding-none.paragraph--type--blade"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.11 (foreground color: #005099, background color: #dce1e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  btn-secondary\" href=\"/academics/undergraduate\" style=\"font-size:16px;\">Explore Undergraduate Programs</a>",
+          "target": [
+            ".btn-secondary.ucsb-button[href$=\"undergraduate\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.11 (foreground color: #005099, background color: #dce1e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Culture + World</div>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">We’ll always love Dolly Parton, Dollyologist explains</span>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Physics + Astronomy</div>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Physicists reconstruct the collision that launched a runaway black hole</span>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Engineering</div>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB launches prototyping hub for packaging microchips and photonics</span>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Education</div>",
+          "target": [
+            ".top-padding-4 > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Back to school: UCSB teacher candidates assist local K-12s</span>",
+          "target": [
+            ".top-padding-4 > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "93.8pt (125px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"font-size:2.5em;\">#8</span>",
+          "target": [
+            "h1 > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\">Public University</span>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > h2 > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
+                  "target": [
+                    ".has-backside.overlay.background-color-003660"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"clear: left;\">Platinum<br>\nBike-Friendly<br>\nUniversity</span>",
+          "target": [
+            ".text-align-center > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
+                  "target": [
+                    ".has-backside.overlay.background-color-003660"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "82.5pt (110px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"font-size: 2.2em;\">200+</span>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > .display-large > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Majors, Degrees &amp; Credentials</p>",
+          "target": [
+            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Culture + World</div>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">We’ll always love Dolly Parton, Dollyologist explains</span>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Physics + Astronomy</div>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Physicists reconstruct the collision that launched a runaway black hole</span>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Engineering</div>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB launches prototyping hub for packaging microchips and photonics</span>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Education</div>",
+          "target": [
+            ".top-padding-4 > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Back to school: UCSB teacher candidates assist local K-12s</span>",
+          "target": [
+            ".top-padding-4 > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#005099",
+                "bgColor": "#dce1e5",
+                "contrastRatio": 6.11,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--blade paragraph--view-mode--default col-sm-12 has-background background-color-dce1e5 top-padding-none\">",
+                  "target": [
+                    ".background-color-dce1e5.top-padding-none.paragraph--type--blade"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.11 (foreground color: #005099, background color: #dce1e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"ucsb-button btn  btn-secondary\" href=\"/academics/undergraduate\" style=\"font-size:16px;\">Explore Undergraduate Programs</a>",
+          "target": [
+            ".btn-secondary.ucsb-button[href$=\"undergraduate\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.11 (foreground color: #005099, background color: #dce1e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Culture + World</div>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">We’ll always love Dolly Parton, Dollyologist explains</span>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Physics + Astronomy</div>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Physicists reconstruct the collision that launched a runaway black hole</span>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Engineering</div>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB launches prototyping hub for packaging microchips and photonics</span>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Education</div>",
+          "target": [
+            ".top-padding-4 > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Back to school: UCSB teacher candidates assist local K-12s</span>",
+          "target": [
+            ".top-padding-4 > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "71.3pt (95px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"font-size:2.5em;\">#8</span>",
+          "target": [
+            "h1 > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\">Public University</span>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > h2 > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-09847a\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-09847a.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/ILP-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-09847a.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "20.3pt (27px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
+                  "target": [
+                    ".has-backside.overlay.background-color-003660"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"clear: left;\">Platinum<br>\nBike-Friendly<br>\nUniversity</span>",
+          "target": [
+            ".text-align-center > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-003660\">\n        </div>",
+                  "target": [
+                    ".has-backside.overlay.background-color-003660"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/biking-Action-Panel.jpg);\">",
+                  "target": [
+                    ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.align-middle_center.background-color-003660 > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "62.7pt (83.6px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"serif\" style=\"font-size: 2.2em;\">200+</span>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .item-inner > .display-large > .serif"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Majors, Degrees &amp; Credentials</p>",
+          "target": [
+            ".field--name-field-front.image-container.field--type-text-long > .item-inner > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"overlay has-backside has-background background-color-6d7d33\">\n        </div>",
+                  "target": [
+                    ".has-backside.background-color-6d7d33.overlay"
+                  ]
+                },
+                {
+                  "html": "<div class=\"field field--name-field-front field--type-text-long field--label-hidden field--item image-container\" style=\"background-image: url(/sites/default/files/2024-03/marine-biotech-action-panel.jpg);\">",
+                  "target": [
+                    ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"read-more-link caption\" style=\"opacity: 1;z-index: 3;\">\n            Read more\n        </div>",
+          "target": [
+            ".inner-container.background-color-6d7d33.align-middle_center > .field--name-field-front.image-container.field--type-text-long > .read-more-link.caption"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Culture + World</div>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"1057\" about=\"/news/well-always-love-dolly-parton-dollyologist-explains\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" ...>",
+                  "target": [
+                    "article[data-history-node-id=\"1057\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">We’ll always love Dolly Parton, Dollyologist explains</span>",
+          "target": [
+            "article[data-history-node-id=\"1057\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Physics + Astronomy</div>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"911\" about=\"/news/physicists-rec...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"911\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Physicists reconstruct the collision that launched a runaway black hole</span>",
+          "target": [
+            "article[data-history-node-id=\"911\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Engineering</div>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"912\" about=\"/news/ucsb-launches-...\" typeof=\"schema:Article\" class=\"article is-promoted ...\" style=\"background-image: ur...\">",
+                  "target": [
+                    "article[data-history-node-id=\"912\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">UCSB launches prototyping hub for packaging microchips and photonics</span>",
+          "target": [
+            "article[data-history-node-id=\"912\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field--item\">Education</div>",
+          "target": [
+            ".top-padding-4 > .topic > .field--name-field-topics.field--type-entity-reference.field--items > .field--item"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"913\" about=\"/news/back-to-school-ucsb-teacher-candidates-assist-local-k-12s\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-4\" ...>",
+                  "target": [
+                    ".top-padding-4"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Back to school: UCSB teacher candidates assist local K-12s</span>",
+          "target": [
+            ".top-padding-4 > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ]
+}

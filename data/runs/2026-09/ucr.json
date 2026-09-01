@@ -1,0 +1,3120 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucr",
+  "name": "UC Riverside",
+  "campus": "ucr",
+  "type": "homepage",
+  "category": "homepage",
+  "url": "https://www.ucr.edu",
+  "render_mode": "headless",
+  "element_count": 878,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"7hsjd3-responsive-menu\" data-dropdown-menu=\"yasv2z-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"7hsjd3-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-multiselectable=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-multiselectable=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"cv56gb-responsive-me...\" data-dropdown-menu=\"suaqhf-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-multiselectable=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "i",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute cannot be used on a i with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<i aria-label=\"instagram icon\" class=\"fa-brands fa-instagram\" style=\"color:#FFB81C; font-size: 1.25em;\">&nbsp;</i>",
+          "target": [
+            "i[aria-label=\"instagram icon\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a i with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"audience-button is-dropdown-submenu-parent opens-left\" role=\"none\" aria-controls=\"jcvms8-acc-menu\" aria-expanded=\"false\" id=\"acopk9-acc-menu-link\">",
+                  "target": [
+                    "#acopk9-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"vertical medium-horizontal menu dropdown\" data-responsive-menu=\"accordion medium-dropdown\" data-closing-time=\"100\" data-alignment=\"left\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"7hsjd3-responsive-menu\" data-dropdown-menu=\"yasv2z-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            "ul[data-mutate=\"7hsjd3-responsive-menu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": {
+                "messageKey": "unallowed",
+                "values": "[role=none]"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"u3lzjz-acc-menu\" aria-expanded=\"false\" id=\"e9uq84-acc-menu-link\">",
+                  "target": [
+                    "#e9uq84-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"jfktjm-acc-menu\" aria-expanded=\"false\" id=\"ss4uff-acc-menu-link\">",
+                  "target": [
+                    "#ss4uff-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"6oh8xg-acc-menu\" aria-expanded=\"false\" id=\"pdofgv-acc-menu-link\">",
+                  "target": [
+                    "#pdofgv-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"pdrsn9-acc-menu\" aria-expanded=\"false\" id=\"cr2nb4-acc-menu-link\">",
+                  "target": [
+                    "#cr2nb4-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"k8qes3-acc-menu\" aria-expanded=\"false\" id=\"0uewp9-acc-menu-link\">",
+                  "target": [
+                    "#\\30 uewp9-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"qkzm2f-acc-menu\" aria-expanded=\"false\" id=\"tnt2u0-acc-menu-link\">",
+                  "target": [
+                    "#tnt2u0-acc-menu-link"
+                  ]
+                },
+                {
+                  "html": "<li role=\"none\" class=\"is-dropdown-submenu-parent opens-right\" aria-controls=\"t4efbm-acc-menu\" aria-expanded=\"false\" id=\"l0781j-acc-menu-link\">",
+                  "target": [
+                    "#l0781j-acc-menu-link"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has children which are not allowed: [role=none]"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul class=\"standard-menu vertic...\" data-responsive-menu=\"accordion medium-dro...\" data-closing-time=\"200\" role=\"menubar\" aria-multiselectable=\"true\" data-mutate=\"cv56gb-responsive-me...\" data-dropdown-menu=\"suaqhf-dropdown-menu\" data-events=\"mutate\">",
+          "target": [
+            ".standard-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=none]"
+        }
+      ]
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" title=\"Quicklinks\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Quicklinks\">Quicklinks</a>",
+          "target": [
+            "#acopk9-acc-menu-link > a[title=\"Quicklinks\"][aria-label=\"Quicklinks\"][href=\"\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/about-ucr\" data-drupal-link-system-path=\"node/176\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"About\">About</a>",
+          "target": [
+            "a[aria-label=\"About\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/academics\" data-drupal-link-system-path=\"node/46\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Academics\">Academics</a>",
+          "target": [
+            "a[aria-label=\"Academics\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/admissions\" data-drupal-link-system-path=\"node/56\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Admissions\">Admissions</a>",
+          "target": [
+            "a[aria-label=\"Admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/research\" data-drupal-link-system-path=\"node/61\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Research\">Research</a>",
+          "target": [
+            "a[aria-label=\"Research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"/campus-life\" data-drupal-link-system-path=\"node/76\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Campus Life\">Campus Life</a>",
+          "target": [
+            "a[aria-label=\"Campus Life\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"\" title=\"Information for…\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Information for…\">Information for…</a>",
+          "target": [
+            "a[title=\"Information for…\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": [
+                "menu",
+                "menubar",
+                "group"
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parents role not present: menu, menubar, group"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<a href=\"https://www.givecampus.com/s/7t9t1p\" target=\"_blank\" class=\"btn-ucr-gold\" title=\"Give Now\" role=\"menuitem\" aria-haspopup=\"true\" aria-label=\"Give Now\">Give Now</a>",
+          "target": [
+            "a[title=\"Give Now\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar, group"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"popup-text\" class=\"eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\" aria-hidden=\"false\">",
+          "target": [
+            ".eu-cookie-compliance-banner"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"global-header-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"global-header-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"global-header-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"global-header-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"global-header-menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button audience-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            "#block-ucr-umbrella-theme-ucriversideaudiencesearchblock > .google-search > .audience-search-button[data-open=\"gscSearchFormModal\"][aria-controls=\"gscSearchFormModal\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"gscSearchFormModal\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"gscSearchFormModal\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://library.ucr.edu/\" target=\"_blank\">UCR Library</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"library.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusstatus.ucr.edu/\" target=\"_blank\">Campus Status</a>",
+          "target": [
+            "a[href$=\"campusstatus.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucr.bncollege.com/shop/ucr/home\" target=\"_blank\">Campus Store</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://jobs.ucr.edu\" target=\"_blank\">Career Opportunities</a>",
+          "target": [
+            "a[href$=\"jobs.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://vamos.ucr.edu/\" target=\"_blank\">Español</a>",
+          "target": [
+            "a[href$=\"vamos.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">Maps and Directions</a>",
+          "target": [
+            "li:nth-child(6) > a[href$=\"campusmap.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/visitors\" target=\"_blank\">Visit UCR</a>",
+          "target": [
+            "a[href$=\"visitors\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>University Communications and Marketing</h2>",
+          "target": [
+            "#block-ucr-umbrella-theme-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">            1159A Hinderaker Hall\n            <br>Riverside, CA 92507                         </a>",
+          "target": [
+            "p:nth-child(1) > a[href$=\"campusmap.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: (951) 827-1012<br>                        email: <a href=\"mailto:webteam@ucr.edu\">webteam@ucr.edu</a>                </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:webteam@ucr.edu\">webteam@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:webteam@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Follow Us:</p>",
+          "target": [
+            ".footer-item:nth-child(2) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://news.ucr.edu/\" target=\"_blank\" title=\"News\">News</a>",
+          "target": [
+            "a[title=\"News\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/\" target=\"_blank\" title=\"Admissions\">Admissions</a>",
+          "target": [
+            "a[title=\"Admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/majors\" target=\"_blank\" title=\"Majors\">Majors</a>",
+          "target": [
+            "li:nth-child(3) > a[title=\"Majors\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduate.ucr.edu/\" target=\"_blank\" title=\"Graduate Division\">Graduate Division</a>",
+          "target": [
+            "a[title=\"Graduate Division\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://giving.ucr.edu/\" target=\"_blank\" title=\"Giving\">Giving</a>",
+          "target": [
+            "a[href$=\"giving.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.gohighlanders.com\" target=\"_blank\" title=\"Athletics\">Athletics</a>",
+          "target": [
+            "a[href$=\"www.gohighlanders.com\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucrhealth.org/\" target=\"_blank\" title=\"UCR Health\">UCR Health</a>",
+          "target": [
+            "a[href$=\"ucrhealth.org/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://alumni.ucr.edu/\" target=\"_blank\" title=\"Alumni\">Alumni</a>",
+          "target": [
+            "a[href$=\"alumni.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 id=\"main-header-title\" class=\"block\">\n            UCR’s 2026 Commencement Celebration    </h1>",
+          "target": [
+            "#main-header-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"video-overlay-title overlay-title-bottom-left\" style=\"display:block;\">",
+                  "target": [
+                    ".video-overlay-title"
+                  ]
+                },
+                {
+                  "html": "<video id=\"ucrHeroVideo\" src=\"https://ucr.yuja.com/Dashboard/Permalink?authCode=205029460&b=11674131&linkType=video\" class=\"hero-video-player\" autoplay=\"true\" loop=\"true\" muted=\"true\" aria-hidden=\"true\" data-once=\"hero-video-player\" style=\"opacity: 1;\">",
+                  "target": [
+                    "#ucrHeroVideo"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://youtu.be/pqrBl3-vpUQ\">Watch the highlights ›</a>",
+          "target": [
+            "a[href$=\"pqrBl3-vpUQ\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"intro-body\">",
+          "target": [
+            ".intro-body"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:6da75e70-8fbb-44b4-96d1-0a98c5491b2b\" class=\"ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings\" style=\"background: linear-gradient(rgba(165,200,234,0.2),rgba(165,200,234,0.2)); background-size: cover;\">",
+                  "target": [
+                    ".layout-one-col.layout.full:nth-child(6) > .grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block-custom-margins.ucr-custom-block-custom-paddings.ucr-custom-block"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>ACADEMIC CALENDAR</strong>",
+          "target": [
+            "#calendar > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:7890a6...\" class=\"ucr-custom-block ucr...\" style=\"background: url(/sit...\">",
+                  "target": [
+                    ".padding-vertical-6"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #ffffff; margin-top: 2rem; font-weight:bold;\">INSTAGRAM</h2>",
+          "target": [
+            "#instagram > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:7890a6...\" class=\"ucr-custom-block ucr...\" style=\"background: url(/sit...\">",
+                  "target": [
+                    ".padding-vertical-6"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>@ucriversideofficial</span>",
+          "target": [
+            "#instagram > a > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "10.8pt (14.4px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button footer-search-button\" data-open=\"gscSearchFormModal\" aria-controls=\"gscSearchFormModal\" aria-haspopup=\"dialog\" tabindex=\"0\">Search</button>",
+          "target": [
+            ".footer-search-button"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>900 University Ave.<br>\n            Riverside, CA 92521</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Tel: (951) 827-1012</p>",
+          "target": [
+            ".ucr-footer-info > address > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://library.ucr.edu/\" target=\"_blank\">UCR Library</a>",
+          "target": [
+            "li:nth-child(1) > a[href$=\"library.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusstatus.ucr.edu/\" target=\"_blank\">Campus Status</a>",
+          "target": [
+            "a[href$=\"campusstatus.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucr.bncollege.com/shop/ucr/home\" target=\"_blank\">Campus Store</a>",
+          "target": [
+            ".footer-links > li:nth-child(3) > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://jobs.ucr.edu\" target=\"_blank\">Career Opportunities</a>",
+          "target": [
+            "a[href$=\"jobs.ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://vamos.ucr.edu/\" target=\"_blank\">Español</a>",
+          "target": [
+            "a[href$=\"vamos.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">Maps and Directions</a>",
+          "target": [
+            "li:nth-child(6) > a[href$=\"campusmap.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/visitors\" target=\"_blank\">Visit UCR</a>",
+          "target": [
+            "a[href$=\"visitors\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>University Communications and Marketing</h2>",
+          "target": [
+            "#block-ucr-umbrella-theme-ucriversidefooterdeptinformationblock > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://campusmap.ucr.edu/\" target=\"_blank\">            1159A Hinderaker Hall\n            <br>Riverside, CA 92507                         </a>",
+          "target": [
+            "p:nth-child(1) > a[href$=\"campusmap.ucr.edu/\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p> tel: (951) 827-1012<br>                        email: <a href=\"mailto:webteam@ucr.edu\">webteam@ucr.edu</a>                </p>",
+          "target": [
+            ".address_2 > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"mailto:webteam@ucr.edu\">webteam@ucr.edu</a>",
+          "target": [
+            "a[href$=\"mailto:webteam@ucr.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Follow Us:</p>",
+          "target": [
+            ".footer-item:nth-child(2) > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://news.ucr.edu/\" target=\"_blank\" title=\"News\">News</a>",
+          "target": [
+            "a[title=\"News\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/\" target=\"_blank\" title=\"Admissions\">Admissions</a>",
+          "target": [
+            "a[title=\"Admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://admissions.ucr.edu/majors\" target=\"_blank\" title=\"Majors\">Majors</a>",
+          "target": [
+            "li:nth-child(3) > a[title=\"Majors\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduate.ucr.edu/\" target=\"_blank\" title=\"Graduate Division\">Graduate Division</a>",
+          "target": [
+            "a[title=\"Graduate Division\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://giving.ucr.edu/\" target=\"_blank\" title=\"Giving\">Giving</a>",
+          "target": [
+            "a[href$=\"giving.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.gohighlanders.com\" target=\"_blank\" title=\"Athletics\">Athletics</a>",
+          "target": [
+            "a[href$=\"www.gohighlanders.com\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucrhealth.org/\" target=\"_blank\" title=\"UCR Health\">UCR Health</a>",
+          "target": [
+            "a[href$=\"ucrhealth.org/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://alumni.ucr.edu/\" target=\"_blank\" title=\"Alumni\">Alumni</a>",
+          "target": [
+            "a[href$=\"alumni.ucr.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\">Privacy and Accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form\">Report barrier to accessibility</a>",
+          "target": [
+            ".cell > ul > li:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/terms.html\">Terms and Conditions</a>",
+          "target": [
+            "a[href$=\"terms.html\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer>",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<li>© 2026 Regents of the University of California</li>",
+          "target": [
+            ".cell > ul > li:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucr.edu/privacy.html\" title=\"UCR Privacy statement\" tabindex=\"0\">privacy statement</a>",
+          "target": [
+            "a[title=\"UCR Privacy statement\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "students on campus",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "events.ucr.edu",
+                  "port": "",
+                  "pathname": "/event/last-day-of-summer-quarter/",
+                  "search": {
+                    "utm_campaign": "widget",
+                    "utm_medium": "widget",
+                    "utm_source": "UC+Riverside"
+                  },
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://events.ucr.edu/event/first_day_of_fall_quarter_1182?utm_campaign=widget&utm_medium=widget&utm_source=UC+Riverside\" target=\"_blank\">",
+                  "target": [
+                    ".widget-event:nth-child(4) > .widget-photo-space > .widget-photo > a[target=\"_blank\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://events.ucr.edu/event/last-day-of-summer-quarter?utm_campaign=widget&utm_medium=widget&utm_source=UC+Riverside\" target=\"_blank\">",
+          "target": [
+            ".widget-event:nth-child(3) > .widget-photo-space > .widget-photo > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "i",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute cannot be used on a i with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<i aria-label=\"instagram icon\" class=\"fa-brands fa-instagram\" style=\"color:#FFB81C; font-size: 1.25em;\">&nbsp;</i>",
+          "target": [
+            "i[aria-label=\"instagram icon\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a i with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<button class=\"mdi mdi-menu button mobile-menu-expander\" id=\"mobile-menu-expander\" type=\"button\" data-toggle=\"main-menu-container\" data-once=\"mobile-menu-expander\">\n                </button>",
+          "target": [
+            "#mobile-menu-expander"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"popup-text\" class=\"eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\" aria-hidden=\"false\">",
+          "target": [
+            ".eu-cookie-compliance-banner"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"related-links-menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<nav role=\"navigation\" aria-labelledby=\"related-links-menu\">",
+          "target": [
+            "nav[aria-labelledby=\"related-links-menu\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"related-links-menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"intro-body\">",
+          "target": [
+            ".intro-body"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"dynamic-columns dc-c...\" style=\"overflow:hidden; bac...\">",
+                  "target": [
+                    ".medium-margin-horizontal-0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-size:4rem; line-height:100%; letter-spacing: 0px; color:#ffffff; font-weight:bold;\">NO. 1</span>",
+          "target": [
+            "div[data-aos-delay=\"100\"] > h2 > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"dynamic-columns dc-c...\" style=\"overflow:hidden; bac...\">",
+                  "target": [
+                    ".medium-margin-horizontal-0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span style=\"font-size:2.25rem; line-height:100%; color:#ffffff;\">OVERALL<br>\n&nbsp;</span>",
+          "target": [
+            "div[data-aos-delay=\"100\"] > .text-align-center:nth-child(3) > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"dynamic-columns dc-c...\" style=\"overflow:hidden; bac...\">",
+                  "target": [
+                    ".medium-margin-horizontal-0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<em>– U.S. News Social Mobility Rankings</em>",
+          "target": [
+            "div[data-aos-delay=\"100\"] > .text-align-center:nth-child(4) > span > em"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:6da75e70-8fbb-44b4-96d1-0a98c5491b2b\" class=\"ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings\" style=\"background: linear-gradient(rgba(165,200,234,0.2),rgba(165,200,234,0.2)); background-size: cover;\">",
+                  "target": [
+                    ".layout-one-col.layout.full:nth-child(6) > .grid-x > .cell > .layout__region--main.layout__region > .ucr-custom-block-custom-margins.ucr-custom-block-custom-paddings.ucr-custom-block"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>ACADEMIC CALENDAR</strong>",
+          "target": [
+            "#calendar > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:7890a6...\" class=\"ucr-custom-block ucr...\" style=\"background: url(/sit...\">",
+                  "target": [
+                    ".padding-vertical-6"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 style=\"color: #ffffff; margin-top: 2rem; font-weight:bold;\">INSTAGRAM</h2>",
+          "target": [
+            "#instagram > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div data-block-plugin-id=\"block_content:7890a6...\" class=\"ucr-custom-block ucr...\" style=\"background: url(/sit...\">",
+                  "target": [
+                    ".padding-vertical-6"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>@ucriversideofficial</span>",
+          "target": [
+            "#instagram > a > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            "#popup-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "students on campus",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "events.ucr.edu",
+                  "port": "",
+                  "pathname": "/event/last-day-of-summer-quarter/",
+                  "search": {
+                    "utm_campaign": "widget",
+                    "utm_medium": "widget",
+                    "utm_source": "UC+Riverside"
+                  },
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://events.ucr.edu/event/first_day_of_fall_quarter_1182?utm_campaign=widget&utm_medium=widget&utm_source=UC+Riverside\" target=\"_blank\">",
+                  "target": [
+                    ".widget-event:nth-child(4) > .widget-photo-space > .widget-photo > a[target=\"_blank\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"https://events.ucr.edu/event/last-day-of-summer-quarter?utm_campaign=widget&utm_medium=widget&utm_source=UC+Riverside\" target=\"_blank\">",
+          "target": [
+            ".widget-event:nth-child(3) > .widget-photo-space > .widget-photo > a[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}

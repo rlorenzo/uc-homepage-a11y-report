@@ -1,0 +1,2968 @@
+{
+  "month": "2026-09",
+  "scanned_at": "2026-09-01T17:39:54.243Z",
+  "axe_version": "4.11.4",
+  "site": "ucdavis-health",
+  "name": "UC Davis Health",
+  "campus": "ucdavis",
+  "type": "school",
+  "category": "medicine-health",
+  "url": "https://health.ucdavis.edu",
+  "render_mode": "headless",
+  "element_count": 1086,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-modal=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-modal=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul id=\"primaryNavigation_linkList\" class=\"primary-link-list\" aria-describedby=\"Site navigation menu items\" aria-modal=\"false\">",
+          "target": [
+            "#primaryNavigation_linkList"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-modal=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": [
+                "aria-controls=\"menu\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Invalid ARIA attribute value: aria-controls=\"menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button aria-controls=\"menu\" class=\"nav__dropdown-toggle priority-nav__dropdown-toggle priority-nav-is-visible\" prioritynav-count=\"6\">Quick Links</button>",
+          "target": [
+            ".nav__dropdown-toggle"
+          ],
+          "failureSummary": "Fix all of the following:\n  Invalid ARIA attribute value: aria-controls=\"menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button type=\"button\" class=\"open-menu d-none d-lg-flex\" data-bs-toggle=\"modal\" data-bs-target=\"#global-nav-modal-left\" aria-controls=\"global-nav-modal-left\" aria-describedby=\"global-nav-menu-open\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">menu</span>Main Menu</button>",
+                  "target": [
+                    ".open-menu"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" class=\"open-menu d-none d-lg-flex\" data-bs-toggle=\"modal\" data-bs-target=\"#global-nav-modal-left\" aria-controls=\"global-nav-modal-left\" aria-describedby=\"global-nav-menu-open\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">menu</span>Main Menu</button>",
+          "target": [
+            ".open-menu"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"scrollable-scrollable-cards-welcome-health-home-care-centers\" href=\"/patients-visitors/care-centers/\">View more care centers</a>",
+                  "target": [
+                    "#scrollable-scrollable-cards-welcome-health-home-care-centers"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"scrollable-scrollable-cards-welcome-health-home-care-centers\" href=\"/patients-visitors/care-centers/\">View more care centers</a>",
+          "target": [
+            "#scrollable-scrollable-cards-welcome-health-home-care-centers"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"1\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"https://www.ucdavisrehabhospital.com\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".badge.col[data-order=\"1\"] > .multi-link.card-listing.card-container > .card > .card-body > .btn-sm.btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"2\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/cancer/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"cancer/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"3\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/mindinstitute/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"mindinstitute/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn-primary mb-sm-3\">Learn more</span>",
+                  "target": [
+                    ".py-5 > .btn-primary.mb-sm-3.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-primary mb-sm-3\">Learn more</span>",
+          "target": [
+            ".py-5 > .btn-primary.mb-sm-3.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-1 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Partner with us for better health<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-1 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-2 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Explore our research studies<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-2 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-3 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn about our programs<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-3 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine\" href=\"/patients-visitors/about-patient-care/\">Learn more about our patient care</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine\" href=\"/patients-visitors/about-patient-care/\">Learn more about our patient care</a>",
+          "target": [
+            "#promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+          "target": [
+            "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/neurological-health\">Neurological Health</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(1) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 26, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(1) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/awards-and-honors\">Awards and Honors</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(2) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 25, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(2) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/mental-health\">Mental Health</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(3) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 25, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(3) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/mind-institute\">MIND Institute</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(4) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 24, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(4) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary btn-sm mt-3 mb-5 mb-sm-3\" title=\"See more news\" href=\"/news/\">See more news articles</a>",
+                  "target": [
+                    "a[title=\"See more news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary btn-sm mt-3 mb-5 mb-sm-3\" title=\"See more news\" href=\"/news/\">See more news articles</a>",
+          "target": [
+            "a[title=\"See more news\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Awards and Honors</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-1 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-1 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Points of Distinction</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-2 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-2 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Reimagining Medicine</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-3 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-3 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"link-wrapper\" tabindex=\"-1\">",
+                  "target": [
+                    ".badge.col[data-order=\"4\"] > .link-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"category\">Best Nursing Schools</span>",
+          "target": [
+            ".badge.col[data-order=\"4\"] > .link-wrapper > .badge-img > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/awards/aboutus/\" class=\"btn btn-outline-primary mb-3\" id=\"btn-dynamic-badges-welcome-top-level-health-badges\" title=\"See more awards and recognitions\">See more awards and recognitions</a>",
+          "target": [
+            "#btn-dynamic-badges-welcome-top-level-health-badges"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 16.5pt (22px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-describedby=\"Site navigation menu items\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"Site navigation menu items\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul id=\"primaryNavigation_linkList\" class=\"primary-link-list\" aria-describedby=\"Site navigation menu items\" aria-modal=\"false\">",
+          "target": [
+            "#primaryNavigation_linkList"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"Site navigation menu items\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_1_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_1_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_1\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_1_menu\" aria-labelledby=\"sr_menuIntro pLink_1 sr_menuOutro\"><span>Patients &amp; Visitors</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_1"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_1_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_2_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_2_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_2\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_2_menu\" aria-labelledby=\"sr_menuIntro pLink_2 sr_menuOutro\"><span>Services &amp; Specialties</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_2"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_2_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_3_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_3_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_3\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_3_menu\" aria-labelledby=\"sr_menuIntro pLink_3 sr_menuOutro\"><span>Healthcare Professionals</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_3"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_3_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_4_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_4_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_4\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_4_menu\" aria-labelledby=\"sr_menuIntro pLink_4 sr_menuOutro\"><span>Schools &amp; Programs</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_4"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_4_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_5_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_5_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_5\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_5_menu\" aria-labelledby=\"sr_menuIntro pLink_5 sr_menuOutro\"><span>Research</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_5"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_5_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_6_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_6_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_6\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_6_menu\" aria-labelledby=\"sr_menuIntro pLink_6 sr_menuOutro\"><span>News</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_6"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_6_menu\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"pLink_7_menu\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_7_menu\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button id=\"pLink_7\" class=\"primary-link\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"pLink_7_menu\" aria-labelledby=\"sr_menuIntro pLink_7 sr_menuOutro\"><span>About Us</span><span class=\"material-symbols-rounded\" aria-hidden=\"true\">chevron_right</span></button>",
+          "target": [
+            "#pLink_7"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"pLink_7_menu\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "51.0pt (68px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"marquee-title mt-0 mb-3 mb-md-4\">Ranked Among the Best </h2>",
+          "target": [
+            ".marquee-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "51.0pt (68px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"marquee-title mt-0 mb-3 mb-md-4\">Ranked Among the Best </h2>",
+          "target": [
+            ".marquee-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"featured-article-overlay col-lg-12 align-self-center p-5 mb-5 mb-md-0\">",
+                  "target": [
+                    ".featured-article-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" id=\"feature-category-dynamic-latest-news-welcome-default\" href=\"/welcome/news/topic/lung-health\">Lung Health</a>",
+          "target": [
+            "#feature-category-dynamic-latest-news-welcome-default"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"featured-article-overlay col-lg-12 align-self-center p-5 mb-5 mb-md-0\">",
+                  "target": [
+                    ".featured-article-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"featured-article-title mt-0 mb-3 mb-md-4\">Take control of your breathing at the UCAN Bootcamp</h2>",
+          "target": [
+            ".featured-article-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/medical-center/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"medical-center/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/children/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"children/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"https://www.ucdavisrehabhospital.com\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".badge.col[data-order=\"1\"] > .multi-link.card-listing.card-container > .card > .card-body > .btn-sm.btn-link.btn"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/cancer/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"cancer/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/mindinstitute/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"mindinstitute/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "get directions",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/medical-center/visiting/directions/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a title=\"#\" href=\"/children/directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>Get directions</a>",
+                  "target": [
+                    ".badge.col[data-order=\"5\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[href$=\"directions/\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a title=\"#\" href=\"/medical-center/visiting/directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>Get directions</a>",
+          "target": [
+            ".badge.col[data-order=\"4\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[title=\"#\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "see all locations",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/cancer/maps/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a title=\"#\" href=\"/mindinstitute/maps-directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>See all locations</a>",
+                  "target": [
+                    ".badge.col[data-order=\"3\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[title=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a title=\"#\" href=\"/cancer/maps/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>See all locations</a>",
+          "target": [
+            "a[href$=\"maps/\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "mind institute",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/mindinstitute/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"category\" href=\"/welcome/news/topic/mind-institute\">MIND Institute</a>",
+                  "target": [
+                    ".media.pt-3.pb-2:nth-child(4) > .media-body > .category"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/mindinstitute/\" title=\"MIND Institute\">MIND Institute</a>",
+          "target": [
+            "a[title=\"MIND Institute\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-modal=\"true\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-modal=\"true\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul id=\"primaryNavigation_linkList\" class=\"primary-link-list\" aria-describedby=\"Site navigation menu items\" aria-modal=\"true\">",
+          "target": [
+            "#primaryNavigation_linkList"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-modal=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"scrollable-scrollable-cards-welcome-health-home-care-centers\" href=\"/patients-visitors/care-centers/\">View more care centers</a>",
+                  "target": [
+                    "#scrollable-scrollable-cards-welcome-health-home-care-centers"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"scrollable-scrollable-cards-welcome-health-home-care-centers\" href=\"/patients-visitors/care-centers/\">View more care centers</a>",
+          "target": [
+            "#scrollable-scrollable-cards-welcome-health-home-care-centers"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"5\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/medical-center/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"medical-center/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"1\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/children/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"children/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"2\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"https://www.ucdavisrehabhospital.com\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".badge.col[data-order=\"2\"] > .multi-link.card-listing.card-container > .card > .card-body > .btn-sm.btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"3\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/cancer/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"cancer/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    ".badge.col[data-order=\"4\"] > .multi-link.card-listing.card-container > .card > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/mindinstitute/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+          "target": [
+            ".btn-sm.btn-link[href$=\"mindinstitute/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"btn btn-primary mb-sm-3\">Learn more</span>",
+                  "target": [
+                    ".py-5 > .btn-primary.mb-sm-3.btn"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-primary mb-sm-3\">Learn more</span>",
+          "target": [
+            ".py-5 > .btn-primary.mb-sm-3.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-1 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Partner with us for better health<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-1 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-2 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Explore our research studies<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-2 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\">",
+                  "target": [
+                    "#cards-welcome-health-home-what-makes-unique-Cards-3 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn about our programs<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-what-makes-unique-Cards-3 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine\" href=\"/patients-visitors/about-patient-care/\">Learn more about our patient care</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine\" href=\"/patients-visitors/about-patient-care/\">Learn more about our patient care</a>",
+          "target": [
+            "#promo-block-body-2-column-content-welcome-health-home-benefits-academic-medicine"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+          "target": [
+            "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/neurological-health\">Neurological Health</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(1) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 26, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(1) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/awards-and-honors\">Awards and Honors</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(2) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 25, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(2) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/mental-health\">Mental Health</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(3) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 25, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(3) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#355b85",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 5.92,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" href=\"/welcome/news/topic/mind-institute\">MIND Institute</a>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(4) > .media-body > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.92 (foreground color: #355b85, background color: #e6ecf7, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#e6ecf7",
+                "contrastRatio": 4.84,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"latest-news promo-block-2-column dark mb-7 mx-n4 mx-md-n5 pb-0 pb-sm-6 pt-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".latest-news"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"date\">AUGUST 24, 2026</span>",
+          "target": [
+            ".media.pt-3.pb-2:nth-child(4) > .media-body > .date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.84 (foreground color: #666666, background color: #e6ecf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#007991",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-primary btn-sm mt-3 mb-5 mb-sm-3\" title=\"See more news\" href=\"/news/\">See more news articles</a>",
+                  "target": [
+                    "a[title=\"See more news\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-primary btn-sm mt-3 mb-5 mb-sm-3\" title=\"See more news\" href=\"/news/\">See more news articles</a>",
+          "target": [
+            "a[title=\"See more news\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #ffffff, background color: #007991, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Awards and Honors</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-1 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-1 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Points of Distinction</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-2 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-2 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"card-body\"><span class=\"category\"></span><h2 class=\"card-title\">Reimagining Medicine</h2>\n                     <p class=\"card-text\"></p><span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span></div>",
+                  "target": [
+                    "#cards-welcome-health-home-awards-distinction-promos-Cards-3 > .card-body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"btn btn-link\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></span>",
+          "target": [
+            "#cards-welcome-health-home-awards-distinction-promos-Cards-3 > .card-body > .btn-link.btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#666666",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.74,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"link-wrapper\" tabindex=\"-1\">",
+                  "target": [
+                    ".badge.col[data-order=\"5\"] > .link-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"category\">Best Nursing Schools</span>",
+          "target": [
+            ".badge.col[data-order=\"5\"] > .link-wrapper > .badge-img > .category"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.74 (foreground color: #666666, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#007991",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.06,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body>",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/awards/aboutus/\" class=\"btn btn-outline-primary mb-3\" id=\"btn-dynamic-badges-welcome-top-level-health-badges\" title=\"See more awards and recognitions\">See more awards and recognitions</a>",
+          "target": [
+            "#btn-dynamic-badges-welcome-top-level-health-badges"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.06 (foreground color: #007991, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-describedby=\"Site navigation menu items\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"Site navigation menu items\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<ul id=\"primaryNavigation_linkList\" class=\"primary-link-list\" aria-describedby=\"Site navigation menu items\" aria-modal=\"true\">",
+          "target": [
+            "#primaryNavigation_linkList"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"Site navigation menu items\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"marquee-title mt-0 mb-3 mb-md-4\">Ranked Among the Best </h2>",
+          "target": [
+            ".marquee-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "30.0pt (40px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"marquee-title mt-0 mb-3 mb-md-4\">Ranked Among the Best </h2>",
+          "target": [
+            ".marquee-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"marquee-home health mx-n4 mx-md-n5 mb-7 px-4 px-md-5 fw\">",
+                  "target": [
+                    ".marquee-home"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"featured-article-overlay col-lg-12 align-self-center p-5 mb-5 mb-md-0\">",
+                  "target": [
+                    ".featured-article-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"category\" id=\"feature-category-dynamic-latest-news-welcome-default\" href=\"/welcome/news/topic/lung-health\">Lung Health</a>",
+          "target": [
+            "#feature-category-dynamic-latest-news-welcome-default"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"featured-article-overlay col-lg-12 align-self-center p-5 mb-5 mb-md-0\">",
+                  "target": [
+                    ".featured-article-overlay"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 class=\"featured-article-title mt-0 mb-3 mb-md-4\">Take control of your breathing at the UCAN Bootcamp</h2>",
+          "target": [
+            ".featured-article-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "learn more",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/medical-center/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"medical-center/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/children/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"children/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"https://www.ucdavisrehabhospital.com\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".badge.col[data-order=\"2\"] > .multi-link.card-listing.card-container > .card > .card-body > .btn-sm.btn-link.btn"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/cancer/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"cancer/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-link btn-sm\" id=\"custom-links-scrollable-cards-welcome-health-home-care-centers\" href=\"/mindinstitute/\">Learn more<span aria-hidden=\"true\" class=\"material-symbols-rounded\">arrow_forward</span></a>",
+                  "target": [
+                    ".btn-sm.btn-link[href$=\"mindinstitute/\"]"
+                  ]
+                },
+                {
+                  "html": "<a class=\"btn btn-primary\" id=\"promo-block-body-2-column-content-welcome-health-home-commitment-underserved\" href=\"/welcome/commitment-to-underserved\">Learn more</a>",
+                  "target": [
+                    "#promo-block-body-2-column-content-welcome-health-home-commitment-underserved"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a id=\"health-home-marquee-welcome-default-1\" class=\"btn btn-secondary dark mb-3 mr-3\" href=\"/news/headlines/uc-davis-medical-center-earns-multiple-rankings-in-latest-us-news-survey/2026/08\">Learn more</a>",
+          "target": [
+            "#health-home-marquee-welcome-default-1"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "get directions",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/medical-center/visiting/directions/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a title=\"#\" href=\"/children/directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>Get directions</a>",
+                  "target": [
+                    ".badge.col[data-order=\"1\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[href$=\"directions/\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a title=\"#\" href=\"/medical-center/visiting/directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>Get directions</a>",
+          "target": [
+            ".badge.col[data-order=\"5\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[title=\"#\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "see all locations",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/cancer/maps/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a title=\"#\" href=\"/mindinstitute/maps-directions/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>See all locations</a>",
+                  "target": [
+                    ".badge.col[data-order=\"4\"] > .multi-link.card-listing.card-container > .card > .card-body > .custom-links > .link.location > h4 > a[title=\"#\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a title=\"#\" href=\"/cancer/maps/\"><span aria-hidden=\"true\" class=\"material-symbols-rounded\">location_on</span>See all locations</a>",
+          "target": [
+            "a[href$=\"maps/\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "mind institute",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "health.ucdavis.edu",
+                  "port": "",
+                  "pathname": "/mindinstitute/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"category\" href=\"/welcome/news/topic/mind-institute\">MIND Institute</a>",
+                  "target": [
+                    ".media.pt-3.pb-2:nth-child(4) > .media-body > .category"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/mindinstitute/\" title=\"MIND Institute\">MIND Institute</a>",
+          "target": [
+            "a[title=\"MIND Institute\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ]
+}
