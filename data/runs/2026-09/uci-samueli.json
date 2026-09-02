@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "uci-samueli",
   "name": "UCI Samueli School of Engineering",
   "campus": "uci",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -281,7 +281,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -334,7 +334,7 @@
       ],
       "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
       "help": "Zooming and scaling must not be disabled",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=playwright",
       "nodes": [
         {
           "any": [
@@ -373,7 +373,7 @@
       ],
       "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
       "help": "Interactive controls must not be nested",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=playwright",
       "nodes": [
         {
           "any": [
@@ -424,8 +424,158 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/about\" class=\"dropdown-toggle\">\n        \n    About          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".dropdown-toggle[href$=\"about\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/admissions\" class=\"dropdown-toggle\">\n        \n    Admissions          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".mega-align-left > .dropdown-toggle[href$=\"admissions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/research\" class=\"dropdown-toggle\">\n        \n    Research          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".dropdown-toggle[href$=\"research\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/industry\" class=\"dropdown-toggle\">\n        \n    Industry          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".dropdown-toggle[href$=\"industry\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/outreach\" class=\"dropdown-toggle\">\n        \n    Outreach          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".dropdown-toggle[href$=\"outreach\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news-events\" class=\"dropdown-toggle\">\n        \n    News &amp; Events          <span class=\"caret\"></span>\n          </a>",
+          "target": [
+            ".dropdown-toggle[href$=\"news-events\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -754,19 +904,12 @@
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<li class=\"ui-state-default ui-corner-top ui-tabs-active ui-state-active\" role=\"tab\" tabindex=\"0\" aria-controls=\"qt-events_twitter-ui-tabs1\" aria-labelledby=\"ui-id-1\" aria-selected=\"true\">",
-                  "target": [
-                    ".ui-state-default"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -776,7 +919,7 @@
           "target": [
             "#ui-id-1"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -1046,7 +1189,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1155,7 +1298,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1414,7 +1557,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1472,7 +1615,7 @@
       ],
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1736,7 +1879,7 @@
       ],
       "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
       "help": "Zooming and scaling must not be disabled",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1775,7 +1918,7 @@
       ],
       "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
       "help": "Interactive controls must not be nested",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1826,7 +1969,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2156,19 +2299,12 @@
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<li class=\"ui-state-default ui-corner-top ui-tabs-active ui-state-active\" role=\"tab\" tabindex=\"0\" aria-controls=\"qt-events_twitter-ui-tabs1\" aria-labelledby=\"ui-id-1\" aria-selected=\"true\">",
-                  "target": [
-                    ".ui-state-default"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -2178,7 +2314,7 @@
           "target": [
             "#ui-id-1"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     },
@@ -2192,7 +2328,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

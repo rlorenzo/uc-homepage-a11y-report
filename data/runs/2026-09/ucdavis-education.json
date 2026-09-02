@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucdavis-education",
   "name": "UC Davis School of Education",
   "campus": "ucdavis",
@@ -27,7 +27,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -461,7 +461,7 @@
       ],
       "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
       "help": "ARIA attributes must conform to valid names",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=playwright",
       "nodes": [
         {
           "any": [
@@ -485,6 +485,60 @@
           "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-popup"
         }
       ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 14,
+                "height": 14
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (14px by 14px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 14,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/eddeducational-leadership\">\n      <h2 class=\"title\">Lead for equity and achievement</h2>\n      <p class=\"subtitle\">Learn about our doctorate in educational leadership</p>    </a>",
+                  "target": [
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"eddeducational-leadership\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button--play-pause\" aria-label=\"Stop the slider's autoscroll\">",
+          "target": [
+            ".button--play-pause"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (14px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14px instead of at least 24px."
+        }
+      ]
     }
   ],
   "incomplete": [
@@ -502,7 +556,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -546,7 +600,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -721,7 +775,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1230,7 +1284,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1319,7 +1373,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1701,7 +1755,7 @@
       ],
       "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
       "help": "ARIA attributes must conform to valid names",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1725,6 +1779,60 @@
           "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-popup"
         }
       ]
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag22aa",
+        "wcag258"
+      ],
+      "description": "Ensure touch targets have sufficient size and space",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
+                "width": 16,
+                "height": 16
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has insufficient size (16px by 16px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 16,
+                "minOffset": 24
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/teaching-credentialma\">\n      <h2 class=\"title\">Become a Teacher</h2>\n      <p class=\"subtitle\">Students need great teachers now more than ever</p>    </a>",
+                  "target": [
+                    ".show-banner-cap-.node-item.node-header > a[href$=\"teaching-credentialma\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16px instead of at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"button--play-pause\" aria-label=\"Stop the slider's autoscroll\">",
+          "target": [
+            ".button--play-pause"
+          ],
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16px instead of at least 24px."
+        }
+      ]
     }
   ],
   "mobile_incomplete": [
@@ -1742,7 +1850,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1785,7 +1893,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [

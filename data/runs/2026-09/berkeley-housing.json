@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "berkeley-housing",
   "name": "UC Berkeley Housing Services",
   "campus": "berkeley",
@@ -32,7 +32,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -78,9 +78,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_28112\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"/resident-resources/...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_44618\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"/resident-resources/...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
           "target": [
-            "#rs_slidelink_28112"
+            "#rs_slidelink_44618"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         },
@@ -155,7 +155,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -407,12 +407,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12044_2903 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -422,7 +429,7 @@
           "target": [
             ".eg-text_white-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -432,12 +439,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12044_2903 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -447,7 +461,7 @@
           "target": [
             ".eg-text_white-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -457,12 +471,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12046_9863 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -472,7 +493,7 @@
           "target": [
             ".eg-text_bblue-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -482,12 +503,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12046_9863 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -497,7 +525,7 @@
           "target": [
             ".eg-text_bblue-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -507,12 +535,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12047_5993 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -522,7 +557,7 @@
           "target": [
             ".eg-text_black-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -532,12 +567,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12047_5993 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -547,7 +589,7 @@
           "target": [
             ".eg-text_black-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         }
       ]
     }
@@ -574,7 +616,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -620,9 +662,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_46405\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"/campus-housing-upco...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_74390\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"/campus-housing-upco...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" ...>",
           "target": [
-            "#rs_slidelink_46405"
+            "#rs_slidelink_74390"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         },
@@ -697,7 +739,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -942,12 +984,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12044_2903 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -957,7 +1006,7 @@
           "target": [
             ".eg-text_white-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -967,12 +1016,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12044_2903 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -982,7 +1038,7 @@
           "target": [
             ".eg-text_white-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -992,12 +1048,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12046_9863 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -1007,7 +1070,7 @@
           "target": [
             ".eg-text_bblue-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -1017,12 +1080,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12046_9863 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -1032,7 +1102,7 @@
           "target": [
             ".eg-text_bblue-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -1042,12 +1112,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12047_5993 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -1057,7 +1134,7 @@
           "target": [
             ".eg-text_black-element-7"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -1067,12 +1144,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"esg-media-poster\" src=\"https://housing.berk...\" data-src=\"https://housing.berk...\" data-lazythumb=\"undefined\" style=\"background-image: ur...\">",
+                  "target": [
+                    "#eg-14-post-id-12047_5993 > .esg-media-cover-wrapper > .esg-entry-media-wrapper-even.esg-entry-media-wrapper > .esg-entry-media > .esg-media-poster[data-lazythumb=\"undefined\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -1082,7 +1166,7 @@
           "target": [
             ".eg-text_black-element-8"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         }
       ]
     }

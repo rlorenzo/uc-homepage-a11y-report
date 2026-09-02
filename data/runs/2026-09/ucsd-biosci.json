@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsd-biosci",
   "name": "UC San Diego School of Biological Sciences",
   "campus": "ucsd",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -259,40 +259,6 @@
           "html": "<a aria-expanded=\"false\" class=\"dropdown-toggle\" data-close-others=\"true\" data-hover=\"dropdown\" href=\"administration/index.html\">Administration <span class=\"caret\"></span></a>",
           "target": [
             ".dropdown-toggle[href=\"administration/index.html\"][data-close-others=\"true\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#00629b",
-                "contrastRatio": 6.52,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"animated fadeInUp herotextbg-light-opaque\">",
-                  "target": [
-                    ".animated"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"rt-text-light \" tabindex=\"0\">Our mission is to advance knowledge of basic biological sciences and apply our research discoveries in ways that improve human health, protect our environment and enrich our economy.</p>",
-          "target": [
-            ".rt-text-light:nth-child(2)"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.52 (foreground color: #ffffff, background color: #00629b, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -689,42 +655,8 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#6e963b",
-                "contrastRatio": 3.44,
-                "fontSize": "11.3pt (15px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a class=\"btn btn-lg btn-default  \" data-h1=\"\" data-module=\"hero-homepage\" href=\"research/index.html\" role=\"button\" tabindex=\"0\">Learn About Our Research</a>",
-                  "target": [
-                    ".btn"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 3.44 (foreground color: #ffffff, background color: #6e963b, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"btn btn-lg btn-default  \" data-h1=\"\" data-module=\"hero-homepage\" href=\"research/index.html\" role=\"button\" tabindex=\"0\">Learn About Our Research</a>",
-          "target": [
-            ".btn"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.44 (foreground color: #ffffff, background color: #6e963b, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
-        },
         {
           "any": [
             {
@@ -780,8 +712,83 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "42.0pt (56px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1 class=\"rt-text-light \" tabindex=\"0\">Biological Sciences at UC San Diego </h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"rt-text-light \" tabindex=\"0\">Our mission is to advance knowledge of basic biological sciences and apply our research discoveries in ways that improve human health, protect our environment and enrich our economy.</p>",
+          "target": [
+            ".rt-text-light:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-lg btn-default  \" data-h1=\"\" data-module=\"hero-homepage\" href=\"research/index.html\" role=\"button\" tabindex=\"0\">Learn About Our Research</a>",
+          "target": [
+            ".btn"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -829,7 +836,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1258,7 +1265,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1340,7 +1347,7 @@
       ],
       "description": "Ensure touch targets have sufficient size and space",
       "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1348,17 +1355,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 80,
+                "width": 80.6,
                 "height": 17
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (80px by 17px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (80.6px by 17px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 22.8,
+                "closestOffset": 23,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1370,7 +1377,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1380,7 +1387,7 @@
           "target": [
             ".footer-links > li:nth-child(1) > a"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (80px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (80.6px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
         },
         {
           "any": [
@@ -1398,7 +1405,7 @@
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 22.8,
+                "closestOffset": 23,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1410,7 +1417,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1420,7 +1427,7 @@
           "target": [
             ".footer-links > li:nth-child(4) > a"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (62px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (62px by 17px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
         }
       ]
     }
@@ -1443,7 +1450,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1493,7 +1500,7 @@
       ],
       "description": "Ensure every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria?application=playwright",
       "nodes": [
         {
           "any": [

@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "uci-admissions",
   "name": "UC Irvine Admissions",
   "campus": "uci",
@@ -9,7 +9,7 @@
   "category": "admissions",
   "url": "https://admissions.uci.edu",
   "render_mode": "headless",
-  "element_count": 776,
+  "element_count": 777,
   "violations": [],
   "incomplete": [
     {
@@ -23,7 +23,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -168,7 +168,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -299,12 +299,19 @@
                 "contrastRatio": 0,
                 "fontSize": "112.5pt (150px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"image \" role=\"img\" aria-label=\"Group of people holding a pose.\" style=\"background-image: url('https://cdn.enrollment.uci.edu/assets/img/anteater-story/content_o.jpg')\"></div>",
+                  "target": [
+                    ".anteater-story__image > .image[role=\"img\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -314,7 +321,7 @@
           "target": [
             "#anteater-story__heading"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -324,12 +331,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"image \" role=\"img\" aria-label=\"Group of people holding a pose.\" style=\"background-image: url('https://cdn.enrollment.uci.edu/assets/img/anteater-story/content_o.jpg')\"></div>",
+                  "target": [
+                    ".anteater-story__image > .image[role=\"img\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -339,7 +353,7 @@
           "target": [
             ".anteater-story__desc"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -380,12 +394,19 @@
                 "contrastRatio": 0,
                 "fontSize": "26.3pt (35px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"image \" role=\"img\" aria-label=\"Group of people jumping in a performance.\" style=\"background-image: url('https://cdn.enrollment.uci.edu/assets/img/anteater-experience/content_o.jpg')\"></div>",
+                  "target": [
+                    "#anteater-experience__image > .image[role=\"img\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -395,7 +416,7 @@
           "target": [
             "q"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -994,7 +1015,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1031,7 +1052,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1233,6 +1254,37 @@
                 {
                   "html": "<li class=\"global-footer__nav-item\">",
                   "target": [
+                    ".global-footer__nav-item:nth-child(1)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"chevron\">Visit    <svg class=\"icon icon-external-link\" focusable=\"false\" aria-hidden=\"true\">\n        <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-external-link\"> </use>\n    </svg>\n</span>",
+          "target": [
+            "a[aria-label=\"Visit (opens in a new window)\"] > .chevron"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<li class=\"global-footer__nav-item\">",
+                  "target": [
                     ".global-footer__nav-item:nth-child(4)"
                   ]
                 }
@@ -1300,7 +1352,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1405,12 +1457,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.8pt (25px)",
                 "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"image\" aria-label=\"UCI student dancing ballet\" role=\"img\" style=\"background-image: url('assets/images/student.png');\"></div>",
+                  "target": [
+                    "div[aria-label=\"UCI student dancing ballet\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -1420,7 +1479,7 @@
           "target": [
             "q"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -1561,9 +1620,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"image \" role=\"img\" aria-label=\"Students playing e-sports.\" style=\"background-image: url('https://cdn.enrollment.uci.edu/assets/img/programs-feature/background/content_o.jpg')\"></div>",
+                  "html": "<div class=\"image \" role=\"img\" aria-label=\"students conducting research on a beach\" style=\"background-image: url('assets/images/AdmissionsProgramsBackground_EarthSystemScience.jpg')\"></div>",
                   "target": [
-                    "div[aria-label=\"Students playing e-sports.\"]"
+                    ".programs-feature__background-image > .image[role=\"img\"]"
                   ]
                 }
               ],
@@ -1593,9 +1652,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"image \" role=\"img\" aria-label=\"Students playing e-sports.\" style=\"background-image: url('https://cdn.enrollment.uci.edu/assets/img/programs-feature/background/content_o.jpg')\"></div>",
+                  "html": "<div class=\"image \" role=\"img\" aria-label=\"students conducting research on a beach\" style=\"background-image: url('assets/images/AdmissionsProgramsBackground_EarthSystemScience.jpg')\"></div>",
                   "target": [
-                    "div[aria-label=\"Students playing e-sports.\"]"
+                    ".programs-feature__background-image > .image[role=\"img\"]"
                   ]
                 }
               ],
@@ -1838,22 +1897,21 @@
             {
               "id": "color-contrast",
               "data": {
-                "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "bgGradient",
+                "messageKey": "pseudoContent",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [
                 {
-                  "html": "<div class=\"global-footer__inner-container\">",
+                  "html": "<li class=\"global-footer__nav-item\">",
                   "target": [
-                    ".global-footer__inner-container"
+                    ".global-footer__nav-item:nth-child(1)"
                   ]
                 }
               ],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background gradient"
+              "message": "Element's background color could not be determined due to a pseudo element"
             }
           ],
           "all": [],
@@ -1863,7 +1921,7 @@
           "target": [
             "a[aria-label=\"Visit (opens in a new window)\"] > .chevron"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
         },
         {
           "any": [

@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "berkeley-registrar",
   "name": "UC Berkeley Office of the Registrar",
   "campus": "berkeley",
@@ -10,7 +10,83 @@
   "url": "https://registrar.berkeley.edu",
   "render_mode": "headless",
   "element_count": 774,
-  "violations": [],
+  "violations": [
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_539\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"//classes.berkeley.e...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" data-idcheck=\"true\" ...>",
+          "target": [
+            "#rs_slidelink_539"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        }
+      ]
+    }
+  ],
   "incomplete": [
     {
       "id": "color-contrast",
@@ -29,8 +105,33 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input id=\"s\" name=\"s\" type=\"search\" class=\"form-control\" title=\"search term\" placeholder=\"Search …\" value=\"\" aria-label=\"search term\">",
+          "target": [
+            "#s"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
         {
           "any": [
             {
@@ -78,81 +179,6 @@
           "html": "<a id=\"slider-3-slide-49-la...\" class=\"rs-layer\" href=\"https://twitter.com/...\" target=\"_self\" rel=\"nofollow\" data-type=\"text\" data-rsp_ch=\"on\" data-xy=\"xo:875px,647px,543px...\" data-text=\"w:normal;s:32,32,26,...\" data-dim=\"w:276px,276px,188px,...\" data-frame_1=\"sR:10;\" data-idcheck=\"true\" ...>",
           "target": [
             "#slider-3-slide-49-layer-8"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<rs-layer id=\"slider-3-slide-51-la...\" data-type=\"text\" data-color=\"#000000\" data-rsp_ch=\"on\" data-xy=\"xo:875px,646px,543px...\" data-text=\"w:normal;l:40,40,30,...\" data-dim=\"w:290px,290px,205px,...\" data-frame_1=\"sR:10;\" data-frame_999=\"o:0;st:w;sR:8690;\" style=\"z-index: 10; font-fa...\" ...>",
-          "target": [
-            "#slider-3-slide-51-layer-0"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "21.8pt (29px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a id=\"slider-3-slide-51-la...\" class=\"rs-layer\" href=\"https://registrar.be...\" target=\"_self\" rel=\"nofollow\" data-type=\"text\" data-color=\"#000000\" data-rsp_ch=\"on\" data-xy=\"xo:875px,647px,543px...\" data-text=\"w:normal;s:32,32,26,...\" data-dim=\"w:276px,276px,188px,...\" data-frame_1=\"sR:10;\" ...>",
-          "target": [
-            "#slider-3-slide-51-layer-8"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "20.2pt (26.992px)",
-                "fontWeight": "bold",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<strong>From admission to graduation, the Office of the Registrar helps students navigate their Berkeley journey.</strong>",
-          "target": [
-            ".intro:nth-child(3) > strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -373,7 +399,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -419,9 +445,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_3938\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"//classes.berkeley.e...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" data-idcheck=\"true\" ...>",
+          "html": "<a class=\"rs-layer slidelink\" id=\"rs_slidelink_539\" data-zindex=\"95\" dataxy=\"x:c;y:c\" data-dim=\"w:100%;h:100%\" data-basealign=\"slide\" href=\"//classes.berkeley.e...\" target=\"_self\" rel=\"noopener\" data-frame_1=\"e:power3.inOut;st:10...\" data-frame_999=\"e:power3.inOut;o:0;s...\" data-idcheck=\"true\" ...>",
           "target": [
-            "#rs_slidelink_3938"
+            "#rs_slidelink_539"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         }
@@ -446,7 +472,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [

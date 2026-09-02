@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucla-luskin",
   "name": "UCLA Luskin School of Public Affairs",
   "campus": "ucla",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -55,6 +55,40 @@
           "html": "<p class=\"elementor-heading-title elementor-size-default\">Explore UCLA Luskin’s undergraduate, graduate and professional degree programs and find the path that fits your goals.</p>",
           "target": [
             ".elementor-element-432d601 > .elementor-widget-container > .elementor-heading-title.elementor-size-default"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#717182",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.78,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"home wp-singular pag...\" data-elementor-devic...=\"desktop\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Prepare to analyze complex public issues and develop policies that improve communities and institutions.</p>",
+          "target": [
+            ".elementor-element-7b46175 > .elementor-widget-container > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -727,7 +761,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -997,7 +1031,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1041,7 +1075,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1050,20 +1084,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882845644903257-2\""
+                "needsReview": "aria-controls=\"sm-1788298008801446-2\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-2\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-2\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"elementor-item elementor-item-anchor has-submenu\" id=\"sm-17882845644903257-1\" aria-haspopup=\"true\" aria-controls=\"sm-17882845644903257-2\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Students &amp; Alumni</div></div></a>",
+          "html": "<a href=\"#\" class=\"elementor-item elementor-item-anchor has-submenu\" id=\"sm-1788298008801446-1\" aria-haspopup=\"true\" aria-controls=\"sm-1788298008801446-2\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Students &amp; Alumni</div></div></a>",
           "target": [
-            "#sm-17882845644903257-1"
+            "#sm-1788298008801446-1"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-2\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-2\""
         },
         {
           "any": [],
@@ -1072,20 +1106,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882845644903257-4\""
+                "needsReview": "aria-controls=\"sm-1788298008801446-4\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-4\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-4\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"https://luskin.ucla.edu/events/\" class=\"elementor-item has-submenu\" id=\"sm-17882845644903257-3\" aria-haspopup=\"true\" aria-controls=\"sm-17882845644903257-4\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Events</div></div></a>",
+          "html": "<a href=\"https://luskin.ucla.edu/events/\" class=\"elementor-item has-submenu\" id=\"sm-1788298008801446-3\" aria-haspopup=\"true\" aria-controls=\"sm-1788298008801446-4\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Events</div></div></a>",
           "target": [
-            "#sm-17882845644903257-3"
+            "#sm-1788298008801446-3"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-4\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-4\""
         },
         {
           "any": [],
@@ -1188,7 +1222,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1364,7 +1398,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1394,7 +1428,7 @@
           "impact": "serious",
           "html": "<div class=\"mega-menu-link-label\">Students &amp; Alumni</div>",
           "target": [
-            "#sm-17882845644903257-1 > .mega-menu-link-details > .mega-menu-link-label"
+            "#sm-1788298008801446-1 > .mega-menu-link-details > .mega-menu-link-label"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -1458,7 +1492,7 @@
           "impact": "serious",
           "html": "<div class=\"mega-menu-link-label\">Events</div>",
           "target": [
-            "#sm-17882845644903257-3 > .mega-menu-link-details > .mega-menu-link-label"
+            "#sm-1788298008801446-3 > .mega-menu-link-details > .mega-menu-link-label"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -1629,7 +1663,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1831,7 +1865,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1864,6 +1898,40 @@
           "html": "<p class=\"elementor-heading-title elementor-size-default\">Explore UCLA Luskin’s undergraduate, graduate and professional degree programs and find the path that fits your goals.</p>",
           "target": [
             ".elementor-element-432d601 > .elementor-widget-container > .elementor-heading-title.elementor-size-default"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#717182",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.78,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"home wp-singular pag...\" data-elementor-devic...=\"mobile\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Prepare to analyze complex public issues and develop policies that improve communities and institutions.</p>",
+          "target": [
+            ".elementor-element-7b46175 > .elementor-widget-container > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.78 (foreground color: #717182, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -2536,7 +2604,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2856,7 +2924,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2865,20 +2933,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882845644903257-2\""
+                "needsReview": "aria-controls=\"sm-1788298008801446-2\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-2\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-2\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"elementor-item elementor-item-anchor has-submenu\" id=\"sm-17882845644903257-1\" aria-haspopup=\"true\" aria-controls=\"sm-17882845644903257-2\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Students &amp; Alumni</div></div></a>",
+          "html": "<a href=\"#\" class=\"elementor-item elementor-item-anchor has-submenu\" id=\"sm-1788298008801446-1\" aria-haspopup=\"true\" aria-controls=\"sm-1788298008801446-2\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Students &amp; Alumni</div></div></a>",
           "target": [
-            "#sm-17882845644903257-1"
+            "#sm-1788298008801446-1"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-2\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-2\""
         },
         {
           "any": [],
@@ -2887,20 +2955,20 @@
               "id": "aria-valid-attr-value",
               "data": {
                 "messageKey": "controlsWithinPopup",
-                "needsReview": "aria-controls=\"sm-17882845644903257-4\""
+                "needsReview": "aria-controls=\"sm-1788298008801446-4\""
               },
               "relatedNodes": [],
               "impact": "critical",
-              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-4\""
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-4\""
             }
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"https://luskin.ucla.edu/events/\" class=\"elementor-item has-submenu\" id=\"sm-17882845644903257-3\" aria-haspopup=\"true\" aria-controls=\"sm-17882845644903257-4\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Events</div></div></a>",
+          "html": "<a href=\"https://luskin.ucla.edu/events/\" class=\"elementor-item has-submenu\" id=\"sm-1788298008801446-3\" aria-haspopup=\"true\" aria-controls=\"sm-1788298008801446-4\" aria-expanded=\"false\"><div class=\"mega-menu-link-details\"><div class=\"mega-menu-link-label\">Events</div></div></a>",
           "target": [
-            "#sm-17882845644903257-3"
+            "#sm-1788298008801446-3"
           ],
-          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-17882845644903257-4\""
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sm-1788298008801446-4\""
         }
       ]
     },
@@ -2915,7 +2983,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3091,7 +3159,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3121,7 +3189,7 @@
           "impact": "serious",
           "html": "<div class=\"mega-menu-link-label\">Students &amp; Alumni</div>",
           "target": [
-            "#sm-17882845644903257-1 > .mega-menu-link-details > .mega-menu-link-label"
+            "#sm-1788298008801446-1 > .mega-menu-link-details > .mega-menu-link-label"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -3185,7 +3253,7 @@
           "impact": "serious",
           "html": "<div class=\"mega-menu-link-label\">Events</div>",
           "target": [
-            "#sm-17882845644903257-3 > .mega-menu-link-details > .mega-menu-link-label"
+            "#sm-1788298008801446-3 > .mega-menu-link-details > .mega-menu-link-label"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -3356,7 +3424,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

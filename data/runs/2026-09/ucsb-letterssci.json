@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsb-letterssci",
   "name": "UC Santa Barbara College of Letters and Science",
   "campus": "ucsb",
@@ -25,7 +25,7 @@
       ],
       "description": "Ensure an element's role supports its ARIA attributes",
       "help": "Elements must only use supported ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -63,7 +63,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -301,7 +301,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -519,6 +519,81 @@
             ".is-sticky > .content > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"copyright\">Copyright © 2026 The Regents of the University of California. All Rights Reserved.</span>",
+          "target": [
+            ".col-xs- > .copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/terms-of-use\" class=\"terms\">Terms of Use</a>",
+          "target": [
+            ".terms:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+          "target": [
+            "a[href$=\"accessibility\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     },
@@ -532,7 +607,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -599,7 +674,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -837,7 +912,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1093,7 +1168,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

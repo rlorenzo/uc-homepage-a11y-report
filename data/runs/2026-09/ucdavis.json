@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucdavis",
   "name": "UC Davis",
   "campus": "ucdavis",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -175,7 +175,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -289,7 +289,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -614,12 +614,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4094px)",
+                "fontSize": "42.9pt (57.1594px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-contentc5f4b367-34e8-4be6-89b3-413fa8ba4811 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -641,12 +648,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.1pt (20.1818px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"l-container--edge l-...\" data-lazy-bg-url=\"url(https://www.ucda...\" style=\"--layout-section-bg-...\">",
+                  "target": [
+                    ".u-space-pt--vast"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -656,7 +670,7 @@
           "target": [
             ".block-block-contentc5f4b367-34e8-4be6-89b3-413fa8ba4811 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -664,12 +678,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4094px)",
+                "fontSize": "42.9pt (57.1594px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content25d5888c-a6aa-49f3-8129-5eac9e4965b8 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -714,12 +735,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4125px)",
+                "fontSize": "42.9pt (57.1625px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-contentf84baea8-f9d2-4634-b869-8ccb636bedce > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -741,12 +769,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.1pt (20.1818px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"l-container--edge l-...\" data-lazy-bg-url=\"url(https://www.ucda...\" style=\"--layout-section-bg-...\">",
+                  "target": [
+                    ".u-space-pt--vast"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -756,7 +791,7 @@
           "target": [
             ".block-block-contentf84baea8-f9d2-4634-b869-8ccb636bedce > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -764,12 +799,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4125px)",
+                "fontSize": "42.9pt (57.1625px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content7a1087a6-71e3-4232-b82e-5979137cf428 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -814,12 +856,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4094px)",
+                "fontSize": "42.9pt (57.1594px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content6828a53b-5219-4584-9d0c-dc12e434c432 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -841,12 +890,19 @@
                 "contrastRatio": 0,
                 "fontSize": "15.1pt (20.1818px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"l-container--edge l-...\" data-lazy-bg-url=\"url(https://www.ucda...\" style=\"--layout-section-bg-...\">",
+                  "target": [
+                    ".u-space-pt--vast"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -856,7 +912,7 @@
           "target": [
             ".block-block-content6828a53b-5219-4584-9d0c-dc12e434c432 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -864,12 +920,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "42.3pt (56.4094px)",
+                "fontSize": "42.9pt (57.1594px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content89e52313-ff6b-4787-9dc8-8a159a2e1040 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -2708,7 +2771,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2834,7 +2897,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2965,7 +3028,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3084,7 +3147,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3198,7 +3261,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3491,12 +3554,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-contentc5f4b367-34e8-4be6-89b3-413fa8ba4811 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3516,7 +3586,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
@@ -3541,12 +3611,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content25d5888c-a6aa-49f3-8129-5eac9e4965b8 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3566,7 +3643,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
@@ -3591,12 +3668,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-contentf84baea8-f9d2-4634-b869-8ccb636bedce > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3616,7 +3700,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
@@ -3641,12 +3725,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content7a1087a6-71e3-4232-b82e-5979137cf428 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3666,14 +3757,21 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"l-container--edge l-...\" data-lazy-bg-url=\"url(https://www.ucda...\" style=\"--layout-section-bg-...\">",
+                  "target": [
+                    ".u-space-pt--vast"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -3683,7 +3781,7 @@
           "target": [
             ".block-block-content7a1087a6-71e3-4232-b82e-5979137cf428 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -3691,12 +3789,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content6828a53b-5219-4584-9d0c-dc12e434c432 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3716,7 +3821,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
@@ -3741,12 +3846,19 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "49.5pt (66px)",
+                "fontSize": "51.8pt (69px)",
                 "fontWeight": "bold",
                 "messageKey": "shortTextContent",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<svg viewBox=\"0 0 31.83 31.83\" class=\"circle-ranking__line\" aria-hidden=\"true\" focusable=\"false\">",
+                  "target": [
+                    ".block-block-content89e52313-ff6b-4787-9dc8-8a159a2e1040 > .circle-ranking[data-component-id=\"sitefarm_one:circle-ranking\"] > .circle-ranking__wrapper > .circle-ranking__line[viewBox=\"0 0 31.83 31.83\"][focusable=\"false\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
               "message": "Element content is too short to determine if it is actual text content"
             }
@@ -3766,7 +3878,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "14.9pt (19.8px)",
+                "fontSize": "15.5pt (20.7px)",
                 "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
@@ -4625,7 +4737,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -4751,7 +4863,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],

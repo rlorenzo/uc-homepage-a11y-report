@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucmerced",
   "name": "UC Merced",
   "campus": "ucmerced",
@@ -9,7 +9,7 @@
   "category": "homepage",
   "url": "https://www.ucmerced.edu",
   "render_mode": "headed",
-  "element_count": 907,
+  "element_count": 908,
   "violations": [],
   "incomplete": [
     {
@@ -29,8 +29,33 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h4>The UC application is now open. Start exploring majors, scholarships, and what your future could look like at UC Merced.</h4>",
+          "target": [
+            "h4"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
         {
           "any": [
             {
@@ -171,6 +196,81 @@
                 "contrastRatio": 0,
                 "fontSize": "31.9pt (42.5px)",
                 "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>STUDENT LIFE</h2>",
+          "target": [
+            "#block-block-153 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UC Merced students have a once-in-a-lifetime chance to help create the student life experience for those who will follow. Check out how our students influence UC Merced below.</p>",
+          "target": [
+            "#block-block-153 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn--invert-gold hb__play\" href=\"/campus-life\">Learn More About Campus Life</a>",
+          "target": [
+            ".btn--invert-gold.hb__play[href$=\"campus-life\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "31.9pt (42.5px)",
+                "fontWeight": "normal",
                 "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
@@ -235,25 +335,12 @@
                 "contrastRatio": 0,
                 "fontSize": "31.9pt (42.5px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(1) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -263,7 +350,7 @@
           "target": [
             "#panel1 > .attend > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -273,25 +360,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(1) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -301,7 +375,7 @@
           "target": [
             "#panel1 > .panel-text"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -311,25 +385,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(1) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -339,7 +400,7 @@
           "target": [
             "#panel1 > .text-right:nth-child(3) > .text-link"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -349,25 +410,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(1) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -377,7 +425,7 @@
           "target": [
             ".text-right:nth-child(4) > .text-link"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -387,25 +435,12 @@
                 "contrastRatio": 0,
                 "fontSize": "31.9pt (42.5px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(2) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -415,7 +450,7 @@
           "target": [
             "#panel2 > .attend > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -425,25 +460,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(2) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -453,7 +475,7 @@
           "target": [
             "#panel2 > .panel-text"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -463,25 +485,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(2) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -491,7 +500,7 @@
           "target": [
             "#panel2 > .text-right > .text-link"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -501,25 +510,12 @@
                 "contrastRatio": 0,
                 "fontSize": "31.9pt (42.5px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(3) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -529,7 +525,7 @@
           "target": [
             "#panel3 > .attend > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -539,25 +535,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(3) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -567,7 +550,7 @@
           "target": [
             "#panel3 > .panel-text"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -577,25 +560,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(3) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -605,7 +575,7 @@
           "target": [
             "#panel3 > .text-right > .text-link"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -615,25 +585,12 @@
                 "contrastRatio": 0,
                 "fontSize": "31.9pt (42.5px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(4) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -643,7 +600,7 @@
           "target": [
             "#panel4 > .attend > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -653,25 +610,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "normal",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(4) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -681,7 +625,7 @@
           "target": [
             "#panel4 > .panel-text"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -691,25 +635,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
-                "messageKey": "bgImage",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"panel panel-primary\">",
-                  "target": [
-                    ".clearfix.col-md-6:nth-child(4) > .panel-primary.panel"
-                  ]
-                },
-                {
-                  "html": "<section aria-label=\"Information Panels\" class=\"attendUCM attendUCM-attend attend-module\" data-module=\"callout-content-four\"></section>",
-                  "target": [
-                    ".attend-module"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background image"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -719,7 +650,82 @@
           "target": [
             "a[href$=\"events.ucmerced.edu/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "31.9pt (42.5px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>EXPLORE UC MERCED</h2>",
+          "target": [
+            "#block-block-144 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UC Merced is a community bound by student success, exceptional research, dynamic teaching and commitment to diversity. In this publication, discover current research advancements, delve into student experiences and explore the grounds with an interactive campus map.</p>",
+          "target": [
+            "#block-block-144 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn--invert-gold hb__play\" href=\"https://uc-merced.foleon.com/public-relations/explore-ucm/cover/\" rel=\"nnoopener\" target=\"_blank\">Read Online</a>",
+          "target": [
+            "a[rel=\"nnoopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -771,7 +777,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -832,7 +838,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -842,12 +848,12 @@
                 "contrastRatio": 0,
                 "fontSize": "24.4pt (32.5px)",
                 "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
+                "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
@@ -857,7 +863,157 @@
           "target": [
             ".covid > h3"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h4>The UC application is now open. Start exploring majors, scholarships, and what your future could look like at UC Merced.</h4>",
+          "target": [
+            "h4"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn--invert-gold hb__play\" href=\"https://apply.universityofcalifornia.edu/my-application/login\" target=\"_blank\" rel=\"noopener\">Start Your Application</a>",
+          "target": [
+            ".sb-col > .btn--invert-gold.hb__play[target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://news.ucmerced.edu//news/2026/record-enrollment-signals-growing-demand-uc-merced\">Record Enrollment Signals Growing Demand for UC Merced</a>",
+          "target": [
+            ".view-display-id-block_16 > .view-content > .views-row.views-row-1.views-row-odd > .views-field-title.views-field > .newsTitle > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://news.ucmerced.edu//news/2026/big-smiles-big-collection-new-bobcats-scholars-bridge-crossing\">Big Smiles in Big Collection of New Bobcats at Scholars Bridge Crossing</a>",
+          "target": [
+            ".view-display-id-block_17 > .view-content > .views-row.views-row-1.views-row-odd > .views-field-title.views-field > .newsTitle > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://news.ucmerced.edu//news/2026/school-social-sciences-humanities-and-arts-faculty-named-five-endowed-chairs\">School of Social Sciences, Humanities and Arts Faculty Named to Five Endowed Chairs</a>",
+          "target": [
+            ".view-display-id-block_18 > .view-content > .views-row.views-row-1.views-row-odd > .views-field-title.views-field > .newsTitle > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"http://news.ucmerced.edu//news/2026/uc-merced-celebrates-its-most-successful-fundraising-year\">UC Merced Celebrates Its Most Successful Fundraising Year</a>",
+          "target": [
+            ".view-display-id-block_19 > .view-content > .views-row.views-row-1.views-row-odd > .views-field-title.views-field > .newsTitle > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -997,6 +1153,81 @@
             ".content > .panelPadResearch.container > .text-indent > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "29.1pt (38.75px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>STUDENT LIFE</h2>",
+          "target": [
+            "#block-block-153 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UC Merced students have a once-in-a-lifetime chance to help create the student life experience for those who will follow. Check out how our students influence UC Merced below.</p>",
+          "target": [
+            "#block-block-153 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn--invert-gold hb__play\" href=\"/campus-life\">Learn More About Campus Life</a>",
+          "target": [
+            ".btn--invert-gold.hb__play[href$=\"campus-life\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
         {
           "any": [
@@ -1562,6 +1793,81 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
+                "fontSize": "29.1pt (38.75px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>EXPLORE UC MERCED</h2>",
+          "target": [
+            "#block-block-144 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>UC Merced is a community bound by student success, exceptional research, dynamic teaching and commitment to diversity. In this publication, discover current research advancements, delve into student experiences and explore the grounds with an interactive campus map.</p>",
+          "target": [
+            "#block-block-144 > .content > div > .container > .ucmRow.row > .col-md-7.col-lg-7.insideUCM-text > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn--invert-gold hb__play\" href=\"https://uc-merced.foleon.com/public-relations/explore-ucm/cover/\" rel=\"nnoopener\" target=\"_blank\">Read Online</a>",
+          "target": [
+            "a[rel=\"nnoopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
                 "fontSize": "12.8pt (17px)",
                 "fontWeight": "bold",
                 "messageKey": "bgImage",
@@ -1593,6 +1899,631 @@
             "strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Additional Links</h2>",
+          "target": [
+            "nav[aria-label=\"Additional Links\"] > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced Home Page\">UC Merced</a>",
+          "target": [
+            "a[href$=\"www.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://news.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced News\">Newsroom</a>",
+          "target": [
+            "a[title=\"UC Merced News\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucmerced.edu/executive-leadership\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced Leadership\">Executive Leadership</a>",
+          "target": [
+            "a[title=\"UC Merced Leadership\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://library.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced Library\">University Library</a>",
+          "target": [
+            "a[href$=\"library.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://emergency.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Emergency Preparedness\">Emergency Preparedness</a>",
+          "target": [
+            "a[href$=\"emergency.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Academics</h2>",
+          "target": [
+            "nav[aria-label=\"Academics\"] > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/school-of-engineering\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced School of Engineering\">School of Engineering</a>",
+          "target": [
+            "a[href$=\"school-of-engineering\"][target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/school-of-natural-sciences\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced School of Natural Sciences\">School of Natural Sciences</a>",
+          "target": [
+            "a[href=\"/school-of-natural-sciences\"][target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/school-of-social-sciences-humanities-and-arts\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced School of Social Sciences, Humanities, and Arts\">School of Social Sciences, Humanities &amp; Arts</a>",
+          "target": [
+            "nav[aria-label=\"Academics\"] > .c-links.c-theme-ul > li:nth-child(3) > a[target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://mist.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Ernest and Julio Gallo Management Program\">Ernest and Julio Gallo Management Program</a>",
+          "target": [
+            "a[href$=\"mist.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://graduatedivision.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Division of Graduate Education\">Division of Graduate Education</a>",
+          "target": [
+            "a[title=\"Division of Graduate Education\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://ue.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Graduate Division\">Division of Undergraduate Education</a>",
+          "target": [
+            "a[href$=\"ue.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Administration</h2>",
+          "target": [
+            "nav[aria-label=\"administration\"] > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://chancellor.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Office of the Chancellor\">Office of the Chancellor</a>",
+          "target": [
+            "a[title=\"Office of the Chancellor\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://provostevc.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Office of Executive Vice Chancellor and Provost \">Office of Executive Vice Chancellor and Provost </a>",
+          "target": [
+            "nav[aria-label=\"administration\"] > .c-links.c-theme-ul > li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://diversity.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Office of Equity, Diversity and Inclusion\">Equity, Justice and Inclusive Excellence</a>",
+          "target": [
+            "a[href$=\"diversity.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://externalrelations.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"External Relations\">External Relations</a>",
+          "target": [
+            "a[title=\"External Relations\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://dfa.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"finance and administration\">Finance &amp; Administration</a>",
+          "target": [
+            "a[href$=\"dfa.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://popd.ucmerced.edu/\" rel=\"noopener\" target=\"_blank\">Physical Operations, Planning and Development</a>",
+          "target": [
+            "a[href$=\"popd.ucmerced.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://studentaffairs.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced Student Affairs\">Student Affairs</a>",
+          "target": [
+            "a[title=\"UC Merced Student Affairs\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://research.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"Office of Research and Economic Development\">Research and Economic Development</a>",
+          "target": [
+            "a[href$=\"research.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://it.ucmerced.edu\" rel=\"noopener\" target=\"_blank\" title=\"UC Merced Office of Information Technology\">Office of Information Technology</a>",
+          "target": [
+            "a[href$=\"it.ucmerced.edu\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>University of California, Merced</h2>",
+          "target": [
+            ".fColumn > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>5200 North Lake Rd.<br>Merced, CA 95343<br>Telephone: (209) 228-4400</p>",
+          "target": [
+            ".fColumn > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     },
@@ -1606,7 +2537,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

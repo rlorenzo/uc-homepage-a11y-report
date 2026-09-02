@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import { AxeBuilder } from "@axe-core/playwright";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { updateHistory } from "./update-history.mjs";
 import { RULE_DESCRIPTIONS } from "../site/assets/data/constants.js";
@@ -54,11 +55,14 @@ const runsDir = join(ROOT, "data", "runs", month);
 await mkdir(runsDir, { recursive: true });
 
 // Resolve the axe-core version so we can record it alongside every result.
-// The version lives in the axe-core package that @axe-core/playwright depends on.
-const axePkg = JSON.parse(
-  await readFile(join(ROOT, "node_modules", "axe-core", "package.json"), "utf-8"),
-);
-const axeVersion = axePkg.version;
+// Resolve it THROUGH @axe-core/playwright rather than reading
+// node_modules/axe-core directly. pa11y-ci pulls its own axe-core, and when the
+// two want different versions npm hoists one copy to the top level and nests
+// the other — so the top-level copy can be a version the scan never ran.
+// axe_version is the field that explains trend discontinuities, so a wrong
+// value there is worse than no value.
+const axeRequire = createRequire(createRequire(import.meta.url).resolve("@axe-core/playwright"));
+const axeVersion = axeRequire("axe-core/package.json").version;
 
 console.log(`Starting scan for ${month} (axe-core ${axeVersion})`);
 console.log(`Scanning ${sites.length} sites\n`);

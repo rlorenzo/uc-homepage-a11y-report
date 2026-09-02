@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsd-jacobs",
   "name": "Jacobs School of Engineering",
   "campus": "ucsd",
@@ -9,7 +9,7 @@
   "category": "engineering",
   "url": "https://jacobsschool.ucsd.edu",
   "render_mode": "headless",
-  "element_count": 628,
+  "element_count": 618,
   "violations": [
     {
       "id": "color-contrast-enhanced",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -141,9 +141,9 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/from-wearable-sensors-to-printed-placentas\" class=\"btn btn_gold\">Read More</a>",
+                  "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\" class=\"btn btn_gold\">Read More</a>",
                   "target": [
-                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
+                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
                   ]
                 }
               ],
@@ -154,9 +154,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/from-wearable-sensors-to-printed-placentas\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
+            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #484949, background color: #ffcd00, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -794,7 +794,7 @@
       ],
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -840,55 +840,6 @@
           "none": [],
           "impact": "critical",
           "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/recyclable-supercap-TEASER.jpg\">",
-          "target": [
-            ".carousel-item:nth-child(2) > .row > .col-lg-8.mb-4 > a > img"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element does not have an alt attribute"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has no title attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "critical",
-          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/260303MaternalHealthDSC_7918ErikJepsenUCSanDiego-teaser-1200x628.png\">",
           "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a > img"
           ],
@@ -1162,7 +1113,7 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1210,56 +1161,6 @@
           "impact": "serious",
           "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/recyclable-supercap-TEASER.jpg\"></a>",
           "target": [
-            ".carousel-item:nth-child(2) > .row > .col-lg-8.mb-4 > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/from-wearable-sensors-to-printed-placentas\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/260303MaternalHealthDSC_7918ErikJepsenUCSanDiego-teaser-1200x628.png\"></a>",
-          "target": [
             ".active.carousel-item > .row > .col-lg-8.mb-4 > a"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
@@ -1285,7 +1186,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1448,12 +1349,12 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "elmPartiallyObscuring",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
             }
           ],
           "all": [],
@@ -1463,7 +1364,7 @@
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .mb-1:nth-child(2) > a[target=\"_blank\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         },
         {
           "any": [
@@ -1512,81 +1413,6 @@
           "html": "<p class=\"mb-0\">A multidisciplinary team of researchers including computer scientists at UC San Diego has been award...</p>",
           "target": [
             ".phone_news_item.mb-4:nth-child(2) > .mb-0:nth-child(4)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/story/nsf-funds-new-center-to-design-reliable-self-correcting-quantum-computers\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
-          "target": [
-            ".phone_news_item.mb-4:nth-child(2) > .text-right.mb-0 > a[target=\"_blank\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://today.ucsd.edu/area-story/zeinab-jahed-receives-1.9m-nih-mira-grant-to-study-how-cells-sense-and-repair-physical-damage\" target=\"_blank\">Zeinab Jahed Receives $1.9M NIH MIRA Grant to Study How Cells Sense and Repair Physical Damage</a>",
-          "target": [
-            ".phone_news_item.mb-4:nth-child(3) > .mb-1:nth-child(2) > a[target=\"_blank\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h6 class=\"publish_date mb-1\">August 26, 2026</h6>",
-          "target": [
-            ".phone_news_item.mb-4:nth-child(3) > h6"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -1858,7 +1684,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1916,12 +1742,6 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"https://today.ucsd.edu/story/from-wearable-sensors-to-printed-placentas\" class=\"btn btn_gold\">Read More</a>",
-                  "target": [
-                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
-                  ]
-                },
-                {
                   "html": "<a href=\"https://today.ucsd.edu/story/nsf-funds-new-center-to-design-reliable-self-correcting-quantum-computers\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
                     ".phone_news_item.mb-4:nth-child(2) > .text-right.mb-0 > a[target=\"_blank\"]"
@@ -1960,7 +1780,7 @@
           "impact": "minor",
           "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".carousel-item:nth-child(2) > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
+            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }
@@ -1987,7 +1807,7 @@
       ],
       "description": "Ensure buttons have discernible text",
       "help": "Buttons must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2065,7 +1885,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2803,8 +2623,57 @@
       ],
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/Roxanne Ehrig.jpg\">",
+          "target": [
+            ".carousel-item:nth-child(1) > .row > .col-lg-8.mb-4 > a > img"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
         {
           "any": [
             {
@@ -3122,8 +2991,58 @@
       ],
       "description": "Ensure links have discernible text",
       "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://ucsdtritons.com/news/2026/8/21/engineering-a-future-with-purpose.aspx\"><img src=\"https://soeapp.ucsd.edu/tools/uploads/news/2026/Roxanne Ehrig.jpg\"></a>",
+          "target": [
+            ".carousel-item:nth-child(1) > .row > .col-lg-8.mb-4 > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
         {
           "any": [
             {
@@ -3195,7 +3114,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3560,12 +3479,19 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"phone_area\">",
+                  "target": [
+                    ".phone_area"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -3575,7 +3501,7 @@
           "target": [
             "h4"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -3585,12 +3511,25 @@
                 "contrastRatio": 0,
                 "fontSize": "36.0pt (48px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"slice_content_container  slice_full_text\">",
+                  "target": [
+                    ".slice_fill_content > .slice_full_text.slice_content_container"
+                  ]
+                },
+                {
+                  "html": "<div class=\"slice_background_image\" style=\"background-image:url('/sites/default/files/2023-08/20230-headr-Yel_grit_blu_pink.png')\"></div>",
+                  "target": [
+                    ".slice_fill_content > .slice_background_image_container > .no-gutters.row > .bg_cover.bg_y_position_center.col-12 > .slice_background_image"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -3600,7 +3539,7 @@
           "target": [
             ".col-sm-6 > h2"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -3880,7 +3819,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -3928,15 +3867,21 @@
                 "name": "read more",
                 "urlProps": {
                   "protocol": "http:",
-                  "hostname": "today.ucsd.edu",
+                  "hostname": "ucsdtritons.com",
                   "port": "",
-                  "pathname": "/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled/",
+                  "pathname": "/news/2026/8/21/",
                   "search": {},
                   "hash": "",
-                  "filename": ""
+                  "filename": "engineering-a-future-with-purpose.aspx"
                 }
               },
               "relatedNodes": [
+                {
+                  "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\" class=\"btn btn_gold\">Read More</a>",
+                  "target": [
+                    ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
+                  ]
+                },
                 {
                   "html": "<a href=\"https://today.ucsd.edu/story/nsf-funds-new-center-to-design-reliable-self-correcting-quantum-computers\" target=\"_blank\"><i class=\"icon-angle-double-right\"></i>Read More</a>",
                   "target": [
@@ -3974,9 +3919,9 @@
           ],
           "none": [],
           "impact": "minor",
-          "html": "<a href=\"https://today.ucsd.edu/story/this-thin-device-can-store-energy-strengthen-structures-and-be-recycled\" class=\"btn btn_gold\">Read More</a>",
+          "html": "<a href=\"https://ucsdtritons.com/news/2026/8/21/engineering-a-future-with-purpose.aspx\" class=\"btn btn_gold\">Read More</a>",
           "target": [
-            ".active.carousel-item > .row > .col-lg-4 > p:nth-child(5) > .btn_gold.btn"
+            ".carousel-item:nth-child(1) > .row > .col-lg-4 > p:nth-child(3) > .btn_gold.btn"
           ],
           "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
         }

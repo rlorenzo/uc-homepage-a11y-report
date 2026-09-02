@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucmerced-registrar",
   "name": "UC Merced Office of the Registrar",
   "campus": "ucmerced",
@@ -9,7 +9,7 @@
   "category": "registrar",
   "url": "https://registrar.ucmerced.edu",
   "render_mode": "headed",
-  "element_count": 714,
+  "element_count": 715,
   "violations": [],
   "incomplete": [
     {
@@ -26,7 +26,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -37,22 +37,22 @@
               "data": {
                 "role": null,
                 "nodeName": "div",
-                "messageKey": "noRoleSingular",
+                "messageKey": "visibleLabelSingular",
                 "prohibited": [
                   "aria-labelledby"
                 ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+              "message": "aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
             }
           ],
           "impact": "serious",
           "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
           "target": [
-            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2"
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1"
           ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
         },
         {
           "any": [],
@@ -63,22 +63,22 @@
               "data": {
                 "role": null,
                 "nodeName": "div",
-                "messageKey": "noRoleSingular",
+                "messageKey": "unresolvedLabel",
                 "prohibited": [
                   "aria-labelledby"
                 ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+              "message": "aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
             }
           ],
           "impact": "serious",
           "html": "<div aria-labelledby=\"slideshow image\">",
           "target": [
-            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
           ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
         }
       ]
     },
@@ -96,7 +96,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -116,7 +116,7 @@
           "impact": "critical",
           "html": "<div aria-labelledby=\"slideshow image\">",
           "target": [
-            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_2 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
           ],
           "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
         }
@@ -132,7 +132,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -248,7 +248,97 @@
       ]
     }
   ],
-  "mobile_violations": [],
+  "mobile_violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#e8e9e9",
+                "bgColor": "#f3f3f3",
+                "contrastRatio": 1.09,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-title\">        <span class=\"field-content -field_panoramic_slideshow_colors\">Course Registration</span>  </div>",
+                  "target": [
+                    "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-title.views-field"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.09 (foreground color: #e8e9e9, background color: #f3f3f3, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content -field_panoramic_slideshow_colors\">Course Registration</span>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-title.views-field > .-field_panoramic_slideshow_colors.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #e8e9e9, background color: #f3f3f3, font size: 18.8pt (25px), font weight: normal). Expected contrast ratio of 3:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#e8e9e9",
+                "bgColor": "#f3f3f3",
+                "contrastRatio": 1.09,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"views-field views-field-field-panoramic-slideshow-text\">        <div class=\"field-content -field_panoramic_slideshow_colors\">Are you ready? Check out the Registration Help page now to make sure you're prepared.&nbsp;\n</div>  </div>",
+                  "target": [
+                    "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-text.views-field"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.09 (foreground color: #e8e9e9, background color: #f3f3f3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content -field_panoramic_slideshow_colors\">Are you ready? Check out the Registration Help page now to make sure you're prepared.&nbsp;\n</div>",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-text.views-field > .-field_panoramic_slideshow_colors.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #e8e9e9, background color: #f3f3f3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
   "mobile_incomplete": [
     {
       "id": "aria-prohibited-attr",
@@ -264,7 +354,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -275,22 +365,22 @@
               "data": {
                 "role": null,
                 "nodeName": "div",
-                "messageKey": "noRoleSingular",
+                "messageKey": "visibleLabelSingular",
                 "prohibited": [
                   "aria-labelledby"
                 ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+              "message": "aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
             }
           ],
           "impact": "serious",
           "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
           "target": [
-            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1"
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_0"
           ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
         },
         {
           "any": [],
@@ -301,14 +391,66 @@
               "data": {
                 "role": null,
                 "nodeName": "div",
-                "messageKey": "noRoleSingular",
+                "messageKey": "unresolvedLabel",
                 "prohibited": [
                   "aria-labelledby"
                 ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+              "message": "aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            ".views-row-first.views-slideshow-cycle-main-frame-row-item.views-row-0 > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "visibleLabelSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div id=\"views_slideshow_cycl...\" class=\"views-slideshow-cycl...\" aria-labelledby=\"views_slideshow_page...\" style=\"position: absolute; ...\">",
+          "target": [
+            "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, but the elements referenced by aria-labelledby are visible in the page. Verify the label is not necessary."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "unresolvedLabel",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
             }
           ],
           "impact": "serious",
@@ -316,7 +458,7 @@
           "target": [
             "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
           ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported, and does not reference an existing element. Verify the label is not necessary."
         }
       ]
     },
@@ -334,8 +476,30 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "noId",
+                "needsReview": "aria-labelledby=\"slideshow image\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div aria-labelledby=\"slideshow image\">",
+          "target": [
+            ".views-row-first.views-slideshow-cycle-main-frame-row-item.views-row-0 > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+        },
         {
           "any": [],
           "all": [
@@ -357,6 +521,77 @@
             "#views_slideshow_cycle_div_panoramic_slideshow-block_1_1_1 > .views-slideshow-cycle-main-frame-row-item.views-row-0.views-row > .views-field-field-panoramic-slideshow-image.views-field > .field-content > div[aria-labelledby=\"slideshow image\"]"
           ],
           "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-labelledby=\"slideshow image\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.8pt (25px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"field-content -field_panoramic_slideshow_colors\">Self Service Dashboard</span>",
+          "target": [
+            ".views-row-first.views-slideshow-cycle-main-frame-row-item.views-row-0 > .views-field-title.views-field > .-field_panoramic_slideshow_colors.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field-content -field_panoramic_slideshow_colors\">The way to view your student record and register for classes. The Self-Service Dashboard is here!\n</div>",
+          "target": [
+            ".views-row-first.views-slideshow-cycle-main-frame-row-item.views-row-0 > .views-field-field-panoramic-slideshow-text.views-field > .-field_panoramic_slideshow_colors.field-content"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     }
