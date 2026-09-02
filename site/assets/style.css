@@ -544,6 +544,18 @@ a.section-num:focus-visible {
   font-size: calc(var(--fs-stat) * 0.7);
 }
 
+/* Word-form stat values ("No change") have to fit the same span-3 card that
+   normally holds two or three glyphs, and .stat clips overflow. The binding
+   constraint is the narrow desktop card, not the viewport, so this sizes on
+   its own scale rather than off --fs-stat -- scaling with --fs-stat would
+   drop the word below body size on phones, where the card is full width and
+   has room to spare. */
+.stat-value.stat-value-word {
+  font-size: clamp(1.75rem, 2.2vw + 0.6rem, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
 .stat-unit {
   font-family: var(--font-body);
   font-size: var(--fs-small);
