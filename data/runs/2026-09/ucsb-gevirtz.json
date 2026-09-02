@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsb-gevirtz",
   "name": "Gevirtz Graduate School of Education",
   "campus": "ucsb",
@@ -25,7 +25,7 @@
       ],
       "description": "Ensure an element's role supports its ARIA attributes",
       "help": "Elements must only use supported ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -61,7 +61,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -146,7 +146,7 @@
       ],
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -191,7 +191,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/sites/default/files/images/people/yixiaodong.jpg\">",
+          "html": "<img src=\"/sites/default/files/images/people/mayrapuente.jpg\">",
           "target": [
             ".container > .image-container > img"
           ],
@@ -215,7 +215,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -284,7 +284,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -294,12 +294,25 @@
                 "contrastRatio": 0,
                 "fontSize": "27.0pt (36px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -309,7 +322,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -319,12 +332,25 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -334,7 +360,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -344,12 +370,25 @@
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -359,7 +398,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -369,12 +408,25 @@
                 "contrastRatio": 0,
                 "fontSize": "27.0pt (36px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -384,7 +436,7 @@
           "target": [
             ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -394,12 +446,25 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -409,7 +474,7 @@
           "target": [
             ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -418,6 +483,183 @@
               "data": {
                 "contrastRatio": 0,
                 "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers an M.A. and Ph.D. centered around three different research focus areas, along with two undergraduate programs.</div>",
+          "target": [
+            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">TEP</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Teacher Education Program</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a M.Ed. with an emphasis in Teaching and Credential Programs for elementary, secondary and special education teaching.</div>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>Hosford Clinic</h3>",
+          "target": [
+            ".field--item:nth-child(1) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -430,34 +672,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers an M.A. and Ph.D. centered around three different research focus areas, along with two undergraduate programs.</div>",
+          "html": "<p>The Hosford Counseling &amp; Psychological Services Clinic is a university-based community clinic that is designed to provide culturally sensitive, low-cost individual, couple, family, and group psychological treatment to the entire Santa Barbara community.</p>",
           "target": [
-            ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "27.0pt (36px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field field--name-field-title-title field--type-string field--label-hidden field--item\">TEP</div>",
-          "target": [
-            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
+            ".field--item:nth-child(1) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(2)"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -468,7 +685,7 @@
               "data": {
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
-                "fontWeight": "normal",
+                "fontWeight": "bold",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "3:1"
               },
@@ -480,9 +697,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"field field--name-field-title-subtitle field--type-string field--label-hidden field--item\">Teacher Education Program</div>",
+          "html": "<h3>Koegel Autism Center</h3>",
           "target": [
-            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
+            ".field--item:nth-child(2) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > h3"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -492,7 +709,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
+                "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -505,9 +722,59 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<div class=\"field field--name-field-tile-short-description field--type-string-long field--label-hidden field--item\">Offers a M.Ed. with an emphasis in Teaching and Credential Programs for elementary, secondary and special education teaching.</div>",
+          "html": "<p>The Koegel Autism Center--internationally recognized for its innovative autism research and clinical training—focuses on the development and implementation of strength-based, motivational interventions and supports for individuals and families affected by autism spectrum disorders.</p>",
           "target": [
-            ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
+            ".field--item:nth-child(2) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h3>McEnroe Reading &amp; Language Arts Clinic</h3>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > h3"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>",
+          "target": [
+            ".field--item:nth-child(3) > .paragraph--type--vertical-card.paragraph > .field--name-field-vertical-card-text.field--type-text-long.field > p:nth-child(2)"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         },
@@ -569,7 +836,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h3 class=\"name\">Yixiao Dong</h3>",
+          "html": "<h3 class=\"name\">Mayra Puente</h3>",
           "target": [
             ".name"
           ],
@@ -601,7 +868,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"bio\">Yixiao Dong is an assistant professor of quantitative methods in the policy, program evaluation, and research methods program in the...</p>",
+          "html": "<p class=\"bio\">Mayra Puente (ella/she)  is an assistant professor of higher education in the Department of Education. Her research focuses on higher...</p>",
           "target": [
             ".bio"
           ],
@@ -677,32 +944,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "33.0pt (44px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field field--name-field-quote-title field--type-string field--label-hidden field--item\">Innovate, Inspire, Imagine</div>",
-          "target": [
-            ".field--name-field-quote-title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "16.5pt (22px)",
+                "fontSize": "9.0pt (12px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -715,9 +957,59 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p>The Gevirtz School of Education will be a leader in addressing pressing social justice issues through interdisciplinary collaborations grounded in educational and applied psychological research, teaching, and service.</p>",
+          "html": "<span class=\"copyright\">Copyright © 2026 The Regents of the University of California. All Rights Reserved.</span>",
           "target": [
-            ".field--name-field-quote > p"
+            ".col-xs- > .copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/terms-of-use\" class=\"terms\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">Terms of Use</a>",
+          "target": [
+            ".terms[rel=\"nofollow noopener noreferrer\"][target=\"_blank\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+          "target": [
+            "a[href$=\"accessibility\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
@@ -733,7 +1025,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -799,7 +1091,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1053,7 +1345,7 @@
       ],
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1098,7 +1390,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/sites/default/files/images/people/yixiaodong.jpg\">",
+          "html": "<img src=\"/sites/default/files/images/people/mayrapuente.jpg\">",
           "target": [
             ".container > .image-container > img"
           ],
@@ -1122,7 +1414,7 @@
       ],
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
       "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1191,7 +1483,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1201,12 +1493,25 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1216,7 +1521,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1226,12 +1531,25 @@
                 "contrastRatio": 0,
                 "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1241,7 +1559,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1251,12 +1569,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ccsp-nlpa18-colorful-tile.jpg?itok=IU_EncBu\" width=\"640\" height=\"500\" alt=\"CCSP at NLPA\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"CCSP at NLPA\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1266,7 +1597,7 @@
           "target": [
             ".field--item:nth-child(1) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1276,12 +1607,25 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1291,7 +1635,7 @@
           "target": [
             ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1301,12 +1645,25 @@
                 "contrastRatio": 0,
                 "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1316,7 +1673,7 @@
           "target": [
             ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1326,12 +1683,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/ed-colorful-tile2.jpg?itok=7q0L13Lm\" width=\"640\" height=\"500\" alt=\"department of Education students global sustainability\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .field--name-field-colorful-tile-image.field--type-image.field > .img-responsive[width=\"640\"][height=\"500\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1341,7 +1711,7 @@
           "target": [
             ".field--item:nth-child(2) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1351,12 +1721,25 @@
                 "contrastRatio": 0,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1366,7 +1749,7 @@
           "target": [
             ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-title.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1376,12 +1759,25 @@
                 "contrastRatio": 0,
                 "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1391,7 +1787,7 @@
           "target": [
             ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-title-subtitle.field--type-string.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         },
         {
           "any": [
@@ -1401,12 +1797,25 @@
                 "contrastRatio": 0,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "imgNode",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"colorful-tile-text\">",
+                  "target": [
+                    ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text"
+                  ]
+                },
+                {
+                  "html": "<img loading=\"lazy\" src=\"/sites/default/files/styles/colorful_tile/public/images/student-and-kid.jpg?itok=B2YRRUTi\" width=\"640\" height=\"500\" alt=\"student with kid\" typeof=\"foaf:Image\" class=\"img-responsive\">",
+                  "target": [
+                    "img[alt=\"student with kid\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined because element contains an image node"
             }
           ],
           "all": [],
@@ -1416,57 +1825,7 @@
           "target": [
             ".field--item:nth-child(3) > .paragraph--type--colorful-tile.col-sm-12.paragraph--view-mode--default > .inner > .field-group-link.colorful-tile-link > .colorful-tile-text > .field--name-field-tile-short-description.field--type-string-long.field"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "19.5pt (26px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"field field--name-field-quote-title field--type-string field--label-hidden field--item\">Innovate, Inspire, Imagine</div>",
-          "target": [
-            ".field--name-field-quote-title"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<p>The Gevirtz School of Education will be a leader in addressing pressing social justice issues through interdisciplinary collaborations grounded in educational and applied psychological research, teaching, and service.</p>",
-          "target": [
-            ".field--name-field-quote > p"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
         }
       ]
     },
@@ -1480,7 +1839,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],

@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucla-library",
   "name": "UCLA Library",
   "campus": "ucla",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -814,7 +814,7 @@
                 "fgColor": "#ffffff",
                 "bgColor": "#0b6ab7",
                 "contrastRatio": 5.58,
-                "fontSize": "15.0pt (20px)",
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "messageKey": null,
                 "expectedContrastRatio": "7:1"
@@ -828,51 +828,17 @@
                 }
               ],
               "impact": "serious",
-              "message": "Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+              "message": "Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<input id=\"mce-EMAIL\" name=\"EMAIL\" type=\"email\" value=\"\" placeholder=\"email@ucla.edu\" class=\"input-email\" required=\"\" data-v-c26d29e0=\"\">",
+          "html": "<label for=\"mce-EMAIL\" class=\"label\" data-v-c26d29e0=\"\"> Email Address </label>",
           "target": [
-            "#mce-EMAIL"
+            "label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast-enhanced",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#0b6ab7",
-                "contrastRatio": 5.58,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "7:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"footer-primary\" data-v-c26d29e0=\"\" data-v-5fdcaa11=\"\">",
-                  "target": [
-                    ".footer-primary"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<button id=\"mc-embedded-subscribe\" class=\"button-submit\" name=\"subscribe\" type=\"submit\" data-v-c26d29e0=\"\">",
-          "target": [
-            "#mc-embedded-subscribe"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         },
         {
           "any": [
@@ -923,7 +889,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1161,7 +1127,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1771,7 +1737,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
+                "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -1784,9 +1750,34 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<label for=\"mce-EMAIL\" class=\"label\" data-v-c26d29e0=\"\"> Email Address </label>",
+          "html": "<input id=\"mce-EMAIL\" name=\"EMAIL\" type=\"email\" value=\"\" placeholder=\"email@ucla.edu\" class=\"input-email\" required=\"\" data-v-c26d29e0=\"\">",
           "target": [
-            "label"
+            "#mce-EMAIL"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button id=\"mc-embedded-subscribe\" class=\"button-submit\" name=\"subscribe\" type=\"submit\" data-v-c26d29e0=\"\">",
+          "target": [
+            "#mc-embedded-subscribe"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
@@ -1802,7 +1793,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1893,7 +1884,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2583,7 +2574,7 @@
                 "fgColor": "#ffffff",
                 "bgColor": "#0b6ab7",
                 "contrastRatio": 5.58,
-                "fontSize": "15.0pt (20px)",
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "messageKey": null,
                 "expectedContrastRatio": "7:1"
@@ -2597,17 +2588,17 @@
                 }
               ],
               "impact": "serious",
-              "message": "Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+              "message": "Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<input id=\"mce-EMAIL\" name=\"EMAIL\" type=\"email\" value=\"\" placeholder=\"email@ucla.edu\" class=\"input-email\" required=\"\" data-v-c26d29e0=\"\">",
+          "html": "<label for=\"mce-EMAIL\" class=\"label\" data-v-c26d29e0=\"\"> Email Address </label>",
           "target": [
-            "#mce-EMAIL"
+            "label"
           ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 7:1"
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.58 (foreground color: #ffffff, background color: #0b6ab7, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 7:1"
         },
         {
           "any": [
@@ -2692,7 +2683,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2930,7 +2921,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -3246,12 +3237,19 @@
                 "contrastRatio": 0,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "4.5:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"molecule row\" data-v-77633def=\"\"></div>",
+                  "target": [
+                    ".block-event.color-visit.brick > .row.molecule[data-v-77633def=\"\"]"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -3261,7 +3259,7 @@
           "target": [
             ".block-event.color-visit.brick > .row.text[data-v-77633def=\"\"] > span"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         },
         {
           "any": [
@@ -3771,7 +3769,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
+                "fontSize": "15.0pt (20px)",
                 "fontWeight": "normal",
                 "messageKey": "bgOverlap",
                 "expectedContrastRatio": "4.5:1"
@@ -3784,9 +3782,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<label for=\"mce-EMAIL\" class=\"label\" data-v-c26d29e0=\"\"> Email Address </label>",
+          "html": "<input id=\"mce-EMAIL\" name=\"EMAIL\" type=\"email\" value=\"\" placeholder=\"email@ucla.edu\" class=\"input-email\" required=\"\" data-v-c26d29e0=\"\">",
           "target": [
-            "label"
+            "#mce-EMAIL"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }

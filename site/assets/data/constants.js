@@ -133,6 +133,11 @@ export const RULE_DESCRIPTIONS = {
   "aria-input-field-name": "Input field has no accessible name via ARIA",
   "aria-required-children": "ARIA role is missing required child roles",
   "aria-required-parent": "Element with ARIA role lacks its required parent",
+  "aria-roles": "ARIA role is invalid or misspelled",
+  // axe-core 4.12 added aria-tab-name. No UC site currently has a role="tab"
+  // element, so it flags nothing today — described up front so the first site
+  // that adds tabs gets real copy instead of the generic fallback.
+  "aria-tab-name": "Tab has no accessible name",
   "aria-valid-attr": "ARIA attribute name is invalid or misspelled",
   "aria-valid-attr-value": "ARIA attribute has an invalid value",
   "color-contrast-enhanced": "Text doesn't meet AAA enhanced contrast (7:1)",

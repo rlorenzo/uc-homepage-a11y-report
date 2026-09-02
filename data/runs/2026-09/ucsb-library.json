@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsb-library",
   "name": "UC Santa Barbara Library",
   "campus": "ucsb",
@@ -10,94 +10,7 @@
   "url": "https://www.library.ucsb.edu",
   "render_mode": "headless",
   "element_count": 839,
-  "violations": [
-    {
-      "id": "target-size",
-      "impact": "serious",
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "wcag22aa",
-        "wcag258"
-      ],
-      "description": "Ensure touch targets have sufficient size and space",
-      "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "target-size",
-              "data": {
-                "messageKey": "partiallyObscured",
-                "minSize": 24,
-                "width": 104.9,
-                "height": 5
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-library-catalog\" class=\"hp-search-links-active\"><span style=\"padding-top: 52.875px;\">UC Library Search</span></a>",
-                  "target": [
-                    ".overlay > .hp-search-links-active[data-target=\"hp-search-library-catalog\"][href=\"#\"]"
-                  ]
-                },
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-melvyl\" data-line=\"63\" style=\"height: 116px;\"><span style=\"padding-top: 47.875px;\">Course Reserves</span></a>",
-                  "target": [
-                    "a[data-target=\"hp-search-melvyl\"]"
-                  ]
-                },
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-research-guides\" style=\"height: 116px;\"><span style=\"padding-top: 47.875px;\">Research Guides</span></a>",
-                  "target": [
-                    "a[data-target=\"hp-search-research-guides\"]"
-                  ]
-                },
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-alexandria\" style=\"height: 116px;\"><span style=\"padding-top: 25.875px;\">Alexandria Digital Research Library</span></a>",
-                  "target": [
-                    "a[data-target=\"hp-search-alexandria\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Target has insufficient size because it is partially obscured (smallest space is 104.9px by 5px, should be at least 24px by 24px)"
-            },
-            {
-              "id": "target-offset",
-              "data": {
-                "closestOffset": 5,
-                "minOffset": 24
-              },
-              "relatedNodes": [
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-library-catalog\" class=\"hp-search-links-active\"><span style=\"padding-top: 52.875px;\">UC Library Search</span></a>",
-                  "target": [
-                    ".overlay > .hp-search-links-active[data-target=\"hp-search-library-catalog\"][href=\"#\"]"
-                  ]
-                },
-                {
-                  "html": "<a href=\"#\" data-target=\"hp-search-research-guides\" style=\"height: 116px;\"><span style=\"padding-top: 47.875px;\">Research Guides</span></a>",
-                  "target": [
-                    "a[data-target=\"hp-search-research-guides\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 5px instead of at least 24px."
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"#\" data-target=\"hp-search-library-catalog\" class=\"hp-search-links-active\" style=\"height: 116px;\"><span style=\"padding-top: 47.875px;\">UC Library Search</span></a>",
-          "target": [
-            "li:nth-child(1) > .hp-search-links-active[data-target=\"hp-search-library-catalog\"][href=\"#\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 104.9px by 5px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 5px instead of at least 24px."
-        }
-      ]
-    }
-  ],
+  "violations": [],
   "incomplete": [
     {
       "id": "aria-prohibited-attr",
@@ -113,7 +26,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -157,7 +70,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -238,7 +151,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -2925,7 +2838,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -5608,7 +5521,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -5625,7 +5538,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<span class=\"select2-selection select2-selection--single\" role=\"combobox\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\" aria-labelledby=\"select2-hp-mobile-list-ql-container\">",
+                  "html": "<span class=\"select2-selection select2-selection--single\" role=\"combobox\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\" aria-labelledby=\"select2-hp-mobile-list-k7-container\">",
                   "target": [
                     ".hp-mobile-select > .select2.select2-container.select2-container--default > .selection > .select2-selection.select2-selection--single[role=\"combobox\"]"
                   ]
@@ -5638,9 +5551,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span class=\"select2-selection__rendered\" id=\"select2-hp-mobile-list-ql-container\" title=\"UC Library Search\">UC Library Search</span>",
+          "html": "<span class=\"select2-selection__rendered\" id=\"select2-hp-mobile-list-k7-container\" title=\"UC Library Search\">UC Library Search</span>",
           "target": [
-            "#select2-hp-mobile-list-ql-container"
+            "#select2-hp-mobile-list-k7-container"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.55 (foreground color: #444444, background color: #ffce34, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
         },
@@ -5696,7 +5609,7 @@
       ],
       "description": "Ensure ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -5740,7 +5653,7 @@
       ],
       "description": "Ensure all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -5758,9 +5671,9 @@
           ],
           "none": [],
           "impact": "critical",
-          "html": "<a href=\"#\" class=\"menu__link menu__link header-menu-open-button\" id=\"accessible-megamenu-1788284865322-9\" aria-controls=\"kwall-slide-in-nav-menu\" aria-haspopup=\"true\" aria-label=\"Search and menu collapsed\">Slide Menu</a>",
+          "html": "<a href=\"#\" class=\"menu__link menu__link header-menu-open-button\" id=\"accessible-megamenu-1788298244547-9\" aria-controls=\"kwall-slide-in-nav-menu\" aria-haspopup=\"true\" aria-label=\"Search and menu collapsed\">Slide Menu</a>",
           "target": [
-            "#accessible-megamenu-1788284865322-9"
+            "#accessible-megamenu-1788298244547-9"
           ],
           "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"kwall-slide-in-nav-menu\""
         },
@@ -5799,7 +5712,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -5862,7 +5775,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [

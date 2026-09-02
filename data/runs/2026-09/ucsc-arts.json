@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "scanned_at": "2026-09-01T17:39:54.243Z",
-  "axe_version": "4.11.4",
+  "scanned_at": "2026-09-01T21:24:28.357Z",
+  "axe_version": "4.13.0",
   "site": "ucsc-arts",
   "name": "UC Santa Cruz The Arts",
   "campus": "ucsc",
@@ -22,7 +22,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -138,7 +138,7 @@
       ],
       "description": "Ensure touch targets have sufficient size and space",
       "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
       "nodes": [
         {
           "any": [
@@ -146,12 +146,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 42,
+                "width": 42.5,
                 "height": 19
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (42px by 19px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (42.5px by 19px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -178,7 +178,7 @@
           "target": [
             "a[data-id=\"301\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (42px by 19px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (42.5px by 19px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
         },
         {
           "any": [
@@ -186,12 +186,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 41,
+                "width": 42,
                 "height": 19
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (41px by 19px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (42px by 19px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -218,7 +218,7 @@
           "target": [
             "a[data-id=\"311\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (41px by 19px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (42px by 19px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
         }
       ]
     }
@@ -241,7 +241,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -411,12 +411,19 @@
                 "contrastRatio": 0,
                 "fontSize": "58.0pt (77.3776px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"wp-block-heading ucs...\" style=\"background:linear-gr...\">",
+                  "target": [
+                    ".ucsc__homepage-hero-title"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -426,57 +433,7 @@
           "target": [
             ".ucsc__homepage-hero-title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-base-font-size has-custom-font-size wp-element-button\" href=\"https://arts.ucsc.edu/about/\" style=\"border-style:none;border-width:0px;font-style:normal;font-weight:500\">About Arts Division</a>",
-          "target": [
-            ".has-custom-font-size.wp-block-button__link[href$=\"about/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-base-font-size has-custom-font-size wp-element-button\" href=\"https://arts.ucsc.edu/news-events/\" style=\"border-style:none;border-width:0px;font-style:normal;font-weight:500\">View Upcoming Events</a>",
-          "target": [
-            ".wp-block-button.is-style-ucsc-white:nth-child(2) > .has-custom-font-size.wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -806,12 +763,25 @@
                 "contrastRatio": 0,
                 "fontSize": "34.1pt (45.408px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<div class=\"wp-block-cover__image-background wp-image-8073 has-parallax\" style=\"background-position:50% 50%;background-image:url(https://arts.ucsc.edu/files/2025/03/1-Event-2.png)\"></div>",
+                  "target": [
+                    ".wp-image-8073"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -821,32 +791,7 @@
           "target": [
             ".has-six-font-size.has-text-align-center.wp-block-heading"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "11.8pt (15.7808px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://arts.ucsc.edu/arts-division-event-highlights/\">See Photos from Past Events</a>",
-          "target": [
-            ".wp-container-core-buttons-is-layout-a817ae17 > .wp-block-button.is-style-ucsc-white > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         }
       ]
     },
@@ -860,7 +805,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1079,7 +1024,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1120,7 +1065,7 @@
       ],
       "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
       "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -1247,7 +1192,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
       "help": "Elements must meet enhanced color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast-enhanced?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1363,7 +1308,7 @@
       ],
       "description": "Ensure touch targets have sufficient size and space",
       "help": "All touch targets must be 24px large, or leave sufficient space",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1371,12 +1316,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 39,
+                "width": 38.5,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (39px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (38.5px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -1403,7 +1348,7 @@
           "target": [
             "a[data-id=\"301\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (39px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (38.5px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
         },
         {
           "any": [
@@ -1411,12 +1356,12 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 40,
+                "width": 38.1,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (40px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (38.1px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
@@ -1443,7 +1388,7 @@
           "target": [
             "a[data-id=\"311\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (40px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (38.1px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.8px instead of at least 24px."
         },
         {
           "any": [
@@ -1451,17 +1396,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 95,
+                "width": 93.4,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (95px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (93.4px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 23.4,
+                "closestOffset": 22.6,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1473,7 +1418,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1483,7 +1428,7 @@
           "target": [
             "a[data-id=\"1887\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (95px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (93.4px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
         },
         {
           "any": [
@@ -1491,17 +1436,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 75,
+                "width": 75.1,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (75px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (75.1px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 23.4,
+                "closestOffset": 22.6,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1519,7 +1464,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1529,7 +1474,7 @@
           "target": [
             "a[data-id=\"10095\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (75px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (75.1px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
         },
         {
           "any": [
@@ -1537,17 +1482,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 54,
+                "width": 54.6,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (54px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (54.6px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 22.6,
+                "closestOffset": 21.6,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1565,7 +1510,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1575,7 +1520,7 @@
           "target": [
             "a[data-id=\"1513\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (54px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (54.6px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
         },
         {
           "any": [
@@ -1583,17 +1528,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 72,
+                "width": 70.2,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (72px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (70.2px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 22.6,
+                "closestOffset": 21.6,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1605,7 +1550,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1615,7 +1560,7 @@
           "target": [
             "a[href$=\"contact/\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (72px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.6px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (70.2px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
         },
         {
           "any": [
@@ -1623,17 +1568,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 144,
+                "width": 140.2,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (144px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (140.2px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 21.4,
+                "closestOffset": 22.4,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1645,7 +1590,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.4px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.4px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1655,7 +1600,7 @@
           "target": [
             "a[data-id=\"http://creative.ucsc.edu\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (144px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (140.2px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.4px instead of at least 24px."
         },
         {
           "any": [
@@ -1663,17 +1608,17 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
-                "width": 159,
+                "width": 157.9,
                 "height": 16
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Target has insufficient size (159px by 16px, should be at least 24px by 24px)"
+              "message": "Target has insufficient size (157.9px by 16px, should be at least 24px by 24px)"
             },
             {
               "id": "target-offset",
               "data": {
-                "closestOffset": 21.4,
+                "closestOffset": 22.4,
                 "minOffset": 24
               },
               "relatedNodes": [
@@ -1685,7 +1630,7 @@
                 }
               ],
               "impact": "serious",
-              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.4px instead of at least 24px."
+              "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.4px instead of at least 24px."
             }
           ],
           "all": [],
@@ -1695,7 +1640,7 @@
           "target": [
             "li:nth-child(3) > a[href$=\"danm.ucsc.edu\"][data-id=\"https://danm.ucsc.edu\"][data-type=\"link\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Target has insufficient size (159px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.4px instead of at least 24px."
+          "failureSummary": "Fix any of the following:\n  Target has insufficient size (157.9px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.4px instead of at least 24px."
         }
       ]
     }
@@ -1718,7 +1663,7 @@
       ],
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
       "nodes": [
         {
           "any": [
@@ -1888,12 +1833,19 @@
                 "contrastRatio": 0,
                 "fontSize": "32.1pt (42.8396px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"wp-block-heading ucs...\" style=\"background:linear-gr...\">",
+                  "target": [
+                    ".ucsc__homepage-hero-title"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
@@ -1903,57 +1855,7 @@
           "target": [
             ".ucsc__homepage-hero-title"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-base-font-size has-custom-font-size wp-element-button\" href=\"https://arts.ucsc.edu/about/\" style=\"border-style:none;border-width:0px;font-style:normal;font-weight:500\">About Arts Division</a>",
-          "target": [
-            ".has-custom-font-size.wp-block-button__link[href$=\"about/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link has-base-font-size has-custom-font-size wp-element-button\" href=\"https://arts.ucsc.edu/news-events/\" style=\"border-style:none;border-width:0px;font-style:normal;font-weight:500\">View Upcoming Events</a>",
-          "target": [
-            ".wp-block-button.is-style-ucsc-white:nth-child(2) > .has-custom-font-size.wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
         {
           "any": [
@@ -2283,12 +2185,25 @@
                 "contrastRatio": 0,
                 "fontSize": "22.2pt (29.646px)",
                 "fontWeight": "bold",
-                "messageKey": "bgOverlap",
+                "messageKey": "bgImage",
                 "expectedContrastRatio": "3:1"
               },
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<span aria-hidden=\"true\" class=\"wp-block-cover__background has-black-background-color has-background-dim-40 has-background-dim\"></span>",
+                  "target": [
+                    ".has-black-background-color"
+                  ]
+                },
+                {
+                  "html": "<div class=\"wp-block-cover__image-background wp-image-8073 has-parallax\" style=\"background-position:50% 50%;background-image:url(https://arts.ucsc.edu/files/2025/03/1-Event-2.png)\"></div>",
+                  "target": [
+                    ".wp-image-8073"
+                  ]
+                }
+              ],
               "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
+              "message": "Element's background color could not be determined due to a background image"
             }
           ],
           "all": [],
@@ -2298,32 +2213,7 @@
           "target": [
             ".has-six-font-size.has-text-align-center.wp-block-heading"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "10.7pt (14.3005px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a class=\"wp-block-button__link wp-element-button\" href=\"https://arts.ucsc.edu/arts-division-event-highlights/\">See Photos from Past Events</a>",
-          "target": [
-            ".wp-container-core-buttons-is-layout-a817ae17 > .wp-block-button.is-style-ucsc-white > .wp-block-button__link.wp-element-button"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
         }
       ]
     },
@@ -2337,7 +2227,7 @@
       ],
       "description": "Ensure that links with the same accessible name serve a similar purpose",
       "help": "Links with the same name must have a similar purpose",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/identical-links-same-purpose?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
       "nodes": [
         {
           "any": [],
@@ -2556,7 +2446,7 @@
       ],
       "description": "Ensure <video> elements have captions",
       "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=playwright",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=playwright",
       "nodes": [
         {
           "any": [],
