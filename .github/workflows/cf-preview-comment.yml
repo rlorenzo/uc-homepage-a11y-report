@@ -55,7 +55,13 @@ jobs:
           if [ -n "${PR_FROM_EVENT}" ]; then
             pr="${PR_FROM_EVENT}"
           else
-            pr=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+            read -r pr head_repo < <(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" \
+              --jq '.[0] // empty | "\(.number) \(.head.repo.full_name)"') || true
+            # Same fork guard the pull_request trigger has in the job `if:`.
+            if [ -n "$pr" ] && [ "$head_repo" != "$GITHUB_REPOSITORY" ]; then
+              echo "PR #${pr} comes from ${head_repo}, not this repo; skipping."
+              exit 0
+            fi
           fi
           if [ -z "$pr" ]; then
             echo "No PR for commit ${SHA}; nothing to comment on."
