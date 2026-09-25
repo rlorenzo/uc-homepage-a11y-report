@@ -7,44 +7,36 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  scan-and-deploy:
+  # Runs npm, Playwright and a real browser against third-party sites, so it
+  # only gets a read-only token. Results and the Pages bundle are handed to
+  # `publish` as artifacts; nothing here can push to main or deploy.
+  scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     # The full fleet (183 sites, see scan/sites.json) at concurrency 5 runs
     # ~10-15 min; this ceiling stops a pathological run (hung browser,
     # bot-gated site) from burning CI minutes while still leaving headroom
     # for the occasional slow tail. Revisit it if the fleet grows further.
     timeout-minutes: 30
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
-          # Always check out main at runtime, not the trigger SHA. A
-          # `gh run rerun` against a previous scheduled or dispatched
-          # run would otherwise re-check-out the stale trigger commit
-          # and then fail to push its new "Monthly scan $MONTH" commit
-          # because main had already moved forward during the first
-          # attempt's successful commit step.
+          # Scan against current main, not the trigger SHA (see the
+          # publish job's checkout for why reruns need this).
           ref: main
-          # Full history so the commit step can rebase onto origin/main
-          # cleanly if main moves mid-run (the commit step also handles
-          # this with a rebase + retry loop as a belt-and-suspenders
-          # safeguard against concurrent pushes).
-          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
           cache: 'npm'
@@ -53,7 +45,7 @@ jobs:
         run: npm ci
 
       - name: Cache Playwright browsers
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ hashFiles('package-lock.json') }}
@@ -75,40 +67,33 @@ jobs:
           # forks / PRs without the secret, which simply falls back to headed.
           SCAN_UA_TOKEN: ${{ secrets.SCAN_UA_TOKEN }}
 
-      - name: Commit results
+      # Hand publish only what this scan wrote, plus the commit it scanned
+      # from, so publish can commit on that base and rebase. Overlaying the
+      # whole data/ tree on a newer main would revert concurrent fixes.
+      - name: Package changed data
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          MONTH=$(date -u +"%Y-%m")
-          if git diff --quiet --cached; then
-            echo "No data changes to commit — skipping commit/push."
-            exit 0
-          fi
-          git commit -m "Monthly scan ${MONTH}"
-          # Rebase onto latest origin/main before pushing. Handles the case
-          # where a previous run already pushed a "Monthly scan $MONTH"
-          # commit (e.g. this is a rerun after a downstream deploy step
-          # failed). Scans only touch data/ files so conflicts are not
-          # expected, but if they ever happen the run should fail loudly
-          # rather than force-pushing. Retry the push up to 3 times in
-          # case the ref moved between fetch and push.
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main || {
-              echo "Rebase of monthly scan commit failed — aborting."
-              git rebase --abort || true
-              exit 1
-            }
-            if git push; then
-              echo "Push succeeded on attempt ${attempt}."
-              exit 0
-            fi
-            echo "Push rejected on attempt ${attempt}, retrying..."
-            sleep 2
-          done
-          echo "Push failed after 3 attempts."
-          exit 1
+          set -euo pipefail
+          out="$RUNNER_TEMP/scan-results"
+          mkdir -p "$out"
+          git rev-parse HEAD > "$out/base-sha"
+          : > "$out/manifest"
+          while IFS= read -r -d '' entry; do
+            path="${entry:3}"
+            case "${entry:0:2}" in
+              *D*) echo "Scan deleted $path; publish only handles adds and edits." >&2; exit 1 ;;
+            esac
+            mkdir -p "$out/$(dirname "$path")"
+            cp "$path" "$out/$path"
+            printf '%s\0' "$path" >> "$out/manifest"
+          done < <(git status --porcelain=v1 -z --untracked-files=all -- data/)
+
+      - name: Upload scan results
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: scan-results
+          path: ${{ runner.temp }}/scan-results/
+          if-no-files-found: error
+          retention-days: 7
 
       - name: Prepare Pages artifact
         run: |
@@ -124,10 +109,104 @@ jobs:
         run: npm run minify:css
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: ./site
 
+  # Holds write access to main and Pages but runs no npm, browser, or other
+  # third-party code: it only commits the data/ files the scan job changed
+  # and deploys the Pages bundle that job uploaded.
+  publish:
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          # Always check out main at runtime, not the trigger SHA. A
+          # `gh run rerun` against a previous scheduled or dispatched
+          # run would otherwise re-check-out the stale trigger commit
+          # and then fail to push its new "Monthly scan $MONTH" commit
+          # because main had already moved forward during the first
+          # attempt's successful commit step.
+          ref: main
+          # Full history so the commit step can rebase onto origin/main
+          # cleanly if main moves mid-run (the commit step also handles
+          # this with a rebase + retry loop as a belt-and-suspenders
+          # safeguard against concurrent pushes).
+          fetch-depth: 0
+
+      - name: Download scan results
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: scan-results
+          path: ${{ runner.temp }}/scan-results/
+
+      # Commit the scan's files on the commit it scanned from, then rebase
+      # onto main below: a concurrent edit to the same file becomes a loud
+      # rebase conflict instead of being silently overwritten.
+      - name: Commit results
+        run: |
+          set -euo pipefail
+          src="$RUNNER_TEMP/scan-results"
+          base=$(cat "$src/base-sha")
+          [[ "$base" =~ ^[0-9a-f]{40}$ ]] || { echo "Bad base SHA: $base" >&2; exit 1; }
+          git merge-base --is-ancestor "$base" origin/main || {
+            echo "Scan base $base is not on main." >&2
+            exit 1
+          }
+          git checkout --detach "$base"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # The artifact comes from the job that ran third-party code: accept
+          # only plain files under data/, and only those the manifest names.
+          while IFS= read -r -d '' path; do
+            [[ "$path" =~ ^data/[A-Za-z0-9._/-]+$ && "$path" != *..* ]] || {
+              echo "Refusing manifest path: $path" >&2
+              exit 1
+            }
+            [[ -f "$src/$path" && ! -L "$src/$path" ]] || { echo "Missing file: $path" >&2; exit 1; }
+            mkdir -p "$(dirname "$path")"
+            cp "$src/$path" "$path"
+            git add -- "$path"
+          done < "$src/manifest"
+          MONTH=$(date -u +"%Y-%m")
+          if git diff --quiet --cached; then
+            echo "No data changes to commit — skipping commit/push."
+            exit 0
+          fi
+          git commit -m "Monthly scan ${MONTH}"
+          # Rebase onto latest origin/main before pushing. Handles the case
+          # where a previous run already pushed a "Monthly scan $MONTH"
+          # commit (e.g. this is a rerun after a downstream deploy step
+          # failed). A conflict means main changed a file this scan also
+          # wrote; fail loudly rather than force-pushing. Retry the push up to 3 times in
+          # case the ref moved between fetch and push.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || {
+              echo "Rebase of monthly scan commit failed — aborting."
+              git rebase --abort || true
+              exit 1
+            }
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}, retrying..."
+            sleep 2
+          done
+          echo "Push failed after 3 attempts."
+          exit 1
+
       - name: Deploy to GitHub Pages
         id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
