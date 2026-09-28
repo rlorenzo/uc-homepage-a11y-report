@@ -157,6 +157,14 @@ const FALLBACK_USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36";
 
+// The fetched list is third-party controlled; only accept a plausible browser
+// UA (printable ASCII, sane length, "Mozilla/" prefix) or use the fallback.
+const isValidUserAgent = (ua) =>
+  typeof ua === "string" &&
+  ua.length >= 20 &&
+  ua.length <= 300 &&
+  /^Mozilla\/[\x20-\x7e]+$/.test(ua);
+
 async function resolveUserAgent() {
   // Abort after 5s so a hung CDN can't stall the whole scan.
   const controller = new AbortController();
@@ -170,7 +178,13 @@ async function resolveUserAgent() {
     // Pick the macOS Chrome entry with the highest major version. The list
     // is not guaranteed to be sorted, so parse and compare explicitly.
     const candidates = list
-      .filter((ua) => ua.includes("Macintosh") && ua.includes("Chrome/") && !ua.includes("Edg/"))
+      .filter(
+        (ua) =>
+          isValidUserAgent(ua) &&
+          ua.includes("Macintosh") &&
+          ua.includes("Chrome/") &&
+          !ua.includes("Edg/"),
+      )
       .map((ua) => ({ ua, version: Number((ua.match(/Chrome\/(\d+)/) || [])[1] || 0) }))
       .sort((a, b) => b.version - a.version);
     if (candidates.length) return candidates[0].ua;
