@@ -1,9 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { sanitizeResult } from "./redact.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const HISTORY_PATH = join(__dirname, "..", "data", "history.json");
+export const HISTORY_PATH = join(__dirname, "..", "data", "history.json");
 
 /**
  * Append summary rows for the current month to history.json.
@@ -13,11 +14,19 @@ const HISTORY_PATH = join(__dirname, "..", "data", "history.json");
  * existing ok row, so a rerun with a transient failure (bot block, timeout)
  * can't downgrade a month that already scanned clean. Rows from other months
  * are never touched.
+ *
+ * Every row written here — new and carried-forward alike — is passed through
+ * sanitizeResult, so an older retained row can't republish a Zoom passcode
+ * that a newer redaction pattern would now catch.
+ *
+ * `historyPath` is normally HISTORY_PATH (data/history.json); tests pass a
+ * temp path so they don't touch the real file.
  */
-export async function updateHistory(newRows) {
+// fallow-ignore-next-line complexity -- pre-existing debt (CRAP 42.0 on main), unrelated to this fix
+export async function updateHistory(newRows, historyPath) {
   let history = [];
   try {
-    const raw = await readFile(HISTORY_PATH, "utf-8");
+    const raw = await readFile(historyPath, "utf-8");
     if (raw.trim()) {
       history = JSON.parse(raw);
     }
@@ -50,11 +59,13 @@ export async function updateHistory(newRows) {
   // Keep all existing rows that are NOT being replaced by this run.
   const kept = history.filter((r) => !incoming.has(keyOf(r)));
 
-  const merged = [...kept, ...rows];
+  // sanitizeResult round-trips through JSON.stringify/parse, so it can
+  // redact an entire array in one pass just as well as a single row.
+  const merged = sanitizeResult([...kept, ...rows]);
 
   // Sort chronologically, then alphabetically by site within a month.
   merged.sort((a, b) => a.month.localeCompare(b.month) || a.site.localeCompare(b.site));
 
-  await writeFile(HISTORY_PATH, `${JSON.stringify(merged, null, 2)}\n`);
+  await writeFile(historyPath, `${JSON.stringify(merged, null, 2)}\n`);
   console.log(`history.json updated: ${merged.length} total rows (${rows.length} new/replaced)`);
 }
