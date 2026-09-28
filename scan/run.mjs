@@ -4,7 +4,8 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
-import { updateHistory } from "./update-history.mjs";
+import { updateHistory, HISTORY_PATH } from "./update-history.mjs";
+import { redactZoomPasscodes, sanitizeResult } from "./redact.mjs";
 import { RULE_DESCRIPTIONS } from "../site/assets/data/constants.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -156,6 +157,14 @@ const FALLBACK_USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36";
 
+// The fetched list is third-party controlled; only accept a plausible browser
+// UA (printable ASCII, sane length, "Mozilla/" prefix) or use the fallback.
+const isValidUserAgent = (ua) =>
+  typeof ua === "string" &&
+  ua.length >= 20 &&
+  ua.length <= 300 &&
+  /^Mozilla\/[\x20-\x7e]+$/.test(ua);
+
 async function resolveUserAgent() {
   // Abort after 5s so a hung CDN can't stall the whole scan.
   const controller = new AbortController();
@@ -169,7 +178,13 @@ async function resolveUserAgent() {
     // Pick the macOS Chrome entry with the highest major version. The list
     // is not guaranteed to be sorted, so parse and compare explicitly.
     const candidates = list
-      .filter((ua) => ua.includes("Macintosh") && ua.includes("Chrome/") && !ua.includes("Edg/"))
+      .filter(
+        (ua) =>
+          isValidUserAgent(ua) &&
+          ua.includes("Macintosh") &&
+          ua.includes("Chrome/") &&
+          !ua.includes("Edg/"),
+      )
       .map((ua) => ({ ua, version: Number((ua.match(/Chrome\/(\d+)/) || [])[1] || 0) }))
       .sort((a, b) => b.version - a.version);
     if (candidates.length) return candidates[0].ua;
@@ -334,7 +349,9 @@ function logPendingRequests(site, pending) {
   if (!pending.length) return;
   console.error(`  [${site.slug}] ${pending.length} request(s) in flight at timeout:`);
   for (const p of pending.slice(0, 15)) {
-    console.error(`     ${(p.pending_ms / 1000).toFixed(1)}s [${p.type}] ${p.url}`);
+    console.error(
+      `     ${(p.pending_ms / 1000).toFixed(1)}s [${p.type}] ${redactZoomPasscodes(p.url)}`,
+    );
   }
 }
 
@@ -510,7 +527,7 @@ async function scanWith(site, browser, mode, navTimeout = NAV_TIMEOUT_MS) {
       mobile_incomplete: mobileRaw.incomplete,
     };
 
-    await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(fullResult, null, 2));
+    await writeRunResult(site.slug, fullResult);
 
     logScanOk(site, mode, { required, reach, mobileRequired, mobileReach, elementCount });
 
@@ -555,12 +572,23 @@ async function scanWith(site, browser, mode, navTimeout = NAV_TIMEOUT_MS) {
   }
 }
 
+// Archive a per-site result. redactZoomPasscodes/sanitizeResult (see
+// ./redact.mjs) strip Zoom join-link passcodes before results land in the
+// repo, including rows headed to history.json, which the Pages site
+// publishes.
+function writeRunResult(slug, result) {
+  return writeFile(
+    join(runsDir, `${slug}.json`),
+    redactZoomPasscodes(JSON.stringify(result, null, 2)),
+  );
+}
+
 // Build (and archive) the error record for a site whose scan failed after all
 // retries. Mirrors the success summary shape with zeroed counters so the report
 // and updateHistory consume ok/error rows uniformly. `mode` is the render mode
 // of the final attempt, matching the render_mode success rows record.
 async function buildErrorResult(site, err, mode) {
-  console.error(`  [${site.slug}] ERROR: ${err.message}`);
+  console.error(`  [${site.slug}] ERROR: ${redactZoomPasscodes(err.message)}`);
 
   const pending = err.pendingRequests || [];
   logPendingRequests(site, pending);
@@ -581,7 +609,7 @@ async function buildErrorResult(site, err, mode) {
     ...(pending.length ? { pending_requests: pending.slice(0, 25) } : {}),
   };
 
-  await writeFile(join(runsDir, `${site.slug}.json`), JSON.stringify(errorResult, null, 2));
+  await writeRunResult(site.slug, errorResult);
 
   return {
     ...errorResult,
@@ -682,7 +710,7 @@ if (headedBrowserPromise) {
 }
 
 // Append (or replace) this month's rows in history.json.
-await updateHistory(results);
+await updateHistory(results.map(sanitizeResult), HISTORY_PATH);
 
 // Warn about violation rules that have no friendly description in the report.
 const keysOf = (obj) => Object.keys(obj || {});
