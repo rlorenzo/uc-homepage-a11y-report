@@ -55,10 +55,17 @@ jobs:
           if [ -n "${PR_FROM_EVENT}" ]; then
             pr="${PR_FROM_EVENT}"
           else
-            pr=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+            # The commits API can list multiple PRs for one commit (e.g. a
+            # fork PR alongside a same-repo PR); .[0] would blindly take
+            # whichever sorts first, even a fork's. Filter for one whose
+            # head repo is this repo instead. GITHUB_REPOSITORY is a
+            # default Actions env var, read here via jq's env so nothing
+            # gets template-interpolated into the script.
+            pr=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${SHA}/pulls" \
+              --jq '[.[] | select(.head.repo.full_name == env.GITHUB_REPOSITORY)] | .[0].number // empty') || true
           fi
           if [ -z "$pr" ]; then
-            echo "No PR for commit ${SHA}; nothing to comment on."
+            echo "No PR in this repo for commit ${SHA}; nothing to comment on."
             exit 0
           fi
           echo "pr=${pr}" >> "$GITHUB_OUTPUT"
