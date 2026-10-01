@@ -1,0 +1,1663 @@
+{
+  "month": "2026-10",
+  "scanned_at": "2026-10-01T14:16:15.590Z",
+  "axe_version": "4.13.0",
+  "site": "uci-humanities",
+  "name": "UCI School of Humanities",
+  "campus": "uci",
+  "type": "school",
+  "category": "humanities-arts",
+  "url": "https://humanities.uci.edu",
+  "render_mode": "headless",
+  "element_count": 963,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span class=\"tbm-link level-1 no-link tbm-toggle\" tabindex=\"0\" aria-expanded=\"false\">\n                Students\n          </span>",
+          "target": [
+            ".tbm-item--has-dropdown[aria-level=\"1\"][data-once=\"megaMenuFade\"]:nth-child(4) > .tbm-link-container > .no-link.tbm-toggle.level-1"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<span class=\"tbm-link level-1 no-link tbm-toggle\" tabindex=\"0\" aria-expanded=\"false\">\n                Giving\n          </span>",
+          "target": [
+            ".tbm-item--has-dropdown[aria-level=\"1\"][data-once=\"megaMenuFade\"]:nth-child(6) > .tbm-link-container > .no-link.tbm-toggle.level-1"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"/power-imagination\">Discover the Campaign </a>",
+                  "target": [
+                    "div[data-slick-index=\"1\"] > div > .hero-slide-item.paragraph--type--uci-hero-slide-item.paragraph > .hero-slide-item__content > .hero-slide-item__link > .field--name-field-links.field--type-link.field__items > .field__item > a[href$=\"power-imagination\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"slick-slide\" data-slick-index=\"1\" role=\"group\" aria-label=\"slide 2\" style=\"width: 1440px;\" aria-hidden=\"true\">",
+          "target": [
+            "div[data-slick-index=\"1\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fdcc06",
+                "bgColor": "#245699",
+                "contrastRatio": 4.82,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"site-utility\">",
+                  "target": [
+                    "#site-utility"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.uci.edu/\" target=\"_blank\">UC Irvine </a>",
+          "target": [
+            ".menu-item > a[href$=\"uci.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fdcc06",
+                "bgColor": "#245699",
+                "contrastRatio": 4.82,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"site-header\">",
+                  "target": [
+                    "#site-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact-us\" class=\"tbm-link level-1 tbm-toggle\" aria-expanded=\"false\">\n                Contact\n          </a>",
+          "target": [
+            ".tbm-toggle.level-1[href$=\"contact-us\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0067a6",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.01,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"anonymous page-node-page page-node-6075 node-title-hidden path-home-page-school-humanities path-frontpage page-node-type-page\" data-once=\"headerGroupMegaMenuGlobal pushMenuCloseOnDesktop\" tabindex=\"-1\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #0067a6, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/supporting-next-generation-latino-scholars\" class=\"read-more\">Read More<i aria-hidden=\"true\" class=\"fa-solid fa-arrow-right\"></i></a>",
+          "target": [
+            ".read-more"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #0067a6, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#3e9c35",
+                "contrastRatio": 3.49,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"event-date\">October 3 - December 13, 2026</div>",
+                  "target": [
+                    ".uc-green > .event-details > .event-date"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.49 (foreground color: #ffffff, background color: #3e9c35, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-date\">October 3 - December 13, 2026</div>",
+          "target": [
+            ".uc-green > .event-details > .event-date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.49 (foreground color: #ffffff, background color: #3e9c35, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#d361ac",
+                "contrastRatio": 3.45,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"event-date\">October 4, 2026</div>",
+                  "target": [
+                    ".uc-magenta > .event-details > .event-date"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.45 (foreground color: #ffffff, background color: #d361ac, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-date\">October 4, 2026</div>",
+          "target": [
+            ".uc-magenta > .event-details > .event-date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #ffffff, background color: #d361ac, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fdcc06",
+                "bgColor": "#245699",
+                "contrastRatio": 4.82,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"layout-footer-content\" role=\"contentinfo\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact-us\" data-entity-type=\"node\" data-entity-uuid=\"c73d9483-1c3e-4035-bada-1ec349f97592\" data-entity-substitution=\"canonical\" title=\"Contact the School of Humanities\">Contact Us</a>",
+          "target": [
+            "a[href$=\"contact-us\"][data-entity-type=\"node\"][data-entity-substitution=\"canonical\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "0.0pt (0px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+                  "target": [
+                    "#edit-submit"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+          "target": [
+            "#edit-submit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Why Study</strong> the Humanities?</p>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Why Study</strong>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Stories\n      \n        </div>",
+          "target": [
+            "a[href$=\"enrich-human-story\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Values\n      \n        </div>",
+          "target": [
+            "a[href$=\"values\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Literacies\n      \n        </div>",
+          "target": [
+            "a[href$=\"literacies\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Diversity\n      \n        </div>",
+          "target": [
+            "a[href$=\"diversity\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "0.0pt (0px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+                  "target": [
+                    "#edit-submit"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+          "target": [
+            "#edit-submit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Why Study</strong> the Humanities?</p>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Why Study</strong>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Stories\n      \n        </div>",
+          "target": [
+            "a[href$=\"enrich-human-story\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Values\n      \n        </div>",
+          "target": [
+            "a[href$=\"values\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Literacies\n      \n        </div>",
+          "target": [
+            "a[href$=\"literacies\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Diversity\n      \n        </div>",
+          "target": [
+            "a[href$=\"diversity\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"read-more-wrapper\">\n              <div class=\"field field--name-field-link field--type-link field--label-hidden field__items\">\n            <a href=\"/HumanitiesAlumni\">More Alumni</a>\n          </div>\n\n        </div>",
+                  "target": [
+                    ".read-more-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/HumanitiesAlumni\">More Alumni</a>",
+          "target": [
+            ".field--name-field-link.field--type-link.field__items > a[href$=\"HumanitiesAlumni\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img class=\"footer-art footer-art--top\" src=\"/themes/custom/uci_soh/images/footer-animate-top.png\" alt=\"\" decoding=\"async\">",
+                  "target": [
+                    ".footer-third-art > .footer-art--top.footer-art[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2><strong>Subscribe</strong><br> to our newsletter:</h2>",
+          "target": [
+            "#block-fakesubscriptionblock > .fake-subscription-wrapper > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img class=\"footer-art footer-art--top\" src=\"/themes/custom/uci_soh/images/footer-animate-top.png\" alt=\"\" decoding=\"async\">",
+                  "target": [
+                    ".footer-third-art > .footer-art--top.footer-art[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Subscribe</strong>",
+          "target": [
+            "#block-fakesubscriptionblock > .fake-subscription-wrapper > h2 > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fdcc06",
+                "bgColor": "#245699",
+                "contrastRatio": 4.82,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"site-utility\">",
+                  "target": [
+                    "#site-utility"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.uci.edu/\" target=\"_blank\">UC Irvine </a>",
+          "target": [
+            ".menu-item > a[href$=\"uci.edu/\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#0067a6",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.01,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<body class=\"anonymous page-node-page page-node-6075 node-title-hidden path-home-page-school-humanities path-frontpage page-node-type-page\" data-once=\"headerGroupMegaMenuGlobal pushMenuCloseOnDesktop\" tabindex=\"-1\">",
+                  "target": [
+                    "body"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 6.01 (foreground color: #0067a6, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/news/supporting-next-generation-latino-scholars\" class=\"read-more\">Read More<i aria-hidden=\"true\" class=\"fa-solid fa-arrow-right\"></i></a>",
+          "target": [
+            ".read-more"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 6.01 (foreground color: #0067a6, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#3e9c35",
+                "contrastRatio": 3.49,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"event-date\">October 3 - December 13, 2026</div>",
+                  "target": [
+                    ".uc-green > .event-details > .event-date"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.49 (foreground color: #ffffff, background color: #3e9c35, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-date\">October 3 - December 13, 2026</div>",
+          "target": [
+            ".uc-green > .event-details > .event-date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.49 (foreground color: #ffffff, background color: #3e9c35, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#d361ac",
+                "contrastRatio": 3.45,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"event-date\">October 4, 2026</div>",
+                  "target": [
+                    ".uc-magenta > .event-details > .event-date"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.45 (foreground color: #ffffff, background color: #d361ac, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"event-date\">October 4, 2026</div>",
+          "target": [
+            ".uc-magenta > .event-details > .event-date"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #ffffff, background color: #d361ac, font size: 14.3pt (19px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#fdcc06",
+                "bgColor": "#245699",
+                "contrastRatio": 4.82,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"layout-footer-content\" role=\"contentinfo\">",
+                  "target": [
+                    "footer"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/contact-us\" data-entity-type=\"node\" data-entity-uuid=\"c73d9483-1c3e-4035-bada-1ec349f97592\" data-entity-substitution=\"canonical\" title=\"Contact the School of Humanities\">Contact Us</a>",
+          "target": [
+            "a[href$=\"contact-us\"][data-entity-type=\"node\"][data-entity-substitution=\"canonical\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.82 (foreground color: #fdcc06, background color: #245699, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "0.0pt (0px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+                  "target": [
+                    "#edit-submit"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+          "target": [
+            "#edit-submit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Why Study</strong> the Humanities?</p>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Why Study</strong>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Stories\n      \n        </div>",
+          "target": [
+            "a[href$=\"enrich-human-story\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Values\n      \n        </div>",
+          "target": [
+            "a[href$=\"values\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Literacies\n      \n        </div>",
+          "target": [
+            "a[href$=\"literacies\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Diversity\n      \n        </div>",
+          "target": [
+            "a[href$=\"diversity\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "0.0pt (0px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+                  "target": [
+                    "#edit-submit"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<input class=\"SearchForm-submit button js-form-submit form-submit btn btn-primary\" data-drupal-selector=\"edit-submit\" type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"go\" aria-label=\"Submit search\">",
+          "target": [
+            "#edit-submit"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p><strong>Why Study</strong> the Humanities?</p>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Why Study</strong>",
+          "target": [
+            ".humanities-century-background-wrapper > .container > .heading.center > p > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Stories\n      \n        </div>",
+          "target": [
+            "a[href$=\"enrich-human-story\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Values\n      \n        </div>",
+          "target": [
+            "a[href$=\"values\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Literacies\n      \n        </div>",
+          "target": [
+            "a[href$=\"literacies\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"paragraph paragraph--type--uci-humanities-century paragraph--view-mode--default blue\">",
+                  "target": [
+                    ".paragraph--type--uci-humanities-century"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"humanities-details\">\n                      Diversity\n      \n        </div>",
+          "target": [
+            "a[href$=\"diversity\"] > .humanities-details"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgImage",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"read-more-wrapper\">\n              <div class=\"field field--name-field-link field--type-link field--label-hidden field__items\">\n            <a href=\"/HumanitiesAlumni\">More Alumni</a>\n          </div>\n\n        </div>",
+                  "target": [
+                    ".read-more-wrapper"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background image"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/HumanitiesAlumni\">More Alumni</a>",
+          "target": [
+            ".field--name-field-link.field--type-link.field__items > a[href$=\"HumanitiesAlumni\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "normal",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img class=\"footer-art footer-art--top\" src=\"/themes/custom/uci_soh/images/footer-animate-top.png\" alt=\"\" decoding=\"async\">",
+                  "target": [
+                    ".above-footer-art > .footer-art--top.footer-art[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2><strong>Subscribe</strong><br> to our newsletter:</h2>",
+          "target": [
+            "#block-uci-soh-fakesubscriptionblock > .fake-subscription-wrapper > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "25.5pt (34px)",
+                "fontWeight": "bold",
+                "messageKey": "imgNode",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<img class=\"footer-art footer-art--top\" src=\"/themes/custom/uci_soh/images/footer-animate-top.png\" alt=\"\" decoding=\"async\">",
+                  "target": [
+                    ".above-footer-art > .footer-art--top.footer-art[alt=\"\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because element contains an image node"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>Subscribe</strong>",
+          "target": [
+            "#block-uci-soh-fakesubscriptionblock > .fake-subscription-wrapper > h2 > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        }
+      ]
+    }
+  ]
+}

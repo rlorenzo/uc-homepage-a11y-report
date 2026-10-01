@@ -1,0 +1,877 @@
+{
+  "month": "2026-10",
+  "scanned_at": "2026-10-01T14:16:15.590Z",
+  "axe_version": "4.13.0",
+  "site": "ucsb-housing",
+  "name": "UC Santa Barbara Campus Housing",
+  "campus": "ucsb",
+  "type": "housing",
+  "category": "housing",
+  "url": "https://www.housing.ucsb.edu",
+  "render_mode": "headless",
+  "element_count": 420,
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"search\" aria-expanded=\"false\">",
+          "target": [
+            ".search"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fgColor": "#3d4952",
+                "bgColor": "#febc11",
+                "contrastRatio": 5.46,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "7:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"highlighted  has-background background-color-febc11\">\n                            <a href=\"https://apps.housing.ucsb.edu/our-housing/portal\">\n                            Housing Portal\n                            </a>\n                          </div>",
+                  "target": [
+                    ".background-color-febc11"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://apps.housing.ucsb.edu/our-housing/portal\">\n                            Housing Portal\n                            </a>",
+          "target": [
+            ".background-color-febc11 > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 5.46 (foreground color: #3d4952, background color: #febc11, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"5\" about=\"/news/prospective-students\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-none\" style=\"background-image: url(/sites/default/files/images/Articles/freshmen-transfers_1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"5\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Prospective Students</span>",
+          "target": [
+            "article[data-history-node-id=\"5\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"700\" about=\"/news/helpful-links\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/Articles.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"700\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Helpful Links</span>",
+          "target": [
+            "article[data-history-node-id=\"700\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"655\" about=\"/news/we-are-hiring\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/DSC_6765.png)\">",
+                  "target": [
+                    "article[data-history-node-id=\"655\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\"> We are hiring!</span>",
+          "target": [
+            "article[data-history-node-id=\"655\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"645\" about=\"/news/community-housing-services\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article-communityhousingprograms_2x1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"645\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Community Housing Services</span>",
+          "target": [
+            "article[data-history-node-id=\"645\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"lead\">",
+          "target": [
+            ".lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"5\" about=\"/news/prospective-students\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-none\" style=\"background-image: url(/sites/default/files/images/Articles/freshmen-transfers_1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"5\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Prospective Students</span>",
+          "target": [
+            "article[data-history-node-id=\"5\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"700\" about=\"/news/helpful-links\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/Articles.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"700\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Helpful Links</span>",
+          "target": [
+            "article[data-history-node-id=\"700\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"655\" about=\"/news/we-are-hiring\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/DSC_6765.png)\">",
+                  "target": [
+                    "article[data-history-node-id=\"655\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\"> We are hiring!</span>",
+          "target": [
+            "article[data-history-node-id=\"655\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"645\" about=\"/news/community-housing-services\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article-communityhousingprograms_2x1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"645\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Community Housing Services</span>",
+          "target": [
+            "article[data-history-node-id=\"645\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"copyright\">Copyright © 2026 The Regents of the University of California. All Rights Reserved.</span>",
+          "target": [
+            ".col-xs- > .copyright"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.ucsb.edu/terms-of-use\" class=\"terms\">Terms of Use</a>",
+          "target": [
+            ".terms:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"/accessibility\" class=\"terms\">Accessibility</a>",
+          "target": [
+            "a[href$=\"accessibility\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    },
+    {
+      "id": "identical-links-same-purpose",
+      "impact": "minor",
+      "tags": [
+        "cat.semantics",
+        "wcag2aaa",
+        "wcag249"
+      ],
+      "description": "Ensure that links with the same accessible name serve a similar purpose",
+      "help": "Links with the same name must have a similar purpose",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "identical-links-same-purpose",
+              "data": {
+                "name": "prospective students",
+                "urlProps": {
+                  "protocol": "http:",
+                  "hostname": "www.housing.ucsb.edu",
+                  "port": "",
+                  "pathname": "/prospective-students/",
+                  "search": {},
+                  "hash": "",
+                  "filename": ""
+                }
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a href=\"https://www.housing.ucsb.edu/housing-options\" class=\"view-grid-item item-width-2 item-height-2\">",
+                  "target": [
+                    ".item-height-2"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "Check that links have the same purpose, or are intentionally ambiguous."
+            }
+          ],
+          "none": [],
+          "impact": "minor",
+          "html": "<a href=\"/prospective-students\" data-drupal-link-system-path=\"node/122\">Prospective Students</a>",
+          "target": [
+            "a[href$=\"prospective-students\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
+        }
+      ]
+    }
+  ],
+  "mobile_violations": [],
+  "mobile_incomplete": [
+    {
+      "id": "color-contrast-enhanced",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aaa",
+        "wcag146",
+        "ACT"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+      "help": "Elements must meet enhanced color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast-enhanced?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"5\" about=\"/news/prospective-students\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-none\" style=\"background-image: url(/sites/default/files/images/Articles/freshmen-transfers_1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"5\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Prospective Students</span>",
+          "target": [
+            "article[data-history-node-id=\"5\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"700\" about=\"/news/helpful-links\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/Articles.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"700\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Helpful Links</span>",
+          "target": [
+            "article[data-history-node-id=\"700\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"655\" about=\"/news/we-are-hiring\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/DSC_6765.png)\">",
+                  "target": [
+                    "article[data-history-node-id=\"655\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\"> We are hiring!</span>",
+          "target": [
+            "article[data-history-node-id=\"655\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast-enhanced",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"645\" about=\"/news/community-housing-services\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article-communityhousingprograms_2x1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"645\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Community Housing Services</span>",
+          "target": [
+            "article[data-history-node-id=\"645\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"lead\">",
+          "target": [
+            ".lead"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"5\" about=\"/news/prospective-students\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-none\" style=\"background-image: url(/sites/default/files/images/Articles/freshmen-transfers_1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"5\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Prospective Students</span>",
+          "target": [
+            "article[data-history-node-id=\"5\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"700\" about=\"/news/helpful-links\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/Articles.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"700\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Helpful Links</span>",
+          "target": [
+            "article[data-history-node-id=\"700\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"655\" about=\"/news/we-are-hiring\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/DSC_6765.png)\">",
+                  "target": [
+                    "article[data-history-node-id=\"655\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\"> We are hiring!</span>",
+          "target": [
+            "article[data-history-node-id=\"655\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "messageKey": "pseudoContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<article data-history-node-id=\"645\" about=\"/news/community-housing-services\" typeof=\"schema:Article\" class=\"article is-promoted grid clearfix white-text top-padding-1\" style=\"background-image: url(/sites/default/files/images/article-communityhousingprograms_2x1.jpg)\">",
+                  "target": [
+                    "article[data-history-node-id=\"645\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a pseudo element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span property=\"schema:name\">Community Housing Services</span>",
+          "target": [
+            "article[data-history-node-id=\"645\"] > .content > h3 > span[property=\"schema:name\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>I'm a virtual assistant that can help you with Campus Housing questions you may have.</p>",
+          "target": [
+            ".ivy-intro > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        }
+      ]
+    }
+  ]
+}
